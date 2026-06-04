@@ -1,0 +1,35 @@
+# Large raw third-party resources
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.parquet
+*.feather
+*.sqlite
+*.db
+
+# Large compressed raw data
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+*.bz2
+*.xz
+
+# Keep the compact source-data archive intentionally included.
+!source_data/source_data_package_v1.tar.gz
+
+# Local system clutter
+.DS_Store
+__pycache__/
+*.pyc
+
+# Temporary render or working outputs
+*_render_*/
+tmp/
+temp/
+
