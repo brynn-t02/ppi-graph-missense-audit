@@ -202,6 +202,15 @@ Archive boundary:
 - Mark as historical/exploratory rather than primary: old figure/table assembly scripts with manually consolidated values and any early scripts whose intermediate files were not fully retained.
 - Before submission, avoid saying "all scripts are verified bug-free." Preferred wording: "We archived the analysis scripts and compact source data supporting the reported figures and tables; core claims were cross-checked against retained summary outputs, while historical exploratory scripts are provided for provenance only."
 
+Current local release candidate:
+- `/Users/teyian/Documents/paper1/release_candidate_20260605`
+- Contents: 116 files, about 3.1 MB.
+- Includes: early scripts, server snapshot scripts, accepted figure-generation scripts, document-build helper, accepted Figure 1-4 PNG/PDF assets, compact source-data archive, README, `.gitignore` and provenance notes.
+- Size audit: no file larger than 50 MB was detected in the release candidate.
+- Recommended first upload mode: private GitHub repository. Make public and mint a DOI only after final manuscript/source-data wording is locked.
+- GitHub staging status: uploaded successfully as a private repository at `https://github.com/brynn-t02/ppi-graph-missense-audit` on 2026-06-05.
+- Manuscript v19 Data Availability and Code Availability have been updated to state that a release candidate is staged privately and that the public archive URL or DOI will be finalized before submission.
+
 ## Submission venue strategy
 
 Current user preference:
@@ -516,3 +525,12 @@ Immediate next action:
 - Decide whether the user is comfortable creating a GitHub account/repository.
 - If yes, create a private repository first, upload cleaned files, then make public only when ready.
 - If no, prepare a single archive package and use Zenodo/OSF or journal supplementary files later.
+
+### Consistency audit notes after GitHub staging
+
+- Strict source-data cross-check started on 2026-06-05 against `source_data_package_v1`.
+- ClinVar provenance is now consistent across manuscript, supplementary information and notes: official NCBI ClinVar FTP `tab_delimited/variant_summary.txt.gz`, FTP `Released` timestamp 2024-03-31, retained local/server analysis copy archived 2026-04-03.
+- Figure 1 source data support the manuscript claims for raw ESM, full PPI-GCN, variant bootstrap, protein-clustered bootstrap, direct train-test edge ablation, partial edge ablation and topology permutation.
+- Figure 2 source data support the manuscript claims for CADD/AlphaMissense matching, original-split fusion gain, homology-aware ESM versus PPI-GCN, homology-aware CADD+AlphaMissense versus graph fusion, and test-set prevalence.
+- Supplementary Table 3 was clarified on 2026-06-05 because AlphaMissense-only appears in two very close run contexts: the single-tool AlphaMissense fusion comparison and the triple-fusion reference row used in Figure 2B. The table now labels both contexts explicitly rather than silently mixing them.
+- Figure 4 source data support the reported prediction transition counts, corrected-sample topology profiles, FP/FN topology contrasts and difficulty-matched contrasts.
