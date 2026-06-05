@@ -535,3 +535,24 @@ Immediate next action:
 - Supplementary Table 3 was clarified on 2026-06-05 because AlphaMissense-only appears in two very close run contexts: the single-tool AlphaMissense fusion comparison and the triple-fusion reference row used in Figure 2B. The table now labels both contexts explicitly rather than silently mixing them.
 - Figure 4 source data support the reported prediction transition counts, corrected-sample topology profiles, FP/FN topology contrasts and difficulty-matched contrasts.
 - The active v19 manuscript DOCX was rebuilt with embedded accepted Figures 1-4 on 2026-06-05. Render QA confirmed four embedded figures, updated footer text, clean Figure 1-4 pages, clean declaration pages and a clean final reference page.
+
+### Submission readiness checkpoint
+
+Completed or currently supported:
+- Main manuscript v19 includes the accepted Figure 1-4 assets and has a rendered PDF preview.
+- Figure source data and compact supplementary source tables have been packaged in `source_data_package_v1`.
+- A private GitHub release-candidate repository has been staged and updated.
+- ClinVar provenance is now stated conservatively and supportably: official NCBI ClinVar FTP `tab_delimited/variant_summary.txt.gz`, FTP `Released` timestamp 2024-03-31, retained local/server analysis copy archived 2026-04-03.
+- ESM source/checkpoint is now stated in the active Methods and Supplementary Methods: `facebook/esm2_t33_650M_UR50D`, residue mean pooling, 1,280-dimensional protein vectors, long-protein chunking above 1,022 amino acids and length-weighted averaging.
+- Current code/data availability wording is conservative: it does not claim one-click regeneration of all third-party raw files, full embeddings, checkpoints or historical exploratory outputs.
+
+Still needed before formal submission:
+- Decide the exact target venue. BIBM remains the working target, but final formatting, length, reference style, AI-tool disclosure wording and figure placement should follow the selected venue.
+- Freeze a public archive route for the release candidate, preferably GitHub plus Zenodo/OSF DOI, or journal supplementary archive if the venue allows it.
+- Replace the public archive/DOI pending language in Data availability and Code availability once the archive exists.
+- Decide whether the GitHub repository should remain private during review or become public at submission; follow the selected venue's double-blind or open-review policy.
+- Convert citation keys and reference formatting to the final venue style.
+- Do one final source-data-to-manuscript numerical audit after any major text or figure edits.
+- Decide whether to add supplementary figures or keep the Supplementary Information table-focused; current Supplementary Information v1 explicitly says supplementary figures are not yet finalized.
+- Confirm final author list, author order and affiliation wording with the supervisor before submission.
+- Confirm whether the target venue requires a stricter AI-use disclosure, code license, data license, conflict-of-interest form, ethics form or graphical abstract.
