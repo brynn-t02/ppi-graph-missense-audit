@@ -144,7 +144,8 @@ def build_docx(source=SOURCE, output=OUTPUT):
             set_font(run, name="Courier New", size=9)
         else:
             p = doc.add_paragraph()
-            style_paragraph(p, before=0, after=8, line_spacing=1.333, align=WD_ALIGN_PARAGRAPH.JUSTIFY)
+            # Left alignment avoids Word stretching spaces around long citation keys.
+            style_paragraph(p, before=0, after=8, line_spacing=1.333, align=WD_ALIGN_PARAGRAPH.LEFT)
             add_inline_markdown(p, line)
 
     version_match = re.search(r"_v(\d+)", output.stem)

@@ -556,3 +556,19 @@ Still needed before formal submission:
 - Decide whether to add supplementary figures or keep the Supplementary Information table-focused; current Supplementary Information v1 explicitly says supplementary figures are not yet finalized.
 - Confirm final author list, author order and affiliation wording with the supervisor before submission.
 - Confirm whether the target venue requires a stricter AI-use disclosure, code license, data license, conflict-of-interest form, ethics form or graphical abstract.
+
+### Post-staging formatting and disclosure checkpoint
+
+- The DOCX builder was updated on 2026-06-05 to left-align normal body paragraphs rather than fully justify them. This fixed the large stretched-space artefact caused by Word justification around long internal citation keys in the Abstract.
+- The active DOCX was rebuilt and rendered after the alignment fix. The first page no longer shows the stretched-space artefact, and the document still contains four embedded figures.
+- Current bracketed citation keys, for example `[Kircher2014CADD; Cheng2023AlphaMissense]`, remain internal working-draft keys for evidence checking. They should be converted to the selected venue's official reference style only after the target venue and bibliography are frozen.
+- Author contributions and AI tool disclosure were tightened on 2026-06-05 to avoid overstating authorship or verification. The manuscript now explicitly acknowledges AI-assisted brainstorming, coding support, language editing, drafting support and consistency checking, while assigning study responsibility and final interpretation to the author.
+
+### Final manuscript-number audit checkpoint
+
+- A source-data-to-manuscript numerical audit was run on 2026-06-05 against `source_data_package_v1` and the active v19 manuscript.
+- Figure 1 checks passed with no mismatches: raw ESM and PPI-GCN AUC/AUPRC, Delta AUC/AUPRC, variant-level bootstrap intervals, protein-clustered bootstrap intervals, direct train-test edge counts, edge-removal fraction and edge-ablated performance all match the packaged source data under the manuscript rounding rules.
+- Figure 2 checks passed with no mismatches: CADD-only, AlphaMissense-only, CADD+AlphaMissense, GCN+CADD+AlphaMissense, homology-aware CADD+AlphaMissense and homology-aware graph-fusion metrics all match the packaged source data under the manuscript rounding rules.
+- Figure 3 checks passed with no mismatches: ESM-PPI alignment values, degree/k-core, betweenness, clustering, neighbour-risk and selected joint-cell Delta AUC values match the packaged source data.
+- Figure 4 checks passed with no mismatches: prediction-transition counts, rescued false-negative and suppressed false-positive counts, and the reported topology-profile means match the packaged source data.
+- Current conclusion: no source-data mismatch was detected among the main numerical claims checked in Results 1-4 and Figure Legends 1-4. Repeat this audit after any future numerical edits, figure replacement or citation/style conversion.
