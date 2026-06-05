@@ -472,9 +472,9 @@ Quality checks completed:
   - unused references: none
 
 Note:
-- The current text-only v19 manuscript does not yet include embedded figures.
-- The most recent figure-embedded manuscript is still the v18 with-figures copy.
-- Before final submission formatting, generate a new v19-or-later with-figures DOCX/PDF from the accepted Figure 1-4 assets after the main text stabilizes.
+- The current v19 manuscript DOCX now includes the accepted Figure 1-4 assets.
+- The rendered v19 PDF was checked after figure insertion; the title page, figure pages, declaration pages and final references page render cleanly.
+- Before final submission formatting, repeat this render check after any major text, figure or journal-template change.
 
 ### Code and data archive plan
 
@@ -534,3 +534,4 @@ Immediate next action:
 - Figure 2 source data support the manuscript claims for CADD/AlphaMissense matching, original-split fusion gain, homology-aware ESM versus PPI-GCN, homology-aware CADD+AlphaMissense versus graph fusion, and test-set prevalence.
 - Supplementary Table 3 was clarified on 2026-06-05 because AlphaMissense-only appears in two very close run contexts: the single-tool AlphaMissense fusion comparison and the triple-fusion reference row used in Figure 2B. The table now labels both contexts explicitly rather than silently mixing them.
 - Figure 4 source data support the reported prediction transition counts, corrected-sample topology profiles, FP/FN topology contrasts and difficulty-matched contrasts.
+- The active v19 manuscript DOCX was rebuilt with embedded accepted Figures 1-4 on 2026-06-05. Render QA confirmed four embedded figures, updated footer text, clean Figure 1-4 pages, clean declaration pages and a clean final reference page.

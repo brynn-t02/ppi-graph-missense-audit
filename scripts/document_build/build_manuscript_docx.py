@@ -7,9 +7,21 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.shared import Inches, Pt, RGBColor
 
 
-ROOT = Path(__file__).resolve().parents[1]
+SCRIPT_PATH = Path(__file__).resolve()
+ROOT = SCRIPT_PATH.parents[1]
+if not (ROOT / "figure_drafts").exists() and (SCRIPT_PATH.parents[2] / "figures").exists():
+    ROOT = SCRIPT_PATH.parents[2]
 SOURCE = ROOT / "manuscript_english_working_draft_v1.md"
 OUTPUT = ROOT / "manuscript_english_working_draft_v1.docx"
+FIGURE_DIR = ROOT / "figure_drafts"
+if not FIGURE_DIR.exists():
+    FIGURE_DIR = ROOT / "figures"
+FIGURE_MAP = {
+    "### Figure 1.": FIGURE_DIR / "Figure1_connectivity_topology_controls_v2_accepted.png",
+    "### Figure 2.": FIGURE_DIR / "Figure2_fusion_homology_v1_accepted.png",
+    "### Figure 3.": FIGURE_DIR / "Figure3_topology_context_v1_accepted.png",
+    "### Figure 4.": FIGURE_DIR / "Figure4_prediction_transitions_v2_accepted.png",
+}
 
 
 def set_font(run, name="Calibri", size=11, bold=False, italic=False, color=None):
@@ -65,6 +77,18 @@ def add_heading(doc, text, level):
         set_font(run, size=12, bold=True, color="1F4D78")
 
 
+def add_figure_if_available(doc, line):
+    for prefix, image_path in FIGURE_MAP.items():
+        if line.startswith(prefix) and image_path.exists():
+            doc.add_page_break()
+            p = doc.add_paragraph()
+            style_paragraph(p, before=10, after=6, line_spacing=1.0, align=WD_ALIGN_PARAGRAPH.CENTER)
+            r = p.add_run()
+            r.add_picture(str(image_path), width=Inches(6.6))
+            return True
+    return False
+
+
 def build_docx(source=SOURCE, output=OUTPUT):
     doc = Document()
     section = doc.sections[0]
@@ -102,6 +126,7 @@ def build_docx(source=SOURCE, output=OUTPUT):
         elif line.startswith("## "):
             add_heading(doc, line[3:].strip(), 1)
         elif line.startswith("### "):
+            add_figure_if_available(doc, line)
             add_heading(doc, line[4:].strip(), 2)
         elif line.startswith("- "):
             p = doc.add_paragraph(style=None)
@@ -127,7 +152,7 @@ def build_docx(source=SOURCE, output=OUTPUT):
 
     footer = section.footer.paragraphs[0]
     footer.alignment = WD_ALIGN_PARAGRAPH.RIGHT
-    r = footer.add_run(f"Working draft {version_label} | author and declaration sections added; repository/archive URLs pending")
+    r = footer.add_run(f"Working draft {version_label} | author declarations added; private repository staged; public archive pending")
     set_font(r, size=9, color="666666")
 
     doc.save(output)
