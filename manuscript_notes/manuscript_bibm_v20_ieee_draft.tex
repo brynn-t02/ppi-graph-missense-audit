@@ -1,0 +1,172 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{newtxtext,newtxmath}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\emergencystretch=3em
+\setcounter{dbltopnumber}{2}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\dblfloatpagefraction}{0.85}
+\renewcommand{\textfraction}{0.05}
+\newcommand{\CADDAM}{CADD\allowbreak{}+\allowbreak{}AlphaMissense}
+\newcommand{\GCNCADDAM}{GCN\allowbreak{}+\allowbreak{}CADD\allowbreak{}+\allowbreak{}AlphaMissense}
+
+\title{Auditing PPI Graph Augmentation for Missense Variant Pathogenicity Prediction under Topology, Connectivity and Homology Constraints}
+
+\author{Anonymous BIBM submission}
+
+\begin{document}
+\maketitle
+
+
+\begin{abstract}
+
+Protein-protein interaction (PPI) graphs are a natural source of molecular context for missense variant pathogenicity prediction, but a performance gain from propagating protein embeddings over a shared graph can be difficult to interpret. It may reflect biologically aligned network signal, train-test connectivity within the graph, homology-related split structure, or complementarity to existing variant-effect predictors. We audit these possibilities using a reconstructed ClinVar-STRING dataset of 177,213 high-confidence missense variants mapped to 14,123 labelled STRING proteins in a 19,622-node PPI graph. ESM protein language model embeddings are compared with fixed two-hop PPI-GCN propagation, CADD, AlphaMissense and fusion models using validation-selected downstream MLP classifiers. In the original protein-level split, PPI-GCN improves over raw ESM from AUC 0.7790 to 0.7997 and AUPRC 0.6074 to 0.6496. However, protein-clustered bootstrap widens uncertainty across zero, direct train-test PPI edge removal nearly eliminates the AUC gain, and topology permutation returns performance to the raw ESM range. Graph fusion also improves \CADDAM{} under the original split, but follow-up controls show that much of this fusion gain is retained by raw-ESM, edge-ablated and topology-permuted protein representations, indicating limited topology-specific added value in the strong-predictor fusion setting. No stable added value remains over \CADDAM{} under a homology-aware stress test. Topology-stratified and sample-level transition analyses show that graph gains concentrate in specific network roles and error types. These results position PPI graph augmentation as a conditional, auditable source of topology-context information rather than an unconditional improvement over sequence or variant-effect predictors.
+
+\end{abstract}
+\section{Introduction}
+
+Missense variant pathogenicity prediction has been advanced by annotation-rich scores, protein language models and deep-learning predictors such as CADD, REVEL, MVP, PrimateAI, EVE and AlphaMissense \cite{Kircher2014CADD,Ioannidis2016REVEL,Qi2021MVP,Sundaram2018PrimateAI,Frazer2021EVE,Cheng2023AlphaMissense,Lin2023ESM}. These approaches capture important sequence, evolutionary and annotation-derived signals. At the same time, disease-associated proteins are embedded in molecular interaction networks, and disease-associated mutations can perturb protein-protein and other macromolecular interactions \cite{Barabasi2011NetworkMedicine,Menche2015DiseaseModules,Sahni2015InteractionPerturbation,Chen2018InteractomePerturbation}. This motivates using PPI graphs as context for missense variant prediction.
+
+Graph-based variant predictors already exist, including graph attention models for missense effects, heterogeneous gene-variant graph approaches, multimodal variant graph methods and disease-specific graph models \cite{Zhang2022gMVP,Cheng2021VEGN,Yu2025GNNMAP,Ghadie2025DiseaseSpecificGNN}. These studies show that relational structure can support variant interpretation, but they do not resolve a narrower evaluation question: when protein language model embeddings are propagated over a shared STRING PPI graph before variant-level classification, what exactly does the observed gain mean?
+
+This question matters because a shared-graph setting can mix several effects. Train, validation and test variants may have no overlapping protein identifiers, yet their proteins can remain directly connected in the same PPI graph. Related proteins may also cross partitions unless homology is explicitly considered \cite{Littmann2022ProteinMLTips,Teufel2023GraphPart}. Moreover, graph propagation may add little once strong variant-effect predictors such as CADD and AlphaMissense are already present. A rigorous evaluation therefore needs to move beyond a single AUC or AUPRC gain and ask whether the gain is topology-aligned, connectivity-sensitive, robust to protein-level uncertainty, stable under homology-aware evaluation and complementary to established predictors.
+
+We address this as an audit study rather than as a new predictor proposal. Using a reconstructed ClinVar-STRING missense dataset, we evaluate raw ESM representations, PPI-GCN propagation, CADD, AlphaMissense and fusion models. We combine variant-level and protein-clustered bootstrap, train-test edge ablation, partial edge-ablation curves, topology permutation, homology-aware splitting, topology-stratified analyses and corrected-sample profiling. Our contributions are four-fold: we define an audit framework for PPI graph augmentation; show that raw-ESM to PPI-GCN gains depend on topology alignment and cross-split connectivity; test the boundary imposed by strong variant-effect predictors and homology-aware splitting; and localize graph-associated gains and errors to specific topology contexts. The central finding is conditional: PPI graph augmentation can improve benchmark scores, but the meaning of the gain depends on the baseline, split design and graph-control setting, and its added value is bounded by homology-aware evaluation and strong external predictors.
+
+\section{Materials and Methods}
+
+\subsection{Dataset and graph construction}
+
+ClinVar variant annotations were obtained from the official NCBI ClinVar FTP tab-delimited variant-summary file \cite{Landrum2020ClinVar}. We used the ClinVar variant-summary release dated 31 March 2024. The exact analysis copy was locally archived on 3 April 2026, and source-data checksums are provided with the review package. We reconstructed a high-confidence missense dataset and mapped variants to STRING human protein identifiers. Briefly, we retained GRCh38 germline missense SNVs with supported review status, grouped pathogenic/likely pathogenic and benign/likely benign records, removed uncertain or conflicting records and collapsed duplicate VariationIDs. The final ClinVar-STRING dataset contained 177,213 missense variants mapped to 14,123 labelled STRING proteins. The representation-propagation graph contained 19,622 STRING protein nodes and 13,715,404 directed edge-index entries derived from the STRING v12 protein association network, used here as a PPI-context graph rather than as a pure physical-interaction map \cite{Szklarczyk2023STRING}.
+
+\subsection{Protein representations and PPI propagation}
+
+Raw protein features were generated using the ESM-2 650M checkpoint, with 1,280-dimensional protein-level vectors obtained by residue averaging \cite{Lin2023ESM}. PPI-GCN embeddings were computed by fixed two-hop GCN-style propagation over the normalized STRING graph \cite{Kipf2017GCN}. The implementation added reverse edges and self-loops, used symmetric degree normalization and formed the final representation as the average of the raw, one-hop and two-hop features. This propagation step was not trained end-to-end on labels; downstream variant classification used the propagated protein representation corresponding to each variant's mapped STRING protein. Because propagation used the full graph containing train, validation and test nodes and their ESM features, the setting is a transductive shared-graph audit rather than a fully inductive predictor.
+
+\subsection{Splits, classifiers and external predictors}
+
+The original split assigned train, validation and test variants by STRING protein ID, with no shared proteins across partitions. The split contained 141,864 training variants, 17,129 validation variants and 18,220 test variants. The homology-aware split used MMseqs-derived protein clusters so that homologous clusters were assigned wholly to one partition while preserving the same row counts \cite{Steinegger2017MMseqs2}. This split is treated as a stress test rather than a prevalence-matched replacement because the test positive rate changed from 31.95\% in the original split to 10.56\% in the homology-aware split.
+
+All representation and fusion models were evaluated with a downstream MLP classifier selected by validation AUC and optimized with Adam \cite{Kingma2015Adam,Fawcett2006ROC}. Multi-feature representation/fusion models used a 512/128 hidden-layer MLP with dropout 0.3, whereas low-dimensional external-score baselines used a smaller 32/16 classifier with dropout 0.2 unless explicitly stated otherwise. Training used mini-batches of 1,024 variants, learning rate $10^{-3}$, weight decay $10^{-5}$ and early stopping after five validation checks without improvement. CADD GRCh38 v1.7 scores and AlphaMissense hg38 scores were matched to the reconstructed variants \cite{Kircher2014CADD,Schubach2024CADDv17,Cheng2023AlphaMissense}. CADD scores covered 177,205 variants (99.995\%), and AlphaMissense scores covered 171,753 variants (96.92\%). Missing CADD and AlphaMissense scores were imputed with training-set medians; AlphaMissense-based feature sets also included a missingness indicator.
+
+\subsection{Audit analyses}
+
+Uncertainty was assessed using both variant-level bootstrap and protein-clustered bootstrap \cite{Efron1993Bootstrap}. To test connectivity dependence, we removed direct train-test PPI edges and regenerated PPI-GCN embeddings. Partial edge-ablation curves removed 0\%, 25\%, 50\%, 75\% and 100\% of direct train-test protein pairs using random removal, high-confidence-first removal and low-confidence-first removal. To test whether generic graph smoothing was sufficient, topology permutation preserved the unlabeled graph topology while randomizing the correspondence between protein identity and graph position. Follow-up fusion controls also concatenated \CADDAM{} features with raw ESM, edge-ablated PPI-GCN and topology-permuted PPI-GCN representations to distinguish protein-representation complementarity from graph-topology-specific complementarity.
+
+Topology-context analyses stratified test variants by degree, k-core, betweenness, clustering coefficient, neighbour-risk and community-boundary features. Neighbour-risk and neighbour pathogenic-rate features for validation and test proteins were computed from training-set labels only; validation and test labels were not used to construct these topology-context features. Corrected-sample analyses compared variants whose predictions were corrected or degraded after adding graph context. Multiple topology-feature comparisons used Benjamini-Hochberg false-discovery-rate correction \cite{Benjamini1995FDR}. AUPRC was interpreted within each split because precision-recall metrics are sensitive to class prevalence \cite{Saito2015PrecisionRecall}.
+
+\section{Results}
+
+\subsection{Full-graph PPI-GCN improves point estimates but depends on graph connectivity}
+
+Under the original protein-level split, raw ESM achieved test AUC 0.7790 and AUPRC 0.6074. PPI-GCN improved these values to AUC 0.7997 and AUPRC 0.6496, corresponding to $\Delta$ AUC = +0.0207 and $\Delta$ AUPRC = +0.0421 (Fig. 1B). Variant-level bootstrap supported a positive difference, with $\Delta$ AUC +0.0208, 95\% CI [0.0174, 0.0240], and $\Delta$ AUPRC +0.0420, 95\% CI [0.0353, 0.0484]. However, protein-clustered bootstrap widened uncertainty across zero: $\Delta$ AUC CI [-0.0080, +0.0527] and $\Delta$ AUPRC CI [-0.0021, +0.0798] (Fig. 1C).
+
+The full graph contained 1,242,422 direct train-test edge-index entries, representing 9.06\% of all edge-index entries and 621,211 unique undirected train-test protein pairs. Removing all direct train-test PPI edges reduced edge-ablated ESM-GCN to AUC 0.7791 $\pm$ 0.0076 and AUPRC 0.6255 $\pm$ 0.0148 (Fig. 1D). Relative to raw ESM, the AUC gain was nearly eliminated ($\Delta$ AUC +0.0001), while a smaller AUPRC gain remained ($\Delta$ AUPRC +0.0181). Partial ablation further showed that AUC gain declined as direct train-test pairs were removed, with high-confidence STRING edge removal generally causing stronger loss at intermediate and high removal fractions (Fig. 1E).
+
+Topology permutation provided a second boundary. When the graph topology was preserved but protein identities were randomly reassigned to graph positions, topology-permuted ESM-GCN achieved AUC 0.7757 $\pm$ 0.0067 and AUPRC 0.6052 $\pm$ 0.0086, close to raw ESM and below real PPI-GCN (Fig. 1F). Thus, the full-graph gain required biological alignment between protein identity, features, labels and PPI neighbourhoods, but its AUC component was also strongly connectivity-sensitive.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.98\textwidth]{figure_drafts/Figure1_connectivity_topology_controls_v2_accepted.pdf}
+\caption{PPI graph augmentation is topology-aligned but sensitive to train-test connectivity. A, Original protein-level split on a shared PPI graph. B, Full-graph PPI-GCN improves over raw ESM. C, Variant-level bootstrap supports positive gain, whereas protein-clustered bootstrap widens uncertainty across zero. D, Removing direct train-test PPI edges nearly eliminates the AUC gain. E, Partial train-test edge ablation shows connectivity-sensitive degradation. F, Topology permutation returns performance close to raw ESM.}
+\label{fig:connectivity}
+\end{figure*}
+
+\subsection{PPI context is complementary under the original split but bounded by strong predictors and homology-aware evaluation}
+
+Under the original split, external variant-effect predictors were strong baselines. For context, the single-score CADD and AlphaMissense baselines achieved CADD-only AUC 0.9207 and AUPRC 0.8049, and AlphaMissense-only AUC 0.9470 and AUPRC 0.8899. In the matched repeated-run fusion-control audit used for Fig. 2, an architecture-matched \CADDAM{} baseline trained with the same 512/128 MLP used for fusion controls achieved mean AUC 0.9572 and AUPRC 0.9068. Adding raw ESM representation to \CADDAM{} improved performance to AUC 0.9680 and AUPRC 0.9317, indicating that protein-level sequence representation itself was complementary to the two scalar predictors. In the matched repeated-run graph-fusion comparison, real PPI-GCN fusion achieved AUC 0.9718 and AUPRC 0.9415, but edge-ablated graph fusion remained close at AUC 0.9708 and AUPRC 0.9395, and topology-permuted graph fusion retained AUC 0.9694 and AUPRC 0.9355. Paired bootstrap using ensemble-averaged predictions supported a real-fusion margin over raw ESM fusion (protein-clustered $\Delta$ AUC 95\% CI 0.0005 to 0.0075; $\Delta$ AUPRC CI 0.0032 to 0.0167), but the smaller margins over edge-ablated and topology-permuted graph controls crossed zero under protein-clustered uncertainty. Thus, in the strong-predictor fusion setting, the original-split gain was largely retained by protein-representation controls, while the topology-specific margin of real PPI-GCN over graph controls was small and not consistently supported under clustered uncertainty (Fig. 2B,C).
+
+The homology-aware split changed the interpretation. PPI-GCN remained higher than raw ESM, increasing AUC from 0.7248 to 0.7606 and AUPRC from 0.2418 to 0.2768 (Fig. 2D). However, once CADD and AlphaMissense were included, neither raw ESM fusion nor graph fusion showed stable additional value over the two-predictor baseline. The architecture-matched \CADDAM{} baseline achieved AUC 0.9754 and AUPRC 0.8401; \CADDAM{} plus raw ESM achieved mean AUC 0.9728 and AUPRC 0.8249; and the graph-fusion model achieved AUC 0.9741 and AUPRC 0.8333 (Fig. 2E). Bootstrap intervals did not support a stable positive gain over \CADDAM{} under this stress test. These results show that PPI context can be useful relative to raw ESM, but its marginal value is bounded when strong variant-effect predictors and stricter split structure are considered.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.98\textwidth]{figure_drafts/Figure2_fusion_homology_v1_accepted.pdf}
+\caption{PPI graph context is bounded by protein-representation controls and homology-aware evaluation. A, CADD and AlphaMissense matching and fusion-control setup. B, Original-split repeated-run performance of architecture-matched \CADDAM{}, \CADDAM{}+raw ESM, \CADDAM{}+edge-ablated PPI-GCN, \CADDAM{}+topology-permuted PPI-GCN and \CADDAM{}+real PPI-GCN. Bars show mean test performance across three matched classifier seeds except topology-permuted fusion, which uses three topology permutations by three classifier seeds (n=9); error bars indicate one standard deviation. C, Marginal test-set gain of real PPI-GCN fusion over architecture-matched \CADDAM{} and protein-representation controls; error bars show protein-clustered paired-bootstrap 95\% confidence intervals computed from ensemble-averaged test predictions. D, Homology-aware split comparison of raw ESM and PPI-GCN. E, Homology-aware architecture-matched \CADDAM{}, \CADDAM{}+raw ESM and graph fusion; \CADDAM{} and \CADDAM{}+raw ESM are repeated-run means, whereas graph fusion is the retained homology-aware point estimate. F, Test-set prevalence differs between original and homology-aware splits.}
+\label{fig:fusion_homology}
+\end{figure*}
+
+\subsection{Graph gains concentrate in specific topology contexts}
+
+ESM representation space showed weak but detectable alignment with PPI topology. Sampled PPI-neighbour pairs had mean ESM cosine similarity 0.8789 compared with 0.8639 for random protein pairs, and within-community pairs had higher similarity than between-community pairs (0.8743 versus 0.8642; Fig. 3A). This supports modest biological alignment between ESM features and network structure before propagation.
+
+Graph-derived gains were not monotonic with simple centrality. Mid-k-core variants showed $\Delta$ AUC +0.0775 and $\Delta$ AUPRC +0.1049, whereas high-degree variants showed $\Delta$ AUC -0.0178 (Fig. 3B). Betweenness and clustering also shaped gain profiles: low- and mid-betweenness groups showed positive AUC gains (+0.0614 and +0.0522), while high betweenness showed a negative AUC difference (-0.0145); mid- and high-clustering groups showed positive gains, while low clustering was close to zero (Fig. 3C).
+
+Neighbour-risk stratification and joint topology maps showed that the graph signal was concentrated in local contexts rather than uniformly distributed. Low-, mid- and high-neighbour-risk strata all had positive AUC gains (+0.0641, +0.0265 and +0.0284), but the shape of AUC and AUPRC gains differed across strata (Fig. 3D). Exploratory joint topology maps further identified stronger positive and negative profiles, including mid-k-core plus high-betweenness variants ($\Delta$ AUC +0.1429), mid-k-core plus mid-clustering variants (+0.1408), high-neighbour-risk plus mid-k-core variants (+0.1274), and high-k-core plus low-clustering variants (-0.0532; Fig. 3E,F). These cells are descriptive predictive gain profiles selected within this dataset, not independently validated biological subtypes.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.98\textwidth]{figure_drafts/Figure3_topology_context_v1_accepted.pdf}
+\caption{PPI-GCN gains concentrate in specific network topology contexts. A, ESM representations show weak alignment with PPI topology. B, Degree and k-core gains are non-monotonic. C, Betweenness and clustering strata shape graph-derived gain. D, Neighbour-risk strata show local-context dependence. E, Joint topology cells contain both positive and negative gains. F, Selected exploratory joint-cell profiles illustrate heterogeneous gains.}
+\label{fig:topology_context}
+\end{figure*}
+
+\subsection{Graph augmentation reshapes false-negative and false-positive predictions differently}
+
+At a fixed decision-score threshold of 0.5, raw ESM and PPI-GCN were jointly correct for 11,875 test variants and jointly wrong for 3,965 variants. PPI-GCN corrected 1,436 variants and degraded 944 variants relative to raw ESM. Corrected variants included 837 pathogenic false negatives rescued and 599 benign false positives suppressed, whereas degraded variants included 904 benign true negatives converted to false positives and 40 pathogenic true positives converted to false negatives (Fig. 4A).
+
+The transition from the \CADDAM{} baseline to graph fusion had a different structure. The two models were jointly correct for 15,981 variants and jointly wrong for 1,298 variants; graph fusion corrected 666 variants and degraded 275 variants. Corrected samples were weighted more toward false-positive suppression than false-negative rescue (444 suppressed false positives versus 222 rescued false negatives; Fig. 4B).
+
+Topology profiles differed between rescued false negatives and suppressed false positives. In the raw ESM to PPI-GCN comparison, rescued false negatives had higher degree, neighbour-risk, neighbour pathogenic rate, neighbour training-variant count and betweenness, whereas suppressed false positives had higher clustering coefficient and within-community neighbour fraction (Fig. 4C). Similar but not identical profile shifts appeared in the \CADDAM{} to graph-fusion comparison (Fig. 4D). Multiple topology features remained significant after FDR correction (Fig. 4E), and difficulty-matched contrasts retained differences across degree, k-core, neighbour-risk, neighbour pathogenic rate, betweenness and boundary role (Fig. 4F). These results link graph-associated prediction changes to network context, while remaining descriptive rather than causal.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.98\textwidth]{figure_drafts/Figure4_prediction_transitions_v2_accepted.pdf}
+\caption{Graph augmentation changes false-negative and false-positive predictions in different network contexts. A, Prediction transitions from raw ESM to PPI-GCN. B, Prediction transitions from \CADDAM{} to graph fusion. C-D, Row-normalized heatmaps compare topology profiles of suppressed false positives and rescued false negatives. E, Corrected groups differ across multiple topology features after FDR correction. F, Difficulty-matched contrasts retain topology differences.}
+\label{fig:prediction_transitions}
+\end{figure*}
+
+\section{Discussion}
+
+This audit shows that PPI graph augmentation can improve missense pathogenicity prediction, but the meaning of the gain depends on evaluation design and baseline choice. In the original shared-graph split, PPI-GCN improved over raw ESM, and this raw-representation gain was strongly topology-aligned and connectivity-sensitive. In contrast, once \CADDAM{} was included, follow-up controls showed that adding raw ESM, edge-ablated PPI-GCN or topology-permuted PPI-GCN all produced large fusion gains, with real PPI-GCN only modestly higher. Therefore, the strong-predictor fusion gain should not be interpreted as purely PPI-topology-specific; it reflects substantial protein-representation complementarity plus a smaller real-topology margin.
+
+The homology-aware analysis adds a second boundary. PPI-GCN remained useful relative to raw ESM, but neither raw ESM fusion nor graph fusion provided stable additional value over \CADDAM{} once homologous protein clusters were kept within partitions. Because the homology-aware split also changed test-set prevalence, it should be read as a stress test rather than a prevalence-matched replacement. Still, it shows that claims about graph complementarity should be conditioned on the baseline predictor, split design and graph-control baseline.
+
+The topology and transition analyses suggest that graph propagation changes predictions in structured ways. Gains concentrated in specific network roles, and rescued false negatives differed from suppressed false positives across multiple topology features. These patterns are useful for understanding model behaviour, but they do not prove a causal biological mechanism. Future work should test whether such profiles replicate in independent cohorts, temporal ClinVar splits, disease-specific networks and alternative PPI sources.
+
+Several limitations and threats to validity remain. ClinVar labels may reflect submission bias and future label updates \cite{Landrum2020ClinVar}. We did not explicitly audit historical overlap between the reconstructed ClinVar benchmark and variants potentially used during development, calibration or prior evaluation of external predictors such as CADD and AlphaMissense; their absolute performance should therefore be interpreted as benchmark performance rather than as a fully independent prospective estimate. STRING combined scores integrate multiple evidence channels and are not equivalent to direct physical interaction strength \cite{Szklarczyk2023STRING}. The original split is a transductive shared full-graph setting rather than a fully disconnected inductive evaluation. Removing direct train-test edges does not remove train-validation, validation-test or higher-order paths, so edge ablation should be interpreted as a targeted connectivity test rather than a complete leakage removal procedure. The homology-aware split reduces homologous-cluster sharing but changes class prevalence, which limits direct AUPRC comparisons across splits. The transition counts in Fig. 4 depend on a fixed decision-score threshold, and class-weighted sigmoid outputs should not be interpreted as calibrated clinical probabilities. Finally, this study audits graph augmentation on retained processed outputs and compact source data; large provider-controlled resources such as CADD and AlphaMissense must be obtained from their original sources. These limitations motivate the central conclusion: PPI graph augmentation is best treated as a conditional and auditable source of topology-context information, not as a universally reliable replacement for strong sequence or variant-effect predictors.
+
+\section*{Data and Code Availability}
+
+This BIBM working draft is currently anonymized for review planning. The full release candidate, compact source-data package, analysis scripts and checksums are staged in a private repository and can be provided to reviewers as an anonymized archive if permitted by the venue. Large third-party resources, including CADD, AlphaMissense, ClinVar and STRING source files, should be obtained from their original providers.
+
+\section*{Ethical Statement and AI-Tool Disclosure}
+
+This study used publicly available aggregate variant annotations and computationally derived representations. It did not involve direct recruitment of human participants, intervention, or access to identifiable individual-level clinical records. AI-assisted tools were used to support literature organization, language editing, drafting, internal consistency checking and script drafting/debugging under author-specified analysis goals. The author selected the analyses, ran and checked the experiments, interpreted the results, verified reported numerical claims against retained analysis outputs and source-data files, checked citations and retained responsibility for the final manuscript text. AI tools were not used as authors and were not used to generate or fabricate experimental data.
+
+
+
+\begin{thebibliography}{99}
+\bibitem{Barabasi2011NetworkMedicine} Barabasi, A.-L., Gulbahce, N. \& Loscalzo, J. Network medicine: a network-based approach to human disease. \emph{Nature Reviews Genetics} 12, 56-68 (2011). https://doi.org/10.1038/nrg2918
+\bibitem{Benjamini1995FDR} Benjamini, Y. \& Hochberg, Y. Controlling the false discovery rate: a practical and powerful approach to multiple testing. \emph{Journal of the Royal Statistical Society: Series B} 57, 289-300 (1995). https://doi.org/10.1111/j.2517-6161.1995.tb02031.x
+\bibitem{Chen2018InteractomePerturbation} Chen, S. et al. An interactome perturbation framework prioritizes damaging missense mutations for developmental disorders. \emph{Nature Genetics} 50, 1032-1040 (2018). https://doi.org/10.1038/s41588-018-0130-z
+\bibitem{Cheng2021VEGN} Cheng, J., Lawrence, C. \& Niepert, M. VEGN: variant effect prediction with graph neural networks. arXiv:2106.13642 (2021). https://doi.org/10.48550/arXiv.2106.13642
+\bibitem{Cheng2023AlphaMissense} Cheng, J. et al. Accurate proteome-wide missense variant effect prediction with AlphaMissense. \emph{Science} 381, eadg7492 (2023). https://doi.org/10.1126/science.adg7492
+\bibitem{Efron1993Bootstrap} Efron, B. \& Tibshirani, R. J. \emph{An Introduction to the Bootstrap}. Chapman \& Hall/CRC (1993).
+\bibitem{Fawcett2006ROC} Fawcett, T. An introduction to ROC analysis. \emph{Pattern Recognition Letters} 27, 861-874 (2006). https://doi.org/10.1016/j.patrec.2005.10.010
+\bibitem{Frazer2021EVE} Frazer, J. et al. Disease variant prediction with deep generative models of evolutionary data. \emph{Nature} 599, 91-95 (2021). https://doi.org/10.1038/s41586-021-04043-8
+\bibitem{Ghadie2025DiseaseSpecificGNN} Ghadie, M., Sardaar, S. \& Trakadis, Y. Disease-specific prediction of missense variant pathogenicity with DNA language models and graph neural networks. \emph{Bioengineering} 12, 1098 (2025). https://doi.org/10.3390/bioengineering12101098
+\bibitem{Ioannidis2016REVEL} Ioannidis, N. M. et al. REVEL: an ensemble method for predicting the pathogenicity of rare missense variants. \emph{American Journal of Human Genetics} 99, 877-885 (2016). https://doi.org/10.1016/j.ajhg.2016.08.016
+\bibitem{Kingma2015Adam} Kingma, D. P. \& Ba, J. Adam: a method for stochastic optimization. \emph{International Conference on Learning Representations} (2015). arXiv:1412.6980
+\bibitem{Kipf2017GCN} Kipf, T. N. \& Welling, M. Semi-supervised classification with graph convolutional networks. \emph{International Conference on Learning Representations} (2017).
+\bibitem{Kircher2014CADD} Kircher, M. et al. A general framework for estimating the relative pathogenicity of human genetic variants. \emph{Nature Genetics} 46, 310-315 (2014). https://doi.org/10.1038/ng.2892
+\bibitem{Landrum2020ClinVar} Landrum, M. J. et al. ClinVar: improvements to accessing data. \emph{Nucleic Acids Research} 48, D835-D844 (2020). https://doi.org/10.1093/nar/gkz972
+\bibitem{Lin2023ESM} Lin, Z. et al. Evolutionary-scale prediction of atomic-level protein structure with a language model. \emph{Science} 379, 1123-1130 (2023). https://doi.org/10.1126/science.ade2574
+\bibitem{Littmann2022ProteinMLTips} Littmann, M. et al. Ten quick tips for sequence-based prediction of protein properties using machine learning. \emph{PLOS Computational Biology} 18, e1010669 (2022). https://doi.org/10.1371/journal.pcbi.1010669
+\bibitem{Menche2015DiseaseModules} Menche, J. et al. Disease networks. Uncovering disease-disease relationships through the incomplete interactome. \emph{Science} 347, 1257601 (2015). https://doi.org/10.1126/science.1257601
+\bibitem{Qi2021MVP} Qi, H. et al. MVP predicts the pathogenicity of missense variants by deep learning. \emph{Nature Communications} 12, 510 (2021). https://doi.org/10.1038/s41467-020-20847-0
+\bibitem{Sahni2015InteractionPerturbation} Sahni, N. et al. Widespread macromolecular interaction perturbations in human genetic disorders. \emph{Cell} 161, 647-660 (2015). https://doi.org/10.1016/j.cell.2015.04.013
+\bibitem{Saito2015PrecisionRecall} Saito, T. \& Rehmsmeier, M. The precision-recall plot is more informative than the ROC plot when evaluating binary classifiers on imbalanced datasets. \emph{PLOS ONE} 10, e0118432 (2015). https://doi.org/10.1371/journal.pone.0118432
+\bibitem{Schubach2024CADDv17} Schubach, M. et al. CADD v1.7: using protein language models, regulatory CNNs and other nucleotide-level scores to improve genome-wide variant predictions. \emph{Nucleic Acids Research} (2024). https://doi.org/10.1093/nar/gkad989
+\bibitem{Steinegger2017MMseqs2} Steinegger, M. \& Soding, J. MMseqs2 enables sensitive protein sequence searching for the analysis of massive data sets. \emph{Nature Biotechnology} 35, 1026-1028 (2017). https://doi.org/10.1038/nbt.3988
+\bibitem{Sundaram2018PrimateAI} Sundaram, L. et al. Predicting the clinical impact of human mutation with deep neural networks. \emph{Nature Genetics} 50, 1161-1170 (2018). https://doi.org/10.1038/s41588-018-0167-z
+\bibitem{Szklarczyk2023STRING} Szklarczyk, D. et al. The STRING database in 2023: protein-protein association networks and functional enrichment analyses for any sequenced genome of interest. \emph{Nucleic Acids Research} 51, D638-D646 (2023). https://doi.org/10.1093/nar/gkac1000
+\bibitem{Teufel2023GraphPart} Teufel, F., Gislason, M. H., Almagro Armenteros, J. J., Johansen, A. R., Winther, O. \& Nielsen, H. GraphPart: homology partitioning for biological sequence analysis. \emph{NAR Genomics and Bioinformatics} 5, lqad088 (2023). https://doi.org/10.1093/nargab/lqad088
+\bibitem{Yu2025GNNMAP} Yu, H. et al. A graph neural network approach for accurate prediction of pathogenicity in multi-type variants. \emph{Briefings in Bioinformatics} 26, bbaf151 (2025). https://doi.org/10.1093/bib/bbaf151
+\bibitem{Zhang2022gMVP} Zhang, H. et al. Predicting functional effect of missense variants using graph attention neural networks. \emph{Nature Machine Intelligence} (2022). https://doi.org/10.1038/s42256-022-00561-w
+\end{thebibliography}
+\end{document}
