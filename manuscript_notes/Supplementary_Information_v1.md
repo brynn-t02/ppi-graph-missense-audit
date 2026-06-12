@@ -72,10 +72,12 @@ Older random-feature and label-shuffling summaries are useful as robustness cont
 
 ### Supplementary Table 2. Representation and architecture-control performance
 
+The original-split raw ESM and PPI-GCN rows report the retained reference run used for paired graph-ablation and bootstrap analyses in Figure 1. Repeated classifier seeds showed the same direction with a smaller mean AUC difference and are reported in the main text.
+
 | Evaluation setting | Model | Validation AUC | Validation AUPRC | Test AUC | Test AUPRC | Status |
 |---|---|---:|---:|---:|---:|---|
-| Original split | Raw ESM | 0.7814 | 0.5569 | 0.7790 | 0.6074 | Verified |
-| Original split | PPI-GCN | 0.8237 | 0.5821 | 0.7997 | 0.6496 | Verified |
+| Original split | Raw ESM | 0.7814 | 0.5569 | 0.7790 | 0.6074 | Retained reference run |
+| Original split | PPI-GCN | 0.8237 | 0.5821 | 0.7997 | 0.6496 | Retained reference run |
 | Original split | GraphSAGE-style propagation | 0.8008 | 0.6136 | 0.7950 | 0.6044 | Architecture control |
 | Original split | GAT-style propagation | 0.8005 | 0.5876 | 0.7949 | 0.6157 | Architecture control |
 | Original split | Degree-only baseline | 0.7298 | 0.4228 | 0.6377 | 0.3901 | Control |
@@ -122,6 +124,8 @@ The main fusion-control comparison uses repeated classifier runs where available
 | Real PPI-GCN fusion vs topology-permuted PPI-GCN fusion | Original protein-clustered paired bootstrap | AUPRC | +0.0050 | -0.0002 | +0.0112 | 1,000 |
 
 The original split variant-level bootstrap supports positive point gains, whereas protein-clustered bootstrap can widen uncertainty. In the strong-predictor fusion controls, the real PPI-GCN margin over raw ESM fusion remained positive under protein-clustered bootstrap, but the smaller margins over edge-ablated and topology-permuted graph controls crossed zero. This distinction is central to the paper's cautionary interpretation.
+
+The homology-aware strong-predictor bootstrap row retained in the source-data package comes from an earlier retained reference-run comparison. It should not be interpreted as a fully architecture-matched exp48 ensemble bootstrap. In the main manuscript, the homology-aware strong-predictor result is therefore described as a stress-test pattern with an explicitly retained graph-fusion point estimate rather than a fully symmetric repeated-run bootstrap comparison.
 
 ### Supplementary Table 5. Topology-stratified PPI-GCN gain over raw ESM
 
