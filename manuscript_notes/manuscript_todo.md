@@ -557,18 +557,322 @@ Still needed before formal submission:
 - Confirm final author list, author order and affiliation wording with the supervisor before submission.
 - Confirm whether the target venue requires a stricter AI-use disclosure, code license, data license, conflict-of-interest form, ethics form or graphical abstract.
 
-### Post-staging formatting and disclosure checkpoint
+### Citation audit checkpoint
 
-- The DOCX builder was updated on 2026-06-05 to left-align normal body paragraphs rather than fully justify them. This fixed the large stretched-space artefact caused by Word justification around long internal citation keys in the Abstract.
-- The active DOCX was rebuilt and rendered after the alignment fix. The first page no longer shows the stretched-space artefact, and the document still contains four embedded figures.
-- Current bracketed citation keys, for example `[Kircher2014CADD; Cheng2023AlphaMissense]`, remain internal working-draft keys for evidence checking. They should be converted to the selected venue's official reference style only after the target venue and bibliography are frozen.
-- Author contributions and AI tool disclosure were tightened on 2026-06-05 to avoid overstating authorship or verification. The current manuscript assigns study-question refinement, analysis-goal specification, experimental design, data reconstruction, model training, statistical analyses, figure generation, interpretation, numerical checking and manuscript writing responsibility to Y.T. It states that AI-assisted tools supported literature organization, language editing, drafting, internal consistency checking and script drafting/debugging under author-specified analysis goals; AI tools were not authors and were not used to generate or fabricate experimental data.
+- Citation audit v19 was completed on 2026-06-05 and saved as `citation_audit_v19_verified_20260605.md`.
+- No clear fake or hallucinated reference was found in the v19 bibliography during this pass.
+- `Barabasi2011NetworkMedicine` was corrected by adding DOI `10.1038/nrg2918` to the active markdown manuscript and rebuilt DOCX.
+- Recent graph-variant related references (`Cheng2021VEGN`, `Zhang2022gMVP`, `Yu2025GNNMAP`, `Ghadie2025DiseaseSpecificGNN`) should remain narrowly described as related work. They support the existence of graph-based variant-effect prediction, but not the exact STRING PPI / ESM propagation audit performed here.
+- Before formal submission, keep the citation audit file open for manual user/supervisor checking, then convert reference style only after the bibliography is frozen.
+- The Introduction related-work boundary paragraph was tightened on 2026-06-05. It now explicitly distinguishes prior graph-based variant predictors from this study's narrower audit of ESM embeddings propagated over a shared STRING PPI graph, including topology alignment, train-test connectivity, homology-aware evaluation and complementarity to CADD/AlphaMissense.
+- Abstract, Introduction and Discussion consistency was checked on 2026-06-05. The shared story is now consistent: PPI graph augmentation shows positive point estimates, but its interpretation is conditional, topology-aligned, connectivity-sensitive and bounded by homology-aware evaluation and strong CADD/AlphaMissense baselines. The phrase `homology-robust` was replaced with the more accurate `stable under homology-aware evaluation`.
+
+### Methods reproducibility checkpoint
+
+- Methods were tightened on 2026-06-05 after checking the released analysis scripts, especially the external-predictor fusion scripts.
+- The classifier description now distinguishes multi-feature representation/fusion models from the one-dimensional CADD-only baseline: multi-feature models use the 512/128 MLP, while CADD-only uses the smaller 32/16 classifier implemented in the scripts.
+- The CADD/AlphaMissense section now states the actual missing-score handling: CADD PHRED and AlphaMissense pathogenicity missing values were imputed with training-set medians, and AlphaMissense-based feature sets used an AlphaMissense-missing indicator.
+- The rebuilt Word document contains the new Methods text and still contains four embedded figures. Citation structure remains balanced: 28 cited keys in the body and 28 bibliography entries, with no missing or unused reference keys.
+- DOCX visual rendering was rerun successfully on 2026-06-05 after the Methods and layout edits. The rendered first page confirms that the Abstract no longer has the large stretched-space artefact caused by justified alignment around long citation keys. The active DOCX contains four embedded figures and no explicitly justified nonempty paragraphs.
+- The current bracketed citation keys, for example `[Kircher2014CADD; Cheng2023AlphaMissense]`, are internal working-draft keys for evidence checking. They are not the final submission citation style. After the target venue is fixed and the bibliography is frozen, convert all citation keys to the required style, most likely numbered citations for BIBM/IEEE-style submission.
+
+### Compressed submission todo
+
+Must finish before any formal submission:
+- Choose the exact target venue and submission type. BIBM remains the working target for now, but the manuscript is still maintained as a fuller journal-style draft until a final format is selected.
+- Freeze the public archive route: GitHub plus Zenodo/OSF DOI is preferred; journal supplementary archive is acceptable if the final venue allows it.
+- Replace the public archive/DOI pending wording in Data availability and Code availability after the archive is fixed.
+- Do one final number audit from source-data package to manuscript text, figure captions and supplementary tables after all remaining edits.
+- Do one final reference audit after bibliography freeze: check title, author, year, venue and DOI/URL for every cited paper.
+- Render the final DOCX/PDF locally and inspect title page, Methods pages around recent edits, figure pages, declarations and final references.
+- Confirm final author list, affiliation, acknowledgements and author-contribution wording with the supervisor.
+- Confirm venue-specific AI-use disclosure, ethics statement, competing-interest form, data/code license requirements and possible double-blind rules.
+
+Strongly recommended before submission:
+- Read and summarize the four closest graph-variant related papers (`Cheng2021VEGN`, `Zhang2022gMVP`, `Yu2025GNNMAP`, `Ghadie2025DiseaseSpecificGNN`) so the related-work and novelty boundary can be defended in oral explanation and response to reviewers.
+- Decide whether Supplementary Information stays table-focused or needs supplementary figures. Current SI v1 says supplementary figures are not finalized.
+- Add a short repository/environment note if the final archive supports it: tested Python package versions, GPU context, and what is or is not reproducible from the shared package.
+- If time allows, rerun any early controls whose intermediate files were not fully preserved, or clearly keep them as supplementary/internal checks rather than main claims.
+
+Venue-format tasks after target is fixed:
+- If targeting BIBM or a similar conference, compress the paper into the required page limit, likely by moving details and some controls to supplementary material.
+- Convert references from citation-key style to the required venue style.
+- Adjust figure placement, caption length and terminology to the final template.
+- Prepare a concise cover letter or submission note if the venue requests one.
+
+Current next best action:
+- Switch from open-ended master-manuscript polishing to a BIBM-first submission path. Use `manuscript_english_working_draft_v19_author_declarations.md` as the master source, then create a compressed BIBM conference version after rechecking the current BIBM author instructions.
+- Do not create another citation ledger unless the bibliography changes. The current citation audit and Chinese citation ledger are already recorded in `citation_audit_v19_verified_20260605.md`.
 
 ### Final manuscript-number audit checkpoint
 
-- A source-data-to-manuscript numerical audit was run on 2026-06-05 against `source_data_package_v1` and the active v19 manuscript.
+- A source-data-to-manuscript numerical audit was run on 2026-06-05 against `source_data_package_v1` and `manuscript_english_working_draft_v19_author_declarations.md`.
 - Figure 1 checks passed with no mismatches: raw ESM and PPI-GCN AUC/AUPRC, Delta AUC/AUPRC, variant-level bootstrap intervals, protein-clustered bootstrap intervals, direct train-test edge counts, edge-removal fraction and edge-ablated performance all match the packaged source data under the manuscript rounding rules.
 - Figure 2 checks passed with no mismatches: CADD-only, AlphaMissense-only, CADD+AlphaMissense, GCN+CADD+AlphaMissense, homology-aware CADD+AlphaMissense and homology-aware graph-fusion metrics all match the packaged source data under the manuscript rounding rules.
 - Figure 3 checks passed with no mismatches: ESM-PPI alignment values, degree/k-core, betweenness, clustering, neighbour-risk and selected joint-cell Delta AUC values match the packaged source data.
 - Figure 4 checks passed with no mismatches: prediction-transition counts, rescued false-negative and suppressed false-positive counts, and the reported topology-profile means match the packaged source data.
 - Current conclusion: no source-data mismatch was detected among the main numerical claims checked in Results 1-4 and Figure Legends 1-4. Repeat this audit after any future numerical edits, figure replacement or citation/style conversion.
+
+### Author declaration and AI-disclosure checkpoint
+
+- Author contributions and AI tool disclosure were tightened on 2026-06-05 to avoid overstating authorship or verification.
+- The author contribution statement now assigns study-question refinement, analysis-goal specification, experimental design, data reconstruction, model training, statistical analyses, figure generation, interpretation, numerical checking and manuscript writing responsibility to Y.T.
+- The AI disclosure now states that AI-assisted tools supported literature organization, language editing, drafting, internal consistency checking and script drafting/debugging under author-specified analysis goals. It also states that the author selected analyses, ran and checked experiments, interpreted results, verified numerical claims, checked citations and retained responsibility for the final manuscript; AI tools were not authors and were not used to generate or fabricate experimental data.
+- The DOCX was rebuilt and rendered after this edit. Declaration pages rendered without visible layout defects.
+
+### Core related-work citation recheck
+
+- The closest graph/variant related-work papers were rechecked on 2026-06-05 and recorded in `citation_audit_v19_verified_20260605.md`.
+- Rechecked papers: `Zhang2022gMVP`, `Cheng2021VEGN`, `Yu2025GNNMAP`, and `Ghadie2025DiseaseSpecificGNN`.
+- Conclusion: all four are real and relevant, but they support the broad statement that graph-based or relational modelling has been used for variant pathogenicity/effect prediction. They should not be described as the same STRING PPI / ESM graph-propagation audit performed in the present work.
+- Current Introduction wording is acceptable after this recheck because it explicitly says these studies use different graph objects and modelling goals, and it defines our narrower audit question separately.
+- Citation structure still checks out after this pass: 28 body citation keys, 28 bibliography keys, no missing references and no unused references.
+
+### Chinese citation ledger
+
+- A Chinese author-facing citation ledger was appended to `citation_audit_v19_verified_20260605.md` on 2026-06-05.
+- The ledger covers all 28 current references and records: reference type, manuscript placement, what claim it supports, retention priority and caution notes.
+- The ledger is intended for manual checking by the author and supervisor before final submission, especially to guard against citation/claim mismatch and overclaiming related work.
+- Current ledger conclusion: no obvious fake reference was found; the closest related-work group should be cited narrowly as graph/relational variant-prediction background, not as prior evidence for our exact STRING PPI / ESM propagation audit.
+
+### BIBM-first submission plan
+
+Recorded on 2026-06-05 after the user confirmed the practical target: build the complete master manuscript first, then prepare a BIBM conference version for first submission.
+
+Current target:
+- Working target: IEEE BIBM 2026, unless a better non-CCF-C venue is chosen later.
+- Rationale: BIBM is a CCF B conference in the provided school/CCF list, thematically aligned with biomedical AI / bioinformatics, and more realistic than top-tier biology or AI venues for a first submission.
+- Practical rule: keep the current v19 manuscript as the full evidence master. The BIBM version should be a compressed derivative, not the only source of truth.
+
+Known BIBM-format assumptions to recheck before final formatting:
+- Use the official BIBM author instructions and IEEE conference template.
+- Prepare an anonymized, double-blind submission version if required.
+- Compress to the official full-paper page limit, likely 8 IEEE two-column pages for the main paper based on the current BIBM working notes. Recheck the official CFP immediately before layout work.
+- Keep author names, affiliation, acknowledgements, funding and GitHub identity out of the review PDF if the current BIBM rules require double-blind review.
+
+Master package status:
+- v19 full manuscript exists and has rendered successfully with four embedded figures.
+- Accepted Figures 1-4 exist as separate PNG/PDF files.
+- Supplementary Information v1 exists.
+- Source-data package v1 exists.
+- Private GitHub release candidate exists at `https://github.com/brynn-t02/ppi-graph-missense-audit`.
+- Citation audit v19 and Chinese citation ledger exist; do not repeat this unless references change.
+
+BIBM conversion tasks:
+1. Recheck official BIBM 2026 author instructions: deadline, template, page limit, double-blind requirements, supplementary-material policy, AI-use disclosure policy and reference style.
+2. Create a BIBM manuscript branch/version from v19, preferably in a small number of files:
+   - one BIBM markdown or LaTeX source;
+   - one rendered PDF for review;
+   - one small notes section appended here if decisions change.
+3. Compress the paper:
+   - Shorten Abstract to a conference-style abstract.
+   - Keep Introduction focused on one gap: PPI graph gains may be overestimated without auditing topology alignment, train-test connectivity, homology and strong predictors.
+   - Merge Results 1-4 into a concise four-part evidence story.
+   - Move most detailed Methods and long figure legends to supplementary material.
+   - Keep only the strongest limitations in the main paper.
+4. Decide figure strategy for the 8-page version:
+   - likely keep Figures 1-4, but shrink captions and possibly combine or move Figure 4 to supplement if page pressure is too high;
+   - prioritize Figure 1 and Figure 2 because they carry the central audit and practical boundary story;
+   - keep Figure 3 if topology-context novelty remains a main claim;
+   - keep Figure 4 only if false-negative/false-positive mechanism analysis fits without crowding.
+5. Convert citation style only after the BIBM source is stable. Internal keys remain acceptable for drafting; final BIBM PDF should use IEEE-style numbered references if required.
+6. Produce an anonymized review version:
+   - remove Tian Yuxin / Inner Mongolia University / Zhang Xianguo / acknowledgements if double-blind;
+   - replace private GitHub wording with "will be made available upon acceptance" or the venue-appropriate anonymous repository wording;
+   - keep AI-use disclosure only if required in submission PDF, otherwise prepare it for the submission system/cover metadata.
+7. Run final checks:
+   - page limit;
+   - no author-identifying metadata;
+   - all figure labels readable after shrinking;
+   - citation/reference consistency;
+   - numerical consistency against `source_data_package_v1`;
+   - final PDF visual inspection.
+
+### BIBM v20 working draft checkpoint
+
+Recorded on 2026-06-05.
+
+- Created `manuscript_bibm_v20_working_draft.md` as the first BIBM-focused compressed manuscript draft.
+- v19 remains the full master manuscript and should not be edited for BIBM compression unless explicitly needed.
+- v20 is currently a drafting source, not a final IEEE-formatted submission file.
+- Initial v20 length check: approximately 2,742 English words before numbered IEEE reference conversion.
+- Current v20 status: anonymized working text with internal citation keys retained for traceability. Next steps are BIBM rule recheck, compression/page-pressure review, figure strategy, and IEEE-style formatting.
+
+### BIBM 2026 rule recheck
+
+Recorded on 2026-06-05 from the official BIBM 2026 call-for-paper page.
+
+- Full-paper limit: up to 8 pages in IEEE two-column format.
+- Review mode: double-blind. The submission PDF should not include author names or affiliations.
+- Submission format: PDF or PostScript.
+- Submission deadline listed on the official page: 2026-07-05.
+- Conference dates listed on the official page: 2026-12-01 to 2026-12-04.
+- Current v20 identity check: no direct author name, affiliation, supervisor name or GitHub username was found in `manuscript_bibm_v20_working_draft.md`.
+- Next formatting implication: keep v20 as the anonymous review manuscript; maintain author declarations, acknowledgements and repository identity separately until the non-blind or camera-ready stage.
+
+### BIBM v20 page-pressure review
+
+Recorded on 2026-06-05.
+
+- v20 draft length: approximately 2,742 English words before final numbered references.
+- Current v20 citation burden: 27 unique citation keys, so the final IEEE reference list will take non-trivial space.
+- Accepted main figures are all wide multi-panel figures and should be treated as two-column figures in IEEE layout:
+  - Figure 1 accepted PNG: 3842 x 2377 px.
+  - Figure 2 accepted PNG: 3903 x 2365 px.
+  - Figure 3 accepted PNG: 4040 x 2177 px.
+  - Figure 4 accepted PNG: 4561 x 2257 px.
+- Practical page-budget judgment: Figures 1 and 2 should stay in the BIBM main paper because they carry the central audit and predictor-boundary story. Figure 3 is valuable for the topology-context novelty claim. Figure 4 is useful mechanistic evidence but is the first candidate to move to supplement if the IEEE two-column draft exceeds 8 pages.
+- Current recommended BIBM figure strategy: start with Figures 1-3 in the main PDF and keep Figure 4 as optional main-text material depending on layout pressure; do not delete Figure 4 from the master package.
+
+### BIBM v20 Word preview
+
+Recorded on 2026-06-05.
+
+- Created `manuscript_bibm_v20_working_draft.docx` as a reading preview of the BIBM working draft.
+- Rendered preview pages to `manuscript_bibm_v20_docx_render_latest/`.
+- Visual QA note: the Word preview renders as 9 pages with no obvious large blank paragraph gaps or text overlap in the inspected contact sheet.
+- Limitation: this is not the final BIBM submission layout. Figure sizes and page count in this Word preview should not be interpreted as IEEE two-column page count.
+
+### BIBM v20 IEEE LaTeX draft
+
+Recorded on 2026-06-05.
+
+- Created `manuscript_bibm_v20_ieee_draft.tex` as the first IEEE-style BIBM source draft.
+- The local machine currently has no LaTeX compiler (`pdflatex`, `xelatex`, `tectonic`) and no local `IEEEtran.cls`, so the `.tex` source has not yet been compiled locally.
+- Official format target remains IEEE conference two-column format, up to 8 pages, double-blind.
+- Current LaTeX draft status:
+  - anonymous author block only;
+  - no direct author name, affiliation, supervisor name or GitHub username detected;
+  - 26 citation keys and 26 bibliography entries, with no missing or unused references after removing BIBM-unused GraphSAGE/GAT references;
+  - Figures 1-3 are included as main `figure*` entries;
+  - Figure 4 is retained in the source as an optional commented figure to move into the main paper only if the 8-page layout permits.
+- Next required step: compile in Overleaf or after installing a TeX environment, then inspect the generated IEEE PDF for page count, figure readability, author anonymity and reference formatting.
+
+### BIBM v20 first compiled IEEE PDF
+
+Recorded on 2026-06-05.
+
+- The user installed Tectonic 0.16.9 locally.
+- Fixed a LaTeX generation error caused by literal `\n` text before `\end{document}`.
+- Cleaned simple Markdown italics in the BIBM LaTeX bibliography into LaTeX `\emph{}` formatting.
+- Successfully compiled `manuscript_bibm_v20_ieee_draft.tex` to `manuscript_bibm_v20_ieee_draft.pdf`.
+- Current compiled PDF status:
+  - 7 pages total;
+  - Figures 1-3 are embedded as PDF figure objects on pages 5-7;
+  - Figure 4 remains excluded/commented as the page-pressure reserve figure;
+  - compilation warnings are currently underfull-box/reference-line warnings, not fatal LaTeX errors.
+- Next required check: visually open the generated PDF and inspect whether figure text remains readable in the two-column PDF. If readable, the current 7-page version leaves roughly one page of margin for final IEEE reference polishing or a shortened Figure 4/supplement note.
+
+### BIBM v20 PDF typography and Figure 4 pass
+
+Recorded on 2026-06-05 after the user noticed stretched spacing in the IEEE PDF.
+
+- The large word gaps were traced to IEEE two-column justification around long unbreakable model names such as `CADD+AlphaMissense` and `GCN+CADD+AlphaMissense`.
+- Added breakable LaTeX macros for those model names and switched the LaTeX draft to a Times-like `newtxtext,newtxmath` font setup.
+- Re-included Figure 4 in the main paper because Section 3.4 cites Fig. 4A-F; keeping Fig. 4 excluded while citing it would be a submission-level consistency error.
+- User recompiled successfully with Tectonic.
+- Current compiled PDF status after this pass:
+  - 7 pages total;
+  - Figures 1, 2, 3 and 4 are all embedded;
+  - no direct author name, affiliation, supervisor name or GitHub username detected in the LaTeX source;
+  - remaining issue to check visually: whether all figure text is readable enough in the two-column PDF.
+
+### BIBM v20 layout cleanup for figure floats and stretched Methods text
+
+Recorded on 2026-06-06 after the user noticed large blank/centered figure pages and stretched word spacing in the IEEE PDF.
+
+- Rewrote the ClinVar data-source sentence in `manuscript_bibm_v20_ieee_draft.tex` to avoid placing the long FTP path `tab_delimited/variant_summary.txt.gz` inside a narrow IEEE column.
+- Kept the factual source-data wording: the data came from the official NCBI ClinVar FTP tab-delimited variant-summary file; the FTP listing recorded a release timestamp of 31 March 2024; the retained analysis copy was archived on 3 April 2026.
+- Moved Figures 1-4 from the end of the manuscript to the corresponding Results subsections so that the IEEE double-column floats are more likely to appear near first citation and at page tops rather than as centered standalone float pages.
+- Added stricter double-column float preferences in the LaTeX preamble (`dbltopnumber`, `dbltopfraction`, `dblfloatpagefraction`, `textfraction`) to reduce unnecessary float-only pages.
+- Local compile from the Codex sandbox could not be completed because Tectonic crashed while accessing macOS network/certificate configuration through the sandbox. User-side compile is required for visual confirmation.
+
+### BIBM v20 line-spacing cleanup for long model/checkpoint strings
+
+Recorded on 2026-06-06 after the user noticed residual stretched spacing in the Results 2 homology-aware paragraph.
+
+- Rewrote the Results 2 homology-aware paragraph to report AUC and AUPRC in shorter clauses instead of using compact `AUC/AUPRC` slash notation and the full `GCN+CADD+AlphaMissense` model name in the same narrow column.
+- Replaced the long ESM checkpoint path in Methods with the prose phrase "ESM-2 650M checkpoint"; the exact checkpoint/source remains a Methods verification item for the final full manuscript.
+- Rewrote the Figure 4 transition sentence to use "the CADD+AlphaMissense baseline to graph fusion" rather than repeating the full graph-fusion model name in-line.
+- Replaced remaining compact `AUC/AUPRC` slash notation in the Abstract and Introduction with more line-break-friendly prose.
+
+### BIBM v20 external strict-review response pass
+
+Recorded on 2026-06-11 after reviewing an external critique of the BIBM draft.
+
+- Confirmed as real and fixed in `manuscript_bibm_v20_ieee_draft.tex`:
+  - Removed the duplicated `Figure X.` text from figure captions, because IEEE captions already render `Fig. X.` automatically.
+  - Removed the Kipf & Welling GCN citation from the sentence about graph-based variant predictors; it remains cited in the PPI-GCN propagation Methods section, where it belongs.
+  - Added an explicit four-part contribution statement in the Introduction so the paper is positioned as an audit/evaluation paper rather than a new-model paper.
+  - Clarified that STRING v12 is a protein association network used here as a PPI-context graph, not a pure physical-interaction-only map.
+  - Added the transductive shared-graph caveat: propagation uses the full graph containing train, validation and test nodes and their ESM features, so this is not a fully inductive predictor setting.
+  - Added the implemented propagation detail recovered from scripts: reverse edges and self-loops, symmetric degree normalization, and final representation `(x + h1 + h2) / 3`.
+  - Added recovered MLP training details: 512/128 hidden layers for representation/fusion models, 32/16 for low-dimensional external-score baselines, dropout 0.3 or 0.2, batch size 1024, learning rate 1e-3, weight decay 1e-5 and early stopping patience 5.
+  - Expanded limitations/threats to validity to mention transductive setting, remaining train-validation/validation-test/higher-order graph paths, homology-aware prevalence shift and STRING evidence-channel interpretation.
+- Confirmed as a real scientific gap that cannot be honestly fixed by wording alone:
+  - The decisive missing baseline is `CADD + AlphaMissense + raw ESM` versus `CADD + AlphaMissense + PPI-GCN`. Without it, the manuscript cannot fully isolate whether the fusion gain comes from adding protein-level ESM information or specifically from PPI propagation.
+- Recommended server-side experiments before submission, in priority order:
+  1. Run `CADD + AlphaMissense + raw ESM` on the original split and homology-aware split.
+  2. If time permits, run `CADD + AlphaMissense + edge-ablated PPI-GCN` to test whether fusion gain also depends on direct train-test graph links.
+  3. If time permits, run `CADD + AlphaMissense + topology-permuted GCN` to test whether fusion gain requires real topology alignment.
+  4. Longer-term robustness item: repeated homology-aware cluster splits or a prevalence-aware sensitivity check.
+- References requiring final manual verification before submission:
+  - CADD v1.7-specific citation suggested by external review: Schubach et al., NAR, DOI `10.1093/nar/gkad989`.
+  - Updated ClinVar citation suggested by external review: ClinVar NAR update, DOI `10.1093/nar/gkae1090`.
+  - These were not inserted in this pass because they still need source-level verification against the final reference list rather than relying only on the external review text.
+- No numerical results were changed.
+
+### Server experiment script for the missing CADD+AM+raw ESM baseline
+
+Recorded on 2026-06-11 after confirming that the `CADD + AlphaMissense + raw ESM` baseline was not present in the retained local result package.
+
+- Added a single server-side script:
+  - `/Users/teyian/Documents/paper1/server_scripts/46_run_cadd_am_plus_raw_esm_baseline.py`
+- Purpose:
+  - Run `CADD+AlphaMissense` and `CADD+AlphaMissense+raw ESM` on both the original split and the homology-aware split.
+  - Use three seeds (`42`, `43`, `44`) and the same MLP/training pattern recovered from the existing scripts.
+  - Save per-repeat metrics, summary metrics, delta summaries and prediction probabilities under `/root/data/processed/cadd_am_raw_esm_baseline_exp46` on the server.
+- Local syntax check passed with Python byte-compilation on 2026-06-11.
+- This is the first-priority experiment for responding honestly to the external review. The result will determine whether the original-split graph-fusion gain is really attributable to PPI propagation or mostly to adding raw ESM protein representation to CADD+AlphaMissense.
+
+### Exp46 CADD+AM+raw ESM baseline results received and integrated
+
+Recorded on 2026-06-11 after the user ran `46_run_cadd_am_plus_raw_esm_baseline.py` on the server and downloaded `exp46_cadd_am_raw_esm_results_20260611_163615.tar.gz`.
+
+- Local extracted results:
+  - `/Users/teyian/Documents/paper1/exp46_results/extracted_20260611_163615/root/data/processed/cadd_am_raw_esm_baseline_exp46`
+- Source-data package update:
+  - `/Users/teyian/Documents/paper1/source_data_package_v1/exp46_cadd_am_raw_esm_baseline/summary_metrics.csv`
+  - `/Users/teyian/Documents/paper1/source_data_package_v1/exp46_cadd_am_raw_esm_baseline/delta_summary.csv`
+  - `/Users/teyian/Documents/paper1/source_data_package_v1/exp46_cadd_am_raw_esm_baseline/per_repeat_metrics.csv`
+  - `/Users/teyian/Documents/paper1/source_data_package_v1/exp46_cadd_am_raw_esm_baseline/summary.json`
+- Key result:
+  - Original split: `CADD+AlphaMissense+raw ESM` achieved mean test AUC 0.9680 and AUPRC 0.9317 across three seeds, improving over the matched `CADD+AlphaMissense` rerun by +0.0107 AUC and +0.0243 AUPRC.
+  - This remains below the previously reported graph-fusion result in Figure 2B (AUC 0.9708, AUPRC 0.9397), so raw ESM explains part but not all of the original-split fusion gain.
+  - Homology-aware split: `CADD+AlphaMissense+raw ESM` achieved mean test AUC 0.9728 and AUPRC 0.8249, lower than the matched `CADD+AlphaMissense` rerun by -0.0026 AUC and -0.0161 AUPRC.
+- Manuscript updates:
+  - `manuscript_bibm_v20_ieee_draft.tex` now includes the original-split and homology-aware raw-ESM fusion baseline in Results 2 and Discussion.
+  - `Supplementary_Information_v1.md` now includes the same baseline in Supplementary Table 3 and Supplementary Methods wording.
+- Interpretation:
+  - This directly addresses the strongest external-review concern about whether the graph-fusion gain merely reflects adding protein-level ESM representation.
+  - The honest conclusion is that raw ESM representation is complementary to CADD+AlphaMissense under the original split, but PPI-GCN fusion remains higher; under the homology-aware stress test, neither raw ESM fusion nor graph fusion improves over CADD+AlphaMissense.
+
+## Follow-up baseline audit update: Exp46 and Exp47
+
+Status recorded on 2026-06-11:
+- Exp46 (`CADD+AlphaMissense+raw ESM`) was run and integrated into the BIBM v20 draft, supplement and source-data package. It showed that raw protein representation is already complementary to CADD+AlphaMissense on the original split, but not under the homology-aware stress test.
+- Exp47 (`CADD+AlphaMissense` graph-control fusions) was run and integrated into the BIBM v20 draft, supplement and source-data package. Original-split matched rerun results:
+  - CADD+AlphaMissense: test AUC 0.9573, test AUPRC 0.9075.
+  - CADD+AlphaMissense+real PPI-GCN: test AUC 0.9718, test AUPRC 0.9415.
+  - CADD+AlphaMissense+edge-ablated PPI-GCN: test AUC 0.9708, test AUPRC 0.9395.
+  - CADD+AlphaMissense+topology-permuted PPI-GCN: test AUC 0.9694, test AUPRC 0.9355.
+- Interpretation boundary: in the strong-predictor fusion setting, much of the original-split gain is retained by raw/protein-representation and graph-control variants. Therefore, manuscript claims should say that real PPI topology provides a smaller additional margin, not that the full CADD+AlphaMissense fusion gain is purely topology-specific.
+- Remaining optional server work, not required before the next manuscript pass unless time allows: repeated homology-aware splits or prevalence-aware sensitivity checks. These would strengthen the stress-test argument but are more expensive and not currently central to the BIBM v20 revision.
+- Follow-up consistency pass after external-style audit:
+  - Figure 2 script updated to show matched fusion-control results rather than the older CADD/AM/CADD+AM/GCN+CADD+AM-only story.
+  - Main text Figure 2 legend and Results 2 wording synchronized to repeated-run means.
+  - Supplementary Table 3 updated to matched repeated-run fusion-control rows.
+  - Supplementary Table 7 restricted to the rerun-verified feature-shuffled PPI-GCN control; older random-feature and label-shuffling rows are no longer presented as formal supplementary table evidence.
+  - Source-data README, Figure 2 source-data files, manifest snapshot, checksums and clean tarball refreshed.
+  - CADD v1.7 reference added at the CADD GRCh38 v1.7 Methods citation.
+  - Figure 2 PNG/PDF rerendered and visually locked on 2026-06-12 after final panel A connector spacing fixes and panel C/E bar-chart updates. The BIBM v20 draft now points to `figure_drafts/Figure2_fusion_homology_v1_accepted.pdf`.

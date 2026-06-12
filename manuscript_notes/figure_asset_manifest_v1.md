@@ -2,13 +2,16 @@
 
 Date: 2026-06-04
 
+Synchronization note:
+- Figure 2 was updated after the 2026-06-11 follow-up fusion-control experiments to show CADD+AlphaMissense+raw ESM, edge-ablated PPI-GCN, topology-permuted PPI-GCN and real PPI-GCN controls. The revised Figure 2 PNG/PDF was visually locked on 2026-06-12.
+
 ## Accepted Main Figure Assets
 
 ### Figure 1
 
 Status:
 - Accepted PNG/PDF candidate after user visual inspection on 2026-06-04.
-- Scientific content matches the current Figure 1 legend in `manuscript_english_working_draft_v18_submission_reading.md`.
+- Scientific content matches the current Figure 1 legend in `manuscript_bibm_v20_ieee_draft.tex`.
 
 Files:
 - PNG: `/Users/teyian/Documents/paper1/figure_drafts/Figure1_connectivity_topology_controls_v2_accepted.png`
@@ -25,8 +28,8 @@ Notes:
 ### Figure 2
 
 Status:
-- Accepted PNG/PDF candidate after user visual inspection on 2026-06-04.
-- Scientific content matches the current Figure 2 legend in `manuscript_english_working_draft_v18_submission_reading.md`.
+- Locked PNG/PDF candidate after user visual inspection and final self-check on 2026-06-12.
+- Scientific content matches the current Figure 2 legend in `manuscript_bibm_v20_ieee_draft.tex`.
 
 Files:
 - PNG: `/Users/teyian/Documents/paper1/figure_drafts/Figure2_fusion_homology_v1_accepted.png`
@@ -36,15 +39,15 @@ Source script:
 - `/Users/teyian/Documents/paper1/make_figure2_fusion_homology_v1.py`
 
 Notes:
-- The accepted figure was generated on the AutoDL server from real result files and copied from Downloads into the project.
-- Earlier Figure 2 attempts had panel A connector crowding and several text overlaps; those should not be used.
-- The accepted version uses a cleaner fixed-box schematic in panel A, metric-colored bars in panel B, bootstrap intervals in panel C, homology-aware comparison panels in D/E, and split-prevalence context in panel F.
+- The locked Figure 2 script uses matched follow-up fusion-control source data from exp46 and exp47.
+- Earlier Figure 2 attempts had panel A connector crowding, clipped box text, hidden arrowheads and several text overlaps; those should not be used.
+- The locked BIBM v20 Figure 2 shows matched original-split fusion controls in panel B, real-PPI marginal gains over controls in panel C, homology-aware raw ESM versus PPI-GCN in panel D, homology-aware strong-predictor fusion in panel E, and split-prevalence context in panel F.
 
 ### Figure 3
 
 Status:
 - Accepted PNG/PDF candidate after user visual inspection on 2026-06-04.
-- Scientific content matches the current Figure 3 legend in `manuscript_english_working_draft_v18_submission_reading.md`.
+- Scientific content matches the current Figure 3 legend in `manuscript_bibm_v20_ieee_draft.tex`.
 
 Files:
 - PNG: `/Users/teyian/Documents/paper1/figure_drafts/Figure3_topology_context_v1_accepted.png`
@@ -62,7 +65,7 @@ Notes:
 
 Status:
 - Accepted PNG/PDF candidate after user visual inspection on 2026-06-04.
-- Scientific content matches the current Figure 4 legend in `manuscript_english_working_draft_v18_submission_reading.md`.
+- Scientific content matches the current Figure 4 legend in `manuscript_bibm_v20_ieee_draft.tex`.
 
 Files:
 - PNG: `/Users/teyian/Documents/paper1/figure_drafts/Figure4_prediction_transitions_v2_accepted.png`
