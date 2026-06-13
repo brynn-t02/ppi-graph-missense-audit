@@ -315,7 +315,7 @@ def panel_e(x, y, w, h):
 
 add(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">')
 rect(0, 0, W, H, fill="white")
-text(W / 2, 34, "PPI graph augmentation depends on topology alignment and train-test connectivity", size=22, weight="bold", anchor="middle")
+text(W / 2, 34, "PPI graph augmentation is sensitive to protein-topology correspondence and train-test connectivity", size=22, weight="bold", anchor="middle")
 
 panel_w, panel_h = 455, 385
 xs = [42, 522, 1002]

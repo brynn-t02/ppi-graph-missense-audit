@@ -266,7 +266,7 @@ panel_e(axes[4])
 panel_f(axes[5])
 
 fig.suptitle(
-    "PPI graph augmentation depends on topology alignment and train-test connectivity",
+    "PPI graph augmentation is sensitive to protein-topology correspondence and train-test connectivity",
     fontsize=13.5,
     fontweight="bold",
     y=0.985,
