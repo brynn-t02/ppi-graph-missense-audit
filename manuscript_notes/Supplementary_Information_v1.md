@@ -8,7 +8,7 @@ Linked manuscript: `manuscript_bibm_v20_ieee_draft.tex` / `manuscript_bibm_v20_i
 
 ## Notes on scope
 
-This Supplementary Information supports the main manuscript with additional reconstruction details, split statistics, model comparisons, uncertainty estimates, topology-stratified summaries and negative-control audit information. It is not intended to reproduce every intermediate experiment chronologically. Full source-data files should be prepared separately for final submission.
+This Supplementary Information supports the main manuscript with additional reconstruction details, split statistics, model comparisons, uncertainty estimates, topology-stratified summaries and negative-control audit information. It is not intended to reproduce every intermediate experiment chronologically. Full figure source data, topology-stratified metrics, corrected-sample statistics and fusion-control summaries are included in the accompanying compact source-data archive.
 
 ## Supplementary Methods
 
@@ -16,7 +16,7 @@ This Supplementary Information supports the main manuscript with additional reco
 
 We reconstructed a missense variant pathogenicity dataset from the ClinVar `variant_summary.txt.gz` table obtained from the official NCBI ClinVar FTP `tab_delimited` directory. We used the ClinVar variant-summary release dated 31 March 2024. The exact local/server analysis copy used in our rebuild pipeline was archived on 3 April 2026, and package checksums are provided for reproducibility. We retained germline GRCh38 single-nucleotide variant records and extracted protein-level HGVS annotations. Missense substitutions were identified using a strict three-letter amino-acid substitution pattern.
 
-Pathogenic, Likely pathogenic and Pathogenic/Likely pathogenic records were grouped as pathogenic. Benign, Likely benign and Benign/Likely benign records were grouped as benign. Records with supported review status were retained, conflicting VariationIDs were removed, and duplicate VariationIDs were collapsed after conflict removal. The final mapped dataset contained 177,213 high-confidence missense variants, including 127,953 benign and 49,260 pathogenic variants.
+Pathogenic, Likely pathogenic and Pathogenic/Likely pathogenic records were grouped as pathogenic. Benign, Likely benign and Benign/Likely benign records were grouped as benign. Supported review status was defined as the exact ClinVar `ReviewStatus` strings `criteria provided, single submitter`, `criteria provided, multiple submitters, no conflicts`, `reviewed by expert panel`, and `practice guideline`; records outside this whitelist were excluded. Conflicting VariationIDs were removed, and duplicate VariationIDs were collapsed after conflict removal. The final mapped dataset contained 177,213 high-confidence missense variants, including 127,953 benign and 49,260 pathogenic variants.
 
 ClinVar gene symbols were mapped to STRING human protein nodes using upper-cased gene symbols and the STRING protein alias table. Only genes that mapped uniquely to a STRING protein present in the STRING links graph were retained. The reconstructed ClinVar-STRING dataset covered 14,123 unique variant-labelled STRING proteins embedded in a larger STRING node universe containing 19,622 proteins. The final variant tables retained genomic coordinates, reference and alternate VCF alleles, VariationID, binary label, gene symbol and mapped STRING protein identifier.
 
@@ -26,11 +26,21 @@ CADD and AlphaMissense scores were matched to ClinVar variants by GRCh38 genomic
 
 Protein node features were generated with the ESM-2 checkpoint `facebook/esm2_t33_650M_UR50D`. Residue-level embeddings were mean-pooled to obtain one 1,280-dimensional vector per protein. Proteins longer than 1,022 amino acids were split into chunks and combined by length-weighted averaging. The final feature table covered all 19,622 STRING graph proteins, with no missing graph proteins.
 
-The primary representation-propagation graph was built from STRING v12 human protein links and contained 19,622 nodes and 13,715,404 directed edge-index entries in the model input object. PPI-GCN representations were generated using fixed two-hop GCN-style propagation rather than an end-to-end trainable graph neural network. After adding self-loops and symmetrizing the graph, we computed the symmetric normalized adjacency matrix and averaged zero-hop, one-hop and two-hop propagated ESM feature matrices. This operation produced one propagated representation per STRING node and did not use variant labels during propagation.
+The primary representation-propagation graph was built from STRING v12 human protein links and contained 19,622 nodes and 13,715,404 directed edge-index entries in the retained model input object before adding self-loops. PPI-GCN representations were generated using fixed two-hop GCN-style propagation rather than an end-to-end trainable graph neural network. Propagation used a binary adjacency derived from the retained edge list; STRING combined scores were not used as propagation weights. After adding reverse edges and self-loops, duplicate edges were coalesced. Let `A` denote this binary adjacency after symmetrization and self-loop addition, `D` its degree matrix and `X` the raw ESM feature matrix. We used symmetric normalization,
+
+`A_hat = D^{-1/2} A D^{-1/2}`,
+
+and formed the propagated representation as
+
+`H = (X + A_hat X + A_hat^2 X) / 3`.
+
+This operation produced one propagated representation per STRING node and did not use variant labels during propagation.
 
 GraphSAGE-style and GAT-style propagated representations were generated as supplementary architecture controls. These controls were included to test whether the representation-level comparison was specific to the fixed PPI-GCN propagation variant. They are treated as architecture controls rather than as an architecture search, because the main contribution of the study is an audit of graph-augmentation gains rather than an optimized predictor design.
 
 For topology profiling, we used a separate thresholded STRING graph based on combined score. The primary topology analyses used a combined-score threshold of 400, yielding 19,622 nodes and 929,472 graph edges. Degree, k-core, community membership, betweenness, clustering coefficient and community-boundary role were computed on this thresholded graph. Thus, the representation-propagation graph and the topology-description graph were related STRING-derived objects but not identical analysis objects.
+
+For topology-permutation controls, the graph edges were relabelled by a random node permutation (`edge_index_perm = perm[edge_index]`), while ESM features, labels and train/validation/test variant assignments remained tied to the original protein identities. Variant features were then extracted from the propagated representation of each variant's original mapped STRING protein after propagation on the permuted graph. The graph edge count and unlabeled topology were preserved, but the original protein-to-neighbourhood correspondence was broken. Three graph permutations were combined with three downstream classifier seeds, and the downstream MLP was retrained for each permutation/seed pair.
 
 ### Supplementary Methods 3. Evaluation splits, homology-aware stress test and statistical analysis
 
@@ -48,7 +58,7 @@ Uncertainty was evaluated using 1,000 variant-level bootstrap resamples and prot
 
 ### Supplementary Methods 4. Negative controls and provenance caveats
 
-Negative-control analyses were used to assess whether graph structure, label structure or feature alignment could produce apparent predictive signal independently of the intended biological feature alignment. These analyses included random raw features, random-feature graph propagation, label-shuffling controls and feature-shuffled GCN propagation. The feature-shuffled GCN control was rerun on 4 June 2026 after an earlier audit found that one intermediate file was not retained. In this rerun, node features were randomly permuted across STRING proteins before GCN-style propagation, the propagated embeddings were saved, and the same downstream classifier was trained on the shuffled-feature representations. The rerun achieved validation AUC 0.7080, validation AUPRC 0.4241, test AUC 0.5868 and test AUPRC 0.3707, reproducing the earlier negative-control pattern and supporting its use as supplementary evidence.
+Exploratory internal controls included random raw features, random-feature graph propagation, label-shuffling controls and feature-shuffled GCN propagation. Because complete provenance was not retained for all early controls, only the re-materialized feature-shuffled PPI-GCN control is formally reported here. This negative-control analysis assessed whether graph propagation could produce apparent predictive signal independently of meaningful protein-topology correspondence. The feature-shuffled GCN control was rerun on 4 June 2026 after an earlier audit found that one intermediate file was not retained. In this rerun, node features were randomly permuted across STRING proteins before GCN-style propagation, the propagated embeddings were saved, and the same downstream classifier was trained on the shuffled-feature representations. The rerun achieved validation AUC 0.7080, validation AUPRC 0.4241, test AUC 0.5868 and test AUPRC 0.3707, reproducing the earlier negative-control pattern and supporting its use as supplementary evidence.
 
 Older random-feature and label-shuffling summaries are useful as robustness context, but they should be interpreted cautiously unless their intermediate files and exact provenance are included in the final supplementary package. We therefore do not use these controls as central main-text evidence. Their role is to clarify that graph-based learning can capture non-trivial structure even under control settings, reinforcing the need to distinguish biological topology alignment, dataset label structure and graph propagation effects.
 
@@ -80,6 +90,8 @@ The original-split raw ESM and PPI-GCN rows report the retained reference run us
 |---|---|---:|---:|---:|---:|---|
 | Original split | Raw ESM | 0.7814 | 0.5569 | 0.7790 | 0.6074 | Retained reference run |
 | Original split | PPI-GCN | 0.8237 | 0.5821 | 0.7997 | 0.6496 | Retained reference run |
+| Original split | Raw ESM repeated classifiers | NA | NA | 0.7835 +/- 0.0051 | 0.6116 +/- 0.0054 | Three classifier seeds |
+| Original split | PPI-GCN repeated classifiers | NA | NA | 0.7950 +/- 0.0013 | 0.6484 +/- 0.0096 | Three classifier seeds |
 | Original split | GraphSAGE-style propagation | 0.8008 | 0.6136 | 0.7950 | 0.6044 | Architecture control |
 | Original split | GAT-style propagation | 0.8005 | 0.5876 | 0.7949 | 0.6157 | Architecture control |
 | Original split | Degree-only baseline | 0.7298 | 0.4228 | 0.6377 | 0.3901 | Control |
@@ -114,8 +126,8 @@ The main fusion-control comparison uses repeated classifier runs where available
 | PPI-GCN vs raw ESM | Original variant bootstrap | AUPRC | +0.0420 | +0.0353 | +0.0484 | 1,000 |
 | PPI-GCN vs raw ESM | Original protein-clustered bootstrap | AUC | +0.0207 point estimate | -0.0080 | +0.0527 | 1,000 |
 | PPI-GCN vs raw ESM | Original protein-clustered bootstrap | AUPRC | +0.0421 point estimate | -0.0021 | +0.0798 | 1,000 |
-| PPI-GCN+CADD+AlphaMissense vs CADD+AlphaMissense | Original variant bootstrap | AUC | +0.0133 | +0.0119 | +0.0146 | 1,000 |
-| PPI-GCN+CADD+AlphaMissense vs CADD+AlphaMissense | Original variant bootstrap | AUPRC | +0.0310 | +0.0268 | +0.0350 | 1,000 |
+| Earlier retained-reference graph fusion vs earlier retained-reference CADD+AlphaMissense | Original retained-reference variant bootstrap; not architecture-matched | AUC | +0.0133 | +0.0119 | +0.0146 | 1,000 |
+| Earlier retained-reference graph fusion vs earlier retained-reference CADD+AlphaMissense | Original retained-reference variant bootstrap; not architecture-matched | AUPRC | +0.0310 | +0.0268 | +0.0350 | 1,000 |
 | Real PPI-GCN fusion vs architecture-matched CADD+AlphaMissense | Original protein-clustered paired bootstrap | AUC | +0.0143 | +0.0062 | +0.0224 | 1,000 |
 | Real PPI-GCN fusion vs architecture-matched CADD+AlphaMissense | Original protein-clustered paired bootstrap | AUPRC | +0.0341 | +0.0167 | +0.0566 | 1,000 |
 | Real PPI-GCN fusion vs raw ESM fusion | Original protein-clustered paired bootstrap | AUC | +0.0038 | +0.0005 | +0.0075 | 1,000 |
@@ -169,6 +181,8 @@ These joint cells were selected from the same test-set topology map used for est
 
 Corrected-sample group counts:
 
+All strong-predictor transition counts in this table correspond to the exploratory retained-reference model pair used in Figure 4, not to the architecture-matched repeated ensembles used in Figure 2.
+
 | Model pair | Group | n | Positive rate |
 |---|---|---:|---:|
 | Raw ESM to PPI-GCN | both correct | 11,875 | 0.3270 |
@@ -177,12 +191,12 @@ Corrected-sample group counts:
 | Raw ESM to PPI-GCN | degraded | 944 | 0.0424 |
 | Raw ESM to PPI-GCN | false negatives rescued | 837 | 1.0000 |
 | Raw ESM to PPI-GCN | false positives suppressed | 599 | 0.0000 |
-| CADD+AlphaMissense to graph fusion | both correct | 15,981 | 0.3173 |
-| CADD+AlphaMissense to graph fusion | both wrong | 1,298 | 0.3274 |
-| CADD+AlphaMissense to graph fusion | improved/corrected | 666 | 0.3333 |
-| CADD+AlphaMissense to graph fusion | degraded | 275 | 0.3818 |
-| CADD+AlphaMissense to graph fusion | false negatives rescued | 222 | 1.0000 |
-| CADD+AlphaMissense to graph fusion | false positives suppressed | 444 | 0.0000 |
+| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | both correct | 15,981 | 0.3173 |
+| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | both wrong | 1,298 | 0.3274 |
+| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | improved/corrected | 666 | 0.3333 |
+| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | degraded | 275 | 0.3818 |
+| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | false negatives rescued | 222 | 1.0000 |
+| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | false positives suppressed | 444 | 0.0000 |
 
 Selected false-positive-suppressed versus false-negative-rescued topology contrasts:
 
@@ -195,13 +209,13 @@ Selected false-positive-suppressed versus false-negative-rescued topology contra
 | Raw ESM to PPI-GCN | betweenness bucket | 0.9482 | 1.8530 | -0.9048 | 1.82e-120 |
 | Raw ESM to PPI-GCN | clustering coefficient | 0.2534 | 0.2022 | +0.0512 | 1.16e-07 |
 | Raw ESM to PPI-GCN | boundary role bucket | 1.1519 | 0.3321 | +0.8198 | 2.12e-87 |
-| CADD+AlphaMissense to graph fusion | degree bucket | 1.5541 | 1.8198 | -0.2658 | 2.60e-06 |
-| CADD+AlphaMissense to graph fusion | k-core bucket | 1.5518 | 1.6036 | -0.0518 | 0.8373 |
-| CADD+AlphaMissense to graph fusion | neighbour risk bucket | 0.7793 | 1.7523 | -0.9730 | 4.34e-55 |
-| CADD+AlphaMissense to graph fusion | neighbour pathogenic rate | 0.3276 | 0.4955 | -0.1679 | 1.57e-56 |
-| CADD+AlphaMissense to graph fusion | betweenness bucket | 1.5541 | 1.7252 | -0.1712 | 2.96e-04 |
-| CADD+AlphaMissense to graph fusion | clustering coefficient | 0.1807 | 0.2176 | -0.0368 | 1.64e-14 |
-| CADD+AlphaMissense to graph fusion | boundary role bucket | 0.9685 | 0.7207 | +0.2477 | 3.81e-05 |
+| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | degree bucket | 1.5541 | 1.8198 | -0.2658 | 2.60e-06 |
+| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | k-core bucket | 1.5518 | 1.6036 | -0.0518 | 0.8373 |
+| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | neighbour risk bucket | 0.7793 | 1.7523 | -0.9730 | 4.34e-55 |
+| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | neighbour pathogenic rate | 0.3276 | 0.4955 | -0.1679 | 1.57e-56 |
+| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | betweenness bucket | 1.5541 | 1.7252 | -0.1712 | 2.96e-04 |
+| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | clustering coefficient | 0.1807 | 0.2176 | -0.0368 | 1.64e-14 |
+| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | boundary role bucket | 0.9685 | 0.7207 | +0.2477 | 3.81e-05 |
 
 Difficulty-matched rescued false-negative contrasts:
 
@@ -228,16 +242,6 @@ The formal supplementary table retains the negative-control result that was reru
 
 The omitted older random-feature and label-shuffling summaries are scientifically useful as cautionary context because they suggest that graph structure and dataset label organization can produce non-trivial prediction patterns under some controls. However, without the full intermediate files in the final source-data package, they should not be presented as central evidence or as a standalone biological interpretation.
 
-## Recommended source-data files for final submission
+## Source-data archive status
 
-The following materials should be prepared as source-data files rather than printed in full:
-
-1. Full topology-stratified metrics, including degree, k-core, neighbour-risk, betweenness, clustering and community-boundary rows.
-2. Full joint topology cell map, including all 53 tested joint cells and selected bootstrap summaries for key positive and negative cells.
-3. Full corrected-sample statistics, including raw ESM to PPI-GCN feature tests, CADD+AlphaMissense to graph-fusion feature tests and difficulty-matched contrasts.
-4. Figure source data for Figures 1-4.
-5. Follow-up fusion-control source data for CADD+AlphaMissense plus raw ESM, edge-ablated PPI-GCN and topology-permuted PPI-GCN.
-
-## Supplementary figure status
-
-Supplementary figures are not yet finalized in this v1 document. Candidate supplementary figures include PR curves and split prevalence, calibration or threshold diagnostics framed as cautionary diagnostics, and CADD/AlphaMissense score-stratified gain analyses. These should be added only after the source-data package is cleaned and the target venue format is selected.
+The compact source-data archive accompanying this supplement contains figure source data for Figures 1-4, topology-stratified metrics, joint topology maps, corrected-sample statistics, fusion-control summaries, bootstrap outputs and checksum files. Large third-party resources, including provider-controlled CADD and AlphaMissense score files, are not redistributed and should be obtained from their original providers.
