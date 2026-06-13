@@ -66,38 +66,42 @@ Older random-feature and label-shuffling summaries are useful as robustness cont
 
 ### Supplementary Table 1. Dataset, split and graph summary
 
-| Object | Train | Validation | Test | Total or value | Notes |
+| Item | Train | Validation | Test | Total or value | Notes |
 |---|---:|---:|---:|---:|---|
-| Original split variants | 141,864 | 17,129 | 18,220 | 177,213 | Protein-level split |
-| Original split benign variants | 102,818 | 12,737 | 12,398 | 127,953 | Label 0 |
-| Original split pathogenic variants | 39,046 | 4,392 | 5,822 | 49,260 | Label 1 |
-| Original split unique proteins | 11,298 | 1,412 | 1,413 | 14,123 labelled proteins | No exact protein overlap |
-| Homology-aware split variants | 141,864 | 17,129 | 18,220 | 177,213 | Homology-cluster split |
-| Homology-aware split benign variants | 96,212 | 15,445 | 16,296 | 127,953 | Label 0 |
-| Homology-aware split pathogenic variants | 45,652 | 1,684 | 1,924 | 49,260 | Label 1 |
-| Homology-aware split unique proteins | 7,370 | 3,315 | 3,438 | 14,123 labelled proteins | No exact protein or cluster overlap |
-| Homology-aware clusters | NA | NA | NA | 9,731 | Mean size 1.45; maximum size 251 |
-| Representation graph | NA | NA | NA | 19,622 nodes; 13,715,404 directed edge-index entries | Used for representation propagation |
-| Topology-analysis graph | NA | NA | NA | 19,622 nodes; 929,472 edges | STRING combined-score threshold 400 |
+| Orig. variants | 141,864 | 17,129 | 18,220 | 177,213 | Protein split |
+| Orig. benign | 102,818 | 12,737 | 12,398 | 127,953 | Label 0 |
+| Orig. pathogenic | 39,046 | 4,392 | 5,822 | 49,260 | Label 1 |
+| Orig. proteins | 11,298 | 1,412 | 1,413 | 14,123 labelled proteins | No protein overlap |
+| Homol. variants | 141,864 | 17,129 | 18,220 | 177,213 | Cluster split |
+| Homol. benign | 96,212 | 15,445 | 16,296 | 127,953 | Label 0 |
+| Homol. pathogenic | 45,652 | 1,684 | 1,924 | 49,260 | Label 1 |
+| Homol. proteins | 7,370 | 3,315 | 3,438 | 14,123 labelled proteins | No protein or cluster overlap |
+| Homol. clusters | NA | NA | NA | 9,731 | Mean 1.45; max 251 |
+| Repr. graph | NA | NA | NA | 19,622 nodes; 13,715,404 directed entries | Propagation graph |
+| Topology graph | NA | NA | NA | 19,622 nodes; 929,472 edges | STRING score >=400 |
 | CADD matching | NA | NA | NA | 177,205 matched; 8 missing | GRCh38 v1.7 whole-genome SNV scores |
 | AlphaMissense matching | NA | NA | NA | 171,753 matched; 5,460 missing | hg38 AlphaMissense table |
+
+Orig. denotes the original protein-level split. Homol. denotes the homology-aware cluster split. Repr. denotes the representation-propagation graph.
 
 ### Supplementary Table 2. Representation and architecture-control performance
 
 The original-split raw ESM and PPI-GCN rows report the retained reference run used for paired graph-ablation and bootstrap analyses in Figure 1. Repeated classifier seeds showed the same direction with a smaller mean AUC difference and are reported in the main text.
 
-| Evaluation setting | Model | Validation AUC | Validation AUPRC | Test AUC | Test AUPRC | Status |
+| Split | Model | Val AUC | Val AUPRC | Test AUC | Test AUPRC | Status |
 |---|---|---:|---:|---:|---:|---|
-| Original split | Raw ESM | 0.7814 | 0.5569 | 0.7790 | 0.6074 | Retained reference run |
-| Original split | PPI-GCN | 0.8237 | 0.5821 | 0.7997 | 0.6496 | Retained reference run |
-| Original split | Raw ESM repeated classifiers | NA | NA | 0.7835 +/- 0.0051 | 0.6116 +/- 0.0054 | Three classifier seeds |
-| Original split | PPI-GCN repeated classifiers | NA | NA | 0.7950 +/- 0.0013 | 0.6484 +/- 0.0096 | Three classifier seeds |
-| Original split | GraphSAGE-style propagation | 0.8008 | 0.6136 | 0.7950 | 0.6044 | Architecture control |
-| Original split | GAT-style propagation | 0.8005 | 0.5876 | 0.7949 | 0.6157 | Architecture control |
-| Original split | Degree-only baseline | 0.7298 | 0.4228 | 0.6377 | 0.3901 | Control |
-| Original split | Feature-shuffled PPI-GCN rerun | 0.7080 | 0.4241 | 0.5868 | 0.3707 | Rerun verified on 2026-06-04 |
-| Homology-aware split | Raw ESM | 0.7315 | 0.2171 | 0.7248 | 0.2418 | Stress-test split |
-| Homology-aware split | PPI-GCN | 0.7645 | 0.2450 | 0.7606 | 0.2768 | Stress-test split |
+| Orig. | Raw ESM | 0.7814 | 0.5569 | 0.7790 | 0.6074 | Reference |
+| Orig. | PPI-GCN | 0.8237 | 0.5821 | 0.7997 | 0.6496 | Reference |
+| Orig. | Raw ESM (3 seeds) | NA | NA | 0.7835 +/- 0.0051 | 0.6116 +/- 0.0054 | 3 seeds |
+| Orig. | PPI-GCN (3 seeds) | NA | NA | 0.7950 +/- 0.0013 | 0.6484 +/- 0.0096 | 3 seeds |
+| Orig. | GraphSAGE-style | 0.8008 | 0.6136 | 0.7950 | 0.6044 | Arch. control |
+| Orig. | GAT-style | 0.8005 | 0.5876 | 0.7949 | 0.6157 | Arch. control |
+| Orig. | Degree-only | 0.7298 | 0.4228 | 0.6377 | 0.3901 | Control |
+| Orig. | Feature-shuffled GCN | 0.7080 | 0.4241 | 0.5868 | 0.3707 | Rerun verified |
+| Homol. | Raw ESM | 0.7315 | 0.2171 | 0.7248 | 0.2418 | Stress test |
+| Homol. | PPI-GCN | 0.7645 | 0.2450 | 0.7606 | 0.2768 | Stress test |
+
+Orig. denotes the original split. Homol. denotes the homology-aware split. Arch. denotes architecture.
 
 ### Supplementary Table 3. External predictor and fusion-control performance
 
@@ -133,18 +137,18 @@ Notes for Table 3B: the homology-aware graph-fusion row is a single retained poi
 
 #### Supplementary Table 4A. Raw ESM versus PPI-GCN uncertainty
 
-| Bootstrap setting | Metric | Delta | 95% CI low | 95% CI high | n |
+| Bootstrap | Metric | Delta | CI low | CI high | n |
 |---|---|---:|---:|---:|---:|
-| Original variant bootstrap | AUC | +0.0208 | +0.0174 | +0.0240 | 1,000 |
-| Original variant bootstrap | AUPRC | +0.0420 | +0.0353 | +0.0484 | 1,000 |
-| Original protein-clustered bootstrap | AUC | +0.0207 | -0.0080 | +0.0527 | 1,000 |
-| Original protein-clustered bootstrap | AUPRC | +0.0421 | -0.0021 | +0.0798 | 1,000 |
+| Variant | AUC | +0.0208 | +0.0174 | +0.0240 | 1,000 |
+| Variant | AUPRC | +0.0420 | +0.0353 | +0.0484 | 1,000 |
+| Protein-clustered | AUC | +0.0207 | -0.0080 | +0.0527 | 1,000 |
+| Protein-clustered | AUPRC | +0.0421 | -0.0021 | +0.0798 | 1,000 |
 
 #### Supplementary Table 4B. Original-split strong-predictor fusion-control uncertainty
 
 Comparison codes: C0, real PPI-GCN fusion versus architecture-matched CADD+AlphaMissense; C1, real PPI-GCN fusion versus raw ESM fusion; C2, real PPI-GCN fusion versus edge-ablated PPI-GCN fusion; C3, real PPI-GCN fusion versus topology-permuted PPI-GCN fusion.
 
-| ID | Metric | Delta | 95% CI low | 95% CI high | n |
+| ID | Metric | Delta | CI low | CI high | n |
 |---|---|---:|---:|---:|---:|
 | C0 | AUC | +0.0143 | +0.0062 | +0.0224 | 1,000 |
 | C0 | AUPRC | +0.0341 | +0.0167 | +0.0566 | 1,000 |
@@ -157,10 +161,12 @@ Comparison codes: C0, real PPI-GCN fusion versus architecture-matched CADD+Alpha
 
 #### Supplementary Table 4C. Earlier retained-reference fusion bootstrap retained as context
 
-| Comparison | Metric | Delta | 95% CI low | 95% CI high | n |
+Comparison code: R0, earlier retained-reference graph fusion versus earlier retained-reference CADD+AlphaMissense; not architecture-matched.
+
+| ID | Metric | Delta | CI low | CI high | n |
 |---|---|---:|---:|---:|---:|
-| Retained graph fusion vs retained CADD+AM | AUC | +0.0133 | +0.0119 | +0.0146 | 1,000 |
-| Retained graph fusion vs retained CADD+AM | AUPRC | +0.0310 | +0.0268 | +0.0350 | 1,000 |
+| R0 | AUC | +0.0133 | +0.0119 | +0.0146 | 1,000 |
+| R0 | AUPRC | +0.0310 | +0.0268 | +0.0350 | 1,000 |
 
 Table 4A shows that variant-level bootstrap supports positive retained-reference PPI-GCN gains, whereas protein-clustered bootstrap widens uncertainty. Table 4B shows that the real PPI-GCN fusion margin over raw ESM fusion remained positive under protein-clustered paired bootstrap, but the smaller margins over edge-ablated and topology-permuted graph controls crossed zero. Table 4C is retained as an earlier retained-reference context analysis and is not architecture-matched.
 
@@ -273,9 +279,11 @@ These are association and stratification results, not causal mechanism proof. Th
 
 The formal supplementary table retains the negative-control result that was rerun and re-materialized during the final audit. Older random-feature and label-shuffling summaries remain internal robustness context unless their full provenance is rebuilt and included in a later archive.
 
-| Control | Setting | n repeats | Validation AUC | Validation AUPRC | Test AUC | Test AUPRC | Provenance and use |
-|---|---|---:|---:|---:|---:|---:|---|
-| Feature-shuffled PPI-GCN rerun | Original split | 1 | 0.7080 | 0.4241 | 0.5868 | 0.3707 | Refreshed and retained; use as supplementary negative-control evidence |
+| Control | Setting | n | Val AUC | Val AUPRC | Test AUC | Test AUPRC |
+|---|---|---:|---:|---:|---:|---:|
+| Feature-shuffled GCN | Orig. | 1 | 0.7080 | 0.4241 | 0.5868 | 0.3707 |
+
+This control was rerun and re-materialized during the final audit and is used only as supplementary negative-control evidence.
 
 The omitted older random-feature and label-shuffling summaries are scientifically useful as cautionary context because they suggest that graph structure and dataset label organization can produce non-trivial prediction patterns under some controls. However, without the full intermediate files in the final source-data package, they should not be presented as central evidence or as a standalone biological interpretation.
 
