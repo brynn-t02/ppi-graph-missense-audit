@@ -1,10 +1,8 @@
 # Supplementary Information
 
-Title: Protein interaction graph augmentation for missense variant pathogenicity prediction is context-dependent and bounded by evaluation design
+Title: Auditing PPI Graph Augmentation for Missense Variant Pathogenicity Prediction under Topology, Connectivity and Homology Constraints
 
-Document version: Supplementary Information v1, synchronized 2026-06-12
-
-Linked manuscript: `manuscript_bibm_v20_ieee_draft.tex` / `manuscript_bibm_v20_ieee_draft.pdf`
+Document version: Supplementary Information v1, synchronized 2026-06-14
 
 ## Notes on scope
 
@@ -58,7 +56,7 @@ Uncertainty was evaluated using 1,000 variant-level bootstrap resamples and prot
 
 ### Supplementary Methods 4. Negative controls and provenance caveats
 
-Exploratory internal controls included random raw features, random-feature graph propagation, label-shuffling controls and feature-shuffled GCN propagation. Because complete provenance was not retained for all early controls, only the re-materialized feature-shuffled PPI-GCN control is formally reported here. This negative-control analysis assessed whether graph propagation could produce apparent predictive signal independently of meaningful protein-topology correspondence. The feature-shuffled GCN control was rerun on 4 June 2026 after an earlier audit found that one intermediate file was not retained. In this rerun, node features were randomly permuted across STRING proteins before GCN-style propagation, the propagated embeddings were saved, and the same downstream classifier was trained on the shuffled-feature representations. The rerun achieved validation AUC 0.7080, validation AUPRC 0.4241, test AUC 0.5868 and test AUPRC 0.3707, reproducing the earlier negative-control pattern and supporting its use as supplementary evidence.
+Exploratory internal controls included random raw features, random-feature graph propagation, label-shuffling controls and feature-shuffled GCN propagation. Because complete provenance was not retained for all early controls, only the re-materialized feature-shuffled PPI-GCN control is formally reported here. This negative-control analysis assessed whether graph propagation could produce apparent predictive signal independently of meaningful protein-topology correspondence. The feature-shuffled GCN control was rerun on 4 June 2026 because the intermediate output from the initial run was not archived. In this rerun, node features were randomly permuted across STRING proteins before GCN-style propagation, the propagated embeddings were saved, and the same downstream classifier was trained on the shuffled-feature representations. The rerun achieved validation AUC 0.7080, validation AUPRC 0.4241, test AUC 0.5868 and test AUPRC 0.3707, reproducing the earlier negative-control pattern and supporting its use as supplementary evidence.
 
 Older random-feature and label-shuffling summaries are useful as robustness context, but they should be interpreted cautiously unless their intermediate files and exact provenance are included in the final supplementary package. We therefore do not use these controls as central main-text evidence. Their role is to clarify that graph-based learning can capture non-trivial structure even under control settings, reinforcing the need to distinguish protein-topology correspondence, dataset label structure and graph-propagation effects.
 
@@ -119,7 +117,7 @@ The main fusion-control comparison uses repeated classifier runs where available
 | + permuted GCN | 9 | 0.9718 | 0.9232 | 0.9694 +/- 0.0008 | 0.9355 +/- 0.0015 |
 | + real PPI-GCN | 3 | 0.9732 | 0.9253 | 0.9718 +/- 0.0007 | 0.9415 +/- 0.0011 |
 
-Notes for Table 3A: AM denotes AlphaMissense. "Arch." denotes the architecture-matched CADD+AlphaMissense baseline using the same 512/128 MLP capacity as the fusion controls. The rows beginning with "+" add the listed protein representation to the CADD+AM feature set. Compared with the architecture-matched CADD+AM baseline, raw ESM fusion increased test AUC/AUPRC by +0.0108/+0.0249, edge-ablated PPI-GCN fusion by +0.0136/+0.0327, topology-permuted PPI-GCN fusion by +0.0122/+0.0286 and real PPI-GCN fusion by +0.0146/+0.0347. The topology-permuted row combines three graph permutations and three classifier seeds.
+Notes for Table 3A: AM denotes AlphaMissense. "Arch." denotes the architecture-matched CADD+AlphaMissense baseline using the same 512/128 MLP capacity as the fusion controls. The rows beginning with "+" add the listed protein representation to the CADD+AM feature set. Compared with the architecture-matched CADD+AM baseline, raw ESM fusion increased test AUC/AUPRC by +0.0108/+0.0249, edge-ablated PPI-GCN fusion by +0.0136/+0.0327, topology-permuted PPI-GCN fusion by +0.0122/+0.0286 and real PPI-GCN fusion by +0.0146/+0.0347. The edge-ablated row uses one deterministic direct train-test edge-ablation graph evaluated across three classifier seeds, whereas the topology-permuted row combines three random graph permutations with three classifier seeds.
 
 #### Supplementary Table 3B. Homology-aware split
 
