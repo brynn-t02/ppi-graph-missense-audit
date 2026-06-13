@@ -24,7 +24,7 @@ CADD and AlphaMissense scores were matched to ClinVar variants by GRCh38 genomic
 
 ### Supplementary Methods 2. Protein representations and graph propagation
 
-Protein node features were generated with the ESM-2 checkpoint `facebook/esm2_t33_650M_UR50D`. Residue-level embeddings were mean-pooled to obtain one 1,280-dimensional vector per protein. Proteins longer than 1,022 amino acids were split into chunks and combined by length-weighted averaging. The final feature table covered all 19,622 STRING graph proteins, with no missing graph proteins.
+Protein node features were generated with the Facebook ESM-2 t33 650M UR50D checkpoint. Residue-level embeddings were mean-pooled to obtain one 1,280-dimensional vector per protein. Proteins longer than 1,022 amino acids were split into chunks and combined by length-weighted averaging. The final feature table covered all 19,622 STRING graph proteins, with no missing graph proteins.
 
 The primary representation-propagation graph was built from STRING v12 human protein links and contained 19,622 nodes and 13,715,404 directed edge-index entries in the retained model input object before adding self-loops. PPI-GCN representations were generated using fixed two-hop GCN-style propagation rather than an end-to-end trainable graph neural network. Propagation used a binary adjacency derived from the retained edge list; STRING combined scores were not used as propagation weights. After adding reverse edges and self-loops, duplicate edges were coalesced. Let `A` denote this binary adjacency after symmetrization and self-loop addition, `D` its degree matrix and `X` the raw ESM feature matrix. We used symmetric normalization,
 
@@ -279,11 +279,11 @@ These are association and stratification results, not causal mechanism proof. Th
 
 The formal supplementary table retains the negative-control result that was rerun and re-materialized during the final audit. Older random-feature and label-shuffling summaries remain internal robustness context unless their full provenance is rebuilt and included in a later archive.
 
-| Control | Setting | n | Val AUC | Val AUPRC | Test AUC | Test AUPRC |
+| Control | Split | n | Val A | Val AP | Test A | Test AP |
 |---|---|---:|---:|---:|---:|---:|
-| Feature-shuffled GCN | Orig. | 1 | 0.7080 | 0.4241 | 0.5868 | 0.3707 |
+| Feat.-shuffled GCN | Orig. | 1 | 0.7080 | 0.4241 | 0.5868 | 0.3707 |
 
-This control was rerun and re-materialized during the final audit and is used only as supplementary negative-control evidence.
+Val A and Test A denote validation and test AUC, respectively. Val AP and Test AP denote validation and test AUPRC. This control was rerun and re-materialized during the final audit and is used only as supplementary negative-control evidence.
 
 The omitted older random-feature and label-shuffling summaries are scientifically useful as cautionary context because they suggest that graph structure and dataset label organization can produce non-trivial prediction patterns under some controls. However, without the full intermediate files in the final source-data package, they should not be presented as central evidence or as a standalone biological interpretation.
 
