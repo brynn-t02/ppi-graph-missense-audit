@@ -107,25 +107,25 @@ The main fusion-control comparison uses repeated classifier runs where available
 
 | Model | n | Val AUC | Val AUPRC | Test AUC | Test AUPRC |
 |---|---:|---:|---:|---:|---:|
-| CADD-only | 1 | 0.9237 | 0.7855 | 0.9207 | 0.8049 |
-| AlphaMissense-only | 1 | 0.9597 | 0.9038 | 0.9470 | 0.8899 |
-| CADD+AlphaMissense, architecture-matched | 3 | 0.9667 | 0.9126 | 0.9572 +/- 0.00005 | 0.9068 +/- 0.0003 |
-| CADD+AlphaMissense+raw ESM | 3 | 0.9686 | 0.9160 | 0.9680 +/- 0.0007 | 0.9317 +/- 0.0029 |
-| CADD+AlphaMissense+edge-ablated PPI-GCN | 3 | 0.9728 | 0.9257 | 0.9708 +/- 0.0008 | 0.9395 +/- 0.0007 |
-| CADD+AlphaMissense+topology-permuted PPI-GCN | 9 | 0.9718 | 0.9232 | 0.9694 +/- 0.0008 | 0.9355 +/- 0.0015 |
-| CADD+AlphaMissense+real PPI-GCN | 3 | 0.9732 | 0.9253 | 0.9718 +/- 0.0007 | 0.9415 +/- 0.0011 |
+| CADD | 1 | 0.9237 | 0.7855 | 0.9207 | 0.8049 |
+| AM | 1 | 0.9597 | 0.9038 | 0.9470 | 0.8899 |
+| CADD+AM (arch.) | 3 | 0.9667 | 0.9126 | 0.9572 +/- 0.00005 | 0.9068 +/- 0.0003 |
+| + raw ESM | 3 | 0.9686 | 0.9160 | 0.9680 +/- 0.0007 | 0.9317 +/- 0.0029 |
+| + edge-ablated GCN | 3 | 0.9728 | 0.9257 | 0.9708 +/- 0.0008 | 0.9395 +/- 0.0007 |
+| + permuted GCN | 9 | 0.9718 | 0.9232 | 0.9694 +/- 0.0008 | 0.9355 +/- 0.0015 |
+| + real PPI-GCN | 3 | 0.9732 | 0.9253 | 0.9718 +/- 0.0007 | 0.9415 +/- 0.0011 |
 
-Notes for Table 3A: the architecture-matched CADD+AlphaMissense row uses the same 512/128 MLP capacity as the fusion controls. Compared with this baseline, raw ESM fusion increased test AUC/AUPRC by +0.0108/+0.0249, edge-ablated PPI-GCN fusion by +0.0136/+0.0327, topology-permuted PPI-GCN fusion by +0.0122/+0.0286 and real PPI-GCN fusion by +0.0146/+0.0347. The topology-permuted row combines three graph permutations and three classifier seeds.
+Notes for Table 3A: AM denotes AlphaMissense. "Arch." denotes the architecture-matched CADD+AlphaMissense baseline using the same 512/128 MLP capacity as the fusion controls. The rows beginning with "+" add the listed protein representation to the CADD+AM feature set. Compared with the architecture-matched CADD+AM baseline, raw ESM fusion increased test AUC/AUPRC by +0.0108/+0.0249, edge-ablated PPI-GCN fusion by +0.0136/+0.0327, topology-permuted PPI-GCN fusion by +0.0122/+0.0286 and real PPI-GCN fusion by +0.0146/+0.0347. The topology-permuted row combines three graph permutations and three classifier seeds.
 
 #### Supplementary Table 3B. Homology-aware split
 
 | Model | n | Val AUC | Val AUPRC | Test AUC | Test AUPRC |
 |---|---:|---:|---:|---:|---:|
-| CADD-only | 1 | 0.9506 | 0.6713 | 0.9504 | 0.6895 |
-| AlphaMissense-only | 1 | 0.9614 | 0.7945 | 0.9632 | 0.8029 |
-| CADD+AlphaMissense, architecture-matched | 3 | 0.9739 | 0.8362 | 0.9754 +/- 0.00005 | 0.8401 +/- 0.0002 |
-| CADD+AlphaMissense+raw ESM | 3 | 0.9715 | 0.8228 | 0.9728 +/- 0.0003 | 0.8249 +/- 0.0016 |
-| CADD+AlphaMissense+PPI-GCN | 1 | 0.9732 | 0.8273 | 0.9741 | 0.8333 |
+| CADD | 1 | 0.9506 | 0.6713 | 0.9504 | 0.6895 |
+| AM | 1 | 0.9614 | 0.7945 | 0.9632 | 0.8029 |
+| CADD+AM (arch.) | 3 | 0.9739 | 0.8362 | 0.9754 +/- 0.00005 | 0.8401 +/- 0.0002 |
+| + raw ESM | 3 | 0.9715 | 0.8228 | 0.9728 +/- 0.0003 | 0.8249 +/- 0.0016 |
+| + PPI-GCN | 1 | 0.9732 | 0.8273 | 0.9741 | 0.8333 |
 
 Notes for Table 3B: the homology-aware graph-fusion row is a single retained point estimate. It is reported as a stress-test result, not as a fully symmetric repeated-ensemble comparison. Relative to the repeated-run architecture-matched CADD+AlphaMissense mean, the retained graph-fusion point estimate was -0.0013 AUC and -0.0068 AUPRC.
 
@@ -142,23 +142,25 @@ Notes for Table 3B: the homology-aware graph-fusion row is a single retained poi
 
 #### Supplementary Table 4B. Original-split strong-predictor fusion-control uncertainty
 
-| Comparison | Metric | Delta | 95% CI low | 95% CI high | n |
+Comparison codes: C0, real PPI-GCN fusion versus architecture-matched CADD+AlphaMissense; C1, real PPI-GCN fusion versus raw ESM fusion; C2, real PPI-GCN fusion versus edge-ablated PPI-GCN fusion; C3, real PPI-GCN fusion versus topology-permuted PPI-GCN fusion.
+
+| ID | Metric | Delta | 95% CI low | 95% CI high | n |
 |---|---|---:|---:|---:|---:|
-| Real PPI-GCN fusion vs architecture-matched CADD+AlphaMissense | AUC | +0.0143 | +0.0062 | +0.0224 | 1,000 |
-| Real PPI-GCN fusion vs architecture-matched CADD+AlphaMissense | AUPRC | +0.0341 | +0.0167 | +0.0566 | 1,000 |
-| Real PPI-GCN fusion vs raw ESM fusion | AUC | +0.0038 | +0.0005 | +0.0075 | 1,000 |
-| Real PPI-GCN fusion vs raw ESM fusion | AUPRC | +0.0093 | +0.0032 | +0.0167 | 1,000 |
-| Real PPI-GCN fusion vs edge-ablated PPI-GCN fusion | AUC | +0.0009 | -0.0009 | +0.0027 | 1,000 |
-| Real PPI-GCN fusion vs edge-ablated PPI-GCN fusion | AUPRC | +0.0017 | -0.0018 | +0.0052 | 1,000 |
-| Real PPI-GCN fusion vs topology-permuted PPI-GCN fusion | AUC | +0.0019 | -0.0005 | +0.0052 | 1,000 |
-| Real PPI-GCN fusion vs topology-permuted PPI-GCN fusion | AUPRC | +0.0050 | -0.0002 | +0.0112 | 1,000 |
+| C0 | AUC | +0.0143 | +0.0062 | +0.0224 | 1,000 |
+| C0 | AUPRC | +0.0341 | +0.0167 | +0.0566 | 1,000 |
+| C1 | AUC | +0.0038 | +0.0005 | +0.0075 | 1,000 |
+| C1 | AUPRC | +0.0093 | +0.0032 | +0.0167 | 1,000 |
+| C2 | AUC | +0.0009 | -0.0009 | +0.0027 | 1,000 |
+| C2 | AUPRC | +0.0017 | -0.0018 | +0.0052 | 1,000 |
+| C3 | AUC | +0.0019 | -0.0005 | +0.0052 | 1,000 |
+| C3 | AUPRC | +0.0050 | -0.0002 | +0.0112 | 1,000 |
 
 #### Supplementary Table 4C. Earlier retained-reference fusion bootstrap retained as context
 
 | Comparison | Metric | Delta | 95% CI low | 95% CI high | n |
 |---|---|---:|---:|---:|---:|
-| Retained-reference graph fusion vs retained-reference CADD+AlphaMissense | AUC | +0.0133 | +0.0119 | +0.0146 | 1,000 |
-| Retained-reference graph fusion vs retained-reference CADD+AlphaMissense | AUPRC | +0.0310 | +0.0268 | +0.0350 | 1,000 |
+| Retained graph fusion vs retained CADD+AM | AUC | +0.0133 | +0.0119 | +0.0146 | 1,000 |
+| Retained graph fusion vs retained CADD+AM | AUPRC | +0.0310 | +0.0268 | +0.0350 | 1,000 |
 
 Table 4A shows that variant-level bootstrap supports positive retained-reference PPI-GCN gains, whereas protein-clustered bootstrap widens uncertainty. Table 4B shows that the real PPI-GCN fusion margin over raw ESM fusion remained positive under protein-clustered paired bootstrap, but the smaller margins over edge-ablated and topology-permuted graph controls crossed zero. Table 4C is retained as an earlier retained-reference context analysis and is not architecture-matched.
 
@@ -166,35 +168,37 @@ The homology-aware strong-predictor bootstrap row retained in the source-data pa
 
 ### Supplementary Table 5. Topology-stratified PPI-GCN gain over raw ESM
 
-| Topology context | Group | n | Positive rate | Delta AUC | Delta AUPRC |
-|---|---|---:|---:|---:|---:|
-| Degree | low | 2,795 | 0.0426 | +0.0314 | +0.0109 |
-| Degree | mid | 4,762 | 0.2089 | +0.0339 | +0.0280 |
-| Degree | high | 10,663 | 0.4415 | -0.0178 | -0.0021 |
-| K-core | low | 2,847 | 0.0425 | +0.0297 | +0.0116 |
-| K-core | mid | 5,685 | 0.3078 | +0.0775 | +0.1049 |
-| K-core | high | 9,688 | 0.4078 | -0.0276 | +0.0015 |
-| Neighbour risk | low | 6,323 | 0.1056 | +0.0641 | +0.0631 |
-| Neighbour risk | mid | 5,829 | 0.2882 | +0.0265 | +0.0515 |
-| Neighbour risk | high | 6,019 | 0.5772 | +0.0284 | +0.0270 |
-| Betweenness | low | 3,050 | 0.1393 | +0.0614 | +0.0769 |
-| Betweenness | mid | 4,486 | 0.1899 | +0.0522 | +0.0501 |
-| Betweenness | high | 10,684 | 0.4254 | -0.0145 | +0.0027 |
-| Clustering | low | 8,234 | 0.2888 | -0.0036 | -0.0099 |
-| Clustering | mid | 5,950 | 0.4198 | +0.0544 | +0.0444 |
-| Clustering | high | 4,036 | 0.2344 | +0.0348 | +0.0941 |
-| Community boundary role | boundary-like | 6,198 | 0.3527 | +0.0182 | +0.0200 |
-| Community boundary role | mixed | 6,598 | 0.2963 | +0.0140 | +0.0503 |
-| Community boundary role | internal-like | 5,397 | 0.3111 | +0.0383 | +0.0151 |
+| Stratum | n | Positive rate | Delta AUC | Delta AUPRC |
+|---|---:|---:|---:|---:|
+| Degree-low | 2,795 | 0.0426 | +0.0314 | +0.0109 |
+| Degree-mid | 4,762 | 0.2089 | +0.0339 | +0.0280 |
+| Degree-high | 10,663 | 0.4415 | -0.0178 | -0.0021 |
+| K-core-low | 2,847 | 0.0425 | +0.0297 | +0.0116 |
+| K-core-mid | 5,685 | 0.3078 | +0.0775 | +0.1049 |
+| K-core-high | 9,688 | 0.4078 | -0.0276 | +0.0015 |
+| Risk-low | 6,323 | 0.1056 | +0.0641 | +0.0631 |
+| Risk-mid | 5,829 | 0.2882 | +0.0265 | +0.0515 |
+| Risk-high | 6,019 | 0.5772 | +0.0284 | +0.0270 |
+| Betweenness-low | 3,050 | 0.1393 | +0.0614 | +0.0769 |
+| Betweenness-mid | 4,486 | 0.1899 | +0.0522 | +0.0501 |
+| Betweenness-high | 10,684 | 0.4254 | -0.0145 | +0.0027 |
+| Clustering-low | 8,234 | 0.2888 | -0.0036 | -0.0099 |
+| Clustering-mid | 5,950 | 0.4198 | +0.0544 | +0.0444 |
+| Clustering-high | 4,036 | 0.2344 | +0.0348 | +0.0941 |
+| Boundary-like | 6,198 | 0.3527 | +0.0182 | +0.0200 |
+| Boundary-mixed | 6,598 | 0.2963 | +0.0140 | +0.0503 |
+| Boundary-internal | 5,397 | 0.3111 | +0.0383 | +0.0151 |
 
 Selected exploratory joint topology cells:
 
-| Joint cell | n | Positive rate | Delta AUC | Delta AUPRC | Bootstrap note |
+Cell codes: J0, mid k-core / high betweenness; J1, mid k-core / mid clustering; J2, high neighbour risk / mid k-core; J3, high k-core / low clustering.
+
+| ID | n | Pos. rate | Delta AUC | Delta AUPRC | AUC CI |
 |---|---:|---:|---:|---:|---|
-| Mid k-core / high betweenness | 1,950 | 0.4297 | +0.1429 | +0.1533 | AUC CI +0.1246 to +0.1617 |
-| Mid k-core / mid clustering | 2,089 | 0.4045 | +0.1408 | +0.1428 | AUC CI +0.1234 to +0.1581 |
-| High neighbour risk / mid k-core | 1,904 | 0.5767 | +0.1274 | +0.0983 | AUC CI +0.1045 to +0.1499 |
-| High k-core / low clustering | 4,791 | 0.3870 | -0.0532 | -0.0480 | AUC CI -0.0611 to -0.0457 |
+| J0 | 1,950 | 0.4297 | +0.1429 | +0.1533 | +0.1246 to +0.1617 |
+| J1 | 2,089 | 0.4045 | +0.1408 | +0.1428 | +0.1234 to +0.1581 |
+| J2 | 1,904 | 0.5767 | +0.1274 | +0.0983 | +0.1045 to +0.1499 |
+| J3 | 4,791 | 0.3870 | -0.0532 | -0.0480 | -0.0611 to -0.0457 |
 
 Full topology maps are provided in the accompanying source-data archive rather than printed in full in the PDF supplement.
 
@@ -202,43 +206,53 @@ These joint cells were selected from the same test-set topology map used for est
 
 ### Supplementary Table 6. Corrected-sample and difficulty-matched statistics
 
-Corrected-sample group counts:
+Corrected-sample group counts for raw ESM to PPI-GCN:
 
 All strong-predictor transition counts in this table correspond to the exploratory retained-reference model pair used in Figure 4, not to the architecture-matched repeated ensembles used in Figure 2.
 
-| Model pair | Group | n | Positive rate |
-|---|---|---:|---:|
-| Raw ESM to PPI-GCN | both correct | 11,875 | 0.3270 |
-| Raw ESM to PPI-GCN | both wrong | 3,965 | 0.2678 |
-| Raw ESM to PPI-GCN | improved/corrected | 1,436 | 0.5829 |
-| Raw ESM to PPI-GCN | degraded | 944 | 0.0424 |
-| Raw ESM to PPI-GCN | false negatives rescued | 837 | 1.0000 |
-| Raw ESM to PPI-GCN | false positives suppressed | 599 | 0.0000 |
-| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | both correct | 15,981 | 0.3173 |
-| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | both wrong | 1,298 | 0.3274 |
-| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | improved/corrected | 666 | 0.3333 |
-| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | degraded | 275 | 0.3818 |
-| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | false negatives rescued | 222 | 1.0000 |
-| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | false positives suppressed | 444 | 0.0000 |
+| Group | n | Positive rate |
+|---|---:|---:|
+| both correct | 11,875 | 0.3270 |
+| both wrong | 3,965 | 0.2678 |
+| improved/corrected | 1,436 | 0.5829 |
+| degraded | 944 | 0.0424 |
+| false negatives rescued | 837 | 1.0000 |
+| false positives suppressed | 599 | 0.0000 |
 
-Selected false-positive-suppressed versus false-negative-rescued topology contrasts:
+Corrected-sample group counts for retained-reference CADD+AlphaMissense to retained-reference graph fusion:
 
-| Model pair | Feature | FP-suppressed mean | FN-rescued mean | Difference FP minus FN | FDR |
-|---|---|---:|---:|---:|---:|
-| Raw ESM to PPI-GCN | degree bucket | 0.8698 | 1.9833 | -1.1135 | 4.48e-188 |
-| Raw ESM to PPI-GCN | k-core bucket | 0.8381 | 1.1254 | -0.2874 | 3.12e-22 |
-| Raw ESM to PPI-GCN | neighbour risk bucket | 0.5726 | 1.6941 | -1.1215 | 2.74e-129 |
-| Raw ESM to PPI-GCN | neighbour pathogenic rate | 0.2717 | 0.4329 | -0.1612 | 5.95e-90 |
-| Raw ESM to PPI-GCN | betweenness bucket | 0.9482 | 1.8530 | -0.9048 | 1.82e-120 |
-| Raw ESM to PPI-GCN | clustering coefficient | 0.2534 | 0.2022 | +0.0512 | 1.16e-07 |
-| Raw ESM to PPI-GCN | boundary role bucket | 1.1519 | 0.3321 | +0.8198 | 2.12e-87 |
-| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | degree bucket | 1.5541 | 1.8198 | -0.2658 | 2.60e-06 |
-| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | k-core bucket | 1.5518 | 1.6036 | -0.0518 | 0.8373 |
-| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | neighbour risk bucket | 0.7793 | 1.7523 | -0.9730 | 4.34e-55 |
-| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | neighbour pathogenic rate | 0.3276 | 0.4955 | -0.1679 | 1.57e-56 |
-| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | betweenness bucket | 1.5541 | 1.7252 | -0.1712 | 2.96e-04 |
-| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | clustering coefficient | 0.1807 | 0.2176 | -0.0368 | 1.64e-14 |
-| Retained-reference CADD+AlphaMissense to retained-reference graph fusion | boundary role bucket | 0.9685 | 0.7207 | +0.2477 | 3.81e-05 |
+| Group | n | Positive rate |
+|---|---:|---:|
+| both correct | 15,981 | 0.3173 |
+| both wrong | 1,298 | 0.3274 |
+| improved/corrected | 666 | 0.3333 |
+| degraded | 275 | 0.3818 |
+| false negatives rescued | 222 | 1.0000 |
+| false positives suppressed | 444 | 0.0000 |
+
+Selected false-positive-suppressed versus false-negative-rescued topology contrasts for raw ESM to PPI-GCN:
+
+| Feature | FP mean | FN mean | Diff | FDR |
+|---|---:|---:|---:|---:|
+| degree bucket | 0.8698 | 1.9833 | -1.1135 | 4.48e-188 |
+| k-core bucket | 0.8381 | 1.1254 | -0.2874 | 3.12e-22 |
+| neighbour risk bucket | 0.5726 | 1.6941 | -1.1215 | 2.74e-129 |
+| neighbour pathogenic rate | 0.2717 | 0.4329 | -0.1612 | 5.95e-90 |
+| betweenness bucket | 0.9482 | 1.8530 | -0.9048 | 1.82e-120 |
+| clustering coefficient | 0.2534 | 0.2022 | +0.0512 | 1.16e-07 |
+| boundary role bucket | 1.1519 | 0.3321 | +0.8198 | 2.12e-87 |
+
+Selected false-positive-suppressed versus false-negative-rescued topology contrasts for retained-reference CADD+AlphaMissense to retained-reference graph fusion:
+
+| Feature | FP mean | FN mean | Diff | FDR |
+|---|---:|---:|---:|---:|
+| degree bucket | 1.5541 | 1.8198 | -0.2658 | 2.60e-06 |
+| k-core bucket | 1.5518 | 1.6036 | -0.0518 | 0.8373 |
+| neighbour risk bucket | 0.7793 | 1.7523 | -0.9730 | 4.34e-55 |
+| neighbour pathogenic rate | 0.3276 | 0.4955 | -0.1679 | 1.57e-56 |
+| betweenness bucket | 1.5541 | 1.7252 | -0.1712 | 2.96e-04 |
+| clustering coefficient | 0.1807 | 0.2176 | -0.0368 | 1.64e-14 |
+| boundary role bucket | 0.9685 | 0.7207 | +0.2477 | 3.81e-05 |
 
 Difficulty-matched rescued false-negative contrasts:
 
