@@ -103,41 +103,64 @@ The original-split raw ESM and PPI-GCN rows report the retained reference run us
 
 The main fusion-control comparison uses repeated classifier runs where available. Older single-tool rows are retained only as reference context and are not mixed into the matched Figure 2 control panel.
 
-| Evaluation setting | Model | n | Validation AUC | Validation AUPRC | Test AUC | Test AUPRC | Key comparison |
-|---|---|---:|---:|---:|---:|---:|---|
-| Original split | CADD-only | 1 | 0.9237 | 0.7855 | 0.9207 | 0.8049 | Single-tool reference baseline |
-| Original split | AlphaMissense-only, triple-fusion reference | 1 | 0.9597 | 0.9038 | 0.9470 | 0.8899 | Single-tool reference baseline |
-| Original split | CADD+AlphaMissense, architecture-matched rerun | 3 | 0.9667 | 0.9126 | 0.9572 +/- 0.00005 | 0.9068 +/- 0.0003 | Strong two-predictor baseline for Figure 2; same 512/128 MLP capacity as fusion controls |
-| Original split | CADD+AlphaMissense+raw ESM | 3 | 0.9686 | 0.9160 | 0.9680 +/- 0.0007 | 0.9317 +/- 0.0029 | +0.0108 AUC and +0.0249 AUPRC versus architecture-matched CADD+AlphaMissense |
-| Original split | CADD+AlphaMissense+edge-ablated PPI-GCN | 3 | 0.9728 | 0.9257 | 0.9708 +/- 0.0008 | 0.9395 +/- 0.0007 | +0.0136 AUC and +0.0327 AUPRC versus architecture-matched CADD+AlphaMissense |
-| Original split | CADD+AlphaMissense+topology-permuted PPI-GCN | 9 | 0.9718 | 0.9232 | 0.9694 +/- 0.0008 | 0.9355 +/- 0.0015 | +0.0122 AUC and +0.0286 AUPRC versus architecture-matched CADD+AlphaMissense; three graph permutations x three classifier seeds |
-| Original split | CADD+AlphaMissense+real PPI-GCN | 3 | 0.9732 | 0.9253 | 0.9718 +/- 0.0007 | 0.9415 +/- 0.0011 | +0.0146 AUC and +0.0347 AUPRC versus architecture-matched CADD+AlphaMissense |
-| Homology-aware split | CADD-only | 1 | 0.9506 | 0.6713 | 0.9504 | 0.6895 | Single-tool reference baseline |
-| Homology-aware split | AlphaMissense-only | 1 | 0.9614 | 0.7945 | 0.9632 | 0.8029 | Single-tool reference baseline |
-| Homology-aware split | CADD+AlphaMissense, architecture-matched rerun | 3 | 0.9739 | 0.8362 | 0.9754 +/- 0.00005 | 0.8401 +/- 0.0002 | Strong two-predictor baseline; same 512/128 MLP capacity as fusion controls |
-| Homology-aware split | CADD+AlphaMissense+raw ESM | 3 | 0.9715 | 0.8228 | 0.9728 +/- 0.0003 | 0.8249 +/- 0.0016 | -0.0026 AUC and -0.0152 AUPRC versus architecture-matched CADD+AlphaMissense |
-| Homology-aware split | CADD+AlphaMissense+PPI-GCN | 1 | 0.9732 | 0.8273 | 0.9741 | 0.8333 | Single retained homology-aware graph-fusion run; -0.0013 AUC and -0.0068 AUPRC versus architecture-matched CADD+AlphaMissense |
+#### Supplementary Table 3A. Original split
+
+| Model | n | Val AUC | Val AUPRC | Test AUC | Test AUPRC |
+|---|---:|---:|---:|---:|---:|
+| CADD-only | 1 | 0.9237 | 0.7855 | 0.9207 | 0.8049 |
+| AlphaMissense-only | 1 | 0.9597 | 0.9038 | 0.9470 | 0.8899 |
+| CADD+AlphaMissense, architecture-matched | 3 | 0.9667 | 0.9126 | 0.9572 +/- 0.00005 | 0.9068 +/- 0.0003 |
+| CADD+AlphaMissense+raw ESM | 3 | 0.9686 | 0.9160 | 0.9680 +/- 0.0007 | 0.9317 +/- 0.0029 |
+| CADD+AlphaMissense+edge-ablated PPI-GCN | 3 | 0.9728 | 0.9257 | 0.9708 +/- 0.0008 | 0.9395 +/- 0.0007 |
+| CADD+AlphaMissense+topology-permuted PPI-GCN | 9 | 0.9718 | 0.9232 | 0.9694 +/- 0.0008 | 0.9355 +/- 0.0015 |
+| CADD+AlphaMissense+real PPI-GCN | 3 | 0.9732 | 0.9253 | 0.9718 +/- 0.0007 | 0.9415 +/- 0.0011 |
+
+Notes for Table 3A: the architecture-matched CADD+AlphaMissense row uses the same 512/128 MLP capacity as the fusion controls. Compared with this baseline, raw ESM fusion increased test AUC/AUPRC by +0.0108/+0.0249, edge-ablated PPI-GCN fusion by +0.0136/+0.0327, topology-permuted PPI-GCN fusion by +0.0122/+0.0286 and real PPI-GCN fusion by +0.0146/+0.0347. The topology-permuted row combines three graph permutations and three classifier seeds.
+
+#### Supplementary Table 3B. Homology-aware split
+
+| Model | n | Val AUC | Val AUPRC | Test AUC | Test AUPRC |
+|---|---:|---:|---:|---:|---:|
+| CADD-only | 1 | 0.9506 | 0.6713 | 0.9504 | 0.6895 |
+| AlphaMissense-only | 1 | 0.9614 | 0.7945 | 0.9632 | 0.8029 |
+| CADD+AlphaMissense, architecture-matched | 3 | 0.9739 | 0.8362 | 0.9754 +/- 0.00005 | 0.8401 +/- 0.0002 |
+| CADD+AlphaMissense+raw ESM | 3 | 0.9715 | 0.8228 | 0.9728 +/- 0.0003 | 0.8249 +/- 0.0016 |
+| CADD+AlphaMissense+PPI-GCN | 1 | 0.9732 | 0.8273 | 0.9741 | 0.8333 |
+
+Notes for Table 3B: the homology-aware graph-fusion row is a single retained point estimate. It is reported as a stress-test result, not as a fully symmetric repeated-ensemble comparison. Relative to the repeated-run architecture-matched CADD+AlphaMissense mean, the retained graph-fusion point estimate was -0.0013 AUC and -0.0068 AUPRC.
 
 ### Supplementary Table 4. Uncertainty and repeated-run summary
 
-| Comparison | Setting | Metric | Mean or point delta | 95% CI low | 95% CI high | n |
-|---|---|---|---:|---:|---:|---:|
-| PPI-GCN vs raw ESM | Original variant bootstrap | AUC | +0.0208 | +0.0174 | +0.0240 | 1,000 |
-| PPI-GCN vs raw ESM | Original variant bootstrap | AUPRC | +0.0420 | +0.0353 | +0.0484 | 1,000 |
-| PPI-GCN vs raw ESM | Original protein-clustered bootstrap | AUC | +0.0207 point estimate | -0.0080 | +0.0527 | 1,000 |
-| PPI-GCN vs raw ESM | Original protein-clustered bootstrap | AUPRC | +0.0421 point estimate | -0.0021 | +0.0798 | 1,000 |
-| Earlier retained-reference graph fusion vs earlier retained-reference CADD+AlphaMissense | Original retained-reference variant bootstrap; not architecture-matched | AUC | +0.0133 | +0.0119 | +0.0146 | 1,000 |
-| Earlier retained-reference graph fusion vs earlier retained-reference CADD+AlphaMissense | Original retained-reference variant bootstrap; not architecture-matched | AUPRC | +0.0310 | +0.0268 | +0.0350 | 1,000 |
-| Real PPI-GCN fusion vs architecture-matched CADD+AlphaMissense | Original protein-clustered paired bootstrap | AUC | +0.0143 | +0.0062 | +0.0224 | 1,000 |
-| Real PPI-GCN fusion vs architecture-matched CADD+AlphaMissense | Original protein-clustered paired bootstrap | AUPRC | +0.0341 | +0.0167 | +0.0566 | 1,000 |
-| Real PPI-GCN fusion vs raw ESM fusion | Original protein-clustered paired bootstrap | AUC | +0.0038 | +0.0005 | +0.0075 | 1,000 |
-| Real PPI-GCN fusion vs raw ESM fusion | Original protein-clustered paired bootstrap | AUPRC | +0.0093 | +0.0032 | +0.0167 | 1,000 |
-| Real PPI-GCN fusion vs edge-ablated PPI-GCN fusion | Original protein-clustered paired bootstrap | AUC | +0.0009 | -0.0009 | +0.0027 | 1,000 |
-| Real PPI-GCN fusion vs edge-ablated PPI-GCN fusion | Original protein-clustered paired bootstrap | AUPRC | +0.0017 | -0.0018 | +0.0052 | 1,000 |
-| Real PPI-GCN fusion vs topology-permuted PPI-GCN fusion | Original protein-clustered paired bootstrap | AUC | +0.0019 | -0.0005 | +0.0052 | 1,000 |
-| Real PPI-GCN fusion vs topology-permuted PPI-GCN fusion | Original protein-clustered paired bootstrap | AUPRC | +0.0050 | -0.0002 | +0.0112 | 1,000 |
+#### Supplementary Table 4A. Raw ESM versus PPI-GCN uncertainty
 
-The original split variant-level bootstrap supports positive point gains, whereas protein-clustered bootstrap can widen uncertainty. In the strong-predictor fusion controls, the real PPI-GCN margin over raw ESM fusion remained positive under protein-clustered bootstrap, but the smaller margins over edge-ablated and topology-permuted graph controls crossed zero. This distinction is central to the paper's cautionary interpretation.
+| Bootstrap setting | Metric | Delta | 95% CI low | 95% CI high | n |
+|---|---|---:|---:|---:|---:|
+| Original variant bootstrap | AUC | +0.0208 | +0.0174 | +0.0240 | 1,000 |
+| Original variant bootstrap | AUPRC | +0.0420 | +0.0353 | +0.0484 | 1,000 |
+| Original protein-clustered bootstrap | AUC | +0.0207 | -0.0080 | +0.0527 | 1,000 |
+| Original protein-clustered bootstrap | AUPRC | +0.0421 | -0.0021 | +0.0798 | 1,000 |
+
+#### Supplementary Table 4B. Original-split strong-predictor fusion-control uncertainty
+
+| Comparison | Metric | Delta | 95% CI low | 95% CI high | n |
+|---|---|---:|---:|---:|---:|
+| Real PPI-GCN fusion vs architecture-matched CADD+AlphaMissense | AUC | +0.0143 | +0.0062 | +0.0224 | 1,000 |
+| Real PPI-GCN fusion vs architecture-matched CADD+AlphaMissense | AUPRC | +0.0341 | +0.0167 | +0.0566 | 1,000 |
+| Real PPI-GCN fusion vs raw ESM fusion | AUC | +0.0038 | +0.0005 | +0.0075 | 1,000 |
+| Real PPI-GCN fusion vs raw ESM fusion | AUPRC | +0.0093 | +0.0032 | +0.0167 | 1,000 |
+| Real PPI-GCN fusion vs edge-ablated PPI-GCN fusion | AUC | +0.0009 | -0.0009 | +0.0027 | 1,000 |
+| Real PPI-GCN fusion vs edge-ablated PPI-GCN fusion | AUPRC | +0.0017 | -0.0018 | +0.0052 | 1,000 |
+| Real PPI-GCN fusion vs topology-permuted PPI-GCN fusion | AUC | +0.0019 | -0.0005 | +0.0052 | 1,000 |
+| Real PPI-GCN fusion vs topology-permuted PPI-GCN fusion | AUPRC | +0.0050 | -0.0002 | +0.0112 | 1,000 |
+
+#### Supplementary Table 4C. Earlier retained-reference fusion bootstrap retained as context
+
+| Comparison | Metric | Delta | 95% CI low | 95% CI high | n |
+|---|---|---:|---:|---:|---:|
+| Retained-reference graph fusion vs retained-reference CADD+AlphaMissense | AUC | +0.0133 | +0.0119 | +0.0146 | 1,000 |
+| Retained-reference graph fusion vs retained-reference CADD+AlphaMissense | AUPRC | +0.0310 | +0.0268 | +0.0350 | 1,000 |
+
+Table 4A shows that variant-level bootstrap supports positive retained-reference PPI-GCN gains, whereas protein-clustered bootstrap widens uncertainty. Table 4B shows that the real PPI-GCN fusion margin over raw ESM fusion remained positive under protein-clustered paired bootstrap, but the smaller margins over edge-ablated and topology-permuted graph controls crossed zero. Table 4C is retained as an earlier retained-reference context analysis and is not architecture-matched.
 
 The homology-aware strong-predictor bootstrap row retained in the source-data package comes from an earlier retained reference-run comparison. It should not be interpreted as a fully architecture-matched exp48 ensemble bootstrap. In the main manuscript, the homology-aware strong-predictor result is therefore described as a stress-test pattern with an explicitly retained graph-fusion point estimate rather than a fully symmetric repeated-run bootstrap comparison.
 
