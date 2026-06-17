@@ -2,17 +2,15 @@
 
 Title: Auditing PPI Graph Augmentation for Missense Variant Pathogenicity Prediction under Topology, Connectivity and Homology Constraints
 
-Document version: Supplementary Information v1, synchronized 2026-06-14
-
 ## Notes on scope
 
-This Supplementary Information supports the main manuscript with additional reconstruction details, split statistics, model comparisons, uncertainty estimates, topology-stratified summaries and negative-control audit information. It is not intended to reproduce every intermediate experiment chronologically. Full figure source data, topology-stratified metrics, corrected-sample statistics and fusion-control summaries are included in the accompanying compact source-data archive.
+This Supplementary Information supports the main manuscript with additional reconstruction details, split statistics, model comparisons, uncertainty estimates, topology-stratified summaries and negative-control audit information. It is not intended to reproduce every intermediate experiment chronologically. Full figure source data, topology-stratified metrics, corrected-sample statistics and fusion-control summaries are included in the prepared compact source-data archive.
 
 ## Supplementary Methods
 
 ### Supplementary Methods 1. Dataset reconstruction and source files
 
-We reconstructed a missense variant pathogenicity dataset from the ClinVar `variant_summary.txt.gz` table obtained from the official NCBI ClinVar FTP `tab_delimited` directory. We used the ClinVar variant-summary release dated 31 March 2024. The exact local/server analysis copy used in our rebuild pipeline was archived on 3 April 2026, and package checksums are provided for reproducibility. We retained germline GRCh38 single-nucleotide variant records and extracted protein-level HGVS annotations. Missense substitutions were identified using a strict three-letter amino-acid substitution pattern.
+We reconstructed a missense variant pathogenicity dataset from the ClinVar `variant_summary.txt.gz` table obtained from the official NCBI ClinVar FTP `tab_delimited` directory. We used the ClinVar variant-summary release dated 31 March 2024. The exact analysis copy used by the reconstruction pipeline was archived on 3 April 2026, and package checksums are provided for reproducibility. We retained germline GRCh38 single-nucleotide variant records and extracted protein-level HGVS annotations. Missense substitutions were identified using a strict three-letter amino-acid substitution pattern.
 
 Pathogenic, Likely pathogenic and Pathogenic/Likely pathogenic records were grouped as pathogenic. Benign, Likely benign and Benign/Likely benign records were grouped as benign. Supported review status was defined as the exact ClinVar `ReviewStatus` strings `criteria provided, single submitter`, `criteria provided, multiple submitters, no conflicts`, `reviewed by expert panel`, and `practice guideline`; records outside this whitelist were excluded. Conflicting VariationIDs were removed, and duplicate VariationIDs were collapsed after conflict removal. The final mapped dataset contained 177,213 filtered, non-conflicting ClinVar missense variants with criteria-supported review status, including 127,953 benign and 49,260 pathogenic variants.
 
@@ -24,7 +22,7 @@ CADD and AlphaMissense scores were matched to ClinVar variants by GRCh38 genomic
 
 Protein node features were generated with the Facebook ESM-2 t33 650M UR50D checkpoint. Residue-level embeddings were mean-pooled to obtain one 1,280-dimensional vector per protein. Proteins longer than 1,022 amino acids were split into chunks and combined by length-weighted averaging. The final feature table covered all 19,622 STRING graph proteins, with no missing graph proteins.
 
-The primary representation-propagation graph was built from STRING v12 human protein links and contained 19,622 nodes and 13,715,404 directed edge-index entries in the retained model input object before adding self-loops. PPI-GCN representations were generated using fixed two-hop GCN-style propagation rather than an end-to-end trainable graph neural network. Propagation used a binary adjacency derived from the retained edge list; STRING combined scores were not used as propagation weights. After adding reverse edges and self-loops, duplicate edges were coalesced. Let `A` denote this binary adjacency after symmetrization and self-loop addition, `D` its degree matrix and `X` the raw ESM feature matrix. We used symmetric normalization,
+The primary representation-propagation graph was built from STRING v12 human protein links and contained 19,622 nodes and 13,715,404 directed edge-index entries in the retained model input object before adding self-loops. PPI-GCN representations were generated using fixed two-hop GCN-style propagation rather than an end-to-end trainable graph neural network. Propagation used a binary adjacency derived from the retained edge list; STRING combined scores were not used as propagation weights. The retained edge list was symmetrized, self-loops were added and duplicate edges were coalesced. Let `A` denote this binary adjacency after symmetrization and self-loop addition, `D` its degree matrix and `X` the raw ESM feature matrix. We used symmetric normalization,
 
 `A_hat = D^{-1/2} A D^{-1/2}`,
 
@@ -46,9 +44,9 @@ The original evaluation split was constructed at the STRING protein level using 
 
 For homology-aware evaluation, STRING v12 human protein sequences were clustered with MMseqs using minimum sequence identity 0.40, coverage threshold 0.50 and cov-mode 0. Homologous clusters rather than individual proteins were assigned to train, validation and test partitions, with no protein or homology-cluster overlap across partitions. This split was used as a stricter stress test for reduced sequence-related sharing across partitions, not as a prevalence-matched replacement for the original protein-level split. It preserved the original row counts: 141,864 training variants, 17,129 validation variants and 18,220 test variants. The homology-aware split contained 7,370, 3,315 and 3,438 unique proteins in the train, validation and test sets, respectively, and was built from 9,731 protein clusters with mean cluster size 1.45 and maximum cluster size 251. Because test prevalence changed from 31.95% in the original split to 10.56% in the homology-aware split, AUPRC values should be interpreted within each split rather than directly compared across splits.
 
-Variant-level pathogenicity was predicted with validation-selected multilayer perceptron classifiers. For representation-based and fusion models, each variant inherited the representation of its mapped STRING protein, and the classifier used two hidden layers with 512 and 128 units, ReLU activations, dropout 0.3 and a single-logit output. Low-dimensional external-score-only baselines used a smaller 32/16 classifier with dropout 0.2 unless explicitly marked as architecture-matched. Models were trained with BCEWithLogitsLoss and positive-class weighting, using Adam with learning rate 1e-3, weight decay 1e-5, batch size 1024, a maximum of 50 epochs and early stopping after five epochs without validation AUC improvement. The positive-class weight was computed from the training partition as `N_negative / N_positive`. The best epoch was selected by validation AUC.
+Variant-level pathogenicity was predicted with validation-selected multilayer perceptron classifiers. For representation-based and fusion models, each variant inherited the representation of its mapped STRING protein, and the classifier used two hidden layers with 512 and 128 units, ReLU activations, dropout 0.3 and a single-logit output. Low-dimensional external-score-only baselines used a smaller 32/16 classifier with dropout 0.2 unless explicitly marked as architecture-matched. Models were trained with BCEWithLogitsLoss and positive-class weighting, using Adam with learning rate 1e-3, weight decay 1e-5, batch size 1024, a maximum of 50 epochs and early stopping after five consecutive validation checks without validation AUC improvement. The positive-class weight was computed from the training partition as `N_negative / N_positive`. The best epoch was selected by validation AUC.
 
-In the retained MLP pipeline, no additional z-score standardization was applied to CADD, AlphaMissense or embedding-derived inputs. Missing CADD and AlphaMissense values were imputed using training-set medians, and binary missingness indicators were retained as binary indicators. The same feature construction was used across raw ESM, edge-ablated PPI-GCN, topology-permuted PPI-GCN and real PPI-GCN fusion controls. Repeated classifier comparisons used seeds 42, 43 and 44 unless otherwise stated; topology-permuted fusion combined three sampled graph permutations with these classifier seeds. These details mean that the architecture-matched fusion controls share downstream classifier capacity and feature construction, while alternative feature-scaling choices were not separately optimized in this audit.
+In the evaluated MLP configurations, no additional z-score standardization was applied to CADD, AlphaMissense or embedding-derived inputs. Missing CADD and AlphaMissense values were imputed using training-set medians, and binary missingness indicators were retained as binary indicators. The same feature construction was used across raw ESM, edge-ablated PPI-GCN, topology-permuted PPI-GCN and real PPI-GCN fusion controls. Repeated classifier comparisons used seeds 42, 43 and 44 unless otherwise stated; topology-permuted fusion combined three sampled graph permutations with these classifier seeds. These details mean that the architecture-matched fusion controls share downstream classifier capacity and feature construction, while alternative feature-scaling choices were not separately optimized in this audit.
 
 Neighbour-risk, neighbour pathogenic-rate and neighbour training-variant-count features were computed from training-set labels only. Validation and test labels were not used to construct these topology-context features. When a test protein had multiple labelled training-neighbour variants, the neighbour pathogenic rate was variant-weighted rather than protein-weighted, so proteins with many labelled neighbouring variants contributed proportionally to the local training-label context.
 
@@ -56,9 +54,7 @@ Uncertainty was evaluated using 1,000 variant-level bootstrap resamples and prot
 
 ### Supplementary Methods 4. Negative controls and provenance caveats
 
-Exploratory internal controls included random raw features, random-feature graph propagation, label-shuffling controls and feature-shuffled GCN propagation. Because complete provenance was not retained for all early controls, only the re-materialized feature-shuffled PPI-GCN control is formally reported here. This negative-control analysis assessed whether graph propagation could produce apparent predictive signal independently of meaningful protein-topology correspondence. The feature-shuffled GCN control was rerun on 4 June 2026 because the intermediate output from the initial run was not archived. In this rerun, node features were randomly permuted across STRING proteins before GCN-style propagation, the propagated embeddings were saved, and the same downstream classifier was trained on the shuffled-feature representations. The rerun achieved validation AUC 0.7080, validation AUPRC 0.4241, test AUC 0.5868 and test AUPRC 0.3707, reproducing the earlier negative-control pattern and supporting its use as supplementary evidence.
-
-Older random-feature and label-shuffling summaries are useful as robustness context, but they should be interpreted cautiously unless their intermediate files and exact provenance are included in the final supplementary package. We therefore do not use these controls as central main-text evidence. Their role is to clarify that graph-based learning can capture non-trivial structure even under control settings, reinforcing the need to distinguish protein-topology correspondence, dataset label structure and graph-propagation effects.
+Exploratory controls included random raw features, random-feature graph propagation, label shuffling and feature-shuffled GCN propagation. Only the re-materialized feature-shuffled PPI-GCN control is formally reported here because it was retained with complete final-audit provenance. It was rerun using the same downstream evaluation protocol and achieved validation AUC 0.7080, validation AUPRC 0.4241, test AUC 0.5868 and test AUPRC 0.3707. The result is used only as supplementary negative-control evidence and is not part of the main comparative claims.
 
 ## Supplementary Tables
 
@@ -168,7 +164,7 @@ Comparison code: R0, earlier retained-reference graph fusion versus earlier reta
 
 Table 4A shows that variant-level bootstrap supports positive retained-reference PPI-GCN gains, whereas protein-clustered bootstrap widens uncertainty. Table 4B shows that the real PPI-GCN fusion margin over raw ESM fusion remained positive under protein-clustered paired bootstrap, but the smaller margins over edge-ablated and topology-permuted graph controls crossed zero. Table 4C is retained as an earlier retained-reference context analysis and is not architecture-matched.
 
-The homology-aware strong-predictor bootstrap row retained in the source-data package comes from an earlier retained reference-run comparison. It should not be interpreted as a fully architecture-matched exp48 ensemble bootstrap. In the main manuscript, the homology-aware strong-predictor result is therefore described as a stress-test pattern with an explicitly retained graph-fusion point estimate rather than a fully symmetric repeated-run bootstrap comparison.
+The homology-aware strong-predictor bootstrap row retained in the source-data package comes from an earlier retained reference-run comparison. It should not be interpreted as a fully architecture-matched repeated-ensemble bootstrap. In the main manuscript, the homology-aware strong-predictor result is therefore described as a stress-test pattern with an explicitly retained graph-fusion point estimate rather than a fully symmetric repeated-run bootstrap comparison.
 
 ### Supplementary Table 5. Topology-stratified PPI-GCN gain over raw ESM
 
@@ -204,7 +200,7 @@ Cell codes: J0, mid k-core / high betweenness; J1, mid k-core / mid clustering; 
 | J2 | 1,904 | 0.5767 | +0.1274 | +0.0983 | +0.1045 to +0.1499 |
 | J3 | 4,791 | 0.3870 | -0.0532 | -0.0480 | -0.0611 to -0.0457 |
 
-Full topology maps are provided in the accompanying source-data archive rather than printed in full in the PDF supplement.
+Full topology maps are provided in the prepared source-data archive rather than printed in full in the PDF supplement.
 
 These joint cells were selected from the same test-set topology map used for estimation. Their bootstrap intervals describe within-cell sampling uncertainty but do not correct for the selection step; therefore, they should be interpreted as exploratory gain profiles rather than independently validated topology-defined subgroups.
 
@@ -273,18 +269,16 @@ Difficulty-matched rescued false-negative contrasts:
 
 These are association and stratification results, not causal mechanism proof. The final interpretation should use wording such as "differ" or "are associated with" rather than "drive" or "cause".
 
-### Supplementary Table 7. Negative-control and provenance audit
+### Supplementary Table 7. Negative-control audit
 
-The formal supplementary table retains the negative-control result that was rerun and re-materialized during the final audit. Older random-feature and label-shuffling summaries remain internal robustness context unless their full provenance is rebuilt and included in a later archive.
+The formal supplementary table reports only the negative-control result that was rerun and re-materialized with complete final-audit provenance. Older random-feature and label-shuffling summaries are not used as formal evidence in this submission.
 
 | Control | Split | n | Val A | Val AP | Test A | Test AP |
 |---|---|---:|---:|---:|---:|---:|
 | Feat.-shuffled GCN | Orig. | 1 | 0.7080 | 0.4241 | 0.5868 | 0.3707 |
 
-Val A and Test A denote validation and test AUC, respectively. Val AP and Test AP denote validation and test AUPRC. This control was rerun and re-materialized during the final audit and is used only as supplementary negative-control evidence.
-
-The omitted older random-feature and label-shuffling summaries are scientifically useful as cautionary context because they suggest that graph structure and dataset label organization can produce non-trivial prediction patterns under some controls. However, without the full intermediate files in the final source-data package, they should not be presented as central evidence or as a standalone biological interpretation.
+Val A and Test A denote validation and test AUC, respectively. Val AP and Test AP denote validation and test AUPRC. This control is used only as supplementary negative-control evidence and is not part of the main comparative claims.
 
 ## Source-data archive status
 
-The compact source-data archive accompanying this supplement contains figure source data for Figures 1-4, topology-stratified metrics, joint topology maps, corrected-sample statistics, fusion-control summaries, bootstrap outputs and checksum files. Large third-party resources, including provider-controlled CADD and AlphaMissense score files, are not redistributed and should be obtained from their original providers.
+The prepared compact source-data archive contains figure source data for Figures 1-4, topology-stratified metrics, joint topology maps, corrected-sample statistics, fusion-control summaries, bootstrap outputs and checksum files. Large third-party resources, including provider-controlled CADD and AlphaMissense score files, are not redistributed and should be obtained from their original providers.
