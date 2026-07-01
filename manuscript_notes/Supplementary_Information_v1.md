@@ -25,7 +25,7 @@ Protein node features were generated with the Facebook ESM-2 t33 650M UR50D chec
 The primary representation-propagation graph was built from STRING v12 human protein links and contained 19,622 nodes and 13,715,404 directed edge-index entries in the retained model input object before adding self-loops. PPI-GCN representations were generated using fixed two-hop GCN-style propagation rather than an end-to-end trainable graph neural network. This design intentionally isolated topology-induced smoothing from capacity gains due to trainable graph layers, so the propagated features were treated as a controlled representation rather than an optimized end-to-end GNN predictor. Propagation used a binary adjacency derived from the retained edge list; STRING combined scores were not used as propagation weights. The retained edge list was symmetrized, self-loops were added and duplicate edges were coalesced. Let $A$ denote this binary adjacency after symmetrization and self-loop addition, $D$ its degree matrix and $X$ the raw ESM feature matrix. We used symmetric normalization,
 
 $$
-\hat{A}=D^{-1/2} A D^{-1/2},
+\hat{A}=D^{-\frac{1}{2}} A D^{-\frac{1}{2}},
 $$
 
 and formed the propagated representation as
