@@ -22,13 +22,17 @@ CADD and AlphaMissense scores were matched to ClinVar variants by GRCh38 genomic
 
 Protein node features were generated with the Facebook ESM-2 t33 650M UR50D checkpoint. Residue-level embeddings were mean-pooled to obtain one 1,280-dimensional vector per protein. Proteins longer than 1,022 amino acids were split into chunks and combined by length-weighted averaging. The final feature table covered all 19,622 STRING graph proteins, with no missing graph proteins.
 
-The primary representation-propagation graph was built from STRING v12 human protein links and contained 19,622 nodes and 13,715,404 directed edge-index entries in the retained model input object before adding self-loops. PPI-GCN representations were generated using fixed two-hop GCN-style propagation rather than an end-to-end trainable graph neural network. This design intentionally isolated topology-induced smoothing from capacity gains due to trainable graph layers, so the propagated features were treated as a controlled representation rather than an optimized end-to-end GNN predictor. Propagation used a binary adjacency derived from the retained edge list; STRING combined scores were not used as propagation weights. The retained edge list was symmetrized, self-loops were added and duplicate edges were coalesced. Let `A` denote this binary adjacency after symmetrization and self-loop addition, `D` its degree matrix and `X` the raw ESM feature matrix. We used symmetric normalization,
+The primary representation-propagation graph was built from STRING v12 human protein links and contained 19,622 nodes and 13,715,404 directed edge-index entries in the retained model input object before adding self-loops. PPI-GCN representations were generated using fixed two-hop GCN-style propagation rather than an end-to-end trainable graph neural network. This design intentionally isolated topology-induced smoothing from capacity gains due to trainable graph layers, so the propagated features were treated as a controlled representation rather than an optimized end-to-end GNN predictor. Propagation used a binary adjacency derived from the retained edge list; STRING combined scores were not used as propagation weights. The retained edge list was symmetrized, self-loops were added and duplicate edges were coalesced. Let $A$ denote this binary adjacency after symmetrization and self-loop addition, $D$ its degree matrix and $X$ the raw ESM feature matrix. We used symmetric normalization,
 
-`A_hat = D^{-1/2} A D^{-1/2}`,
+$$
+\hat{A}=D^{-1/2} A D^{-1/2},
+$$
 
 and formed the propagated representation as
 
-`H = (X + A_hat X + A_hat^2 X) / 3`.
+$$
+H=\frac{1}{3}\left(X+\hat{A}X+\hat{A}^{2}X\right).
+$$
 
 This operation produced one propagated representation per STRING node and did not use variant labels during propagation.
 
