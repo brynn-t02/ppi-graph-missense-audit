@@ -22,13 +22,13 @@
 \maketitle
 
 
+\special{pdf:literal direct 2 Tr 0.24 w}
 \begin{abstract}
 \bfseries\boldmath
-\special{pdf:literal direct 2 Tr 0.18 w}
 Protein-protein interaction (PPI) graphs provide a natural source of molecular context for missense variant pathogenicity prediction. Clarifying when PPI context adds information helps distinguish biological network signal from representation smoothing, split-dependent connectivity and complementarity to existing variant-effect scores. Interpreting performance gains from propagating protein embeddings over a shared graph requires separating protein-topology alignment, train-test connectivity, homology-related split structure and complementarity to existing variant-effect predictors. We audit these possibilities using a reconstructed ClinVar-STRING dataset of 177,213 filtered, non-conflicting ClinVar missense variants mapped to 14,123 labelled STRING proteins within a 19,622-node STRING protein-association graph used as PPI context. ESM protein language model embeddings are compared with fixed two-hop PPI-GCN propagation, CADD, AlphaMissense and fusion models using validation-selected downstream MLP classifiers. Across three classifier seeds, PPI-GCN increased mean AUC from 0.7835 to 0.7950 and mean AUPRC from 0.6116 to 0.6484. In a retained reference run used for paired graph-ablation analyses, removing direct train-test PPI edges nearly eliminated the AUC gain, protein-clustered bootstrap widened uncertainty across zero, and topology permutation returned performance close to the raw ESM range. Graph fusion also improved \CADDAM{} under the original split. Raw-ESM, edge-ablated and topology-permuted protein representations retained much of this gain, leaving limited topology-specific added value in the strong-predictor fusion setting. In the homology-aware stress test, the retained graph-fusion estimate was lower than the repeated-run architecture-matched \CADDAM{} baseline. Topology-stratified and sample-level transition analyses suggested that graph-associated gains and prediction changes were concentrated in specific network roles and error types. PPI graph augmentation acted as a context-dependent source of network information, with added value shaped by graph connectivity, split design and baseline predictor strength.
-\special{pdf:literal direct 0 Tr 0 w}
 
 \end{abstract}
+\special{pdf:literal direct 0 Tr 0 w}
 \section{Introduction}
 
 Missense variant pathogenicity prediction has been advanced by established methods such as CADD, REVEL, MVP, PrimateAI, EVE and AlphaMissense \cite{Kircher2014CADD,Ioannidis2016REVEL,Qi2021MVP,Sundaram2018PrimateAI,Frazer2021EVE,Cheng2023AlphaMissense}, as well as by protein language models such as ESM \cite{Lin2023ESM}. These approaches capture sequence, evolutionary and annotation-derived signals. Disease-associated proteins are also embedded in molecular interaction networks, and disease-associated mutations can perturb protein-protein and other macromolecular interactions \cite{Barabasi2011NetworkMedicine,Menche2015DiseaseModules,Sahni2015InteractionPerturbation,Chen2018InteractomePerturbation}. PPI graphs provide an additional source of context for missense variant prediction.
@@ -54,7 +54,7 @@ Raw protein features were generated using the ESM-2 650M checkpoint, with 1,280-
 \begin{equation}
 H=\frac{1}{3}\left(X+\hat{A}X+\hat{A}^{2}X\right).
 \end{equation}
-The fixed two-hop PPI-GCN representation $H$ therefore averages the original ESM features, one-hop PPI-smoothed features and two-hop PPI-smoothed features. Propagation did not use labels; downstream classification used the representation of each variant's mapped STRING protein. The full graph contained train, validation and test nodes with their ESM features, making the evaluation transductive.
+The fixed two-hop PPI-GCN representation $H$ averages the original ESM features, one-hop PPI-smoothed features and two-hop PPI-smoothed features. Propagation used only graph structure and ESM features; downstream classification used the representation of each variant's mapped STRING protein. The full graph contained train, validation and test nodes with their ESM features, making the evaluation transductive.
 
 \subsection{Splits, classifiers and external predictors}
 
