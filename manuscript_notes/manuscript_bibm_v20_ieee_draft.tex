@@ -45,14 +45,14 @@ ClinVar variant annotations were obtained from the official NCBI ClinVar FTP tab
 
 \subsection{Protein representations and PPI propagation}
 
-Raw protein features were generated using the ESM-2 650M checkpoint, with 1,280-dimensional protein-level vectors obtained by residue averaging \cite{Lin2023ESM}. PPI-GCN embeddings were computed by fixed two-hop GCN-style propagation over the normalized STRING graph \cite{Kipf2017GCN}. We use ``PPI-GCN'' as shorthand for fixed GCN-style propagation of ESM features; no graph-convolution parameters were learned. Fixed propagation isolates topology-induced smoothing from capacity gains due to trainable graph layers and provides a controlled representation for the audit. The implementation symmetrized the retained edge list, added self-loops and coalesced duplicate edges. Let $\tilde{A}$ denote the resulting binary adjacency with self-loops, $\tilde{D}$ its degree matrix and $X$ the raw ESM feature matrix. We used symmetric degree normalization and averaged the raw, one-hop and two-hop features:
+Raw protein features were generated using the ESM-2 650M checkpoint, with 1,280-dimensional protein-level vectors obtained by residue averaging \cite{Lin2023ESM}. PPI-GCN embeddings were computed by fixed two-hop GCN-style propagation over the normalized STRING graph \cite{Kipf2017GCN}. We use ``PPI-GCN'' as shorthand for fixed GCN-style propagation of ESM features; no graph-convolution parameters were learned. Fixed propagation isolates topology-induced smoothing from capacity gains due to trainable graph layers and provides a controlled representation for the audit. Let $X$ denote the raw ESM protein-representation matrix. The implementation symmetrized the retained edge list, added self-loops and coalesced duplicate edges. After self-loop addition, let $\tilde{A}$ denote the binary adjacency matrix and $\tilde{D}$ its degree matrix. We computed the symmetrically normalized adjacency matrix as
 \begin{equation}
 \hat{A}=\tilde{D}^{-\frac{1}{2}}\tilde{A}\tilde{D}^{-\frac{1}{2}},
 \end{equation}
 \begin{equation}
 H=\frac{1}{3}\left(X+\hat{A}X+\hat{A}^{2}X\right).
 \end{equation}
-Propagation did not use labels; downstream classification used the representation of each variant's mapped STRING protein. The full graph contained train, validation and test nodes with their ESM features, making the evaluation transductive.
+The fixed two-hop PPI-GCN representation $H$ therefore averages the original ESM features, one-hop PPI-smoothed features and two-hop PPI-smoothed features. Propagation did not use labels; downstream classification used the representation of each variant's mapped STRING protein. The full graph contained train, validation and test nodes with their ESM features, making the evaluation transductive.
 
 \subsection{Splits, classifiers and external predictors}
 
