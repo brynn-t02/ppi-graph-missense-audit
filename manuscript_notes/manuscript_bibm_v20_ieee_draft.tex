@@ -23,8 +23,10 @@
 
 
 \begin{abstract}
-
+\bfseries\boldmath
+\special{pdf:literal direct 2 Tr 0.18 w}
 Protein-protein interaction (PPI) graphs provide a natural source of molecular context for missense variant pathogenicity prediction. Clarifying when PPI context adds information helps distinguish biological network signal from representation smoothing, split-dependent connectivity and complementarity to existing variant-effect scores. Interpreting performance gains from propagating protein embeddings over a shared graph requires separating protein-topology alignment, train-test connectivity, homology-related split structure and complementarity to existing variant-effect predictors. We audit these possibilities using a reconstructed ClinVar-STRING dataset of 177,213 filtered, non-conflicting ClinVar missense variants mapped to 14,123 labelled STRING proteins within a 19,622-node STRING protein-association graph used as PPI context. ESM protein language model embeddings are compared with fixed two-hop PPI-GCN propagation, CADD, AlphaMissense and fusion models using validation-selected downstream MLP classifiers. Across three classifier seeds, PPI-GCN increased mean AUC from 0.7835 to 0.7950 and mean AUPRC from 0.6116 to 0.6484. In a retained reference run used for paired graph-ablation analyses, removing direct train-test PPI edges nearly eliminated the AUC gain, protein-clustered bootstrap widened uncertainty across zero, and topology permutation returned performance close to the raw ESM range. Graph fusion also improved \CADDAM{} under the original split. Raw-ESM, edge-ablated and topology-permuted protein representations retained much of this gain, leaving limited topology-specific added value in the strong-predictor fusion setting. In the homology-aware stress test, the retained graph-fusion estimate was lower than the repeated-run architecture-matched \CADDAM{} baseline. Topology-stratified and sample-level transition analyses suggested that graph-associated gains and prediction changes were concentrated in specific network roles and error types. PPI graph augmentation acted as a context-dependent source of network information, with added value shaped by graph connectivity, split design and baseline predictor strength.
+\special{pdf:literal direct 0 Tr 0 w}
 
 \end{abstract}
 \section{Introduction}
