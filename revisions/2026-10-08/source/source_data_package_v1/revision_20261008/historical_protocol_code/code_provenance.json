@@ -1,0 +1,37 @@
+[
+  {
+    "file": "homology_split_historical.py",
+    "original_sha256": "c3cea88d0bead9fd4730c66f19191708ebc3ec82cdd32ab40df8014cb3ce62c9",
+    "executed_in_revision": false
+  },
+  {
+    "file": "error_stratification_historical.py",
+    "original_sha256": "818db29933aeaae31252fc65c2f840cf76efe2641c6cb48ff5417dd93223615b",
+    "executed_in_revision": false
+  },
+  {
+    "file": "fixed_mean_operator_historical.py",
+    "original_sha256": "fe492ecd36107026f4dde4d296e4151cb4e473339c67cbc828cb2422e171b02c",
+    "executed_in_revision": false
+  },
+  {
+    "file": "fixed_cosine_operator_historical.py",
+    "original_sha256": "e2ff856dd0f6836ddafebd6cc06230ab46fb0107abe30855c13af5c6a0fe5b3c",
+    "executed_in_revision": false
+  },
+  {
+    "file": "direct_edge_ablation_historical.py",
+    "original_sha256": "32b3f5be1a31d25d720535fdb62f5af6e6e57f60472df689c02bbb7398b822e4",
+    "executed_in_revision": false
+  },
+  {
+    "file": "partial_edge_ablation_historical.py",
+    "original_sha256": "9bea21614add2e870f47be9d91d6b07610e7a17392f515e7a4685f66c479cc4b",
+    "executed_in_revision": false
+  },
+  {
+    "file": "topology_permutation_historical.py",
+    "original_sha256": "8f8bb32e005f4f93f4815785c5c66cf5b4c16b4d55ca7b805f9ba8123349f525",
+    "executed_in_revision": false
+  }
+]

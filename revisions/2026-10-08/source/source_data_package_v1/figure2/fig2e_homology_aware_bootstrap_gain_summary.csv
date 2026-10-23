@@ -1,0 +1,9 @@
+comparison,model_a,model_b,metric,mean_delta,ci95_low,ci95_high,p_value_bootstrap_sign,n_boot_used
+gcn_vs_esm_homology,gcn_enhanced_homology,esm_raw_homology,delta_auc,0.03580895652187684,0.03127926475115548,0.04068705780368339,0.0,1000
+gcn_vs_esm_homology,gcn_enhanced_homology,esm_raw_homology,delta_auprc,0.03503237538848576,0.02673735419696344,0.04405170584016744,0.0,1000
+gcn_cadd_vs_cadd_homology,gcn_plus_cadd_homology,cadd_only_homology,delta_auc,0.0017821033507087907,-0.0004199967033975099,0.004057873048857013,0.114,1000
+gcn_cadd_vs_cadd_homology,gcn_plus_cadd_homology,cadd_only_homology,delta_auprc,0.016987489617528616,0.0025548502045716847,0.03258163254610571,0.026,1000
+gcn_am_vs_am_homology,gcn_plus_am_homology,am_only_homology,delta_auc,7.611035324356807e-06,-0.0027454081244703303,0.002779052615767349,0.954,1000
+gcn_am_vs_am_homology,gcn_plus_am_homology,am_only_homology,delta_auprc,0.004710556401119054,-0.007136802848318832,0.017530567982810167,0.468,1000
+full_vs_cadd_am_homology,gcn_plus_cadd_plus_am_homology,cadd_plus_am_homology,delta_auc,-0.0012780417013128881,-0.0026565843320226876,4.640077501274478e-05,0.066,1000
+full_vs_cadd_am_homology,gcn_plus_cadd_plus_am_homology,cadd_plus_am_homology,delta_auprc,-0.007181510475166405,-0.019160940634690683,0.005007088313330807,0.246,1000

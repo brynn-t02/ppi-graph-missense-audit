@@ -1,0 +1,74 @@
+{
+  "experiment": "architecture_matched_cadd_am",
+  "purpose": "Rerun CADD+AlphaMissense score-only baseline with the same 512/128 dropout-0.3 MLP used by representation/fusion models.",
+  "architecture": {
+    "hidden_layers": [
+      512,
+      128
+    ],
+    "dropout": 0.3
+  },
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "audits": [
+    {
+      "split": "original",
+      "n_train": 141864,
+      "n_val": 17129,
+      "n_test": 18220,
+      "train_positive_rate": 0.27523543675633,
+      "val_positive_rate": 0.2564072625372176,
+      "test_positive_rate": 0.3195389681668496,
+      "train_cadd_fill": 19.84,
+      "train_am_fill": 0.1165,
+      "train_am_missing": 4294,
+      "val_am_missing": 527,
+      "test_am_missing": 639,
+      "cadd_am_dim": 3,
+      "cadd_am_raw_esm_dim": 1283
+    },
+    {
+      "split": "homology_aware",
+      "n_train": 141864,
+      "n_val": 17129,
+      "n_test": 18220,
+      "train_positive_rate": 0.32180116167597134,
+      "val_positive_rate": 0.09831280284896958,
+      "test_positive_rate": 0.10559824368825467,
+      "train_cadd_fill": 21.8,
+      "train_am_fill": 0.1448,
+      "train_am_missing": 4143,
+      "val_am_missing": 620,
+      "test_am_missing": 697,
+      "cadd_am_dim": 3,
+      "cadd_am_raw_esm_dim": 1283
+    }
+  ],
+  "summary": [
+    {
+      "split": "homology_aware",
+      "model": "cadd_plus_am_archmatched_512_128",
+      "n_repeats": 3,
+      "test_auc_mean": 0.9754153687787709,
+      "test_auc_sd": 4.6709998818820346e-05,
+      "test_auprc_mean": 0.8401103780618492,
+      "test_auprc_sd": 0.00018530822045844848,
+      "val_auc_mean": 0.9738649864010598,
+      "val_auprc_mean": 0.8362205201520528
+    },
+    {
+      "split": "original",
+      "model": "cadd_plus_am_archmatched_512_128",
+      "n_repeats": 3,
+      "test_auc_mean": 0.9572018237927177,
+      "test_auc_sd": 4.973123027119686e-05,
+      "test_auprc_mean": 0.9068363194562,
+      "test_auprc_sd": 0.0002618961321361944,
+      "val_auc_mean": 0.9666740697170954,
+      "val_auprc_mean": 0.9126424040569755
+    }
+  ]
+}

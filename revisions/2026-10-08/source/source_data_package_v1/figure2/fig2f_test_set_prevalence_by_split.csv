@@ -1,0 +1,3 @@
+split,n,n_positive,n_negative,positive_rate
+original_protein_level,18220,5822,12398,0.3195389681668496
+homology_aware,18220,1924,16296,0.10559824368825467

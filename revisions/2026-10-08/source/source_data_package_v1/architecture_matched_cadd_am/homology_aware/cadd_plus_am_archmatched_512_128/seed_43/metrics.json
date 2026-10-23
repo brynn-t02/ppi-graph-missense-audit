@@ -1,0 +1,11 @@
+{
+  "split": "homology_aware",
+  "model": "cadd_plus_am_archmatched_512_128",
+  "seed": 43,
+  "best_epoch": 30,
+  "best_val_auc": 0.973941016663988,
+  "val_auc": 0.973941016663988,
+  "val_auprc": 0.8362625805910393,
+  "test_auc": 0.9754633485303589,
+  "test_auprc": 0.8403043062253448
+}

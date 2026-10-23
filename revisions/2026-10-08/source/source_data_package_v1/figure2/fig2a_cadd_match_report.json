@@ -1,0 +1,11 @@
+{
+  "n_keys": 177213,
+  "n_matched_keys": 177205,
+  "key_match_rate": 0.9999548565850135,
+  "n_merged_rows": 177213,
+  "n_missing_cadd_rows": 8,
+  "row_match_rate": 0.9999548565850135,
+  "cadd_file": "CADD_GRCh38_v1.7_whole_genome_SNVs.tsv.gz",
+  "out_scores": "internal_path_omitted_from_anonymous_archive",
+  "out_merged": "internal_path_omitted_from_anonymous_archive"
+}

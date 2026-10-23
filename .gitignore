@@ -33,3 +33,7 @@ __pycache__/
 tmp/
 temp/
 
+
+# Frozen numerical outputs intentionally published with dated revisions
+!revisions/*/source/source_data_package_v1/**/*.npy
+!revisions/*/source/source_data_package_v1/revision_20261008/*.npz
