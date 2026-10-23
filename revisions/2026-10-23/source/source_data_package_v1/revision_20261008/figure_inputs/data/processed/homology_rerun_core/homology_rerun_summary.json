@@ -1,0 +1,38 @@
+{
+  "esm_raw_homology": {
+    "best_epoch": 1,
+    "best_val_auc": 0.7314769517766283,
+    "val_auc": 0.7314769517766283,
+    "val_auprc": 0.21711857442556587,
+    "test_auc": 0.7247726123370454,
+    "test_auprc": 0.24180435223323704
+  },
+  "gcn_enhanced_homology": {
+    "best_epoch": 3,
+    "best_val_auc": 0.7644540354287569,
+    "val_auc": 0.7644540354287569,
+    "val_auprc": 0.24501308826491286,
+    "test_auc": 0.7606031051585176,
+    "test_auprc": 0.2767878916385998
+  },
+  "cadd_plus_am_homology": {
+    "best_epoch": 36,
+    "best_val_auc": 0.9738617375731371,
+    "val_auc": 0.9738617375731371,
+    "val_auprc": 0.8380264303672258,
+    "test_auc": 0.9753835966786999,
+    "test_auprc": 0.8408086497144226
+  },
+  "gcn_plus_cadd_plus_am_homology": {
+    "best_epoch": 12,
+    "best_val_auc": 0.9731910372334903,
+    "val_auc": 0.9731910372334903,
+    "val_auprc": 0.8273468440763103,
+    "test_auc": 0.9740638558293198,
+    "test_auprc": 0.8333294615461915
+  },
+  "delta_auc_gcn_vs_esm_homology": 0.035830492821472215,
+  "delta_auprc_gcn_vs_esm_homology": 0.03498353940536275,
+  "delta_auc_full_vs_caddam_homology": -0.0013197408493801355,
+  "delta_auprc_full_vs_caddam_homology": -0.007479188168231121
+}

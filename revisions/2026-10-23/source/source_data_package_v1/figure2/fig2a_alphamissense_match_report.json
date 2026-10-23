@@ -1,0 +1,11 @@
+{
+  "n_keys": 177213,
+  "n_matched_keys": 171753,
+  "key_match_rate": 0.9691896192717239,
+  "n_merged_rows": 177213,
+  "n_missing_rows": 5460,
+  "row_match_rate": 0.9691896192717239,
+  "am_file": "AlphaMissense_hg38.tsv.gz",
+  "out_scores": "internal_path_omitted_from_anonymous_archive",
+  "out_merged": "internal_path_omitted_from_anonymous_archive"
+}

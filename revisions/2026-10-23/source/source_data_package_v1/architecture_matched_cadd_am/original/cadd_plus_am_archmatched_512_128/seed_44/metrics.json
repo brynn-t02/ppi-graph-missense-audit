@@ -1,0 +1,11 @@
+{
+  "split": "original",
+  "model": "cadd_plus_am_archmatched_512_128",
+  "seed": 44,
+  "best_epoch": 30,
+  "best_val_auc": 0.9666606478150584,
+  "val_auc": 0.9666606478150584,
+  "val_auprc": 0.9126131234730354,
+  "test_auc": 0.9571690359184604,
+  "test_auprc": 0.9068517744032609
+}

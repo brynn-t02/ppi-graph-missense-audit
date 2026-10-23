@@ -4,6 +4,7 @@ Code and compact evidence archive for an evaluation study of fixed protein-featu
 
 ## Manuscript revisions
 
+- **Latest: [23 October 2026 workshop revision](revisions/2026-10-23/)** — [paper](revisions/2026-10-23/paper.pdf), [supplement](revisions/2026-10-23/supplement.pdf), [editable source](revisions/2026-10-23/source/main.tex).
 - [8 October 2026 main-review revision](revisions/2026-10-08/) — [paper](revisions/2026-10-08/paper.pdf), [supplement](revisions/2026-10-08/supplement.pdf), [editable source](revisions/2026-10-08/source/BIBM2026_main_paper_revised.tex).
 
 Each dated directory contains the delivered anonymous PDFs, editable source, figures, generators, compact numerical inputs and checksums. Dated snapshots preserve their original text, including availability statements written before this public synchronization. The owner made this repository public, and the October revisions were synchronized on **24 October 2026**. The repository does not yet have a separate DOI deposit.
@@ -12,12 +13,14 @@ Each dated directory contains the delivered anonymous PDFs, editable source, fig
 
 The October 8 revision clarifies fixed-operator scope, transductive feature access, uneven seed/epoch protocols, external-predictor development overlap and exploratory subgroup selection. It supplies complete-case and threshold-sensitivity checks recomputed from frozen predictions.
 
+The October 23 revision adds a shorter abstract, a main-text run-provenance table, a simplified overview, cautious subgroup interpretation, possible explanations for lower homology-fusion estimates, practical recommendations and a narrow conclusion.
+
 ## Reproduce the frozen-output checks
 
 The checks require Python, NumPy and pandas. They verify existing threshold counts and complete-case AUC/AP values; they do not train models.
 
 ```sh
-python revisions/2026-10-08/source/source_data_package_v1/revision_20261008/recompute_checks.py
+python revisions/2026-10-23/source/source_data_package_v1/revision_20261008/recompute_checks.py
 ```
 
 For manuscript and figure generation, see the dated directory README. Source-data checksums inside each `source_data_package_v1` use paths relative to its parent `source/` directory; snapshot checksums use paths relative to the dated directory. Root checksums use repository-relative paths.

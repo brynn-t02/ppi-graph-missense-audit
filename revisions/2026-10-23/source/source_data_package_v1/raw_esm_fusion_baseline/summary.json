@@ -1,0 +1,103 @@
+{
+  "experiment": "cadd_am_plus_raw_esm_baseline",
+  "purpose": "Separate the value of adding raw ESM protein representation from the value of PPI propagation in CADD+AlphaMissense fusion.",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "audits": [
+    {
+      "split": "original",
+      "n_train": 141864,
+      "n_val": 17129,
+      "n_test": 18220,
+      "train_positive_rate": 0.27523543675633,
+      "val_positive_rate": 0.2564072625372176,
+      "test_positive_rate": 0.3195389681668496,
+      "train_cadd_fill": 19.84,
+      "train_am_fill": 0.1165,
+      "train_am_missing": 4294,
+      "val_am_missing": 527,
+      "test_am_missing": 639,
+      "cadd_am_dim": 3,
+      "cadd_am_raw_esm_dim": 1283
+    },
+    {
+      "split": "homology_aware",
+      "n_train": 141864,
+      "n_val": 17129,
+      "n_test": 18220,
+      "train_positive_rate": 0.32180116167597134,
+      "val_positive_rate": 0.09831280284896958,
+      "test_positive_rate": 0.10559824368825467,
+      "train_cadd_fill": 21.8,
+      "train_am_fill": 0.1448,
+      "train_am_missing": 4143,
+      "val_am_missing": 620,
+      "test_am_missing": 697,
+      "cadd_am_dim": 3,
+      "cadd_am_raw_esm_dim": 1283
+    }
+  ],
+  "summary": [
+    {
+      "split": "homology_aware",
+      "model": "cadd_am_plus_raw_esm",
+      "n_repeats": 3,
+      "test_auc_mean": 0.9728234415734415,
+      "test_auc_sd": 0.00030364032295234324,
+      "test_auprc_mean": 0.8249113494094233,
+      "test_auprc_sd": 0.0016049077549770197,
+      "val_auc_mean": 0.9715012109733746,
+      "val_auprc_mean": 0.8227747204064754
+    },
+    {
+      "split": "homology_aware",
+      "model": "cadd_plus_am",
+      "n_repeats": 3,
+      "test_auc_mean": 0.9754474917168215,
+      "test_auc_sd": 0.00020251047761637677,
+      "test_auprc_mean": 0.8410521036604516,
+      "test_auprc_sd": 0.00104163881111681,
+      "val_auc_mean": 0.9738510683453431,
+      "val_auprc_mean": 0.8383409386249933
+    },
+    {
+      "split": "original",
+      "model": "cadd_am_plus_raw_esm",
+      "n_repeats": 3,
+      "test_auc_mean": 0.9679884964251149,
+      "test_auc_sd": 0.0007382348660629907,
+      "test_auprc_mean": 0.9317438386621824,
+      "test_auprc_sd": 0.0029220869175717126,
+      "val_auc_mean": 0.9685795448234682,
+      "val_auprc_mean": 0.9159500614672549
+    },
+    {
+      "split": "original",
+      "model": "cadd_plus_am",
+      "n_repeats": 3,
+      "test_auc_mean": 0.9573134965216314,
+      "test_auc_sd": 7.048200451934819e-05,
+      "test_auprc_mean": 0.9074698746064568,
+      "test_auprc_sd": 0.00025059065722009776,
+      "val_auc_mean": 0.9668268172188755,
+      "val_auprc_mean": 0.9135059659968388
+    }
+  ],
+  "deltas": [
+    {
+      "split": "homology_aware",
+      "comparison": "cadd_am_plus_raw_esm_vs_cadd_plus_am",
+      "delta_test_auc_mean": -0.0026240501433800745,
+      "delta_test_auprc_mean": -0.016140754251028233
+    },
+    {
+      "split": "original",
+      "comparison": "cadd_am_plus_raw_esm_vs_cadd_plus_am",
+      "delta_test_auc_mean": 0.010674999903483418,
+      "delta_test_auprc_mean": 0.024273964055725572
+    }
+  ]
+}

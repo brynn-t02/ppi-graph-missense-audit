@@ -1,0 +1,26 @@
+{
+  "n_total_rows": 177213,
+  "n_unique_proteins": 14123,
+  "n_clusters": 9731,
+  "cluster_size_mean": 1.4513410749152194,
+  "cluster_size_median": 1.0,
+  "cluster_size_max": 251,
+  "target_row_ratios": {
+    "train": 0.8005281779553419,
+    "val": 0.0966576944129381,
+    "test": 0.10281412763172001
+  },
+  "assigned_row_counts": {
+    "train": 141864,
+    "val": 17129,
+    "test": 18220
+  },
+  "assigned_unique_proteins": {
+    "train": 7370,
+    "val": 3315,
+    "test": 3438
+  },
+  "missing_sequences": 0,
+  "mmseqs_cluster_min_seq_id": 0.4,
+  "mmseqs_cluster_coverage": 0.5
+}

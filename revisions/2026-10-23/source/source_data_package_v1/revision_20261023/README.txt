@@ -1,0 +1,1 @@
+Workshop revision 23 October 2026: Figure 1A simplified; all numerical panels and historical metric inputs are unchanged. Run figure_scripts/figure1_workshop.py with numpy/pandas/matplotlib to regenerate. The October 8 complete-case and threshold evidence remains unchanged in revision_20261008. No new training or data collection.
