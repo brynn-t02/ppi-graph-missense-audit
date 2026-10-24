@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-24",
+  "authorization": "User explicitly requests isolated restoration, smoke validation, then completion of missing experiments. Workshop review takes priority; anonymous until experiments nearly complete; restore original accepted title.",
+  "remote_root": "/Data/u40902/TYX/ppi_audit_20261024",
+  "training": {
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "batch_size": 1024,
+    "maximum_epochs": 50,
+    "early_stopping_patience": 5,
+    "selection": "validation AUROC strict improvement",
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "loss": "BCEWithLogitsLoss; training negative/positive weight",
+    "hidden_layers": [
+      512,
+      128
+    ],
+    "dropout": 0.3,
+    "feature_scaling": "none, matches historical code",
+    "imputation": "train medians; AM missing indicator"
+  },
+  "arms_A": [
+    "original/raw_ESM",
+    "original/full_FPP",
+    "original/direct_train_test_edge_ablated_FPP",
+    "original/topology_permuted_FPP: graph IDs 0/1/2 x classifier seeds 42/43/44"
+  ],
+  "arms_B": [
+    "homology/scores_capacity_matched",
+    "homology/scores_plus_raw_ESM",
+    "homology/scores_plus_full_FPP"
+  ],
+  "planned_fitted_classifiers": 48,
+  "frozen_assets": "Verify frozen full FPP numerically in 16 feature columns. Regenerate ablated/permuted FPP using the same full operator (two self loops before normalization). Historical control embeddings retained for provenance only; do not mix in matched comparisons.",
+  "analysis": "Per-run metrics and predictions; mean/SD; paired seed differences. Separate classifier-seed and graph-permutation variability; protein-clustered bootstrap on ensemble predictions conditions on fitted models. No selection using test scores.",
+  "resource_bounds": "One free GPU, at most 4 CPU threads, sequential classifier training, initial smoke test then bounded 48 runs. No shared environment modification; project-specific caches; preserve historical results.",
+  "environment_scope": "Restore Python 3.10.8 and all 122 pip pins from supplied YAML, use HTTPS for supplied official torch wheels; base OS/conda management packages not bitwise cloned. Record actual resolved environment and pip check.",
+  "operator_discovery": "Historical full encoding added loops before symmetrization, controls added one loop after reverse edges. This deterministic mismatch is corrected across new graph arms.",
+  "arms_C": [
+    "original_fusion/scores_capacity_matched",
+    "original_fusion/scores_plus_raw_ESM",
+    "original_fusion/scores_plus_full_FPP",
+    "original_fusion/scores_plus_edge_ablated_FPP",
+    "original_fusion/scores_plus_permuted_FPP: 3 graphs x 3 seeds"
+  ],
+  "extension_reason": "Source audit found old fusion controls share the one-loop mismatch. Refit original-split fusion with the common operator as well, so its central margins are not left confounded by this discovered implementation difference."
+}

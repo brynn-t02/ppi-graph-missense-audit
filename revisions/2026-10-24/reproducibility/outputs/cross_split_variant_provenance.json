@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "unique_variants_per_split": 177213,
+  "original_homology_same_labels_proteins_coordinates_alleles": true,
+  "compared_columns": [
+    "VariationID",
+    "Label",
+    "STRING_protein_id",
+    "Chromosome",
+    "Start",
+    "ReferenceAlleleVCF",
+    "AlternateAlleleVCF"
+  ],
+  "read_only_source": "/Users/teyian/Documents/paper1/server_snapshot_full/root/data/processed"
+}

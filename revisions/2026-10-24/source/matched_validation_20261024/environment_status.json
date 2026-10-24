@@ -1,0 +1,61 @@
+{
+  "started_utc": "2026-10-24T04:42:47Z",
+  "state": "installed_not_runtime_validated",
+  "commands": [
+    [
+      "/Data/u40902/miniconda3/bin/conda",
+      "create",
+      "--yes",
+      "--prefix",
+      "/Data/u40902/TYX/ppi_audit_20261024/environment/runtime",
+      "--override-channels",
+      "--channel",
+      "https://repo.anaconda.com/pkgs/main",
+      "python=3.10.8",
+      "pip=22.3.1",
+      "setuptools=65.5.0",
+      "wheel=0.37.1"
+    ],
+    [
+      "/Data/u40902/TYX/ppi_audit_20261024/environment/runtime/bin/python",
+      "-m",
+      "pip",
+      "install",
+      "--timeout",
+      "45",
+      "--retries",
+      "2",
+      "--index-url",
+      "https://pypi.org/simple",
+      "-r",
+      "/Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt"
+    ],
+    [
+      "/Data/u40902/TYX/ppi_audit_20261024/environment/runtime/bin/python",
+      "-m",
+      "pip",
+      "check"
+    ],
+    [
+      "/Data/u40902/TYX/ppi_audit_20261024/environment/runtime/bin/python",
+      "-m",
+      "pip",
+      "install",
+      "--timeout",
+      "45",
+      "--retries",
+      "2",
+      "--index-url",
+      "https://pypi.org/simple",
+      "-r",
+      "/Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt",
+      "-r",
+      "/Data/u40902/TYX/ppi_audit_20261024/code/requirements-conda-python-libs.txt"
+    ]
+  ],
+  "ended_utc": "2026-10-24T04:47:39Z",
+  "pin_verification": {
+    "checked": 138,
+    "conflicts": {}
+  }
+}

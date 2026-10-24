@@ -1,0 +1,85 @@
+{
+  "experiment_runs_verified": 48,
+  "bootstrap_repeats": 2000,
+  "historical_positive_controls_reproduced": 6,
+  "package_versions_matched": 138,
+  "main_pages": {
+    "named": 8,
+    "anonymous": 8
+  },
+  "supplement_pages": {
+    "named": 13,
+    "anonymous": 13
+  },
+  "checks": {
+    "named": {
+      "anonymity_or_author_fields": "passed",
+      "main_references_and_overflows": "passed",
+      "legacy_font_substitution_warnings_preserved": true,
+      "main_sha256": "b0d726ac3d8f34d6e1bb1cbeeb0f55cd88ffa81416548312872f3507ed0549ce",
+      "supplement_sha256": "4d0a2b2ecafc702055aeec5328d6bca723a1d6060e56f953b68a6567211c914f",
+      "main_embedded_fonts": {
+        "/IHAIZV+LMRoman17-Regular-Identity-H": true,
+        "/BZIVMZ+LMRoman12-Regular-Identity-H": true,
+        "/IXFAWU+LMRoman8-Regular-Identity-H": true,
+        "/TQTHRL+LMRoman10-Regular-Identity-H": true,
+        "/YEUUOC+LMRoman7-Regular-Identity-H": true,
+        "/AKHCZK+LMRoman9-Regular-Identity-H": true,
+        "/VDVGTR+CMMI10": true,
+        "/CAFSZL+CMR10": true,
+        "/DDIEWW+CMR7": true,
+        "/FKPJSN+CMSY7": true,
+        "/PVTTLK+CMR5": true,
+        "/JAGKKY+CMEX10": true,
+        "/NOMARO+CMSY10": true,
+        "/EVICAO+DejaVuSans-Bold": true,
+        "/BMQQDV+DejaVuSans": true,
+        "/BROHXX+DejaVuSans-Bold": true,
+        "/ECSWBS+DejaVuSans-Bold": true,
+        "/DXYWVZ+DejaVuSans": true,
+        "/EEZAWI+DejaVuSans": true,
+        "/HKVHVU+DejaVuSans-Bold": true,
+        "/EYIRDJ+DejaVuSans": true
+      }
+    },
+    "anonymous": {
+      "anonymity_or_author_fields": "passed",
+      "main_references_and_overflows": "passed",
+      "legacy_font_substitution_warnings_preserved": true,
+      "main_sha256": "a9dc7a741caacff1001e72127a017bc9512d1f89db6c34948c22419f10ad7f1f",
+      "supplement_sha256": "21c0749eb6459f1afbcaf1ee829473cb69325201a3812cccf0c5ab482351ecd5",
+      "main_embedded_fonts": {
+        "/IHAIZV+LMRoman17-Regular-Identity-H": true,
+        "/BZIVMZ+LMRoman9-Regular-Identity-H": true,
+        "/IXFAWU+LMRoman10-Regular-Identity-H": true,
+        "/YEUUOC+CMMI10": true,
+        "/AKHCZK+CMR10": true,
+        "/VDVGTR+CMR7": true,
+        "/CAFSZL+CMSY7": true,
+        "/DDIEWW+CMR5": true,
+        "/FKPJSN+CMEX10": true,
+        "/TQTHRL+LMRoman8-Regular-Identity-H": true,
+        "/PVTTLK+CMSY10": true,
+        "/EVICAO+DejaVuSans-Bold": true,
+        "/BMQQDV+DejaVuSans": true,
+        "/BROHXX+DejaVuSans-Bold": true,
+        "/ECSWBS+DejaVuSans-Bold": true,
+        "/DXYWVZ+DejaVuSans": true,
+        "/EEZAWI+DejaVuSans": true,
+        "/HKVHVU+DejaVuSans-Bold": true,
+        "/EYIRDJ+DejaVuSans": true
+      }
+    }
+  },
+  "executed_code_matches_archived_source": true,
+  "visual_review": "Both 8-page main PDFs inspected; supplementary pages rendered, historical/current labels checked, final matched tables inspected after layout adjustment.",
+  "new_revision_pushed_to_github": false,
+  "remote_closeout": {
+    "state": "complete",
+    "training_runs": 48,
+    "bootstrap_replicates": 2000,
+    "training_process_present": false,
+    "environment_retained": "/Data/u40902/TYX/ppi_audit_20261024/environment/runtime",
+    "checked_utc": "2026-10-24T05:27:56Z"
+  }
+}

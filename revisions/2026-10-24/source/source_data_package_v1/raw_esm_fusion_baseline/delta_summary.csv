@@ -1,0 +1,3 @@
+split,comparison,delta_test_auc_mean,delta_test_auprc_mean
+homology_aware,cadd_am_plus_raw_esm_vs_cadd_plus_am,-0.0026240501433800745,-0.016140754251028233
+original,cadd_am_plus_raw_esm_vs_cadd_plus_am,0.010674999903483418,0.024273964055725572

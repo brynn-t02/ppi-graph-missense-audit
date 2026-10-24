@@ -1,0 +1,227 @@
+{
+  "experiment": "45_real_esm_topology_permuted_ppi_gcn_control",
+  "real_data_policy": {
+    "uses_real_esm_node_features": true,
+    "uses_real_labels_and_splits": true,
+    "uses_real_ppi_graph_before_permutation": true,
+    "control_operation": "random node-label permutation of PPI graph",
+    "no_fake_labels": true,
+    "no_simulated_predictions": true,
+    "internal_server_paths_omitted": true
+  },
+  "purpose": "Test whether real ESM-GCN performance depends on protein-topology correspondence, or whether generic graph smoothing over ESM features is sufficient.",
+  "design": {
+    "n_graph_permutations": 3,
+    "n_downstream_repeats_per_graph": 3,
+    "total_runs": 9,
+    "propagation": "two-hop symmetric-normalized fixed propagation, h=(x+h1+h2)/3",
+    "device": "cuda",
+    "max_epochs": 30,
+    "patience": 5,
+    "batch_size": 1024
+  },
+  "graph_permutation_summaries": [
+    {
+      "graph_perm_id": 0,
+      "graph_seed": 6042,
+      "num_nodes": 19622,
+      "num_edges": 13715404,
+      "num_unchanged_node_labels": 0,
+      "fraction_unchanged_node_labels": 0
+    },
+    {
+      "graph_perm_id": 1,
+      "graph_seed": 6043,
+      "num_nodes": 19622,
+      "num_edges": 13715404,
+      "num_unchanged_node_labels": 1,
+      "fraction_unchanged_node_labels": 0.000050963204566303126
+    },
+    {
+      "graph_perm_id": 2,
+      "graph_seed": 6044,
+      "num_nodes": 19622,
+      "num_edges": 13715404,
+      "num_unchanged_node_labels": 0,
+      "fraction_unchanged_node_labels": 0
+    }
+  ],
+  "summary_metrics": {
+    "val_auc_mean": 0.7927729680592934,
+    "val_auc_sd": 0.003700130037914177,
+    "val_auprc_mean": 0.5659450445857743,
+    "val_auprc_sd": 0.013102956523387893,
+    "test_auc_mean": 0.7756858128826126,
+    "test_auc_sd": 0.006655982358332324,
+    "test_auprc_mean": 0.6052293458685271,
+    "test_auprc_sd": 0.008587794253341139
+  },
+  "per_graph_summary": [
+    {
+      "val_auc_mean": 0.7910619630553938,
+      "val_auc_sd": 0.0012810667798350249,
+      "val_auprc_mean": 0.5638636155433834,
+      "val_auprc_sd": 0.006730819952155915,
+      "test_auc_mean": 0.7800785498641779,
+      "test_auc_sd": 0.0037035302796178424,
+      "test_auprc_mean": 0.6081543732623507,
+      "test_auprc_sd": 0.008027842037733492,
+      "graph_perm_id": 0,
+      "n_repeats": 3
+    },
+    {
+      "val_auc_mean": 0.7915548105312468,
+      "val_auc_sd": 0.0007377046245360029,
+      "val_auprc_mean": 0.5751991798849563,
+      "val_auprc_sd": 0.008857636147975417,
+      "test_auc_mean": 0.7735016347849384,
+      "test_auc_sd": 0.007286457150435951,
+      "test_auprc_mean": 0.6032438761782305,
+      "test_auprc_sd": 0.004662837437275253,
+      "graph_perm_id": 1,
+      "n_repeats": 3
+    },
+    {
+      "val_auc_mean": 0.7957021305912396,
+      "val_auc_sd": 0.005752508187290588,
+      "val_auprc_mean": 0.5587723383289834,
+      "val_auprc_sd": 0.018731246626866375,
+      "test_auc_mean": 0.7734772539987214,
+      "test_auc_sd": 0.008184317536469433,
+      "test_auprc_mean": 0.6042897881650001,
+      "test_auprc_sd": 0.013738325009464473,
+      "graph_perm_id": 2,
+      "n_repeats": 3
+    }
+  ],
+  "per_repeat_metrics": [
+    {
+      "graph_perm_id": 0,
+      "repeat_id": 0,
+      "seed": 7042,
+      "best_epoch": 3,
+      "best_val_auc": 0.7909628525130734,
+      "val_auc": 0.7909628525130734,
+      "val_auprc": 0.5570719733146267,
+      "test_auc": 0.783000004876619,
+      "test_auprc": 0.6151911437861395
+    },
+    {
+      "graph_perm_id": 0,
+      "repeat_id": 1,
+      "seed": 7043,
+      "best_epoch": 2,
+      "best_val_auc": 0.792389706465952,
+      "val_auc": 0.792389706465952,
+      "val_auprc": 0.5639869553200356,
+      "test_auc": 0.7813224409983127,
+      "test_auprc": 0.6098618030784565
+    },
+    {
+      "graph_perm_id": 0,
+      "repeat_id": 2,
+      "seed": 7044,
+      "best_epoch": 3,
+      "best_val_auc": 0.7898333301871561,
+      "val_auc": 0.7898333301871561,
+      "val_auprc": 0.570531917995488,
+      "test_auc": 0.7759132037176019,
+      "test_auprc": 0.5994101729224561
+    },
+    {
+      "graph_perm_id": 1,
+      "repeat_id": 0,
+      "seed": 7142,
+      "best_epoch": 2,
+      "best_val_auc": 0.7917790352476249,
+      "val_auc": 0.7917790352476249,
+      "val_auprc": 0.583124770556253,
+      "test_auc": 0.7796238674814241,
+      "test_auprc": 0.6003673949725317
+    },
+    {
+      "graph_perm_id": 1,
+      "repeat_id": 1,
+      "seed": 7143,
+      "best_epoch": 3,
+      "best_val_auc": 0.7907310096383141,
+      "val_auc": 0.7907310096383141,
+      "val_auprc": 0.5656375920443822,
+      "test_auc": 0.7754386338728075,
+      "test_auprc": 0.6007404870583127
+    },
+    {
+      "graph_perm_id": 1,
+      "repeat_id": 2,
+      "seed": 7144,
+      "best_epoch": 4,
+      "best_val_auc": 0.7921543867078016,
+      "val_auc": 0.7921543867078016,
+      "val_auprc": 0.5768351770542334,
+      "test_auc": 0.7654424030005836,
+      "test_auprc": 0.6086237465038471
+    },
+    {
+      "graph_perm_id": 2,
+      "repeat_id": 0,
+      "seed": 7242,
+      "best_epoch": 4,
+      "best_val_auc": 0.801343405176291,
+      "val_auc": 0.801343405176291,
+      "val_auprc": 0.5373077708970275,
+      "test_auc": 0.7652926824835002,
+      "test_auprc": 0.6195934888234857
+    },
+    {
+      "graph_perm_id": 2,
+      "repeat_id": 1,
+      "seed": 7243,
+      "best_epoch": 2,
+      "best_val_auc": 0.7898444937536225,
+      "val_auc": 0.7898444937536225,
+      "val_auprc": 0.5718098029306526,
+      "test_auc": 0.7734777619798718,
+      "test_auprc": 0.593020047057655
+    },
+    {
+      "graph_perm_id": 2,
+      "repeat_id": 2,
+      "seed": 7244,
+      "best_epoch": 2,
+      "best_val_auc": 0.7959184928438053,
+      "val_auc": 0.7959184928438053,
+      "val_auprc": 0.5671994411592701,
+      "test_auc": 0.7816613175327922,
+      "test_auprc": 0.6002558286138598
+    }
+  ],
+  "reference_metrics": {
+    "esm_raw": {
+      "path": "internal_path_omitted_from_anonymous_archive",
+      "available": true,
+      "test_probs_path": "internal_path_omitted_from_anonymous_archive",
+      "test_auc": 0.7790050633159713,
+      "test_auprc": 0.6074498000033915,
+      "val_probs_path": "internal_path_omitted_from_anonymous_archive",
+      "val_auc": 0.7814192276907073,
+      "val_auprc": 0.5569380868734662
+    },
+    "real_ppi_gcn_full": {
+      "path": "internal_path_omitted_from_anonymous_archive",
+      "available": true,
+      "test_probs_path": "internal_path_omitted_from_anonymous_archive",
+      "test_auc": 0.7997246816052654,
+      "test_auprc": 0.6495762306366588,
+      "val_probs_path": "internal_path_omitted_from_anonymous_archive",
+      "val_auc": 0.8236932495763745,
+      "val_auprc": 0.5821266366704605
+    }
+  },
+  "comparison_to_references": {
+    "topology_permuted_minus_raw_esm_test_auc": -0.003319250433358678,
+    "topology_permuted_minus_raw_esm_test_auprc": -0.0022204541348644913,
+    "topology_permuted_minus_real_ppi_gcn_test_auc": -0.024038868722652817,
+    "topology_permuted_minus_real_ppi_gcn_test_auprc": -0.044346884768131756
+  },
+  "note": "Recursive references to earlier internal-control summaries and absolute server paths were omitted from this anonymous reviewer-facing source-data file."
+}
