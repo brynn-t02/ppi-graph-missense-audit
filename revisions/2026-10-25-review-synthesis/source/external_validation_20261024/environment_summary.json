@@ -1,0 +1,12 @@
+{
+  "time_utc": "2026-10-24T07:15:14.248747+00:00",
+  "python": "3.10.8 (main, Nov 24 2022, 14:13:03) [GCC 11.2.0]",
+  "torch": "2.1.2+cu118",
+  "cuda_build": "11.8",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch_threads": 4,
+  "matmul_tf32": false,
+  "cudnn_tf32": true,
+  "input_signature": "77852839932396cc835403d1794f80ab96976d8409d69a6b3399a6e7da94d3e0",
+  "publication_note": "Scientific runtime fields only. Device UUID, memory inventory, host paths and resource-launch fields omitted."
+}

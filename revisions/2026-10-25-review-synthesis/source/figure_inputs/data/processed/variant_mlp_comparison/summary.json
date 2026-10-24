@@ -1,0 +1,44 @@
+{
+  "esm_raw": {
+    "embedding_name": "esm_raw",
+    "best_epoch": 1,
+    "best_val_auc": 0.7814192276907073,
+    "val_auc": 0.7814192276907073,
+    "val_auprc": 0.5569380868734662,
+    "test_auc": 0.7790050633159713,
+    "test_auprc": 0.6074498000033915
+  },
+  "gcn_enhanced": {
+    "embedding_name": "gcn_enhanced",
+    "best_epoch": 7,
+    "best_val_auc": 0.8236932495763745,
+    "val_auc": 0.8236932495763745,
+    "val_auprc": 0.5821266366704605,
+    "test_auc": 0.7997246816052654,
+    "test_auprc": 0.6495762306366588
+  },
+  "graphsage_enhanced": {
+    "embedding_name": "graphsage_enhanced",
+    "best_epoch": 2,
+    "best_val_auc": 0.800782929786047,
+    "val_auc": 0.800782929786047,
+    "val_auprc": 0.6136386561595533,
+    "test_auc": 0.7950274930481855,
+    "test_auprc": 0.6043931427871247
+  },
+  "gat_enhanced": {
+    "embedding_name": "gat_enhanced",
+    "best_epoch": 1,
+    "best_val_auc": 0.8005261051912925,
+    "val_auc": 0.8005261051912925,
+    "val_auprc": 0.5876203348478014,
+    "test_auc": 0.7949012897493635,
+    "test_auprc": 0.6157017113723627
+  },
+  "delta_auc_gcn_vs_esm": 0.02071961828929414,
+  "delta_auprc_gcn_vs_esm": 0.042126430633267264,
+  "delta_auc_sage_vs_esm": 0.01602242973221424,
+  "delta_auprc_sage_vs_esm": -0.0030566572162668004,
+  "delta_auc_gat_vs_esm": 0.01589622643339217,
+  "delta_auprc_gat_vs_esm": 0.008251911368971188
+}

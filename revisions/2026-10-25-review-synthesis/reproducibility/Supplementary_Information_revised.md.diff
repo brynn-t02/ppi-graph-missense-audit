@@ -1,0 +1,349 @@
+--- 2026-10-24-layout-refined/Supplementary_Information_revised.md
++++ 2026-10-25-review-synthesis/Supplementary_Information_revised.md
+@@ -30,7 +30,7 @@
+ 
+ Protein node features were generated with the Facebook ESM-2 t33 650M UR50D checkpoint. Residue-level embeddings were mean-pooled to obtain one 1,280-dimensional vector per protein. Proteins longer than 1,022 amino acids were split into chunks and combined by length-weighted averaging. The final feature table covered all 19,622 STRING graph proteins, with no missing graph proteins.
+ 
+-The primary representation-propagation graph was built from STRING v12 human protein links and contained 19,622 nodes and 13,715,404 directed edge-index entries in the retained model input object before adding self-loops. FPP representations were generated using fixed two-hop GCN-style propagation rather than an end-to-end trainable graph neural network. This design intentionally isolated topology-induced smoothing from capacity gains due to trainable graph layers, so the propagated features were treated as a controlled representation rather than an optimized end-to-end GNN predictor. Propagation used a binary adjacency derived from the retained edge list; STRING combined scores were not used as propagation weights. For the historical full FPP and all current matched graph arms, self-loops are added before symmetrization: $A=(E+I)+(E+I)^T$, retaining summed edge-count multiplicities after coalescing. Here $E$ is the edge-index count matrix, $D$ is the weighted degree matrix and $X$ is the raw ESM feature matrix. Old ablation/permutation controls instead added a single loop after reverse edges. Their outputs remain historical; new matched controls correct this convention mismatch. We used symmetric normalization,
++The primary representation-propagation graph was built from STRING v12 human protein links and contained 19,622 nodes and 13,715,404 directed edge-index entries in the retained model input object before adding self-loops. FPP representations were generated using fixed two-hop GCN-style propagation rather than an end-to-end trainable graph neural network. This design intentionally isolated topology-induced smoothing from capacity gains due to trainable graph layers, so the propagated features were treated as a controlled representation rather than an optimized end-to-end GNN predictor. The propagation adjacency retained edge-count multiplicities after adding self-loops, symmetrizing the retained edge list and summing duplicate contributions; STRING combined scores were not used as propagation weights. For the historical full FPP and all current matched graph arms, self-loops are added before symmetrization: $A=(E+I)+(E+I)^T$, retaining summed edge-count multiplicities after coalescing. Here $E$ is the edge-index count matrix, $D$ is the weighted degree matrix and $X$ is the raw ESM feature matrix. Old ablation/permutation controls instead added a single loop after reverse edges. Their outputs remain historical; new matched controls correct this convention mismatch. We used symmetric normalization,
+ 
+ $$
+ \hat{A}=D^{-\frac{1}{2}} A D^{-\frac{1}{2}},
+@@ -58,19 +58,21 @@
+ 
+ ```text
+ mmseqs createdb all_split_proteins.fa split_proteins_db
+-mmseqs cluster split_proteins_db split_proteins_clu tmp --min-seq-id 0.40 -c 0.50 --cov-mode 0 --threads 8
+-mmseqs createtsv split_proteins_db split_proteins_db split_proteins_clu split_proteins_cluster.tsv
++mmseqs cluster split_proteins_db split_proteins_clu tmp \
++  --min-seq-id 0.40 -c 0.50 --cov-mode 0 --threads 8
++mmseqs createtsv split_proteins_db split_proteins_db \
++  split_proteins_clu split_proteins_cluster.tsv
+ ```
+ 
+ The retained script does not pin the MMseqs binary version or non-overridden defaults; exact regeneration remains dependent on that historical environment. Cluster-disjointness under these parameters is not a guarantee that every distant homolog is separated. Historical single-run fusion did not establish repeated-run inferiority; the new three-seed comparison is in Table 11; class prevalence affects cross-split comparison, not comparisons on the identical within-split test set.
+ 
+-Variant-level pathogenicity was predicted with validation-selected multilayer perceptron classifiers. For representation-based and fusion models, each variant inherited the representation of its mapped STRING protein, and the classifier used two hidden layers with 512 and 128 units, ReLU activations, dropout 0.3 and a single-logit output. Low-dimensional external-score-only baselines used a smaller 32/16 classifier with dropout 0.2, while architecture-matched CADD+AlphaMissense and fusion-control comparisons used the 512/128 classifier to keep downstream capacity matched. The nominal main-model protocol was BCEWithLogitsLoss and positive-class weighting, using Adam with learning rate 1e-3, weight decay 1e-5, batch size 1024, a maximum of 50 epochs and early stopping after five consecutive validation checks without validation AUC improvement. The positive-class weight was computed from the training partition as `N_negative / N_positive`. The best epoch was selected by validation AUC.
+-
+-In the evaluated MLP configurations, no additional z-score standardization was applied to CADD, AlphaMissense or embedding-derived inputs. Missing CADD and AlphaMissense values were imputed using training-set medians, and binary missingness indicators were retained as binary indicators. The same preprocessing and feature construction were used across raw ESM, edge-ablated FPP, topology-permuted FPP and real FPP fusion controls. The main repeated comparisons used seeds 42, 43 and 44 (exceptions are detailed in Table 8); topology-permuted fusion combined three sampled graph permutations with these classifier seeds. The relative fusion-control comparisons share downstream classifier capacity and preprocessing, whereas absolute fusion performance may depend on feature-scaling choices that were not separately optimized.
++Variant-level pathogenicity was predicted with validation-selected multilayer perceptron classifiers. For representation-based and fusion models, each variant inherited the representation of its mapped STRING protein, and the classifier used two hidden layers with 512 and 128 units, ReLU activations, dropout 0.3 and a single-logit output. Low-dimensional external-score-only baselines used a smaller 32/16 classifier with dropout 0.2, while architecture-matched CADD+AlphaMissense and fusion-control comparisons used the same 512/128 hidden-layer architecture and training protocol. Input-layer parameter counts differ between score-only and fusion models because their input dimensions differ. The nominal main-model protocol was BCEWithLogitsLoss and positive-class weighting, using Adam with learning rate 1e-3, weight decay 1e-5, batch size 1024, a maximum of 50 epochs and early stopping after five consecutive validation checks without validation AUC improvement. The positive-class weight was computed from the training partition as `N_negative / N_positive`. The best epoch was selected by validation AUC.
++
++In the evaluated MLP configurations, no additional z-score standardization was applied to CADD, AlphaMissense or embedding-derived inputs. Missing CADD and AlphaMissense values were imputed using training-set medians, and binary missingness indicators were retained as binary indicators. The same preprocessing and feature construction were used across raw ESM, edge-ablated FPP, topology-permuted FPP and real FPP fusion controls. The main repeated comparisons used seeds 42, 43 and 44 (exceptions are detailed in Table 8); topology-permuted fusion combined three sampled graph permutations with these classifier seeds. The relative fusion-control comparisons share hidden-layer architecture, training protocol and preprocessing, whereas absolute fusion performance may depend on feature-scaling choices that were not separately optimized.
+ 
+ Neighbour-risk, neighbour pathogenic-rate and neighbour training-variant-count features were computed from training-set labels only. Validation and test labels were not used to construct these topology-context features. When a test protein had multiple labelled training-neighbour variants, the neighbour pathogenic rate was variant-weighted rather than protein-weighted, so proteins with many labelled neighbouring variants contributed proportionally to the local training-label context.
+ 
+-Historical uncertainty was evaluated using 1,000 variant-level bootstrap resamples; current matched analyses use 2,000 (Methods 5). Historical analyses included variant resampling and protein-clustered bootstrap resampling. Variant-level bootstrap resampled individual test variants. Protein-clustered bootstrap resampled test proteins as clusters and retained all variants belonging to each sampled protein, thereby accounting for repeated variants from the same protein. Confidence intervals were reported as empirical 95% bootstrap intervals. Fusion bootstrap conditions on the retained fitted ensembles; it omits retraining and newly sampled graph-permutation uncertainty. An interval spanning zero does not establish equivalence or absence of a topology effect. Edge removal changes degrees and normalized propagation weights as well as direct paths; higher-order train-test paths and train-validation-test paths remain. Feature-level corrected-sample comparisons used Benjamini-Hochberg false-discovery-rate correction when multiple topology features were tested.
++Historical uncertainty was evaluated using 1,000 variant-level bootstrap resamples; current matched analyses use 2,000 (Methods 5). Historical analyses included variant resampling and protein-clustered bootstrap resampling. Variant-level bootstrap resampled individual test variants. Protein-clustered bootstrap resampled test proteins as clusters and retained all variants belonging to each sampled protein, thereby accounting for repeated variants from the same protein. Confidence intervals were reported as empirical 95% bootstrap intervals. Fusion bootstrap conditions on the retained fitted ensembles; it omits retraining and newly sampled graph-permutation uncertainty. An interval spanning zero does not establish equivalence or absence of a topology effect. Edge removal changes degrees and normalized propagation weights as well as direct paths; higher-order train-test paths and train-validation-test paths remain. Historical feature-wise corrected-sample tests treated variants as observations without accounting for repeated variants within a protein. We therefore report their group means and effect sizes as descriptive profiles, without confirmatory significance claims (Table 6).
+ 
+ ### Supplementary Methods 4. Negative-control analysis
+ 
+@@ -100,7 +102,7 @@
+ 
+ ### Supplementary Table 2. Historical representation and architecture-control performance
+ 
+-Historical Table 2 raw-ESM and FPP rows report the retained reference runs used in the original figure analyses. Current Figure 1B–D/F uses new matched fits (Table 11). Repeated classifier seeds showed the same direction with a smaller mean AUC difference and are reported in the main text.
++Historical Table 2 raw-ESM and FPP rows report the retained reference runs used in the original figure analyses. Current Figure 1B–E uses new matched fits (Table 11). Repeated classifier seeds showed the same direction with a smaller mean AUC difference and are reported in the main text.
+ 
+ | Split | Model | Val AUC | Val AUPRC | Test AUC | Test AUPRC | Status |
+ |---|---|---:|---:|---:|---:|---|
+@@ -133,7 +135,7 @@
+ | + permuted FPP | 9 | 0.9718 | 0.9232 | 0.9694 +/- 0.0008 | 0.9355 +/- 0.0015 |
+ | + real FPP | 3 | 0.9732 | 0.9253 | 0.9718 +/- 0.0007 | 0.9415 +/- 0.0011 |
+ 
+-Notes for Table 3A: AM denotes AlphaMissense. "Arch." denotes the architecture-matched CADD+AlphaMissense baseline using the same 512/128 MLP capacity as the fusion controls. The rows beginning with "+" add the listed protein representation to the CADD+AM feature set. Compared with the architecture-matched CADD+AM baseline, raw ESM fusion increased test AUC/AUPRC by +0.0108/+0.0249, edge-ablated FPP fusion by +0.0136/+0.0327, topology-permuted FPP fusion by +0.0122/+0.0286 and real FPP fusion by +0.0146/+0.0347. The edge-ablated row uses one deterministic direct train-test edge-ablation graph evaluated across three classifier seeds, whereas the topology-permuted row combines three random graph permutations with three classifier seeds.
++Notes for Table 3A: AM denotes AlphaMissense. "Arch." denotes the architecture-matched CADD+AlphaMissense baseline using the same 512/128 hidden-layer architecture and training protocol as the fusion controls; the input-layer parameter counts differ. The rows beginning with "+" add the listed protein representation to the CADD+AM feature set. Compared with the architecture-matched CADD+AM baseline, raw ESM fusion increased test AUC/AUPRC by +0.0108/+0.0249, edge-ablated FPP fusion by +0.0136/+0.0327, topology-permuted FPP fusion by +0.0122/+0.0286 and real FPP fusion by +0.0146/+0.0347. The edge-ablated row uses one deterministic direct train-test edge-ablation graph evaluated across three classifier seeds, whereas the topology-permuted row combines three random graph permutations with three classifier seeds.
+ 
+ #### Supplementary Table 3B. Homology-aware split
+ 
+@@ -184,7 +186,7 @@
+ 
+ Historical Table 4A shows that variant-level bootstrap supports positive retained-reference FPP gains, whereas protein-clustered bootstrap widens uncertainty. Table 4B shows that the real FPP fusion margin over raw ESM fusion remained positive under protein-clustered paired bootstrap, but the smaller margins over edge-ablated and topology-permuted graph controls crossed zero. Table 4C is retained as an earlier retained-reference context analysis and is not architecture-matched.
+ 
+-The homology-aware strong-predictor bootstrap row comes from an earlier retained reference-run comparison rather than the architecture-matched repeated ensemble. This is historical context only. Current Figure 2E and Tables 11–12 use three matched fits in every arm; current margins supersede this earlier point estimate.
++The homology-aware strong-predictor bootstrap row comes from an earlier retained reference-run comparison rather than the architecture-matched repeated ensemble. This is historical context only. Current Figure 2D and Tables 11–12 use three matched fits in every arm; current margins supersede this earlier point estimate.
+ 
+ ### Supplementary Table 5. Topology-stratified FPP gain over raw ESM
+ 
+@@ -209,6 +211,8 @@
+ | Boundary-mixed | 6,598 | 0.2963 | +0.0140 | +0.0503 |
+ | Boundary-internal | 5,397 | 0.3111 | +0.0383 | +0.0151 |
+ 
++The risk strata contain 18,171 variants: 49 variants from 10 proteins had fewer than five labelled training-neighbour variants and were assigned the insufficient-signal code -1. The boundary strata contain 18,193 variants: 27 variants from five proteins had community ID -1 after communities with fewer than 50 nodes were excluded by the historical topology script. Of these, four variants mapped to two isolated proteins; the other 23 mapped to three non-isolated proteins. Their within-community fraction was undefined. Both omitted groups were smaller than the historical minimum group size of 50. Other strata cover all 18,220 test variants.
++
+ Selected exploratory joint topology cells:
+ 
+ Cell codes: J0, mid k-core / high betweenness; J1, mid k-core / mid clustering; J2, high neighbour risk / mid k-core; J3, high k-core / low clustering.
+@@ -222,9 +226,9 @@
+ 
+ Full topology maps are provided in the prepared source-data archive rather than printed in full in the PDF supplement.
+ 
+-These joint cells were selected from the same test-set topology map used for estimation. Their bootstrap intervals describe within-cell sampling uncertainty without correcting for the selection step. The cells are exploratory gain profiles, not independently validated topology-defined subgroups.
+-
+-### Supplementary Table 6. Corrected-sample and baseline-error-stratified statistics
++These joint cells were selected from the same test-set topology map used for estimation. Their historical intervals resampled variants within each cell, without accounting for repeated variants within proteins or for subgroup selection. The cells and intervals are descriptive exploratory profiles, not confirmatory evidence for independently validated topology-defined subgroups.
++
++### Supplementary Table 6. Descriptive corrected-sample and baseline-error-stratified profiles
+ 
+ Corrected-sample group counts for raw ESM to FPP:
+ 
+@@ -252,42 +256,45 @@
+ 
+ Selected false-positive-suppressed versus false-negative-rescued topology contrasts for raw ESM to FPP:
+ 
+-| Feature | FP mean | FN mean | Diff | FDR |
+-|---|---:|---:|---:|---:|
+-| degree bucket | 0.8698 | 1.9833 | -1.1135 | 4.48e-188 |
+-| k-core bucket | 0.8381 | 1.1254 | -0.2874 | 3.12e-22 |
+-| neighbour risk bucket | 0.5726 | 1.6941 | -1.1215 | 2.74e-129 |
+-| neighbour pathogenic rate | 0.2717 | 0.4329 | -0.1612 | 5.95e-90 |
+-| betweenness bucket | 0.9482 | 1.8530 | -0.9048 | 1.82e-120 |
+-| clustering coefficient | 0.2534 | 0.2022 | +0.0512 | 1.16e-07 |
+-| boundary role bucket | 1.1519 | 0.3321 | +0.8198 | 2.12e-87 |
++| Feature | FP mean | FN mean | Diff |
++|---|---:|---:|---:|
++| degree bucket | 0.8698 | 1.9833 | -1.1135 |
++| k-core bucket | 0.8381 | 1.1254 | -0.2874 |
++| neighbour risk bucket | 0.5726 | 1.6941 | -1.1215 |
++| neighbour pathogenic rate | 0.2717 | 0.4329 | -0.1612 |
++| betweenness bucket | 0.9482 | 1.8530 | -0.9048 |
++| clustering coefficient | 0.2534 | 0.2022 | +0.0512 |
++| boundary role bucket | 1.1519 | 0.3321 | +0.8198 |
+ 
+ Selected false-positive-suppressed versus false-negative-rescued topology contrasts for retained-reference CADD+AlphaMissense to retained-reference graph fusion:
+ 
+-| Feature | FP mean | FN mean | Diff | FDR |
+-|---|---:|---:|---:|---:|
+-| degree bucket | 1.5541 | 1.8198 | -0.2658 | 2.60e-06 |
+-| k-core bucket | 1.5518 | 1.6036 | -0.0518 | 0.8373 |
+-| neighbour risk bucket | 0.7793 | 1.7523 | -0.9730 | 4.34e-55 |
+-| neighbour pathogenic rate | 0.3276 | 0.4955 | -0.1679 | 1.57e-56 |
+-| betweenness bucket | 1.5541 | 1.7252 | -0.1712 | 2.96e-04 |
+-| clustering coefficient | 0.1807 | 0.2176 | -0.0368 | 1.64e-14 |
+-| boundary role bucket | 0.9685 | 0.7207 | +0.2477 | 3.81e-05 |
++| Feature | FP mean | FN mean | Diff |
++|---|---:|---:|---:|
++| degree bucket | 1.5541 | 1.8198 | -0.2658 |
++| k-core bucket | 1.5518 | 1.6036 | -0.0518 |
++| neighbour risk bucket | 0.7793 | 1.7523 | -0.9730 |
++| neighbour pathogenic rate | 0.3276 | 0.4955 | -0.1679 |
++| betweenness bucket | 1.5541 | 1.7252 | -0.1712 |
++| clustering coefficient | 0.1807 | 0.2176 | -0.0368 |
++| boundary role bucket | 0.9685 | 0.7207 | +0.2477 |
+ 
+ Baseline-error-stratified rescued false-negative contrasts:
+ 
+-| Feature | Corrected subset mean | Persistent error mean | Hedges' g | FDR |
+-|---|---:|---:|---:|---:|
+-| Degree bucket | 1.9833 | 1.5546 | +0.9675 | 0.0011 |
+-| K-core bucket | 1.1254 | 1.5358 | -0.8441 | 0.0011 |
+-| Neighbour risk bucket | 1.6941 | 1.0904 | +0.8163 | 0.0011 |
+-| Neighbour pathogenic rate | 0.4329 | 0.3793 | +0.5259 | 0.0011 |
+-| Betweenness bucket | 1.8530 | 1.5348 | +0.5923 | 0.0011 |
+-| Clustering coefficient | 0.2022 | 0.2322 | -0.4011 | 0.0011 |
+-| Boundary role bucket | 0.3321 | 0.9953 | -0.8000 | 0.0011 |
+-| Within-community neighbour fraction | 0.5655 | 0.7093 | -0.7950 | 0.0011 |
+-
+-The historical procedure stratifies raw-ESM baseline errors into false negatives and false positives, then contrasts corrected versus persistent errors within each stratum. Thus class label and baseline binary prediction agree within a contrast; continuous baseline scores are not matched and no caliper, nearest-neighbour or propensity matching is performed. Hedges' g uses the pooled within-group standard deviation with small-sample correction; feature-wise permutation tests use 1,000 permutations and seed 42 plus the feature index (offset 0 for FN and 10000 for FP conditions), followed by Benjamini-Hochberg correction. Bucket numbers are treated numerically in this exploratory test. These associations do not establish causality or eliminate residual difficulty confounding.
++| Feature | Corrected subset mean | Persistent error mean | Hedges' g |
++|---|---:|---:|---:|
++| Degree bucket | 1.9833 | 1.5546 | +0.9675 |
++| K-core bucket | 1.1254 | 1.5358 | -0.8441 |
++| Neighbour risk bucket | 1.6941 | 1.0904 | +0.8163 |
++| Neighbour pathogenic rate | 0.4329 | 0.3793 | +0.5259 |
++| Betweenness bucket | 1.8530 | 1.5348 | +0.5923 |
++| Clustering coefficient | 0.2022 | 0.2322 | -0.4011 |
++| Boundary role bucket | 0.3321 | 0.9953 | -0.8000 |
++| Within-community neighbour fraction | 0.5655 | 0.7093 | -0.7950 |
++
++The historical procedure stratifies raw-ESM baseline errors into false negatives and false positives, then contrasts corrected versus persistent errors within each stratum. Thus class label and baseline binary prediction agree within a contrast; continuous baseline scores are not matched and no caliper, nearest-neighbour or propensity matching is performed. The displayed FN contrasts contain 837 rescued and 1,062 persistent false negatives, except within-community neighbour fraction, for which two persistent-error values were missing (1,060 available). Hedges' g uses the pooled within-group standard deviation with small-sample correction. Group means and effect sizes are variant-weighted descriptive summaries. Historical bucket encodings, including -1 for insufficient or unassigned context, are retained numerically; a bucket mean is not a biological effect magnitude.
++
++The archived FP-versus-FN comparisons used Mann–Whitney U tests, and baseline-error-stratified contrasts used 1,000 feature-wise permutations with seed 42 plus the feature index (offset 0 for FN and 10000 for FP conditions), followed by Benjamini–Hochberg correction. Both procedures treated variants as observations and ignored within-protein dependence. Their p values, FDR values and significance labels are omitted here and in Figure S1; no confirmatory inference is made from these historical tests. The descriptive associations do not establish causality or eliminate residual difficulty confounding.
++
+ 
+ ### Supplementary Table 7. Negative-control audit
+ 
+@@ -304,18 +311,18 @@
+ | Analysis | Runs and seeds | Maximum epochs | Interpretation |
+ |---|---|---:|---|
+ | Original raw ESM and full FPP repeated | 3 per arm; 42, 43, 44 | 50 | Matched repeated positive comparison |
+-| Figure 1 reference | One retained estimate per arm | 50 | Bootstrap conditional on fitted reference predictions |
++| Historical reference pair | One retained estimate per arm | 50 | Bootstrap conditional on fitted reference predictions |
+ | Direct-edge ablation, representation-only | 5; 3042-3046 | 30 | Different seeds/budget from full graph |
+ | Partial ablation, fractions .25/.50/.75 | 3 per strategy/fraction | 30 | Seeds 5042 + 1000*fraction + repeat index; +100000 high-score-first; +200000 low-score-first |
+ | Partial ablation, fraction 0 | Same full-graph reference reused | 50 | Not three independent endpoint observations |
+ | Partial ablation, fraction 1 | Same five direct-ablation runs reused | 30 | Not new strategy-specific observations |
+ | Topology permutation, representation-only | 3 graph seeds 6042-6044 x 3 classifier seeds (7042-7044, 7142-7144, 7242-7244) | 30 | Nine runs; unequal budget from full graph |
+-| Original matched fusion arms | 3 classifier seeds 42-44 per arm | 50 | Matched capacity/preprocessing |
++| Original matched fusion arms | 3 classifier seeds 42-44 per arm | 50 | Shared hidden layers, training protocol and preprocessing |
+ | Original permuted fusion | 3 graphs x seeds 42-44 | 50 | 9 runs; bootstrap conditions on sampled graphs |
+ | Homology CADD+AM and raw-ESM fusion | 3 classifier seeds 42-44 per arm | 50 | Repeated baseline means |
+ | Homology graph fusion | 1 retained run | 50 | Descriptive only; asymmetric comparison |
+ 
+-The negative controls were not all single-run analyses, but their protocols are asymmetric relative to the main positive comparison. Their existing standard deviations quantify dispersion under their respective protocols, not a paired causal graph effect. Figure 1 endpoints and reference bootstrap are not independent confirmations. This table documents historical runs. New matched-seed/budget/operator results replace the corresponding main comparative claims in Tables 11 and 12; historical rows remain unchanged for traceability.
++The negative controls were not all single-run analyses, but their protocols are asymmetric relative to the main positive comparison. Their existing standard deviations quantify dispersion under their respective protocols, not a paired causal graph effect. The reused partial-ablation endpoints in Supplementary Figure S3A and the reference bootstrap are not independent confirmations. This table documents historical runs. New matched-seed/budget/operator results replace the corresponding main comparative claims in Tables 11 and 12; historical rows remain unchanged for traceability.
+ 
+ ### Supplementary Table 9. Historical post-hoc complete-case evaluation of matched fusion predictions
+ 
+@@ -355,34 +362,36 @@
+ 
+ ## Source-data archive status
+ 
+-The prepared compact source-data archive contains figure source data for Figures 1–3 and Supplementary Figures S1–S2, topology-stratified metrics, joint topology maps, corrected-sample statistics, fusion-control summaries, bootstrap outputs and checksum files. The new source package includes compact external-validation summaries and the new figure-generation script; executed protocols, source manifests and reconstruction programs are retained in the public experimental addendum. Large third-party resources, including provider-controlled CADD and AlphaMissense score files, are not redistributed and should be obtained from their original providers.
++The prepared compact source-data archive contains figure source data for Figures 1–3 and Supplementary Figures S1–S3, topology-stratified metrics, joint topology maps, corrected-sample statistics, fusion-control summaries, bootstrap outputs and checksum files. The source package also includes the complete 177,213-row sample/split/cluster manifest, frozen node order, per-seed test predictions and external membership/prediction records in `canonical_analysis_20261025/public/`, plus the corresponding unified summaries and figure-generation scripts; executed protocols, source manifests and reconstruction programs are retained in the public experimental addendum. Large third-party resources, including provider-controlled CADD and AlphaMissense score files, are not redistributed and should be obtained from their original providers.
+ 
+ 
+ ### Supplementary Methods 5. Matched validation and restored runtime (24 October 2026)
+ 
+-The user-supplied historical `conda_environment.yml` and `pip_freeze.txt` were retained unchanged with SHA-256 hashes. A separate runtime restored Python 3.10.8, PyTorch 2.1.2+cu118, torchvision 0.16.2+cu118, NumPy 1.26.4, pandas 2.3.3, scikit-learn 1.7.2 and SciPy 1.15.3. All 122 pip pins and 16 portable Python-library pins from the conda section were checked. Operating-system libraries and conda management packages were not a bitwise copy of the old base environment; the full resolved export is included. CUDA 11.8 is the PyTorch build, not a recovered historical driver/toolkit record. New runs used one NVIDIA RTX 4090.
+-
+-The 18 staged input files were hash-verified against the local snapshot. Original model-input labels and protein indices matched every CSV row. Original and homology partitions covered the same VariationIDs. Both splits were protein-disjoint; saved homology cluster IDs were disjoint. Saved full FPP was numerically checked against recomputation in 16 feature columns (maximum absolute difference 1.49e-7). Six new raw-ESM/full-FPP positive-control fits reproduced their historical validation/test metrics and selected epochs exactly to exported precision; this supports runtime recovery for those runs, rather than proving the environment of every historical experiment. Ablated and all three permuted FPP tensors were regenerated using the same full operator, with graph permutations verified against seeds 6042–6044. ESM extraction and MMseqs clustering were not rerun.
+-
+-All 48 downstream classifiers use seeds 42–44, batch size 1,024, Adam learning rate 0.001 and weight decay 0.00001, class-weighted BCE, 512/128 hidden layers, dropout 0.3, maximum 50 epochs and patience five on strictly improving validation AUROC. Imputation uses training medians with an AlphaMissense missingness indicator; no z-score scaling was applied. Every fusion concatenates external scores before the protein representation, consistently across arms. This common ordering and isolated runtime mean the new fits should not be called bitwise replicas of every historical fit. GPU-resident node lookup changes storage, not feature values or row identity; held-out labels do not enter optimization or model selection. Test predictions are saved only after selecting each classifier by validation AUC.
++The archived historical `conda_environment.yml` and `pip_freeze.txt` were retained unchanged with SHA-256 hashes. A separate runtime restored Python 3.10.8, PyTorch 2.1.2+cu118, torchvision 0.16.2+cu118, NumPy 1.26.4, pandas 2.3.3, scikit-learn 1.7.2 and SciPy 1.15.3. All 122 pip pins and 16 portable Python-library pins from the conda section were checked. Operating-system libraries and conda management packages were not a bitwise copy of the old base environment; the full resolved export is included. CUDA 11.8 is the PyTorch build, not a recovered historical driver/toolkit record. New runs used one NVIDIA RTX 4090.
++
++The 18 staged input files were hash-verified against the local snapshot. Original model-input labels and protein indices matched every CSV row. Original and homology partitions covered the same VariationIDs. Both splits were protein-disjoint; saved homology cluster IDs were disjoint. Saved full FPP was numerically checked against recomputation in 16 feature columns (maximum absolute difference 1.49e-7). At the initial restoration check, six raw-ESM/full-FPP positive-control fits reproduced the historical variant-batched validation/test metrics and selected epochs to exported precision. This supported runtime recovery for those runs; current reporting subsequently applies the common node-lookup and aggregation convention described below. Ablated and all three permuted FPP tensors were regenerated using the same full operator, with graph permutations verified against seeds 6042–6044. ESM extraction and MMseqs clustering were not rerun.
++
++All 48 downstream classifiers use seeds 42–44, batch size 1,024, Adam learning rate 0.001 and weight decay 0.00001, class-weighted BCE, 512/128 hidden layers, dropout 0.3, maximum 50 epochs and patience five on strictly improving validation AUROC. Imputation uses training medians with an AlphaMissense missingness indicator; no z-score scaling was applied. Every fusion concatenates external scores before the protein representation, consistently across arms. This common ordering and isolated runtime mean the new fits should not be called bitwise replicas of every historical fit. GPU-resident node lookup changes storage, not feature values or row identity; test labels do not enter optimization or model selection. Test predictions are saved only after selecting each classifier by validation AUC.
+ 
+ The original-split representation comparison uses raw ESM, full FPP, ablated FPP (three fits each) and three topology permutations by three seeds (nine fits). Original-split fusion uses score-only, raw, full and ablated arms (three fits each) plus permuted fusion (nine). Homology fusion uses score-only, raw and full FPP (three fits each). Score-only models share hidden layers with fusion but have fewer fitted input weights. The smoke checks used four training batches plus validation, without test evaluation.
+ 
++**Unified current reporting.** Tables 11–17 and main Figures 1–3 use a single post-processing convention. For all 21 protein-only representation checkpoints, CPU evaluation in float32 with fixed batches of 1,024 nodes in the frozen node order produces one stored probability per protein, which is mapped to its variant rows. On the original validation/test rows, the largest difference from the earlier variant-batched probabilities was 3.58e-7; the maximum within-protein spread decreased from 2.38e-7 to exactly zero. Fusion inputs remain variant-specific. Seed probabilities are converted to float64 before averaging; all AUPRC values are non-interpolated average precision computed consistently with scikit-learn. This inference and aggregation standardization involved no model refitting or checkpoint changes. It can slightly change rank-based metrics through exact ties; earlier outputs remain archived separately rather than mixed with the current tables.
++
+ ### Supplementary Table 11. Current matched fitted-run summaries
+ 
+-Current values use means ± sample SD (ddof=1) across classifier fits; historical tables retain their original summary convention. Permutation rows are shown separately by graph; their three seeds are classifier repeats conditional on that graph. Historical Tables 2–3 and 8–10 remain traceable sources, not substitutes for these new results.
++Current values use canonical per-run metrics and means ± sample SD (ddof=1) across classifier fits; historical tables retain their original summary convention. Permutation rows are shown separately by graph; their three seeds are classifier repeats conditional on that graph. Historical Tables 2–3 and 8–10 remain traceable sources, not substitutes for these new results.
+ 
+ | Split | Arm | Fits | Test AUC | Test AUPRC |
+ |---|---|---:|---:|---:|
+ | Homology | Scores (512/128) | 3 | 0.9755 ± 0.0001 | 0.8403 ± 0.0006 |
+ | Homology | + full FPP | 3 | 0.9752 ± 0.0007 | 0.8369 ± 0.0060 |
+ | Homology | + raw ESM | 3 | 0.9727 ± 0.0003 | 0.8253 ± 0.0016 |
+-| Original | Ablated FPP | 3 | 0.7702 ± 0.0077 | 0.6075 ± 0.0139 |
+-| Original | Full FPP | 3 | 0.7950 ± 0.0016 | 0.6484 ± 0.0118 |
+-| Original | Permuted FPP (graph 0) | 3 | 0.7807 ± 0.0046 | 0.6095 ± 0.0020 |
+-| Original | Permuted FPP (graph 1) | 3 | 0.7751 ± 0.0148 | 0.6013 ± 0.0048 |
+-| Original | Permuted FPP (graph 2) | 3 | 0.7851 ± 0.0049 | 0.6198 ± 0.0011 |
+-| Original | Raw ESM | 3 | 0.7835 ± 0.0063 | 0.6116 ± 0.0066 |
++| Original | Ablated FPP | 3 | 0.7702 ± 0.0077 | 0.6077 ± 0.0140 |
++| Original | Full FPP | 3 | 0.7950 ± 0.0016 | 0.6485 ± 0.0117 |
++| Original | Permuted FPP (graph 0) | 3 | 0.7807 ± 0.0046 | 0.6096 ± 0.0019 |
++| Original | Permuted FPP (graph 1) | 3 | 0.7751 ± 0.0148 | 0.6014 ± 0.0049 |
++| Original | Permuted FPP (graph 2) | 3 | 0.7851 ± 0.0049 | 0.6199 ± 0.0013 |
++| Original | Raw ESM | 3 | 0.7835 ± 0.0063 | 0.6117 ± 0.0066 |
+ | Orig. fusion | Scores (512/128) | 3 | 0.9572 ± 0.0001 | 0.9072 ± 0.0002 |
+ | Orig. fusion | + ablated FPP | 3 | 0.9704 ± 0.0004 | 0.9394 ± 0.0009 |
+ | Orig. fusion | + full FPP | 3 | 0.9716 ± 0.0007 | 0.9409 ± 0.0017 |
+@@ -391,31 +400,31 @@
+ | Orig. fusion | + permuted (graph 2) | 3 | 0.9688 ± 0.0003 | 0.9357 ± 0.0005 |
+ | Orig. fusion | + raw ESM | 3 | 0.9682 ± 0.0011 | 0.9326 ± 0.0037 |
+ 
+-Per-run seed, selected epoch, epochs trained, metrics and elapsed time are recorded in `matched_validation_20261024/per_run_metrics.csv`; per-epoch histories are included. Pooled permutation SD mixes graph and classifier dispersion and is descriptive. Paired seed differences are in `paired_seed_deltas.csv`.
++Current per-run metrics, seed, selected epoch, epochs trained and elapsed time are recorded in `canonical_analysis_20261025/per_run_metrics.csv`; the unchanged training histories remain in `matched_validation_20261024/`. Pooled permutation SD mixes graph and classifier dispersion and is descriptive. Paired seed differences are in `canonical_analysis_20261025/paired_seed_deltas.csv`.
+ 
+ ### Supplementary Table 12. Current protein-clustered paired ensemble margins
+ 
+-Predictions are averaged within arm before computing metrics; the permutation ensemble averages all three saved graphs and three classifier seeds. Each of 2,000 replicates samples test proteins with replacement and retains all variants with multiplicity. Intervals condition on fitted models and sampled permutations; they omit retraining, new graphs, cluster reassignments and external-cohort uncertainty. Comparisons are exploratory, without multiplicity adjustment. A zero-crossing interval does not establish equivalence.
++Probabilities are converted to float64 and averaged within arm before computing metrics; the permutation ensemble averages all three saved graphs and three classifier seeds. Each of 2,000 replicates samples test proteins with replacement and retains all variants with multiplicity. The random-number generator restarts at seed 20261024 for each population, and all arm comparisons within that population use the same sampled protein multiplicities. Intervals condition on fitted models and sampled permutations; they omit retraining, new graphs, cluster reassignments and external-cohort uncertainty. Comparisons are exploratory, without multiplicity adjustment. A zero-crossing interval does not establish equivalence.
+ 
+ | Split | Comparison | ΔAUC (95% CI) | ΔAUPRC (95% CI) |
+ |---|---|---:|---:|
+-| Original | full FPP − raw ESM | +0.0107 (-0.0218, +0.0426) | +0.0413 (-0.0109, +0.0770) |
+-| Original | full FPP − ablated FPP | +0.0248 (+0.0066, +0.0494) | +0.0429 (+0.0126, +0.0635) |
+-| Original | full FPP − permuted FPP | +0.0118 (-0.0229, +0.0461) | +0.0430 (-0.0234, +0.0883) |
+-| Orig. fusion | full FPP − scores | +0.0147 (+0.0066, +0.0231) | +0.0344 (+0.0158, +0.0564) |
+-| Orig. fusion | full FPP − raw ESM | +0.0032 (+0.0008, +0.0061) | +0.0076 (+0.0029, +0.0138) |
+-| Orig. fusion | full FPP − ablated FPP | +0.0013 (-0.0004, +0.0031) | +0.0014 (-0.0016, +0.0048) |
+-| Orig. fusion | full FPP − permuted FPP | +0.0020 (+0.0001, +0.0048) | +0.0050 (+0.0003, +0.0112) |
+-| Homology | full FPP − scores | +0.0001 (-0.0019, +0.0021) | -0.0012 (-0.0199, +0.0154) |
+-| Homology | raw ESM − scores | -0.0025 (-0.0048, -0.0004) | -0.0135 (-0.0325, +0.0042) |
+-| Homology | full FPP − raw ESM | +0.0027 (+0.0015, +0.0039) | +0.0123 (+0.0052, +0.0198) |
++| Original | full FPP − raw ESM | +0.0107 (-0.0218, +0.0426) | +0.0412 (-0.0106, +0.0767) |
++| Original | full FPP − ablated FPP | +0.0248 (+0.0066, +0.0494) | +0.0429 (+0.0127, +0.0623) |
++| Original | full FPP − permuted FPP | +0.0118 (-0.0229, +0.0462) | +0.0430 (-0.0229, +0.0883) |
++| Orig. fusion | full FPP − scores | +0.0147 (+0.0065, +0.0226) | +0.0344 (+0.0156, +0.0558) |
++| Orig. fusion | full FPP − raw ESM | +0.0032 (+0.0008, +0.0062) | +0.0076 (+0.0030, +0.0141) |
++| Orig. fusion | full FPP − ablated FPP | +0.0013 (-0.0004, +0.0032) | +0.0014 (-0.0015, +0.0047) |
++| Orig. fusion | full FPP − permuted FPP | +0.0020 (+0.0001, +0.0045) | +0.0050 (+0.0002, +0.0110) |
++| Homology | full FPP − scores | +0.0001 (-0.0019, +0.0020) | -0.0012 (-0.0205, +0.0157) |
++| Homology | raw ESM − scores | -0.0025 (-0.0048, -0.0004) | -0.0135 (-0.0343, +0.0045) |
++| Homology | full FPP − raw ESM | +0.0027 (+0.0015, +0.0040) | +0.0123 (+0.0055, +0.0194) |
+ 
+ Variant-level resampling of the original full-FPP versus raw-ESM ensembles is also supplied, using 2,000 replicates. It ignores within-protein dependence and is used only to contrast uncertainty estimates. The weighted metric implementation was checked against scikit-learn on the actual predictions, including random protein multiplicities.
+ 
+ 
+ ### Supplementary Table 13. Current complete-case test-subset sensitivity
+ 
+-Both external scores are observed for 17,581 original test variants. Current saved predictions first reproduce their full-test metrics, then are restricted without retraining. This addresses test-membership sensitivity, not complete-case training or independent validation. Entries are means of per-run metrics; the permutation row pools three graphs by three classifier seeds (n=9).
++Both external scores are observed for 17,581 original test variants. Canonical current predictions are evaluated on the full test set and then restricted without retraining. This addresses test-membership sensitivity, not complete-case training or independent validation. Entries are means of per-run metrics; the permutation row pools three graphs by three classifier seeds (n=9).
+ 
+ | Arm | Fits | All-test AUC | Complete AUC | All-test AUPRC | Complete AUPRC |
+ |---|---:|---:|---:|---:|---:|
+@@ -442,9 +451,9 @@
+ 
+ Six retained raw/STRING checkpoints reproduced recorded validation/test metrics before external evaluation. External inference applied original-split raw, STRING and BioGRID representation classifiers to all three populations, yielding 27 population/model/seed combinations. No external classifier was fitted. External CADD/AlphaMissense fusion was not evaluated because genuine matched clinical scores were unavailable. Each protein-only model assigns the same score to all variants of a protein: this tests protein-context discrimination across the cohort, not discrimination among substitutions within a protein. Protein-defined HUMSAVAR substitutions need not all be genomic single-nucleotide variants.
+ 
+-**Estimation and verification.** Table 16 reports mean and sample SD (ddof=1) across all three seeds; Table 17 uses metrics of mean predicted probabilities across seeds. Paired differences use 2,000 protein-cluster bootstrap replicates, seed 20261024. Each replicate samples proteins with replacement, retaining all variants with multiplicity; the same samples pair arms within each population. Percentile 95% intervals condition on fitted ensembles and frozen graphs, omitting retraining, graph-source variation and new cohorts. Comparisons are exploratory without multiplicity adjustment. Zero-crossing intervals do not establish equivalence.
+-
+-The new analyzer casts saved probabilities to float64 before ensemble averaging; Table 12 preserves the earlier float32 ensemble computation. With tied protein-level scores, floating-point rank changes can slightly alter average precision, so these ensemble summaries should not be interchanged. Direct checkpoint reproduction and external node-batched inference were separately checked: node versus variant batching differed by at most 3.58e-7 in probabilities, with recorded small metric changes from tied ranks. Independent verification checked nine selected epochs, validation/test metrics and finite checkpoint shapes, six old checkpoint reproductions, actual external indices, 27 prediction combinations, 60 per-seed metric rows, 20 ensemble summaries and all 17 bootstrap point estimates. Bootstrap bounds and finite counts were checked, and the weighted metric kernel tested against scikit-learn; the complete 2,000-replicate calculation was not independently rerun. Compact outputs are in `external_validation_20261024/`; raw resources, full predictions and checkpoints remain in the retained experiment archive.
++**Estimation and verification.** Table 16 reports mean and sample SD (ddof=1) across all three seeds; Table 17 uses metrics of mean predicted probabilities across seeds. Paired differences use 2,000 protein-cluster bootstrap replicates, restarting seed 20261024 separately for each population. Each replicate samples proteins with replacement, retaining all variants with multiplicity; the same samples pair arms within each population. Percentile 95% intervals condition on fitted ensembles and frozen graphs, omitting retraining, graph-source variation and new cohorts. Comparisons are exploratory without multiplicity adjustment. Zero-crossing intervals do not establish equivalence.
++
++The same float64 averaging and non-interpolated average-precision calculation are used for Tables 12 and 17. Canonical node lookup also gives exact same-protein scores for all 27 external representation prediction combinations. These were recomputed from the same frozen checkpoints; the largest probability difference from the earlier external node-batched scores was 4.47e-7. The unified reporting audit covers 57 frozen checkpoints, 90 per-seed metric rows, 30 ensemble summaries and 27 paired protein-bootstrap comparisons, with no new fitting. All 2,000 replicates were finite for every comparison. An independent scikit-learn calculation reproduced all 2,000 replicates for five key comparisons: original full FPP versus raw ESM, original fusion full FPP versus raw fusion, homology full FPP versus scores, and primary and strict external STRING versus raw ESM. All corresponding interval endpoints agreed within 2.17e-16; 14 synthetic tied-score/weight cases also passed. Other paired comparisons were checked through their point estimates, finite counts and shared metric implementation. Current compact outputs are in `canonical_analysis_20261025/`; earlier analyses remain dated archives. Tensors, checkpoints and large provider resources are retained separately.
+ 
+ ### Supplementary Table 14. External-source populations after overlap exclusions
+ 
+@@ -498,9 +507,9 @@
+ 
+ | Setting | Arm | AUC | AUPRC |
+ |---|---|---:|---:|
+-| Representation | Raw ESM | 0.7835 ± 0.0063 | 0.6116 ± 0.0066 |
+-| Representation | STRING FPP | 0.7950 ± 0.0016 | 0.6484 ± 0.0118 |
+-| Representation | BioGRID FPP | 0.7592 ± 0.0133 | 0.6041 ± 0.0083 |
++| Representation | Raw ESM | 0.7835 ± 0.0063 | 0.6117 ± 0.0066 |
++| Representation | STRING FPP | 0.7950 ± 0.0016 | 0.6485 ± 0.0117 |
++| Representation | BioGRID FPP | 0.7592 ± 0.0133 | 0.6043 ± 0.0083 |
+ | Original fusion | Scores | 0.9572 ± 0.0001 | 0.9072 ± 0.0002 |
+ | Original fusion | Scores + raw | 0.9682 ± 0.0011 | 0.9326 ± 0.0037 |
+ | Original fusion | Scores + STRING | 0.9716 ± 0.0007 | 0.9409 ± 0.0017 |
+@@ -528,14 +537,14 @@
+ | Strict | BioGRID − STRING | -0.02578 (-0.05818, +0.00573) | -0.03227 (-0.07441, +0.01829) |
+ | All (descriptive) | STRING − raw | +0.03482 (+0.02766, +0.04172) | +0.03996 (+0.02879, +0.05083) |
+ | All (descriptive) | BioGRID − raw | +0.02957 (+0.02161, +0.03721) | +0.03850 (+0.02859, +0.04874) |
+-| All (descriptive) | BioGRID − STRING | -0.00526 (-0.01275, +0.00226) | -0.00146 (-0.01218, +0.01039) |
++| All (descriptive) | BioGRID − STRING | -0.00525 (-0.01275, +0.00226) | -0.00146 (-0.01218, +0.01039) |
+ 
+ #### Supplementary Table 17B. Original and homology benchmark margins
+ 
+ | Setting | Comparison | ΔAUC (95% CI) | ΔAUPRC (95% CI) |
+ |---|---|---:|---:|
+-| Representation | BioGRID − raw | -0.02014 (-0.04808, +0.01000) | -0.00269 (-0.05470, +0.03630) |
+-| Representation | BioGRID − STRING | -0.03080 (-0.06917, +0.00405) | -0.04369 (-0.08947, -0.00107) |
++| Representation | BioGRID − raw | -0.02012 (-0.04803, +0.01005) | -0.00249 (-0.05396, +0.03630) |
++| Representation | BioGRID − STRING | -0.03079 (-0.06916, +0.00407) | -0.04371 (-0.08938, -0.00108) |
+ | Original fusion | BioGRID − scores | +0.01242 (+0.00341, +0.02100) | +0.02788 (+0.00701, +0.05019) |
+ | Original fusion | BioGRID − raw | +0.00092 (-0.00115, +0.00364) | +0.00105 (-0.00371, +0.00691) |
+ | Original fusion | BioGRID − STRING | -0.00228 (-0.00420, -0.00058) | -0.00650 (-0.01164, -0.00233) |
+@@ -552,7 +561,7 @@
+ 
+ ![Historical prediction-transition panels](figure_drafts/Figure4_prediction_transitions.png)
+ 
+-A, Transitions for the historical retained raw-ESM/FPP pair at score threshold 0.5. B, Transitions for the retained-reference CADD+AlphaMissense and graph-fusion pair. C-D, Row-normalized topology profiles of suppressed false positives and rescued false negatives. E, Feature-wise comparisons after FDR correction. F, Baseline-error-stratified contrasts, without continuous-score matching. Nbr denotes neighbour; path. rate uses training-neighbour labels. These historical results, redrawn for readability, were moved from the earlier main Figure 4; they are not results of the current matched fits. In C–D, blue and orange denote values below and above the within-row mean. In E, blue denotes higher values in rescued false negatives and orange higher values in suppressed false positives; symbol size shows capped −log10(FDR), with faint symbols for FDR ≥0.05. In F, an asterisk indicates Benjamini–Hochberg FDR <0.05.
++Historical prediction-transition profiles, described without confirmatory feature-wise significance tests. A, Transitions for the retained raw-ESM/FPP pair at score threshold 0.5. B, Transitions for the retained CADD+AlphaMissense/graph-fusion pair. C–D, Within-row centered and range-scaled feature means for suppressed false positives and rescued false negatives; colors indicate only which group mean is higher. E, Raw differences between FP-suppressed and FN-rescued feature means (FP minus FN); feature units differ, so magnitudes are not comparable across rows. F, Historical descriptive Hedges' g for rescued versus persistent false negatives. Nbr denotes neighbour; path. rate uses training-neighbour labels. These are retained historical results, not current matched-fit estimates. Repeated variants within a protein were not accounted for in the historical feature-wise tests; significance values and their visual encodings are therefore omitted. Neither the descriptive differences nor Hedges' g establish a mechanism or remove continuous-score confounding.
+ 
+ At threshold 0.5, the raw-ESM/FPP pair corrected 1,436 variants and degraded 944. Corrected variants included 837 rescued false negatives and 599 suppressed false positives; degradation comprised 904 new false positives and 40 new false negatives. The retained fusion pair corrected 666 variants and degraded 275, including 444 suppressed false positives and 222 rescued false negatives among the corrections. Full joint counts and topology statistics are in Table 6.
+ 
+@@ -567,4 +576,13 @@
+ 
+ A, Retained ESM representations show weak alignment with STRING topology. B, Degree and k-core gains are non-monotonic. C–D, Historical stratified estimates differ across betweenness, clustering and training-neighbour-risk groups. E, Exploratory distribution of all 53 joint topology cells. F, Selected joint profiles with within-cell intervals. L/M/H denote low/mid/high strata; deg, core, betw and clust denote degree, k-core, betweenness and clustering. These historical reference-pair results, redrawn for readability, were moved from the earlier main Figure 3; they are not newly fitted external-source or BioGRID results.
+ 
+-The topology-description graph used STRING combined score ≥400, distinct from the full propagation graph (Methods 2). All cells and highlighted profiles were inspected on the same test set. Their intervals describe within-cell resampling and omit subgroup-selection uncertainty; feature-level FDR correction does not remove that selection effect. These are hypothesis-generating associations and have not been independently confirmed in the new external source. Full strata and selected-cell counts are retained in Table 5 and the source-data archive.
++The topology-description graph used STRING combined score ≥400, distinct from the full propagation graph (Methods 2). All cells and highlighted profiles were inspected on the same test set. Their historical intervals resample variants within cells and omit both within-protein dependence and subgroup-selection uncertainty. These are hypothesis-generating associations and have not been independently confirmed in the new external source. Full strata and selected-cell counts are retained in Table 5 and the source-data archive.
++
++
++<!-- pagebreak -->
++
++## Supplementary Figure S3. Historical comparisons
++
++![Historical partial ablation and homology representations](figure_drafts/FigureS3_historical_comparisons.png)
++
++Historical comparisons separated from current matched-protocol evidence. A, Partial direct train–test edge ablation from the retained historical series. Classifier seeds and training budgets differ across runs, the historical control operator differs from the common full operator used in the current matched experiments, and endpoints are reused across all three removal strategies. At 0% removal one retained full-graph fit is reused; at 25%, 50%, and 75% removal each strategy summarizes three fits; at 100% removal a shared five-fit endpoint is reused. Bars show the archived SD summaries, not paired uncertainty in a matched removal effect. B, Historical homology-aware representation results, with one retained fit per arm and no estimate of repeat uncertainty. The raw-ESM and FPP AUCs are 0.7248 and 0.7606; AUPRCs are 0.2418 and 0.2768. These historical values are unchanged. Panel A formerly appeared as main Fig. 1E and panel B as main Fig. 2D.

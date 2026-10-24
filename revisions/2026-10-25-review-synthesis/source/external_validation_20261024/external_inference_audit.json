@@ -1,0 +1,253 @@
+{
+  "passed": true,
+  "models": [
+    {
+      "arm": "raw_ESM",
+      "seed": 42,
+      "checkpoint_path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/raw_ESM/seed_42/model.pt",
+      "checkpoint_sha256": "c5e62f4f7e1d848672c6594c467fe3ab0b194f556d5d3d2440dbe1a5a1b0b9b0",
+      "node_predictions_sha256": "7df0230eaa642901357944db79b15730bd40e3028e33ff5637211766d654d639"
+    },
+    {
+      "arm": "raw_ESM",
+      "seed": 43,
+      "checkpoint_path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/raw_ESM/seed_43/model.pt",
+      "checkpoint_sha256": "772877e46c050c188e1fe80137cc3684b38fbb34541c4aa7b9bfdc0e496c7c1b",
+      "node_predictions_sha256": "188395644866bdfbc4131a0dc8711c7931e730f8d6cc7226f1ffc0c09eb1f4d6"
+    },
+    {
+      "arm": "raw_ESM",
+      "seed": 44,
+      "checkpoint_path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/raw_ESM/seed_44/model.pt",
+      "checkpoint_sha256": "50ae990c85b67dce4d158eaabf3d09c5dec069bab1a12ba5b675e1c459b5828a",
+      "node_predictions_sha256": "efa48fc3c0ae5e5e25088856c4aea5f2078f397e341f06bc707a64bfdac1d0cb"
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 42,
+      "checkpoint_path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/full_FPP/seed_42/model.pt",
+      "checkpoint_sha256": "b208b66ed92c9ec609f1b3ebb5550218aadd720b089745fcafd1761ec2dcfcdd",
+      "node_predictions_sha256": "e74ebbc43f4b3c6c3fa362f689534b8c5c3cf446e0a2be44d1fc135144b07560"
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 43,
+      "checkpoint_path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/full_FPP/seed_43/model.pt",
+      "checkpoint_sha256": "a4472bcfac34fab4354a1930ed12cae524eb37572c1579da29075147c114293f",
+      "node_predictions_sha256": "32271640f3e7cc26c7782284f1bfbb9716073dd08655484c20b463810d2db4d8"
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 44,
+      "checkpoint_path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/full_FPP/seed_44/model.pt",
+      "checkpoint_sha256": "ec440fd5490a88aa96e964c3503f24c77413f79019b723de3d6ba5c3a461a0e0",
+      "node_predictions_sha256": "3c135abb45f9eb7179da61a34c870054813ebec3fbdf4c43eacbe62527b4a99e"
+    },
+    {
+      "arm": "BioGRID_FPP",
+      "seed": 42,
+      "checkpoint_path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_42/model.pt",
+      "checkpoint_sha256": "91afbf673617623bee5326eb66f1976bed2c35efc6f7093ab5b3ff9c91bc15fa",
+      "node_predictions_sha256": "15474e2f85353f9c408870034316b3fd68771a0bf8cef69c911b98d2e0c711ef"
+    },
+    {
+      "arm": "BioGRID_FPP",
+      "seed": 43,
+      "checkpoint_path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_43/model.pt",
+      "checkpoint_sha256": "3a7e12dfbec8e431c70479c9fc8cfdc2992efa99044ff781f39c0f9e04c182b6",
+      "node_predictions_sha256": "36fe53c8954d21df079710794fb7c072675818d783cc3b422872d798e0d48a0a"
+    },
+    {
+      "arm": "BioGRID_FPP",
+      "seed": 44,
+      "checkpoint_path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_44/model.pt",
+      "checkpoint_sha256": "a46d0439f01fa11025bea2fa450af7f4e918bbef223292a2bd499a62a11c090b",
+      "node_predictions_sha256": "612240068e40d1e427101a871ee0bc08ec05092b85629ce5832efd165190e569"
+    }
+  ],
+  "node_lookup_vs_saved_checks": [
+    {
+      "arm": "raw_ESM",
+      "seed": 42,
+      "parts": {
+        "val": {
+          "max_probability_abs_difference": 1.1920928955078125e-07,
+          "lookup_metrics": {
+            "auc": 0.7814228028921377,
+            "auprc": 0.5569389036068766
+          }
+        },
+        "test": {
+          "max_probability_abs_difference": 1.1920928955078125e-07,
+          "lookup_metrics": {
+            "auc": 0.779004890140579,
+            "auprc": 0.6075654816561856
+          }
+        }
+      }
+    },
+    {
+      "arm": "raw_ESM",
+      "seed": 43,
+      "parts": {
+        "val": {
+          "max_probability_abs_difference": 1.1920928955078125e-07,
+          "lookup_metrics": {
+            "auc": 0.7958973097753301,
+            "auprc": 0.5514110960531157
+          }
+        },
+        "test": {
+          "max_probability_abs_difference": 1.1920928955078125e-07,
+          "lookup_metrics": {
+            "auc": 0.7808750042739686,
+            "auprc": 0.6193630676485539
+          }
+        }
+      }
+    },
+    {
+      "arm": "raw_ESM",
+      "seed": 44,
+      "parts": {
+        "val": {
+          "max_probability_abs_difference": 1.1920928955078125e-07,
+          "lookup_metrics": {
+            "auc": 0.7879715708562736,
+            "auprc": 0.5660638374475455
+          }
+        },
+        "test": {
+          "max_probability_abs_difference": 1.1920928955078125e-07,
+          "lookup_metrics": {
+            "auc": 0.7906723120366762,
+            "auprc": 0.6082726680185422
+          }
+        }
+      }
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 42,
+      "parts": {
+        "val": {
+          "max_probability_abs_difference": 2.086162567138672e-07,
+          "lookup_metrics": {
+            "auc": 0.830156552350316,
+            "auprc": 0.5746271756711376
+          }
+        },
+        "test": {
+          "max_probability_abs_difference": 2.384185791015625e-07,
+          "lookup_metrics": {
+            "auc": 0.79320020172578,
+            "auprc": 0.6515177096741348
+          }
+        }
+      }
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 43,
+      "parts": {
+        "val": {
+          "max_probability_abs_difference": 1.7881393432617188e-07,
+          "lookup_metrics": {
+            "auc": 0.8260861497697641,
+            "auprc": 0.5734213325190717
+          }
+        },
+        "test": {
+          "max_probability_abs_difference": 1.7881393432617188e-07,
+          "lookup_metrics": {
+            "auc": 0.7954170822645179,
+            "auprc": 0.6356235726531128
+          }
+        }
+      }
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 44,
+      "parts": {
+        "val": {
+          "max_probability_abs_difference": 3.2782554626464844e-07,
+          "lookup_metrics": {
+            "auc": 0.8228389194425603,
+            "auprc": 0.5926993783053562
+          }
+        },
+        "test": {
+          "max_probability_abs_difference": 2.980232238769531e-07,
+          "lookup_metrics": {
+            "auc": 0.7963457318417011,
+            "auprc": 0.6583873693800323
+          }
+        }
+      }
+    },
+    {
+      "arm": "BioGRID_FPP",
+      "seed": 42,
+      "parts": {
+        "val": {
+          "max_probability_abs_difference": 1.7881393432617188e-07,
+          "lookup_metrics": {
+            "auc": 0.7923933978614289,
+            "auprc": 0.5801406447452243
+          }
+        },
+        "test": {
+          "max_probability_abs_difference": 1.1920928955078125e-07,
+          "lookup_metrics": {
+            "auc": 0.7602219961675316,
+            "auprc": 0.6135340255086739
+          }
+        }
+      }
+    },
+    {
+      "arm": "BioGRID_FPP",
+      "seed": 43,
+      "parts": {
+        "val": {
+          "max_probability_abs_difference": 2.980232238769531e-07,
+          "lookup_metrics": {
+            "auc": 0.7925534417534619,
+            "auprc": 0.6118294245307206
+          }
+        },
+        "test": {
+          "max_probability_abs_difference": 3.5762786865234375e-07,
+          "lookup_metrics": {
+            "auc": 0.771963066094425,
+            "auprc": 0.6019611631920396
+          }
+        }
+      }
+    },
+    {
+      "arm": "BioGRID_FPP",
+      "seed": 44,
+      "parts": {
+        "val": {
+          "max_probability_abs_difference": 1.7881393432617188e-07,
+          "lookup_metrics": {
+            "auc": 0.7935639903137783,
+            "auprc": 0.6134429878435483
+          }
+        },
+        "test": {
+          "max_probability_abs_difference": 2.384185791015625e-07,
+          "lookup_metrics": {
+            "auc": 0.745509804525713,
+            "auprc": 0.5973819241840442
+          }
+        }
+      }
+    }
+  ],
+  "new_external_fits": 0,
+  "external_clinical_score_fusion_performed": false,
+  "interpretation": "External-source protein-context transfer; no independent-patient or variant-specific discrimination claim."
+}
