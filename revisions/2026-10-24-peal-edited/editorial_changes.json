@@ -1,0 +1,110 @@
+[
+  {
+    "id": "01",
+    "location": "Introduction，第2段末尾",
+    "before": "These studies establish the relevance of relational structure to variant interpretation. We focus on how to interpret gains obtained by propagating protein language model embeddings over a shared STRING association graph before variant-level classification.",
+    "after": "For fixed propagation over a shared STRING association graph, interpreting such gains requires separating network effects from information already present in the protein features.",
+    "reason_zh": "原句再次总结网络信息有价值，与上一段末尾及本段文献句重复。改为具体的解释难题，推进到下一段的混杂因素。",
+    "peal_zh": "段尾由泛化总结改为判断：观察到的收益还需要区分来自特征还是网络。下一段直接解释共享图、同源性和强基线。",
+    "preserved_zh": "前面的全部文献及引用保留；共享STRING图、蛋白特征传播和变异预测的研究对象未改变。"
+  },
+  {
+    "id": "02",
+    "location": "Introduction，第3段",
+    "before": "A shared-graph setting mixes several effects. Train, validation and test variants may have distinct protein identifiers while their proteins remain directly connected in the same STRING graph. Related proteins may also cross partitions when homology is not explicitly controlled \\cite{Littmann2022ProteinMLTips,Teufel2023GraphPart}. Strong variant-effect predictors such as CADD and AlphaMissense can further reduce the marginal contribution of graph propagation. We evaluate protein-topology correspondence, graph connectivity, protein-level uncertainty, homology-aware performance and complementarity to established predictors.",
+    "after": "Protein-disjoint train, validation and test partitions can remain directly connected in the shared STRING graph. Related proteins may also cross partitions when homology is not explicitly controlled \\cite{Littmann2022ProteinMLTips,Teufel2023GraphPart}. Strong variant-effect predictors such as CADD and AlphaMissense can further reduce the marginal contribution of graph propagation. A graph-associated improvement therefore needs raw-embedding and strong-score controls, with uncertainty assessed at the protein level.",
+    "reason_zh": "原段先说“混合若干效应”，再解释效应，结尾又列研究项目；其中项目与下一段贡献清单重复。现用具体问题开头，段尾给出对照与统计层面的判断。",
+    "peal_zh": "P：蛋白ID不重叠仍可能共享图连接；E：同源跨分区与强基线；A/L：需要原始向量、强评分对照及蛋白层面不确定性，接到下一段实际研究设计。",
+    "preserved_zh": "两个引用键及其顺序原样保留。没有把可能发生的同源重叠或共享连接改写为新的测量结果。"
+  },
+  {
+    "id": "03",
+    "location": "Introduction，第4段前两句",
+    "before": "We audit raw ESM, fixed propagation, external scores and fusion models on a reconstructed ClinVar-STRING dataset. The contribution is an evaluation study combining graph-intervention controls, matched fusion, protein-clustered uncertainty, external-source transfer and alternative-network evaluation.",
+    "after": "We compare raw ESM, fixed propagation, external scores and fusion models on the reconstructed ClinVar-STRING dataset using matched comparisons, graph interventions and protein-clustered uncertainty. External-source evaluation and a BioGRID comparison test transfer and sensitivity to network choice.",
+    "reason_zh": "去掉“The contribution is”式自我概括，将并列项目整理为原数据审计和外部/第二网络检验两层。",
+    "peal_zh": "本段直接交代实施方式，承接上一段提出的比较要求；没有回顾“上一段说过什么”。",
+    "preserved_zh": "保留四类模型、匹配对照、图干预、蛋白bootstrap、外部验证和第二网络。随后探索性分析及未覆盖训练式GNN的范围说明不变。"
+  },
+  {
+    "id": "04",
+    "location": "Materials and Methods / Dataset and graph construction，段尾",
+    "before": "We used this network as STRING network context; its association evidence extends beyond direct physical interactions.",
+    "after": "STRING includes association evidence beyond direct physical interactions.",
+    "reason_zh": "“把STRING网络作为STRING网络上下文”没有增加信息；直接保留需要读者知道的证据范围。",
+    "peal_zh": "方法段无需机械凑出PEAL四句；这里保留影响解释的具体事实即可。",
+    "preserved_zh": "STRING并非只包含直接物理互作的关键限制保留。"
+  },
+  {
+    "id": "05",
+    "location": "Materials and Methods / Protein representations and fixed propagation，第1段",
+    "before": "Fixed propagation isolates topology-induced smoothing from capacity gains due to trainable graph layers and provides a controlled representation for the audit.",
+    "after": "Fixed propagation isolates topology-induced smoothing from capacity gains due to trainable graph layers.",
+    "reason_zh": "句尾“为审计提供受控表征”泛泛重复前半句用途，删除这段未推进论证的附加评价。",
+    "peal_zh": "保留设计理由，避免句尾为了收束而再评价一遍方法。",
+    "preserved_zh": "固定传播与可训练图层容量的区别不变，前一句“仅下游MLP训练”保留。"
+  },
+  {
+    "id": "06",
+    "location": "Materials and Methods / Protein representations and fixed propagation，公式后段落",
+    "before": "The fixed two-hop FPP representation $H$ averages the original ESM features, one-hop and two-hop STRING-smoothed features. Propagation used only graph structure and ESM features; downstream classification used the representation of each variant's mapped STRING protein. The full graph contained train, validation and test nodes with their ESM features, making the evaluation transductive. Held-out features and graph structure were available during propagation, but held-out labels were not used. Embedding-only models assign identical inputs to variants mapped to the same protein; they cannot resolve residue-specific effects within that protein.",
+    "after": "The fixed two-hop FPP representation $H$ averages the original ESM features, one-hop and two-hop STRING-smoothed features. Downstream classification used the representation of each variant's mapped STRING protein. Propagation was transductive: it used only graph structure and ESM features from train, validation and test nodes, excluding held-out labels. Embedding-only models assign identical inputs to variants mapped to the same protein and cannot resolve residue-specific effects within that protein.",
+    "reason_zh": "原段连续三句重复解释图结构、ESM特征及留出节点可见。合并后区分“传播使用什么”和“下游分类使用什么”。",
+    "peal_zh": "操作定义→分类输入→转导设置→蛋白内变异不可区分，信息按使用关系推进。",
+    "preserved_zh": "两条公式完全不变；保留仅图结构/ESM、训练验证测试节点可见、未用留出标签，以及蛋白内残基效应不可辨识。"
+  },
+  {
+    "id": "07",
+    "location": "Results / Full-graph FPP gains and connectivity sensitivity，开头",
+    "before": "Table~\\ref{tab:run_sources} summarizes the experiments and separates repeated fitting from historical descriptions. With classifier seeds 42--44, raw ESM reached",
+    "after": "With the matched protocol (Table~\\ref{tab:run_sources}) and classifier seeds 42--44, raw ESM reached",
+    "reason_zh": "原开头只介绍表格做了什么，随后才开始结果；改为直接进入匹配协议下的证据。",
+    "peal_zh": "结果段以实验条件和指标为入口，减少“这一部分将讲什么”的元叙述。",
+    "preserved_zh": "表I引用、种子42--44以及其后的全部AUC、AUPRC、SD、置信区间保留。"
+  },
+  {
+    "id": "08",
+    "location": "Results / Architecture-matched fusion and homology-aware stress test，同源段末尾",
+    "before": "Redundant high-dimensional inputs, additional input weights, lack of feature scaling and altered protein composition could contribute to this behavior; these explanations were not experimentally separated. AUPRC comparisons remain within-split because prevalence differs.",
+    "after": "",
+    "reason_zh": "这两句在结果之后列机制假设、再重复方法中的AUPRC比较规则；讨论又解释同一组假设。机制内容集中到讨论第2段，比较规则继续保留在方法。",
+    "peal_zh": "结果段保留观测数字和不确定性判断；讨论承担机制解释，避免两个章节重复同一分析。",
+    "preserved_zh": "这是移位而非丢失：四项机制假设及“未分别验证”全部进入讨论第2段；阳性率和AUPRC限制仍在Methods。所有结果数字、两种指标、集成与逐次指标差别保持原样。"
+  },
+  {
+    "id": "09",
+    "location": "Discussion，第1段",
+    "before": "Matched comparisons support an evaluation-dependent effect of fixed propagation. On the original ClinVar representation comparison, mean performance improved over raw embeddings, but protein-level intervals for that gain crossed zero. Graph interventions show sensitivity to connectivity and protein--topology correspondence; edge removal also changes normalization and leaves indirect paths, so it does not isolate a causal connectivity effect. The transductive design permits held-out protein features and graph structure, without held-out labels.",
+    "after": "Evidence for the original-split representation gain depends on the unit of resampling. Mean performance improved over raw embeddings, but the protein-level intervals included zero (Fig.~\\ref{fig:connectivity}C). Variants mapped to one protein share its representation, so variant-level resampling cannot substitute for protein-level uncertainty. Graph interventions probe connectivity and protein--topology correspondence within the transductive setting; they do not isolate a causal effect of direct paths.",
+    "reason_zh": "原段重述结果后，又重复Methods中的归一化、间接路径和留出特征说明。改为解释为何重采样单位会改变证据强度。",
+    "peal_zh": "P：证据强度依赖重采样单位；E：均值上升但蛋白区间跨零；A：同蛋白变异共享输入；L/判断：这些设置支持预测比较，不能识别直接路径的因果效应。",
+    "preserved_zh": "没有加入新实验或统计推断。共享蛋白输入已在Methods写明；区间跨零已在Fig.1C和Results报告。归一化变化、间接路径、无留出标签仍在Methods/Results中完整保留。"
+  },
+  {
+    "id": "10",
+    "location": "Discussion，第2段",
+    "before": "The homology-aware STRING fusion results do not support a claim of consistent graph-induced deterioration. Three matched seeds resolve the previous unequal repeat count, while uncertainty remains around the STRING-versus-score comparison. Redundant high-dimensional features and changes in protein composition offer plausible explanations, rather than established mechanisms. The frozen partition and differing prevalence limit broader cross-split conclusions.",
+    "after": "In the homology-aware fusion comparison, three matched seeds correct the earlier imbalance in repeats, but the STRING-versus-score intervals still admit both benefit and harm. Redundant high-dimensional inputs, additional input weights, lack of feature scaling and altered protein composition could contribute to the uncertain fusion effect; these explanations were not experimentally separated. The frozen partition and differing prevalence limit broader cross-split conclusions.",
+    "reason_zh": "原段再次说不能断言稳定伤害，结果段已经给出同一判断。现在先交代重复训练解决了什么、没解决什么，再集中解释机制假设。",
+    "peal_zh": "P/E：重复次数对齐，效应方向仍不确定；A：四项可解释因素尚未分别验证；判断：固定划分与阳性率差异限制跨划分推广。",
+    "preserved_zh": "保留三个种子、未确认收益或伤害、未证实机制和固定划分限制。补入从Results移来的“额外输入参数、未进行特征缩放”，不新增假设。"
+  },
+  {
+    "id": "11",
+    "location": "Discussion，第3段第2句",
+    "before": "BioGRID strengthens the audit by showing that this benefit does not automatically extend to another graph.",
+    "after": "The BioGRID results leave both its external gain over raw embeddings and its incremental fusion gain over raw-embedding fusion unresolved.",
+    "reason_zh": "“增强了审计”是对工作的评价；改成可由实验直接核对的两种未确认收益。",
+    "peal_zh": "用具体比较及其不确定性推进网络差异分析，随后再说明网络重叠、密度和覆盖差异。",
+    "preserved_zh": "没有把跨零区间改成“证明无效”或“稳定伤害”。网络差异不能做纯粹因果归因的原句保留。"
+  },
+  {
+    "id": "12",
+    "location": "Conclusion，最后一句",
+    "before": "Matched controls, strong baselines and protein-level uncertainty are essential; these findings do not establish performance limits for trained graph models or clinical decision validity.",
+    "after": "Claims of graph benefit should specify the comparator, split and network, with uncertainty assessed at the protein level. These findings do not establish performance limits for trained graph models or clinical decision validity.",
+    "reason_zh": "把“这些做法很重要”的概括，改为读者实际应如何限定“图有收益”的具体判断，避免重复实践建议清单。",
+    "peal_zh": "段尾给出结论的适用条件，保留评审相关范围边界；不加“下一步将讨论”式预告。",
+    "preserved_zh": "强基线和匹配对照仍在Methods、Results及Practical recommendations中明确。训练式图模型及临床决策有效性的限制原样保留。"
+  }
+]

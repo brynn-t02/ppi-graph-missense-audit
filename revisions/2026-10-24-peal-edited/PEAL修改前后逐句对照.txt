@@ -1,0 +1,253 @@
+PEAL论证与重复表达修改对照
+
+BIBM Workshop论文 | 2026年10月24日
+
+本轮结论
+
+检查发现的是局部重复和论证分工不清，集中在引言的研究清单、Methods的转导定义，以及Results与Discussion反复解释同源融合。没有发现大量“It is worth noting that”一类空泛开头，因此不为制造修改而通篇换词。
+
+版本范围
+
+修改前：2026-10-24 IEEE-checked版，GitHub提交 ce3c0209ddd04d842de5e876b95bcc50669c3a87。修改后：单独保存的PEAL revision。两版都保留具名与匿名正文，所有早期日期版本继续保留；本次不覆盖、不删除旧稿。
+
+采用的规则
+
+读取并采用 AIScientists-Dev/academic-humanizer v0.3.3，结合PEAL检查观点、证据、分析和段落间的逻辑关系。方法段以准确可复现为先，不强行给每段添加四句模板；结果段给出证据，讨论解释证据，段尾保留具体判断。
+
+修改规模
+
+共12处文字编辑，具名和匿名稿同步应用。按可比英文词项粗略统计，正文从2862减至2783词，净减79词（含摘要、图注和表格，不含参考文献、引用键及公式）。部分句子增加了有依据的解释，数字只用于说明规模，不作为写作质量评分。
+
+证据保全
+
+所有原有数字、数值顺序、引用顺序、30条参考文献、公式、行内数学、摘要、关键词、三幅图及图注、表I均核对不变。补充材料逐字节沿用上一版。没有新增训练、推理或实验数据。具名和匿名正文均7页，补充各19页；IEEE字体与八页上限继续保留。
+
+Skill来源（固定提交）
+
+https://github.com/AIScientists-Dev/academic-humanizer/blob/94b88b23703bed7df507acae7d6d5876209a0cdf/SKILL.md
+
+该文件内容已与固定提交核对一致。本轮直接读取规则，未改动全局skill安装。
+
+逐项修改前后对照
+
+下文英文为论文实际修改片段，引用键已转换为便于阅读的编号；精确LaTeX原文见editorial_changes.json及两份diff。删除或移位条目明确标注去向。
+
+01  Introduction，第2段末尾
+
+修改前
+
+These studies establish the relevance of relational structure to variant interpretation. We focus on how to interpret gains obtained by propagating protein language model embeddings over a shared STRING association graph before variant-level classification.
+
+修改后
+
+For fixed propagation over a shared STRING association graph, interpreting such gains requires separating network effects from information already present in the protein features.
+
+为什么改：原句再次总结网络信息有价值，与上一段末尾及本段文献句重复。改为具体的解释难题，推进到下一段的混杂因素。
+
+论证作用：段尾由泛化总结改为判断：观察到的收益还需要区分来自特征还是网络。下一段直接解释共享图、同源性和强基线。
+
+保留与边界：前面的全部文献及引用保留；共享STRING图、蛋白特征传播和变异预测的研究对象未改变。
+
+02  Introduction，第3段
+
+修改前
+
+A shared-graph setting mixes several effects. Train, validation and test variants may have distinct protein identifiers while their proteins remain directly connected in the same STRING graph. Related proteins may also cross partitions when homology is not explicitly controlled [18, 19]. Strong variant-effect predictors such as CADD and AlphaMissense can further reduce the marginal contribution of graph propagation. We evaluate protein-topology correspondence, graph connectivity, protein-level uncertainty, homology-aware performance and complementarity to established predictors.
+
+修改后
+
+Protein-disjoint train, validation and test partitions can remain directly connected in the shared STRING graph. Related proteins may also cross partitions when homology is not explicitly controlled [18, 19]. Strong variant-effect predictors such as CADD and AlphaMissense can further reduce the marginal contribution of graph propagation. A graph-associated improvement therefore needs raw-embedding and strong-score controls, with uncertainty assessed at the protein level.
+
+为什么改：原段先说“混合若干效应”，再解释效应，结尾又列研究项目；其中项目与下一段贡献清单重复。现用具体问题开头，段尾给出对照与统计层面的判断。
+
+论证作用：P：蛋白ID不重叠仍可能共享图连接；E：同源跨分区与强基线；A/L：需要原始向量、强评分对照及蛋白层面不确定性，接到下一段实际研究设计。
+
+保留与边界：两个引用键及其顺序原样保留。没有把可能发生的同源重叠或共享连接改写为新的测量结果。
+
+03  Introduction，第4段前两句
+
+修改前
+
+We audit raw ESM, fixed propagation, external scores and fusion models on a reconstructed ClinVar-STRING dataset. The contribution is an evaluation study combining graph-intervention controls, matched fusion, protein-clustered uncertainty, external-source transfer and alternative-network evaluation.
+
+修改后
+
+We compare raw ESM, fixed propagation, external scores and fusion models on the reconstructed ClinVar-STRING dataset using matched comparisons, graph interventions and protein-clustered uncertainty. External-source evaluation and a BioGRID comparison test transfer and sensitivity to network choice.
+
+为什么改：去掉“The contribution is”式自我概括，将并列项目整理为原数据审计和外部/第二网络检验两层。
+
+论证作用：本段直接交代实施方式，承接上一段提出的比较要求；没有回顾“上一段说过什么”。
+
+保留与边界：保留四类模型、匹配对照、图干预、蛋白bootstrap、外部验证和第二网络。随后探索性分析及未覆盖训练式GNN的范围说明不变。
+
+04  Materials and Methods / Dataset and graph construction，段尾
+
+修改前
+
+We used this network as STRING network context; its association evidence extends beyond direct physical interactions.
+
+修改后
+
+STRING includes association evidence beyond direct physical interactions.
+
+为什么改：“把STRING网络作为STRING网络上下文”没有增加信息；直接保留需要读者知道的证据范围。
+
+论证作用：方法段无需机械凑出PEAL四句；这里保留影响解释的具体事实即可。
+
+保留与边界：STRING并非只包含直接物理互作的关键限制保留。
+
+05  Materials and Methods / Protein representations and fixed propagation，第1段
+
+修改前
+
+Fixed propagation isolates topology-induced smoothing from capacity gains due to trainable graph layers and provides a controlled representation for the audit.
+
+修改后
+
+Fixed propagation isolates topology-induced smoothing from capacity gains due to trainable graph layers.
+
+为什么改：句尾“为审计提供受控表征”泛泛重复前半句用途，删除这段未推进论证的附加评价。
+
+论证作用：保留设计理由，避免句尾为了收束而再评价一遍方法。
+
+保留与边界：固定传播与可训练图层容量的区别不变，前一句“仅下游MLP训练”保留。
+
+06  Materials and Methods / Protein representations and fixed propagation，公式后段落
+
+修改前
+
+The fixed two-hop FPP representation H averages the original ESM features, one-hop and two-hop STRING-smoothed features. Propagation used only graph structure and ESM features; downstream classification used the representation of each variant's mapped STRING protein. The full graph contained train, validation and test nodes with their ESM features, making the evaluation transductive. Held-out features and graph structure were available during propagation, but held-out labels were not used. Embedding-only models assign identical inputs to variants mapped to the same protein; they cannot resolve residue-specific effects within that protein.
+
+修改后
+
+The fixed two-hop FPP representation H averages the original ESM features, one-hop and two-hop STRING-smoothed features. Downstream classification used the representation of each variant's mapped STRING protein. Propagation was transductive: it used only graph structure and ESM features from train, validation and test nodes, excluding held-out labels. Embedding-only models assign identical inputs to variants mapped to the same protein and cannot resolve residue-specific effects within that protein.
+
+为什么改：原段连续三句重复解释图结构、ESM特征及留出节点可见。合并后区分“传播使用什么”和“下游分类使用什么”。
+
+论证作用：操作定义→分类输入→转导设置→蛋白内变异不可区分，信息按使用关系推进。
+
+保留与边界：两条公式完全不变；保留仅图结构/ESM、训练验证测试节点可见、未用留出标签，以及蛋白内残基效应不可辨识。
+
+07  Results / Full-graph FPP gains and connectivity sensitivity，开头
+
+修改前
+
+Table I summarizes the experiments and separates repeated fitting from historical descriptions. With classifier seeds 42-44, raw ESM reached
+
+修改后
+
+With the matched protocol (Table I) and classifier seeds 42-44, raw ESM reached
+
+为什么改：原开头只介绍表格做了什么，随后才开始结果；改为直接进入匹配协议下的证据。
+
+论证作用：结果段以实验条件和指标为入口，减少“这一部分将讲什么”的元叙述。
+
+保留与边界：表I引用、种子42--44以及其后的全部AUC、AUPRC、SD、置信区间保留。
+
+08  Results / Architecture-matched fusion and homology-aware stress test，同源段末尾
+
+修改前
+
+Redundant high-dimensional inputs, additional input weights, lack of feature scaling and altered protein composition could contribute to this behavior; these explanations were not experimentally separated. AUPRC comparisons remain within-split because prevalence differs.
+
+修改后
+
+此处删除。四项机制假设及“未分别验证”的限定移至Discussion第2段，见第10项；AUPRC跨划分比较限制保留在Methods。
+
+为什么改：这两句在结果之后列机制假设、再重复方法中的AUPRC比较规则；讨论又解释同一组假设。机制内容集中到讨论第2段，比较规则继续保留在方法。
+
+论证作用：结果段保留观测数字和不确定性判断；讨论承担机制解释，避免两个章节重复同一分析。
+
+保留与边界：这是移位而非丢失：四项机制假设及“未分别验证”全部进入讨论第2段；阳性率和AUPRC限制仍在Methods。所有结果数字、两种指标、集成与逐次指标差别保持原样。
+
+09  Discussion，第1段
+
+修改前
+
+Matched comparisons support an evaluation-dependent effect of fixed propagation. On the original ClinVar representation comparison, mean performance improved over raw embeddings, but protein-level intervals for that gain crossed zero. Graph interventions show sensitivity to connectivity and protein-topology correspondence; edge removal also changes normalization and leaves indirect paths, so it does not isolate a causal connectivity effect. The transductive design permits held-out protein features and graph structure, without held-out labels.
+
+修改后
+
+Evidence for the original-split representation gain depends on the unit of resampling. Mean performance improved over raw embeddings, but the protein-level intervals included zero (Fig. 1C). Variants mapped to one protein share its representation, so variant-level resampling cannot substitute for protein-level uncertainty. Graph interventions probe connectivity and protein-topology correspondence within the transductive setting; they do not isolate a causal effect of direct paths.
+
+为什么改：原段重述结果后，又重复Methods中的归一化、间接路径和留出特征说明。改为解释为何重采样单位会改变证据强度。
+
+论证作用：P：证据强度依赖重采样单位；E：均值上升但蛋白区间跨零；A：同蛋白变异共享输入；L/判断：这些设置支持预测比较，不能识别直接路径的因果效应。
+
+保留与边界：没有加入新实验或统计推断。共享蛋白输入已在Methods写明；区间跨零已在Fig.1C和Results报告。归一化变化、间接路径、无留出标签仍在Methods/Results中完整保留。
+
+10  Discussion，第2段
+
+修改前
+
+The homology-aware STRING fusion results do not support a claim of consistent graph-induced deterioration. Three matched seeds resolve the previous unequal repeat count, while uncertainty remains around the STRING-versus-score comparison. Redundant high-dimensional features and changes in protein composition offer plausible explanations, rather than established mechanisms. The frozen partition and differing prevalence limit broader cross-split conclusions.
+
+修改后
+
+In the homology-aware fusion comparison, three matched seeds correct the earlier imbalance in repeats, but the STRING-versus-score intervals still admit both benefit and harm. Redundant high-dimensional inputs, additional input weights, lack of feature scaling and altered protein composition could contribute to the uncertain fusion effect; these explanations were not experimentally separated. The frozen partition and differing prevalence limit broader cross-split conclusions.
+
+为什么改：原段再次说不能断言稳定伤害，结果段已经给出同一判断。现在先交代重复训练解决了什么、没解决什么，再集中解释机制假设。
+
+论证作用：P/E：重复次数对齐，效应方向仍不确定；A：四项可解释因素尚未分别验证；判断：固定划分与阳性率差异限制跨划分推广。
+
+保留与边界：保留三个种子、未确认收益或伤害、未证实机制和固定划分限制。补入从Results移来的“额外输入参数、未进行特征缩放”，不新增假设。
+
+11  Discussion，第3段第2句
+
+修改前
+
+BioGRID strengthens the audit by showing that this benefit does not automatically extend to another graph.
+
+修改后
+
+The BioGRID results leave both its external gain over raw embeddings and its incremental fusion gain over raw-embedding fusion unresolved.
+
+为什么改：“增强了审计”是对工作的评价；改成可由实验直接核对的两种未确认收益。
+
+论证作用：用具体比较及其不确定性推进网络差异分析，随后再说明网络重叠、密度和覆盖差异。
+
+保留与边界：没有把跨零区间改成“证明无效”或“稳定伤害”。网络差异不能做纯粹因果归因的原句保留。
+
+12  Conclusion，最后一句
+
+修改前
+
+Matched controls, strong baselines and protein-level uncertainty are essential; these findings do not establish performance limits for trained graph models or clinical decision validity.
+
+修改后
+
+Claims of graph benefit should specify the comparator, split and network, with uncertainty assessed at the protein level. These findings do not establish performance limits for trained graph models or clinical decision validity.
+
+为什么改：把“这些做法很重要”的概括，改为读者实际应如何限定“图有收益”的具体判断，避免重复实践建议清单。
+
+论证作用：段尾给出结论的适用条件，保留评审相关范围边界；不加“下一步将讨论”式预告。
+
+保留与边界：强基线和匹配对照仍在Methods、Results及Practical recommendations中明确。训练式图模型及临床决策有效性的限制原样保留。
+
+有意保留的必要重复
+
+摘要与结论的压缩呼应
+
+摘要需要独立概述研究，结论需要收束全文。STRING外部支持、BioGRID收益不确定和固定传播范围在这些位置的简短呼应保留。
+
+图注中的独立信息
+
+每幅图需独立读懂，种子数、区间定义、历史/当前结果身份、严格子集嵌套关系仍保留；没有为了减少重复而删除图注限定。
+
+结果附近的统计边界
+
+蛋白级区间跨零、均值与集成指标的差别、STRING同源融合不确立收益或一致伤害等紧邻结果保留。不能把“尚不确定”改成“证明没有效果”。
+
+方法与讨论的不同职责
+
+Methods交代共享图中哪些信息可见、哪些标签未用；Discussion交代这种设计允许什么推论。必要的设计与解释呼应保留，重复的机制列表集中到讨论一处。
+
+适用范围与工具披露
+
+训练式GNN、临床有效性和外部来源独立性的范围限定保留。AI-Tool Disclosure完全未改。
+
+交付和版本保留
+
+本轮新增独立GitHub目录 revisions/2026-10-24-peal-edited/，保留修改后的两版正文、未改补充、可编辑源文件、本对照PDF/TXT和逐项JSON。之前的IEEE检查版、外部实验入稿版及更早版本均保留原样。待作者确定最终稿并明确提出清理时，再处理历史中间版本。
+
+最终提交编号和远端核验结果见随包“GitHub同步回执.json”。本轮不涉及会议系统提交。

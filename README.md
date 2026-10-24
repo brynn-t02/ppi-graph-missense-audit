@@ -4,7 +4,9 @@ Code and compact evidence archive for an evaluation study of fixed protein-featu
 
 ## Manuscript revisions
 
-- **Latest: [24 October 2026 IEEE-checked revision](revisions/2026-10-24-ieee-checked/)** — [7-page named main](revisions/2026-10-24-ieee-checked/BIBM2026_workshop_named_revised.pdf), [anonymous main](revisions/2026-10-24-ieee-checked/BIBM2026_workshop_anonymous_revised.pdf), [19-page supplement](revisions/2026-10-24-ieee-checked/BIBM2026_supplementary_named_revised.pdf), [format and editorial changes](revisions/2026-10-24-ieee-checked/REVISION_NOTES.md). Table I is condensed to five settings; actual bold/italic fonts and first-citation reference order are corrected. Scientific outcomes are unchanged.
+- **Latest: [24 October 2026 PEAL editorial revision](revisions/2026-10-24-peal-edited/)** — [7-page named main](revisions/2026-10-24-peal-edited/BIBM2026_workshop_named_revised.pdf), [anonymous main](revisions/2026-10-24-peal-edited/BIBM2026_workshop_anonymous_revised.pdf), [Chinese before/after comparison](revisions/2026-10-24-peal-edited/PEAL修改前后逐句对照.pdf). Twelve targeted edits reduce repetition and sharpen evidence-to-interpretation links; scientific values, figures and supplements are unchanged. All previous versions are retained.
+
+- [24 October 2026 IEEE-checked revision](revisions/2026-10-24-ieee-checked/) — [7-page named main](revisions/2026-10-24-ieee-checked/BIBM2026_workshop_named_revised.pdf), [anonymous main](revisions/2026-10-24-ieee-checked/BIBM2026_workshop_anonymous_revised.pdf), [19-page supplement](revisions/2026-10-24-ieee-checked/BIBM2026_supplementary_named_revised.pdf), [format and editorial changes](revisions/2026-10-24-ieee-checked/REVISION_NOTES.md). Table I is condensed to five settings; actual bold/italic fonts and first-citation reference order are corrected. Scientific outcomes are unchanged.
 
 - [24 October 2026 external-validation integrated revision](revisions/2026-10-24-external-integrated/) — [7-page named main](revisions/2026-10-24-external-integrated/BIBM2026_workshop_named_revised.pdf), [anonymous main](revisions/2026-10-24-external-integrated/BIBM2026_workshop_anonymous_revised.pdf), [19-page supplement](revisions/2026-10-24-external-integrated/BIBM2026_supplementary_named_revised.pdf), [content decisions](revisions/2026-10-24-external-integrated/REVISION_NOTES.md). Both completed follow-up experiments are incorporated; figure layout and unverified ClinVar date wording are corrected.
 
@@ -16,6 +18,8 @@ Code and compact evidence archive for an evaluation study of fixed protein-featu
 - [8 October 2026 main-review revision](revisions/2026-10-08/) — [paper](revisions/2026-10-08/paper.pdf), [supplement](revisions/2026-10-08/supplement.pdf), [editable source](revisions/2026-10-08/source/BIBM2026_main_paper_revised.tex).
 
 Each dated directory contains delivered PDFs, editable source, figures, generators, compact numerical inputs and checksums. The October 24 directory includes both named and anonymous copies and current matched-run code, predictions and verification records. Dated snapshots preserve their original text, including availability statements written before this public synchronization. The owner made this repository public, and the October revisions were synchronized on **24 October 2026**. The repository does not yet have a separate DOI deposit.
+
+All dated revisions will remain available until the author confirms a final version and explicitly requests cleanup.
 
 ## What was changed
 

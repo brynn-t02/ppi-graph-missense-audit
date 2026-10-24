@@ -1,0 +1,279 @@
+{
+  "baseline_commit": "ce3c0209ddd04d842de5e876b95bcc50669c3a87",
+  "documented_edits": 12,
+  "main_page_limit": 8,
+  "all_main_and_report_pages_visually_checked": true,
+  "report_before_after_blocks_kept_together": true,
+  "pdfs": {
+    "BIBM2026_supplementary_anonymous_revised.pdf": {
+      "pages": 19,
+      "bytes": 663083,
+      "sha256": "189bbe8d5d2f3e0da22dc10926759be6bf89f5e9a732f620c42915329d9e10af",
+      "all_used_fonts_embedded": true,
+      "fonts": {
+        "Helvetica": {
+          "subtype": "/Type1",
+          "embedded": false,
+          "used": false
+        },
+        "AAAAAA+DejaVuSerif": {
+          "subtype": "/TrueType",
+          "embedded": true,
+          "used": true
+        },
+        "AAAAAA+DejaVuSerif-Bold": {
+          "subtype": "/TrueType",
+          "embedded": true,
+          "used": true
+        },
+        "AAAAAA+DejaVuSansMono": {
+          "subtype": "/TrueType",
+          "embedded": true,
+          "used": true
+        }
+      }
+    },
+    "BIBM2026_supplementary_named_revised.pdf": {
+      "pages": 19,
+      "bytes": 663389,
+      "sha256": "43c085313d727ca5e201a55a11757770b7369cb63e261fa69cbe9dda266e1b6e",
+      "all_used_fonts_embedded": true,
+      "fonts": {
+        "Helvetica": {
+          "subtype": "/Type1",
+          "embedded": false,
+          "used": false
+        },
+        "AAAAAA+DejaVuSerif": {
+          "subtype": "/TrueType",
+          "embedded": true,
+          "used": true
+        },
+        "AAAAAA+DejaVuSerif-Bold": {
+          "subtype": "/TrueType",
+          "embedded": true,
+          "used": true
+        },
+        "AAAAAA+DejaVuSansMono": {
+          "subtype": "/TrueType",
+          "embedded": true,
+          "used": true
+        }
+      }
+    },
+    "BIBM2026_workshop_anonymous_revised.pdf": {
+      "pages": 7,
+      "bytes": 150037,
+      "sha256": "216a06e7f4814cabb55cd073b0d349d0d47c06294023af747d9577d87ea832e0",
+      "all_used_fonts_embedded": true,
+      "fonts": {
+        "IHAIZV+NimbusRomNo9L-Regu": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "BZIVMZ+NimbusRomNo9L-MediItal": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "IXFAWU+NimbusRomNo9L-Medi": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "TQTHRL+NimbusRomNo9L-ReguItal": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "YEUUOC+CMMI10": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "AKHCZK+CMR10": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "VDVGTR+CMR7": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "CAFSZL+CMSY7": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "DDIEWW+CMR5": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "FKPJSN+CMEX10": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "PVTTLK+CMSY6": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "JAGKKY+CMSY8": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "NOMARO+CMSY10": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "EVICAO+DejaVuSans-Bold": {
+          "subtype": "/Type0",
+          "embedded": true,
+          "used": true
+        },
+        "BMQQDV+DejaVuSans": {
+          "subtype": "/Type0",
+          "embedded": true,
+          "used": true
+        }
+      },
+      "actual_abstract_bold_verified": true
+    },
+    "BIBM2026_workshop_named_revised.pdf": {
+      "pages": 7,
+      "bytes": 151137,
+      "sha256": "bd69a6b06374e022ccf46fbd7464163bd2a7f0c7f38664d1dda43fe5e29db08c",
+      "all_used_fonts_embedded": true,
+      "fonts": {
+        "IHAIZV+NimbusRomNo9L-Regu": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "BZIVMZ+NimbusRomNo9L-MediItal": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "IXFAWU+NimbusRomNo9L-Medi": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "TQTHRL+NimbusRomNo9L-ReguItal": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "YEUUOC+CMMI10": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "AKHCZK+CMR10": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "VDVGTR+CMR7": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "CAFSZL+CMSY7": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "DDIEWW+CMR5": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "FKPJSN+CMEX10": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "PVTTLK+CMSY6": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "JAGKKY+CMSY8": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "NOMARO+CMSY10": {
+          "subtype": "/Type1",
+          "embedded": true,
+          "used": true
+        },
+        "EVICAO+DejaVuSans-Bold": {
+          "subtype": "/Type0",
+          "embedded": true,
+          "used": true
+        },
+        "BMQQDV+DejaVuSans": {
+          "subtype": "/Type0",
+          "embedded": true,
+          "used": true
+        }
+      },
+      "actual_abstract_bold_verified": true
+    },
+    "PEAL修改前后逐句对照.pdf": {
+      "pages": 7,
+      "bytes": 179535,
+      "sha256": "0b9a2a27b8319c12b3c9fb4b0bbaf7d083e0b7c733b0fd7c6d0920a6330467ec",
+      "all_used_fonts_embedded": true,
+      "fonts": {
+        "Helvetica": {
+          "subtype": "/Type1",
+          "embedded": false,
+          "used": false
+        },
+        "AAAAAA+STSongti-SC-Regular-6": {
+          "subtype": "/TrueType",
+          "embedded": true,
+          "used": true
+        },
+        "AAAAAB+STSongti-SC-Regular-6": {
+          "subtype": "/TrueType",
+          "embedded": true,
+          "used": true
+        },
+        "AAAAAC+STSongti-SC-Regular-6": {
+          "subtype": "/TrueType",
+          "embedded": true,
+          "used": true
+        },
+        "AAAAAA+STSongti-SC-Bold-1": {
+          "subtype": "/TrueType",
+          "embedded": true,
+          "used": true
+        }
+      }
+    }
+  },
+  "scientific_values_citations_equations_figures_table_abstract_unchanged": true,
+  "supplement_pdfs_byte_identical": true,
+  "new_experiments": false,
+  "baidu_accessed": false,
+  "no_earlier_snapshot_modified": true,
+  "ieee_class_unchanged": true,
+  "new_large_local_experimental_assets": false,
+  "anonymous_main_author_fields_absent": true,
+  "reference_column_bottom_difference_points": {
+    "named": 9,
+    "anonymous": 36,
+    "note": "Whole reference entries retained; no clipping or overlap."
+  }
+}

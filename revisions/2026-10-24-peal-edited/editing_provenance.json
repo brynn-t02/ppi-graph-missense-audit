@@ -1,0 +1,11 @@
+{
+  "skill": "AIScientists-Dev/academic-humanizer",
+  "version": "0.3.3",
+  "source_url": "https://github.com/AIScientists-Dev/academic-humanizer/blob/94b88b23703bed7df507acae7d6d5876209a0cdf/SKILL.md",
+  "commit": "94b88b23703bed7df507acae7d6d5876209a0cdf",
+  "skill_sha256": "1f4501cb7331cffe9018960f8db045c719eea0658ce04e4af5e273ee59785a9c",
+  "use": "Evidence-preserving academic editing, combined with user-specified PEAL argument progression and redundancy reduction. No detector score or authorship classification used.",
+  "installed_globally": false,
+  "baseline_commit": "ce3c0209ddd04d842de5e876b95bcc50669c3a87",
+  "old_versions_policy": "Retain all earlier dated revisions until the author explicitly confirms finalization and cleanup."
+}

@@ -1,0 +1,7 @@
+{
+  "pid": 3086909,
+  "gpu": 1,
+  "started_utc": "2026-10-24T04:54:17Z",
+  "gpu_observation_before": "0, 8667, 0\n1, 15, 0\n2, 21825, 0\n3, 8657, 98\n4, 9245, 0\n5, 20461, 0\n",
+  "wall_limit_seconds": 7200
+}

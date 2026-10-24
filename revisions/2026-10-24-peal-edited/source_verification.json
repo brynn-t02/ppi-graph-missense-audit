@@ -1,0 +1,37 @@
+{
+  "baseline_commit": "ce3c0209ddd04d842de5e876b95bcc50669c3a87",
+  "documented_edits": 12,
+  "source": {
+    "main.tex": {
+      "main_pages": 7,
+      "numeric_tokens_in_order": 445,
+      "numbers_unchanged": true,
+      "citation_sequence_and_bibliography_unchanged": true,
+      "equations_inline_math_and_captions_unchanged": true,
+      "abstract_and_keywords_unchanged": true,
+      "prose_word_count_before": 2862,
+      "prose_word_count_after": 2783,
+      "word_count_scope": "Approximate English word tokens from abstract through disclosure, excluding references, citation keys, figure paths, LaTeX commands and inline formulas; section headings excluded; captions and tables included. Not a detector metric."
+    },
+    "main_anonymous.tex": {
+      "main_pages": 7,
+      "numeric_tokens_in_order": 440,
+      "numbers_unchanged": true,
+      "citation_sequence_and_bibliography_unchanged": true,
+      "equations_inline_math_and_captions_unchanged": true,
+      "abstract_and_keywords_unchanged": true,
+      "prose_word_count_before": 2867,
+      "prose_word_count_after": 2788,
+      "word_count_scope": "Approximate English word tokens from abstract through disclosure, excluding references, citation keys, figure paths, LaTeX commands and inline formulas; section headings excluded; captions and tables included. Not a detector metric."
+    }
+  },
+  "scientific_assets_unchanged": true,
+  "earlier_versions_preserved": true,
+  "skill_pinned_content_verified": true,
+  "prior_pdf_sha256": {
+    "BIBM2026_supplementary_anonymous_revised.pdf": "189bbe8d5d2f3e0da22dc10926759be6bf89f5e9a732f620c42915329d9e10af",
+    "BIBM2026_supplementary_named_revised.pdf": "43c085313d727ca5e201a55a11757770b7369cb63e261fa69cbe9dda266e1b6e",
+    "BIBM2026_workshop_anonymous_revised.pdf": "d80282a26087bfb27685a830b6334907818992d0690ae5229332d5d551b80ea8",
+    "BIBM2026_workshop_named_revised.pdf": "55b2959dcedb6cd880a1d2fe586c810210abbcc8f8e2161ed19ab4c07d60cc18"
+  }
+}
