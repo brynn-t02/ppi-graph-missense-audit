@@ -1,0 +1,42 @@
+{
+  "actual_mapping_validated": true,
+  "declared_node_order_equals_actual_model": true,
+  "nodes_remapped_by_STRING_id": 0,
+  "original_source_edge_check": {
+    "nodes": 19622,
+    "directed_edges": 13715404,
+    "undirected_edges": 6857702,
+    "bidirectional": true,
+    "unique_directed_edges": true,
+    "self_edges": 0,
+    "indices_in_bounds": true
+  },
+  "biogrid_source_edge_check": {
+    "nodes": 19622,
+    "directed_edges": 1862916,
+    "undirected_edges": 931458,
+    "bidirectional": true,
+    "unique_directed_edges": true,
+    "self_edges": 0,
+    "indices_in_bounds": true
+  },
+  "biogrid_actual_index_edge_check": {
+    "nodes": 19622,
+    "directed_edges": 1862916,
+    "undirected_edges": 931458,
+    "bidirectional": true,
+    "unique_directed_edges": true,
+    "self_edges": 0,
+    "indices_in_bounds": true
+  },
+  "isolates": 1402,
+  "isolates_vs_raw_max_abs_error": 9.5367431640625e-07,
+  "recomputed_16_columns_max_abs_error": 1.1920928955078125e-07,
+  "common_operator": "A=(E+I)+(E+I)^T; bidirectional E; coalesced sums; S=D^-1/2 A D^-1/2; (X+SX+S^2X)/3",
+  "embedding_sha256": "297016e36374d11bd2a1586da43c14368ffb7b300b0442fa02135833814e668a",
+  "embedding_shape": [
+    19622,
+    1280
+  ],
+  "graph_labels_used": false
+}

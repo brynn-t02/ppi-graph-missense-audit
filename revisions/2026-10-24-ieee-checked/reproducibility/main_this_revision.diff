@@ -1,0 +1,130 @@
+--- external-integrated/main.tex
++++ ieee-checked/main.tex
+@@ -1,6 +1,9 @@
++% Select Times-compatible T1 fonts before IEEEtran, including under Tectonic/XeTeX.
++\RequirePackage[T1]{fontenc}
+ \documentclass[conference]{IEEEtran}
+ \usepackage{cite}
+ \usepackage{graphicx}
++\usepackage{array}
+ \usepackage{amsmath,amssymb,amsfonts}
+ \usepackage{textcomp}
+ \usepackage{url}
+@@ -31,7 +34,7 @@
+ 
+ \begin{abstract}
+ \bfseries\boldmath
+-We audit fixed two-hop protein-feature propagation (FPP) for missense variant pathogenicity prediction using 177,213 ClinVar variants, an external UniProt variant source and two networks. FPP has no learned graph parameters. Matched STRING controls show sensitivity to connectivity and protein--topology correspondence. STRING fusion improves over raw-embedding fusion on the original split, whereas its homology-aware gains over strong variant scores remain uncertain. On 10,785 external variants, STRING increases mean AUC from 0.6932 to 0.7304; the ensemble gain is +0.0375 with a protein-bootstrap 95\% interval of [+0.0173, +0.0564]. A stricter nested subset supports the same direction. BioGRID does not establish external gains over raw embeddings or incremental fusion gains over raw-embedding fusion. These results support external-source transfer for STRING under the stated exclusions and sensitivity to network choice. They concern transductive protein-context features, not within-protein substitution discrimination or the performance of trained graph models.
++We audit fixed two-hop protein-feature propagation for missense variant pathogenicity prediction using 177,213 ClinVar variants, an external UniProt variant source and two networks. Propagation has no learned graph parameters. Matched STRING controls show sensitivity to connectivity and protein--topology correspondence. STRING fusion improves over raw-embedding fusion on the original split, whereas its homology-aware gains over strong variant scores remain uncertain. On 10,785 external variants, STRING increases the mean area under the receiver operating characteristic curve from 0.6932 to 0.7304; the ensemble gain is +0.0375 with a protein-bootstrap 95\% interval of [+0.0173, +0.0564]. A stricter nested subset supports the same direction. BioGRID does not establish external gains over raw embeddings or incremental fusion gains over raw-embedding fusion. These results support external-source transfer for STRING under the stated exclusions and sensitivity to network choice. They concern transductive protein-context features, not within-protein substitution discrimination or the performance of trained graph models.
+ 
+ \end{abstract}
+ 
+@@ -88,36 +91,32 @@
+ Exploratory analyses stratified retained-reference predictions by degree, k-core, betweenness, clustering and neighbour-risk features, and examined corrected and degraded predictions. Neighbour-risk features used training labels only. Feature-wise comparisons used false-discovery-rate correction \cite{Benjamini1995FDR}, but selected subgroup intervals did not account for test-set selection. AUPRC was interpreted within each split because precision-recall metrics depend on class prevalence \cite{Saito2015PrecisionRecall}.
+ 
+ \begin{table}[t]
+-\caption{Run provenance for the main results. Historical, matched and external-validation protocols are in Supplementary Tables 8, 11 and Methods 6. Runs count fitted classifiers, not bootstrap resamples.}
++\caption{Overview of experiments and repetitions. Repeats count fitted classifiers; historical results remain separately labeled.}
+ \label{tab:run_sources}
+ \centering
+ \footnotesize
+ \setlength{\tabcolsep}{3pt}
+-\renewcommand{\arraystretch}{1.12}
+-\begin{tabular}{p{0.40\columnwidth}p{0.14\columnwidth}p{0.36\columnwidth}}
++\renewcommand{\arraystretch}{1.10}
++\begin{tabular}{>{\raggedright\arraybackslash}p{0.37\columnwidth}>{\raggedright\arraybackslash}p{0.20\columnwidth}>{\raggedright\arraybackslash}p{0.35\columnwidth}}
+ \hline
+-Evidence & Runs & Summary used \\
++Experiment & Repeats & Reported summary \\
+ \hline
+-Fig. 1B,D/F representations & 3/arm & Matched seeds/operator/budget \\
+-Fig. 1C uncertainty & Ensemble & Paired variant/protein bootstrap \\
+-Fig. 1E partial ablation & Historical & Unequal protocols; descriptive \\
+-Fig. 2B fusion controls & 3/arm & Matched seeds/operator/budget \\
+-Fig. 2C fusion intervals & Ensemble & Protein-clustered bootstrap \\
+-Fig. 2E homology fusion & 3/arm & Matched score/raw/FPP arms \\
+-Fig. 2D; Suppl. Figs. S1--S2 & 1/arm & Historical retained predictions \\
+-Fig. 3A external source & 3/arm & Frozen checkpoints; no tuning \\
+-Fig. 3B BioGRID fusion & 3/arm & Each split; six fusion fits \\
++Original-split representations & 3/arm$^*$ & Mean and sample SD \\
++Original-split fusion & 3/arm$^*$ & Mean and sample SD \\
++Homology-aware fusion & 3/arm & Mean and sample SD \\
++External-source evaluation & 3 models/arm & Frozen predictions; no fitting \\
++Historical descriptions & Retained runs & Descriptive; mixed protocols \\
+ \hline
+ \end{tabular}
+ \par\smallskip
+-\raggedright Each permutation arm uses 3 graphs by 3 classifier seeds (9 fits). The 48 matched audit fits and 9 additional BioGRID fits (3 representation, 6 fusion) allow at most 50 epochs. Bootstrap intervals condition on fitted predictions; permutations are not 9 independent graph samples. 
++\raggedright $^*$Permutation arms use 3 graphs $\times$ 3 seeds (9 fits). The 48 matched audit and 9 BioGRID fits share seeds 42--44 and a maximum of 50 epochs. Paired intervals use 2,000 bootstrap resamples of fitted ensemble predictions, not additional fits. Historical repeats and full settings are in Supplementary Tables 8, 11 and Methods 6.
+ \end{table}
+ 
+ \section{Results}
+ 
+ \subsection{Full-graph FPP gains and connectivity sensitivity}
+ 
+-Table~\ref{tab:run_sources} separates new matched fits from historical retained predictions. With classifier seeds 42--44, raw ESM reached test AUC 0.7835 $\pm$ 0.0063 and AUPRC 0.6116 $\pm$ 0.0066; full FPP reached AUC 0.7950 $\pm$ 0.0016 and AUPRC 0.6484 $\pm$ 0.0118 (Fig. 1B). On ensemble-averaged predictions, the FPP-minus-ESM AUC difference was +0.0107, with protein-clustered 95\% CI [-0.0218, +0.0426]; the AUPRC difference was +0.0413, CI [-0.0109, +0.0770] (Fig. 1C). Variant resampling ignores within-protein dependence and gives a different uncertainty estimate. These intervals condition on the three fitted classifiers, rather than incorporating retraining variability.
++Table~\ref{tab:run_sources} summarizes the experiments and separates repeated fitting from historical descriptions. With classifier seeds 42--44, raw ESM reached test AUC 0.7835 $\pm$ 0.0063 and AUPRC 0.6116 $\pm$ 0.0066; full FPP reached AUC 0.7950 $\pm$ 0.0016 and AUPRC 0.6484 $\pm$ 0.0118 (Fig. 1B). On ensemble-averaged predictions, the FPP-minus-ESM AUC difference was +0.0107, with protein-clustered 95\% CI [-0.0218, +0.0426]; the AUPRC difference was +0.0413, CI [-0.0109, +0.0770] (Fig. 1C). Variant resampling ignores within-protein dependence and gives a different uncertainty estimate. These intervals condition on the three fitted classifiers, rather than incorporating retraining variability.
+ 
+ Removing 1,242,422 direct train-test edge-index entries (9.06\%; 621,211 unique undirected pairs) and recomputing the same normalized operator gave edge-ablated FPP AUC 0.7702 $\pm$ 0.0077 and AUPRC 0.6075 $\pm$ 0.0139 (Fig. 1D). Repeating with three topology permutations by the same three classifier seeds gave pooled AUC 0.7803 $\pm$ 0.0092 and AUPRC 0.6102 $\pm$ 0.0085 (Fig. 1F). Per-graph and paired-seed results are retained separately in Supplementary Table 11. Matched protocols remove the previous seed, budget and self-loop mismatches, but edge removal still changes degrees and indirect connectivity remains; the contrast does not identify a purely causal contribution of direct paths.
+ 
+@@ -184,36 +183,38 @@
+ 
+ OpenAI ChatGPT, OpenAI Codex and Anthropic Claude supported literature organization, analysis-code drafting and language editing. Historical experiments were performed by the authors. Revision-stage scripts assisted by these tools restored an isolated runtime, checked input provenance, trained matched downstream classifiers, assembled the external-source and alternative-network validation, and recomputed sensitivity statistics. Actual logs, fitted predictions and checksums are retained for review. The authors retain responsibility for study design, interpretation, citation verification and final approval. The tools are not authors; no synthetic outcomes were substituted for experimental results.
+ 
++% Balance the final reference page using the IEEEtran class hook.
++\IEEEtriggeratref{24}
+ \begin{thebibliography}{99}
++\bibitem{Kircher2014CADD} M. Kircher et al., ``A general framework for estimating the relative pathogenicity of human genetic variants,'' \emph{Nature Genetics}, vol. 46, pp. 310--315, 2014, doi: 10.1038/ng.2892.
++\bibitem{Ioannidis2016REVEL} N. M. Ioannidis et al., ``REVEL: an ensemble method for predicting the pathogenicity of rare missense variants,'' \emph{American Journal of Human Genetics}, vol. 99, pp. 877--885, 2016, doi: 10.1016/j.ajhg.2016.08.016.
++\bibitem{Qi2021MVP} H. Qi et al., ``MVP predicts the pathogenicity of missense variants by deep learning,'' \emph{Nature Communications}, vol. 12, p. 510, 2021, doi: 10.1038/s41467-020-20847-0.
++\bibitem{Sundaram2018PrimateAI} L. Sundaram et al., ``Predicting the clinical impact of human mutation with deep neural networks,'' \emph{Nature Genetics}, vol. 50, pp. 1161--1170, 2018, doi: 10.1038/s41588-018-0167-z.
++\bibitem{Frazer2021EVE} J. Frazer et al., ``Disease variant prediction with deep generative models of evolutionary data,'' \emph{Nature}, vol. 599, pp. 91--95, 2021, doi: 10.1038/s41586-021-04043-8.
++\bibitem{Cheng2023AlphaMissense} J. Cheng et al., ``Accurate proteome-wide missense variant effect prediction with AlphaMissense,'' \emph{Science}, vol. 381, eadg7492, 2023, doi: 10.1126/science.adg7492.
++\bibitem{Lin2023ESM} Z. Lin et al., ``Evolutionary-scale prediction of atomic-level protein structure with a language model,'' \emph{Science}, vol. 379, pp. 1123--1130, 2023, doi: 10.1126/science.ade2574.
+ \bibitem{Barabasi2011NetworkMedicine} A.-L. Barabasi, N. Gulbahce, and J. Loscalzo, ``Network medicine: a network-based approach to human disease,'' \emph{Nature Reviews Genetics}, vol. 12, pp. 56--68, 2011, doi: 10.1038/nrg2918.
+-\bibitem{Benjamini1995FDR} Y. Benjamini and Y. Hochberg, ``Controlling the false discovery rate: a practical and powerful approach to multiple testing,'' \emph{Journal of the Royal Statistical Society: Series B}, vol. 57, pp. 289--300, 1995, doi: 10.1111/j.2517-6161.1995.tb02031.x.
++\bibitem{Menche2015DiseaseModules} J. Menche et al., ``Disease networks. Uncovering disease-disease relationships through the incomplete interactome,'' \emph{Science}, vol. 347, 1257601, 2015, doi: 10.1126/science.1257601.
++\bibitem{Sahni2015InteractionPerturbation} N. Sahni et al., ``Widespread macromolecular interaction perturbations in human genetic disorders,'' \emph{Cell}, vol. 161, pp. 647--660, 2015, doi: 10.1016/j.cell.2015.04.013.
+ \bibitem{Chen2018InteractomePerturbation} S. Chen et al., ``An interactome perturbation framework prioritizes damaging missense mutations for developmental disorders,'' \emph{Nature Genetics}, vol. 50, pp. 1032--1040, 2018, doi: 10.1038/s41588-018-0130-z.
++\bibitem{Yates2014SuSPect} C. M. Yates, I. Filippis, L. A. Kelley, and M. J. E. Sternberg, ``SuSPect: enhanced prediction of single amino acid variant phenotype using network features,'' \emph{Journal of Molecular Biology}, vol. 426, pp. 2692--2701, 2014, doi: 10.1016/j.jmb.2014.04.026.
++\bibitem{Ozturk2022NetworkFeatures} K. Ozturk and H. Carter, ``Predicting functional consequences of mutations using molecular interaction network features,'' \emph{Human Genetics}, vol. 141, pp. 1195--1210, 2022, doi: 10.1007/s00439-021-02329-5.
++\bibitem{Zhang2022gMVP} H. Zhang, M. S. Xu, X. Fan, W. K. Chung, and Y. Shen, ``Predicting functional effect of missense variants using graph attention neural networks,'' \emph{Nature Machine Intelligence}, vol. 4, no. 11, pp. 1017--1028, 2022, doi: 10.1038/s42256-022-00561-w.
+ \bibitem{Cheng2021VEGN} J. Cheng, C. Lawrence, and M. Niepert, ``VEGN: variant effect prediction with graph neural networks,'' arXiv:2106.13642, 2021, doi: 10.48550/arXiv.2106.13642.
+-\bibitem{Cheng2023AlphaMissense} J. Cheng et al., ``Accurate proteome-wide missense variant effect prediction with AlphaMissense,'' \emph{Science}, vol. 381, eadg7492, 2023, doi: 10.1126/science.adg7492.
+-\bibitem{Efron1993Bootstrap} B. Efron and R. J. Tibshirani, \emph{An Introduction to the Bootstrap}. Chapman \& Hall/CRC, 1993.
+-\bibitem{Frazer2021EVE} J. Frazer et al., ``Disease variant prediction with deep generative models of evolutionary data,'' \emph{Nature}, vol. 599, pp. 91--95, 2021, doi: 10.1038/s41586-021-04043-8.
++\bibitem{Yu2025GNNMAP} H. Yu et al., ``A graph neural network approach for accurate prediction of pathogenicity in multi-type variants,'' \emph{Briefings in Bioinformatics}, vol. 26, bbaf151, 2025, doi: 10.1093/bib/bbaf151.
+ \bibitem{Ghadie2025DiseaseSpecificGNN} M. Ghadie, S. Sardaar, and Y. Trakadis, ``Disease-specific prediction of missense variant pathogenicity with DNA language models and graph neural networks,'' \emph{Bioengineering}, vol. 12, p. 1098, 2025, doi: 10.3390/bioengineering12101098.
+-\bibitem{Ioannidis2016REVEL} N. M. Ioannidis et al., ``REVEL: an ensemble method for predicting the pathogenicity of rare missense variants,'' \emph{American Journal of Human Genetics}, vol. 99, pp. 877--885, 2016, doi: 10.1016/j.ajhg.2016.08.016.
++\bibitem{Littmann2022ProteinMLTips} Q. Hou, K. Waury, D. Gogishvili, and K. A. Feenstra, ``Ten quick tips for sequence-based prediction of protein properties using machine learning,'' \emph{PLOS Computational Biology}, vol. 18, no. 12, Art. no. e1010669, 2022, doi: 10.1371/journal.pcbi.1010669.
++\bibitem{Teufel2023GraphPart} F. Teufel, M. H. Gislason, J. J. Almagro Armenteros, A. R. Johansen, O. Winther, and H. Nielsen, ``GraphPart: homology partitioning for biological sequence analysis,'' \emph{NAR Genomics and Bioinformatics}, vol. 5, lqad088, 2023, doi: 10.1093/nargab/lqad088.
++\bibitem{Landrum2020ClinVar} M. J. Landrum et al., ``ClinVar: improvements to accessing data,'' \emph{Nucleic Acids Research}, vol. 48, pp. D835--D844, 2020, doi: 10.1093/nar/gkz972.
++\bibitem{Szklarczyk2023STRING} D. Szklarczyk et al., ``The STRING database in 2023: protein-protein association networks and functional enrichment analyses for any sequenced genome of interest,'' \emph{Nucleic Acids Research}, vol. 51, pp. D638--D646, 2023, doi: 10.1093/nar/gkac1000.
++\bibitem{Kipf2017GCN} T. N. Kipf and M. Welling, ``Semi-supervised classification with graph convolutional networks,'' \emph{International Conference on Learning Representations}, 2017.
++\bibitem{Steinegger2017MMseqs2} M. Steinegger and J. Soding, ``MMseqs2 enables sensitive protein sequence searching for the analysis of massive data sets,'' \emph{Nature Biotechnology}, vol. 35, pp. 1026--1028, 2017, doi: 10.1038/nbt.3988.
+ \bibitem{Kingma2015Adam} D. P. Kingma and J. Ba, ``Adam: a method for stochastic optimization,'' \emph{International Conference on Learning Representations}, 2015, arXiv:1412.6980.
+-\bibitem{Kipf2017GCN} T. N. Kipf and M. Welling, ``Semi-supervised classification with graph convolutional networks,'' \emph{International Conference on Learning Representations}, 2017.
+-\bibitem{Kircher2014CADD} M. Kircher et al., ``A general framework for estimating the relative pathogenicity of human genetic variants,'' \emph{Nature Genetics}, vol. 46, pp. 310--315, 2014, doi: 10.1038/ng.2892.
+-\bibitem{Landrum2020ClinVar} M. J. Landrum et al., ``ClinVar: improvements to accessing data,'' \emph{Nucleic Acids Research}, vol. 48, pp. D835--D844, 2020, doi: 10.1093/nar/gkz972.
+-\bibitem{Lin2023ESM} Z. Lin et al., ``Evolutionary-scale prediction of atomic-level protein structure with a language model,'' \emph{Science}, vol. 379, pp. 1123--1130, 2023, doi: 10.1126/science.ade2574.
+-\bibitem{Littmann2022ProteinMLTips} Q. Hou, K. Waury, D. Gogishvili, and K. A. Feenstra, ``Ten quick tips for sequence-based prediction of protein properties using machine learning,'' \emph{PLOS Computational Biology}, vol. 18, no. 12, Art. no. e1010669, 2022, doi: 10.1371/journal.pcbi.1010669.
+-\bibitem{Menche2015DiseaseModules} J. Menche et al., ``Disease networks. Uncovering disease-disease relationships through the incomplete interactome,'' \emph{Science}, vol. 347, 1257601, 2015, doi: 10.1126/science.1257601.
+-\bibitem{Ozturk2022NetworkFeatures} K. Ozturk and H. Carter, ``Predicting functional consequences of mutations using molecular interaction network features,'' \emph{Human Genetics}, vol. 141, pp. 1195--1210, 2022, doi: 10.1007/s00439-021-02329-5.
+-\bibitem{Qi2021MVP} H. Qi et al., ``MVP predicts the pathogenicity of missense variants by deep learning,'' \emph{Nature Communications}, vol. 12, p. 510, 2021, doi: 10.1038/s41467-020-20847-0.
+-\bibitem{Sahni2015InteractionPerturbation} N. Sahni et al., ``Widespread macromolecular interaction perturbations in human genetic disorders,'' \emph{Cell}, vol. 161, pp. 647--660, 2015, doi: 10.1016/j.cell.2015.04.013.
+-\bibitem{Saito2015PrecisionRecall} T. Saito and M. Rehmsmeier, ``The precision-recall plot is more informative than the ROC plot when evaluating binary classifiers on imbalanced datasets,'' \emph{PLOS ONE}, vol. 10, e0118432, 2015, doi: 10.1371/journal.pone.0118432.
+ \bibitem{Schubach2024CADDv17} M. Schubach et al., ``CADD v1.7: using protein language models, regulatory CNNs and other nucleotide-level scores to improve genome-wide variant predictions,'' \emph{Nucleic Acids Research}, vol. 52, no. D1, pp. D1143--D1154, 2024, doi: 10.1093/nar/gkad989.
+-\bibitem{Steinegger2017MMseqs2} M. Steinegger and J. Soding, ``MMseqs2 enables sensitive protein sequence searching for the analysis of massive data sets,'' \emph{Nature Biotechnology}, vol. 35, pp. 1026--1028, 2017, doi: 10.1038/nbt.3988.
+-\bibitem{Sundaram2018PrimateAI} L. Sundaram et al., ``Predicting the clinical impact of human mutation with deep neural networks,'' \emph{Nature Genetics}, vol. 50, pp. 1161--1170, 2018, doi: 10.1038/s41588-018-0167-z.
+-\bibitem{Szklarczyk2023STRING} D. Szklarczyk et al., ``The STRING database in 2023: protein-protein association networks and functional enrichment analyses for any sequenced genome of interest,'' \emph{Nucleic Acids Research}, vol. 51, pp. D638--D646, 2023, doi: 10.1093/nar/gkac1000.
+-\bibitem{Teufel2023GraphPart} F. Teufel, M. H. Gislason, J. J. Almagro Armenteros, A. R. Johansen, O. Winther, and H. Nielsen, ``GraphPart: homology partitioning for biological sequence analysis,'' \emph{NAR Genomics and Bioinformatics}, vol. 5, lqad088, 2023, doi: 10.1093/nargab/lqad088.
+-\bibitem{Yates2014SuSPect} C. M. Yates, I. Filippis, L. A. Kelley, and M. J. E. Sternberg, ``SuSPect: enhanced prediction of single amino acid variant phenotype using network features,'' \emph{Journal of Molecular Biology}, vol. 426, pp. 2692--2701, 2014, doi: 10.1016/j.jmb.2014.04.026.
+-\bibitem{Yu2025GNNMAP} H. Yu et al., ``A graph neural network approach for accurate prediction of pathogenicity in multi-type variants,'' \emph{Briefings in Bioinformatics}, vol. 26, bbaf151, 2025, doi: 10.1093/bib/bbaf151.
+-\bibitem{Zhang2022gMVP} H. Zhang, M. S. Xu, X. Fan, W. K. Chung, and Y. Shen, ``Predicting functional effect of missense variants using graph attention neural networks,'' \emph{Nature Machine Intelligence}, vol. 4, no. 11, pp. 1017--1028, 2022, doi: 10.1038/s42256-022-00561-w.
+ \bibitem{UniProt2025} The UniProt Consortium, ``UniProt: the Universal Protein Knowledgebase in 2025,'' \emph{Nucleic Acids Research}, vol. 53, no. D1, pp. D609--D617, 2025, doi: 10.1093/nar/gkae1010.
+ \bibitem{Stark2006BioGRID} C. Stark, B.-J. Breitkreutz, T. Reguly, L. Boucher, A. Breitkreutz, and M. Tyers, ``BioGRID: a general repository for interaction datasets,'' \emph{Nucleic Acids Research}, vol. 34, pp. D535--D539, 2006, doi: 10.1093/nar/gkj109.
++\bibitem{Efron1993Bootstrap} B. Efron and R. J. Tibshirani, \emph{An Introduction to the Bootstrap}. Chapman \& Hall/CRC, 1993.
++\bibitem{Benjamini1995FDR} Y. Benjamini and Y. Hochberg, ``Controlling the false discovery rate: a practical and powerful approach to multiple testing,'' \emph{Journal of the Royal Statistical Society: Series B}, vol. 57, pp. 289--300, 1995, doi: 10.1111/j.2517-6161.1995.tb02031.x.
++\bibitem{Saito2015PrecisionRecall} T. Saito and M. Rehmsmeier, ``The precision-recall plot is more informative than the ROC plot when evaluating binary classifiers on imbalanced datasets,'' \emph{PLOS ONE}, vol. 10, e0118432, 2015, doi: 10.1371/journal.pone.0118432.
+ \end{thebibliography}
+ \end{document}

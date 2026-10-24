@@ -1,0 +1,11 @@
+{
+  "complete": true,
+  "new_fits": 9,
+  "evaluated_population_arm_seed_rows": 60,
+  "external_fusion_performed": false,
+  "bootstrap_repeats": 2000,
+  "seed": 20261024,
+  "sd_convention": "sample SD, ddof=1 across three classifier seeds",
+  "date_limitation": "Original retained ClinVar file contains 2026 evaluations; a 31March2024 content-release assertion is unsupported. Identify frozen input by checksum and archive provenance. No manuscript modified by this program.",
+  "finished_utc": "2026-10-24T07:18:31Z"
+}

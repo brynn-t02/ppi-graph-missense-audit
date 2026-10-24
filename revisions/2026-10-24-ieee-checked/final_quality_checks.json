@@ -1,0 +1,131 @@
+{
+  "scope": "IEEE conference manuscript formatting and compact Table I; no new experimental outcomes",
+  "main_page_limit_including_references": 8,
+  "main_table_rows": 5,
+  "main_figures": 3,
+  "files": {
+    "BIBM2026_workshop_named_revised.pdf": {
+      "pages": 7,
+      "sha256": "55b2959dcedb6cd880a1d2fe586c810210abbcc8f8e2161ed19ab4c07d60cc18",
+      "bytes": 151457,
+      "actual_text_fonts": [
+        "AKHCZK+CMR10",
+        "BMQQDV+DejaVuSans",
+        "BZIVMZ+NimbusRomNo9L-MediItal",
+        "CAFSZL+CMSY7",
+        "DDIEWW+CMR5",
+        "EVICAO+DejaVuSans-Bold",
+        "FKPJSN+CMEX10",
+        "IHAIZV+NimbusRomNo9L-Regu",
+        "IXFAWU+NimbusRomNo9L-Medi",
+        "JAGKKY+CMSY8",
+        "NOMARO+CMSY10",
+        "PVTTLK+CMSY6",
+        "TQTHRL+NimbusRomNo9L-ReguItal",
+        "VDVGTR+CMR7",
+        "YEUUOC+CMMI10"
+      ],
+      "used_fonts_embedded": true,
+      "all_declared_fonts_embedded": true
+    },
+    "BIBM2026_workshop_anonymous_revised.pdf": {
+      "pages": 7,
+      "sha256": "d80282a26087bfb27685a830b6334907818992d0690ae5229332d5d551b80ea8",
+      "bytes": 150413,
+      "actual_text_fonts": [
+        "AKHCZK+CMR10",
+        "BMQQDV+DejaVuSans",
+        "BZIVMZ+NimbusRomNo9L-MediItal",
+        "CAFSZL+CMSY7",
+        "DDIEWW+CMR5",
+        "EVICAO+DejaVuSans-Bold",
+        "FKPJSN+CMEX10",
+        "IHAIZV+NimbusRomNo9L-Regu",
+        "IXFAWU+NimbusRomNo9L-Medi",
+        "JAGKKY+CMSY8",
+        "NOMARO+CMSY10",
+        "PVTTLK+CMSY6",
+        "TQTHRL+NimbusRomNo9L-ReguItal",
+        "VDVGTR+CMR7",
+        "YEUUOC+CMMI10"
+      ],
+      "used_fonts_embedded": true,
+      "all_declared_fonts_embedded": true
+    },
+    "BIBM2026_supplementary_named_revised.pdf": {
+      "pages": 19,
+      "sha256": "43c085313d727ca5e201a55a11757770b7369cb63e261fa69cbe9dda266e1b6e",
+      "bytes": 663389,
+      "actual_text_fonts": [
+        "AAAAAA+DejaVuSansMono",
+        "AAAAAA+DejaVuSerif",
+        "AAAAAA+DejaVuSerif-Bold"
+      ],
+      "used_fonts_embedded": true,
+      "all_declared_fonts_embedded": false
+    },
+    "BIBM2026_supplementary_anonymous_revised.pdf": {
+      "pages": 19,
+      "sha256": "189bbe8d5d2f3e0da22dc10926759be6bf89f5e9a732f620c42915329d9e10af",
+      "bytes": 663083,
+      "actual_text_fonts": [
+        "AAAAAA+DejaVuSansMono",
+        "AAAAAA+DejaVuSerif",
+        "AAAAAA+DejaVuSerif-Bold"
+      ],
+      "used_fonts_embedded": true,
+      "all_declared_fonts_embedded": false
+    }
+  },
+  "scientific_data_unchanged": true,
+  "supplements_unchanged": true,
+  "visual_review": "All seven pages of named and anonymous manuscripts reviewed. Main pages 1–6 remain pixel-identical after final reference-column balancing; final page 7 separately reviewed. No clipping, overlap or missing glyphs observed. Supplement PDFs are byte-identical to the preceding integrated revision.",
+  "references": {
+    "total": 30,
+    "all_cited": true,
+    "first_citation_order": [
+      "Kircher2014CADD",
+      "Ioannidis2016REVEL",
+      "Qi2021MVP",
+      "Sundaram2018PrimateAI",
+      "Frazer2021EVE",
+      "Cheng2023AlphaMissense",
+      "Lin2023ESM",
+      "Barabasi2011NetworkMedicine",
+      "Menche2015DiseaseModules",
+      "Sahni2015InteractionPerturbation",
+      "Chen2018InteractomePerturbation",
+      "Yates2014SuSPect",
+      "Ozturk2022NetworkFeatures",
+      "Zhang2022gMVP",
+      "Cheng2021VEGN",
+      "Yu2025GNNMAP",
+      "Ghadie2025DiseaseSpecificGNN",
+      "Littmann2022ProteinMLTips",
+      "Teufel2023GraphPart",
+      "Landrum2020ClinVar",
+      "Szklarczyk2023STRING",
+      "Kipf2017GCN",
+      "Steinegger2017MMseqs2",
+      "Kingma2015Adam",
+      "Schubach2024CADDv17",
+      "UniProt2025",
+      "Stark2006BioGRID",
+      "Efron1993Bootstrap",
+      "Benjamini1995FDR",
+      "Saito2015PrecisionRecall"
+    ],
+    "last_page_columns_balanced": true
+  },
+  "template": {
+    "name": "IEEE-conference-template-062824",
+    "IEEEtran_cls_sha256": "c972aca108fda004c3514d63658e02816da2e54d9a1451e870b9bd970e003f55",
+    "unmodified_class": true,
+    "paper_size": "US Letter",
+    "body_points": 10,
+    "abstract_points": 9,
+    "abstract_true_bold": "NimbusRomNo9L-Medi",
+    "abstract_label_true_bold_italic": "NimbusRomNo9L-MediItal",
+    "official_pdf_express_check_performed": false
+  }
+}

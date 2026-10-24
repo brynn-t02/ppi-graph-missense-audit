@@ -1,0 +1,300 @@
+{
+  "passed": true,
+  "runs_verified": 9,
+  "checks": [
+    {
+      "split": "original",
+      "arm": "BioGRID_FPP",
+      "seed": 42,
+      "selected_epoch": 2,
+      "epochs_run": 7,
+      "val_and_test_metrics_reproduced": true,
+      "strict_validation_selection_and_patience": true,
+      "checkpoint_finite_expected_dimensions": true,
+      "checkpoint_sha256": "91afbf673617623bee5326eb66f1976bed2c35efc6f7093ab5b3ff9c91bc15fa"
+    },
+    {
+      "split": "original",
+      "arm": "BioGRID_FPP",
+      "seed": 43,
+      "selected_epoch": 10,
+      "epochs_run": 15,
+      "val_and_test_metrics_reproduced": true,
+      "strict_validation_selection_and_patience": true,
+      "checkpoint_finite_expected_dimensions": true,
+      "checkpoint_sha256": "3a7e12dfbec8e431c70479c9fc8cfdc2992efa99044ff781f39c0f9e04c182b6"
+    },
+    {
+      "split": "original",
+      "arm": "BioGRID_FPP",
+      "seed": 44,
+      "selected_epoch": 5,
+      "epochs_run": 10,
+      "val_and_test_metrics_reproduced": true,
+      "strict_validation_selection_and_patience": true,
+      "checkpoint_finite_expected_dimensions": true,
+      "checkpoint_sha256": "a46d0439f01fa11025bea2fa450af7f4e918bbef223292a2bd499a62a11c090b"
+    },
+    {
+      "split": "original_fusion",
+      "arm": "scores_plus_BioGRID_FPP",
+      "seed": 42,
+      "selected_epoch": 3,
+      "epochs_run": 8,
+      "val_and_test_metrics_reproduced": true,
+      "strict_validation_selection_and_patience": true,
+      "checkpoint_finite_expected_dimensions": true,
+      "checkpoint_sha256": "0686fe5ebdca8f3e74384d884de94b9e44f8d0ea523c64da68a0d1a9cab55b81"
+    },
+    {
+      "split": "original_fusion",
+      "arm": "scores_plus_BioGRID_FPP",
+      "seed": 43,
+      "selected_epoch": 8,
+      "epochs_run": 13,
+      "val_and_test_metrics_reproduced": true,
+      "strict_validation_selection_and_patience": true,
+      "checkpoint_finite_expected_dimensions": true,
+      "checkpoint_sha256": "f95eed95e90ee583828aecd02f00b351d7c934089e026315d604d6680093de82"
+    },
+    {
+      "split": "original_fusion",
+      "arm": "scores_plus_BioGRID_FPP",
+      "seed": 44,
+      "selected_epoch": 4,
+      "epochs_run": 9,
+      "val_and_test_metrics_reproduced": true,
+      "strict_validation_selection_and_patience": true,
+      "checkpoint_finite_expected_dimensions": true,
+      "checkpoint_sha256": "702938c13e5b03565ac038b09c63afd9862601e32b81702650494fca6af0975f"
+    },
+    {
+      "split": "homology",
+      "arm": "scores_plus_BioGRID_FPP",
+      "seed": 42,
+      "selected_epoch": 10,
+      "epochs_run": 15,
+      "val_and_test_metrics_reproduced": true,
+      "strict_validation_selection_and_patience": true,
+      "checkpoint_finite_expected_dimensions": true,
+      "checkpoint_sha256": "280a61b37dd6a163f960800b379b4479b94b0c9a8b541344fc33e8b08eaac5be"
+    },
+    {
+      "split": "homology",
+      "arm": "scores_plus_BioGRID_FPP",
+      "seed": 43,
+      "selected_epoch": 5,
+      "epochs_run": 10,
+      "val_and_test_metrics_reproduced": true,
+      "strict_validation_selection_and_patience": true,
+      "checkpoint_finite_expected_dimensions": true,
+      "checkpoint_sha256": "32312bdda577cfd95196c52da25af40e569cda82124b72d88a55020920e40f2e"
+    },
+    {
+      "split": "homology",
+      "arm": "scores_plus_BioGRID_FPP",
+      "seed": 44,
+      "selected_epoch": 5,
+      "epochs_run": 10,
+      "val_and_test_metrics_reproduced": true,
+      "strict_validation_selection_and_patience": true,
+      "checkpoint_finite_expected_dimensions": true,
+      "checkpoint_sha256": "295011820f8e9a7cebf5bc4b8db88e33f83f8b63bebae88b8ed9d432ca5d3a32"
+    }
+  ],
+  "old_checkpoints_reproduction_verified": 6,
+  "old_checkpoint_direct_metric_tolerance": 1e-08,
+  "node_lookup_probability_tolerance": 2e-06,
+  "node_lookup_vs_variant_batching": [
+    {
+      "arm": "raw_ESM",
+      "seed": 42,
+      "part": "val",
+      "max_probability_abs_difference": 1.1920928955078125e-07,
+      "delta_auc_versus_variant_batching": 3.5752014304613056e-06,
+      "delta_auprc_versus_variant_batching": 8.16733410347048e-07
+    },
+    {
+      "arm": "raw_ESM",
+      "seed": 42,
+      "part": "test",
+      "max_probability_abs_difference": 1.1920928955078125e-07,
+      "delta_auc_versus_variant_batching": -1.7317539224848133e-07,
+      "delta_auprc_versus_variant_batching": 0.00011568165279407516
+    },
+    {
+      "arm": "raw_ESM",
+      "seed": 43,
+      "part": "val",
+      "max_probability_abs_difference": 1.1920928955078125e-07,
+      "delta_auc_versus_variant_batching": 1.019826208037422e-05,
+      "delta_auprc_versus_variant_batching": -1.9223026002435084e-05
+    },
+    {
+      "arm": "raw_ESM",
+      "seed": 43,
+      "part": "test",
+      "max_probability_abs_difference": 1.1920928955078125e-07,
+      "delta_auc_versus_variant_batching": -2.521433710489518e-06,
+      "delta_auprc_versus_variant_batching": 0.00014286798827567448
+    },
+    {
+      "arm": "raw_ESM",
+      "seed": 44,
+      "part": "val",
+      "max_probability_abs_difference": 1.1920928955078125e-07,
+      "delta_auc_versus_variant_batching": -8.777119511638176e-06,
+      "delta_auprc_versus_variant_batching": 6.567780161059744e-06
+    },
+    {
+      "arm": "raw_ESM",
+      "seed": 44,
+      "part": "test",
+      "max_probability_abs_difference": 1.1920928955078125e-07,
+      "delta_auc_versus_variant_batching": -1.0182713061634985e-06,
+      "delta_auprc_versus_variant_batching": 3.2938796710180185e-05
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 42,
+      "part": "val",
+      "max_probability_abs_difference": 2.086162567138672e-07,
+      "delta_auc_versus_variant_batching": 7.776063112308051e-07,
+      "delta_auprc_versus_variant_batching": -1.1624205085158934e-06
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 42,
+      "part": "test",
+      "max_probability_abs_difference": 2.384185791015625e-07,
+      "delta_auc_versus_variant_batching": -6.469832652733487e-06,
+      "delta_auprc_versus_variant_batching": 0.00011355837061932661
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 43,
+      "part": "val",
+      "max_probability_abs_difference": 1.7881393432617188e-07,
+      "delta_auc_versus_variant_batching": 1.9484847796347182e-06,
+      "delta_auprc_versus_variant_batching": -5.368191420718205e-06
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 43,
+      "part": "test",
+      "max_probability_abs_difference": 1.7881393432617188e-07,
+      "delta_auc_versus_variant_batching": 5.326875064159964e-06,
+      "delta_auprc_versus_variant_batching": 0.00020632059973568762
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 44,
+      "part": "val",
+      "max_probability_abs_difference": 3.2782554626464844e-07,
+      "delta_auc_versus_variant_batching": -7.087836835895089e-06,
+      "delta_auprc_versus_variant_batching": 8.48651670415368e-06
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 44,
+      "part": "test",
+      "max_probability_abs_difference": 2.980232238769531e-07,
+      "delta_auc_versus_variant_batching": 3.55355904790855e-06,
+      "delta_auprc_versus_variant_batching": 2.8783052416603283e-05
+    },
+    {
+      "arm": "BioGRID_FPP",
+      "seed": 42,
+      "part": "val",
+      "max_probability_abs_difference": 1.7881393432617188e-07,
+      "delta_auc_versus_variant_batching": -3.5573254232312834e-06,
+      "delta_auprc_versus_variant_batching": -3.6925357187467256e-06
+    },
+    {
+      "arm": "BioGRID_FPP",
+      "seed": 42,
+      "part": "test",
+      "max_probability_abs_difference": 1.1920928955078125e-07,
+      "delta_auc_versus_variant_batching": 1.1914466984119798e-06,
+      "delta_auprc_versus_variant_batching": 0.00024461083707438824
+    },
+    {
+      "arm": "BioGRID_FPP",
+      "seed": 43,
+      "part": "val",
+      "max_probability_abs_difference": 2.980232238769531e-07,
+      "delta_auc_versus_variant_batching": 8.759243504630199e-06,
+      "delta_auprc_versus_variant_batching": 1.8977061879588142e-05
+    },
+    {
+      "arm": "BioGRID_FPP",
+      "seed": 43,
+      "part": "test",
+      "max_probability_abs_difference": 3.5762786865234375e-07,
+      "delta_auc_versus_variant_batching": -8.2431486669865e-07,
+      "delta_auprc_versus_variant_batching": 0.00016892102050236613
+    },
+    {
+      "arm": "BioGRID_FPP",
+      "seed": 44,
+      "part": "val",
+      "max_probability_abs_difference": 1.7881393432617188e-07,
+      "delta_auc_versus_variant_batching": 3.753961502095393e-06,
+      "delta_auprc_versus_variant_batching": 1.188272683738667e-05
+    },
+    {
+      "arm": "BioGRID_FPP",
+      "seed": 44,
+      "part": "test",
+      "max_probability_abs_difference": 2.384185791015625e-07,
+      "delta_auc_versus_variant_batching": 8.395543014017015e-06,
+      "delta_auprc_versus_variant_batching": 0.00019084095797639034
+    }
+  ],
+  "external_node_prediction_arrays_verified": 9,
+  "external_population_arm_seed_predictions_verified": 27,
+  "external_cohorts": {
+    "external_primary": {
+      "variants": 10785,
+      "proteins": 2498,
+      "positive": 4301,
+      "role": "primary",
+      "actual_tensor_indices_verified": true
+    },
+    "external_strict": {
+      "variants": 6934,
+      "proteins": 1713,
+      "positive": 2555,
+      "role": "strict sensitivity",
+      "actual_tensor_indices_verified": true
+    },
+    "external_all": {
+      "variants": 40900,
+      "proteins": 9840,
+      "positive": 15950,
+      "role": "descriptive; includes original training proteins",
+      "actual_tensor_indices_verified": true
+    }
+  },
+  "all_analyzed_seed_metric_rows_verified": 60,
+  "ensemble_metrics_verified": 20,
+  "bootstrap_comparison_point_estimates_verified": 17,
+  "bootstrap_ci_checks": "Bounds/finite count/point estimates checked; no duplicate 2000-replicate recomputation. Weighted tie-aware metric kernel checked against sklearn.",
+  "weighted_metric_validation": {
+    "passed": true,
+    "synthetic_tied_weight_cases": 14,
+    "tolerance": 1e-12
+  },
+  "pre_inference_input_hashes_verified": 18,
+  "code_sha256": {
+    "analyze_external_validation.py": "aae413c283c2d5cca98c1e4400662181a3049863bbe583e5cb5013158134ecc9",
+    "code_upload_manifest.json": "fd2756b1bcd9112fe210ed82bee734ae864e2250593800b548852fbde221d9c3",
+    "execute_pipeline.py": "5ed17221e6559dd8a370715c7c1f081b14c889063e491591fcaff260bf81c3e6",
+    "protocol.json": "dc20f27363b9e6fb2df732d558f25a45237f7cb8d1113f33bbf2b29278b82352",
+    "protocol_freeze.json": "111d0dd6c601db14aab376a9a2f736aabe0786c5b4872584872c68c8ec479783",
+    "run_external_validation.py": "296857741514346d3e61f170e7eb7e468004734dc12c20474a652755a69765bd",
+    "verify_external_validation.py": "3cb39f169f2f36ba6a0cde50769450b760269fc926a9030706f2d0629e0f2dcc"
+  },
+  "manuscript_modified": false,
+  "checked_utc": "2026-10-24T07:18:36Z"
+}
