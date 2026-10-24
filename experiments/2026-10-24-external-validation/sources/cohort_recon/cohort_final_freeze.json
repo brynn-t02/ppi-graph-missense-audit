@@ -1,0 +1,79 @@
+{
+  "status": "repaired_and_frozen_before_inference",
+  "frozen_utc": "2026-10-24T06:56:53.824075+00:00",
+  "node_mapping_gate_pending": true,
+  "primary_and_strict_unchanged": true,
+  "source_cohort_row_counts": {
+    "all_variant_disjoint": 40900,
+    "primary": 10785,
+    "strict_unseen_all_original": 6934
+  },
+  "files": [
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/external_cohort_all_variant_disjoint.csv",
+      "name": "external_cohort_all_variant_disjoint.csv",
+      "bytes": 5796102,
+      "sha256": "4112d1dec2803423ab43c1fe82f9f98a99b41adce452517b7dcf64327e8ee048"
+    },
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/external_cohort_primary.csv",
+      "name": "external_cohort_primary.csv",
+      "bytes": 1540878,
+      "sha256": "02b609336fa8bcb0400dede2e5688f8e6c1831454a8ae5ae08a9c8d85705bbe8"
+    },
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/external_cohort_unseen_all_original.csv",
+      "name": "external_cohort_unseen_all_original.csv",
+      "bytes": 997099,
+      "sha256": "e5dafa8013288a45413f410a8ca2643e500a91d02cd612c1ec983e067b979d5e"
+    },
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/build_cohort.py",
+      "name": "build_cohort.py",
+      "bytes": 11208,
+      "sha256": "f6dcc91147f5580934183feb4f4f49077cd9dd3d6915b3f2b1357a5a51ec7b9d"
+    },
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/verify_cohort.py",
+      "name": "verify_cohort.py",
+      "bytes": 3748,
+      "sha256": "4f90a578994d92a768417675332994d0f02c4d461ae75131830c1d6f0c6e4ec5"
+    },
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/cohort_protocol.json",
+      "name": "cohort_protocol.json",
+      "bytes": 2546,
+      "sha256": "c7b1d791dfbace0523b7828dca668349dc9f0a3aadf91f6d636e818a74b052ea"
+    },
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/cohort_protocol_deviation_before_inference.json",
+      "name": "cohort_protocol_deviation_before_inference.json",
+      "bytes": 2253,
+      "sha256": "f3471843cc8cccd08b3be4b76d07b7893f4c83eaa114b8f6c3168caa2e483912"
+    },
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/cohort_counts.json",
+      "name": "cohort_counts.json",
+      "bytes": 4493,
+      "sha256": "e561034748533284c6122984565ca66a7d3cbf8c8df570627f9bfc713b13a73d"
+    },
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/cohort_manifest.json",
+      "name": "cohort_manifest.json",
+      "bytes": 4764,
+      "sha256": "ec65d668c603c0532622da62a61049bc9f91b22eaee1ac31deb0b4348ee113c1"
+    },
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/cohort_quality_checks.json",
+      "name": "cohort_quality_checks.json",
+      "bytes": 914,
+      "sha256": "acc69e8b501ab33a5be7806a7913ee032644544ef0687d2761347103ce7ee5a5"
+    },
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/README.txt",
+      "name": "README.txt",
+      "bytes": 6553,
+      "sha256": "88b0954fe42c023ceb37b930f3039cd0d09f744b667e15f815c751de6549541e"
+    }
+  ]
+}

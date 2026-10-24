@@ -1,0 +1,101 @@
+{
+  "inputs": [
+    {
+      "path": "work/external_validation_20261024/network_recon/frozen_node_order.json",
+      "bytes": 470929,
+      "sha256": "26e9635360e728d1b3b946da9826c3fadc92b7a483b8ea0ed696c066baa372d5"
+    },
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/humsavar_2026_03.txt",
+      "bytes": 8710628,
+      "sha256": "68ce06dc07c59e2c2318aafe9fba356e6f5f57293fd83f53c12e354d557c9fa9"
+    },
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/uniprot_human_reviewed_canonical_2026_03.fasta.gz",
+      "bytes": 7508673,
+      "sha256": "dc8ef8cbf0fc1b857b3be9a559613533ec49824079fb057e31fdfcf578cb229a"
+    },
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/cohort_protocol.json",
+      "bytes": 2546,
+      "sha256": "c7b1d791dfbace0523b7828dca668349dc9f0a3aadf91f6d636e818a74b052ea"
+    },
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/cohort_protocol_deviation_before_inference.json",
+      "bytes": 2253,
+      "sha256": "f3471843cc8cccd08b3be4b76d07b7893f4c83eaa114b8f6c3168caa2e483912"
+    },
+    {
+      "path": "${PPI_SOURCE_DATA_ROOT}/raw/9606.protein.aliases.v12.0.txt.gz",
+      "bytes": 19777800,
+      "sha256": "b65f730b993ed0c1bd72edf4565d3d425db42861101b29699704810e8f125680"
+    },
+    {
+      "path": "${PPI_SOURCE_DATA_ROOT}/raw/9606.protein.sequences.v12.0.fa.gz",
+      "bytes": 6760990,
+      "sha256": "afe5ebc2d26777a930f947f350c01dc4261d6fa29dd3f217b22fc0225e066ee1"
+    },
+    {
+      "path": "${PPI_SOURCE_DATA_ROOT}/raw/variant_summary.txt.gz",
+      "bytes": 435482247,
+      "sha256": "50c4193ca85609659d58babea2a5cf519160f9b69a802ce5c6ee627908afb139"
+    },
+    {
+      "path": "${PPI_SOURCE_DATA_ROOT}/processed/clinvar_with_alphamissense.csv",
+      "bytes": 54561351,
+      "sha256": "4df4043715f2cc390ca5d70135a505b04248e5fb9b0858542c67ae2962c195d1"
+    },
+    {
+      "path": "${PPI_SOURCE_DATA_ROOT}/processed/clinvar_train_main.csv",
+      "bytes": 34567345,
+      "sha256": "14340ecc0335d2ff2489013422a738852cf4856257d4c2a8195c1a975b6bff69"
+    },
+    {
+      "path": "${PPI_SOURCE_DATA_ROOT}/processed/clinvar_val_main.csv",
+      "bytes": 4142804,
+      "sha256": "072e0f596313bc4c46c92ad3b974fe3643d47ff342dae5e5e103a614e99af62d"
+    },
+    {
+      "path": "${PPI_SOURCE_DATA_ROOT}/processed/clinvar_test_main.csv",
+      "bytes": 4422463,
+      "sha256": "c89d6507c8b8b45c4177f2434c7ecfa8435f60d03b327a9c4493e0b51a6c45e6"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/external_cohort_all_variant_disjoint.csv",
+      "bytes": 5796102,
+      "sha256": "4112d1dec2803423ab43c1fe82f9f98a99b41adce452517b7dcf64327e8ee048"
+    },
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/external_cohort_primary.csv",
+      "bytes": 1540878,
+      "sha256": "02b609336fa8bcb0400dede2e5688f8e6c1831454a8ae5ae08a9c8d85705bbe8"
+    },
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/external_cohort_unseen_all_original.csv",
+      "bytes": 997099,
+      "sha256": "e5dafa8013288a45413f410a8ca2643e500a91d02cd612c1ec983e067b979d5e"
+    },
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/all_source_rows_with_exclusions.csv",
+      "bytes": 12319661,
+      "sha256": "7f26c047524cff9f08ea3d28a704ad1e00525ec3a484033824ccdf8b7bf83756"
+    },
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/cohort_counts.json",
+      "bytes": 4493,
+      "sha256": "e561034748533284c6122984565ca66a7d3cbf8c8df570627f9bfc713b13a73d"
+    },
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/accession_mapping_audit.json",
+      "bytes": 3377023,
+      "sha256": "8524991916b864f26085721a29ca68ab64f4596819e0a4d537990abcc8d9c88f"
+    },
+    {
+      "path": "${EXPERIMENT_SOURCE_ROOT}/cohort_recon/build_cohort.py",
+      "bytes": 11208,
+      "sha256": "f6dcc91147f5580934183feb4f4f49077cd9dd3d6915b3f2b1357a5a51ec7b9d"
+    }
+  ]
+}

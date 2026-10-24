@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "array_shape": [
+    2,
+    1862916
+  ],
+  "dtype": "int64",
+  "no_self_edges": true,
+  "no_duplicate_directed_edges": true,
+  "both_directions_each_pair": true,
+  "node_count": 19622,
+  "indices_in_bounds": true,
+  "isolates": 1402,
+  "node_order_vs_actual_model_pt": "executor_check_pending",
+  "verification_library": "numpy 2.3.5"
+}

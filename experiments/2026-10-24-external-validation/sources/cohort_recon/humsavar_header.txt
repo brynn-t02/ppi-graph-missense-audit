@@ -1,0 +1,131 @@
+--------------------------------------------------------------------------------
+        UniProt - Swiss-Prot Protein Knowledgebase
+        SIB Swiss Institute of Bioinformatics; Geneva, Switzerland
+        European Bioinformatics Institute (EBI); Hinxton, United Kingdom
+        Protein Information Resource (PIR); Washington DC, USA
+--------------------------------------------------------------------------------
+
+Description: Index of human variants curated from literature reports
+Name:        humsavar.txt
+Release:     2026_03 of 02-Sep-2026
+
+--------------------------------------------------------------------------------
+This file lists all missense variants annotated in UniProtKB/Swiss-Prot human
+entries. It provides a variant classification which is intended for research
+purposes only, not for clinical and diagnostic use.
+
+ - The column 'Variant category' shows the classification of the variant using
+   the American College of Medical Genetics and Genomics/Association for
+   Molecular Pathology (ACMG/AMP) terminology (Richards et al. PubMed:25741868)
+   into the following categories:
+
+   LP/P = likely pathogenic or pathogenic
+   LB/B = likely benign or benign
+   US   = uncertain significance
+
+   These categories are assigned based on the variant annotation in the
+   corresponding UniProtKB/Swiss-Prot entries that is curated from literature
+   reports. The classification may change over time and must not be considered
+   as a definitive statement about the pathogenic role of a variant.
+
+ - The column 'Disease name' shows the name of the disease or the disease sample
+   in which variants have been found. Names are only provided for diseases
+   catalogued in OMIM and for cancer samples.
+
+Statistics for single amino acid variants:
+
+             LP/P:  33333
+             LB/B:  39964
+             US:    11718
+             Total: 85015
+
+Main        Swiss-Prot             AA             Variant
+gene name   AC         FTId        change         category dbSNP          Disease name
+_________   __________ ___________ ______________ ________ ______________ _____________________
+A1BG        P04217     VAR_018369  p.His52Arg     LB/B     rs893184       -
+A1BG        P04217     VAR_018370  p.His395Arg    LB/B     rs2241788      -
+A1CF        Q9NQ94     VAR_052201  p.Val555Met    LB/B     rs9073         -
+A1CF        Q9NQ94     VAR_059821  p.Ala558Ser    LB/B     rs11817448     -
+A2M         P01023     VAR_000012  p.Arg704His    LB/B     rs1800434      -
+A2M         P01023     VAR_000013  p.Cys972Tyr    LB/B     rs1800433      -
+A2M         P01023     VAR_000014  p.Ile1000Val   LB/B     rs669          -
+A2M         P01023     VAR_026820  p.Asn639Asp    LB/B     rs226405       -
+A2M         P01023     VAR_026821  p.Leu815Gln    LB/B     rs3180392      -
+A2ML1       A8K2U0     VAR_055463  p.Gly207Arg    LB/B     rs11047499     -
+A2ML1       A8K2U0     VAR_055464  p.Cys970Tyr    LB/B     rs1558526      -
+A2ML1       A8K2U0     VAR_055465  p.Thr1131Met   LB/B     rs7959680      -
+A2ML1       A8K2U0     VAR_055466  p.Thr1412Ala   LB/B     rs7315591      -
+A2ML1       A8K2U0     VAR_059083  p.Asp850Glu    LB/B     rs1860926      -
+A2ML1       A8K2U0     VAR_059084  p.His1229Arg   LB/B     rs10219561     -
+A2ML1       A8K2U0     VAR_071854  p.Arg1122Trp   LB/B     rs1860967      -
+A2ML1       A8K2U0     VAR_071855  p.Met1257Val   LB/B     rs7308811      -
+A2ML1       A8K2U0     VAR_071856  p.Thr1312Met   LB/B     rs201083574    -
+A2ML1       A8K2U0     VAR_081010  p.Val296Ala    LB/B     rs192888493    -
+A2ML1       A8K2U0     VAR_081011  p.Pro356Arg    LB/B     rs863224953    -
+A2ML1       A8K2U0     VAR_081014  p.Arg1001Trp   LB/B     rs201725377    -
+A2ML1       A8K2U0     VAR_081015  p.Ala1431Val   LB/B     rs863224955    -
+A4GALT      Q9NPC4     VAR_014296  p.Met37Val     LB/B     rs11541159     -
+A4GALT      Q9NPC4     VAR_014297  p.Met183Lys    LB/B     rs74315453     -
+A4GALT      Q9NPC4     VAR_017508  p.Gly187Asp    LB/B     rs28940572     -
+A4GALT      Q9NPC4     VAR_017509  p.Pro251Leu    LB/B     rs28940571     -
+A4GALT      Q9NPC4     VAR_022320  p.Gln163Arg    LB/B     rs28915383     -
+A4GALT      Q9NPC4     VAR_080910  p.Gln211Glu    LB/B     rs397514502    -
+A4GNT       Q9UNA3     VAR_022096  p.Ala218Asp    LB/B     rs2246945      -
+AAAS        Q9NRG9     VAR_012804  p.Gln15Lys     LP/P     rs121918549    Achalasia-addisonianism-alacrima syndrome (AAAS) [MIM:231550]
+AAAS        Q9NRG9     VAR_012805  p.His160Arg    LP/P     rs1297831120   Achalasia-addisonianism-alacrima syndrome (AAAS) [MIM:231550]
+AAAS        Q9NRG9     VAR_012806  p.Ser263Pro    LP/P     rs121918550    Achalasia-addisonianism-alacrima syndrome (AAAS) [MIM:231550]
+AAAS        Q9NRG9     VAR_037060  p.Lys108Met    LB/B     rs13330        -
+AACS        Q86V21     VAR_038303  p.Ile118Val    LB/B     rs11549081     -
+AACS        Q86V21     VAR_060997  p.Ala470Val    LB/B     rs59883951     -
+AADAC       P22760     VAR_014798  p.Val281Ile    LB/B     rs1803155      -
+AADACL2     Q6P093     VAR_038140  p.Ala186Ser    LB/B     rs1972977      -
+AADACL2     Q6P093     VAR_038141  p.Leu343Ile    LB/B     rs1052562      -
+AADACL3     Q5VUY0     VAR_060665  p.Phe252Cys    LB/B     rs7513079      -
+AADACL3     Q5VUY0     VAR_060666  p.Pro104Ser    LB/B     rs3010877      -
+AADACL3     Q5VUY0     VAR_060667  p.Leu128Met    LB/B     rs3000859      -
+AADACL3     Q5VUY0     VAR_060668  p.Arg186Trp    LB/B     rs17038445     -
+AADACL3     Q5VUY0     VAR_060670  p.Met307Ile    LB/B     rs3000931      -
+AADACL3     Q5VUY0     VAR_060671  p.Pro337Leu    LB/B     rs11121969     -
+AADAT       Q8N5Z0     VAR_061005  p.Val243Ile    LB/B     rs56350236     -
+AAGAB       Q6PD74     VAR_021533  p.Ile132Leu    LB/B     rs7173826      -
+AAK1        Q2M2I8     VAR_031129  p.Lys509Gln    LB/B     rs6715776      -
+AAK1        Q2M2I8     VAR_040348  p.Ile59Val     LB/B     rs34535244     -
+AAK1        Q2M2I8     VAR_040349  p.Gln533His    LB/B     rs1263928487   -
+AAK1        Q2M2I8     VAR_040350  p.Val603Ala    LB/B     rs56038532     -
+AAK1        Q2M2I8     VAR_040351  p.Thr694Met    LB/B     rs55889248     -
+AAK1        Q2M2I8     VAR_040352  p.Pro725Thr    LB/B     rs35285785     -
+AAK1        Q2M2I8     VAR_040353  p.Pro771Arg    LB/B     rs34422616     -
+AAK1        Q2M2I8     VAR_040354  p.Gly835Asp    LB/B     -              -
+AAMDC       Q9H7C9     VAR_052696  p.Val92Met     LB/B     rs2186564      -
+AAMP        Q13685     VAR_037061  p.Ile250Val    LB/B     rs2305835      -
+AANAT       Q16613     VAR_048168  p.Arg15Cys     LB/B     rs34470791     -
+AANAT       Q16613     VAR_055086  p.Ala129Thr    LB/B     rs28936679     -
+AAR2        Q9Y312     VAR_048127  p.Pro124Thr    LB/B     rs6121183      -
+AARD        Q4LEZ3     VAR_043570  p.Gly96Arg     LB/B     rs16889283     -
+AARS1       P49588     VAR_028204  p.Gly275Asp    LB/B     rs11537667     -
+AARS1       P49588     VAR_063527  p.Arg329His    LP/P     rs267606621    Charcot-Marie-Tooth disease, axonal, type 2N (CMT2N) [MIM:613287]
+AARS1       P49588     VAR_067084  p.Asn71Tyr     LP/P     rs387906792    Charcot-Marie-Tooth disease, axonal, type 2N (CMT2N) [MIM:613287]
+AARS1       P49588     VAR_073293  p.Thr608Met    US       -              -
+AARS1       P49588     VAR_073719  p.Lys81Thr     LP/P     rs786205157    Developmental and epileptic encephalopathy 29 (DEE29) [MIM:616339]
+AARS1       P49588     VAR_073720  p.Arg751Gly    LP/P     rs143370729    Developmental and epileptic encephalopathy 29 (DEE29) [MIM:616339]
+AARS1       P49588     VAR_079703  p.Gly913Asp    LP/P     rs369774476    Developmental and epileptic encephalopathy 29 (DEE29) [MIM:616339]
+AARS1       P49588     VAR_086780  p.Cys152Phe    US       -              Leukoencephalopathy, hereditary diffuse, with spheroids 2 (HDLS2) [MIM:619661]
+AARS1       P49588     VAR_086781  p.Ile699Thr    US       -              Trichothiodystrophy 8, non-photosensitive (TTD8) [MIM:619691]
+AARS1       P49588     VAR_086782  p.Thr726Ala    US       -              Trichothiodystrophy 8, non-photosensitive (TTD8) [MIM:619691]
+AARS1       P49588     VAR_086783  p.Thr756Ile    US       -              Trichothiodystrophy 8, non-photosensitive (TTD8) [MIM:619691]
+AARS1       P49588     VAR_086784  p.Cys901Tyr    US       -              Trichothiodystrophy 8, non-photosensitive (TTD8) [MIM:619691]
+AARS1       P49588     VAR_089575  p.Arg77Gln     US       -              A gastric cancer
+AARS1       P49588     VAR_089576  p.Arg326Trp    LP/P     -              Charcot-Marie-Tooth disease, axonal, type 2N (CMT2N) [MIM:613287]
+AARS1       P49588     VAR_089577  p.Thr606Ile    LP/P     -              Leukoencephalopathy, hereditary diffuse, with spheroids 2 (HDLS2) [MIM:619661]
+AARS1       P49588     VAR_089578  p.Ser698Phe    LP/P     -              Charcot-Marie-Tooth disease, axonal, type 2N (CMT2N) [MIM:613287]
+AARS2       Q5JTZ9     VAR_027609  p.Ile339Val    LB/B     rs324136       -
+AARS2       Q5JTZ9     VAR_027610  p.Ala484Asp    LB/B     rs495294       -
+AARS2       Q5JTZ9     VAR_057357  p.Met850Val    LB/B     rs35783144     -
+AARS2       Q5JTZ9     VAR_065956  p.Leu155Arg    LP/P     rs387907061    Combined oxidative phosphorylation deficiency 8 (COXPD8) [MIM:614096]
+AARS2       Q5JTZ9     VAR_065957  p.Arg592Trp    LP/P     rs138119149    Combined oxidative phosphorylation deficiency 8 (COXPD8) [MIM:614096]
+AARS2       Q5JTZ9     VAR_071837  p.Phe50Cys     LP/P     rs587777590    Leukoencephalopathy, progressive, with ovarian failure (LKENP) [MIM:615889]
+AARS2       Q5JTZ9     VAR_071838  p.Ala77Val     US       rs375949891    -
+AARS2       Q5JTZ9     VAR_071840  p.Arg199Cys    US       rs200105202    -
+AARS2       Q5JTZ9     VAR_071841  p.Glu405Lys    LP/P     rs587777592    Leukoencephalopathy, progressive, with ovarian failure (LKENP) [MIM:615889]
+AARS2       Q5JTZ9     VAR_071842  p.Val730Met    LB/B     rs35623954     -
+AARS2       Q5JTZ9     VAR_071843

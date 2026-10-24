@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-24",
+  "status": "mapping_only_no_network_download_or_training",
+  "aliases_path": "${PPI_SOURCE_DATA_ROOT}/raw/9606.protein.aliases.v12.0.txt.gz",
+  "aliases_bytes": 19777800,
+  "aliases_sha256": "b65f730b993ed0c1bd72edf4565d3d425db42861101b29699704810e8f125680",
+  "frozen_feature_id_source": "${PPI_SOURCE_DATA_ROOT}/processed/esm_node_features_full.csv",
+  "node_count": 19622,
+  "strict_mapping_source": "Ensembl_HGNC_entrez_id",
+  "entrez_source_row_counts": {
+    "Ensembl_HGNC_entrez_id": 19198,
+    "Ensembl_EntrezGene": 19385,
+    "Ensembl_external_synonym_EntrezGene": 141,
+    "Ensembl_EntrezGene_trans_name": 170,
+    "Ensembl_EntrezGene_Paralog": 22
+  },
+  "candidate_entrez_ids": 19190,
+  "ambiguous_entrez_ids_excluded": 8,
+  "unique_entrez_ids_in_universe": 19162,
+  "mapped_nodes": 19161,
+  "mapping_node_coverage": 0.9765059626949343,
+  "original_split_mapping_coverage": {
+    "train": {
+      "variants": 141864,
+      "variants_with_strict_entrez_mapping": 141407,
+      "proteins": 11298,
+      "proteins_with_strict_entrez_mapping": 11235,
+      "note": "Mapping availability only; presence of actual BioGRID edges not yet measured."
+    },
+    "val": {
+      "variants": 17129,
+      "variants_with_strict_entrez_mapping": 17086,
+      "proteins": 1412,
+      "proteins_with_strict_entrez_mapping": 1404,
+      "note": "Mapping availability only; presence of actual BioGRID edges not yet measured."
+    },
+    "test": {
+      "variants": 18220,
+      "variants_with_strict_entrez_mapping": 18175,
+      "proteins": 1413,
+      "proteins_with_strict_entrez_mapping": 1407,
+      "note": "Mapping availability only; presence of actual BioGRID edges not yet measured."
+    }
+  },
+  "mapping_sha256": "a8a9265042174a3d608075cd16769d88c4e001c3d19307bb973875290da090c7",
+  "node_order_sha256": "26e9635360e728d1b3b946da9826c3fadc92b7a483b8ea0ed696c066baa372d5",
+  "node_order_requires_tensor_check": true,
+  "selection": "No labels, classifier outputs, or test performance used to derive mapping."
+}

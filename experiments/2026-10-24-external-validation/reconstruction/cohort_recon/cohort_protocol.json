@@ -1,0 +1,40 @@
+{
+  "frozen_before_model_scoring": true,
+  "date": "2026-10-24",
+  "source": "UniProtKB/Swiss-Prot HUMSAVAR release2026_03,02September2026",
+  "label_rule": {
+    "LP/P": 1,
+    "LB/B": 0,
+    "US": "exclude"
+  },
+  "mapping": "Canonical UniProt accession -> exact STRING aliases -> unique graph node whose full sequence equals canonical UniProt sequence; verify reference amino acid at one-based coordinate; no positional realignment or arbitrary isoform choice",
+  "other_exclusions": [
+    "Non-single substitutions or residues outside standard20aminoacids",
+    "Explicit somatic/tumor-sample/cancer-sample annotation",
+    "Duplicate canonical variant with conflicting labels",
+    "Any overlap with all177213originalClinVar variants via UniProt+protein substitution OR STRINGnode+protein substitution OR gene+protein substitution OR dbSNP RS identity",
+    "Before scoring: among otherwise retained candidates, remove every row from a STRING node associated with multiple distinct UniProt accessions; identical paralogs do not justify arbitrary gene-context mapping."
+  ],
+  "primary": "Remaining external-source variants on proteins absent from original train and validation labelled proteins, also excluding exact amino-acid sequences already in train/validation",
+  "secondary": [
+    "All variant-disjoint mapped external-source variants, clearly noting training-protein overlap",
+    "Existing original-test-protein stratum",
+    "Proteins absent from all original labelled proteins and their exact sequences"
+  ],
+  "viability_minimum_for_primary_interval": {
+    "variants": 100,
+    "positive_variants": 20,
+    "negative_variants": 20,
+    "proteins_each_class": 20
+  },
+  "models": "Frozen original-split seed42,43,44 raw-ESM and full-STRING FPP MLPs; never refit or tune on this cohort",
+  "analysis": "Per-seed AUC/AP plus paired protein bootstrap of ensemble-mean predictions,2000replicates; report actual independent protein counts and class prevalences",
+  "limits": [
+    "Source curation can share evidence withClinVar; not independent patient cohort/prospectivevalidation",
+    "No exclusion of all externalpredictordevelopmentdata proven",
+    "Representation models assign one score per protein; this probes protein-context transfer, not residue-specific discrimination",
+    "No external fusion without real matchedCADD/AlphaMissense scores",
+    "No sequence-homology-disjoint claim beyond stated exact-sequence exclusions"
+  ],
+  "pre_inference_protocol_deviation": "cohort_protocol_deviation_before_inference.json"
+}

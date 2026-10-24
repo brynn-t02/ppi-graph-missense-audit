@@ -1,0 +1,128 @@
+{
+  "status": "ready_for_executor_node_order_check_and_fitting",
+  "time_utc": "2026-10-24T06:50:02.879986+00:00",
+  "files": [
+    {
+      "file": "BIOGRID-ALL-5.0.262.tab3.zip",
+      "bytes": 182882024,
+      "sha256": "7221dad43bd90ec24d1fca5e9e5989e021cb6dfb002a205d92cae5ca4219c86b",
+      "publish_raw": false
+    },
+    {
+      "file": "biogrid_edge_index.npy",
+      "bytes": 29806784,
+      "sha256": "2c1fceb1fb6db15110bbb0c7d5814ce5724d1fda0ebf75a70e271354a6426324",
+      "publish_raw": null
+    },
+    {
+      "file": "biogrid_bidirectional_edges.tsv.gz",
+      "bytes": 14059258,
+      "sha256": "2756456ea559c2c5f7756938a17daed6d1462c331bb945e4a60081ca88fc602c",
+      "publish_raw": null
+    },
+    {
+      "file": "biogrid_undirected_edges.tsv.gz",
+      "bytes": 7038314,
+      "sha256": "e0787090b89fb6a123f82e6a677d4b7b533cbbf9c49840d235315e943b84d79b",
+      "publish_raw": null
+    },
+    {
+      "file": "frozen_node_order.json",
+      "bytes": 470929,
+      "sha256": "26e9635360e728d1b3b946da9826c3fadc92b7a483b8ea0ed696c066baa372d5",
+      "publish_raw": null
+    },
+    {
+      "file": "entrez_to_string_unique.tsv",
+      "bytes": 620143,
+      "sha256": "a8a9265042174a3d608075cd16769d88c4e001c3d19307bb973875290da090c7",
+      "publish_raw": null
+    },
+    {
+      "file": "entrez_ambiguous.tsv",
+      "bytes": 407,
+      "sha256": "8ee2487ddd7092bd39a5f2d0861cec4a5f4819f9b5ad996f985ad27763172c84",
+      "publish_raw": null
+    },
+    {
+      "file": "mapping_audit.json",
+      "bytes": 2116,
+      "sha256": "fa243927c072ace4519c383bb104d2edfaa6999a1bcd4953bae5cb4c2491de8d",
+      "publish_raw": null
+    },
+    {
+      "file": "network_build_audit.json",
+      "bytes": 8578,
+      "sha256": "4e46e3c2930fd0cc58f26d3224c0e0ad2cde25a84d662c66a27509197d6ce550",
+      "publish_raw": null
+    },
+    {
+      "file": "string_network_overlap.json",
+      "bytes": 1008,
+      "sha256": "30b2a322877856bf46a2c43fcb31e2ab6cd0d76ed1c1213dcfa164c3a0ae53ac",
+      "publish_raw": null
+    },
+    {
+      "file": "biogrid_node_degree.tsv.gz",
+      "bytes": 134054,
+      "sha256": "615f52635e2063183474b6ada82785c561a86f0fc5416087534dbead3acb3072",
+      "publish_raw": null
+    },
+    {
+      "file": "excluded_endpoint_ids.tsv.gz",
+      "bytes": 5463,
+      "sha256": "8eeb6de411ada3fece18c59adfe22a856d26291e13497aac5358987628d8e044",
+      "publish_raw": null
+    },
+    {
+      "file": "independent_array_check.json",
+      "bytes": 363,
+      "sha256": "181c9e4160e18326161761718021ac2a47a428feb5b103b85f67a74378dc4cf6",
+      "publish_raw": null
+    },
+    {
+      "file": "BioGRID_LICENSE.txt",
+      "bytes": 1058,
+      "sha256": "32ab9d332f6922be7956767e9f32a4617135316984b2681cc24b71c1a1dda7d7",
+      "publish_raw": null
+    },
+    {
+      "file": "BioGRID_terms_and_conditions.html",
+      "bytes": 8635,
+      "sha256": "363a019082087798ff82f944df65d4dafd428ae3d200efa2da1bdfce80403a6c",
+      "publish_raw": null
+    },
+    {
+      "file": "prepare_entrez_mapping.py",
+      "bytes": 4577,
+      "sha256": "509b030787907627830319cf9453a0c52dfa7485dbc83968ae7e1d1653d64d6f",
+      "publish_raw": null
+    },
+    {
+      "file": "build_biogrid_network.py",
+      "bytes": 12357,
+      "sha256": "4e80bad9da713782eb301737be8054075369ab237b622ea198a01a0d80952bf4",
+      "publish_raw": null
+    },
+    {
+      "file": "audit_string_overlap.py",
+      "bytes": 3774,
+      "sha256": "c172d5b210f009ca8715e1b563cca2c1be2b21bd2cce472c52cdec3b47d7634c",
+      "publish_raw": null
+    },
+    {
+      "file": "network_source_and_protocol.txt",
+      "bytes": 7446,
+      "sha256": "749c8b2dea77d1a4f02b27e12a8578dced6c7d252f226a155cc42cd4d0db3e44",
+      "publish_raw": null
+    }
+  ],
+  "training_or_server_used": false,
+  "raw_archive_retained_locally": true,
+  "preferred_executor_inputs": [
+    "biogrid_edge_index.npy",
+    "frozen_node_order.json",
+    "network_build_audit.json"
+  ],
+  "required_executor_check": "Assert actual model_inputs_main.pt protein_to_idx matches frozen_node_order exactly; otherwise remap via STRING IDs in TSV before using npy."
+}

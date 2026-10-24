@@ -1,0 +1,166 @@
+{
+  "source_rows": 85015,
+  "unique_source_canonical_variants": 83859,
+  "source_labels": {
+    "LB/B": 39964,
+    "LP/P": 33333,
+    "US": 11718
+  },
+  "sequential_attrition": {
+    "retained": 40900,
+    "no_full_sequence_identity": 11386,
+    "overlaps_original_177213": 19771,
+    "uncertain_significance": 11718,
+    "redundant_source_duplicate": 299,
+    "no_accession_alias_to_graph": 633,
+    "conflicting_source_duplicate": 35,
+    "ambiguous_identical_graph_nodes": 265,
+    "not_standard_single_amino_acid_substitution": 1,
+    "cross_accession_node_collision": 7
+  },
+  "all_variant_disjoint": {
+    "variants": 40900,
+    "proteins": 9840,
+    "positive": 15950,
+    "negative": 24950,
+    "positive_proteins": 2524,
+    "negative_proteins": 8626
+  },
+  "primary_trainval_unseen": {
+    "variants": 10785,
+    "proteins": 2498,
+    "positive": 4301,
+    "negative": 6484,
+    "positive_proteins": 495,
+    "negative_proteins": 2296
+  },
+  "unseen_all_original": {
+    "variants": 6934,
+    "proteins": 1713,
+    "positive": 2555,
+    "negative": 4379,
+    "positive_proteins": 280,
+    "negative_proteins": 1617
+  },
+  "by_original_protein_stratum": {
+    "train": {
+      "variants": 27145,
+      "proteins": 6540,
+      "positive": 10689,
+      "negative": 16456,
+      "positive_proteins": 1826,
+      "negative_proteins": 5631
+    },
+    "val": {
+      "variants": 2970,
+      "proteins": 802,
+      "positive": 960,
+      "negative": 2010,
+      "positive_proteins": 203,
+      "negative_proteins": 699
+    },
+    "test": {
+      "variants": 3851,
+      "proteins": 785,
+      "positive": 1746,
+      "negative": 2105,
+      "positive_proteins": 215,
+      "negative_proteins": 679
+    },
+    "unlabelled": {
+      "variants": 6934,
+      "proteins": 1713,
+      "positive": 2555,
+      "negative": 4379,
+      "positive_proteins": 280,
+      "negative_proteins": 1617
+    }
+  },
+  "sequence_mapping_accessions": 13164,
+  "cross_accession_collision_nodes": {
+    "9606.ENSP00000291295": [
+      "P0DP23",
+      "P0DP25"
+    ]
+  },
+  "cross_accession_collision_variants": [
+    "P0DP23:N54I",
+    "P0DP23:F90L",
+    "P0DP23:N98S",
+    "P0DP23:D130G",
+    "P0DP23:E141V",
+    "P0DP25:A103V",
+    "P0DP25:D130G"
+  ],
+  "original_variant_count": 177213,
+  "old_rsid_count": 128302,
+  "clinvar_snapshot_correction": {
+    "actual_input_has_2026_evaluations": true,
+    "examples": [
+      {
+        "VariationID": "97",
+        "Name": "NM_000355.4(TCN2):c.776G>C (p.Arg259Pro)",
+        "LastEvaluated": "Feb 04, 2026",
+        "Assembly": "GRCh38"
+      },
+      {
+        "VariationID": "197",
+        "Name": "NM_001173990.3(TMEM216):c.218G>T (p.Arg73Leu)",
+        "LastEvaluated": "Jan 09, 2026",
+        "Assembly": "GRCh38"
+      },
+      {
+        "VariationID": "198",
+        "Name": "NM_001173990.3(TMEM216):c.218G>A (p.Arg73His)",
+        "LastEvaluated": "Jan 25, 2026",
+        "Assembly": "GRCh38"
+      },
+      {
+        "VariationID": "208",
+        "Name": "NM_000285.4(PEPD):c.826G>A (p.Asp276Asn)",
+        "LastEvaluated": "Jan 27, 2026",
+        "Assembly": "GRCh38"
+      },
+      {
+        "VariationID": "223",
+        "Name": "NM_000027.4(AGA):c.302C>T (p.Ala101Val)",
+        "LastEvaluated": "Jan 17, 2026",
+        "Assembly": "GRCh38"
+      },
+      {
+        "VariationID": "244",
+        "Name": "NM_000398.7(CYB5R3):c.350C>G (p.Thr117Ser)",
+        "LastEvaluated": "Feb 03, 2026",
+        "Assembly": "GRCh38"
+      },
+      {
+        "VariationID": "253",
+        "Name": "NM_004628.5(XPC):c.1001C>A (p.Pro334His)",
+        "LastEvaluated": "Jan 28, 2026",
+        "Assembly": "GRCh38"
+      },
+      {
+        "VariationID": "269",
+        "Name": "NM_001134363.3(RBM20):c.1901G>A (p.Arg634Gln)",
+        "LastEvaluated": "Jan 15, 2026",
+        "Assembly": "GRCh38"
+      },
+      {
+        "VariationID": "271",
+        "Name": "NM_001134363.3(RBM20):c.1907G>A (p.Arg636His)",
+        "LastEvaluated": "Feb 01, 2026",
+        "Assembly": "GRCh38"
+      },
+      {
+        "VariationID": "355",
+        "Name": "NM_001042492.3(NF1):c.1523T>C (p.Leu508Pro)",
+        "LastEvaluated": "Jan 18, 2026",
+        "Assembly": "GRCh38"
+      }
+    ],
+    "wording": "Retained checksum-identified ClinVar snapshot, archived03April2026; FTP Released field31March2024 does not establish the content release."
+  },
+  "no_model_scores_read": true,
+  "completed_utc": "2026-10-24T06:56:11.356186+00:00",
+  "primary_viable_for_exploratory_interval": true
+}

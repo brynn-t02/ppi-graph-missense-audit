@@ -1,0 +1,25 @@
+{
+  "url": "https://rest.uniprot.org/uniprotkb/stream?compressed=true&format=fasta&query=%28organism_id%3A9606%29%20AND%20%28reviewed%3Atrue%29",
+  "filename": "uniprot_human_reviewed_canonical_2026_03.fasta.gz",
+  "bytes": 7508673,
+  "sha256": "dc8ef8cbf0fc1b857b3be9a559613533ec49824079fb057e31fdfcf578cb229a",
+  "retrieved_utc": "2026-10-24T06:35:14.353421+00:00",
+  "headers": {
+    "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent",
+    "Cache-Control": "public, max-age=43200",
+    "Content-Type": "text/plain;format=fasta",
+    "Access-Control-Allow-Credentials": "true",
+    "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+    "X-API-Deployment-Date": "15-October-2026",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "Date": "Sat, 24 Oct 2026 06:35:02 GMT",
+    "Access-Control-Max-Age": "1728000",
+    "X-UniProt-Release": "2026_03",
+    "Transfer-Encoding": "chunked",
+    "Access-Control-Allow-Origin": "*",
+    "Connection": "close",
+    "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+    "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+    "X-UniProt-Release-Date": "02-September-2026"
+  }
+}

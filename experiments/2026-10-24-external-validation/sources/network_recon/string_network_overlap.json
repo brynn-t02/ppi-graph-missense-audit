@@ -1,0 +1,20 @@
+{
+  "string_source": "${PPI_SOURCE_DATA_ROOT}/raw/9606.protein.links.v12.0.txt.gz",
+  "string_source_bytes": 83164437,
+  "string_source_sha256": "3e22f32572211aa341d5b4bd08d30c32e693e294603202120936872f87719d4f",
+  "string_directed_rows": 13715404,
+  "string_self_rows": 0,
+  "string_duplicate_directed_rows": 0,
+  "string_undirected_nonself_pairs": 6857702,
+  "string_pairs_observed_both_directions": 6857702,
+  "biogrid_undirected_nonself_pairs": 931458,
+  "intersection_pairs": 526635,
+  "union_pairs": 7262525,
+  "biogrid_only_pairs": 404823,
+  "string_only_pairs": 6331067,
+  "jaccard": 0.07251403609626128,
+  "fraction_biogrid_pairs_in_string": 0.5653878113666961,
+  "fraction_string_pairs_in_biogrid": 0.07679467553416582,
+  "node_order_requires_tensor_check": true,
+  "interpretation": "Alternative network robustness: graph source, coverage, density and release dates differ. Shared primary interaction evidence prevents evidence-independent interpretation."
+}

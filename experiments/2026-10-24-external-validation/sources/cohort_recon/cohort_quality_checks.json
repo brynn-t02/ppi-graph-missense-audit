@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "all_variant_disjoint_rows": 40900,
+  "primary_rows": 10785,
+  "unseen_all_original_rows": 6934,
+  "checks": [
+    "unique external protein-substitution identities",
+    "one retained UniProt accession per STRING node; all7 flagged collision rows excluded",
+    "primary/strict CSV hashes unchanged by repair",
+    "whole canonical sequence matches frozen STRING sequence",
+    "reference amino acid and class match",
+    "dbSNP site overlap absent",
+    "primary train/validation protein and exact-sequence exclusion",
+    "strict sensitivity excludes all original labelled proteins and their exact sequences",
+    "nested populations",
+    "all frozen output hashes match"
+  ],
+  "node_index_caveat": "Inference must separately assert every row node_index equals actual model_inputs_main.pt protein_to_idx; candidate table mapping currently derives sorted frozen feature identifiers."
+}

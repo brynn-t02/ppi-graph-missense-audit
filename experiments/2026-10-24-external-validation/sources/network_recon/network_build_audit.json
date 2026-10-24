@@ -1,0 +1,245 @@
+{
+  "status": "graph_built_no_fitting",
+  "created_at_utc": "2026-10-24T06:47:47.651630+00:00",
+  "source": {
+    "release": "5.0.262",
+    "compiled_date": "2026-09-25",
+    "release_date": "2026-10-01",
+    "url": "https://downloads.thebiogrid.org/Download/BioGRID/Release-Archive/BIOGRID-5.0.262/BIOGRID-ALL-5.0.262.tab3.zip",
+    "download_http_status": 200,
+    "bytes": 182882024,
+    "sha256": "7221dad43bd90ec24d1fca5e9e5989e021cb6dfb002a205d92cae5ca4219c86b",
+    "zip_member": "BIOGRID-ALL-5.0.262.tab3.txt",
+    "zip_member_bytes": 1563413736,
+    "zip_member_crc32": "1a667099",
+    "zip_member_crc_verified_by_full_read": true,
+    "license": "MIT"
+  },
+  "filter_counts": {
+    "input_rows": 2950299,
+    "human_human_rows": 1319164,
+    "human_human_physical_rows": 1298722,
+    "eligible_protein_physical_rows": 1262564,
+    "both_endpoints_uniquely_mapped_rows": 1241565,
+    "retained_nonself_evidence_rows": 1232462,
+    "excluded_mapped_selfinteraction_rows": 9103,
+    "excluded_unmapped_endpoint_rows": 20285,
+    "duplicate_pair_evidence_rows": 301004,
+    "excluded_ambiguous_endpoint_rows": 714,
+    "excluded_non_human_human": 1631135,
+    "excluded_rna_method_rows": 36158,
+    "excluded_nonphysical_human_human": 20442
+  },
+  "human_physical_system_counts": {
+    "Two-hybrid": 116153,
+    "Affinity Capture-Western": 86424,
+    "Reconstituted Complex": 43141,
+    "FRET": 2734,
+    "Co-purification": 1806,
+    "Protein-peptide": 3689,
+    "Co-localization": 5217,
+    "Affinity Capture-MS": 688614,
+    "Biochemical Activity": 14382,
+    "Affinity Capture-RNA": 27169,
+    "Co-crystal Structure": 2073,
+    "Far Western": 748,
+    "Co-fractionation": 74025,
+    "Protein-RNA": 8989,
+    "Affinity Capture-Luminescence": 2034,
+    "PCA": 1423,
+    "Proximity Label-MS": 184721,
+    "Cross-Linking-MS (XL-MS)": 35369,
+    "Surface Display": 11
+  },
+  "retained_nonself_evidence_system_counts": {
+    "Two-hybrid": 111261,
+    "Affinity Capture-Western": 84571,
+    "Reconstituted Complex": 41632,
+    "FRET": 2476,
+    "Co-purification": 1668,
+    "Protein-peptide": 3636,
+    "Co-localization": 5104,
+    "Affinity Capture-MS": 674338,
+    "Biochemical Activity": 13048,
+    "Co-crystal Structure": 1601,
+    "Far Western": 726,
+    "Co-fractionation": 73104,
+    "Affinity Capture-Luminescence": 1986,
+    "PCA": 1342,
+    "Proximity Label-MS": 182532,
+    "Cross-Linking-MS (XL-MS)": 33426,
+    "Surface Display": 11
+  },
+  "retained_source_database_counts": {
+    "BIOGRID": 1232462
+  },
+  "excluded_rna_methods_casefold": [
+    "affinity capture-rna",
+    "protein-rna"
+  ],
+  "graph": {
+    "total_nodes_including_isolates": 19622,
+    "nonisolated_nodes": 18220,
+    "isolates": 1402,
+    "undirected_nonself_edges": 931458,
+    "directed_nonself_edges": 1862916,
+    "connected_components_including_isolates": 1404,
+    "largest_component_nodes": 18218,
+    "density_undirected": 0.004838701860141642,
+    "degree_mean": 94.94016919783915,
+    "degree_quantiles": {
+      "0": 0,
+      "0.25": 10.0,
+      "0.5": 38.0,
+      "0.75": 109.0,
+      "0.9": 234.0,
+      "0.95": 364.9500000000007,
+      "0.99": 776.7400000000052,
+      "1": 4775
+    }
+  },
+  "split_edge_coverage": {
+    "original": {
+      "train": {
+        "variants": 141864,
+        "variants_with_edge": 139850,
+        "proteins": 11298,
+        "proteins_with_edge": 10834
+      },
+      "val": {
+        "variants": 17129,
+        "variants_with_edge": 16913,
+        "proteins": 1412,
+        "proteins_with_edge": 1360
+      },
+      "test": {
+        "variants": 18220,
+        "variants_with_edge": 18006,
+        "proteins": 1413,
+        "proteins_with_edge": 1364
+      },
+      "direct_train_test_undirected_edges": 78942
+    },
+    "homology": {
+      "train": {
+        "variants": 141864,
+        "variants_with_edge": 140267,
+        "proteins": 7370,
+        "proteins_with_edge": 7018
+      },
+      "val": {
+        "variants": 17129,
+        "variants_with_edge": 16754,
+        "proteins": 3315,
+        "proteins_with_edge": 3213
+      },
+      "test": {
+        "variants": 18220,
+        "variants_with_edge": 17748,
+        "proteins": 3438,
+        "proteins_with_edge": 3327
+      },
+      "direct_train_test_undirected_edges": 127026
+    }
+  },
+  "mapping_sha256": "a8a9265042174a3d608075cd16769d88c4e001c3d19307bb973875290da090c7",
+  "node_order_sha256": "26e9635360e728d1b3b946da9826c3fadc92b7a483b8ea0ed696c066baa372d5",
+  "node_order_requires_tensor_check": true,
+  "operator_requirement": "E contains both directions; add I then symmetrize and normalize identically to frozen full STRING operator. No pre-existing self edges.",
+  "source_nonindependence": "STRING integrates BioGRID evidence; this is an alternative network, not evidence-independent replication.",
+  "string_overlap_status": "complete_exact_local_source_scan",
+  "files": {
+    "biogrid_undirected_edges.tsv.gz": {
+      "bytes": 7038314,
+      "sha256": "e0787090b89fb6a123f82e6a677d4b7b533cbbf9c49840d235315e943b84d79b"
+    },
+    "biogrid_bidirectional_edges.tsv.gz": {
+      "bytes": 14059258,
+      "sha256": "2756456ea559c2c5f7756938a17daed6d1462c331bb945e4a60081ca88fc602c"
+    },
+    "biogrid_edge_index.npy": {
+      "bytes": 29806784,
+      "sha256": "2c1fceb1fb6db15110bbb0c7d5814ce5724d1fda0ebf75a70e271354a6426324"
+    },
+    "biogrid_node_degree.tsv.gz": {
+      "bytes": 134054,
+      "sha256": "615f52635e2063183474b6ada82785c561a86f0fc5416087534dbead3acb3072"
+    },
+    "excluded_endpoint_ids.tsv.gz": {
+      "bytes": 5463,
+      "sha256": "8eeb6de411ada3fece18c59adfe22a856d26291e13497aac5358987628d8e044"
+    },
+    "build_biogrid_network.py": {
+      "bytes": 12357,
+      "sha256": "4e80bad9da713782eb301737be8054075369ab237b622ea198a01a0d80952bf4"
+    },
+    "string_network_overlap.json": {
+      "bytes": 1008,
+      "sha256": "30b2a322877856bf46a2c43fcb31e2ab6cd0d76ed1c1213dcfa164c3a0ae53ac"
+    },
+    "audit_string_overlap.py": {
+      "bytes": 3774,
+      "sha256": "c172d5b210f009ca8715e1b563cca2c1be2b21bd2cce472c52cdec3b47d7634c"
+    },
+    "BioGRID_LICENSE.txt": {
+      "bytes": 1058,
+      "sha256": "32ab9d332f6922be7956767e9f32a4617135316984b2681cc24b71c1a1dda7d7"
+    },
+    "BioGRID_terms_and_conditions.html": {
+      "bytes": 8635,
+      "sha256": "363a019082087798ff82f944df65d4dafd428ae3d200efa2da1bdfce80403a6c"
+    },
+    "prepare_entrez_mapping.py": {
+      "bytes": 4577,
+      "sha256": "509b030787907627830319cf9453a0c52dfa7485dbc83968ae7e1d1653d64d6f"
+    },
+    "independent_array_check.json": {
+      "bytes": 363,
+      "sha256": "181c9e4160e18326161761718021ac2a47a428feb5b103b85f67a74378dc4cf6"
+    }
+  },
+  "string_overlap": {
+    "string_source": "${PPI_SOURCE_DATA_ROOT}/raw/9606.protein.links.v12.0.txt.gz",
+    "string_source_bytes": 83164437,
+    "string_source_sha256": "3e22f32572211aa341d5b4bd08d30c32e693e294603202120936872f87719d4f",
+    "string_directed_rows": 13715404,
+    "string_self_rows": 0,
+    "string_duplicate_directed_rows": 0,
+    "string_undirected_nonself_pairs": 6857702,
+    "string_pairs_observed_both_directions": 6857702,
+    "biogrid_undirected_nonself_pairs": 931458,
+    "intersection_pairs": 526635,
+    "union_pairs": 7262525,
+    "biogrid_only_pairs": 404823,
+    "string_only_pairs": 6331067,
+    "jaccard": 0.07251403609626128,
+    "fraction_biogrid_pairs_in_string": 0.5653878113666961,
+    "fraction_string_pairs_in_biogrid": 0.07679467553416582,
+    "node_order_requires_tensor_check": true,
+    "interpretation": "Alternative network robustness: graph source, coverage, density and release dates differ. Shared primary interaction evidence prevents evidence-independent interpretation."
+  },
+  "license_receipt": {
+    "source_url": "https://wiki.thebiogrid.org/doku.php/terms_and_conditions",
+    "source_saved": "BioGRID_terms_and_conditions.html",
+    "license_text": "BioGRID_LICENSE.txt",
+    "notice_extracted_verbatim": true,
+    "linked_storage_domain_download": "two TLS attempts failed; official wiki license page downloaded successfully",
+    "checked_at_utc": "2026-10-24T06:49:28.446872+00:00"
+  },
+  "independent_array_check": {
+    "status": "passed",
+    "array_shape": [
+      2,
+      1862916
+    ],
+    "dtype": "int64",
+    "no_self_edges": true,
+    "no_duplicate_directed_edges": true,
+    "both_directions_each_pair": true,
+    "node_count": 19622,
+    "indices_in_bounds": true,
+    "isolates": 1402,
+    "node_order_vs_actual_model_pt": "executor_check_pending",
+    "verification_library": "numpy 2.3.5"
+  }
+}

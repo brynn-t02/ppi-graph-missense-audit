@@ -1,0 +1,20 @@
+{
+  "url": "https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/docs/humsavar.txt",
+  "filename": "humsavar_2026_03.txt",
+  "bytes": 8710628,
+  "sha256": "68ce06dc07c59e2c2318aafe9fba356e6f5f57293fd83f53c12e354d557c9fa9",
+  "retrieved_utc": "2026-10-24T06:35:03.408910+00:00",
+  "headers": {
+    "Date": "Sat, 24 Oct 2026 06:35:01 GMT",
+    "Server": "Apache/2.4.68 (Ubuntu) OpenSSL/3.0.13",
+    "Last-Modified": "Thu, 03 Sep 2026 18:00:00 GMT",
+    "ETag": "\"84e9e4-65a97eba0a800\"",
+    "Accept-Ranges": "bytes",
+    "Content-Length": "8710628",
+    "Vary": "Accept-Encoding",
+    "Strict-Transport-Security": "max-age=31536000",
+    "Access-Control-Allow-Origin": "*",
+    "Connection": "close",
+    "Content-Type": "text/plain"
+  }
+}

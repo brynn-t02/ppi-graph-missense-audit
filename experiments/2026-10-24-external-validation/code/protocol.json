@@ -1,0 +1,58 @@
+{
+  "version": "20261024-pre-inference-1",
+  "question": "Does frozen protein-context prediction transfer to an external variant source, and are existing representation/fusion conclusions robust to a second PPI network?",
+  "authorized_scope": "Perform both feasible strengthening experiments; report results before any manuscript editing.",
+  "planned_new_fits": 9,
+  "seeds": [42, 43, 44],
+  "new_arms": [
+    {"split": "original", "arm": "BioGRID_FPP", "input_dimension": 1280},
+    {"split": "original_fusion", "arm": "scores_plus_BioGRID_FPP", "input_dimension": 1283},
+    {"split": "homology", "arm": "scores_plus_BioGRID_FPP", "input_dimension": 1283}
+  ],
+  "training": {
+    "existing_module": "../../code/run_matched_experiments.py",
+    "classifier": "MLP: input->512->128->1, ReLU, dropout0.3",
+    "optimizer": "Adam lr0.001 weight_decay0.00001",
+    "loss": "BCEWithLogitsLoss, training negatives/positives weight",
+    "batch_size": 1024,
+    "max_epochs": 50,
+    "early_stop_patience": 5,
+    "selection": "strict validation AUC improvement; test evaluated only at selected checkpoint",
+    "matched_baselines": "Reuse verified 48-fit raw/STRING/scores controls, with checkpoint hashes; no retuning."
+  },
+  "network": {
+    "source": "BioGRID5.0.262, released2026-10-01",
+    "nodes": 19622,
+    "undirected_edges": 931458,
+    "isolates": 1402,
+    "selection": "Both human; physical; exclude Affinity Capture-RNA/Protein-RNA; unique Entrez-to-frozen-STRING aliases; remove self edges; deduplicate unordered pairs. All original nodes and test rows retained.",
+    "operator": "Bidirectional E, A=(E+I)+(E+I)^T, weighted symmetric degree normalization S; FPP=(X+SX+S^2X)/3.",
+    "gates": ["Verify complete transfer hashes", "Map frozen graph node identifiers against actual tensor protein_to_idx; remap if necessary", "Check finite, symmetric, duplicate-free nonself edges", "Isolated-node propagated features equal raw features", "Smoke representation and fusion with no test tuning"],
+    "interpretation": "Alternative-network robustness, not evidence-independent replication; BioGRID and STRING share evidence and differ in density, coverage and release."
+  },
+  "external_cohort": {
+    "source": "UniProtKB/Swiss-Prot HUMSAVAR2026_03,02September2026",
+    "construction_protocol": "../cohort_recon/cohort_protocol.json",
+    "pre_inference_collision_repair": "Exclude7ambiguous CALM accession/node rows; primary and strict subsets unchanged",
+    "primary": {"file": "external_cohort_primary.csv", "n": 10785, "proteins": 2498, "positive": 4301, "negative": 6484},
+    "strict": {"file": "external_cohort_unseen_all_original.csv", "n": 6934, "proteins": 1713, "positive": 2555, "negative": 4379},
+    "descriptive_all": {"file": "external_cohort_all_variant_disjoint.csv", "n": 40900, "proteins": 9840},
+    "models": "Frozen original-split raw_ESM, full_FPP STRING, and new BioGRID_FPP checkpoints; each seeds42,43,44. No external fitting or tuning.",
+    "positive_control": "Reproduce archived six raw/STRING checkpoint validation/test metrics before external evaluation.",
+    "primary_exclusion": "All original variant overlaps by accession+AA, STRING+AA, gene+AA or rsID; original train/validation protein and exact-sequence overlap.",
+    "strict_exclusion": "Also remove all original test labelled proteins and their exact sequences.",
+    "limits": ["External curated source, not independent patients or prospective evaluation", "Shared underlying source evidence cannot be excluded", "No full homology-disjoint or predictor-development-disjoint claim", "Protein-context models assign identical predictions to variants in the same protein", "Protein-defined substitutions need not all correspond to single nucleotide variants", "No external fusion evaluation without real matched clinical scores"]
+  },
+  "analysis": {
+    "metrics": ["ROC AUC", "average precision"],
+    "seed_summary": "All3seeds, arithmetic mean and sample SD(ddof1), no best-seed selection",
+    "ensemble": "Mean probability across3seeds",
+    "bootstrap": {"repeats": 2000, "seed": 20261024, "unit": "STRING protein, paired cluster resampling with all variants and cluster multiplicity", "interval": "percentile95%", "scope": "Conditional on fixed trained ensembles; no retraining uncertainty, exploratory comparisons without multiplicity adjustment"},
+    "network_pairs": "BioGRID vs STRING/raw for original representation; BioGRID fusion vs STRING/raw/scores fusion on both original and homology splits.",
+    "external_pairs": "BioGRID vs STRING, BioGRID vs raw, STRING vs raw; primary and strict emphasized, all variant-disjoint descriptive due to training-protein overlap.",
+    "subsets": "All frozen test rows primary; network coverage descriptive only, no outcome-chosen exclusions."
+  },
+  "storage": "New raw data, tensors, models, predictions and full logs remain on dedicated server; local code/configuration and small result summaries only.",
+  "manuscript_changes": false,
+  "known_provenance_correction": "The retained original ClinVar raw input includes2026LastEvaluateddates; 2024-03-31 cannot be asserted as actual content release. Record this issue without editing paper in this experiment turn."
+}

@@ -1,0 +1,66 @@
+{
+  "stage": "before_any_model_inference",
+  "reason": "Independent source mapping audit found distinct UniProt accessions sharing a STRING node. Exact amino-acid sequence identity alone cannot identify gene context for identical paralogs.",
+  "old_all_rows": 40907,
+  "expected_excluded_rows": 7,
+  "expected_primary_change": 0,
+  "expected_strict_change": 0,
+  "rule": "After all existing variant exclusions and deduplication, remove every candidate row on a STRING node associated with more than one distinct UniProt accession among otherwise retained candidates. No arbitrary accession selection.",
+  "affected": [
+    {
+      "external_id": "P0DP23:N54I",
+      "uniprot_id": "P0DP23",
+      "gene": "CALM1",
+      "STRING_protein_id": "9606.ENSP00000291295",
+      "label": "1"
+    },
+    {
+      "external_id": "P0DP23:F90L",
+      "uniprot_id": "P0DP23",
+      "gene": "CALM1",
+      "STRING_protein_id": "9606.ENSP00000291295",
+      "label": "1"
+    },
+    {
+      "external_id": "P0DP23:N98S",
+      "uniprot_id": "P0DP23",
+      "gene": "CALM1",
+      "STRING_protein_id": "9606.ENSP00000291295",
+      "label": "1"
+    },
+    {
+      "external_id": "P0DP23:D130G",
+      "uniprot_id": "P0DP23",
+      "gene": "CALM1",
+      "STRING_protein_id": "9606.ENSP00000291295",
+      "label": "1"
+    },
+    {
+      "external_id": "P0DP23:E141V",
+      "uniprot_id": "P0DP23",
+      "gene": "CALM1",
+      "STRING_protein_id": "9606.ENSP00000291295",
+      "label": "1"
+    },
+    {
+      "external_id": "P0DP25:A103V",
+      "uniprot_id": "P0DP25",
+      "gene": "CALM3",
+      "STRING_protein_id": "9606.ENSP00000291295",
+      "label": "1"
+    },
+    {
+      "external_id": "P0DP25:D130G",
+      "uniprot_id": "P0DP25",
+      "gene": "CALM3",
+      "STRING_protein_id": "9606.ENSP00000291295",
+      "label": "1"
+    }
+  ],
+  "prior_candidate_hashes": {
+    "external_cohort_all_variant_disjoint.csv": "469ea2a049def36a01edbedb92652ef7956e3a061e4fb6e41581dd027e212da2",
+    "external_cohort_primary.csv": "02b609336fa8bcb0400dede2e5688f8e6c1831454a8ae5ae08a9c8d85705bbe8",
+    "external_cohort_unseen_all_original.csv": "e5dafa8013288a45413f410a8ca2643e500a91d02cd612c1ec983e067b979d5e"
+  },
+  "recorded_utc": "2026-10-24T06:55:37.109333+00:00"
+}
