@@ -1,0 +1,41 @@
+{
+  "full_saved_vs_recomputed_16_columns_max_abs_error": 1.4901161193847656e-07,
+  "operator": "A=(edge+I)+(edge+I)^T with duplicate weights summed, D from weighted row sums; FPP=(X+SX+S^2X)/3",
+  "historical_control_difference": "Old controls used (edge+edge.T+I); rerun uses full operator for ALL graph arms.",
+  "edge_ablated_FPP": {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/derived_embeddings/edge_ablated_FPP.pt",
+    "sha256": "52aaf62c2549e10b301b919644f51d614c888cd4e13a7ddeab2b6aee3040004c",
+    "shape": [
+      19622,
+      1280
+    ],
+    "historical_embedding_reused": false
+  },
+  "permuted_FPP_g0": {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/derived_embeddings/permuted_FPP_g0.pt",
+    "sha256": "30cc43cc962fd3a2b01bcceb05cef903d85ca891846aa553e6d4f87804c1da2f",
+    "shape": [
+      19622,
+      1280
+    ],
+    "historical_embedding_reused": false
+  },
+  "permuted_FPP_g1": {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/derived_embeddings/permuted_FPP_g1.pt",
+    "sha256": "6665a5d58cf6a7c491ba6003403b2941e9fa7e00e0a4f853b3b68ed82cbe4309",
+    "shape": [
+      19622,
+      1280
+    ],
+    "historical_embedding_reused": false
+  },
+  "permuted_FPP_g2": {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/derived_embeddings/permuted_FPP_g2.pt",
+    "sha256": "316fc4a5eb3dc387fa19730733b848a7c2e9924fba193dcbd5fed7d0affafbea",
+    "shape": [
+      19622,
+      1280
+    ],
+    "historical_embedding_reused": false
+  }
+}

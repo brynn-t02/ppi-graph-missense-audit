@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "cohorts": {
+    "all_variant_disjoint": {
+      "rows": 40900,
+      "positives": 15950,
+      "proteins": 9840,
+      "declared_index_values_replaced": 0,
+      "mapping_policy": "All indices derived from actual model protein_to_idx via STRING ID."
+    },
+    "primary": {
+      "rows": 10785,
+      "positives": 4301,
+      "proteins": 2498,
+      "declared_index_values_replaced": 0,
+      "mapping_policy": "All indices derived from actual model protein_to_idx via STRING ID."
+    },
+    "strict_unseen_all_original": {
+      "rows": 6934,
+      "positives": 2555,
+      "proteins": 1713,
+      "declared_index_values_replaced": 0,
+      "mapping_policy": "All indices derived from actual model protein_to_idx via STRING ID."
+    }
+  },
+  "subset_metadata_consistent": true,
+  "existing_source_overlap_checks_retained": true,
+  "not_independent_patient_cohort": true
+}

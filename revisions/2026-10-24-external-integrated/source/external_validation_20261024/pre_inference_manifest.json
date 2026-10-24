@@ -1,0 +1,81 @@
+{
+  "created_utc": "2026-10-24T07:15:14.229364+00:00",
+  "input_signature": "77852839932396cc835403d1794f80ab96976d8409d69a6b3399a6e7da94d3e0",
+  "files": {
+    "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/code/protocol.json": {
+      "bytes": 5227,
+      "sha256": "dc20f27363b9e6fb2df732d558f25a45237f7cb8d1113f33bbf2b29278b82352"
+    },
+    "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/code/run_external_validation.py": {
+      "bytes": 24709,
+      "sha256": "296857741514346d3e61f170e7eb7e468004734dc12c20474a652755a69765bd"
+    },
+    "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/network_recon/biogrid_edge_index.npy": {
+      "bytes": 29806784,
+      "sha256": "2c1fceb1fb6db15110bbb0c7d5814ce5724d1fda0ebf75a70e271354a6426324"
+    },
+    "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/network_recon/frozen_node_order.json": {
+      "bytes": 470929,
+      "sha256": "26e9635360e728d1b3b946da9826c3fadc92b7a483b8ea0ed696c066baa372d5"
+    },
+    "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/network_recon/network_build_audit.json": {
+      "bytes": 8578,
+      "sha256": "4e46e3c2930fd0cc58f26d3224c0e0ad2cde25a84d662c66a27509197d6ce550"
+    },
+    "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/cohort_recon/cohort_final_freeze.json": {
+      "bytes": 3614,
+      "sha256": "f302483919f21aa1a0fc64472bb675f31d449fb5a198a636cb50333014dfc431"
+    },
+    "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/cohort_recon/cohort_protocol.json": {
+      "bytes": 2546,
+      "sha256": "c7b1d791dfbace0523b7828dca668349dc9f0a3aadf91f6d636e818a74b052ea"
+    },
+    "/Data/u40902/TYX/ppi_audit_20261024/code/run_matched_experiments.py": {
+      "bytes": 12609,
+      "sha256": "020c71b5d97b1fe00a23a4d3e074615cb5798884a4130fdaa7925d8f1eff7edd"
+    },
+    "/Data/u40902/TYX/ppi_audit_20261024/code/input_manifest.json": {
+      "bytes": 3263,
+      "sha256": "9b82367bf2e662666cf8dc9ef4dd6438f1fd3cbb032b6cb5a42899df33eea514"
+    },
+    "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/cohort_recon/external_cohort_all_variant_disjoint.csv": {
+      "bytes": 5796102,
+      "sha256": "4112d1dec2803423ab43c1fe82f9f98a99b41adce452517b7dcf64327e8ee048"
+    },
+    "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/cohort_recon/external_cohort_primary.csv": {
+      "bytes": 1540878,
+      "sha256": "02b609336fa8bcb0400dede2e5688f8e6c1831454a8ae5ae08a9c8d85705bbe8"
+    },
+    "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/cohort_recon/external_cohort_unseen_all_original.csv": {
+      "bytes": 997099,
+      "sha256": "e5dafa8013288a45413f410a8ca2643e500a91d02cd612c1ec983e067b979d5e"
+    },
+    "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/raw_ESM/seed_42/model.pt": {
+      "bytes": 2888820,
+      "sha256": "c5e62f4f7e1d848672c6594c467fe3ab0b194f556d5d3d2440dbe1a5a1b0b9b0"
+    },
+    "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/raw_ESM/seed_43/model.pt": {
+      "bytes": 2888820,
+      "sha256": "772877e46c050c188e1fe80137cc3684b38fbb34541c4aa7b9bfdc0e496c7c1b"
+    },
+    "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/raw_ESM/seed_44/model.pt": {
+      "bytes": 2888820,
+      "sha256": "50ae990c85b67dce4d158eaabf3d09c5dec069bab1a12ba5b675e1c459b5828a"
+    },
+    "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/full_FPP/seed_42/model.pt": {
+      "bytes": 2888820,
+      "sha256": "b208b66ed92c9ec609f1b3ebb5550218aadd720b089745fcafd1761ec2dcfcdd"
+    },
+    "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/full_FPP/seed_43/model.pt": {
+      "bytes": 2888820,
+      "sha256": "a4472bcfac34fab4354a1930ed12cae524eb37572c1579da29075147c114293f"
+    },
+    "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/full_FPP/seed_44/model.pt": {
+      "bytes": 2888820,
+      "sha256": "ec440fd5490a88aa96e964c3503f24c77413f79019b723de3d6ba5c3a461a0e0"
+    }
+  },
+  "old_checkpoint_count": 6,
+  "planned_new_fits": 9,
+  "selection": "Protocol and cohort frozen before any new classifier scoring; no test-selected source/filter/seed."
+}

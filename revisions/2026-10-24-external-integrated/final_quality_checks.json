@@ -1,0 +1,88 @@
+{
+  "page_limit": 8,
+  "documents": {
+    "named_workshop": {
+      "pages": 7,
+      "sha256": "50576d67083b8f3ea53d5f39e63cb69e855b85601c0d8f07fa67820098204d14",
+      "text_and_author_checks": true,
+      "font_embedding": {
+        "/IHAIZV+LMRoman17-Regular-Identity-H": true,
+        "/BZIVMZ+LMRoman12-Regular-Identity-H": true,
+        "/IXFAWU+LMRoman8-Regular-Identity-H": true,
+        "/TQTHRL+LMRoman10-Regular-Identity-H": true,
+        "/YEUUOC+LMRoman7-Regular-Identity-H": true,
+        "/AKHCZK+LMRoman9-Regular-Identity-H": true,
+        "/VDVGTR+CMMI10": true,
+        "/CAFSZL+CMR10": true,
+        "/DDIEWW+CMR7": true,
+        "/FKPJSN+CMSY7": true,
+        "/PVTTLK+CMR5": true,
+        "/JAGKKY+CMEX10": true,
+        "/NOMARO+CMSY10": true,
+        "/EVICAO+DejaVuSans-Bold": true,
+        "/BMQQDV+DejaVuSans": true
+      }
+    },
+    "named_supplementary": {
+      "pages": 19,
+      "sha256": "43c085313d727ca5e201a55a11757770b7369cb63e261fa69cbe9dda266e1b6e",
+      "text_and_author_checks": true,
+      "font_embedding": {
+        "/Helvetica": false,
+        "/AAAAAA+DejaVuSerif": true,
+        "/AAAAAA+DejaVuSerif-Bold": true,
+        "/AAAAAA+DejaVuSansMono": true
+      }
+    },
+    "anonymous_workshop": {
+      "pages": 7,
+      "sha256": "ac384242e729e00d5f0d5c5f41fde384696779965c44be8ddeefd850460c9508",
+      "text_and_author_checks": true,
+      "font_embedding": {
+        "/IHAIZV+LMRoman17-Regular-Identity-H": true,
+        "/BZIVMZ+LMRoman9-Regular-Identity-H": true,
+        "/IXFAWU+LMRoman10-Regular-Identity-H": true,
+        "/YEUUOC+CMMI10": true,
+        "/AKHCZK+CMR10": true,
+        "/VDVGTR+CMR7": true,
+        "/CAFSZL+CMSY7": true,
+        "/DDIEWW+CMR5": true,
+        "/FKPJSN+CMEX10": true,
+        "/TQTHRL+LMRoman8-Regular-Identity-H": true,
+        "/PVTTLK+CMSY10": true,
+        "/EVICAO+DejaVuSans-Bold": true,
+        "/BMQQDV+DejaVuSans": true
+      }
+    },
+    "anonymous_supplementary": {
+      "pages": 19,
+      "sha256": "189bbe8d5d2f3e0da22dc10926759be6bf89f5e9a732f620c42915329d9e10af",
+      "text_and_author_checks": true,
+      "font_embedding": {
+        "/Helvetica": false,
+        "/AAAAAA+DejaVuSerif": true,
+        "/AAAAAA+DejaVuSerif-Bold": true,
+        "/AAAAAA+DejaVuSansMono": true
+      }
+    }
+  },
+  "new_fits_this_editorial_turn": 0,
+  "previous_fits_used": 57,
+  "main_figures": 3,
+  "visual_review": "All named and anonymous main pages visually inspected. All19 named supplement pages and anonymous page1/new pages14\u201319 inspected; corresponding new pages identical before footer edition update. Final footer updated and rechecked. No overlaps/clipping; compact6-panel labels remain legible.",
+  "evidence_review": {
+    "new_seed_summaries_independently_checked": 20,
+    "seed_rows": 60,
+    "paired_ensemble_differences_independently_checked": 17,
+    "arithmetic_max_discrepancy": 2.220446049250313e-16,
+    "bootstrap_replicates_per_comparison": 2000,
+    "full_bootstrap_not_rerun_for_editorial_integration": true,
+    "old_results_preserved": true
+  },
+  "figure_repairs": [
+    "Figure1 legends and delta labels separated; full historical error range visible",
+    "Figure2 homology legend moved off bars; diagram labels wrapped",
+    "Historical figuresS1/S2 redrawn for readability; numeric inputs unchanged",
+    "New Figure 3: directJSON-driven external/network ensemble AUC and protein-bootstrap intervals"
+  ]
+}

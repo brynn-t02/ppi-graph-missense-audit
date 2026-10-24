@@ -1,0 +1,44 @@
+{
+  "historical_source": "/Users/teyian/Documents/paper1/server_snapshot_full/root/data/processed/core_repeated_benchmarks/per_repeat_results.json",
+  "source_sha256": "e73b125807d5567829304cbd5f084d4ad07f0edac3f16e431a954786786cd150",
+  "runs_compared": 6,
+  "checks": [
+    {
+      "arm": "raw_ESM",
+      "seed": 42,
+      "metric_max_abs_difference": 0.0,
+      "selected_epoch_matches": true
+    },
+    {
+      "arm": "raw_ESM",
+      "seed": 43,
+      "metric_max_abs_difference": 0.0,
+      "selected_epoch_matches": true
+    },
+    {
+      "arm": "raw_ESM",
+      "seed": 44,
+      "metric_max_abs_difference": 0.0,
+      "selected_epoch_matches": true
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 42,
+      "metric_max_abs_difference": 0.0,
+      "selected_epoch_matches": true
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 43,
+      "metric_max_abs_difference": 0.0,
+      "selected_epoch_matches": true
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 44,
+      "metric_max_abs_difference": 0.0,
+      "selected_epoch_matches": true
+    }
+  ],
+  "interpretation": "These six positive-control fits reproduce saved historical metrics and selected epochs to <1e-12 in the restored runtime. This does not establish the environment used for every other historical run."
+}

@@ -1,0 +1,146 @@
+--- workshop-focused/main.tex
++++ external-integrated/main.tex
+@@ -31,7 +31,7 @@
+ 
+ \begin{abstract}
+ \bfseries\boldmath
+-We audit whether fixed two-hop protein-feature propagation (FPP) improves missense variant pathogenicity prediction on 177,213 ClinVar variants and one STRING functional-association network. FPP has no learned graph parameters. Under matched training conditions, mean AUC increased from 0.7835 for raw protein embeddings to 0.7950 for FPP, but protein-clustered uncertainty included zero gain. Connectivity and topology-permutation controls showed sensitivity to graph construction and protein--topology correspondence. With CADD and AlphaMissense, FPP improved over raw-embedding fusion, while its advantage over edge-ablated fusion remained uncertain. Under homology-aware splitting, repeated fusion runs established neither benefit nor consistent harm over the score baseline. Topology profiles and prediction changes remain exploratory. These findings support matched controls and split-aware uncertainty; they do not establish limits on trained graph models or generalize beyond this dataset and network.
++We audit fixed two-hop protein-feature propagation (FPP) for missense variant pathogenicity prediction using 177,213 ClinVar variants, an external UniProt variant source and two networks. FPP has no learned graph parameters. Matched STRING controls show sensitivity to connectivity and protein--topology correspondence. STRING fusion improves over raw-embedding fusion on the original split, whereas its homology-aware gains over strong variant scores remain uncertain. On 10,785 external variants, STRING increases mean AUC from 0.6932 to 0.7304; the ensemble gain is +0.0375 with a protein-bootstrap 95\% interval of [+0.0173, +0.0564]. A stricter nested subset supports the same direction. BioGRID does not establish external gains over raw embeddings or incremental fusion gains over raw-embedding fusion. These results support external-source transfer for STRING under the stated exclusions and sensitivity to network choice. They concern transductive protein-context features, not within-protein substitution discrimination or the performance of trained graph models.
+ 
+ \end{abstract}
+ 
+@@ -48,13 +48,13 @@
+ 
+ A shared-graph setting mixes several effects. Train, validation and test variants may have distinct protein identifiers while their proteins remain directly connected in the same STRING graph. Related proteins may also cross partitions when homology is not explicitly controlled \cite{Littmann2022ProteinMLTips,Teufel2023GraphPart}. Strong variant-effect predictors such as CADD and AlphaMissense can further reduce the marginal contribution of graph propagation. We evaluate protein-topology correspondence, graph connectivity, protein-level uncertainty, homology-aware performance and complementarity to established predictors.
+ 
+-We audit raw ESM, fixed propagation, external scores and fusion models on a reconstructed ClinVar-STRING dataset. The contribution is an evaluation study: it combines graph-intervention controls with capacity-matched fusion and protein-clustered uncertainty, documents sensitivities to split and comparison protocol, and describes exploratory topology and error-transition profiles. The audit does not introduce a new predictor or cover trained message-passing architectures.
++We audit raw ESM, fixed propagation, external scores and fusion models on a reconstructed ClinVar-STRING dataset. The contribution is an evaluation study combining graph-intervention controls, matched fusion, protein-clustered uncertainty, external-source transfer and alternative-network evaluation. Topology and error-transition profiles are exploratory. The audit does not introduce a new predictor or cover trained message-passing architectures.
+ 
+ \section{Materials and Methods}
+ 
+ \subsection{Dataset and graph construction}
+ 
+-ClinVar variant annotations were obtained from the official NCBI ClinVar FTP tab-delimited variant-summary file \cite{Landrum2020ClinVar}. We used the ClinVar variant-summary release dated 31 March 2024 and retained checksums for the exact input file used in the reconstruction. We reconstructed a filtered, non-conflicting missense dataset and mapped variants to STRING human protein identifiers. We retained GRCh38 germline missense SNVs with criteria-supported review status, combined pathogenic and likely pathogenic records into the positive class, combined benign and likely benign records into the negative class, removed uncertain or conflicting records, and collapsed duplicate VariationIDs. The final ClinVar-STRING dataset contained 177,213 missense variants mapped to 14,123 labelled STRING proteins. The propagation graph contained 19,622 STRING protein nodes and 13,715,404 directed edge-index entries from the STRING v12 protein-association network \cite{Szklarczyk2023STRING}. We used this network as STRING network context; its association evidence extends beyond direct physical interactions.
++ClinVar variant annotations were obtained from the official NCBI ClinVar FTP tab-delimited variant-summary file \cite{Landrum2020ClinVar}. All experiments used archived, checksum-fixed processed tables; the exact historical source-release date could not be independently verified. We reconstructed a filtered, non-conflicting missense dataset and mapped variants to STRING human protein identifiers. We retained GRCh38 germline missense SNVs with criteria-supported review status, combined pathogenic and likely pathogenic records into the positive class, combined benign and likely benign records into the negative class, removed uncertain or conflicting records, and collapsed duplicate VariationIDs. The final ClinVar-STRING dataset contained 177,213 missense variants mapped to 14,123 labelled STRING proteins. The propagation graph contained 19,622 STRING protein nodes and 13,715,404 directed edge-index entries from the STRING v12 protein-association network \cite{Szklarczyk2023STRING}. We used this network as STRING network context; its association evidence extends beyond direct physical interactions.
+ 
+ \subsection{Protein representations and fixed propagation}
+ 
+@@ -73,6 +73,12 @@
+ 
+ All current comparisons used downstream MLPs with 512/128 hidden units, dropout 0.3, Adam optimization and validation-AUC checkpoint selection \cite{Kingma2015Adam}. Classifier seeds 42--44, a maximum of 50 epochs and patience five were shared across arms; permutation controls crossed three graph permutations with the same classifier seeds. CADD v1.7 and AlphaMissense scores were matched to variant records \cite{Schubach2024CADDv17,Cheng2023AlphaMissense}. Missing values were imputed using training-set medians, with an AlphaMissense missingness indicator; inputs were not standardized. Models shared hidden layers and preprocessing, although score-only models had fewer input weights. Training hyperparameters, score coverage and historical protocols are detailed in Supplementary Methods 3 and 5 and Tables 1 and 8.
+ 
++\subsection{External-source and second-network validation}
++
++Frozen original-split raw-ESM, STRING-FPP and BioGRID-FPP classifiers were evaluated on UniProtKB/Swiss-Prot HUMSAVAR 2026\_03 without external fitting or tuning \cite{UniProt2025}. Canonical sequences had to match a unique frozen graph node exactly, with the reference residue verified. We excluded original variants using the union of accession-, node- and gene-plus-substitution keys and dbSNP identifiers. The primary set excluded original training/validation proteins and identical full-length sequences: 10,785 variants from 2,498 proteins. A nested sensitivity set also excluded original test proteins and identical sequences: 6,934 variants from 1,713 proteins. All remained nodes of the frozen transductive graph; these exclusions do not establish patient, evidence or full homology independence.
++
++BioGRID 5.0.262 human physical-category records \cite{Stark2006BioGRID} were filtered to remove RNA-related methods and ambiguous mappings, then mapped to the same 19,622 nodes. The graph contained 931,458 unique undirected edges and 1,402 isolates; all test rows were retained. Nine additional classifiers covered BioGRID representation-only prediction and original/homology fusion, using the same operator, seeds and training budget. Of its edges, 56.54\% also occurred in STRING. Paired protein-bootstrap intervals used 2,000 resamples of three-seed mean probabilities, conditional on fitted models and without multiplicity adjustment. Full filtering, run verification and AUPRC results are in Supplementary Methods 6 and Tables 14--17.
++
+ \subsection{Audit analyses}
+ 
+ Uncertainty was assessed using variant-level bootstrap and protein-clustered bootstrap \cite{Efron1993Bootstrap}. Connectivity tests removed direct train-test STRING edges and regenerated FPP embeddings. Partial edge-ablation curves removed 0\%, 25\%, 50\%, 75\% and 100\% of direct train-test protein pairs using random removal, higher-STRING-score-first removal and lower-STRING-score-first removal. Topology permutation preserved the unlabeled graph structure and randomized the correspondence between protein identity and graph position, testing whether generic graph smoothing explained the gain. Fusion controls concatenated \CADDAM{} features with raw ESM, edge-ablated FPP and topology-permuted FPP representations, testing representation complementarity and sensitivity to protein-topology correspondence. Edge removal also changes normalization and retains indirect cross-partition paths; it does not isolate a causal contribution of direct connectivity.
+@@ -82,7 +88,7 @@
+ Exploratory analyses stratified retained-reference predictions by degree, k-core, betweenness, clustering and neighbour-risk features, and examined corrected and degraded predictions. Neighbour-risk features used training labels only. Feature-wise comparisons used false-discovery-rate correction \cite{Benjamini1995FDR}, but selected subgroup intervals did not account for test-set selection. AUPRC was interpreted within each split because precision-recall metrics depend on class prevalence \cite{Saito2015PrecisionRecall}.
+ 
+ \begin{table}[t]
+-\caption{Run provenance for the main results. Historical and matched protocols are in Supplementary Tables 8 and 11. Runs count fitted classifiers, not bootstrap resamples.}
++\caption{Run provenance for the main results. Historical, matched and external-validation protocols are in Supplementary Tables 8, 11 and Methods 6. Runs count fitted classifiers, not bootstrap resamples.}
+ \label{tab:run_sources}
+ \centering
+ \footnotesize
+@@ -98,11 +104,13 @@
+ Fig. 2B fusion controls & 3/arm & Matched seeds/operator/budget \\
+ Fig. 2C fusion intervals & Ensemble & Protein-clustered bootstrap \\
+ Fig. 2E homology fusion & 3/arm & Matched score/raw/FPP arms \\
+-Fig. 2D; Fig. 3 & 1/arm & Historical retained predictions \\
++Fig. 2D; Suppl. Figs. S1--S2 & 1/arm & Historical retained predictions \\
++Fig. 3A external source & 3/arm & Frozen checkpoints; no tuning \\
++Fig. 3B BioGRID fusion & 3/arm & Each split; six fusion fits \\
+ \hline
+ \end{tabular}
+ \par\smallskip
+-\raggedright Each permutation arm uses 3 graphs by 3 classifier seeds (9 fits). All 48 new fits allow at most 50 epochs. Bootstrap intervals condition on fitted predictions; permutations are not 9 independent graph samples. Historical error transitions appear in Supplementary Fig. S1.
++\raggedright Each permutation arm uses 3 graphs by 3 classifier seeds (9 fits). The 48 matched audit fits and 9 additional BioGRID fits (3 representation, 6 fusion) allow at most 50 epochs. Bootstrap intervals condition on fitted predictions; permutations are not 9 independent graph samples. 
+ \end{table}
+ 
+ \section{Results}
+@@ -126,7 +134,7 @@
+ 
+ On the original split, mean AUC was 0.9572 for \CADDAM{}, 0.9682 with raw embeddings and 0.9716 with FPP (Fig. 2B). The ensemble FPP-minus-raw fusion margin had a protein-clustered 95\% interval of [+0.0008, +0.0061]. The edge-ablated margin remained uncertain, whereas the permutation margin was small and positive conditional on the sampled graphs (Fig. 2C; Supplementary Table 12). These exploratory intervals are not adjusted for multiple comparisons and condition on fitted models; an interval spanning zero does not establish equivalence.
+ 
+-Figure 2D retains historical homology-aware representation estimates. The current homology-aware fusion comparison gave mean AUC 0.9755 for \CADDAM{}, 0.9727 with raw embeddings and 0.9752 with FPP, using three matched seeds per arm (Fig. 2E). The ensemble FPP-minus-score AUC difference was +0.0001, with protein-clustered 95\% CI [-0.0019, +0.0021]; the AUPRC interval also spanned zero (Supplementary Table 12). Thus, repeated fitting establishes neither benefit nor consistent harm from FPP relative to scores alone. Mean run metrics and metrics of averaged probabilities can give different close rankings. Redundant high-dimensional inputs, additional input weights, lack of feature scaling and altered protein composition could contribute to this behavior; these explanations were not experimentally separated. AUPRC comparisons remain within-split because prevalence differs.
++Figure 2D retains historical homology-aware representation estimates. The current homology-aware fusion comparison gave mean AUC 0.9755 for \CADDAM{}, 0.9727 with raw embeddings and 0.9752 with FPP, using three matched seeds per arm (Fig. 2E). The ensemble FPP-minus-score AUC difference was +0.0001, with protein-clustered 95\% CI [-0.0019, +0.0021]; the AUPRC interval also spanned zero (Supplementary Table 12). Thus, repeated fitting establishes neither benefit nor consistent harm from STRING FPP relative to scores alone. Mean run metrics and metrics of averaged probabilities can give different close rankings. Redundant high-dimensional inputs, additional input weights, lack of feature scaling and altered protein composition could contribute to this behavior; these explanations were not experimentally separated. AUPRC comparisons remain within-split because prevalence differs.
+ 
+ \begin{figure*}[!t]
+ \centering
+@@ -135,42 +143,46 @@
+ \label{fig:fusion_homology}
+ \end{figure*}
+ 
+-\subsection{Exploratory topology-context descriptions}
+-
+-ESM representations showed weak correspondence with STRING topology before propagation (Fig. 3A). Historical retained-reference predictions showed non-monotonic variation across degree, k-core and other network strata (Fig. 3B--D; Supplementary Table 5). These patterns are descriptive and do not identify biological contexts that will reliably benefit on new data.
+-
+-All 53 joint cells and highlighted profiles were inspected on the same test set (Fig. 3E,F). Their intervals quantify within-cell resampling, not subgroup-selection uncertainty; feature-level FDR correction does not remove this selection effect. The profiles therefore generate hypotheses for independent validation.
++\subsection{External-source transfer and network dependence}
++
++On the primary HUMSAVAR set, mean AUC across three seeds was 0.6932 for raw ESM, 0.7304 for STRING FPP and 0.7025 for BioGRID FPP. STRING-minus-raw ensemble differences were +0.0375 AUC (95\% CI [+0.0173, +0.0564]) and +0.0463 AUPRC ([+0.0151, +0.0745]). The stricter nested subset supported the same direction: +0.0352 AUC ([+0.0034, +0.0667]) and +0.0550 AUPRC ([+0.0111, +0.0962]). BioGRID-minus-raw intervals crossed zero on both sets (Fig.~\ref{fig:external}A; Supplementary Tables 16--17).
++
++On the original ClinVar split, BioGRID representation-only mean AUC was 0.7592, compared with 0.7835 for raw ESM and 0.7950 for STRING. BioGRID fusion improved over scores alone (ensemble $\Delta$AUC +0.0124, CI [+0.0034, +0.0210]), but its incremental margin over raw-embedding fusion remained uncertain (+0.0009, [-0.0011, +0.0036]). BioGRID fusion was below STRING fusion in both original and homology splits under the fitted-ensemble intervals (Fig.~\ref{fig:external}B). In the homology split, its AUC interval against scores alone ended just below zero, while the AUPRC interval crossed zero. These exploratory comparisons support network dependence, not a universal advantage or consistent harm from physical-network propagation.
+ 
+ \begin{figure*}[!t]
+ \centering
+-\includegraphics[width=0.98\textwidth]{figure_drafts/Figure3_exploratory_topology.pdf}
+-\caption{Exploratory descriptions of retained-reference FPP gains across network topology contexts. A, ESM representations show weak alignment with STRING topology. B, Degree and k-core gains are non-monotonic. C-D, Stratified estimates differ across betweenness, clustering and neighbour-risk groups. E, Exploratory joint-cell distribution. L/M/H denote low/mid/high strata; deg, core, betw and clust denote degree, k-core, betweenness and clustering. F, Exploratory selected profiles; intervals are unadjusted for test-set selection and require independent validation.}
+-\label{fig:topology_context}
++\includegraphics[width=0.98\textwidth]{figure_drafts/Figure3_external_validation.pdf}
++\caption{External-source validation and alternative-network sensitivity. A, STRING- or BioGRID-FPP minus raw-ESM AUC on the primary HUMSAVAR set (10,785 variants; 2,498 proteins) and its stricter nested subset (6,934; 1,713). B, BioGRID fusion minus scores alone, raw-ESM fusion or STRING fusion, within each original or homology split. Points are differences in AUC of three-seed mean probabilities; bars are paired protein-clustered 95\% bootstrap intervals (2,000 resamples), conditional on fitted models. The dashed line marks zero. Axes use different scales. Strict is a sensitivity subset, not an independent replication. Intervals are exploratory and not adjusted for multiple comparisons.}
++\label{fig:external}
+ \end{figure*}
+ 
+-Historical retained prediction pairs also showed both corrected and degraded variants after adding graph context. Their error-type balance changed with the decision threshold, and the class-weighted scores were uncalibrated. These exploratory transitions are reported in Supplementary Tables 6 and 10 and Figure S1.
++\subsection{Exploratory topology and prediction changes}
++
++Historical retained-reference predictions showed non-monotonic gains across topology strata (Supplementary Fig. S2 and Table 5). All 53 joint cells and highlighted profiles were inspected on the same test set; their intervals do not account for subgroup selection. Historical corrected/degraded predictions also depended on the decision threshold and uncalibrated scores (Supplementary Fig. S1 and Tables 6 and 10). These descriptions generate hypotheses rather than validated subgroup or clinical decision rules.
+ 
+ \section{Discussion}
+ 
+-Matched comparisons support an evaluation-dependent effect of fixed propagation. Mean performance improved over raw embeddings, but protein-level intervals for that gain crossed zero. Graph interventions show sensitivity to connectivity and protein--topology correspondence; edge removal also changes normalization and leaves indirect paths, so it does not isolate a causal connectivity effect. The transductive design permits held-out protein features and graph structure, without held-out labels.
+-
+-The homology-aware fusion results do not support a claim of consistent graph-induced deterioration. Three matched seeds resolve the previous unequal repeat count, while uncertainty remains around the graph-versus-score comparison. Redundant high-dimensional features and changes in protein composition offer plausible explanations, rather than established mechanisms. The frozen partition and differing prevalence limit broader cross-split conclusions.
+-
+-Generalization remains limited to one reconstructed ClinVar cohort and one STRING functional-association network, which includes associations beyond physical interactions \cite{Szklarczyk2023STRING}. No independent cohort or second network was tested, and overlap with the development data of external predictors was not excluded. Fixed propagation does not establish what learned graph models could achieve. Selected topology profiles and uncalibrated prediction transitions require independent confirmation. Further methodological boundaries and sensitivity analyses are retained in the supplement.
++Matched comparisons support an evaluation-dependent effect of fixed propagation. On the original ClinVar representation comparison, mean performance improved over raw embeddings, but protein-level intervals for that gain crossed zero. Graph interventions show sensitivity to connectivity and protein--topology correspondence; edge removal also changes normalization and leaves indirect paths, so it does not isolate a causal connectivity effect. The transductive design permits held-out protein features and graph structure, without held-out labels.
++
++The homology-aware STRING fusion results do not support a claim of consistent graph-induced deterioration. Three matched seeds resolve the previous unequal repeat count, while uncertainty remains around the STRING-versus-score comparison. Redundant high-dimensional features and changes in protein composition offer plausible explanations, rather than established mechanisms. The frozen partition and differing prevalence limit broader cross-split conclusions.
++
++External HUMSAVAR evaluation supports transfer of STRING protein-context features under explicit variant and protein exclusions. BioGRID strengthens the audit by showing that this benefit does not automatically extend to another graph. However, STRING incorporates evidence from multiple sources and overlaps BioGRID; their density, coverage, release and evidence composition differ. This comparison cannot isolate a causal effect of network identity or show that physical interactions are unhelpful.
++
++HUMSAVAR and ClinVar may share underlying literature or annotations, so an external curated source is not an independent patient cohort or prospective validation. The strict set is nested, not a second replication; full homology separation and external-predictor development overlap were not excluded. Protein-only outputs cannot distinguish substitutions within a protein, and HUMSAVAR substitutions need not all be genomic SNVs. External clinical-score fusion was not evaluated. Fixed propagation does not establish what learned graph models could achieve. Selected topology profiles require independent confirmation; clinical use would additionally require calibration and decision-rule validation.
+ 
+ \paragraph{Practical recommendations}
+ Compare graph features with both raw protein embeddings and strong score baselines. Use the same training protocol across controls and report whether held-out proteins are visible in the graph. Quantify uncertainty at the protein level and check gains within the intended split. Treat selected subgroups as hypotheses, and evaluate calibration before using prediction changes to guide decisions.
+ 
+ \section{Conclusion}
+-Fixed STRING propagation shows evaluation-dependent gains on this ClinVar cohort. Graph controls and strong baselines are essential to interpret those gains. The present evidence neither establishes a performance ceiling nor determines how trained graph models or independent cohorts would behave.
++Fixed STRING propagation shows evaluation-dependent gains and supported external-source transfer under the specified exclusions. BioGRID comparisons demonstrate sensitivity to network choice, with uncertain incremental benefit over raw-embedding fusion. Matched controls, strong baselines and protein-level uncertainty are essential; these findings do not establish performance limits for trained graph models or clinical decision validity.
+ 
+ \section*{Data and Code Availability}
+ 
+-Code, dated manuscript revisions and matched-experiment records are available at \url{https://github.com/brynn-t02/ppi-graph-missense-audit}. The archive includes environment specifications, per-run metrics, predictions and input checksums. Large provider resources and training tensors are not redistributed; reconstruction uses resources obtained from ClinVar, STRING, CADD and AlphaMissense.
++Code, dated manuscript revisions and both matched and external-validation records are available at \url{https://github.com/brynn-t02/ppi-graph-missense-audit}. The archive includes environment specifications, executed protocols, compact results and input checksums, with retained predictions for the earlier matched audit. Large provider resources, tensors and new checkpoints/prediction arrays are retained separately rather than redistributed. Reconstruction uses ClinVar, STRING, CADD, AlphaMissense, UniProt and BioGRID resources.
+ 
+ \section*{AI-Tool Disclosure}
+ 
+-OpenAI ChatGPT, OpenAI Codex and Anthropic Claude supported literature organization, analysis-code drafting and language editing. Historical experiments were performed by the authors. Revision-stage scripts assisted by these tools restored an isolated runtime, checked input provenance, trained matched downstream classifiers on the provided data, and recomputed sensitivity statistics. Actual logs, fitted predictions and checksums are retained for review. The authors retain responsibility for study design, interpretation, citation verification and final approval. The tools are not authors; no synthetic outcomes were substituted for experimental results.
++OpenAI ChatGPT, OpenAI Codex and Anthropic Claude supported literature organization, analysis-code drafting and language editing. Historical experiments were performed by the authors. Revision-stage scripts assisted by these tools restored an isolated runtime, checked input provenance, trained matched downstream classifiers, assembled the external-source and alternative-network validation, and recomputed sensitivity statistics. Actual logs, fitted predictions and checksums are retained for review. The authors retain responsibility for study design, interpretation, citation verification and final approval. The tools are not authors; no synthetic outcomes were substituted for experimental results.
+ 
+ \begin{thebibliography}{99}
+ \bibitem{Barabasi2011NetworkMedicine} A.-L. Barabasi, N. Gulbahce, and J. Loscalzo, ``Network medicine: a network-based approach to human disease,'' \emph{Nature Reviews Genetics}, vol. 12, pp. 56--68, 2011, doi: 10.1038/nrg2918.
+@@ -201,5 +213,7 @@
+ \bibitem{Yates2014SuSPect} C. M. Yates, I. Filippis, L. A. Kelley, and M. J. E. Sternberg, ``SuSPect: enhanced prediction of single amino acid variant phenotype using network features,'' \emph{Journal of Molecular Biology}, vol. 426, pp. 2692--2701, 2014, doi: 10.1016/j.jmb.2014.04.026.
+ \bibitem{Yu2025GNNMAP} H. Yu et al., ``A graph neural network approach for accurate prediction of pathogenicity in multi-type variants,'' \emph{Briefings in Bioinformatics}, vol. 26, bbaf151, 2025, doi: 10.1093/bib/bbaf151.
+ \bibitem{Zhang2022gMVP} H. Zhang, M. S. Xu, X. Fan, W. K. Chung, and Y. Shen, ``Predicting functional effect of missense variants using graph attention neural networks,'' \emph{Nature Machine Intelligence}, vol. 4, no. 11, pp. 1017--1028, 2022, doi: 10.1038/s42256-022-00561-w.
++\bibitem{UniProt2025} The UniProt Consortium, ``UniProt: the Universal Protein Knowledgebase in 2025,'' \emph{Nucleic Acids Research}, vol. 53, no. D1, pp. D609--D617, 2025, doi: 10.1093/nar/gkae1010.
++\bibitem{Stark2006BioGRID} C. Stark, B.-J. Breitkreutz, T. Reguly, L. Boucher, A. Breitkreutz, and M. Tyers, ``BioGRID: a general repository for interaction datasets,'' \emph{Nucleic Acids Research}, vol. 34, pp. D535--D539, 2006, doi: 10.1093/nar/gkj109.
+ \end{thebibliography}
+ \end{document}
