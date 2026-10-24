@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "test_set_used": false,
+  "checks": [
+    {
+      "arm": "raw_ESM",
+      "split": "original",
+      "dim": 1280,
+      "training_batches": 4,
+      "validation": {
+        "auc": 0.7185061221034255,
+        "auprc": 0.43996984102968356
+      },
+      "elapsed_seconds": 1.4663465023040771
+    },
+    {
+      "arm": "edge_ablated_FPP",
+      "split": "original",
+      "dim": 1280,
+      "training_batches": 4,
+      "validation": {
+        "auc": 0.7744363230168751,
+        "auprc": 0.5198109424570735
+      },
+      "elapsed_seconds": 0.10683369636535645
+    },
+    {
+      "arm": "scores",
+      "split": "homology",
+      "dim": 3,
+      "training_batches": 4,
+      "validation": {
+        "auc": 0.9528139271293664,
+        "auprc": 0.6953828351493648
+      },
+      "elapsed_seconds": 0.10180139541625977
+    },
+    {
+      "arm": "scores_plus_full_FPP",
+      "split": "homology",
+      "dim": 1283,
+      "training_batches": 4,
+      "validation": {
+        "auc": 0.9396610376717938,
+        "auprc": 0.6440419404352411
+      },
+      "elapsed_seconds": 0.1829814910888672
+    }
+  ]
+}

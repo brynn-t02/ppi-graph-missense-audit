@@ -1,0 +1,13 @@
+{
+  "split": "original",
+  "arm": "full_FPP",
+  "seed": 44,
+  "best_epoch": 9,
+  "epochs_run": 14,
+  "val_auc": 0.8228460072793962,
+  "val_auprc": 0.5926908917886521,
+  "test_auc": 0.7963421782826532,
+  "test_auprc": 0.6583585863276157,
+  "seconds": 17.612181663513184,
+  "dim": 1280
+}

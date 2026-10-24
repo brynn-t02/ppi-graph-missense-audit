@@ -1,0 +1,37 @@
+[
+  {
+    "id": "01",
+    "location": "Methods D, opening",
+    "before": "Frozen original-split raw-ESM, STRING-FPP and BioGRID-FPP classifiers were evaluated on UniProtKB/Swiss-Prot HUMSAVAR 2026\\_03 without external fitting or tuning \\cite{UniProt2025}.",
+    "after": "We evaluated frozen classifiers trained on the original split using raw ESM, STRING FPP or BioGRID FPP. External evaluation used HUMSAVAR 2026\\_03 from UniProtKB/\\allowbreak{}Swiss-Prot, with no external fitting or tuning \\cite{UniProt2025}.",
+    "reason_zh": "拆开连续模型名和来源名；在数据库名称斜杠后提供可选断行点，修复两端对齐造成的超大词距。",
+    "scientific_change": false
+  },
+  {
+    "id": "02",
+    "location": "Methods C, homology split",
+    "before": "The homology-aware split used MMseqs-derived protein clusters, assigned each cluster wholly to one partition by greedy balancing of variant-row counts, without label-prevalence stratification, and preserved the same row counts \\cite{Steinegger2017MMseqs2}.",
+    "after": "The homology-aware split used MMseqs protein clusters with minimum sequence identity 0.40, coverage 0.50 and coverage mode 0 \\cite{Steinegger2017MMseqs2}. Each cluster was assigned wholly to one partition by greedy balancing of variant-row counts, without label-prevalence stratification, preserving the same row counts.",
+    "reason_zh": "补回补充方法3中已有的同源聚类阈值和coverage mode，使正文的同源划分定义更完整。",
+    "scientific_change": false,
+    "source": "Existing supplementary Methods 3, 5 or 6; frozen executed protocols."
+  },
+  {
+    "id": "03",
+    "location": "Methods C, training protocol",
+    "before": "All current comparisons used downstream MLPs with 512/128 hidden units, dropout 0.3, Adam optimization and validation-AUC checkpoint selection \\cite{Kingma2015Adam}.",
+    "after": "All current comparisons used downstream MLPs with 512/128 hidden units, dropout 0.3 and validation-AUC checkpoint selection. Training used class-weighted binary cross-entropy and Adam with learning rate $10^{-3}$, weight decay $10^{-5}$ and batch size 1,024 \\cite{Kingma2015Adam}. The positive-class weight was the training negative-to-positive count ratio.",
+    "reason_zh": "补回已执行统一协议中的损失、正类权重、学习率、权重衰减和批量大小；不改变训练或结果。",
+    "scientific_change": false,
+    "source": "Existing supplementary Methods 3, 5 or 6; frozen executed protocols."
+  },
+  {
+    "id": "04",
+    "location": "Methods D, external label construction",
+    "before": "with no external fitting or tuning \\cite{UniProt2025}. Canonical sequences",
+    "after": "with no external fitting or tuning \\cite{UniProt2025}. Pathogenic/likely pathogenic records were positive and benign/likely benign records negative; uncertain-significance records were excluded. Canonical sequences",
+    "reason_zh": "补回外部数据的正负标签定义与不确定类别排除规则，避免正文只写来源和样本量。",
+    "scientific_change": false,
+    "source": "Existing supplementary Methods 3, 5 or 6; frozen executed protocols."
+  }
+]

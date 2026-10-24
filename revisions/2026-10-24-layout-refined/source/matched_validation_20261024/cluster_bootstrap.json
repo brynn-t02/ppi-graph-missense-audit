@@ -1,0 +1,166 @@
+{
+  "bootstrap_repeats": 2000,
+  "seed": 20261024,
+  "resampling_unit": "STRING protein, all variants retained per sampled protein with multiplicity",
+  "scope": "Intervals conditional on fitted ensembles and frozen graph permutations; omit retraining and new-graph uncertainty. Exploratory comparisons, no multiplicity adjustment.",
+  "comparisons": {
+    "original": {
+      "full_FPP_vs_raw_ESM": {
+        "delta_auc": 0.010670381893024827,
+        "auc_ci95": [
+          -0.021826883450223204,
+          0.04256818658506501
+        ],
+        "delta_auprc": 0.0412606625041807,
+        "auprc_ci95": [
+          -0.010928242022041875,
+          0.07702878874675764
+        ],
+        "finite_replicates": 2000,
+        "proteins": 1413
+      },
+      "full_FPP_vs_edge_ablated_FPP": {
+        "delta_auc": 0.024773778907059785,
+        "auc_ci95": [
+          0.006597911050674071,
+          0.04936858146803069
+        ],
+        "delta_auprc": 0.042885147560802084,
+        "auprc_ci95": [
+          0.01255092905946223,
+          0.0634649841721526
+        ],
+        "finite_replicates": 2000,
+        "proteins": 1413
+      },
+      "full_FPP_vs_permuted_FPP_graphmean": {
+        "delta_auc": 0.011767073943786621,
+        "auc_ci95": [
+          -0.022892544265458236,
+          0.04614842258847045
+        ],
+        "delta_auprc": 0.04297069074494142,
+        "auprc_ci95": [
+          -0.023394728205213593,
+          0.08828453376645914
+        ],
+        "finite_replicates": 2000,
+        "proteins": 1413
+      }
+    },
+    "original_fusion": {
+      "scores_plus_full_FPP_vs_scores_capacity_matched": {
+        "delta_auc": 0.014699369735779788,
+        "auc_ci95": [
+          0.006590059214229735,
+          0.023098098348376197
+        ],
+        "delta_auprc": 0.03437616022251666,
+        "auprc_ci95": [
+          0.015761087745006654,
+          0.0564103600029381
+        ],
+        "finite_replicates": 2000,
+        "proteins": 1413
+      },
+      "scores_plus_full_FPP_vs_scores_plus_raw_ESM": {
+        "delta_auc": 0.0032014865486498234,
+        "auc_ci95": [
+          0.0008318622306062951,
+          0.006065610151098775
+        ],
+        "delta_auprc": 0.007552317072706427,
+        "auprc_ci95": [
+          0.002887658551234218,
+          0.013777171073345775
+        ],
+        "finite_replicates": 2000,
+        "proteins": 1413
+      },
+      "scores_plus_full_FPP_vs_scores_plus_edge_ablated_FPP": {
+        "delta_auc": 0.0012581400054052505,
+        "auc_ci95": [
+          -0.00040155046025673325,
+          0.0031412046702024893
+        ],
+        "delta_auprc": 0.0013909336805618677,
+        "auprc_ci95": [
+          -0.0015995682995664812,
+          0.00476673459043389
+        ],
+        "finite_replicates": 2000,
+        "proteins": 1413
+      },
+      "scores_plus_full_FPP_vs_scores_plus_permuted_FPP_graphmean": {
+        "delta_auc": 0.0020088276225445068,
+        "auc_ci95": [
+          9.991560624719731e-05,
+          0.004754147606808364
+        ],
+        "delta_auprc": 0.005010279359557557,
+        "auprc_ci95": [
+          0.00034361018103868935,
+          0.011195395957152163
+        ],
+        "finite_replicates": 2000,
+        "proteins": 1413
+      }
+    },
+    "homology": {
+      "scores_plus_full_FPP_vs_scores_capacity_matched": {
+        "delta_auc": 0.00012075205374173503,
+        "auc_ci95": [
+          -0.0019245480612433447,
+          0.002065400098363219
+        ],
+        "delta_auprc": -0.0012351603053295523,
+        "auprc_ci95": [
+          -0.0199448546706193,
+          0.015446752235033136
+        ],
+        "finite_replicates": 2000,
+        "proteins": 3438
+      },
+      "scores_plus_raw_ESM_vs_scores_capacity_matched": {
+        "delta_auc": -0.002545648486370178,
+        "auc_ci95": [
+          -0.004765434672656057,
+          -0.0004049711652676832
+        ],
+        "delta_auprc": -0.013530166794637033,
+        "auprc_ci95": [
+          -0.03250676242490793,
+          0.004156534846080807
+        ],
+        "finite_replicates": 2000,
+        "proteins": 3438
+      },
+      "scores_plus_full_FPP_vs_scores_plus_raw_ESM": {
+        "delta_auc": 0.002666400540111913,
+        "auc_ci95": [
+          0.0014981184406937075,
+          0.003883320561819503
+        ],
+        "delta_auprc": 0.01229500648930748,
+        "auprc_ci95": [
+          0.005151802804999323,
+          0.019752590469876166
+        ],
+        "finite_replicates": 2000,
+        "proteins": 3438
+      }
+    }
+  },
+  "variant_bootstrap_original_full_vs_raw": {
+    "auc_ci95": [
+      0.007525573018560505,
+      0.013831031556840893
+    ],
+    "auprc_ci95": [
+      0.0348380090903701,
+      0.0478192430195733
+    ],
+    "repeats": 2000,
+    "scope": "Variant resampling ignores within-protein dependence; descriptive contrast with protein-cluster resampling."
+  }
+}

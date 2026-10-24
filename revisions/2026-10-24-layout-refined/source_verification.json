@@ -1,0 +1,28 @@
+{
+  "baseline": "85c3f41a39a7da72ac9b65b1f0bb7a079aff0661",
+  "changes": 4,
+  "scientific_outcomes_changed": false,
+  "supplements_unchanged": true,
+  "new_experiments": false,
+  "baidu_accessed": false,
+  "main": {
+    "main.tex": {
+      "pages": 7,
+      "results_discussion_conclusion_unchanged": true,
+      "abstract_keywords_unchanged": true,
+      "citations_and_bibliography_unchanged": true,
+      "equations_figures_table_unchanged": true,
+      "exact_documented_edits_only": true,
+      "pdf_sha256": "fa4c8d4c7f4c552f49cd556b31b387691def73e02dc4b4a7a844da9548c19090"
+    },
+    "main_anonymous.tex": {
+      "pages": 7,
+      "results_discussion_conclusion_unchanged": true,
+      "abstract_keywords_unchanged": true,
+      "citations_and_bibliography_unchanged": true,
+      "equations_figures_table_unchanged": true,
+      "exact_documented_edits_only": true,
+      "pdf_sha256": "e06b41371d4dc21ebe6d158a17d19ceb3e138fed7875a587f29a40af01ede1b7"
+    }
+  }
+}
