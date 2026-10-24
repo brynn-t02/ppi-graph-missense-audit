@@ -1,0 +1,13 @@
+{
+  "split": "homology",
+  "arm": "scores_plus_raw_ESM",
+  "seed": 44,
+  "best_epoch": 3,
+  "epochs_run": 8,
+  "val_auc": 0.9715362111668943,
+  "val_auprc": 0.823979254075148,
+  "test_auc": 0.9730381650484744,
+  "test_auprc": 0.8270479874155541,
+  "seconds": 13.017280101776123,
+  "dim": 1283
+}

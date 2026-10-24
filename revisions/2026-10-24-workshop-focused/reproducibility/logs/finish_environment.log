@@ -1,0 +1,200 @@
+Collecting torch@ https://download.pytorch.org/whl/cu118/torch-2.1.2%2Bcu118-cp310-cp310-linux_x86_64.whl
+  Using cached https://download.pytorch.org/whl/cu118/torch-2.1.2%2Bcu118-cp310-cp310-linux_x86_64.whl (2325.9 MB)
+Collecting torchvision@ https://download.pytorch.org/whl/cu118/torchvision-0.16.2%2Bcu118-cp310-cp310-linux_x86_64.whl
+  Using cached https://download.pytorch.org/whl/cu118/torchvision-0.16.2%2Bcu118-cp310-cp310-linux_x86_64.whl (6.1 MB)
+Requirement already satisfied: absl-py==2.1.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 1)) (2.1.0)
+Requirement already satisfied: anyio==4.4.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 2)) (4.4.0)
+Requirement already satisfied: argon2-cffi==23.1.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 3)) (23.1.0)
+Requirement already satisfied: argon2-cffi-bindings==21.2.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 4)) (21.2.0)
+Requirement already satisfied: arrow==1.3.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 5)) (1.3.0)
+Requirement already satisfied: asttokens==2.4.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 6)) (2.4.1)
+Requirement already satisfied: async-lru==2.0.4 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 7)) (2.0.4)
+Requirement already satisfied: attrs==23.2.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 8)) (23.2.0)
+Requirement already satisfied: babel==2.15.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 9)) (2.15.0)
+Requirement already satisfied: beautifulsoup4==4.12.3 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 10)) (4.12.3)
+Requirement already satisfied: bleach==6.1.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 11)) (6.1.0)
+Requirement already satisfied: comm==0.2.2 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 12)) (0.2.2)
+Requirement already satisfied: contourpy==1.2.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 13)) (1.2.1)
+Requirement already satisfied: cycler==0.12.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 14)) (0.12.1)
+Requirement already satisfied: debugpy==1.8.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 15)) (1.8.1)
+Requirement already satisfied: decorator==5.1.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 16)) (5.1.1)
+Requirement already satisfied: defusedxml==0.7.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 17)) (0.7.1)
+Requirement already satisfied: et-xmlfile==2.0.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 18)) (2.0.0)
+Requirement already satisfied: exceptiongroup==1.2.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 19)) (1.2.1)
+Requirement already satisfied: executing==2.0.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 20)) (2.0.1)
+Requirement already satisfied: fastjsonschema==2.19.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 21)) (2.19.1)
+Requirement already satisfied: filelock==3.14.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 22)) (3.14.0)
+Requirement already satisfied: fonttools==4.53.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 23)) (4.53.0)
+Requirement already satisfied: fqdn==1.5.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 24)) (1.5.1)
+Requirement already satisfied: fsspec==2024.6.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 25)) (2024.6.0)
+Requirement already satisfied: grpcio==1.64.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 26)) (1.64.1)
+Requirement already satisfied: h11==0.14.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 27)) (0.14.0)
+Requirement already satisfied: httpcore==1.0.5 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 28)) (1.0.5)
+Requirement already satisfied: httpx==0.27.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 29)) (0.27.0)
+Requirement already satisfied: ipykernel==6.29.4 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 30)) (6.29.4)
+Requirement already satisfied: ipython==8.25.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 31)) (8.25.0)
+Requirement already satisfied: ipywidgets==8.1.3 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 32)) (8.1.3)
+Requirement already satisfied: isoduration==20.11.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 33)) (20.11.0)
+Requirement already satisfied: jedi==0.19.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 34)) (0.19.1)
+Requirement already satisfied: jinja2==3.1.4 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 35)) (3.1.4)
+Requirement already satisfied: joblib==1.5.3 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 36)) (1.5.3)
+Requirement already satisfied: json5==0.9.25 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 37)) (0.9.25)
+Requirement already satisfied: jsonpointer==3.0.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 38)) (3.0.0)
+Requirement already satisfied: jsonschema==4.22.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 39)) (4.22.0)
+Requirement already satisfied: jsonschema-specifications==2023.12.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 40)) (2023.12.1)
+Requirement already satisfied: jupyter-client==8.6.2 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 41)) (8.6.2)
+Requirement already satisfied: jupyter-core==5.7.2 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 42)) (5.7.2)
+Requirement already satisfied: jupyter-events==0.10.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 43)) (0.10.0)
+Requirement already satisfied: jupyter-lsp==2.2.5 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 44)) (2.2.5)
+Requirement already satisfied: jupyter-server==2.14.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 45)) (2.14.1)
+Requirement already satisfied: jupyter-server-terminals==0.5.3 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 46)) (0.5.3)
+Requirement already satisfied: jupyterlab==4.2.2 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 47)) (4.2.2)
+Requirement already satisfied: jupyterlab-language-pack-zh-cn==4.2.post1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 48)) (4.2.post1)
+Requirement already satisfied: jupyterlab-pygments==0.3.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 49)) (0.3.0)
+Requirement already satisfied: jupyterlab-server==2.27.2 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 50)) (2.27.2)
+Requirement already satisfied: jupyterlab-widgets==3.0.11 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 51)) (3.0.11)
+Requirement already satisfied: kiwisolver==1.4.5 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 52)) (1.4.5)
+Requirement already satisfied: markdown==3.6 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 53)) (3.6)
+Requirement already satisfied: markupsafe==2.1.5 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 54)) (2.1.5)
+Requirement already satisfied: matplotlib==3.9.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 55)) (3.9.0)
+Requirement already satisfied: matplotlib-inline==0.1.7 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 56)) (0.1.7)
+Requirement already satisfied: mistune==3.0.2 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 57)) (3.0.2)
+Requirement already satisfied: mpmath==1.3.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 58)) (1.3.0)
+Requirement already satisfied: nbclient==0.10.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 59)) (0.10.0)
+Requirement already satisfied: nbconvert==7.16.4 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 60)) (7.16.4)
+Requirement already satisfied: nbformat==5.10.4 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 61)) (5.10.4)
+Requirement already satisfied: nest-asyncio==1.6.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 62)) (1.6.0)
+Requirement already satisfied: networkx==3.3 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 63)) (3.3)
+Requirement already satisfied: notebook-shim==0.2.4 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 64)) (0.2.4)
+Requirement already satisfied: numpy==1.26.4 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 65)) (1.26.4)
+Requirement already satisfied: openpyxl==3.1.5 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 66)) (3.1.5)
+Requirement already satisfied: overrides==7.7.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 67)) (7.7.0)
+Requirement already satisfied: packaging==24.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 68)) (24.1)
+Requirement already satisfied: pandas==2.3.3 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 69)) (2.3.3)
+Requirement already satisfied: pandocfilters==1.5.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 70)) (1.5.1)
+Requirement already satisfied: parso==0.8.4 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 71)) (0.8.4)
+Requirement already satisfied: pexpect==4.9.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 72)) (4.9.0)
+Requirement already satisfied: pillow==10.3.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 73)) (10.3.0)
+Requirement already satisfied: platformdirs==4.2.2 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 74)) (4.2.2)
+Requirement already satisfied: prometheus-client==0.20.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 75)) (0.20.0)
+Requirement already satisfied: prompt-toolkit==3.0.47 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 76)) (3.0.47)
+Requirement already satisfied: protobuf==4.25.3 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 77)) (4.25.3)
+Requirement already satisfied: psutil==5.9.8 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 78)) (5.9.8)
+Requirement already satisfied: ptyprocess==0.7.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 79)) (0.7.0)
+Requirement already satisfied: pure-eval==0.2.2 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 80)) (0.2.2)
+Requirement already satisfied: pygments==2.18.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 81)) (2.18.0)
+Requirement already satisfied: pyparsing==3.1.2 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 82)) (3.1.2)
+Requirement already satisfied: python-dateutil==2.9.0.post0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 83)) (2.9.0.post0)
+Requirement already satisfied: python-json-logger==2.0.7 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 84)) (2.0.7)
+Requirement already satisfied: pytz==2026.1.post1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 85)) (2026.1.post1)
+Requirement already satisfied: pyyaml==6.0.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 86)) (6.0.1)
+Requirement already satisfied: pyzmq==26.0.3 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 87)) (26.0.3)
+Requirement already satisfied: referencing==0.35.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 88)) (0.35.1)
+Requirement already satisfied: requests==2.32.3 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 89)) (2.32.3)
+Requirement already satisfied: rfc3339-validator==0.1.4 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 90)) (0.1.4)
+Requirement already satisfied: rfc3986-validator==0.1.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 91)) (0.1.1)
+Requirement already satisfied: rpds-py==0.18.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 92)) (0.18.1)
+Requirement already satisfied: scikit-learn==1.7.2 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 93)) (1.7.2)
+Requirement already satisfied: scipy==1.15.3 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 94)) (1.15.3)
+Requirement already satisfied: seaborn==0.13.2 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 95)) (0.13.2)
+Requirement already satisfied: send2trash==1.8.3 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 96)) (1.8.3)
+Requirement already satisfied: sniffio==1.3.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 97)) (1.3.1)
+Requirement already satisfied: soupsieve==2.5 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 98)) (2.5)
+Requirement already satisfied: stack-data==0.6.3 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 99)) (0.6.3)
+Requirement already satisfied: supervisor==4.2.5 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 100)) (4.2.5)
+Requirement already satisfied: sympy==1.12.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 101)) (1.12.1)
+Requirement already satisfied: tensorboard==2.17.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 102)) (2.17.0)
+Requirement already satisfied: tensorboard-data-server==0.7.2 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 103)) (0.7.2)
+Requirement already satisfied: terminado==0.18.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 104)) (0.18.1)
+Requirement already satisfied: threadpoolctl==3.6.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 105)) (3.6.0)
+Requirement already satisfied: tinycss2==1.3.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 106)) (1.3.0)
+Requirement already satisfied: tomli==2.0.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 107)) (2.0.1)
+Requirement already satisfied: tornado==6.4.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 110)) (6.4.1)
+Requirement already satisfied: traitlets==5.14.3 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 111)) (5.14.3)
+Requirement already satisfied: triton==2.1.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 112)) (2.1.0)
+Requirement already satisfied: types-python-dateutil==2.9.0.20240316 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 113)) (2.9.0.20240316)
+Requirement already satisfied: typing-extensions==4.12.2 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 114)) (4.12.2)
+Requirement already satisfied: tzdata==2025.3 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 115)) (2025.3)
+Requirement already satisfied: uri-template==1.3.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 116)) (1.3.0)
+Requirement already satisfied: wcwidth==0.2.13 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 117)) (0.2.13)
+Requirement already satisfied: webcolors==24.6.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 118)) (24.6.0)
+Requirement already satisfied: webencodings==0.5.1 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 119)) (0.5.1)
+Requirement already satisfied: websocket-client==1.8.0 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 120)) (1.8.0)
+Requirement already satisfied: werkzeug==3.0.3 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 121)) (3.0.3)
+Requirement already satisfied: widgetsnbextension==4.0.11 in ./environment/runtime/lib/python3.10/site-packages (from -r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 122)) (4.0.11)
+Collecting brotlipy==0.7.0
+  Downloading brotlipy-0.7.0-cp35-abi3-manylinux2010_x86_64.whl (1.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 53.0 kB/s eta 0:00:00
+Collecting certifi==2022.12.7
+  Downloading certifi-2022.12.7-py3-none-any.whl (155 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.3/155.3 kB 27.7 kB/s eta 0:00:00
+Collecting cffi==1.15.1
+  Downloading cffi-1.15.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (441 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 441.8/441.8 kB 35.2 kB/s eta 0:00:00
+Collecting charset-normalizer==2.0.4
+  Downloading charset_normalizer-2.0.4-py3-none-any.whl (36 kB)
+Collecting cryptography==38.0.1
+  Downloading cryptography-38.0.1-cp36-abi3-manylinux_2_28_x86_64.whl (4.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 37.2 kB/s eta 0:00:00
+Collecting idna==3.4
+  Downloading idna-3.4-py3-none-any.whl (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.5/61.5 kB 39.6 kB/s eta 0:00:00
+Collecting pluggy==1.0.0
+  Downloading pluggy-1.0.0-py2.py3-none-any.whl (13 kB)
+Collecting pycparser==2.21
+  Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.7/118.7 kB 51.2 kB/s eta 0:00:00
+Collecting pyopenssl==22.0.0
+  Downloading pyOpenSSL-22.0.0-py2.py3-none-any.whl (55 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.8/55.8 kB 28.8 kB/s eta 0:00:00
+Collecting pysocks==1.7.1
+  Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+Collecting ruamel.yaml==0.17.21
+  Downloading ruamel.yaml-0.17.21-py3-none-any.whl (109 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.5/109.5 kB 29.2 kB/s eta 0:00:00
+Collecting ruamel.yaml.clib==0.2.6
+  Downloading ruamel.yaml.clib-0.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (519 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 519.3/519.3 kB 38.3 kB/s eta 0:00:00
+Collecting six==1.16.0
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting toolz==0.12.0
+  Downloading toolz-0.12.0-py3-none-any.whl (55 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.8/55.8 kB 37.5 kB/s eta 0:00:00
+Collecting tqdm==4.64.1
+  Downloading tqdm-4.64.1-py2.py3-none-any.whl (78 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 28.7 kB/s eta 0:00:00
+Collecting urllib3==1.26.13
+  Downloading urllib3-1.26.13-py2.py3-none-any.whl (140 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 140.6/140.6 kB 62.6 kB/s eta 0:00:00
+Requirement already satisfied: setuptools>=40.1.0 in ./environment/runtime/lib/python3.10/site-packages (from jupyterlab==4.2.2->-r /Data/u40902/TYX/ppi_audit_20261024/code/requirements-restored.txt (line 47)) (65.5.0)
+Installing collected packages: urllib3, tqdm, toolz, six, ruamel.yaml.clib, pysocks, pycparser, pluggy, idna, charset-normalizer, certifi, ruamel.yaml, cffi, cryptography, brotlipy, pyopenssl
+  Attempting uninstall: urllib3
+    Found existing installation: urllib3 2.8.0
+    Uninstalling urllib3-2.8.0:
+      Successfully uninstalled urllib3-2.8.0
+  Attempting uninstall: six
+    Found existing installation: six 1.17.0
+    Uninstalling six-1.17.0:
+      Successfully uninstalled six-1.17.0
+  Attempting uninstall: pycparser
+    Found existing installation: pycparser 3.11
+    Uninstalling pycparser-3.11:
+      Successfully uninstalled pycparser-3.11
+  Attempting uninstall: idna
+    Found existing installation: idna 3.20
+    Uninstalling idna-3.20:
+      Successfully uninstalled idna-3.20
+  Attempting uninstall: charset-normalizer
+    Found existing installation: charset-normalizer 3.5.2
+    Uninstalling charset-normalizer-3.5.2:
+      Successfully uninstalled charset-normalizer-3.5.2
+  Attempting uninstall: certifi
+    Found existing installation: certifi 2026.10.23
+    Uninstalling certifi-2026.10.23:
+      Successfully uninstalled certifi-2026.10.23
+  Attempting uninstall: cffi
+    Found existing installation: cffi 2.1.1
+    Uninstalling cffi-2.1.1:
+      Successfully uninstalled cffi-2.1.1
+Successfully installed brotlipy-0.7.0 certifi-2022.12.7 cffi-1.15.1 charset-normalizer-2.0.4 cryptography-38.0.1 idna-3.4 pluggy-1.0.0 pycparser-2.21 pyopenssl-22.0.0 pysocks-1.7.1 ruamel.yaml-0.17.21 ruamel.yaml.clib-0.2.6 six-1.16.0 toolz-0.12.0 tqdm-4.64.1 urllib3-1.26.13
+No broken requirements found.

@@ -1,0 +1,35 @@
+{
+  "main_page_limit": 8,
+  "main_pages": {
+    "named": 7,
+    "anonymous": 7
+  },
+  "supplement_pages": {
+    "named": 14,
+    "anonymous": 14
+  },
+  "experimental_values_changed": false,
+  "main_figures": 3,
+  "transition_figure_location": "Supplementary Figure S1",
+  "checks": {
+    "named": {
+      "author_fields": "passed",
+      "main_references_and_overflows": "passed",
+      "main_sha256": "f5def80bd276e555541c896abd27b04a6cebe48c0a922869add220c0970f3846",
+      "supplement_sha256": "8d5eac12bde21e47213fb0a73d7ae608f263a8edf676cf82ae973b70b8efaa90",
+      "embedded_fonts_passed": true
+    },
+    "anonymous": {
+      "author_fields": "passed",
+      "main_references_and_overflows": "passed",
+      "main_sha256": "facb439bde3fe0485260c14ac5bea8688a26ee57a6b04f0f42f149bcf1099af7",
+      "supplement_sha256": "96784ce95f0a2967b8ab4c94acbb61ded193328e0c6e28f9956fa85af6bfad73",
+      "embedded_fonts_passed": true
+    }
+  },
+  "visual_review": "Named and anonymous main pages inspected; all named supplement pages and the anonymous added figure page inspected. No clipping/overlap or reference failures.",
+  "experimental_runs_verified": 48,
+  "historical_positive_controls_reproduced": 6,
+  "experimental_code_unchanged": true,
+  "verified_prior_archive_commit": "3cade53858f29b56de6d0f7bd67effb8b17f8e84"
+}

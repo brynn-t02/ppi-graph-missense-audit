@@ -1,0 +1,13 @@
+{
+  "split": "original_fusion",
+  "arm": "scores_plus_raw_ESM",
+  "seed": 42,
+  "best_epoch": 3,
+  "epochs_run": 8,
+  "val_auc": 0.9697641550447594,
+  "val_auprc": 0.9189819523142687,
+  "test_auc": 0.9694052558537578,
+  "test_auprc": 0.9368318076066474,
+  "seconds": 10.410016059875488,
+  "dim": 1283
+}

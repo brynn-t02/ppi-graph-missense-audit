@@ -1,0 +1,19 @@
+{
+  "python": "3.10.8 (main, Nov 24 2022, 14:13:03) [GCC 11.2.0]",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "torch": "2.1.2+cu118",
+  "cuda_build": "11.8",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "visible_device": "1",
+  "packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "scipy": "1.15.3",
+    "torchvision": "0.16.2+cu118",
+    "triton": "2.1.0"
+  },
+  "torch_threads": 4,
+  "matmul_tf32": false,
+  "cudnn_tf32": true
+}

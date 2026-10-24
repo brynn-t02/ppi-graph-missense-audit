@@ -4,7 +4,8 @@ Code and compact evidence archive for an evaluation study of fixed protein-featu
 
 ## Manuscript revisions
 
-- **Latest: [24 October 2026 workshop revision and matched experiments](revisions/2026-10-24/)** — [named paper](revisions/2026-10-24/BIBM2026_workshop_named_revised.pdf), [anonymous paper](revisions/2026-10-24/BIBM2026_workshop_anonymous_revised.pdf), [supplement](revisions/2026-10-24/BIBM2026_supplementary_named_revised.pdf), [revision conclusions](revisions/2026-10-24/REVISION_NOTES.md).
+- **Latest: [24 October 2026 workshop-focused revision](revisions/2026-10-24-workshop-focused/)** — [7-page main paper](revisions/2026-10-24-workshop-focused/BIBM2026_workshop_named_revised.pdf), [anonymous copy](revisions/2026-10-24-workshop-focused/BIBM2026_workshop_anonymous_revised.pdf), [supplement](revisions/2026-10-24-workshop-focused/BIBM2026_supplementary_named_revised.pdf), [content choices and conclusions](revisions/2026-10-24-workshop-focused/REVISION_NOTES.md).
+- [24 October 2026 workshop revision and matched experiments](revisions/2026-10-24/) — [named paper](revisions/2026-10-24/BIBM2026_workshop_named_revised.pdf), [anonymous paper](revisions/2026-10-24/BIBM2026_workshop_anonymous_revised.pdf), [supplement](revisions/2026-10-24/BIBM2026_supplementary_named_revised.pdf), [revision conclusions](revisions/2026-10-24/REVISION_NOTES.md).
 - [23 October 2026 workshop revision](revisions/2026-10-23/) — [paper](revisions/2026-10-23/paper.pdf), [supplement](revisions/2026-10-23/supplement.pdf), [editable source](revisions/2026-10-23/source/main.tex).
 - [8 October 2026 main-review revision](revisions/2026-10-08/) — [paper](revisions/2026-10-08/paper.pdf), [supplement](revisions/2026-10-08/supplement.pdf), [editable source](revisions/2026-10-08/source/BIBM2026_main_paper_revised.tex).
 
@@ -17,6 +18,8 @@ The October 8 revision clarifies fixed-operator scope, transductive feature acce
 The October 23 revision adds a shorter abstract, a main-text run-provenance table, a simplified overview, cautious subgroup interpretation, possible explanations for lower homology-fusion estimates, practical recommendations and a narrow conclusion.
 
 The October 24 revision restores the accepted original title and confirmed authors (anonymous copies retained), completes 48 matched classifier fits, corrects a historical self-loop convention mismatch in new graph controls, repeats homology fusion three times per arm, and reports current paired protein bootstrap and complete-score subset checks. [Detailed conclusions and unresolved validation](revisions/2026-10-24/REVISION_NOTES.md) distinguish completed experiments from remaining suggestions.
+
+The subsequent workshop-focused revision selects material for the workshop comments and an eight-page limit: both main copies are 7 pages including references, and the historical transition figure is moved to the supplement. Main-conference-only requests are set aside; experimental values are unchanged.
 
 ## Reproduce the frozen-output checks
 

@@ -1,0 +1,92 @@
+[
+  {
+    "path": "model_inputs_main.pt",
+    "bytes": 323552985,
+    "sha256": "0f9b61664620e5c94d2ceca84b4b605a5dcce9e02677d6b641f8f64d3e4c397d"
+  },
+  {
+    "path": "clinvar_with_cadd.csv",
+    "bytes": 47469068,
+    "sha256": "640207f18abd7a7c4089937462a13ecc2a6d1f33cbb42fa03b99d250a6c6f7a3"
+  },
+  {
+    "path": "clinvar_with_alphamissense.csv",
+    "bytes": 54561351,
+    "sha256": "4df4043715f2cc390ca5d70135a505b04248e5fb9b0858542c67ae2962c195d1"
+  },
+  {
+    "path": "gcn_embeddings/gcn_node_embeddings.pt",
+    "bytes": 101268696,
+    "sha256": "5a9fbe0787878c821665e22227af30a40c7ad9400a891b807f515ad2a556bd6e"
+  },
+  {
+    "path": "esm_gcn_edge_ablation_exp41/esm_feature_gcn_train_test_edge_ablated_embeddings.pt",
+    "bytes": 100466163,
+    "sha256": "267987de56ba554c40cd62600dd9f75761622832688d2e6700ce81b6112ee117"
+  },
+  {
+    "path": "clinvar_train_main.csv",
+    "bytes": 34567345,
+    "sha256": "14340ecc0335d2ff2489013422a738852cf4856257d4c2a8195c1a975b6bff69"
+  },
+  {
+    "path": "clinvar_val_main.csv",
+    "bytes": 4142804,
+    "sha256": "072e0f596313bc4c46c92ad3b974fe3643d47ff342dae5e5e103a614e99af62d"
+  },
+  {
+    "path": "clinvar_test_main.csv",
+    "bytes": 4422463,
+    "sha256": "c89d6507c8b8b45c4177f2434c7ecfa8435f60d03b327a9c4493e0b51a6c45e6"
+  },
+  {
+    "path": "homology_aware_split/clinvar_train_homology.csv",
+    "bytes": 39207636,
+    "sha256": "6e82fa449aa47688dc2a8f1b78fdc52ceb04f3d261e3ba3c4720069f48e2c085"
+  },
+  {
+    "path": "homology_aware_split/clinvar_val_homology.csv",
+    "bytes": 4674537,
+    "sha256": "b02600cde8a2c1dda0867a9f58f4a069af534dbad2d7f6a35a83314229e68451"
+  },
+  {
+    "path": "homology_aware_split/clinvar_test_homology.csv",
+    "bytes": 4993632,
+    "sha256": "898a1140985769f543321afbc58caa823fb461b9f82e63e4652a7ee27cff2d17"
+  },
+  {
+    "path": "homology_aware_split/homology_cluster_assignments.csv",
+    "bytes": 274065,
+    "sha256": "a30824a32b919466007395bac7c6eddb255c0ad40478b599574230240ddfb9d6"
+  },
+  {
+    "path": "esm_gcn_topology_permutation_exp45/graph_permutation_0/esm_gcn_topology_permuted_embedding.pt",
+    "bytes": 100466024,
+    "sha256": "c741af0c76ffcfb0190a430658c5d67457bd61f44b70bfa9e9a1e580c92843b0"
+  },
+  {
+    "path": "esm_gcn_topology_permutation_exp45/graph_permutation_0/node_permutation.pt",
+    "bytes": 158153,
+    "sha256": "6af329cf3ff675d3c815e99173bf5e31305f8c52cd0b79a703fff0cdf851c6b7"
+  },
+  {
+    "path": "esm_gcn_topology_permutation_exp45/graph_permutation_1/esm_gcn_topology_permuted_embedding.pt",
+    "bytes": 100466024,
+    "sha256": "963eb6f57719d4cc757c4e0c0ae63f06129a94dbff2e123be52e1ba78dc6e551"
+  },
+  {
+    "path": "esm_gcn_topology_permutation_exp45/graph_permutation_1/node_permutation.pt",
+    "bytes": 158153,
+    "sha256": "32278e788b4f887e55f490dbe4f3a55a58626ccccbad82e70f61ba434398ff3e"
+  },
+  {
+    "path": "esm_gcn_topology_permutation_exp45/graph_permutation_2/esm_gcn_topology_permuted_embedding.pt",
+    "bytes": 100466024,
+    "sha256": "3641cb35f6670b0ca5be9223032b4e41b8214cac29c161a502a6a3c766bc7312"
+  },
+  {
+    "path": "esm_gcn_topology_permutation_exp45/graph_permutation_2/node_permutation.pt",
+    "bytes": 158153,
+    "sha256": "c0c0d8a1fe1dedfa4aab0fe149f1d3ee5b0fb5d9a79466d2bec41901d13d9450"
+  }
+]

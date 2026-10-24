@@ -1,0 +1,131 @@
+{
+  "experiment": "41_esm_feature_gcn_train_test_edge_ablation_control",
+  "real_data_policy": {
+    "uses_real_model_inputs_main": "internal_path_omitted_from_anonymous_archive",
+    "uses_real_esm_node_features": true,
+    "uses_real_graph_before_ablation": true,
+    "uses_real_split_indices": true,
+    "uses_real_train_validation_test_labels": true,
+    "only_removes_direct_train_test_edges": true,
+    "no_fake_labels": true,
+    "no_simulated_predictions": true
+  },
+  "design": {
+    "ablation_mode": "remove_direct_train_test_edges_only",
+    "fixed_esm_feature_gcn_embeddings": "internal_path_omitted_from_anonymous_archive",
+    "feature_dim": 1280,
+    "n_repeats": 5,
+    "max_epochs": 30,
+    "patience": 5,
+    "batch_size": 1024,
+    "device": "cuda",
+    "propagation": "two-hop symmetric-normalized fixed propagation, h=(x+h1+h2)/3",
+    "model_inputs_structure": "flat_keys_train_protein_idx_val_protein_idx_test_protein_idx_train_labels_val_labels_test_labels"
+  },
+  "edge_ablation_stats": {
+    "num_nodes": 19622,
+    "num_original_edges": 13715404,
+    "num_ablated_edges": 1242422,
+    "num_remaining_edges": 12472982,
+    "fraction_edges_removed": 0.09058588743209839,
+    "num_unique_train_nodes": 11298,
+    "num_unique_test_nodes": 1413,
+    "ablation_mode": "remove_direct_train_test_edges_only"
+  },
+  "summary_metrics": {
+    "val_auc_mean": 0.8275096930861181,
+    "val_auc_sd": 0.0027826172847374374,
+    "val_auprc_mean": 0.5782322268316856,
+    "val_auprc_sd": 0.008831139758393475,
+    "test_auc_mean": 0.7791079447383747,
+    "test_auc_sd": 0.007599195529395849,
+    "test_auprc_mean": 0.6255050796901127,
+    "test_auprc_sd": 0.01484720445473083
+  },
+  "per_repeat_metrics": [
+    {
+      "repeat_id": 0,
+      "seed": 3042,
+      "best_epoch": 6,
+      "best_val_auc": 0.8309457423140678,
+      "val_auc": 0.8309457423140678,
+      "val_auprc": 0.5727375741577683,
+      "test_auc": 0.7686499714690078,
+      "test_auprc": 0.6093238187441307
+    },
+    {
+      "repeat_id": 1,
+      "seed": 3043,
+      "best_epoch": 9,
+      "best_val_auc": 0.8262993390310603,
+      "val_auc": 0.8262993390310603,
+      "val_auprc": 0.5930103566552791,
+      "test_auc": 0.782795678694866,
+      "test_auprc": 0.644474916966827
+    },
+    {
+      "repeat_id": 2,
+      "seed": 3044,
+      "best_epoch": 3,
+      "best_val_auc": 0.8248400937532221,
+      "val_auc": 0.8248400937532221,
+      "val_auprc": 0.574133124311327,
+      "test_auc": 0.7771277520132818,
+      "test_auprc": 0.6132808399070664
+    },
+    {
+      "repeat_id": 3,
+      "seed": 3045,
+      "best_epoch": 4,
+      "best_val_auc": 0.8300202209817703,
+      "val_auc": 0.8300202209817703,
+      "val_auprc": 0.5715700102162616,
+      "test_auc": 0.7892197237738892,
+      "test_auprc": 0.6359727843587465
+    },
+    {
+      "repeat_id": 4,
+      "seed": 3046,
+      "best_epoch": 4,
+      "best_val_auc": 0.8254430693504703,
+      "val_auc": 0.8254430693504703,
+      "val_auprc": 0.5797100688177922,
+      "test_auc": 0.7777465977408287,
+      "test_auprc": 0.624473038473793
+    }
+  ],
+  "reference_saved_metrics": {
+    "esm_raw_saved": {
+      "path": "internal_path_omitted_from_anonymous_archive",
+      "available": true,
+      "test_probs_path": "internal_path_omitted_from_anonymous_archive",
+      "test_auc": 0.7790050633159713,
+      "test_auprc": 0.6074498000033915,
+      "val_probs_path": "internal_path_omitted_from_anonymous_archive",
+      "val_auc": 0.7814192276907073,
+      "val_auprc": 0.5569380868734662
+    },
+    "gcn_full_saved": {
+      "path": "internal_path_omitted_from_anonymous_archive",
+      "available": true,
+      "test_probs_path": "internal_path_omitted_from_anonymous_archive",
+      "test_auc": 0.7997246816052654,
+      "test_auprc": 0.6495762306366588,
+      "val_probs_path": "internal_path_omitted_from_anonymous_archive",
+      "val_auc": 0.8236932495763745,
+      "val_auprc": 0.5821266366704605
+    }
+  },
+  "comparison_to_saved_references": {
+    "ablated_esm_gcn_minus_raw_esm_test_auc": 0.00010288142240344467,
+    "ablated_esm_gcn_minus_raw_esm_test_auprc": 0.01805527968672116,
+    "ablated_esm_gcn_minus_full_gcn_test_auc": -0.020616736866890695,
+    "ablated_esm_gcn_minus_full_gcn_test_auprc": -0.024071150946546105
+  },
+  "outputs": {
+    "edge_ablation_stats_json": "internal_path_omitted_from_anonymous_archive",
+    "per_repeat_metrics_csv": "internal_path_omitted_from_anonymous_archive",
+    "val_probs_pattern": "internal_path_omitted_from_anonymous_archive",
+    "test_probs_pattern": "internal_path_omitted_from_anonymous_archive"
+  }
+}

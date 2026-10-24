@@ -41,3 +41,7 @@ temp/
 # Current matched-run saved prediction arrays, intentionally published
 !revisions/2026-10-24/source/matched_validation_20261024/runs/**/*.npy
 !revisions/2026-10-24/reproducibility/outputs/runs/**/*.npy
+
+# The focused revision preserves the same matched predictions
+!revisions/2026-10-24-workshop-focused/source/matched_validation_20261024/runs/**/*.npy
+!revisions/2026-10-24-workshop-focused/reproducibility/outputs/runs/**/*.npy
