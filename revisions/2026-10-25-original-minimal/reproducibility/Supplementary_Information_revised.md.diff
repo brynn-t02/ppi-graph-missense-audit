@@ -1,0 +1,148 @@
+--- 2026-10-25-figures-restored/Supplementary_Information_revised.md
++++ 2026-10-25-original-minimal/Supplementary_Information_revised.md
+@@ -12,7 +12,7 @@
+ 
+ This Supplementary Information provides reconstruction details, split statistics, model comparisons, uncertainty estimates, topology-stratified summaries and negative-control results. Full figure source data, topology-stratified metrics, corrected-sample statistics and fusion-control summaries are included in the prepared compact source-data archive.
+ 
+-Status guide: Tables 2–4 and 8–10 preserve historical results. Current matched results are in Tables 11–13, with the restored runtime and corrected common propagation operator documented in Methods 5. External-source and BioGRID validation are documented in Methods 6 and Tables 14–17. Historical comparisons must not be substituted for the current estimates. The earlier main topology figure is Supplementary Figure S2.
++Status guide: Main Figures 1–4 and Tables 2–10 preserve historical analyses. Tables 2–4 and 8 document the representation and fusion estimates and protocols in main Figures 1–2; Tables 5 and 6 document the topology and transition analyses in main Figures 3 and 4. Current matched results are in Tables 11–13 and the corresponding main-text results, with the restored runtime and corrected common propagation operator documented in Methods 5. External-source and BioGRID validation are documented in Methods 6, Tables 14–17 and main Figure 5. Historical comparisons must not be substituted for the current estimates.
+ 
+ ## Supplementary Methods
+ 
+@@ -42,7 +42,7 @@
+ H=\frac{1}{3}\left(X+\hat{A}X+\hat{A}^{2}X\right).
+ $$
+ 
+-FPP denotes fixed protein-feature propagation. This operation produced one propagated representation per STRING node and did not use variant labels during propagation. The full graph includes held-out features and nodes: this is transductive feature access, not use of held-out labels. All embedding-only variant inputs are identical within each mapped protein.
++FPP denotes fixed protein-feature propagation, the fixed two-hop operation called PPI-GCN in the main text. Both terms refer to the same non-trainable propagation, not to a trained graph neural network. This operation produced one propagated representation per STRING node and did not use variant labels during propagation. The full graph includes held-out features and nodes: this is transductive feature access, not use of held-out labels. All embedding-only variant inputs are identical within each mapped protein.
+ 
+ Two supplementary fixed operators were used: row-normalized two-hop mean propagation with residual averaging, and two rounds of cosine-softmax-weighted neighbour aggregation with residual averaging. The code runs both under no-gradient computation and has no learned aggregation or attention parameters. The original labels "GraphSAGE-style" and "GAT-style" are replaced by "Fixed mean propagation" and "Fixed cosine-weighted propagation". These are operator controls, not trained GraphSAGE/GAT baselines. The cosine operator includes self-neighbours and softmax weights from the current feature cosine similarity; trained graph models were not evaluated.
+ 
+@@ -102,7 +102,7 @@
+ 
+ ### Supplementary Table 2. Historical representation and architecture-control performance
+ 
+-Historical Table 2 raw-ESM and FPP rows report the retained reference runs used in the original figure analyses. Current Figure 1B–D and F use matched fits (Table 11); Figure 1E retains the historical partial-ablation series. Repeated classifier seeds showed the same direction with a smaller mean AUC difference and are reported in the main text.
++Table 2 preserves the raw-ESM and FPP reference estimates shown in main Figures 1B and 2D, together with historical repeated-run summaries and operator controls. Main Figure 1 also retains the historical connectivity and permutation analyses, whose differing run counts and protocols are documented in Table 8. Current matched fitted-run estimates and paired ensemble intervals are reported separately in Tables 11 and 12 and summarized in the main text.
+ 
+ | Split | Model | Val AUC | Val AUPRC | Test AUC | Test AUPRC | Status |
+ |---|---|---:|---:|---:|---:|---|
+@@ -121,7 +121,7 @@
+ 
+ ### Supplementary Table 3. Historical external predictor and fusion-control performance
+ 
+-The main fusion-control comparison uses repeated classifier runs where available. Older single-tool rows are retained only as reference context and are not mixed into the matched Figure 2 control panel.
++Table 3 supplies the historical fusion estimates in main Figure 2B and 2E, including repeated classifier runs where available and a single retained homology graph-fusion estimate. Older single-tool rows are reference context. Current matched fusion estimates and paired ensemble intervals are reported separately in Tables 11 and 12.
+ 
+ #### Supplementary Table 3A. Original split
+ 
+@@ -186,9 +186,11 @@
+ 
+ Historical Table 4A shows that variant-level bootstrap supports positive retained-reference FPP gains, whereas protein-clustered bootstrap widens uncertainty. Table 4B shows that the real FPP fusion margin over raw ESM fusion remained positive under protein-clustered paired bootstrap, but the smaller margins over edge-ablated and topology-permuted graph controls crossed zero. Table 4C is retained as an earlier retained-reference context analysis and is not architecture-matched.
+ 
+-The homology-aware strong-predictor bootstrap row comes from an earlier retained reference-run comparison rather than the architecture-matched repeated ensemble. This is historical context only. Current Figure 2E and Tables 11–12 use three matched fits in every arm; current margins supersede this earlier point estimate.
++Table 4A supplies the historical reference-pair intervals in main Figure 1C, and Table 4B supplies the historical fusion intervals in main Figure 2C. The homology graph-fusion estimate in Table 3B and main Figure 2E is a single retained fit. Current homology comparisons in Tables 11–12 use three matched fits in every arm and supersede the earlier asymmetric comparison for current inference.
+ 
+ ### Supplementary Table 5. Topology-stratified FPP gain over raw ESM
++
++These historical reference-pair results correspond to main Figure 3. Its topology-description graph is distinct from the propagation graph (Methods 2); all 53 joint cells and the highlighted profiles were inspected on the same test set. They have not been independently confirmed in the external source.
+ 
+ | Stratum | n | Positive rate | Delta AUC | Delta AUPRC |
+ |---|---:|---:|---:|---:|
+@@ -232,7 +234,7 @@
+ 
+ Corrected-sample group counts for raw ESM to FPP:
+ 
+-All strong-predictor transition counts in this table correspond to the exploratory retained-reference model pair used in Supplementary Figure S1, not to the architecture-matched repeated ensembles used in Figure 2.
++All strong-predictor transition counts in this table correspond to the exploratory retained-reference model pair used in main Figure 4, not to the historical repeated ensembles in main Figure 2B or the current matched ensembles in Tables 11–12.
+ 
+ | Group | n | Positive rate |
+ |---|---:|---:|
+@@ -253,6 +255,10 @@
+ | degraded | 275 | 0.3818 |
+ | false negatives rescued | 222 | 1.0000 |
+ | false positives suppressed | 444 | 0.0000 |
++
++At threshold 0.5, the raw-ESM/FPP pair corrected 1,436 variants and degraded 944; degradation comprised 904 new false positives and 40 new false negatives. The retained fusion pair corrected 666 variants and degraded 275. These threshold-dependent counts are descriptive, and the sigmoid outputs are uncalibrated (Table 10).
++
++In main Figure 4C–D, within-row centered and range-scaled means indicate which corrected group has the higher feature mean. Panel E uses uniform dot size and opacity; colors indicate only the direction of the FP-suppressed versus FN-rescued mean difference, without significance encoding. Panel F retains descriptive Hedges' g for rescued versus persistent false negatives. These features use different units, so raw differences are not comparable across features.
+ 
+ Selected false-positive-suppressed versus false-negative-rescued topology contrasts for raw ESM to FPP:
+ 
+@@ -293,7 +299,7 @@
+ 
+ The historical procedure stratifies raw-ESM baseline errors into false negatives and false positives, then contrasts corrected versus persistent errors within each stratum. Thus class label and baseline binary prediction agree within a contrast; continuous baseline scores are not matched and no caliper, nearest-neighbour or propensity matching is performed. The displayed FN contrasts contain 837 rescued and 1,062 persistent false negatives, except within-community neighbour fraction, for which two persistent-error values were missing (1,060 available). Hedges' g uses the pooled within-group standard deviation with small-sample correction. Group means and effect sizes are variant-weighted descriptive summaries. Historical bucket encodings, including -1 for insufficient or unassigned context, are retained numerically; a bucket mean is not a biological effect magnitude.
+ 
+-The archived FP-versus-FN comparisons used Mann–Whitney U tests, and baseline-error-stratified contrasts used 1,000 feature-wise permutations with seed 42 plus the feature index (offset 0 for FN and 10000 for FP conditions), followed by Benjamini–Hochberg correction. Both procedures treated variants as observations and ignored within-protein dependence. Their p values, FDR values and significance labels are omitted here and in Figure S1; no confirmatory inference is made from these historical tests. The descriptive associations do not establish causality or eliminate residual difficulty confounding.
++The archived FP-versus-FN comparisons used Mann–Whitney U tests, and baseline-error-stratified contrasts used 1,000 feature-wise permutations with seed 42 plus the feature index (offset 0 for FN and 10000 for FP conditions), followed by Benjamini–Hochberg correction. Both procedures treated variants as observations and ignored within-protein dependence. Their p values, FDR values and significance labels are omitted here and in main Figure 4; no confirmatory inference is made from these historical tests. The descriptive associations do not establish causality or eliminate residual difficulty confounding.
+ 
+ 
+ ### Supplementary Table 7. Negative-control audit
+@@ -322,7 +328,7 @@
+ | Homology CADD+AM and raw-ESM fusion | 3 classifier seeds 42-44 per arm | 50 | Repeated baseline means |
+ | Homology graph fusion | 1 retained run | 50 | Descriptive only; asymmetric comparison |
+ 
+-The negative controls were not all single-run analyses, but their protocols are asymmetric relative to the main positive comparison. Their existing standard deviations quantify dispersion under their respective protocols, not a paired causal graph effect. The reused partial-ablation endpoints in main Figure 1E and the reference bootstrap are not independent confirmations. This table documents historical runs. New matched-seed/budget/operator results replace the corresponding main comparative claims in Tables 11 and 12; historical rows remain unchanged for traceability.
++The negative controls were not all single-run analyses, but their protocols are asymmetric relative to the main positive comparison. Their existing standard deviations quantify dispersion under their respective protocols, not a paired causal graph effect. The reused partial-ablation endpoints in main Figure 1E and the reference bootstrap are not independent confirmations. This table documents the historical runs retained in main Figures 1–2. Current matched-seed/budget/operator results are summarized in the main text and reported in Tables 11 and 12; these current comparisons supersede the historical estimates for current inference. Historical rows and plotted estimates remain unchanged for traceability.
+ 
+ ### Supplementary Table 9. Historical post-hoc complete-case evaluation of matched fusion predictions
+ 
+@@ -338,9 +344,9 @@
+ 
+ Entries are across-run means. Per-run values and standard deviations are in revision_20261008/complete_case_matched_per_run.csv and complete_case_matched_summary.csv. AP is non-interpolated average precision, the implementation used for the AUPRC-labelled metrics throughout this study. Ordering is preserved in this restricted subset; no independent generalization or equivalence claim follows.
+ 
+-### Supplementary Table 10. Post-hoc threshold sensitivity of Supplementary Figure S1 reference pairs
+-
+-The same threshold was applied to both frozen models for nine thresholds (0.1 to 0.9), without selecting a best threshold or refitting. Row alignment was checked against Name, Label and STRING protein ID. The 0.5 counts exactly reproduce Supplementary Figure S1. Net corrections equal corrected minus degraded variants. These are descriptive test-set checks of uncalibrated class-weighted sigmoid scores, not clinical operating-point validation.
++### Supplementary Table 10. Post-hoc threshold sensitivity of main Figure 4 reference pairs
++
++The same threshold was applied to both frozen models for nine thresholds (0.1 to 0.9), without selecting a best threshold or refitting. Row alignment was checked against Name, Label and STRING protein ID. The 0.5 counts exactly reproduce main Figure 4A–B. Net corrections equal corrected minus degraded variants. These are descriptive test-set checks of uncalibrated class-weighted sigmoid scores, not clinical operating-point validation.
+ 
+ | Threshold | ESM-FPP FN rescued | ESM-FPP FP suppressed | ESM-FPP net | Fusion FN rescued | Fusion FP suppressed | Fusion net |
+ |---:|---:|---:|---:|---:|---:|---:|
+@@ -362,7 +368,7 @@
+ 
+ ## Source-data archive status
+ 
+-The prepared compact source-data archive contains figure source data for Figures 1–3 and Supplementary Figures S1–S2, topology-stratified metrics, joint topology maps, corrected-sample statistics, fusion-control summaries, bootstrap outputs and checksum files. The source package also includes the complete 177,213-row sample/split/cluster manifest, frozen node order, per-seed test predictions and external membership/prediction records in `canonical_analysis_20261025/public/`, plus the corresponding unified summaries and figure-generation scripts; executed protocols, source manifests and reconstruction programs are retained in the public experimental addendum. Large third-party resources, including provider-controlled CADD and AlphaMissense score files, are not redistributed and should be obtained from their original providers.
++The compact source-data archive contains the historical source data for main Figures 1–4 and the current external-source and network-comparison data for main Figure 5, together with topology-stratified metrics, joint topology maps, corrected-sample statistics, fusion-control summaries, bootstrap outputs and checksums. The source package also includes the complete 177,213-row sample/split/cluster manifest, frozen node order, per-seed test predictions and external membership/prediction records in `canonical_analysis_20261025/public/`. Unified current summaries support Tables 11–17, the current matched results in the main text and main Figure 5; historical figure estimates retain their archived inputs and conventions. Figure-generation and minimal figure-correction scripts are retained with the figure assets, and executed protocols, source manifests and reconstruction programs are retained in the public experimental addendum. Large third-party resources, including provider-controlled CADD and AlphaMissense score files, are not redistributed and should be obtained from their original providers.
+ 
+ 
+ ### Supplementary Methods 5. Matched validation and restored runtime (24 October 2026)
+@@ -375,7 +381,7 @@
+ 
+ The original-split representation comparison uses raw ESM, full FPP, ablated FPP (three fits each) and three topology permutations by three seeds (nine fits). Original-split fusion uses score-only, raw, full and ablated arms (three fits each) plus permuted fusion (nine). Homology fusion uses score-only, raw and full FPP (three fits each). Score-only and fusion models use the same hidden-layer architecture, but score-only models have fewer input-layer parameters. The smoke checks used four training batches plus validation, without test evaluation.
+ 
+-**Unified current reporting.** Tables 11–17 and the current matched/external panels in main Figures 1–3 use a single post-processing convention. Historical panels 1E and 2D retain their archived estimates and protocols. For all 21 protein-only representation checkpoints, CPU evaluation in float32 with fixed batches of 1,024 nodes in the frozen node order produces one stored probability per protein, which is mapped to its variant rows. On the original validation/test rows, the largest difference from the earlier variant-batched probabilities was 3.58e-7; the maximum within-protein spread decreased from 2.38e-7 to exactly zero. Fusion inputs remain variant-specific. Seed probabilities are converted to float64 before averaging; all AUPRC values are non-interpolated average precision computed consistently with scikit-learn. This inference and aggregation standardization involved no model refitting or checkpoint changes. It can slightly change rank-based metrics through exact ties; earlier outputs remain archived separately rather than mixed with the current tables.
++**Unified current reporting.** Tables 11–17, the current matched results reported in the main text and the external/network comparisons in main Figure 5 use a single post-processing convention. Main Figures 1–4 retain historical estimates and protocols; their values should not be read as current matched results. For all 21 protein-only representation checkpoints, CPU evaluation in float32 with fixed batches of 1,024 nodes in the frozen node order produces one stored probability per protein, which is mapped to its variant rows. On the original validation/test rows, the largest difference from the earlier variant-batched probabilities was 3.58e-7; the maximum within-protein spread decreased from 2.38e-7 to exactly zero. Fusion inputs remain variant-specific. Seed probabilities are converted to float64 before averaging; all AUPRC values are non-interpolated average precision computed consistently with scikit-learn. This inference and aggregation standardization involved no model refitting or checkpoint changes. It can slightly change rank-based metrics through exact ties; earlier outputs remain archived separately rather than mixed with the current tables.
+ 
+ ### Supplementary Table 11. Current matched fitted-run summaries
+ 
+@@ -553,27 +559,3 @@
+ | Homology fusion | BioGRID − STRING | -0.00216 (-0.00357, -0.00090) | -0.01052 (-0.01884, -0.00182) |
+ 
+ Original-split BioGRID fusion improved over scores alone, but incremental margins over raw-ESM fusion crossed zero for both metrics. BioGRID fusion was below STRING fusion in both splits under these conditional intervals. The homology BioGRID-minus-scores AUC interval ends only 0.00004 below zero, whereas its AUPRC interval crosses zero. This exploratory result does not establish stable harm from physical interactions. The external-source and second-network comparisons support transfer of the particular STRING representation under the stated exclusions and show network dependence; they do not establish a universal benefit from graph augmentation.
+-
+-
+-<!-- pagebreak -->
+-
+-## Supplementary Figure S1. Historical prediction transitions
+-
+-![Historical prediction-transition panels](figure_drafts/Figure4_prediction_transitions.png)
+-
+-Historical prediction-transition profiles, described without confirmatory feature-wise significance tests. A, Transitions for the retained raw-ESM/FPP pair at score threshold 0.5. B, Transitions for the retained CADD+AlphaMissense/graph-fusion pair. C–D, Within-row centered and range-scaled feature means for suppressed false positives and rescued false negatives; colors indicate only which group mean is higher. E, Raw differences between FP-suppressed and FN-rescued feature means (FP minus FN); feature units differ, so magnitudes are not comparable across rows. F, Historical descriptive Hedges' g for rescued versus persistent false negatives. Nbr denotes neighbour; path. rate uses training-neighbour labels. These are retained historical results, not current matched-fit estimates. Repeated variants within a protein were not accounted for in the historical feature-wise tests; significance values and their visual encodings are therefore omitted. Neither the descriptive differences nor Hedges' g establish a mechanism or remove continuous-score confounding.
+-
+-At threshold 0.5, the raw-ESM/FPP pair corrected 1,436 variants and degraded 944. Corrected variants included 837 rescued false negatives and 599 suppressed false positives; degradation comprised 904 new false positives and 40 new false negatives. The retained fusion pair corrected 666 variants and degraded 275, including 444 suppressed false positives and 222 rescued false negatives among the corrections. Full joint counts and topology statistics are in Table 6.
+-
+-These associations describe baseline-error strata. They neither match continuous prediction scores nor establish a mechanism. The post-hoc threshold sweep (Table 10) gave raw-ESM/FPP net corrections of -234 at 0.1 and +10 to +587 at 0.2-0.9. The retained fusion pair had positive net corrections throughout, but its dominant corrected error type reversed at 0.7. Sigmoid outputs were uncalibrated; this threshold-dependent pattern is not a validated clinical decision rule.
+-
+-
+-<!-- pagebreak -->
+-
+-## Supplementary Figure S2. Historical exploratory topology profiles
+-
+-![Exploratory topology-stratified profiles](figure_drafts/Figure3_exploratory_topology.png)
+-
+-A, Retained ESM representations show weak alignment with STRING topology. B, Degree and k-core gains are non-monotonic. C–D, Historical stratified estimates differ across betweenness, clustering and training-neighbour-risk groups. E, Exploratory distribution of all 53 joint topology cells. F, Selected joint profiles with within-cell intervals. L/M/H denote low/mid/high strata; deg, core, betw and clust denote degree, k-core, betweenness and clustering. These historical reference-pair results, redrawn for readability, were moved from the earlier main Figure 3; they are not newly fitted external-source or BioGRID results.
+-
+-The topology-description graph used STRING combined score ≥400, distinct from the full propagation graph (Methods 2). All cells and highlighted profiles were inspected on the same test set. Their historical intervals resample variants within cells and omit both within-protein dependence and subgroup-selection uncertainty. These are hypothesis-generating associations and have not been independently confirmed in the new external source. Full strata and selected-cell counts are retained in Table 5 and the source-data archive.

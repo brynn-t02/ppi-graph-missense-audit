@@ -1,0 +1,77 @@
+{
+  "page_count_including_references": 8,
+  "figures_1_to_5_caption_pages": {
+    "1": [
+      4
+    ],
+    "2": [
+      5
+    ],
+    "3": [
+      5
+    ],
+    "4": [
+      6
+    ],
+    "5": [
+      6
+    ]
+  },
+  "all_five_figures_in_main": true,
+  "identifying_strings_present": {
+    "Yuxin": false,
+    "Xianguo": false,
+    "Weibo": false,
+    "Jieqi": false,
+    "Yongqin": false,
+    "2595083628": false,
+    "yuxin_t02": false,
+    "Inner Mongolia": false,
+    "Hohhot": false,
+    "brynn-t02": false
+  },
+  "reference_30_present": true,
+  "metadata_contains_author_field": false,
+  "pdf_sha256": "ecbd06634a58e14be4fc2b3d54f19c9f17b88f4e4ce6eee670e053ff7b26f7b2",
+  "anonymity_passed": true,
+  "visual_qa": {
+    "all_pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "renders": [
+      "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_minimal_20261025/qa/final_main_anonymous-1.png",
+      "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_minimal_20261025/qa/final_main_anonymous-2.png",
+      "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_minimal_20261025/qa/final_main_anonymous-3.png",
+      "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_minimal_20261025/qa/final_main_anonymous-4.png",
+      "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_minimal_20261025/qa/final_main_anonymous-5.png",
+      "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_minimal_20261025/qa/final_main_anonymous-6.png",
+      "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_minimal_20261025/qa/final_main_anonymous-7.png",
+      "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_minimal_20261025/qa/final_main_anonymous-8.png"
+    ],
+    "no_observed_overlap": true,
+    "no_observed_clipping": true,
+    "abstract_and_keywords_bold": true,
+    "figures_and_captions_separated": true,
+    "original_small_figure_labels_preserved_per_explicit_user_request": true,
+    "original_figures_1_2_3_4_in_main": true,
+    "new_external_figure_5_in_main": true,
+    "reference_page_8_partial_coverage": "Final page contains referenceentries22–30; remaining white area is normal, not missing scientific content."
+  },
+  "text_figure_consistency_checks": [
+    "Figure1: caption/text distinguishes historical reference/control protocols from current matched results.",
+    "Figure2: caption identifies hidden-layer architecture matching and mixed historical repeated/single-fit results.",
+    "Figure3: caption identifies53inspectedcells and posthoc/protein-dependence limitations.",
+    "Figure4: caption states uniform direction points and noFDR/starencoding; E/F graphicalchangevisible.",
+    "Figure5: text/caption distinguish primary10785vsnestedstrict6934, ensemble/bootstrap conditional intervals, and externalSTRINGpositive vsBioGRIDuncertain."
+  ],
+  "blocking_findings": [],
+  "status": "passed",
+  "figure_caption_page_mapping_method": "Visually verified, not inferred from incidental in-text figure references."
+}

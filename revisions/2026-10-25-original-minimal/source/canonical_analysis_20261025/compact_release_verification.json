@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "public_file_hashes": 22,
+  "frozen_sample_rows": 177213,
+  "seed_metric_rows": 90,
+  "ensemble_metric_rows": 30,
+  "max_abs_metric_error": 2.220446049250313e-16,
+  "metrics": "tie-aware binary ROC AUC and non-interpolated AP",
+  "bootstrap_recomputed": false,
+  "limitations": "This compact-only check does not recreate training, input features, or the clinical-score completeness mask used by the complete-case table."
+}

@@ -1,0 +1,11 @@
+{
+  "n_keys": 177213,
+  "n_matched_keys": 171753,
+  "key_match_rate": 0.9691896192717239,
+  "n_merged_rows": 177213,
+  "n_missing_rows": 5460,
+  "row_match_rate": 0.9691896192717239,
+  "am_file": "/root/autodl-tmp/alphamissense/AlphaMissense_hg38.tsv.gz",
+  "out_scores": "/root/data/processed/alphamissense_matched_scores.csv",
+  "out_merged": "/root/data/processed/clinvar_with_alphamissense.csv"
+}

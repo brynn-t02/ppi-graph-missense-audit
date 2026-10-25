@@ -1,0 +1,14 @@
+{
+  "purpose": "Unify statistical postprocessing and release exact frozen membership/prediction manifests; no training",
+  "date": "2026-10-25",
+  "new_remote_directory": "assets/review_synthesis_20261025",
+  "checkpoints": "All57selectedcheckpoints unchanged; original21representation fits includeBioGRID3;36score/fusionfits retain frozenper-variant predictions",
+  "canonical_representation_scores": "Float32CPUinference,4threads,fixednodeindexorder,1024nodesperbatch,evalmode;oneprobabilitypernodepercheckpoint,lookupforanyvariant;maxabsolutechangefromsavedvariantprobabilitiesmustnotexceed2e-6",
+  "model_selection": "Retain all original selected epochs; no reselection or refitting based on changed reported metrics",
+  "ensemble": "Convert each seed probability tofloat64 before mean;permutation ensemble equalweightall3graphs x3seeds",
+  "metrics": "ROC AUC and sklearn.metrics.average_precision_score(non-interpolatedAP);sampleSDddof1 for3seedfitmetrics",
+  "bootstrap": "2000pairedSTRINGproteinclusterresamples perpopulation;restartnumpydefault_rng20261024 perpopulation;identicalweightsforallarms;percentile95%intervals;variantresamplingcontrastalso2000",
+  "verification": "Recompute per-seed/ensemble metrics throughsklearn, validate weightedkernelontiedsyntheticandactualrandomweights;independentlyrecompute2000replicatesforfivekeycomparisonsusingdirectsklearnsample_weight",
+  "public_manifests": "Full177213aggregatevariantIDs,labels,STRINGprotein,originalsplit,homologysplit,homologycluster;externalall40900stableIDs,label,primary/strictflags,perseedandensemblepredictions;allcurrentbenchmarktestperseedandensemblepredictions",
+  "limits": "Derivedaggregatepublicvariantdataonly,nopatientorprivatecorrespondencefields;individualdownloadedcompressedfile<5MB;alltensor/model/rawlargefilesstayserver;olderresultsunchanged"
+}

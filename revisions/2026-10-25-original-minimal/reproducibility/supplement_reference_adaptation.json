@@ -1,0 +1,55 @@
+{
+  "status": "complete_source_adaptation_no_render",
+  "completed_utc": "2026-10-25T09:35:08.032987+00:00",
+  "edited_files": [
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/Supplementary_Information_revised.md",
+      "before_sha256": "6125bc6f8230338862593100168a359f87fe1770cf75b902545c391dac20c572",
+      "after_sha256": "978443a04afb3c07bf906fe4a35297541c71ee60965a88df97c735d1cd604963",
+      "table_rows_preserved": 267,
+      "all_table_rows_byte_identical": true,
+      "display_formulas_byte_identical": true,
+      "removed_duplicate_figure_sections": [
+        "Supplementary Figure S1",
+        "Supplementary Figure S2"
+      ]
+    },
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/Supplementary_Information_anonymous.md",
+      "before_sha256": "7f9a65f615eeb47b8e869b5baf949818c9ae0c834c7633a7c94695d1b6282d37",
+      "after_sha256": "ba8b0e6f866290613f8ea134dc332dc169098ad7b2bcd34bd8bbcf25aeec58c2",
+      "table_rows_preserved": 267,
+      "all_table_rows_byte_identical": true,
+      "display_formulas_byte_identical": true,
+      "removed_duplicate_figure_sections": [
+        "Supplementary Figure S1",
+        "Supplementary Figure S2"
+      ]
+    }
+  ],
+  "scope": "Only the two assigned supplementary Markdown files changed. No main/figure/evidence file edits, compilation, rendering or server access.",
+  "changes": [
+    "Mapped historical main Figures1–2 to Tables2–4/8 and current matched estimates to Tables11–12.",
+    "Mapped historical topology and transition analyses to main Figures3/4 and removed duplicated final S1/S2 figure displays.",
+    "Retained unique removed-section interpretation/count notes within Tables5/6/10 rather than deleting scientific qualifications.",
+    "Declared FPP equivalent to the main manuscript's fixed PPI-GCN terminology, without renaming models or data.",
+    "Scoped canonical post-processing to Tables11–17, current matched main-text results and main Figure5; explicitly excluded historical main Figures1–4.",
+    "Updated source-data coverage and retained public manifest/prediction/environment/protocol provenance.",
+    "Aligned Figure4E description with the actual minimal vector patch: uniform symbols, color direction only, no FDR encoding."
+  ],
+  "verification": {
+    "named_anonymous_scientific_bodies_identical": true,
+    "all_original_table_rows_unchanged": true,
+    "all_display_formulas_unchanged": true,
+    "no_stale_S1_S2_display_or_reference": true,
+    "all_methods_retained": true,
+    "evidence_files_untouched": true,
+    "no_render": true
+  },
+  "exact_diff": "work/original_minimal_20261025/supplement_reference_adaptation.diff",
+  "remaining_for_root": [
+    "Compile final supplements and check layout/page count.",
+    "Synchronize main Figure4 caption with uniform-size/opacity directional dot panel and descriptive error-stratified g.",
+    "Verify final main references and package/GitHub synchronization."
+  ]
+}

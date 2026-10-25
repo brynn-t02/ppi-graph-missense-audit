@@ -1,0 +1,42 @@
+[
+  {
+    "before": "Training used \\texttt{BCEWithLogitsLoss} with positive-class weight",
+    "after": "Training used class-weighted binary cross-entropy with positive-class weight"
+  },
+  {
+    "before": "where $E$ is the edge-index count matrix and $\\tilde{D}$ its weighted degree matrix.",
+    "after": "where $E$ is the edge-index count matrix and $\\tilde{D}$ is the weighted degree matrix of $\\tilde{A}$."
+  },
+  {
+    "before": "The homology-aware split used MMseqs-derived protein clusters, used minimum identity 0.40 and coverage 0.50 (mode 0), assigned each cluster wholly to one partition and preserved the same row counts",
+    "after": "The homology-aware split used MMseqs-derived protein clusters with minimum identity 0.40 and coverage 0.50 (mode 0); each cluster was assigned wholly to one partition, preserving the same row counts"
+  },
+  {
+    "before": "Fig. 1B/C; Figs. 3/4 & 1 pair &",
+    "after": "Fig. 1B/C; Figs. 3/4 & 1 pair/contrast &"
+  },
+  {
+    "before": "Fig. 2D/E & 1 / 3,3,1 &",
+    "after": "Fig. 2D/E & 1/arm; 3/3/1 &"
+  },
+  {
+    "before": "Historical representation controls allow 30 epochs; current matched fits allow 50.",
+    "after": "Historical representation ablation/permutation fits allow 30 epochs; reference and current matched fits allow 50."
+  },
+  {
+    "before": " These panels retain their original numerical inputs.",
+    "after": ""
+  },
+  {
+    "before": "These original numerical estimates are preserved; updated matched comparisons appear",
+    "after": "Current matched comparisons appear"
+  },
+  {
+    "before": " The original figure is unchanged.",
+    "after": ""
+  },
+  {
+    "before": "Rescued false negatives had higher degree, neighbour-risk and betweenness, whereas suppressed false positives had higher clustering and within-community neighbour fraction (Fig. 4C/D).",
+    "after": "For the raw-ESM-to-PPI-GCN pair, rescued false negatives had higher degree, neighbour-risk and betweenness, whereas suppressed false positives had higher clustering and within-community neighbour fraction (Fig. 4C). Profiles for the retained fusion pair are shown in Fig. 4D."
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "clinvar_with_cadd.csv": {
+    "rows": 177213,
+    "duplicate_variation_rows": 0,
+    "conflicting_duplicate_scores": 0,
+    "nonmissing": 177205
+  },
+  "clinvar_with_alphamissense.csv": {
+    "rows": 177213,
+    "duplicate_variation_rows": 0,
+    "conflicting_duplicate_scores": 0,
+    "nonmissing": 171753
+  },
+  "permutation_0_operator_change": {
+    "max_abs": 0.788719892501831,
+    "mean_abs": 4.33625937148463e-05
+  },
+  "permutation_1_operator_change": {
+    "max_abs": 0.8092560768127441,
+    "mean_abs": 4.3127914977958426e-05
+  },
+  "permutation_2_operator_change": {
+    "max_abs": 0.7575809955596924,
+    "mean_abs": 4.3778232793556526e-05
+  }
+}

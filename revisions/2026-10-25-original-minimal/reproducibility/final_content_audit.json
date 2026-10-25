@@ -1,0 +1,291 @@
+{
+  "status": "passed_scientific_source_audit",
+  "completed_utc": "2026-10-25T10:04:33.229451+00:00",
+  "scope": "Read-only final scientific audit of original-based minimal main/supplement sources, followed by authorized renderer-only Table 4C KeepTogether correction and supplementary PDF visual review. Main/Markdown/data/figures were not edited during the final audit. No new experiments, inference or server access.",
+  "reviewed_sources": [
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/main.tex",
+      "sha256": "9537d0ab9f00d9c3e57f62979d7614e0a029a68e0cf92b6af47a88536612c8c6"
+    },
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/main_anonymous.tex",
+      "sha256": "bab7c13a6271ef34b956fc5fc0f3d6aa58cdf8cb9c7372356d43c376363cab83"
+    },
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/Supplementary_Information_revised.md",
+      "sha256": "978443a04afb3c07bf906fe4a35297541c71ee60965a88df97c735d1cd604963"
+    },
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/Supplementary_Information_anonymous.md",
+      "sha256": "ba8b0e6f866290613f8ea134dc332dc169098ad7b2bcd34bd8bbcf25aeec58c2"
+    }
+  ],
+  "numeric_checks": {
+    "current_checks": [
+      {
+        "population": "original",
+        "comparison": "full_FPP_vs_raw_ESM",
+        "metric": "auc",
+        "rounded_values": [
+          "0.0107",
+          "-0.0218",
+          "0.0426"
+        ],
+        "main_source_contains_all": true
+      },
+      {
+        "population": "original",
+        "comparison": "full_FPP_vs_edge_ablated_FPP",
+        "metric": "auc",
+        "rounded_values": [
+          "0.0248",
+          "0.0066",
+          "0.0494"
+        ],
+        "main_source_contains_all": true
+      },
+      {
+        "population": "original_fusion",
+        "comparison": "scores_plus_full_FPP_vs_scores_plus_raw_ESM",
+        "metric": "auc",
+        "rounded_values": [
+          "0.0032",
+          "0.0008",
+          "0.0062"
+        ],
+        "main_source_contains_all": true
+      },
+      {
+        "population": "homology",
+        "comparison": "scores_plus_full_FPP_vs_scores_capacity_matched",
+        "metric": "auc",
+        "rounded_values": [
+          "0.0001",
+          "-0.0019",
+          "0.0020"
+        ],
+        "main_source_contains_all": true
+      },
+      {
+        "population": "external_primary",
+        "comparison": "full_FPP_vs_raw_ESM",
+        "metric": "auc",
+        "rounded_values": [
+          "0.0375",
+          "0.0173",
+          "0.0564"
+        ],
+        "main_source_contains_all": true
+      },
+      {
+        "population": "external_primary",
+        "comparison": "full_FPP_vs_raw_ESM",
+        "metric": "auprc",
+        "rounded_values": [
+          "0.0463",
+          "0.0151",
+          "0.0745"
+        ],
+        "main_source_contains_all": true
+      },
+      {
+        "population": "external_strict",
+        "comparison": "full_FPP_vs_raw_ESM",
+        "metric": "auc",
+        "rounded_values": [
+          "0.0352",
+          "0.0034",
+          "0.0667"
+        ],
+        "main_source_contains_all": true
+      },
+      {
+        "population": "original_fusion",
+        "comparison": "scores_plus_BioGRID_FPP_vs_scores_capacity_matched",
+        "metric": "auc",
+        "rounded_values": [
+          "0.0124",
+          "0.0034",
+          "0.0210"
+        ],
+        "main_source_contains_all": true
+      },
+      {
+        "population": "original_fusion",
+        "comparison": "scores_plus_BioGRID_FPP_vs_scores_plus_raw_ESM",
+        "metric": "auc",
+        "rounded_values": [
+          "0.0009",
+          "-0.0011",
+          "0.0036"
+        ],
+        "main_source_contains_all": true
+      },
+      {
+        "mean_auc": "original/raw_ESM",
+        "rounded_value": "0.7835"
+      },
+      {
+        "mean_auc": "original/full_FPP",
+        "rounded_value": "0.7950"
+      },
+      {
+        "mean_auc": "original/edge_ablated_FPP",
+        "rounded_value": "0.7702"
+      },
+      {
+        "mean_auc": "homology/scores_capacity_matched",
+        "rounded_value": "0.9755"
+      },
+      {
+        "mean_auc": "homology/scores_plus_raw_ESM",
+        "rounded_value": "0.9727"
+      },
+      {
+        "mean_auc": "homology/scores_plus_full_FPP",
+        "rounded_value": "0.9752"
+      },
+      {
+        "mean_auc": "external_primary/raw_ESM",
+        "rounded_value": "0.6932"
+      },
+      {
+        "mean_auc": "external_primary/full_FPP",
+        "rounded_value": "0.7304"
+      },
+      {
+        "mean_auc": "external_primary/BioGRID_FPP",
+        "rounded_value": "0.7025"
+      }
+    ],
+    "pooled_permutation_auc": "0.7803",
+    "current_numeric_values_checked": 37,
+    "all_current_rounding_passed": true,
+    "detail_file": "work/original_minimal_20261025/main_numeric_checks.json",
+    "historical_values": "Original reference AUC/AP .7790/.6074 and .7997/.6496; original protein intervals[-.0080,.0527] and[-.0021,.0798]; ablation.7791/.6255; permutation.7757/.6052; fusion.9572/.9680/.9718/.9708/.9694; homologyrepresentation.7248/.7606 and historicalfusion.9754/.9728/.9741 all agree with the retained original source and historical supplementary tables.",
+    "AP_separation": "Main historical reference AP.6074/.6496 and historical controls.6255/.6052 explicitly historical. Current canonical original raw/full mean AP.6117/.6485 are in Table11; Table2 preserves archived .6116/.6484 with historical labels. No old/current AP value is mislabeled in the main text.",
+    "counts": "177213=141864+17129+18220;14123 labelled proteins;19622 graphnodes;13715404 edge-index entries;train-test1242422entries=621211undirectedpairs,9.06% rounded;externalprimary10785/2498 andstrict6934/1713;BioGRID931458undirectededges all agree with retained manifests/tables.",
+    "historical_profiles": "ESM similarity.8789/.8639;midkcore+.0775/highdegree−.0178;selectedjointcells+.1429/−.0532;53cells;raw transition11875/3965/1436/944 and837/599/904/40;fusion666/275 and444/222 all match original historical records."
+  },
+  "evidence_integrity": {
+    "canonical_files_byte_identical_to_previous_verified_edition": 49,
+    "supplement_table_rows_byte_identical_to_previous_edition": 267,
+    "previous_numeric_table_audit_cells_carried_forward": 167,
+    "previous_audit": "work/review_synthesis_20261025/final_content_audit.json",
+    "no_new_model_run_or_result": true
+  },
+  "historical_current_separation": {
+    "main_Figures1_to4": "Explicitly retain historical numerical inputs/protocols; qualitative claims reference current matched estimates separately. Figure1 currentoperator controls appear only in text/Table11; Figure2 old asymmetrichomology estimate is not used to infer stable harm.",
+    "main_Figure5": "Current canonical external/network intervals; copied current external figure asset, not historical figure3data.",
+    "current_training": "48STRINGfits=18representation+21originalfusion+9homologyfusion;9BioGRIDfits across3settings;externalusesfrozen3modelsperarm.",
+    "interval_interpretation": "Protein intervals conditional on fittedmodels/permutations;exploratory/no multiplicityadjustment;ensemblemetric vsmeanrun distinction retained.",
+    "AP_convention": "Current float64 ensemble/noninterpolated averageprecision;oldpanels retainarchived precision/populationSD."
+  },
+  "workshop_response_checks": [
+    {
+      "comment": 1,
+      "assessment": "Addressed by scope clarification in abstract,MethodsB andDiscussion; no trainedGNN performanceclaim or unnecessarynewGNN."
+    },
+    {
+      "comment": 2,
+      "assessment": "Both completed strengthening experiments described inMethodsE/ResultsE andmainFig5;positiveSTRING anduncertainBioGRID results both retained;transductive/nested/sharedannotation/nonprospective limits stated."
+    },
+    {
+      "comment": 3,
+      "assessment": "Original topology/error sections retained with exploratory language; selected53cells, protein/selection uncertainty and descriptive effects explicit. Fig4 significance encoding removed; raw-vs-fusion direction overgeneralization is now resolved."
+    },
+    {
+      "comment": 4,
+      "assessment": "Short provenanceTableI and historical/current captions respond directly; pair-per-contrast, one-fit-per-arm and representation-only30epoch scope corrected and verified."
+    },
+    {
+      "comment": 5,
+      "assessment": "Oldlowergraphfusion pointpreserved butcurrentthree-seed CIcrosses0;possibleoverfitting/redundancy/parameters/scaling/composition clearlyhypotheses,notconfirmedmechanisms."
+    },
+    {
+      "comment": 6,
+      "assessment": "Shorterabstract,existing4mainfigures preserved,newCIvalidationfigure andshortpracticalrecommendations;originalsectionstructurekept. Final8pagelimit/layout outside thissourceaudit."
+    },
+    {
+      "comment": 7,
+      "assessment": "Availability updated toexistingpublicrepo withaccuratecompactdatascope;anonymouscopy withholds identifyingURL. Latestrevisionpush still parentresponsibility."
+    }
+  ],
+  "other_consistency_checks": {
+    "main_named_anonymous_scientific_bodies_equal_excluding_availability": true,
+    "all_five_main_figure_assets_present": [
+      "figure_drafts/Figure1_connectivity_topology_controls_v2_accepted_minimal.pdf",
+      "figure_drafts/Figure2_fusion_homology_v1_accepted.pdf",
+      "figure_drafts/Figure3_topology_context_v1_accepted.pdf",
+      "figure_drafts/Figure4_prediction_transitions_v2_accepted_minimal.pdf",
+      "figure_drafts/Figure5_external_validation.pdf"
+    ],
+    "no_undefined_citations": true,
+    "no_stale_S1_S2_supplement_references": true,
+    "unsupported_ClinVar_date_removed": true,
+    "FPP_PPI_GCN_equivalence_explicit_in_supplement": true,
+    "anonymous_known_author_strings_absent": true,
+    "AI_disclosure": "Namesactualsystemsandcode/model/environment/statisticalassistance;authorsretainresponsibilityforreviewwithoutclaimingallindependentcheckscomplete."
+  },
+  "findings": [
+    {
+      "id": "raw_vs_fusion_topology_direction",
+      "status": "resolved_in_both_sources",
+      "severity": "required_scientific_correction",
+      "location": "main Results D, current L164; both editions",
+      "current": "Rescued false negatives ... suppressed false positives had higher clustering ... (Fig.4C/D).",
+      "reason": "Higher FP clustering holds for the raw-ESM/FPP pair (FP .2534 > FN .2022), but the retained fusion pair reverses this direction (FP .1807 < FN .2176). Current sentence wrongly applies one direction to both panels.",
+      "suggestion": "Qualify the first sentence as the raw-ESM-to-PPI-GCN pair (Fig.4C), and refer to Fig.4D separately for the retained fusion profiles.",
+      "evidence": "Supplementary Table6 and historical archived group means.",
+      "resolution_verified_utc": "2026-10-25T09:50:41.110093+00:00"
+    },
+    {
+      "id": "degree_matrix_antecedent",
+      "status": "resolved_in_both_sources",
+      "severity": "required_definition_clarity",
+      "location": "Methods B, current L62; both editions",
+      "current": "E is the edge-index count matrix and Dtilde its weighted degree matrix",
+      "reason": "The normalization requires degree of Atilde=(E+I)+(E+I)^T, whereas the pronoun can attach to E.",
+      "suggestion": "State explicitly that Dtilde is the weighted degree matrix of Atilde.",
+      "evidence": "Displayed symmetric-normalization equation and Supplementary Methods2.",
+      "resolution_verified_utc": "2026-10-25T09:50:41.110285+00:00"
+    },
+    {
+      "id": "run_table_precision",
+      "status": "resolved_in_both_sources",
+      "severity": "required_provenance_clarity",
+      "location": "Table I, current L100/103/110; both editions",
+      "current": "Figs1B/C;3/4 1pair; Fig2D/E 1/3,3,1; historical representation controls30epochs",
+      "reason": "Fig4 contains two retained model pairs, one per contrast. Fig2D uses one fit per arm. Historical representation ablation/permutation fits use30epochs, but retained raw/full and historical fusion controls use50.",
+      "suggestion": "Use1pair/contrast;1/arm and3/3/1; scope30epochs specifically to historical representation ablation/permutation and keep reference/currentfits50.",
+      "evidence": "Supplementary Table8; figure scripts and main captions.",
+      "resolution_verified_utc": "2026-10-25T09:50:41.110286+00:00"
+    }
+  ],
+  "out_of_scope": [
+    "Final main-PDF page count and visual inspection remain parent responsibility; supplementary visual QA is complete.",
+    "Remote GitHub publication verification",
+    "Conference upload/PDF-eXpress/author final-submission approval"
+  ],
+  "unresolved_scientific_corrections": [],
+  "source_hash_refresh_since_scientific_pass": [
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/main.tex",
+      "previous_sha256": "1ebd25bb749b8519946698c8ef260f141ea8d56eee3aeef464cfe9766dea5d37",
+      "current_sha256": "9537d0ab9f00d9c3e57f62979d7614e0a029a68e0cf92b6af47a88536612c8c6"
+    },
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/main_anonymous.tex",
+      "previous_sha256": "0080566482ec7a047c909270f9cfc57aea32751d1682088bbcc661c2bc710b85",
+      "current_sha256": "bab7c13a6271ef34b956fc5fc0f3d6aa58cdf8cb9c7372356d43c376363cab83"
+    }
+  ],
+  "supplement_visual_qa": {
+    "status": "passed",
+    "named_pages": 18,
+    "anonymous_pages": 18,
+    "table4c_keep_together_resolved": true,
+    "record": "work/original_minimal_20261025/supplement_visual_qa.json",
+    "renderer_change_record": "work/original_minimal_20261025/supplement_renderer_keep_table4c.json"
+  }
+}

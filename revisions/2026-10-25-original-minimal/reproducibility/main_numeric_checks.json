@@ -1,0 +1,150 @@
+{
+  "checks": [
+    {
+      "population": "original",
+      "comparison": "full_FPP_vs_raw_ESM",
+      "metric": "auc",
+      "rounded_values": [
+        "0.0107",
+        "-0.0218",
+        "0.0426"
+      ],
+      "main_source_contains_all": true
+    },
+    {
+      "population": "original",
+      "comparison": "full_FPP_vs_edge_ablated_FPP",
+      "metric": "auc",
+      "rounded_values": [
+        "0.0248",
+        "0.0066",
+        "0.0494"
+      ],
+      "main_source_contains_all": true
+    },
+    {
+      "population": "original_fusion",
+      "comparison": "scores_plus_full_FPP_vs_scores_plus_raw_ESM",
+      "metric": "auc",
+      "rounded_values": [
+        "0.0032",
+        "0.0008",
+        "0.0062"
+      ],
+      "main_source_contains_all": true
+    },
+    {
+      "population": "homology",
+      "comparison": "scores_plus_full_FPP_vs_scores_capacity_matched",
+      "metric": "auc",
+      "rounded_values": [
+        "0.0001",
+        "-0.0019",
+        "0.0020"
+      ],
+      "main_source_contains_all": true
+    },
+    {
+      "population": "external_primary",
+      "comparison": "full_FPP_vs_raw_ESM",
+      "metric": "auc",
+      "rounded_values": [
+        "0.0375",
+        "0.0173",
+        "0.0564"
+      ],
+      "main_source_contains_all": true
+    },
+    {
+      "population": "external_primary",
+      "comparison": "full_FPP_vs_raw_ESM",
+      "metric": "auprc",
+      "rounded_values": [
+        "0.0463",
+        "0.0151",
+        "0.0745"
+      ],
+      "main_source_contains_all": true
+    },
+    {
+      "population": "external_strict",
+      "comparison": "full_FPP_vs_raw_ESM",
+      "metric": "auc",
+      "rounded_values": [
+        "0.0352",
+        "0.0034",
+        "0.0667"
+      ],
+      "main_source_contains_all": true
+    },
+    {
+      "population": "original_fusion",
+      "comparison": "scores_plus_BioGRID_FPP_vs_scores_capacity_matched",
+      "metric": "auc",
+      "rounded_values": [
+        "0.0124",
+        "0.0034",
+        "0.0210"
+      ],
+      "main_source_contains_all": true
+    },
+    {
+      "population": "original_fusion",
+      "comparison": "scores_plus_BioGRID_FPP_vs_scores_plus_raw_ESM",
+      "metric": "auc",
+      "rounded_values": [
+        "0.0009",
+        "-0.0011",
+        "0.0036"
+      ],
+      "main_source_contains_all": true
+    },
+    {
+      "mean_auc": "original/raw_ESM",
+      "rounded_value": "0.7835"
+    },
+    {
+      "mean_auc": "original/full_FPP",
+      "rounded_value": "0.7950"
+    },
+    {
+      "mean_auc": "original/edge_ablated_FPP",
+      "rounded_value": "0.7702"
+    },
+    {
+      "mean_auc": "homology/scores_capacity_matched",
+      "rounded_value": "0.9755"
+    },
+    {
+      "mean_auc": "homology/scores_plus_raw_ESM",
+      "rounded_value": "0.9727"
+    },
+    {
+      "mean_auc": "homology/scores_plus_full_FPP",
+      "rounded_value": "0.9752"
+    },
+    {
+      "mean_auc": "external_primary/raw_ESM",
+      "rounded_value": "0.6932"
+    },
+    {
+      "mean_auc": "external_primary/full_FPP",
+      "rounded_value": "0.7304"
+    },
+    {
+      "mean_auc": "external_primary/BioGRID_FPP",
+      "rounded_value": "0.7025"
+    }
+  ],
+  "pooled_perm_auc": "0.7803",
+  "all_passed": true,
+  "main_scientific_bodies_equal": true,
+  "five_figure_assets_present": [
+    "figure_drafts/Figure1_connectivity_topology_controls_v2_accepted_minimal.pdf",
+    "figure_drafts/Figure2_fusion_homology_v1_accepted.pdf",
+    "figure_drafts/Figure3_topology_context_v1_accepted.pdf",
+    "figure_drafts/Figure4_prediction_transitions_v2_accepted_minimal.pdf",
+    "figure_drafts/Figure5_external_validation.pdf"
+  ],
+  "undefined_citations": []
+}

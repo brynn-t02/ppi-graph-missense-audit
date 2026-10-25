@@ -1,0 +1,62 @@
+{
+  "renderer": "outputs/BIBM_workshop_original_minimal_20261025/reproducibility/render_supplement.py",
+  "before_sha256": "d8dc7d80bacdb16711c234b43c9c2999a79dd467618a061e046236d883d2b804",
+  "after_sha256": "5b931490101c72bc633c193db6a7467b021f19be2d66110be27647b4e9e88385",
+  "change": "Only Supplementary Table4C heading, comparison note and two-row table are wrapped in KeepTogether. All other parsing/layout/font settings unchanged.",
+  "markdown_before": {
+    "outputs/BIBM_workshop_original_minimal_20261025/source/Supplementary_Information_revised.md": "978443a04afb3c07bf906fe4a35297541c71ee60965a88df97c735d1cd604963",
+    "outputs/BIBM_workshop_original_minimal_20261025/source/Supplementary_Information_anonymous.md": "ba8b0e6f866290613f8ea134dc332dc169098ad7b2bcd34bd8bbcf25aeec58c2"
+  },
+  "pdf_before": {
+    "outputs/BIBM_workshop_original_minimal_20261025/BIBM2026_supplementary_named_revised.pdf": "15faf4f6207583c22d36548452c419adf076cd2a70b8d81d92ec75bee060ef79",
+    "outputs/BIBM_workshop_original_minimal_20261025/BIBM2026_supplementary_anonymous_revised.pdf": "6c6b84028f0c05a675c915c3aa8896b3d7bd4c71bb3548dc4cd4e27fbb7fec70"
+  },
+  "pdf_after": {
+    "outputs/BIBM_workshop_original_minimal_20261025/BIBM2026_supplementary_named_revised.pdf": {
+      "sha256": "56863cfc18d097f27cdf3175e4c040d8a0b628d7f05d5e4ff4c9ea06190040de",
+      "pages": 18
+    },
+    "outputs/BIBM_workshop_original_minimal_20261025/BIBM2026_supplementary_anonymous_revised.pdf": {
+      "sha256": "e19bfc0c6801cbd266c50498285d9cda700aa450990d5d70e6c7fa8d4e14a925",
+      "pages": 18
+    }
+  },
+  "table4c_pages": {
+    "named": [
+      7
+    ],
+    "anonymous": [
+      7
+    ]
+  },
+  "text_changed_pages": {
+    "named": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "anonymous": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ]
+  },
+  "markdown_unchanged": true,
+  "all_267_table_rows_unchanged": true
+}
