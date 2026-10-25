@@ -1,0 +1,108 @@
+{
+  "completed_utc": "2026-10-25T12:51:22.429791+00:00",
+  "scope": "Only the two supplementary Markdown files edited; no tables, numbers, intervals, main source, figures, statistics, server or Baidu access. Renderer retains previous Table 4C KeepTogether.",
+  "files": [
+    {
+      "path": "outputs/BIBM_workshop_reporting_clarity_20261025/source/Supplementary_Information_revised.md",
+      "before_sha256": "978443a04afb3c07bf906fe4a35297541c71ee60965a88df97c735d1cd604963",
+      "after_sha256": "abaecf34fe2c91cb645d555c099f20e4ba9a0a646414aaeedad7cf267c31c7a7",
+      "table_lines_unchanged": true,
+      "table_line_count": 267,
+      "changes": [
+        {
+          "location": "Supplementary Methods 1",
+          "before": "The present analysis uses retained, checksum-identified processed tables and model inputs. Their exact historical ClinVar content-release date is unverified: a retained raw-file copy contains 2026 LastEvaluated records, but its relationship to the earlier processed tables has not been independently established. We therefore do not assign 31 March 2024, or a replacement 2026 date, to the frozen benchmark. Checksums and verified row identities identify the evaluated inputs; they do not establish temporal independence.",
+          "after": "The present analysis uses retained, checksum-identified processed tables and model inputs; their exact historical ClinVar content-release date is unverified. Checksums and verified row identities identify the frozen evaluated inputs but do not establish temporal independence.",
+          "reason": "State unverified content-release date and frozen-input scope directly without dated editorial history."
+        },
+        {
+          "location": "Supplementary Methods 2",
+          "before": "Two supplementary fixed operators were used: row-normalized two-hop mean propagation with residual averaging, and two rounds of cosine-softmax-weighted neighbour aggregation with residual averaging. The code runs both under no-gradient computation and has no learned aggregation or attention parameters. The original labels \"GraphSAGE-style\" and \"GAT-style\" are replaced by \"Fixed mean propagation\" and \"Fixed cosine-weighted propagation\". These are operator controls, not trained GraphSAGE/GAT baselines. The cosine operator includes self-neighbours and softmax weights from the current feature cosine similarity; trained graph models were not evaluated.",
+          "after": "Two supplementary fixed operators were used. Fixed mean propagation applies row-normalized two-hop mean propagation with residual averaging. Fixed cosine-weighted propagation applies two rounds of cosine-softmax-weighted neighbour aggregation with residual averaging, including self-neighbours and softmax weights from the current feature cosine similarity. Both run under no-gradient computation and have no learned aggregation or attention parameters. These are fixed operator controls, not trained GraphSAGE/GAT baselines; trained graph models were not evaluated.",
+          "reason": "Direct definitions of both fixed operators; no learned-parameter claim preserved."
+        },
+        {
+          "location": "Immediately after Supplementary Table 4A",
+          "before": "No explicit distinction between displayed Delta conventions.",
+          "after": "In Table 4A, Delta denotes FPP minus raw ESM. The Variant rows report the mean of the 1,000 paired variant-bootstrap differences; the Protein-clustered rows report the observed difference on the original test set. Both 95% intervals are the 2.5th and 97.5th percentiles of the corresponding bootstrap differences.",
+          "reason": "Archived variant summary uses bootstrap mean; archived protein summary uses observed point estimate; both intervals are percentile intervals."
+        }
+      ]
+    },
+    {
+      "path": "outputs/BIBM_workshop_reporting_clarity_20261025/source/Supplementary_Information_anonymous.md",
+      "before_sha256": "ba8b0e6f866290613f8ea134dc332dc169098ad7b2bcd34bd8bbcf25aeec58c2",
+      "after_sha256": "99ae2e3118f0c3541af40bd70692f2e35c0bcbad4833c665e1b77a38d2faa6c8",
+      "table_lines_unchanged": true,
+      "table_line_count": 267,
+      "changes": [
+        {
+          "location": "Supplementary Methods 1",
+          "before": "The present analysis uses retained, checksum-identified processed tables and model inputs. Their exact historical ClinVar content-release date is unverified: a retained raw-file copy contains 2026 LastEvaluated records, but its relationship to the earlier processed tables has not been independently established. We therefore do not assign 31 March 2024, or a replacement 2026 date, to the frozen benchmark. Checksums and verified row identities identify the evaluated inputs; they do not establish temporal independence.",
+          "after": "The present analysis uses retained, checksum-identified processed tables and model inputs; their exact historical ClinVar content-release date is unverified. Checksums and verified row identities identify the frozen evaluated inputs but do not establish temporal independence.",
+          "reason": "State unverified content-release date and frozen-input scope directly without dated editorial history."
+        },
+        {
+          "location": "Supplementary Methods 2",
+          "before": "Two supplementary fixed operators were used: row-normalized two-hop mean propagation with residual averaging, and two rounds of cosine-softmax-weighted neighbour aggregation with residual averaging. The code runs both under no-gradient computation and has no learned aggregation or attention parameters. The original labels \"GraphSAGE-style\" and \"GAT-style\" are replaced by \"Fixed mean propagation\" and \"Fixed cosine-weighted propagation\". These are operator controls, not trained GraphSAGE/GAT baselines. The cosine operator includes self-neighbours and softmax weights from the current feature cosine similarity; trained graph models were not evaluated.",
+          "after": "Two supplementary fixed operators were used. Fixed mean propagation applies row-normalized two-hop mean propagation with residual averaging. Fixed cosine-weighted propagation applies two rounds of cosine-softmax-weighted neighbour aggregation with residual averaging, including self-neighbours and softmax weights from the current feature cosine similarity. Both run under no-gradient computation and have no learned aggregation or attention parameters. These are fixed operator controls, not trained GraphSAGE/GAT baselines; trained graph models were not evaluated.",
+          "reason": "Direct definitions of both fixed operators; no learned-parameter claim preserved."
+        },
+        {
+          "location": "Immediately after Supplementary Table 4A",
+          "before": "No explicit distinction between displayed Delta conventions.",
+          "after": "In Table 4A, Delta denotes FPP minus raw ESM. The Variant rows report the mean of the 1,000 paired variant-bootstrap differences; the Protein-clustered rows report the observed difference on the original test set. Both 95% intervals are the 2.5th and 97.5th percentiles of the corresponding bootstrap differences.",
+          "reason": "Archived variant summary uses bootstrap mean; archived protein summary uses observed point estimate; both intervals are percentile intervals."
+        }
+      ]
+    }
+  ],
+  "exact_diff": "work/reporting_clarity_20261025/supplement_changes.diff",
+  "no_new_experiments_or_bootstrap": true,
+  "basis": [
+    "Archived CSV bootstrap_significance_summary.csv mean_delta columns",
+    "Archived JSON 42A_gcn_vs_esm_clustered_bootstrap.json point vs clustered_bootstrap fields",
+    "Original scripts 12_run_bootstrap_significance.py and 42_clustered_bootstrap_key_claims.py",
+    "Retained fixed-operator definitions and current source terminology"
+  ],
+  "rendering": {
+    "pdfs": {
+      "named": {
+        "pages": 18,
+        "sha256": "033c791cb3b2785e92d9b47be1b6985baf9838fa635d211cbb89996a3c75cd87",
+        "table4a_note_pages": [
+          6
+        ],
+        "table4c_heading_pages": [
+          7
+        ],
+        "author": "Yuxin Tian, Xianguo Zhang, Weibo Meng, Jieqi Yin, Yongqin Jin",
+        "known_author_identifiers": [
+          "Yuxin Tian",
+          "Xianguo Zhang",
+          "Weibo Meng",
+          "Jieqi Yin",
+          "Yongqin Jin",
+          "yuxin_t02",
+          "2595083628"
+        ]
+      },
+      "anonymous": {
+        "pages": 18,
+        "sha256": "06ea9508720f8681b27e4bdba0cceab4c58ab8a4c8d894d7ba2da2cbb3dc87d6",
+        "table4a_note_pages": [
+          6
+        ],
+        "table4c_heading_pages": [
+          7
+        ],
+        "author": "Anonymous",
+        "known_author_identifiers": []
+      }
+    },
+    "visual_qa": "work/reporting_clarity_20261025/supplement_visual_qa.json",
+    "renderer_changed": false,
+    "marker": "Root agent completed this round marker before delegated rendering; not repeated."
+  },
+  "status": "completed_and_visual_qa_passed"
+}

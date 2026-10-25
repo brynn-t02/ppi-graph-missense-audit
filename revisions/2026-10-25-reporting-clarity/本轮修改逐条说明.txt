@@ -1,0 +1,191 @@
+本轮修改逐条说明
+2026年10月25日｜结果表述与图示说明澄清版
+
+比较基线：上一版 GitHub 提交 d158580fd3d88c6eece5589d15f11a5c4a774694，对应 BIBM_workshop_original_minimal_20261025。
+本轮版本：BIBM_workshop_reporting_clarity_20261025。
+
+本轮围绕读者能否准确理解结果、图中颜色和统计量进行局部修改。没有重做实验、改变数据或替换结果；继续保留原稿四幅主图及历史数据，已经完成的外部队列与第二网络实验仍以第5幅主图呈现。具名和匿名主文均为8页（含参考文献），两份补充材料均为18页。上一版及其原图文件保留，本版另存。本说明只公开自己的修改与核验结论，不转载私人评审材料。
+
+一、正文与图注：10组具体修改
+
+1. 摘要第一处不确定性：明确是集成预测的95%区间
+位置：主文第1页摘要。
+改前：Three-seed mean AUC increased from 0.7835 to 0.7950, but protein-clustered uncertainty included zero.
+改后：Three-seed mean AUC increased from 0.7835 to 0.7950, but the protein-clustered 95% interval for the ensemble AUC gain included zero.
+依据：0.7835与0.7950是三个拟合模型各自AUC的平均值；bootstrap区间针对先平均预测概率、再计算AUC所得的集成增益。两个均值相减约为0.0115，集成预测差值约为0.0107，二者不是同一个统计量。因此这次同时补明“95%”和“ensemble AUC gain”，避免读者把区间当作三次AUC均值差的区间。
+结果未变：原划分下，该集成AUC增益的蛋白重采样区间仍跨零；并未因为措辞调整改成显著获益。
+
+2. 摘要外部验证的不确定性：同样明确集成预测及95%区间
+位置：主文第1页摘要。
+改前：On 10,785 external UniProt variants, STRING propagation improved mean AUC from 0.6932 to 0.7304, with a positive protein-bootstrap interval.
+改后：On 10,785 external UniProt variants, STRING propagation improved mean AUC from 0.6932 to 0.7304; the protein-bootstrap 95% interval for the ensemble AUC gain excluded zero.
+依据：同样需要区分三次运行的平均AUC与集成概率的AUC差。改后的“excluded zero”指出该95%区间排除零，方向由同句中的提高以及正文给出的正差值确定。
+结果未变：外部STRING相对raw ESM的正向证据保留；BioGRID外部增益的不确定性也保留，没有推广为任何网络都有效。
+
+3. 同源划分结果：用中性的不确定性陈述
+位置：Results中“Strong predictors and homology-aware evaluation…”小节，第3页。
+改前：Thus a stable graph-fusion loss is not established by the repeated comparison.
+改后：The graph-versus-score effect remained uncertain under homology-aware splitting.
+依据：当前匹配比较的graph-minus-score集成AUC差为+0.0001，区间为[-0.0019, +0.0020]，AUPRC区间也跨零。直接说效应仍不确定，更准确地涵盖可能的正向和负向差异。
+保留内容：历史单次graph-fusion估计较低这一事实、当前三seed均值、集成差值与区间，以及均值指标与平均概率指标可能产生不同近似排序的说明，均保留。
+
+4. Discussion：删除重复的“不能证明稳定有害”句
+位置：Discussion的同源划分解释段，第7页。
+删除：A stable harmful graph effect cannot be inferred from the retained single run.
+依据：Results已经给出中性的“效应仍不确定”，Discussion同一段也保留“历史点估计较低，但当前匹配区间跨零”的完整背景。再次重复否定有害效应没有增加新信息。
+保留限制：额外输入权重、高维特征冗余、过拟合、特征尺度及蛋白组成变化仍只是可能解释；这些机制未被实验区分。跨划分患病比例变化对AUPRC比较的限制也保留。本次并未删去关键局限。
+
+5. 当前融合结果：降低动词的确认语气
+位置：Results强预测器融合段，第3页。
+改前：Current matched fusion confirmed a small real-minus-raw margin
+改后：Current matched fusion yielded a small real-minus-raw margin
+依据：这是特定模型、划分和固定训练协议下得到的小幅差值；“yielded”报告观测结果，“confirmed”容易被理解为更广泛的确认。
+结果未变：+0.0032及蛋白95%区间[+0.0008, +0.0062]未变；消融比较仍不确定，置换比较仍限定为给定已抽取图的条件性结果。
+
+6. 致谢：修正搭配，不改变AI协助披露范围
+位置：Acknowledgment，第7页。
+改前：Anthropic Claude assisted literature organization
+改后：Anthropic Claude assisted with literature organization
+依据：“assist with”是此处正确搭配。实际整句仍同时列明OpenAI ChatGPT、OpenAI Codex与Anthropic Claude，保留文献整理、代码、语言编辑、环境恢复、拟合、检查及统计分析的协助范围，并保留作者对审阅和最终稿负责的说明。
+这是一处语法修改，不把真实发生过的研究辅助描述成仅语言润色。
+
+7. 图1图注：指出历史Δ的定义见补充表4A
+位置：Figure 1图注，第4页。
+原有：B/C, Retained reference pair and its variant/protein bootstrap intervals.
+新增：Displayed differences follow the conventions in Supplementary Table 4A.
+依据：图1C继承历史报告约定；变异重采样行的Δ是bootstrap差值均值，蛋白重采样行的Δ是原测试集观测差值。图注指向新增表注，避免把四个数看作完全相同的汇总定义。
+图中的点、区间、历史数据及各面板未重绘或改数。历史负对照与当前匹配估计仍分开报告。
+
+8. 图4图注：逐个解释C/D、E与F的颜色
+位置：Figure 4图注，第6页。
+改前主要描述：C/D为row-normalized热图；E为均值差方向且点统一；F为无星号的误差分层效应量。没有逐一说明各面板不同的颜色规则。
+改后关键句：
+C/D, Row-centered, range-scaled group means; warm/blue colors denote above/below the within-row mean, not comparable effect magnitudes across rows.
+E, Uniform blue/orange dots denote higher means among rescued false negatives/suppressed false positives, respectively.
+F, Baseline-error-stratified Hedges' g; blue/orange denote positive/negative effects.
+依据与准确含义：
+（1）C/D每行包含FP-suppressed和FN-rescued两个组均值。实际变换是“某组均值减去这两个组均值的算术平均，再除以两者的最大值减最小值”。暖色表示高于该行中心，蓝色表示低于该行中心；并非按样本量加权的两组总体均值。原配色是RdBu_r，故使用warm比把它称为E/F相同的固定橙色更准确。
+（2）因为每行只有两个组，非近似相等时标准化值就是-0.5和+0.5。颜色主要说明哪组更高，不能据此比较不同特征的效应大小。图注新增了这一限制。
+（3）E按FP均值减FN均值的符号上色：差为负，蓝色表示FN-rescued更高；差为正，橙色表示FP-suppressed更高。18个点的方向均已与原始组均值交叉核对。点的大小和透明度统一，均不编码显著性或差异大小。
+（4）F为rescued FN相对persistent FN的Hedges' g。蓝色为正值，橙色为负值；它与E的“哪一组均值更高”并非同一组比较，故分别解释。保留其描述性定位及蛋白内重复变异对推断的限制。
+本次没有改变颜色、点大小、条形长度或数值，只澄清图注。显著性星号和FDR大小编码的删除已在上一版完成，本次没有把同一件事重复记作新修复。
+
+9. Practical recommendations：去除自动产生的a)小节编号
+位置：Discussion末尾，第7页。
+改前源代码：\paragraph{Practical recommendations}
+改后源代码：\noindent\textbf{Practical recommendations.}
+依据：IEEE模板对paragraph层级自动编号，出现了不必要的“a)”式小标题。本次改为不编号的加粗行内标题；不是删掉建议内容，也不是删英文冠词a。建议正文不变。
+
+10. 数据可用性：明确包含Supplementary Information
+位置：Data and Code Availability，第7页；匿名版按匿名要求不显示作者身份相关仓库地址。
+改前开头：Code, compact source data, complete sample memberships, per-seed predictions, protocols and checksums are publicly available…
+改后开头：Supplementary Information, code, compact source data, complete sample memberships, per-seed predictions, protocols and checksums are publicly available…
+依据：公开仓库已经承载独立补充材料，读者需要知道SI的访问路径。这一说明不依赖Workshop系统是否接受单独补充文件。
+边界：第三方原始资源、大张量和检查点仍按原说明单独存储；不能把这句话理解成所有大文件均已上传GitHub。本说明属于准备发布的新快照；是否完成远端上传与核验，以随附同步回执为准。
+
+二、图内文字：共6处局部修改
+
+1. 图1总标题
+改前：PPI graph augmentation depends on topology alignment and train-test connectivity
+改后：Fixed-propagation audit under connectivity and topology controls
+原因：标题直接说明这是固定传播的审计，不把历史不同预算、不同种子和旧控制算子得出的图形概括成普适的依赖关系。
+
+2. 图1D注释
+改前：AUC gain removed
+改后：AUC near the raw-ESM reference
+原因：“gain removed”容易引出确定的消除效应或因果解释。该面板保留历史消融结果，应描述点估计靠近参照值。新注释按原字号分为三行，仍放在原空白区域。
+
+3. 图1F注释
+改前：returns to ESM level
+改后：Point estimates near raw ESM
+原因：“returns to”容易被读成等效性结论。现在限定为点估计接近，不声称统计等效。按原字号分为两行。
+
+4. 图3总标题
+改前：PPI-GCN gains concentrate in specific network topology contexts
+改后：Exploratory PPI-GCN gains across network topology contexts
+原因：这些分层和选中联合单元来自同一测试集的探索性分析，尚无独立确认。增加Exploratory，把标题语气与正文及补充材料中的选择偏倚、蛋白内依赖等限制对齐。
+
+5. 图3C标题
+改前：C  Bridge role and local density shape gain
+改后：C  Gains across betweenness and clustering strata
+原因：直接说实际统计的betweenness与clustering分层，避免“shape gain”暗示机制或因果作用。该标题保留9 pt，只在已有标题行空白内略向左移，避免加长后碰撞；没有移动数据点或坐标轴。
+
+6. 图4E标题
+改前：E  Topology features separate corrected groups
+改后：E  Mean topology differences between corrected groups
+原因：统一点仅描述组均值差的方向，不能承担“特征能够分离两组”或显著区分的推断。新标题与补充表6、图注中的描述性解释一致，保留原9 pt字号。
+
+以上采用局部矢量文字替换：移除旧文字，再写入新文字；没有白色遮挡覆盖，也没有隐藏旧标题残留。300 DPI像素审核显示，三幅修改图在允许的文字区域以外，变化像素为0。坐标、曲线、热图、颜色、点和条形的数据均保留。图2与新增外部验证图5未改。本轮没有扩大原图的小字体：图1注释仍为7.4 pt，图1总标题13.5 pt，图3总标题14 pt，图3C和图4E为9 pt；这是保留原图和最小改动的明确取舍，不宣称已经完成字号放大或全面重排。
+
+三、补充材料：3组改动，具名与匿名一致
+
+1. 第1页Methods 1：将日期溯源说明改为直接事实陈述
+改前包含：保留原始文件出现2026记录、不能使用31 March 2024或替换为2026等编辑过程说明。
+改后：The present analysis uses retained, checksum-identified processed tables and model inputs; their exact historical ClinVar content-release date is unverified. Checksums and verified row identities identify the frozen evaluated inputs but do not establish temporal independence.
+依据：目前能确认的是校验和冻结的实际输入及行身份；不能确认其精确ClinVar内容发布日期。正文无需展开历次日期写法的修订过程，但必须保留日期未知和不能建立时间独立性的边界。
+没有给数据另安一个年份，也没有声称来源日期问题已经解决。
+
+2. 第2页Methods 2：直接定义两个固定算子
+改前包含：The original labels “GraphSAGE-style” and “GAT-style” are replaced by…
+改后直接说明：Fixed mean propagation为行归一化两跳均值传播加残差平均；Fixed cosine-weighted propagation为两轮余弦softmax加权邻居聚合加残差平均，包含自身邻居，权重来自当前特征余弦相似度。
+同时保留：两种算子在无梯度计算下运行，没有学习到的聚合或注意力参数；它们是固定算子对照，不是训练后的GraphSAGE/GAT基线。
+依据：读者需要看到算子的实际定义，不需要看到旧标签如何改名。这里没有扩充成新的模型实验。
+
+3. 第6页Table 4A：增加Δ与区间定义，四个Δ及所有区间不变
+新增表注原文：In Table 4A, Delta denotes FPP minus raw ESM. The Variant rows report the mean of the 1,000 paired variant-bootstrap differences; the Protein-clustered rows report the observed difference on the original test set. Both 95% intervals are the 2.5th and 97.5th percentiles of the corresponding bootstrap differences.
+核验结果：
+变异层面AUC Δ仍为+0.0208，区间仍为[+0.0174, +0.0240]；其未四舍五入的bootstrap均值为0.02075708676995086。
+变异层面AUPRC Δ仍为+0.0420，区间仍为[+0.0353, +0.0484]；其bootstrap均值为0.042046008834725215。
+蛋白层面AUC Δ仍为+0.0207，区间仍为[-0.0080, +0.0527]；该Δ是原测试集观测差0.02071961828929414。
+蛋白层面AUPRC Δ仍为+0.0421，区间仍为[-0.0021, +0.0798]；该Δ是原测试集观测差0.042126430633267264。
+原始JSON另外保存的蛋白bootstrap差值均值约为0.02222645和0.03986056，并不是Table 4A采用的点。本次没有拿它们覆盖原表，也没有把0.0208与0.0207之间的差异归为数值错误。
+核验依据：原始CSV的mean_delta字段、原始JSON的point与clustered_bootstrap字段，以及12_run_bootstrap_significance.py、42_clustered_bootstrap_key_claims.py中的均值与quantile实现。两类区间都是对应重采样差值的第2.5和97.5百分位数；没有重新运行bootstrap。
+
+补充材料全部267行表格逐行保持一致；两份MD的科学正文一致。原有Table 4C KeepTogether排版继续有效，标题、说明与两行数据仍完整位于第7页；本轮未再改renderer。
+
+四、核查后没有修改的项目
+
+1. 第3页MMseqs命令
+针对“参数被挤成0.40c0.50cov-mode0threads8”的疑问，已对本轮具名和匿名PDF第3页分别放大到220 DPI，并核对可复制的PDF文字和MD原文。三者中的选项行逐字符一致：
+  --min-seq-id 0.40 -c 0.50 --cov-mode 0 --threads 8
+单连字符、双连字符、选项间空格及命令续行反斜杠均完整可见。连字符是ASCII U+002D，空格是U+0020；不存在该拼接串。当前版本不需要修改，不能把这项核查写成“修好了此前缺失的参数”。此前采用的短行续行仍保留。
+此次只检查了文字和版式，没有执行MMseqs、重新聚类或改变同源划分。
+
+2. 历史图和当前匹配证据的区别
+继续保留Table I、历史图注与补充表中的不同种子、预算、控制算子、单次/重复运行和端点复用说明。清理编辑过程叙述不等于清理这些必要来源区别。本轮没有把原图历史数字换成当前匹配数字，也没有让图1–4冒充新协议重新运行的结果。
+
+3. 结果与科学边界
+当前49个canonical结果文件未变；公式、行内数学内容、Table I、参考文献及引用顺序未变。摘要新增的数字仅为两处95%，不是新结果。
+原划分下raw/full表示的蛋白区间跨零、外部STRING增益获得支持、BioGRID相对raw增益仍不确定、同源graph-versus-score效应仍不确定，均保持原结论。
+重采样区间对保留拟合模型的条件性、未计入重新训练不确定性、探索性分层及蛋白内相关、外部严格子集嵌套关系、传导式图节点访问、可能共享注释证据等限制均保留。
+
+五、补充材料的发布和会议提交必须分开理解
+
+本轮把Supplementary Information明确列入仓库可用内容，是让读者能独立获取完整方法和表格，并不声称已经提交给Workshop系统，也不保证它一定随IEEE Xplore主文一起发表。
+“IEEE Xplore一律不收补充材料”不能作为一般规则。IEEE官方会议资源页列有“Supplemental Electronic Material (Multimedia) Overview”和相应的元数据工具，说明IEEE会议出版流程存在补充电子材料相关指引；但这一通用资源不能证明本届Workshop一定开放某种SI文件上传项。依据：[IEEE会议资源、表格与模板](https://events.ieee.org/forms-and-templates/)，2026年10月25日核查。
+本Workshop实际投稿/终稿界面是否允许独立SI、允许什么格式和如何关联，仍未确认。GitHub提供SI独立于这一会务问题；当前不把附件能力描述成“只有主文PDF”或“必然接受补充”。
+
+六、交付检查与本轮状态
+
+具名主文：8页，包含参考文献。
+匿名主文：8页，包含参考文献。
+具名与匿名补充：各18页。
+五幅图均在正文，原稿四幅历史图未移入补充。图2与图5没有改动，图1/3/4仅作上面列明的文字替换与图注澄清。
+
+主文和补充已做版式检查；补充全部36页以总览检查，并放大检查修改页、Table 4A和Table 4C。匿名文件的已知作者姓名、邮箱及身份信息检查通过。局部图文字无遮挡或越界。匿名主文参考文献末页两栏仍有约三行的高度差，但没有内容丢失或截断；这不影响8页限制。
+
+本轮没有新实验、训练、推理、重采样统计或服务器访问；没有访问或下载百度网盘。数据、历史数值、当前结果文件和原稿基线全部保留。小字体没有放大。
+
+本说明属于准备发布的新快照；本轮GitHub是否完成上传与远端核验，以随附同步回执、提交号和核验结果为准。此前d158580版已保留。不能根据本地PDF已完成就声称本轮已公开同步。本轮未进行会务系统提交或PDF eXpress认证。
+
+核验记录索引（工作目录中的对应文件）
+main_changes.json：正文与图注10组逐句差异。
+supplement_changes.json / supplement_changes.diff：补充3组改动与精确差异。
+evidence_audit.json：Table 4A定义、Fig4颜色与原始记录/脚本证据。
+figure_text_clarity_audit.json及三个clarified.audit.json：6处图中文字与限定区域像素核验。
+final_content_audit.json：公式、表格、数值、引用和49个当前结果文件的不变性检查。
+supplement_visual_qa.json：两份18页补充的版式检查。
+command_render_check.json：MMseqs命令的视觉、PDF文字与MD逐字符核验。
+main_anonymous_visual_qa.json：匿名主文8页版式与匿名性检查。
+
+这些记录支持“本轮表述更加明确，实验结果不变”这一结论；它们不替代未进行的扩展实验验证、会务上传确认或单独的远端同步核验。

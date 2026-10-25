@@ -1,0 +1,13 @@
+{
+  "split": "homology",
+  "arm": "scores_plus_full_FPP",
+  "seed": 42,
+  "best_epoch": 21,
+  "epochs_run": 26,
+  "val_auc": 0.9744319933808495,
+  "val_auprc": 0.8386967108613512,
+  "test_auc": 0.9752511074998189,
+  "test_auprc": 0.8380789462879945,
+  "seconds": 40.156070947647095,
+  "dim": 1283
+}

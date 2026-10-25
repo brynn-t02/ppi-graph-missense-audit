@@ -1,0 +1,55 @@
+{
+  "status": "complete",
+  "edit_count": 6,
+  "figures": [
+    {
+      "pdf": "outputs/BIBM_workshop_reporting_clarity_20261025/source/figure_drafts/Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+      "png": "outputs/BIBM_workshop_reporting_clarity_20261025/source/figure_drafts/Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.png",
+      "audit": "outputs/BIBM_workshop_reporting_clarity_20261025/source/figure_drafts/Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.audit.json",
+      "sha256": "6fab8facd7e5af9bd701ea7475f733c6eaf03751a29ec86fc3fcacacf5fd4cf0",
+      "visual_checked": true,
+      "no_overlap_or_clipping": true,
+      "outside_allowed_text_regions_changed_pixels": 0
+    },
+    {
+      "pdf": "outputs/BIBM_workshop_reporting_clarity_20261025/source/figure_drafts/Figure3_topology_context_v1_accepted_clarified.pdf",
+      "png": "outputs/BIBM_workshop_reporting_clarity_20261025/source/figure_drafts/Figure3_topology_context_v1_accepted_clarified.png",
+      "audit": "outputs/BIBM_workshop_reporting_clarity_20261025/source/figure_drafts/Figure3_topology_context_v1_accepted_clarified.audit.json",
+      "sha256": "1012fa80e12572fb33fded6ed54d4e40ba992f0915ba4c79e32d7e3ff598932c",
+      "visual_checked": true,
+      "no_overlap_or_clipping": true,
+      "outside_allowed_text_regions_changed_pixels": 0
+    },
+    {
+      "pdf": "outputs/BIBM_workshop_reporting_clarity_20261025/source/figure_drafts/Figure4_prediction_transitions_v2_accepted_minimal_clarified.pdf",
+      "png": "outputs/BIBM_workshop_reporting_clarity_20261025/source/figure_drafts/Figure4_prediction_transitions_v2_accepted_minimal_clarified.png",
+      "audit": "outputs/BIBM_workshop_reporting_clarity_20261025/source/figure_drafts/Figure4_prediction_transitions_v2_accepted_minimal_clarified.audit.json",
+      "sha256": "439ae8c16fc5d1a6898aa5a6104cd114e05738aaaf91bd18e58390ec50f038bd",
+      "visual_checked": true,
+      "no_overlap_or_clipping": true,
+      "outside_allowed_text_regions_changed_pixels": 0
+    }
+  ],
+  "all_data_coordinates_colors_and_other_pixels_preserved": true,
+  "all_original_point_sizes_preserved": true,
+  "all_old_text_removed_not_overlaid": true,
+  "abbreviations_needed": false,
+  "source_figures_preserved": true,
+  "no_tex_edits": true,
+  "no_new_experiments": true,
+  "no_server_access": true,
+  "portable_fonts": [
+    "resources/fonts/DejaVuSans.ttf",
+    "resources/fonts/DejaVuSans-Bold.ttf"
+  ],
+  "reproducible_scripts": [
+    "figure_scripts/figures1_3_text_clarity_patch.py",
+    "figure_scripts/figure4_reporting_clarity.py"
+  ],
+  "visual_findings": [
+    "Figure1 D annotation wraps into three lines at original7.4pt and F into two lines; both remain in original empty space.",
+    "Figure1 main title preserves13.5pt bold; Figure3 main title preserves14pt bold.",
+    "Figure3 C title preserves9pt and shifts left from723.648pt to688pt; no collision with panel B title or plot.",
+    "Figure4 E title preserves9pt at original baseline; about53pt remain before panel F title."
+  ]
+}

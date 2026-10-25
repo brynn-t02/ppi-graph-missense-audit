@@ -1,0 +1,58 @@
+{
+  "status": "passed_no_change_needed",
+  "checked_utc": "2026-10-25T13:00:04.471767+00:00",
+  "scope": "Read-only visual and text verification of both supplementary page-3 MMseqs commands. No PDF, Markdown or renderer changes.",
+  "expected_option_line": "  --min-seq-id 0.40 -c 0.50 --cov-mode 0 --threads 8",
+  "checks": [
+    {
+      "edition": "named",
+      "page": 3,
+      "pdf_path": "outputs/BIBM_workshop_reporting_clarity_20261025/BIBM2026_supplementary_named_revised.pdf",
+      "pdf_sha256": "033c791cb3b2785e92d9b47be1b6985baf9838fa635d211cbb89996a3c75cd87",
+      "markdown_path": "outputs/BIBM_workshop_reporting_clarity_20261025/source/Supplementary_Information_revised.md",
+      "markdown_sha256": "abaecf34fe2c91cb645d555c099f20e4ba9a0a646414aaeedad7cf267c31c7a7",
+      "exact_pdf_option_line": "  --min-seq-id 0.40 -c 0.50 --cov-mode 0 --threads 8",
+      "exact_markdown_option_line": "  --min-seq-id 0.40 -c 0.50 --cov-mode 0 --threads 8",
+      "all_option_characters_ascii": true,
+      "hyphen_codepoint": "U+002D",
+      "space_codepoint": "U+0020",
+      "option_line_byte_identical_to_expected": true,
+      "full_extracted_command_block": [
+        "mmseqs createdb all_split_proteins.fa split_proteins_db",
+        "mmseqs cluster split_proteins_db split_proteins_clu tmp \\",
+        "  --min-seq-id 0.40 -c 0.50 --cov-mode 0 --threads 8",
+        "mmseqs createtsv split_proteins_db split_proteins_db \\",
+        "  split_proteins_clu split_proteins_cluster.tsv"
+      ],
+      "visual_crop": "work/reporting_clarity_20261025/qa/named-command-page3-crop.png",
+      "visual_verdict": "At 220 DPI enlargement, all single/double hyphens, inter-token spaces and shell continuation backslashes are clearly visible. No collisions, missing characters or clipping."
+    },
+    {
+      "edition": "anonymous",
+      "page": 3,
+      "pdf_path": "outputs/BIBM_workshop_reporting_clarity_20261025/BIBM2026_supplementary_anonymous_revised.pdf",
+      "pdf_sha256": "06ea9508720f8681b27e4bdba0cceab4c58ab8a4c8d894d7ba2da2cbb3dc87d6",
+      "markdown_path": "outputs/BIBM_workshop_reporting_clarity_20261025/source/Supplementary_Information_anonymous.md",
+      "markdown_sha256": "99ae2e3118f0c3541af40bd70692f2e35c0bcbad4833c665e1b77a38d2faa6c8",
+      "exact_pdf_option_line": "  --min-seq-id 0.40 -c 0.50 --cov-mode 0 --threads 8",
+      "exact_markdown_option_line": "  --min-seq-id 0.40 -c 0.50 --cov-mode 0 --threads 8",
+      "all_option_characters_ascii": true,
+      "hyphen_codepoint": "U+002D",
+      "space_codepoint": "U+0020",
+      "option_line_byte_identical_to_expected": true,
+      "full_extracted_command_block": [
+        "mmseqs createdb all_split_proteins.fa split_proteins_db",
+        "mmseqs cluster split_proteins_db split_proteins_clu tmp \\",
+        "  --min-seq-id 0.40 -c 0.50 --cov-mode 0 --threads 8",
+        "mmseqs createtsv split_proteins_db split_proteins_db \\",
+        "  split_proteins_clu split_proteins_cluster.tsv"
+      ],
+      "visual_crop": "work/reporting_clarity_20261025/qa/anonymous-command-page3-crop.png",
+      "visual_verdict": "At 220 DPI enlargement, all single/double hyphens, inter-token spaces and shell continuation backslashes are clearly visible. No collisions, missing characters or clipping."
+    }
+  ],
+  "conclusion": "Current named and anonymous PDFs do not contain the alleged concatenated 0.40c0.50cov-mode0threads8 string. Visual rendering, selectable PDF text and Markdown all preserve the correct ASCII hyphens and spaces. Existing content is correct; unchanged.",
+  "no_command_executed": true,
+  "earlier_full_supplement_visual_qa_still_valid": true,
+  "remaining_issues": []
+}

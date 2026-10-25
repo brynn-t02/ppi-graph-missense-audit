@@ -1,0 +1,34 @@
+{
+  "source": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_reporting_clarity_20261025/source/main.tex",
+  "source_sha256": "fb8044fe7bbc26bbb4ac544fe114b621cc7f6f1be3d7d6cd142bf2f65ff5c3fb",
+  "baseline_source_sha256": "9537d0ab9f00d9c3e57f62979d7614e0a029a68e0cf92b6af47a88536612c8c6",
+  "checks": {
+    "citation_commands_and_order_unchanged": true,
+    "bibliography_byte_identical": true,
+    "display_equations_byte_identical": true,
+    "inline_math_byte_identical": true,
+    "table_I_byte_identical": true,
+    "figure_labels_unchanged": true,
+    "abstract_two_ensemble_auc_gain_interval_clarifications": true,
+    "new_anonymous_has_supplement_availability": true,
+    "new_anonymous_practical_heading_no_spurious_a": true,
+    "nonabstract_noncaption_numerical_tokens_identical": true,
+    "abstract_numerical_additions_only_two95_percent": true,
+    "Supplementary_Information_revised.md_all_table_rows_unchanged": true,
+    "Supplementary_Information_anonymous.md_all_table_rows_unchanged": true,
+    "canonical_payloads_unchanged": true,
+    "canonical_payload_count": 49,
+    "Figure2_fusion_homology_v1_accepted.pdf_unchanged": true,
+    "Figure3_external_validation.pdf_unchanged": true
+  },
+  "historical_current_distinction": "Preserved in Table I, MethodsC/E, Results and captions; mixed historical and current estimates are not merged.",
+  "statistical_limit_preservation": [
+    "Protein bootstrap conditional on fitted models; no retraining uncertainty.",
+    "Historical controls unmatched; no causal edge effect claim.",
+    "Exploratory selected subgroups and within-protein dependence limitations remain.",
+    "External cohort nested/transductive/shared-evidence limitations remain."
+  ],
+  "figure4_title_and_caption_consistency": "Uniform blue/orange points describe direction, not magnitude or significance; title is consistent with clarified caption.",
+  "blocking_findings": [],
+  "status": "passed"
+}

@@ -1,0 +1,338 @@
+[
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/code/protocol.json",
+    "sha256": "dc20f27363b9e6fb2df732d558f25a45237f7cb8d1113f33bbf2b29278b82352"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/cohort_recon/cohort_manifest.json",
+    "sha256": "ec65d668c603c0532622da62a61049bc9f91b22eaee1ac31deb0b4348ee113c1"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/cohort_recon/cohort_protocol.json",
+    "sha256": "c7b1d791dfbace0523b7828dca668349dc9f0a3aadf91f6d636e818a74b052ea"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/cohort_recon/external_cohort_all_variant_disjoint.csv",
+    "sha256": "4112d1dec2803423ab43c1fe82f9f98a99b41adce452517b7dcf64327e8ee048"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/cohort_recon/external_cohort_primary.csv",
+    "sha256": "02b609336fa8bcb0400dede2e5688f8e6c1831454a8ae5ae08a9c8d85705bbe8"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/cohort_recon/external_cohort_unseen_all_original.csv",
+    "sha256": "e5dafa8013288a45413f410a8ca2643e500a91d02cd612c1ec983e067b979d5e"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/external_rows/all_variant_disjoint.csv",
+    "sha256": "13415dbe1a8333a079d56ed15f1883f2cfbbb37cd18f38bb0785b1fa606ec119"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/external_rows/primary.csv",
+    "sha256": "740acc97db0c7e4acfa2e593d7eba5e2ca546a78c52b9b82118e35d9c63a463c"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/external_rows/strict_unseen_all_original.csv",
+    "sha256": "bc68ac520f63647e0b087592116b4abffc218de3d130a94a23f1f17c5abcacb2"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/node_predictions/BioGRID_FPP/seed_42.npy",
+    "sha256": "15474e2f85353f9c408870034316b3fd68771a0bf8cef69c911b98d2e0c711ef"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/node_predictions/BioGRID_FPP/seed_43.npy",
+    "sha256": "36fe53c8954d21df079710794fb7c072675818d783cc3b422872d798e0d48a0a"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/node_predictions/BioGRID_FPP/seed_44.npy",
+    "sha256": "612240068e40d1e427101a871ee0bc08ec05092b85629ce5832efd165190e569"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/node_predictions/full_FPP/seed_42.npy",
+    "sha256": "e74ebbc43f4b3c6c3fa362f689534b8c5c3cf446e0a2be44d1fc135144b07560"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/node_predictions/full_FPP/seed_43.npy",
+    "sha256": "32271640f3e7cc26c7782284f1bfbb9716073dd08655484c20b463810d2db4d8"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/node_predictions/full_FPP/seed_44.npy",
+    "sha256": "3c135abb45f9eb7179da61a34c870054813ebec3fbdf4c43eacbe62527b4a99e"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/node_predictions/raw_ESM/seed_42.npy",
+    "sha256": "7df0230eaa642901357944db79b15730bd40e3028e33ff5637211766d654d639"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/node_predictions/raw_ESM/seed_43.npy",
+    "sha256": "188395644866bdfbc4131a0dc8711c7931e730f8d6cc7226f1ffc0c09eb1f4d6"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/node_predictions/raw_ESM/seed_44.npy",
+    "sha256": "efa48fc3c0ae5e5e25088856c4aea5f2078f397e341f06bc707a64bfdac1d0cb"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/runs/homology/scores_plus_BioGRID_FPP/seed_42/metrics.json",
+    "sha256": "83effd751363a9fcb966e4ed9a4b3ad459fb3e7d008ca84c33a8179f69443bce"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/runs/homology/scores_plus_BioGRID_FPP/seed_42/test_probs.npy",
+    "sha256": "e7d6af48264a9f2f719d9db3bc1c8fb019345a13a7b43c394bab8a8e79de3e6d"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/runs/homology/scores_plus_BioGRID_FPP/seed_43/metrics.json",
+    "sha256": "eaffa815c79822821fb14a2c6bb4e20db91be88f0f7878f28b0f945142682563"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/runs/homology/scores_plus_BioGRID_FPP/seed_43/test_probs.npy",
+    "sha256": "6fdc21650691cb2d40cc2ee31939b7adca1c2257e3ac66c0fc5ff7a47babdc57"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/runs/homology/scores_plus_BioGRID_FPP/seed_44/metrics.json",
+    "sha256": "e9f6248c30d737d9aa654292c25c9e9d32905d57e23bf61a22e8c38154eb9dd9"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/runs/homology/scores_plus_BioGRID_FPP/seed_44/test_probs.npy",
+    "sha256": "1e32ec8128b87ef99e83b68363a1e898401be42285fe6b910355bf14a14b28e8"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_42/metrics.json",
+    "sha256": "9d7600a6bd29813a3ba5bf4eab0dfc700ffc1ed965ebc917f993ffa5e1e4d834"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_42/test_probs.npy",
+    "sha256": "204342da9d8cbadcbc48d3a2411d568a70950cb64a96552f1ef696e73a3932fc"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_43/metrics.json",
+    "sha256": "147b1c0560fbbd4fbec06113d680994e5bd2c47b52e884fceb285f4942306e5a"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_43/test_probs.npy",
+    "sha256": "69ec9941f409755685981b142b623d8eddde8d5aac61245d98603dcd963c9f20"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_44/metrics.json",
+    "sha256": "c4d3cf8195620b38c8bea1e44e736b2dbf72fe7df1a147f8fdc7bd66a75d5bf6"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_44/test_probs.npy",
+    "sha256": "2fbbfd5afb55f27dc34f5328a1592758062c3c8daaa3b81892114a7fe2630a5c"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/runs/original_fusion/scores_plus_BioGRID_FPP/seed_42/metrics.json",
+    "sha256": "f71c2b3c07adeae09b4db186c239469795ae99d8591c18e1bc2ca77611b3873f"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/runs/original_fusion/scores_plus_BioGRID_FPP/seed_42/test_probs.npy",
+    "sha256": "29f918ac4c5fcfda3111fc36f0d30f7e027904bd18ed75d2016186aa0e4b2cc8"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/runs/original_fusion/scores_plus_BioGRID_FPP/seed_43/metrics.json",
+    "sha256": "9e3aa02e9b050317158571c0efc8e9c9803937720a14180a80c492b992c49299"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/runs/original_fusion/scores_plus_BioGRID_FPP/seed_43/test_probs.npy",
+    "sha256": "78f15cd136a2eaad82f7aad10355aa97fdf1336cd6bbbd2e99f18bb69e7ae5cc"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/runs/original_fusion/scores_plus_BioGRID_FPP/seed_44/metrics.json",
+    "sha256": "d5ff44a88c44bed30b9d14c1747aeb0a9296fcb2b1d167b9ffc133bce61de11d"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/external_validation_20261024/outputs/runs/original_fusion/scores_plus_BioGRID_FPP/seed_44/test_probs.npy",
+    "sha256": "cbd04b8df530656c174c4f05dbe161aca1c7247e042ee55592cd280d5ee5e8fe"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/homology/scores_capacity_matched/seed_42/metrics.json",
+    "sha256": "c6458b6f46e78211a4ca6ab4711713fdf08ae7a7a0510d996653d0dce5f7c824"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/homology/scores_capacity_matched/seed_42/test_probs.npy",
+    "sha256": "2c5947af1426d590c0e581921e1a0b9a1e74ef48db9f7684e9bd124ee76665db"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/homology/scores_capacity_matched/seed_43/metrics.json",
+    "sha256": "abdb1cf25fa61f0f97275a7c26579fa89a7e5e5e617d81fed091c48ad903e825"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/homology/scores_capacity_matched/seed_43/test_probs.npy",
+    "sha256": "853a98b9351aefc682ec4f9972ef4485d55037c14762c2a6a86663c05a5d8849"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/homology/scores_capacity_matched/seed_44/metrics.json",
+    "sha256": "b3ab51e0275c05fa184fab4ea686c2166f15e9957e4a650d458b9afcc0dfd9b1"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/homology/scores_capacity_matched/seed_44/test_probs.npy",
+    "sha256": "55aa9bc98763223dcb81db43ca4b84d0a0ea54aef5fc3613932dfa4e1068e61d"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/homology/scores_plus_full_FPP/seed_42/metrics.json",
+    "sha256": "12be15005949138b21156dfdaa2d2862b0620ec4b822f4fc629c9ed4afa902e4"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/homology/scores_plus_full_FPP/seed_42/test_probs.npy",
+    "sha256": "1f59c48c1d2e05bcd5d9648b2d89a3da739bd092a79d6014d9b6e75bd3695d06"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/homology/scores_plus_full_FPP/seed_43/metrics.json",
+    "sha256": "7a902c99b03b1d39230c4543189b2216be5167e242757179a6a3d4fbadd3bdfc"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/homology/scores_plus_full_FPP/seed_43/test_probs.npy",
+    "sha256": "d2e61551fd4ac0e1c146bee4d5cfd11027e8d887b39ead3a576477f90a7e77be"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/homology/scores_plus_full_FPP/seed_44/metrics.json",
+    "sha256": "646c96d2ea692f09b6dde3dae5d897dd437b1d134d1be056a5d22b68306cfc31"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/homology/scores_plus_full_FPP/seed_44/test_probs.npy",
+    "sha256": "9fd0ad818f27ddfcfe817a9a60ac06fb591d1b99fc4f3bcbe80f52d4c94a1246"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/homology/scores_plus_raw_ESM/seed_42/metrics.json",
+    "sha256": "b78a0d49589e40894f217a90383f950dce320acb6c9da88b238fba8d25ac5047"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/homology/scores_plus_raw_ESM/seed_42/test_probs.npy",
+    "sha256": "61a959f54f1aa3d559435d7f3ae1d4481724c853b2a99fee5d22988645fc06eb"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/homology/scores_plus_raw_ESM/seed_43/metrics.json",
+    "sha256": "f82028e74bf2842f02e970ad0d085e9aa43637574bfc357f75a98bb4bd14213a"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/homology/scores_plus_raw_ESM/seed_43/test_probs.npy",
+    "sha256": "07026069e3d8f5954930479d211c4c942a70f0255053026620e82e19e480ae71"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/homology/scores_plus_raw_ESM/seed_44/metrics.json",
+    "sha256": "aa5c58a73533943cc08faa66f5abcfda1e7564f96b856cc2a62f58442fa2004f"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/homology/scores_plus_raw_ESM/seed_44/test_probs.npy",
+    "sha256": "4be8a10061bb70e17fa615104aeb3dca70a24bd4a6efca42e32e46e3bdadb353"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/full_FPP/seed_42/metrics.json",
+    "sha256": "a4a5a61449c385375f4ca39f66f88b29582539279a7fd7b64db7c733c3d0cbdd"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/full_FPP/seed_42/test_probs.npy",
+    "sha256": "b150c286b265043f6ab409e7dc477aae5a105dfd1941d256899e45903c44d7b9"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/full_FPP/seed_43/metrics.json",
+    "sha256": "53f6a061f97e4d4bc3ec29d20a4d97aa338ce68d732b9e2e9cec8da1f631ea57"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/full_FPP/seed_43/test_probs.npy",
+    "sha256": "20e1173fa03624bee12bee69f4938851fc7c738764093d7d1899324af7b857be"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/full_FPP/seed_44/metrics.json",
+    "sha256": "b5f1c718b2721b80503bc7cb06b9c2f2a94c252c1d3f1fda93ed4d4168995b15"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/full_FPP/seed_44/test_probs.npy",
+    "sha256": "ee0e2be8e17d434f54740da6ba9430d2c803b7dfc38d182b4f50c60c8b7d4cb8"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/raw_ESM/seed_42/metrics.json",
+    "sha256": "af6668a66d17ebff49c16402947d8dcda766a68101e71276903abbba6897efe8"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/raw_ESM/seed_42/test_probs.npy",
+    "sha256": "2fdc76ebb26c4833b769f684295de884d9da523c5053f318bdb533cc1e6cf1ce"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/raw_ESM/seed_43/metrics.json",
+    "sha256": "d22a822244b0223d5b3effdab1ad345d9a2163be4579bd3a9d777b43659f73bd"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/raw_ESM/seed_43/test_probs.npy",
+    "sha256": "4d6b599275242e977cd2b1c659d00653f757ce36e6c90ed97ddbb12575abe620"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/raw_ESM/seed_44/metrics.json",
+    "sha256": "e51b8d01b5c35b720676e5cb1ed03a1d00dc9e610fabc0f918ba95b9ecce497f"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original/raw_ESM/seed_44/test_probs.npy",
+    "sha256": "892774312491d28849922a4a362e931475447327e7cc7f44d81452993ad05286"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original_fusion/scores_capacity_matched/seed_42/metrics.json",
+    "sha256": "2eea030004d0a78e70355c136aeede2fa6a3a3541484b3ffbd0b02f9cab0a522"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original_fusion/scores_capacity_matched/seed_42/test_probs.npy",
+    "sha256": "95a352a6ef81f3cf8fcf1770cd1f3177280eaa75fc57cc7d9541c51516b18e6c"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original_fusion/scores_capacity_matched/seed_43/metrics.json",
+    "sha256": "e01339df65526b35837741cf9de537b766ffd5347826027dd6055d4812c4b7c0"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original_fusion/scores_capacity_matched/seed_43/test_probs.npy",
+    "sha256": "50be7caa361b9ce5ea068dbd4690363da6318f2f8ab86c396f6be3c902bc39cf"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original_fusion/scores_capacity_matched/seed_44/metrics.json",
+    "sha256": "b6a22dab64c709338728f5506f007072eda3ffdb1c188bae36ae303d807ad05b"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original_fusion/scores_capacity_matched/seed_44/test_probs.npy",
+    "sha256": "ae75719d5ecda83725a6818be455dc13d928e774f90659f07af0a5a7a66094ef"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original_fusion/scores_plus_full_FPP/seed_42/metrics.json",
+    "sha256": "1707a350c603c2b61dcaa6c04bc960d290d589f14f6368e088eb85a98b1db19d"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original_fusion/scores_plus_full_FPP/seed_42/test_probs.npy",
+    "sha256": "1bc59add982238c1bd3ec998f9beb717baf796f76cdb2e7224fb118a618844fb"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original_fusion/scores_plus_full_FPP/seed_43/metrics.json",
+    "sha256": "003bd4ee9e578d3b631080fefcc22df1ec6a86bf6b7dbd0dc6dcc1173a85079b"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original_fusion/scores_plus_full_FPP/seed_43/test_probs.npy",
+    "sha256": "4f825d169f125e93534672f63955bfcdf1df0be567f5c2dfff7e1cca23c6cbb9"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original_fusion/scores_plus_full_FPP/seed_44/metrics.json",
+    "sha256": "8e4b68cf1bcc0cc37f42a1085bcfc8842b181e4c7e74c631e51f457d4d14642a"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original_fusion/scores_plus_full_FPP/seed_44/test_probs.npy",
+    "sha256": "8d769033c71b55c364cff26d889142e17a84e65a1e83467081fff3ce4e674679"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original_fusion/scores_plus_raw_ESM/seed_42/metrics.json",
+    "sha256": "5f1a413e95e97e6682a68e0af5bace3f2e51d269e5064bdd8373ad516c00f498"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original_fusion/scores_plus_raw_ESM/seed_42/test_probs.npy",
+    "sha256": "99886af50539c65a0a25ee7526086a3ae22a9b7c02ef4a6cb8ec798536c381be"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original_fusion/scores_plus_raw_ESM/seed_43/metrics.json",
+    "sha256": "665b768acf6092862ea01bfef7968cdc762088d8b9528ecffc1efbc47e308150"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original_fusion/scores_plus_raw_ESM/seed_43/test_probs.npy",
+    "sha256": "f76c059dad09dde1c817777a6bb7c747d3d128fd89b49ec3f846ba68fd976298"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original_fusion/scores_plus_raw_ESM/seed_44/metrics.json",
+    "sha256": "a1d92fb203f42e390a60007b6e6f6a064f55b092d9086b0596a8c44a3d1e9b2e"
+  },
+  {
+    "path": "/Data/u40902/TYX/ppi_audit_20261024/outputs/runs/original_fusion/scores_plus_raw_ESM/seed_44/test_probs.npy",
+    "sha256": "1a65f4aa0b25c6128b2ee43a000822b1c8d6d1bae551971d299f272cc34e7fd6"
+  }
+]

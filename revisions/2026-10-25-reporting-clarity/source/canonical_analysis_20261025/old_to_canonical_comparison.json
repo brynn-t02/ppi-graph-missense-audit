@@ -1,0 +1,974 @@
+[
+  {
+    "source": "matched",
+    "population": "original",
+    "comparison": "full_FPP_vs_raw_ESM",
+    "metric": "auc",
+    "old_delta": 0.010670381893024827,
+    "new_delta": 0.010673284312598175,
+    "old_ci95": [
+      -0.021826883450223204,
+      0.04256818658506501
+    ],
+    "new_ci95": [
+      -0.021814724260340257,
+      0.04257863103758204
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "matched",
+    "population": "original",
+    "comparison": "full_FPP_vs_raw_ESM",
+    "metric": "auprc",
+    "old_delta": 0.0412606625041807,
+    "new_delta": 0.041217629992141736,
+    "old_ci95": [
+      -0.010928242022041875,
+      0.07702878874675764
+    ],
+    "new_ci95": [
+      -0.01063858474592705,
+      0.07667889984321657
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "matched",
+    "population": "original",
+    "comparison": "full_FPP_vs_edge_ablated_FPP",
+    "metric": "auc",
+    "old_delta": 0.024773778907059785,
+    "new_delta": 0.024767295220375796,
+    "old_ci95": [
+      0.006597911050674071,
+      0.04936858146803069
+    ],
+    "new_ci95": [
+      0.006595039527339005,
+      0.04937318862729214
+    ],
+    "old_interval_sign": "positive",
+    "new_interval_sign": "positive"
+  },
+  {
+    "source": "matched",
+    "population": "original",
+    "comparison": "full_FPP_vs_edge_ablated_FPP",
+    "metric": "auprc",
+    "old_delta": 0.042885147560802084,
+    "new_delta": 0.04287920359286579,
+    "old_ci95": [
+      0.01255092905946223,
+      0.0634649841721526
+    ],
+    "new_ci95": [
+      0.01267147628244813,
+      0.0623471339990469
+    ],
+    "old_interval_sign": "positive",
+    "new_interval_sign": "positive"
+  },
+  {
+    "source": "matched",
+    "population": "original",
+    "comparison": "full_FPP_vs_permuted_FPP_graphmean",
+    "metric": "auc",
+    "old_delta": 0.011767073943786621,
+    "new_delta": 0.011770066414563907,
+    "old_ci95": [
+      -0.022892544265458236,
+      0.04614842258847045
+    ],
+    "new_ci95": [
+      -0.022890921337389743,
+      0.046191455203382345
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "matched",
+    "population": "original",
+    "comparison": "full_FPP_vs_permuted_FPP_graphmean",
+    "metric": "auprc",
+    "old_delta": 0.04297069074494142,
+    "new_delta": 0.043027384253819245,
+    "old_ci95": [
+      -0.023394728205213593,
+      0.08828453376645914
+    ],
+    "new_ci95": [
+      -0.022857151256922458,
+      0.08831126810944734
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "matched",
+    "population": "original_fusion",
+    "comparison": "scores_plus_full_FPP_vs_scores_capacity_matched",
+    "metric": "auc",
+    "old_delta": 0.014699369735779788,
+    "new_delta": 0.014699355881748422,
+    "old_ci95": [
+      0.006590059214229735,
+      0.023098098348376197
+    ],
+    "new_ci95": [
+      0.0064812061483609075,
+      0.022623429554099326
+    ],
+    "old_interval_sign": "positive",
+    "new_interval_sign": "positive"
+  },
+  {
+    "source": "matched",
+    "population": "original_fusion",
+    "comparison": "scores_plus_full_FPP_vs_scores_capacity_matched",
+    "metric": "auprc",
+    "old_delta": 0.03437616022251666,
+    "new_delta": 0.034376100692333766,
+    "old_ci95": [
+      0.015761087745006654,
+      0.0564103600029381
+    ],
+    "new_ci95": [
+      0.015561604718946862,
+      0.05581222521977588
+    ],
+    "old_interval_sign": "positive",
+    "new_interval_sign": "positive"
+  },
+  {
+    "source": "matched",
+    "population": "original_fusion",
+    "comparison": "scores_plus_full_FPP_vs_scores_plus_raw_ESM",
+    "metric": "auc",
+    "old_delta": 0.0032014865486498234,
+    "new_delta": 0.003201472694618457,
+    "old_ci95": [
+      0.0008318622306062951,
+      0.006065610151098775
+    ],
+    "new_ci95": [
+      0.0008408923260150331,
+      0.00616761363568303
+    ],
+    "old_interval_sign": "positive",
+    "new_interval_sign": "positive"
+  },
+  {
+    "source": "matched",
+    "population": "original_fusion",
+    "comparison": "scores_plus_full_FPP_vs_scores_plus_raw_ESM",
+    "metric": "auprc",
+    "old_delta": 0.007552317072706427,
+    "new_delta": 0.007552132921047394,
+    "old_ci95": [
+      0.002887658551234218,
+      0.013777171073345775
+    ],
+    "new_ci95": [
+      0.003049387558497113,
+      0.01405493743580648
+    ],
+    "old_interval_sign": "positive",
+    "new_interval_sign": "positive"
+  },
+  {
+    "source": "matched",
+    "population": "original_fusion",
+    "comparison": "scores_plus_full_FPP_vs_scores_plus_edge_ablated_FPP",
+    "metric": "auc",
+    "old_delta": 0.0012581400054052505,
+    "new_delta": 0.0012581400054052505,
+    "old_ci95": [
+      -0.00040155046025673325,
+      0.0031412046702024893
+    ],
+    "new_ci95": [
+      -0.00040544785544509575,
+      0.003191374773356209
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "matched",
+    "population": "original_fusion",
+    "comparison": "scores_plus_full_FPP_vs_scores_plus_edge_ablated_FPP",
+    "metric": "auprc",
+    "old_delta": 0.0013909336805618677,
+    "new_delta": 0.0013909410221149,
+    "old_ci95": [
+      -0.0015995682995664812,
+      0.00476673459043389
+    ],
+    "new_ci95": [
+      -0.001460289301124043,
+      0.004696285824854822
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "matched",
+    "population": "original_fusion",
+    "comparison": "scores_plus_full_FPP_vs_scores_plus_permuted_FPP_graphmean",
+    "metric": "auc",
+    "old_delta": 0.0020088276225445068,
+    "new_delta": 0.002008820695528879,
+    "old_ci95": [
+      9.991560624719731e-05,
+      0.004754147606808364
+    ],
+    "new_ci95": [
+      7.941944446866468e-05,
+      0.004538626032698917
+    ],
+    "old_interval_sign": "positive",
+    "new_interval_sign": "positive"
+  },
+  {
+    "source": "matched",
+    "population": "original_fusion",
+    "comparison": "scores_plus_full_FPP_vs_scores_plus_permuted_FPP_graphmean",
+    "metric": "auprc",
+    "old_delta": 0.005010279359557557,
+    "new_delta": 0.005010108196023322,
+    "old_ci95": [
+      0.00034361018103868935,
+      0.011195395957152163
+    ],
+    "new_ci95": [
+      0.00018184559286438807,
+      0.010964354386060493
+    ],
+    "old_interval_sign": "positive",
+    "new_interval_sign": "positive"
+  },
+  {
+    "source": "matched",
+    "population": "homology",
+    "comparison": "scores_plus_full_FPP_vs_scores_capacity_matched",
+    "metric": "auc",
+    "old_delta": 0.00012075205374173503,
+    "new_delta": 0.00012076800092264417,
+    "old_ci95": [
+      -0.0019245480612433447,
+      0.002065400098363219
+    ],
+    "new_ci95": [
+      -0.0019167728767167712,
+      0.002032968324645075
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "matched",
+    "population": "homology",
+    "comparison": "scores_plus_full_FPP_vs_scores_capacity_matched",
+    "metric": "auprc",
+    "old_delta": -0.0012351603053295523,
+    "new_delta": -0.0012351584318742725,
+    "old_ci95": [
+      -0.0199448546706193,
+      0.015446752235033136
+    ],
+    "new_ci95": [
+      -0.02054186568103248,
+      0.015669917788652673
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "matched",
+    "population": "homology",
+    "comparison": "scores_plus_raw_ESM_vs_scores_capacity_matched",
+    "metric": "auc",
+    "old_delta": -0.002545648486370178,
+    "new_delta": -0.0025456006448274504,
+    "old_ci95": [
+      -0.004765434672656057,
+      -0.0004049711652676832
+    ],
+    "new_ci95": [
+      -0.004787765555998547,
+      -0.0004351773077939614
+    ],
+    "old_interval_sign": "negative",
+    "new_interval_sign": "negative"
+  },
+  {
+    "source": "matched",
+    "population": "homology",
+    "comparison": "scores_plus_raw_ESM_vs_scores_capacity_matched",
+    "metric": "auprc",
+    "old_delta": -0.013530166794637033,
+    "new_delta": -0.013529955577304187,
+    "old_ci95": [
+      -0.03250676242490793,
+      0.004156534846080807
+    ],
+    "new_ci95": [
+      -0.034285480501610635,
+      0.004531365154447202
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "matched",
+    "population": "homology",
+    "comparison": "scores_plus_full_FPP_vs_scores_plus_raw_ESM",
+    "metric": "auc",
+    "old_delta": 0.002666400540111913,
+    "new_delta": 0.0026663686457500946,
+    "old_ci95": [
+      0.0014981184406937075,
+      0.003883320561819503
+    ],
+    "new_ci95": [
+      0.0015385399718606696,
+      0.003962379269567833
+    ],
+    "old_interval_sign": "positive",
+    "new_interval_sign": "positive"
+  },
+  {
+    "source": "matched",
+    "population": "homology",
+    "comparison": "scores_plus_full_FPP_vs_scores_plus_raw_ESM",
+    "metric": "auprc",
+    "old_delta": 0.01229500648930748,
+    "new_delta": 0.012294797145429914,
+    "old_ci95": [
+      0.005151802804999323,
+      0.019752590469876166
+    ],
+    "new_ci95": [
+      0.005451213376683708,
+      0.01943738685515698
+    ],
+    "old_interval_sign": "positive",
+    "new_interval_sign": "positive"
+  },
+  {
+    "source": "extension",
+    "population": "original",
+    "comparison": "BioGRID_FPP_vs_raw_ESM",
+    "metric": "auc",
+    "old_delta": -0.0201361141957882,
+    "new_delta": -0.02011876894850506,
+    "old_ci95": [
+      -0.04807599148726221,
+      0.010003611429873986
+    ],
+    "new_ci95": [
+      -0.048032302464519075,
+      0.010054862977271152
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "extension",
+    "population": "original",
+    "comparison": "BioGRID_FPP_vs_raw_ESM",
+    "metric": "auprc",
+    "old_delta": -0.002687360361561031,
+    "new_delta": -0.0024932691731428536,
+    "old_ci95": [
+      -0.05469878519554473,
+      0.03629704823864584
+    ],
+    "new_ci95": [
+      -0.05395621429437386,
+      0.03630426151071134
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "extension",
+    "population": "original",
+    "comparison": "BioGRID_FPP_vs_full_FPP",
+    "metric": "auc",
+    "old_delta": -0.030797830392187087,
+    "new_delta": -0.030792053261103236,
+    "old_ci95": [
+      -0.06916992738163712,
+      0.004053052982169635
+    ],
+    "new_ci95": [
+      -0.06916339779230504,
+      0.004072936968922402
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "extension",
+    "population": "original",
+    "comparison": "BioGRID_FPP_vs_full_FPP",
+    "metric": "auprc",
+    "old_delta": -0.04369213419736584,
+    "new_delta": -0.04371089916528459,
+    "old_ci95": [
+      -0.08946637049022459,
+      -0.0010672986997089307
+    ],
+    "new_ci95": [
+      -0.08937759038726638,
+      -0.0010820782113221646
+    ],
+    "old_interval_sign": "negative",
+    "new_interval_sign": "negative"
+  },
+  {
+    "source": "extension",
+    "population": "original_fusion",
+    "comparison": "scores_plus_BioGRID_FPP_vs_scores_capacity_matched",
+    "metric": "auc",
+    "old_delta": 0.012417777016483389,
+    "new_delta": 0.012417777016483389,
+    "old_ci95": [
+      0.0034107769424803675,
+      0.020995380214760023
+    ],
+    "new_ci95": [
+      0.0034107769424803675,
+      0.020995380214760023
+    ],
+    "old_interval_sign": "positive",
+    "new_interval_sign": "positive"
+  },
+  {
+    "source": "extension",
+    "population": "original_fusion",
+    "comparison": "scores_plus_BioGRID_FPP_vs_scores_capacity_matched",
+    "metric": "auprc",
+    "old_delta": 0.02787646466367133,
+    "new_delta": 0.02787646466367133,
+    "old_ci95": [
+      0.007006907579165442,
+      0.05018976084333819
+    ],
+    "new_ci95": [
+      0.007006907579165442,
+      0.05018976084333819
+    ],
+    "old_interval_sign": "positive",
+    "new_interval_sign": "positive"
+  },
+  {
+    "source": "extension",
+    "population": "original_fusion",
+    "comparison": "scores_plus_BioGRID_FPP_vs_scores_plus_raw_ESM",
+    "metric": "auc",
+    "old_delta": 0.0009198938293534242,
+    "new_delta": 0.0009198938293534242,
+    "old_ci95": [
+      -0.0011478498602952969,
+      0.003640390762074094
+    ],
+    "new_ci95": [
+      -0.0011478498602952969,
+      0.003640390762074094
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "extension",
+    "population": "original_fusion",
+    "comparison": "scores_plus_BioGRID_FPP_vs_scores_plus_raw_ESM",
+    "metric": "auprc",
+    "old_delta": 0.0010524968923849576,
+    "new_delta": 0.0010524968923849576,
+    "old_ci95": [
+      -0.0037139600034287457,
+      0.006905749259537048
+    ],
+    "new_ci95": [
+      -0.0037139600034287457,
+      0.006905749259537048
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "extension",
+    "population": "original_fusion",
+    "comparison": "scores_plus_BioGRID_FPP_vs_scores_plus_full_FPP",
+    "metric": "auc",
+    "old_delta": -0.0022815788652650326,
+    "new_delta": -0.0022815788652650326,
+    "old_ci95": [
+      -0.004202164430362693,
+      -0.0005769834970310953
+    ],
+    "new_ci95": [
+      -0.004202164430362693,
+      -0.0005769834970310953
+    ],
+    "old_interval_sign": "negative",
+    "new_interval_sign": "negative"
+  },
+  {
+    "source": "extension",
+    "population": "original_fusion",
+    "comparison": "scores_plus_BioGRID_FPP_vs_scores_plus_full_FPP",
+    "metric": "auprc",
+    "old_delta": -0.006499636028662437,
+    "new_delta": -0.006499636028662437,
+    "old_ci95": [
+      -0.01164192820961508,
+      -0.002332462034348089
+    ],
+    "new_ci95": [
+      -0.01164192820961508,
+      -0.002332462034348089
+    ],
+    "old_interval_sign": "negative",
+    "new_interval_sign": "negative"
+  },
+  {
+    "source": "extension",
+    "population": "homology",
+    "comparison": "scores_plus_BioGRID_FPP_vs_scores_capacity_matched",
+    "metric": "auc",
+    "old_delta": -0.0020365347362769626,
+    "new_delta": -0.0020365347362769626,
+    "old_ci95": [
+      -0.004212330217551757,
+      -4.427608878427994e-05
+    ],
+    "new_ci95": [
+      -0.004212330217551757,
+      -4.427608878427994e-05
+    ],
+    "old_interval_sign": "negative",
+    "new_interval_sign": "negative"
+  },
+  {
+    "source": "extension",
+    "population": "homology",
+    "comparison": "scores_plus_BioGRID_FPP_vs_scores_capacity_matched",
+    "metric": "auprc",
+    "old_delta": -0.011757884931125284,
+    "new_delta": -0.011757884931125284,
+    "old_ci95": [
+      -0.031471698689362684,
+      0.005960705497392388
+    ],
+    "new_ci95": [
+      -0.031471698689362684,
+      0.005960705497392388
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "extension",
+    "population": "homology",
+    "comparison": "scores_plus_BioGRID_FPP_vs_scores_plus_raw_ESM",
+    "metric": "auc",
+    "old_delta": 0.0005090659085504878,
+    "new_delta": 0.0005090659085504878,
+    "old_ci95": [
+      -0.0007739598003509457,
+      0.0016914186392674442
+    ],
+    "new_ci95": [
+      -0.0007739598003509457,
+      0.0016914186392674442
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "extension",
+    "population": "homology",
+    "comparison": "scores_plus_BioGRID_FPP_vs_scores_plus_raw_ESM",
+    "metric": "auprc",
+    "old_delta": 0.0017720706461789026,
+    "new_delta": 0.0017720706461789026,
+    "old_ci95": [
+      -0.006286116311203555,
+      0.01049342102798515
+    ],
+    "new_ci95": [
+      -0.006286116311203555,
+      0.01049342102798515
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "extension",
+    "population": "homology",
+    "comparison": "scores_plus_BioGRID_FPP_vs_scores_plus_full_FPP",
+    "metric": "auc",
+    "old_delta": -0.0021573027371996067,
+    "new_delta": -0.0021573027371996067,
+    "old_ci95": [
+      -0.0035728822789769465,
+      -0.0009007752128874677
+    ],
+    "new_ci95": [
+      -0.0035728822789769465,
+      -0.0009007752128874677
+    ],
+    "old_interval_sign": "negative",
+    "new_interval_sign": "negative"
+  },
+  {
+    "source": "extension",
+    "population": "homology",
+    "comparison": "scores_plus_BioGRID_FPP_vs_scores_plus_full_FPP",
+    "metric": "auprc",
+    "old_delta": -0.010522726499251012,
+    "new_delta": -0.010522726499251012,
+    "old_ci95": [
+      -0.018844106645211516,
+      -0.0018222979744372675
+    ],
+    "new_ci95": [
+      -0.018844106645211516,
+      -0.0018222979744372675
+    ],
+    "old_interval_sign": "negative",
+    "new_interval_sign": "negative"
+  },
+  {
+    "source": "extension",
+    "population": "external_primary",
+    "comparison": "full_FPP_vs_raw_ESM",
+    "metric": "auc",
+    "old_delta": 0.03748038022806055,
+    "new_delta": 0.03748038022806055,
+    "old_ci95": [
+      0.017334347961018872,
+      0.056379264334218894
+    ],
+    "new_ci95": [
+      0.017334347961018872,
+      0.056379264334218894
+    ],
+    "old_interval_sign": "positive",
+    "new_interval_sign": "positive"
+  },
+  {
+    "source": "extension",
+    "population": "external_primary",
+    "comparison": "full_FPP_vs_raw_ESM",
+    "metric": "auprc",
+    "old_delta": 0.04631696966532095,
+    "new_delta": 0.04631696966532095,
+    "old_ci95": [
+      0.01514089908695387,
+      0.0744618145057425
+    ],
+    "new_ci95": [
+      0.01514089908695387,
+      0.0744618145057425
+    ],
+    "old_interval_sign": "positive",
+    "new_interval_sign": "positive"
+  },
+  {
+    "source": "extension",
+    "population": "external_primary",
+    "comparison": "BioGRID_FPP_vs_raw_ESM",
+    "metric": "auc",
+    "old_delta": 0.012479308070186157,
+    "new_delta": 0.012479308070186157,
+    "old_ci95": [
+      -0.013187257967925572,
+      0.03504010621634833
+    ],
+    "new_ci95": [
+      -0.013187257967925572,
+      0.03504010621634833
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "extension",
+    "population": "external_primary",
+    "comparison": "BioGRID_FPP_vs_raw_ESM",
+    "metric": "auprc",
+    "old_delta": 0.015059028082034298,
+    "new_delta": 0.015059028082034298,
+    "old_ci95": [
+      -0.01182795215321035,
+      0.04464928531679787
+    ],
+    "new_ci95": [
+      -0.01182795215321035,
+      0.04464928531679787
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "extension",
+    "population": "external_primary",
+    "comparison": "BioGRID_FPP_vs_full_FPP",
+    "metric": "auc",
+    "old_delta": -0.025001072157874393,
+    "new_delta": -0.025001072157874393,
+    "old_ci95": [
+      -0.05133583072973251,
+      -0.0015420476132757823
+    ],
+    "new_ci95": [
+      -0.05133583072973251,
+      -0.0015420476132757823
+    ],
+    "old_interval_sign": "negative",
+    "new_interval_sign": "negative"
+  },
+  {
+    "source": "extension",
+    "population": "external_primary",
+    "comparison": "BioGRID_FPP_vs_full_FPP",
+    "metric": "auprc",
+    "old_delta": -0.03125794158328665,
+    "new_delta": -0.03125794158328665,
+    "old_ci95": [
+      -0.0628089203293389,
+      0.003990747682819684
+    ],
+    "new_ci95": [
+      -0.0628089203293389,
+      0.003990747682819684
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "extension",
+    "population": "external_strict",
+    "comparison": "full_FPP_vs_raw_ESM",
+    "metric": "auc",
+    "old_delta": 0.03517919763825661,
+    "new_delta": 0.03517919763825661,
+    "old_ci95": [
+      0.0033853072135931195,
+      0.06666768977912756
+    ],
+    "new_ci95": [
+      0.0033853072135931195,
+      0.06666768977912756
+    ],
+    "old_interval_sign": "positive",
+    "new_interval_sign": "positive"
+  },
+  {
+    "source": "extension",
+    "population": "external_strict",
+    "comparison": "full_FPP_vs_raw_ESM",
+    "metric": "auprc",
+    "old_delta": 0.054962253036207054,
+    "new_delta": 0.054962253036207054,
+    "old_ci95": [
+      0.011094300225346656,
+      0.09620021653036456
+    ],
+    "new_ci95": [
+      0.011094300225346656,
+      0.09620021653036456
+    ],
+    "old_interval_sign": "positive",
+    "new_interval_sign": "positive"
+  },
+  {
+    "source": "extension",
+    "population": "external_strict",
+    "comparison": "BioGRID_FPP_vs_raw_ESM",
+    "metric": "auc",
+    "old_delta": 0.009399960405225283,
+    "new_delta": 0.009399960405225283,
+    "old_ci95": [
+      -0.024985675969479794,
+      0.04352622436563014
+    ],
+    "new_ci95": [
+      -0.024985675969479794,
+      0.04352622436563014
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "extension",
+    "population": "external_strict",
+    "comparison": "BioGRID_FPP_vs_raw_ESM",
+    "metric": "auprc",
+    "old_delta": 0.022694275173281486,
+    "new_delta": 0.022694275173281486,
+    "old_ci95": [
+      -0.016446316730860094,
+      0.0650722037202224
+    ],
+    "new_ci95": [
+      -0.016446316730860094,
+      0.0650722037202224
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "extension",
+    "population": "external_strict",
+    "comparison": "BioGRID_FPP_vs_full_FPP",
+    "metric": "auc",
+    "old_delta": -0.025779237233031327,
+    "new_delta": -0.025779237233031327,
+    "old_ci95": [
+      -0.05818157246159917,
+      0.005734825101186676
+    ],
+    "new_ci95": [
+      -0.05818157246159917,
+      0.005734825101186676
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "extension",
+    "population": "external_strict",
+    "comparison": "BioGRID_FPP_vs_full_FPP",
+    "metric": "auprc",
+    "old_delta": -0.03226797786292557,
+    "new_delta": -0.03226797786292557,
+    "old_ci95": [
+      -0.07440765100802048,
+      0.018287973364807274
+    ],
+    "new_ci95": [
+      -0.07440765100802048,
+      0.018287973364807274
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "extension",
+    "population": "external_all",
+    "comparison": "full_FPP_vs_raw_ESM",
+    "metric": "auc",
+    "old_delta": 0.0348221069097443,
+    "new_delta": 0.03482074619458353,
+    "old_ci95": [
+      0.027659081303694204,
+      0.04171583750306527
+    ],
+    "new_ci95": [
+      0.027659081303694204,
+      0.0417157142456301
+    ],
+    "old_interval_sign": "positive",
+    "new_interval_sign": "positive"
+  },
+  {
+    "source": "extension",
+    "population": "external_all",
+    "comparison": "full_FPP_vs_raw_ESM",
+    "metric": "auprc",
+    "old_delta": 0.0399571574240426,
+    "new_delta": 0.0399571574240426,
+    "old_ci95": [
+      0.028789059607326452,
+      0.050826098983520925
+    ],
+    "new_ci95": [
+      0.028789059607326452,
+      0.050826098983520925
+    ],
+    "old_interval_sign": "positive",
+    "new_interval_sign": "positive"
+  },
+  {
+    "source": "extension",
+    "population": "external_all",
+    "comparison": "BioGRID_FPP_vs_raw_ESM",
+    "metric": "auc",
+    "old_delta": 0.029566114046274405,
+    "new_delta": 0.0295661115334116,
+    "old_ci95": [
+      0.021606448074297003,
+      0.037205515065783686
+    ],
+    "new_ci95": [
+      0.021606447948002365,
+      0.03720550999573055
+    ],
+    "old_interval_sign": "positive",
+    "new_interval_sign": "positive"
+  },
+  {
+    "source": "extension",
+    "population": "external_all",
+    "comparison": "BioGRID_FPP_vs_raw_ESM",
+    "metric": "auprc",
+    "old_delta": 0.03849728985703915,
+    "new_delta": 0.0384972882091722,
+    "old_ci95": [
+      0.028592093246825274,
+      0.04873885210313326
+    ],
+    "new_ci95": [
+      0.028592090035096166,
+      0.048738852018145574
+    ],
+    "old_interval_sign": "positive",
+    "new_interval_sign": "positive"
+  },
+  {
+    "source": "extension",
+    "population": "external_all",
+    "comparison": "BioGRID_FPP_vs_full_FPP",
+    "metric": "auc",
+    "old_delta": -0.005255992863469894,
+    "new_delta": -0.005254634661171931,
+    "old_ci95": [
+      -0.012751751559733421,
+      0.002255739036637233
+    ],
+    "new_ci95": [
+      -0.012751745655058136,
+      0.002261002866816558
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  },
+  {
+    "source": "extension",
+    "population": "external_all",
+    "comparison": "BioGRID_FPP_vs_full_FPP",
+    "metric": "auprc",
+    "old_delta": -0.0014598675670034478,
+    "new_delta": -0.0014598692148704018,
+    "old_ci95": [
+      -0.012177951131714554,
+      0.010390553717023656
+    ],
+    "new_ci95": [
+      -0.012177951131714552,
+      0.010390553642183433
+    ],
+    "old_interval_sign": "crosses_zero",
+    "new_interval_sign": "crosses_zero"
+  }
+]

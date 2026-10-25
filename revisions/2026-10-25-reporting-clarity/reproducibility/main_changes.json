@@ -1,0 +1,52 @@
+[
+  {
+    "id": "abstract_original_CI",
+    "before": "Three-seed mean AUC increased from 0.7835 to 0.7950, but protein-clustered uncertainty included zero.",
+    "after": "Three-seed mean AUC increased from 0.7835 to 0.7950, but the protein-clustered 95\\% interval for the ensemble AUC gain included zero."
+  },
+  {
+    "id": "abstract_external_CI",
+    "before": "On 10,785 external UniProt variants, STRING propagation improved mean AUC from 0.6932 to 0.7304, with a positive protein-bootstrap interval.",
+    "after": "On 10,785 external UniProt variants, STRING propagation improved mean AUC from 0.6932 to 0.7304; the protein-bootstrap 95\\% interval for the ensemble AUC gain excluded zero."
+  },
+  {
+    "id": "homology_neutral_uncertainty",
+    "before": "Thus a stable graph-fusion loss is not established by the repeated comparison.",
+    "after": "The graph-versus-score effect remained uncertain under homology-aware splitting."
+  },
+  {
+    "id": "remove_repeated_harm_defense",
+    "before": " A stable harmful graph effect cannot be inferred from the retained single run.",
+    "after": ""
+  },
+  {
+    "id": "fusion_conditional_result_verb",
+    "before": "Current matched fusion confirmed a small real-minus-raw margin",
+    "after": "Current matched fusion yielded a small real-minus-raw margin"
+  },
+  {
+    "id": "acknowledgment_grammar",
+    "before": "Anthropic Claude assisted literature organization",
+    "after": "Anthropic Claude assisted with literature organization"
+  },
+  {
+    "id": "figure1C_delta_definition",
+    "before": "B/C, Retained reference pair and its variant/protein bootstrap intervals.",
+    "after": "B/C, Retained reference pair and its variant/protein bootstrap intervals. Displayed differences follow the conventions in Supplementary Table 4A."
+  },
+  {
+    "id": "figure4_color_caption",
+    "before": "Historical prediction transitions and descriptive topology profiles. A/B, Transitions for retained raw/graph and score/graph-fusion pairs at threshold 0.5. C/D, Original row-normalized topology-profile heatmaps. E, Original direction of mean differences, with uniform points without FDR significance encoding. F, Original baseline-error-stratified effect sizes without significance stars. Panels A--D and numerical inputs are retained; repeated variants within proteins limit inferential interpretation.",
+    "after": "Historical prediction transitions and descriptive topology profiles. A/B, Retained raw/graph and score/graph-fusion comparisons at threshold 0.5. C/D, Row-centered, range-scaled group means; warm/blue colors denote above/below the within-row mean, not comparable effect magnitudes across rows. E, Uniform blue/orange dots denote higher means among rescued false negatives/suppressed false positives, respectively. F, Baseline-error-stratified Hedges' \\textit{g}; blue/orange denote positive/negative effects. Repeated variants within proteins limit inferential interpretation."
+  },
+  {
+    "id": "practical_heading",
+    "before": "\\paragraph{Practical recommendations}",
+    "after": "\\noindent\\textbf{Practical recommendations.}"
+  },
+  {
+    "id": "supplement_availability",
+    "before": "Code, compact source data, complete sample memberships, per-seed predictions, protocols and checksums are publicly available",
+    "after": "Supplementary Information, code, compact source data, complete sample memberships, per-seed predictions, protocols and checksums are publicly available"
+  }
+]

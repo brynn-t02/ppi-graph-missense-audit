@@ -1,0 +1,80 @@
+--- 2026-10-25-original-minimal/main_anonymous.tex
++++ 2026-10-25-reporting-clarity/main_anonymous.tex
+@@ -27,7 +27,7 @@
+ 
+ \begin{abstract}
+ \bfseries\boldmath
+-Protein-protein interaction (PPI) graphs provide molecular context for missense variant pathogenicity prediction. We audit fixed two-hop PPI-GCN propagation of protein language model embeddings on 177,213 ClinVar variants, separating connectivity, topology, homology and complementarity to CADD and AlphaMissense. Only the downstream classifier is trained. Three-seed mean AUC increased from 0.7835 to 0.7950, but protein-clustered uncertainty included zero. Graph fusion added a small benefit over raw-embedding fusion under the original split; its added value over strong scores remained uncertain under homology-aware splitting. Exploratory topology and prediction-transition analyses identified candidate contexts for these effects. On 10,785 external UniProt variants, STRING propagation improved mean AUC from 0.6932 to 0.7304, with a positive protein-bootstrap interval. A BioGRID comparison showed uncertain external gains over raw embeddings. PPI context therefore provides network- and split-dependent information rather than a uniform benefit. These transductive fixed-propagation results should not be generalized to trained graph neural networks.
++Protein-protein interaction (PPI) graphs provide molecular context for missense variant pathogenicity prediction. We audit fixed two-hop PPI-GCN propagation of protein language model embeddings on 177,213 ClinVar variants, separating connectivity, topology, homology and complementarity to CADD and AlphaMissense. Only the downstream classifier is trained. Three-seed mean AUC increased from 0.7835 to 0.7950, but the protein-clustered 95\% interval for the ensemble AUC gain included zero. Graph fusion added a small benefit over raw-embedding fusion under the original split; its added value over strong scores remained uncertain under homology-aware splitting. Exploratory topology and prediction-transition analyses identified candidate contexts for these effects. On 10,785 external UniProt variants, STRING propagation improved mean AUC from 0.6932 to 0.7304; the protein-bootstrap 95\% interval for the ensemble AUC gain excluded zero. A BioGRID comparison showed uncertain external gains over raw embeddings. PPI context therefore provides network- and split-dependent information rather than a uniform benefit. These transductive fixed-propagation results should not be generalized to trained graph neural networks.
+ 
+ \end{abstract}
+ 
+@@ -117,16 +117,16 @@
+ 
+ \begin{figure*}[!t]
+ \centering
+-\includegraphics[width=0.98\textwidth]{figure_drafts/Figure1_connectivity_topology_controls_v2_accepted_minimal.pdf}
+-\caption{Workflow and historical audit of fixed PPI propagation. A, ESM features are propagated over STRING before downstream MLP classification; connectivity and topology controls probe the apparent gain. B/C, Retained reference pair and its variant/protein bootstrap intervals. D, Five historical edge-ablation fits compared with reference raw/full estimates. E, Historical partial-ablation curve; seeds, budgets and control operator are unmatched, and endpoints reused. F, Three graph permutations by three classifier seeds. Historical negative controls allow 30 epochs; the reference pair allows 50. Current common-protocol results are reported in the text and Supplementary Table 11.}
++\includegraphics[width=0.98\textwidth]{figure_drafts/Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf}
++\caption{Workflow and historical audit of fixed PPI propagation. A, ESM features are propagated over STRING before downstream MLP classification; connectivity and topology controls probe the apparent gain. B/C, Retained reference pair and its variant/protein bootstrap intervals. Displayed differences follow the conventions in Supplementary Table 4A. D, Five historical edge-ablation fits compared with reference raw/full estimates. E, Historical partial-ablation curve; seeds, budgets and control operator are unmatched, and endpoints reused. F, Three graph permutations by three classifier seeds. Historical negative controls allow 30 epochs; the reference pair allows 50. Current common-protocol results are reported in the text and Supplementary Table 11.}
+ \label{fig:connectivity}
+ \end{figure*}
+ 
+ \subsection{Strong predictors and homology-aware evaluation bound PPI context gains}
+ 
+-Under the original split, single-score CADD and AlphaMissense baselines achieved AUC 0.9207 and 0.9470. In the historical fusion audit, the same-hidden-layer \CADDAM{} baseline reached mean AUC 0.9572; adding raw ESM, real PPI-GCN, edge-ablated or permuted representations gave 0.9680, 0.9718, 0.9708 and 0.9694 (Fig. 2B). The historical real-minus-raw fusion interval was positive, while ablated/permuted contrasts included zero (Fig. 2C). Current matched fusion confirmed a small real-minus-raw margin ($\Delta$AUC +0.0032, protein 95\% CI [+0.0008, +0.0062]); the ablated contrast remained uncertain. The permutation contrast was small and positive conditional on the sampled graphs (Supplementary Table 12).
+-
+-Under the homology-aware split, historical single-fit PPI-GCN exceeded raw ESM (AUC 0.7606 versus 0.7248; Fig. 2D). The retained graph-fusion estimate (0.9741) was lower than the repeated \CADDAM{} baseline (0.9754); raw fusion averaged 0.9728 (Fig. 2E). Current three-seed means were 0.9755 for scores, 0.9727 for raw fusion and 0.9752 for graph fusion. On ensemble predictions, graph-minus-score $\Delta$AUC was +0.0001, CI [-0.0019, +0.0020], and its AUPRC interval also crossed zero. Thus a stable graph-fusion loss is not established by the repeated comparison. Mean metrics and metrics of averaged probabilities can give different close rankings.
++Under the original split, single-score CADD and AlphaMissense baselines achieved AUC 0.9207 and 0.9470. In the historical fusion audit, the same-hidden-layer \CADDAM{} baseline reached mean AUC 0.9572; adding raw ESM, real PPI-GCN, edge-ablated or permuted representations gave 0.9680, 0.9718, 0.9708 and 0.9694 (Fig. 2B). The historical real-minus-raw fusion interval was positive, while ablated/permuted contrasts included zero (Fig. 2C). Current matched fusion yielded a small real-minus-raw margin ($\Delta$AUC +0.0032, protein 95\% CI [+0.0008, +0.0062]); the ablated contrast remained uncertain. The permutation contrast was small and positive conditional on the sampled graphs (Supplementary Table 12).
++
++Under the homology-aware split, historical single-fit PPI-GCN exceeded raw ESM (AUC 0.7606 versus 0.7248; Fig. 2D). The retained graph-fusion estimate (0.9741) was lower than the repeated \CADDAM{} baseline (0.9754); raw fusion averaged 0.9728 (Fig. 2E). Current three-seed means were 0.9755 for scores, 0.9727 for raw fusion and 0.9752 for graph fusion. On ensemble predictions, graph-minus-score $\Delta$AUC was +0.0001, CI [-0.0019, +0.0020], and its AUPRC interval also crossed zero. The graph-versus-score effect remained uncertain under homology-aware splitting. Mean metrics and metrics of averaged probabilities can give different close rankings.
+ 
+ \begin{figure*}[!p]
+ \centering
+@@ -145,7 +145,7 @@
+ 
+ \begin{figure*}[!p]
+ \centering
+-\includegraphics[width=0.98\textwidth]{figure_drafts/Figure3_topology_context_v1_accepted.pdf}
++\includegraphics[width=0.98\textwidth]{figure_drafts/Figure3_topology_context_v1_accepted_clarified.pdf}
+ \caption{Exploratory topology-context profiles from retained reference predictions. A, ESM similarity by network relation. B--D, Gains across degree, k-core, betweenness, clustering and neighbour-risk strata. E/F, Joint-cell profiles selected from 53 inspected cells. These descriptive, post-hoc profiles are not independently confirmed; historical within-cell intervals omit protein dependence and selection uncertainty.}
+ \label{fig:topology_context}
+ \end{figure*}
+@@ -160,8 +160,8 @@
+ 
+ \begin{figure*}[!p]
+ \centering
+-\includegraphics[width=0.98\textwidth]{figure_drafts/Figure4_prediction_transitions_v2_accepted_minimal.pdf}
+-\caption{Historical prediction transitions and descriptive topology profiles. A/B, Transitions for retained raw/graph and score/graph-fusion pairs at threshold 0.5. C/D, Original row-normalized topology-profile heatmaps. E, Original direction of mean differences, with uniform points without FDR significance encoding. F, Original baseline-error-stratified effect sizes without significance stars. Panels A--D and numerical inputs are retained; repeated variants within proteins limit inferential interpretation.}
++\includegraphics[width=0.98\textwidth]{figure_drafts/Figure4_prediction_transitions_v2_accepted_minimal_clarified.pdf}
++\caption{Historical prediction transitions and descriptive topology profiles. A/B, Retained raw/graph and score/graph-fusion comparisons at threshold 0.5. C/D, Row-centered, range-scaled group means; warm/blue colors denote above/below the within-row mean, not comparable effect magnitudes across rows. E, Uniform blue/orange dots denote higher means among rescued false negatives/suppressed false positives, respectively. F, Baseline-error-stratified Hedges' \textit{g}; blue/orange denote positive/negative effects. Repeated variants within proteins limit inferential interpretation.}
+ \label{fig:prediction_transitions}
+ \end{figure*}
+ 
+@@ -183,22 +183,22 @@
+ 
+ PPI graph augmentation improved benchmark performance in the shared-graph evaluation, with effects that varied by evaluation design and baseline choice. The historical and matched audits show sensitivity to graph connectivity, but protein-level uncertainty limits the full-versus-raw claim. With \CADDAM{} included, protein-representation controls retained much of the gain, while the current real-minus-raw fusion margin was small and positive. These results support representation complementarity with a limited additional STRING margin under the original split.
+ 
+-Under the homology-aware split, the historical graph-fusion point was below the repeated score baseline, but the current matched graph-versus-score interval spanned zero. Additional input weights, redundant high-dimensional features, overfitting, feature scaling and changed protein composition are possible explanations for weaker fusion; these mechanisms were not experimentally separated. The prevalence shift limits cross-split AUPRC comparisons. A stable harmful graph effect cannot be inferred from the retained single run.
++Under the homology-aware split, the historical graph-fusion point was below the repeated score baseline, but the current matched graph-versus-score interval spanned zero. Additional input weights, redundant high-dimensional features, overfitting, feature scaling and changed protein composition are possible explanations for weaker fusion; these mechanisms were not experimentally separated. The prevalence shift limits cross-split AUPRC comparisons.
+ 
+ Graph propagation changed predictions in heterogeneous topology contexts. The observed profiles may reflect densely connected functional neighbourhoods or boundary-like network roles, but their post-hoc selection requires independent confirmation. External HUMSAVAR validation supports STRING transfer under the stated exclusions; BioGRID's uncertain incremental gains limit generalization across networks. Both databases may share underlying evidence, and the networks overlap. This is not independent-patient or prospective validation.
+ 
+ The evaluation has several constraints. ClinVar labels may reflect submission bias and future updates \cite{Landrum2020ClinVar}. Unknown development-data overlap for CADD and AlphaMissense limits prospective interpretation. Protein-level mapping omits isoform and residue-specific effects. STRING associations extend beyond direct physical interactions \cite{Szklarczyk2023STRING}; transductive propagation and direct-edge ablation retain indirect cross-partition paths. Outputs from class-weighted training are not calibrated clinical probabilities, and transition counts depend on the chosen threshold. The external set excludes specified variants/proteins but not all homologues or shared annotation evidence; external clinical-score fusion was not evaluated. These findings concern fixed propagation and should not be generalized to trained graph neural networks.
+ 
+-\paragraph{Practical recommendations}
++\noindent\textbf{Practical recommendations.}
+ Compare graph features with raw embeddings and strong score baselines under matched training settings. State whether held-out proteins remain visible in the graph, assess uncertainty at the protein level, and treat selected topology groups as hypotheses. Check calibration and decision thresholds before clinical use.
+ 
+ \section*{Data and Code Availability}
+ 
+-Code, compact source data, complete sample memberships, per-seed predictions, protocols and checksums are publicly available; the identifying repository URL is withheld in this anonymous copy. Large provider resources, feature tensors and model checkpoints are stored separately; third-party source data should be obtained from their original providers.
++Supplementary Information, code, compact source data, complete sample memberships, per-seed predictions, protocols and checksums are publicly available; the identifying repository URL is withheld in this anonymous copy. Large provider resources, feature tensors and model checkpoints are stored separately; third-party source data should be obtained from their original providers.
+ 
+ \section*{Acknowledgment}
+ 
+-OpenAI ChatGPT, OpenAI Codex and Anthropic Claude assisted literature organization, code development for the Methods and Results analyses, and manuscript language editing. AI-assisted scripts supported environment restoration, model fitting, data checks and statistical analysis. The authors take responsibility for reviewing the code, outputs, interpretation, references and final manuscript.
++OpenAI ChatGPT, OpenAI Codex and Anthropic Claude assisted with literature organization, code development for the Methods and Results analyses, and manuscript language editing. AI-assisted scripts supported environment restoration, model fitting, data checks and statistical analysis. The authors take responsibility for reviewing the code, outputs, interpretation, references and final manuscript.
+ 
+ \IEEEtriggeratref{26}
+ \begin{thebibliography}{99}

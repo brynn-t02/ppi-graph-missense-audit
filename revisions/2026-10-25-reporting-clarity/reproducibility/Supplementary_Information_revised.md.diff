@@ -1,0 +1,29 @@
+--- 2026-10-25-original-minimal/Supplementary_Information_revised.md
++++ 2026-10-25-reporting-clarity/Supplementary_Information_revised.md
+@@ -18,7 +18,7 @@
+ 
+ ### Supplementary Methods 1. Dataset reconstruction and source files
+ 
+-We reconstructed a missense variant pathogenicity dataset from the ClinVar `variant_summary.txt.gz` table obtained from the official NCBI ClinVar FTP `tab_delimited` directory. The present analysis uses retained, checksum-identified processed tables and model inputs. Their exact historical ClinVar content-release date is unverified: a retained raw-file copy contains 2026 LastEvaluated records, but its relationship to the earlier processed tables has not been independently established. We therefore do not assign 31 March 2024, or a replacement 2026 date, to the frozen benchmark. Checksums and verified row identities identify the evaluated inputs; they do not establish temporal independence. We retained germline GRCh38 single-nucleotide variant records and extracted protein-level HGVS annotations. Missense substitutions were identified using a strict three-letter amino-acid substitution pattern.
++We reconstructed a missense variant pathogenicity dataset from the ClinVar `variant_summary.txt.gz` table obtained from the official NCBI ClinVar FTP `tab_delimited` directory. The present analysis uses retained, checksum-identified processed tables and model inputs; their exact historical ClinVar content-release date is unverified. Checksums and verified row identities identify the frozen evaluated inputs but do not establish temporal independence. We retained germline GRCh38 single-nucleotide variant records and extracted protein-level HGVS annotations. Missense substitutions were identified using a strict three-letter amino-acid substitution pattern.
+ 
+ Pathogenic, Likely pathogenic and Pathogenic/Likely pathogenic records were grouped as pathogenic. Benign, Likely benign and Benign/Likely benign records were grouped as benign. Supported review status was defined as the exact ClinVar `ReviewStatus` strings `criteria provided, single submitter`, `criteria provided, multiple submitters, no conflicts`, `reviewed by expert panel`, and `practice guideline`; records outside this whitelist were excluded. Conflicting VariationIDs were removed, and duplicate VariationIDs were collapsed after conflict removal. The final mapped dataset contained 177,213 filtered, non-conflicting ClinVar missense variants with criteria-supported review status, including 127,953 benign and 49,260 pathogenic variants.
+ 
+@@ -44,7 +44,7 @@
+ 
+ FPP denotes fixed protein-feature propagation, the fixed two-hop operation called PPI-GCN in the main text. Both terms refer to the same non-trainable propagation, not to a trained graph neural network. This operation produced one propagated representation per STRING node and did not use variant labels during propagation. The full graph includes held-out features and nodes: this is transductive feature access, not use of held-out labels. All embedding-only variant inputs are identical within each mapped protein.
+ 
+-Two supplementary fixed operators were used: row-normalized two-hop mean propagation with residual averaging, and two rounds of cosine-softmax-weighted neighbour aggregation with residual averaging. The code runs both under no-gradient computation and has no learned aggregation or attention parameters. The original labels "GraphSAGE-style" and "GAT-style" are replaced by "Fixed mean propagation" and "Fixed cosine-weighted propagation". These are operator controls, not trained GraphSAGE/GAT baselines. The cosine operator includes self-neighbours and softmax weights from the current feature cosine similarity; trained graph models were not evaluated.
++Two supplementary fixed operators were used. Fixed mean propagation applies row-normalized two-hop mean propagation with residual averaging. Fixed cosine-weighted propagation applies two rounds of cosine-softmax-weighted neighbour aggregation with residual averaging, including self-neighbours and softmax weights from the current feature cosine similarity. Both run under no-gradient computation and have no learned aggregation or attention parameters. These are fixed operator controls, not trained GraphSAGE/GAT baselines; trained graph models were not evaluated.
+ 
+ For topology profiling, we used a separate thresholded STRING graph based on combined score. The primary topology analyses used a combined-score threshold of 400, yielding 19,622 nodes and 929,472 graph edges. Degree, k-core, community membership, betweenness, clustering coefficient and community-boundary role were computed on this thresholded graph. The representation-propagation graph and the topology-description graph were related STRING-derived objects but not identical analysis objects.
+ 
+@@ -159,6 +159,8 @@
+ | Variant | AUPRC | +0.0420 | +0.0353 | +0.0484 | 1,000 |
+ | Protein-clustered | AUC | +0.0207 | -0.0080 | +0.0527 | 1,000 |
+ | Protein-clustered | AUPRC | +0.0421 | -0.0021 | +0.0798 | 1,000 |
++
++In Table 4A, Delta denotes FPP minus raw ESM. The Variant rows report the mean of the 1,000 paired variant-bootstrap differences; the Protein-clustered rows report the observed difference on the original test set. Both 95% intervals are the 2.5th and 97.5th percentiles of the corresponding bootstrap differences.
+ 
+ #### Supplementary Table 4B. Original-split strong-predictor fusion-control uncertainty
+ 

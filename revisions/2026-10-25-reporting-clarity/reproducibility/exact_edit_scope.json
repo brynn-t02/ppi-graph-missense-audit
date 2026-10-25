@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "both_main_sources_match_exact_recorded_edits": true,
+  "paired_text_edits": 10,
+  "paired_figure_path_edits": 3,
+  "files_at_least_5MB": []
+}

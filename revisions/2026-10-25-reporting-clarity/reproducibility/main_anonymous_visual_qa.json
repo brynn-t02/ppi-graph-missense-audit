@@ -1,0 +1,49 @@
+{
+  "pdf": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_reporting_clarity_20261025/source/main_anonymous.pdf",
+  "pdf_sha256": "cc89388c368d08985cdd09783fc4c533844269c90ceefde2097115d4a61dc5cf",
+  "page_count_including_references": 8,
+  "pages_visually_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "figure_caption_pages": {
+    "1": 4,
+    "2": 5,
+    "3": 5,
+    "4": 6,
+    "5": 6
+  },
+  "all_five_figures_in_main": true,
+  "overlap_or_clipping_observed": false,
+  "abstract_and_keywords_bold": true,
+  "original_figure_small_font_preserved_per_user_request": true,
+  "identifying_strings_present": {
+    "Yuxin": false,
+    "Xianguo": false,
+    "Weibo": false,
+    "Jieqi": false,
+    "Yongqin": false,
+    "2595083628": false,
+    "yuxin_t02": false,
+    "Inner Mongolia": false,
+    "Hohhot": false,
+    "brynn-t02": false
+  },
+  "metadata_author_present": false,
+  "anonymity_passed": true,
+  "minor_findings": [
+    {
+      "location": "Page8 references",
+      "finding": "Right column ends aboutthree reference lines below the left. All30references present; this is a small final-column balance difference, not content loss or clipping.",
+      "blocking": false
+    }
+  ],
+  "blocking_findings": [],
+  "status": "passed"
+}

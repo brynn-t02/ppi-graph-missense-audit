@@ -1,0 +1,811 @@
+{
+  "inference": "CPUfloat32/4threads/1024nodes/fixedactualnodeorder/evalmode",
+  "checkpoint_count": 21,
+  "max_abs_tolerance": 2e-06,
+  "runs": [
+    {
+      "arm": "BioGRID_FPP",
+      "seed": 42,
+      "checkpoint_sha256": "91afbf673617623bee5326eb66f1976bed2c35efc6f7093ab5b3ff9c91bc15fa",
+      "parts": {
+        "val": {
+          "max_abs_canonical_vs_saved": 1.1920928955078125e-07,
+          "old_same_protein_nonzero_spread_count": 83,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7923969551868522,
+            "auprc": 0.5801443372809431
+          },
+          "canonical_metrics": {
+            "auc": 0.7923933978614289,
+            "auprc": 0.5801406447452243
+          }
+        },
+        "test": {
+          "max_abs_canonical_vs_saved": 1.1920928955078125e-07,
+          "old_same_protein_nonzero_spread_count": 133,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7602208047208332,
+            "auprc": 0.6132894146715995
+          },
+          "canonical_metrics": {
+            "auc": 0.7602219961675316,
+            "auprc": 0.6135340255086739
+          }
+        }
+      },
+      "max_abs_vs_prior_external_node_scores": 1.7881393432617188e-07
+    },
+    {
+      "arm": "BioGRID_FPP",
+      "seed": 43,
+      "checkpoint_sha256": "3a7e12dfbec8e431c70479c9fc8cfdc2992efa99044ff781f39c0f9e04c182b6",
+      "parts": {
+        "val": {
+          "max_abs_canonical_vs_saved": 2.980232238769531e-07,
+          "old_same_protein_nonzero_spread_count": 87,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7925446825099572,
+            "auprc": 0.6118104474688411
+          },
+          "canonical_metrics": {
+            "auc": 0.7925534417534619,
+            "auprc": 0.6118294245307206
+          }
+        },
+        "test": {
+          "max_abs_canonical_vs_saved": 3.5762786865234375e-07,
+          "old_same_protein_nonzero_spread_count": 217,
+          "old_max_within_protein_spread": 2.384185791015625e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7719638904092917,
+            "auprc": 0.6017922421715373
+          },
+          "canonical_metrics": {
+            "auc": 0.771963066094425,
+            "auprc": 0.6019611631920396
+          }
+        }
+      },
+      "max_abs_vs_prior_external_node_scores": 4.172325134277344e-07
+    },
+    {
+      "arm": "BioGRID_FPP",
+      "seed": 44,
+      "checkpoint_sha256": "a46d0439f01fa11025bea2fa450af7f4e918bbef223292a2bd499a62a11c090b",
+      "parts": {
+        "val": {
+          "max_abs_canonical_vs_saved": 1.7881393432617188e-07,
+          "old_same_protein_nonzero_spread_count": 61,
+          "old_max_within_protein_spread": 5.960464477539063e-08,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7935602363522762,
+            "auprc": 0.613431105116711
+          },
+          "canonical_metrics": {
+            "auc": 0.7935639903137783,
+            "auprc": 0.6134429878435483
+          }
+        },
+        "test": {
+          "max_abs_canonical_vs_saved": 2.384185791015625e-07,
+          "old_same_protein_nonzero_spread_count": 151,
+          "old_max_within_protein_spread": 1.7881393432617188e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.745501408982699,
+            "auprc": 0.5971910832260678
+          },
+          "canonical_metrics": {
+            "auc": 0.745509804525713,
+            "auprc": 0.5973819241840442
+          }
+        }
+      },
+      "max_abs_vs_prior_external_node_scores": 2.384185791015625e-07
+    },
+    {
+      "arm": "edge_ablated_FPP",
+      "seed": 42,
+      "checkpoint_sha256": "04f0de5f73c9699fccf26440cc891b8b5ffcae003faaa00ddea01912e6c9d8cf",
+      "parts": {
+        "val": {
+          "max_abs_canonical_vs_saved": 1.7881393432617188e-07,
+          "old_same_protein_nonzero_spread_count": 82,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.8256456849535359,
+            "auprc": 0.5895136345711346
+          },
+          "canonical_metrics": {
+            "auc": 0.825646042473679,
+            "auprc": 0.5895503336589983
+          }
+        },
+        "test": {
+          "max_abs_canonical_vs_saved": 1.4901161193847656e-07,
+          "old_same_protein_nonzero_spread_count": 164,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7612417637090766,
+            "auprc": 0.5937293438342375
+          },
+          "canonical_metrics": {
+            "auc": 0.7612428304694927,
+            "auprc": 0.5938675667674448
+          }
+        }
+      }
+    },
+    {
+      "arm": "edge_ablated_FPP",
+      "seed": 43,
+      "checkpoint_sha256": "a471efa7097de2e2dc34e815fc103da8698c51fe7f18a8608ead1d9cbb5733fb",
+      "parts": {
+        "val": {
+          "max_abs_canonical_vs_saved": 1.7881393432617188e-07,
+          "old_same_protein_nonzero_spread_count": 63,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.8270761856118736,
+            "auprc": 0.564328407033117
+          },
+          "canonical_metrics": {
+            "auc": 0.8270732807607113,
+            "auprc": 0.5643241743983521
+          }
+        },
+        "test": {
+          "max_abs_canonical_vs_saved": 1.1920928955078125e-07,
+          "old_same_protein_nonzero_spread_count": 145,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7744100898023856,
+            "auprc": 0.6071092277466406
+          },
+          "canonical_metrics": {
+            "auc": 0.7744093416846913,
+            "auprc": 0.6072274379443733
+          }
+        }
+      }
+    },
+    {
+      "arm": "edge_ablated_FPP",
+      "seed": 44,
+      "checkpoint_sha256": "f96396e3e9bbac54e2360f51a5421b23e67116eaa1a233af420629ef2329b4c1",
+      "parts": {
+        "val": {
+          "max_abs_canonical_vs_saved": 2.086162567138672e-07,
+          "old_same_protein_nonzero_spread_count": 74,
+          "old_max_within_protein_spread": 5.960464477539063e-08,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.8225831316562207,
+            "auprc": 0.580257015274887
+          },
+          "canonical_metrics": {
+            "auc": 0.822592230543861,
+            "auprc": 0.5802828261544489
+          }
+        },
+        "test": {
+          "max_abs_canonical_vs_saved": 1.7881393432617188e-07,
+          "old_same_protein_nonzero_spread_count": 172,
+          "old_max_within_protein_spread": 1.7881393432617188e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7748184858663112,
+            "auprc": 0.6215718540018778
+          },
+          "canonical_metrics": {
+            "auc": 0.774830684340938,
+            "auprc": 0.6218786954056887
+          }
+        }
+      }
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 42,
+      "checkpoint_sha256": "b208b66ed92c9ec609f1b3ebb5550218aadd720b089745fcafd1761ec2dcfcdd",
+      "parts": {
+        "val": {
+          "max_abs_canonical_vs_saved": 1.4901161193847656e-07,
+          "old_same_protein_nonzero_spread_count": 82,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.8301557747440048,
+            "auprc": 0.5746283380916462
+          },
+          "canonical_metrics": {
+            "auc": 0.830156552350316,
+            "auprc": 0.5746271756711376
+          }
+        },
+        "test": {
+          "max_abs_canonical_vs_saved": 2.086162567138672e-07,
+          "old_same_protein_nonzero_spread_count": 176,
+          "old_max_within_protein_spread": 1.4901161193847656e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7932066715584327,
+            "auprc": 0.6514041513035155
+          },
+          "canonical_metrics": {
+            "auc": 0.79320020172578,
+            "auprc": 0.6515177096741348
+          }
+        }
+      },
+      "max_abs_vs_prior_external_node_scores": 2.682209014892578e-07
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 43,
+      "checkpoint_sha256": "a4472bcfac34fab4354a1930ed12cae524eb37572c1579da29075147c114293f",
+      "parts": {
+        "val": {
+          "max_abs_canonical_vs_saved": 1.7881393432617188e-07,
+          "old_same_protein_nonzero_spread_count": 77,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.8260842012849845,
+            "auprc": 0.5734267007104924
+          },
+          "canonical_metrics": {
+            "auc": 0.8260861497697641,
+            "auprc": 0.5734213325190717
+          }
+        },
+        "test": {
+          "max_abs_canonical_vs_saved": 1.7881393432617188e-07,
+          "old_same_protein_nonzero_spread_count": 164,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7954117553894537,
+            "auprc": 0.6354172520533771
+          },
+          "canonical_metrics": {
+            "auc": 0.7954170822645179,
+            "auprc": 0.6356235726531128
+          }
+        }
+      },
+      "max_abs_vs_prior_external_node_scores": 2.086162567138672e-07
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 44,
+      "checkpoint_sha256": "ec440fd5490a88aa96e964c3503f24c77413f79019b723de3d6ba5c3a461a0e0",
+      "parts": {
+        "val": {
+          "max_abs_canonical_vs_saved": 2.980232238769531e-07,
+          "old_same_protein_nonzero_spread_count": 84,
+          "old_max_within_protein_spread": 5.960464477539063e-08,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.8228460072793962,
+            "auprc": 0.5926908917886521
+          },
+          "canonical_metrics": {
+            "auc": 0.8228389194425603,
+            "auprc": 0.5926993783053562
+          }
+        },
+        "test": {
+          "max_abs_canonical_vs_saved": 2.384185791015625e-07,
+          "old_same_protein_nonzero_spread_count": 196,
+          "old_max_within_protein_spread": 2.086162567138672e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7963421782826532,
+            "auprc": 0.6583585863276157
+          },
+          "canonical_metrics": {
+            "auc": 0.7963457318417011,
+            "auprc": 0.6583873693800323
+          }
+        }
+      },
+      "max_abs_vs_prior_external_node_scores": 4.470348358154297e-07
+    },
+    {
+      "arm": "permuted_FPP_g0",
+      "seed": 42,
+      "checkpoint_sha256": "be32a1f81e915086f774c8965c7a946164b3fbefc4b060f9cda2c79f687e776b",
+      "parts": {
+        "val": {
+          "max_abs_canonical_vs_saved": 1.1920928955078125e-07,
+          "old_same_protein_nonzero_spread_count": 74,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7862034549888575,
+            "auprc": 0.558292176693435
+          },
+          "canonical_metrics": {
+            "auc": 0.7862030974687144,
+            "auprc": 0.5582910403573282
+          }
+        },
+        "test": {
+          "max_abs_canonical_vs_saved": 1.1920928955078125e-07,
+          "old_same_protein_nonzero_spread_count": 98,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7858929621465193,
+            "auprc": 0.611024574542913
+          },
+          "canonical_metrics": {
+            "auc": 0.7858939319287157,
+            "auprc": 0.6110093573930682
+          }
+        }
+      }
+    },
+    {
+      "arm": "permuted_FPP_g0",
+      "seed": 43,
+      "checkpoint_sha256": "03a077d3502d282cddc87807c19f34737ff8742505694ea9d77d4ff1a342f0ea",
+      "parts": {
+        "val": {
+          "max_abs_canonical_vs_saved": 1.1920928955078125e-07,
+          "old_same_protein_nonzero_spread_count": 73,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7942810505886713,
+            "auprc": 0.5669984612400739
+          },
+          "canonical_metrics": {
+            "auc": 0.7942806930685282,
+            "auprc": 0.5670274516442765
+          }
+        },
+        "test": {
+          "max_abs_canonical_vs_saved": 1.4901161193847656e-07,
+          "old_same_protein_nonzero_spread_count": 116,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7789880228573784,
+            "auprc": 0.6101967476623886
+          },
+          "canonical_metrics": {
+            "auc": 0.7789817816162434,
+            "auprc": 0.6103079972348385
+          }
+        }
+      }
+    },
+    {
+      "arm": "permuted_FPP_g0",
+      "seed": 44,
+      "checkpoint_sha256": "79f6d13c8f492fe76a462bd5a8b675bf0f4b358b27ca891808671aa13aa59dcf",
+      "parts": {
+        "val": {
+          "max_abs_canonical_vs_saved": 1.1920928955078125e-07,
+          "old_same_protein_nonzero_spread_count": 55,
+          "old_max_within_protein_spread": 5.960464477539063e-08,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7892569540885503,
+            "auprc": 0.5760810170155326
+          },
+          "canonical_metrics": {
+            "auc": 0.7892553720619173,
+            "auprc": 0.5761011080194232
+          }
+        },
+        "test": {
+          "max_abs_canonical_vs_saved": 1.7881393432617188e-07,
+          "old_same_protein_nonzero_spread_count": 100,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7770744070654673,
+            "auprc": 0.6073048055691614
+          },
+          "canonical_metrics": {
+            "auc": 0.7770751066940518,
+            "auprc": 0.6074094322718336
+          }
+        }
+      }
+    },
+    {
+      "arm": "permuted_FPP_g1",
+      "seed": 42,
+      "checkpoint_sha256": "d47cf8cbd14a6541002e67339a84d4555a828fe286c01ae0454457df645645eb",
+      "parts": {
+        "val": {
+          "max_abs_canonical_vs_saved": 1.1920928955078125e-07,
+          "old_same_protein_nonzero_spread_count": 63,
+          "old_max_within_protein_spread": 5.960464477539063e-08,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.794901196090789,
+            "auprc": 0.5750127355203005
+          },
+          "canonical_metrics": {
+            "auc": 0.794907264995217,
+            "auprc": 0.5750308347818186
+          }
+        },
+        "test": {
+          "max_abs_canonical_vs_saved": 1.1920928955078125e-07,
+          "old_same_protein_nonzero_spread_count": 142,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7837231298983351,
+            "auprc": 0.601435860156675
+          },
+          "canonical_metrics": {
+            "auc": 0.783724556863567,
+            "auprc": 0.6016290881073318
+          }
+        }
+      }
+    },
+    {
+      "arm": "permuted_FPP_g1",
+      "seed": 43,
+      "checkpoint_sha256": "b6c92d3fea94854cd7b90584dbd28fc910d60a81aeb1fa3e84174dc102338719",
+      "parts": {
+        "val": {
+          "max_abs_canonical_vs_saved": 1.1920928955078125e-07,
+          "old_same_protein_nonzero_spread_count": 67,
+          "old_max_within_protein_spread": 5.960464477539063e-08,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.790248795407382,
+            "auprc": 0.5562786753361537
+          },
+          "canonical_metrics": {
+            "auc": 0.7902430393330792,
+            "auprc": 0.5562924666284961
+          }
+        },
+        "test": {
+          "max_abs_canonical_vs_saved": 1.4901161193847656e-07,
+          "old_same_protein_nonzero_spread_count": 149,
+          "old_max_within_protein_spread": 1.4901161193847656e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7579999688561375,
+            "auprc": 0.596357062388891
+          },
+          "canonical_metrics": {
+            "auc": 0.7580004052581257,
+            "auprc": 0.5964580685256534
+          }
+        }
+      }
+    },
+    {
+      "arm": "permuted_FPP_g1",
+      "seed": 44,
+      "checkpoint_sha256": "f9cb644e4551400dded36d295cf1ad8a9221d8a5f096565446391d8b65422e5f",
+      "parts": {
+        "val": {
+          "max_abs_canonical_vs_saved": 1.7881393432617188e-07,
+          "old_same_protein_nonzero_spread_count": 61,
+          "old_max_within_protein_spread": 5.960464477539063e-08,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.791508410375349,
+            "auprc": 0.5587372097400648
+          },
+          "canonical_metrics": {
+            "auc": 0.7915101622240498,
+            "auprc": 0.5587240690609602
+          }
+        },
+        "test": {
+          "max_abs_canonical_vs_saved": 1.1920928955078125e-07,
+          "old_same_protein_nonzero_spread_count": 102,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.783696682552438,
+            "auprc": 0.6059582569206777
+          },
+          "canonical_metrics": {
+            "auc": 0.78369841430636,
+            "auprc": 0.6061934098767958
+          }
+        }
+      }
+    },
+    {
+      "arm": "permuted_FPP_g2",
+      "seed": 42,
+      "checkpoint_sha256": "497447b8928a38ee6bfb8b5dfc9f9d72b34c42bc91063cca3ea799126f42fd56",
+      "parts": {
+        "val": {
+          "max_abs_canonical_vs_saved": 1.1920928955078125e-07,
+          "old_same_protein_nonzero_spread_count": 65,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7932229518493301,
+            "auprc": 0.5663655884267792
+          },
+          "canonical_metrics": {
+            "auc": 0.7932150864061832,
+            "auprc": 0.5664036977855973
+          }
+        },
+        "test": {
+          "max_abs_canonical_vs_saved": 1.1920928955078125e-07,
+          "old_same_protein_nonzero_spread_count": 96,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7846206425400003,
+            "auprc": 0.6189830533061309
+          },
+          "canonical_metrics": {
+            "auc": 0.7846162577390697,
+            "auprc": 0.6189839856475701
+          }
+        }
+      }
+    },
+    {
+      "arm": "permuted_FPP_g2",
+      "seed": 43,
+      "checkpoint_sha256": "198ba0bf2eecef5c2f09699a0ae08d29744dd2e9db93340d59150a17993a87db",
+      "parts": {
+        "val": {
+          "max_abs_canonical_vs_saved": 1.1920928955078125e-07,
+          "old_same_protein_nonzero_spread_count": 60,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7941679133394055,
+            "auprc": 0.5763251912466444
+          },
+          "canonical_metrics": {
+            "auc": 0.7941775842592748,
+            "auprc": 0.5764423444877385
+          }
+        },
+        "test": {
+          "max_abs_canonical_vs_saved": 1.1920928955078125e-07,
+          "old_same_protein_nonzero_spread_count": 93,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7804280178056444,
+            "auprc": 0.6192167537274303
+          },
+          "canonical_metrics": {
+            "auc": 0.7804249283566476,
+            "auprc": 0.6192484577767078
+          }
+        }
+      }
+    },
+    {
+      "arm": "permuted_FPP_g2",
+      "seed": 44,
+      "checkpoint_sha256": "f49ebdb03129d686304845dc8fbbe305903fed3beae9666493b936b378428666",
+      "parts": {
+        "val": {
+          "max_abs_canonical_vs_saved": 1.1920928955078125e-07,
+          "old_same_protein_nonzero_spread_count": 66,
+          "old_max_within_protein_spread": 5.960464477539063e-08,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7962555270826515,
+            "auprc": 0.5719669709913173
+          },
+          "canonical_metrics": {
+            "auc": 0.7962554555786228,
+            "auprc": 0.5719666482126612
+          }
+        },
+        "test": {
+          "max_abs_canonical_vs_saved": 1.1920928955078125e-07,
+          "old_same_protein_nonzero_spread_count": 99,
+          "old_max_within_protein_spread": 8.940696716308594e-08,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7901198201924058,
+            "auprc": 0.621055716653877
+          },
+          "canonical_metrics": {
+            "auc": 0.7901211571064337,
+            "auprc": 0.6213304866023028
+          }
+        }
+      }
+    },
+    {
+      "arm": "raw_ESM",
+      "seed": 42,
+      "checkpoint_sha256": "c5e62f4f7e1d848672c6594c467fe3ab0b194f556d5d3d2440dbe1a5a1b0b9b0",
+      "parts": {
+        "val": {
+          "max_abs_canonical_vs_saved": 1.1920928955078125e-07,
+          "old_same_protein_nonzero_spread_count": 84,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7814192276907073,
+            "auprc": 0.5569380868734662
+          },
+          "canonical_metrics": {
+            "auc": 0.7814228028921377,
+            "auprc": 0.5569389036068766
+          }
+        },
+        "test": {
+          "max_abs_canonical_vs_saved": 1.1920928955078125e-07,
+          "old_same_protein_nonzero_spread_count": 108,
+          "old_max_within_protein_spread": 8.940696716308594e-08,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7790050633159713,
+            "auprc": 0.6074498000033915
+          },
+          "canonical_metrics": {
+            "auc": 0.779004890140579,
+            "auprc": 0.6075654816561856
+          }
+        }
+      },
+      "max_abs_vs_prior_external_node_scores": 1.7881393432617188e-07
+    },
+    {
+      "arm": "raw_ESM",
+      "seed": 43,
+      "checkpoint_sha256": "772877e46c050c188e1fe80137cc3684b38fbb34541c4aa7b9bfdc0e496c7c1b",
+      "parts": {
+        "val": {
+          "max_abs_canonical_vs_saved": 1.1920928955078125e-07,
+          "old_same_protein_nonzero_spread_count": 89,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7958871115132498,
+            "auprc": 0.5514303190791181
+          },
+          "canonical_metrics": {
+            "auc": 0.7958973097753301,
+            "auprc": 0.5514110960531157
+          }
+        },
+        "test": {
+          "max_abs_canonical_vs_saved": 1.7881393432617188e-07,
+          "old_same_protein_nonzero_spread_count": 135,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7808775257076791,
+            "auprc": 0.6192201996602782
+          },
+          "canonical_metrics": {
+            "auc": 0.7808750042739686,
+            "auprc": 0.6193630676485539
+          }
+        }
+      },
+      "max_abs_vs_prior_external_node_scores": 1.1920928955078125e-07
+    },
+    {
+      "arm": "raw_ESM",
+      "seed": 44,
+      "checkpoint_sha256": "50ae990c85b67dce4d158eaabf3d09c5dec069bab1a12ba5b675e1c459b5828a",
+      "parts": {
+        "val": {
+          "max_abs_canonical_vs_saved": 1.1920928955078125e-07,
+          "old_same_protein_nonzero_spread_count": 92,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7879803479757852,
+            "auprc": 0.5660572696673845
+          },
+          "canonical_metrics": {
+            "auc": 0.7879715708562736,
+            "auprc": 0.5660638374475455
+          }
+        },
+        "test": {
+          "max_abs_canonical_vs_saved": 1.4901161193847656e-07,
+          "old_same_protein_nonzero_spread_count": 110,
+          "old_max_within_protein_spread": 1.1920928955078125e-07,
+          "canonical_max_within_protein_spread": 0.0,
+          "old_metrics": {
+            "auc": 0.7906733303079824,
+            "auprc": 0.608239729221832
+          },
+          "canonical_metrics": {
+            "auc": 0.7906723120366762,
+            "auprc": 0.6082726680185422
+          }
+        }
+      },
+      "max_abs_vs_prior_external_node_scores": 1.7881393432617188e-07
+    }
+  ],
+  "checkpoint_hashes": {
+    "assets/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_42/model.pt": "91afbf673617623bee5326eb66f1976bed2c35efc6f7093ab5b3ff9c91bc15fa",
+    "assets/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_43/model.pt": "3a7e12dfbec8e431c70479c9fc8cfdc2992efa99044ff781f39c0f9e04c182b6",
+    "assets/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_44/model.pt": "a46d0439f01fa11025bea2fa450af7f4e918bbef223292a2bd499a62a11c090b",
+    "assets/outputs/runs/original/edge_ablated_FPP/seed_42/model.pt": "04f0de5f73c9699fccf26440cc891b8b5ffcae003faaa00ddea01912e6c9d8cf",
+    "assets/outputs/runs/original/edge_ablated_FPP/seed_43/model.pt": "a471efa7097de2e2dc34e815fc103da8698c51fe7f18a8608ead1d9cbb5733fb",
+    "assets/outputs/runs/original/edge_ablated_FPP/seed_44/model.pt": "f96396e3e9bbac54e2360f51a5421b23e67116eaa1a233af420629ef2329b4c1",
+    "assets/outputs/runs/original/full_FPP/seed_42/model.pt": "b208b66ed92c9ec609f1b3ebb5550218aadd720b089745fcafd1761ec2dcfcdd",
+    "assets/outputs/runs/original/full_FPP/seed_43/model.pt": "a4472bcfac34fab4354a1930ed12cae524eb37572c1579da29075147c114293f",
+    "assets/outputs/runs/original/full_FPP/seed_44/model.pt": "ec440fd5490a88aa96e964c3503f24c77413f79019b723de3d6ba5c3a461a0e0",
+    "assets/outputs/runs/original/permuted_FPP_g0/seed_42/model.pt": "be32a1f81e915086f774c8965c7a946164b3fbefc4b060f9cda2c79f687e776b",
+    "assets/outputs/runs/original/permuted_FPP_g0/seed_43/model.pt": "03a077d3502d282cddc87807c19f34737ff8742505694ea9d77d4ff1a342f0ea",
+    "assets/outputs/runs/original/permuted_FPP_g0/seed_44/model.pt": "79f6d13c8f492fe76a462bd5a8b675bf0f4b358b27ca891808671aa13aa59dcf",
+    "assets/outputs/runs/original/permuted_FPP_g1/seed_42/model.pt": "d47cf8cbd14a6541002e67339a84d4555a828fe286c01ae0454457df645645eb",
+    "assets/outputs/runs/original/permuted_FPP_g1/seed_43/model.pt": "b6c92d3fea94854cd7b90584dbd28fc910d60a81aeb1fa3e84174dc102338719",
+    "assets/outputs/runs/original/permuted_FPP_g1/seed_44/model.pt": "f9cb644e4551400dded36d295cf1ad8a9221d8a5f096565446391d8b65422e5f",
+    "assets/outputs/runs/original/permuted_FPP_g2/seed_42/model.pt": "497447b8928a38ee6bfb8b5dfc9f9d72b34c42bc91063cca3ea799126f42fd56",
+    "assets/outputs/runs/original/permuted_FPP_g2/seed_43/model.pt": "198ba0bf2eecef5c2f09699a0ae08d29744dd2e9db93340d59150a17993a87db",
+    "assets/outputs/runs/original/permuted_FPP_g2/seed_44/model.pt": "f49ebdb03129d686304845dc8fbbe305903fed3beae9666493b936b378428666",
+    "assets/outputs/runs/original/raw_ESM/seed_42/model.pt": "c5e62f4f7e1d848672c6594c467fe3ab0b194f556d5d3d2440dbe1a5a1b0b9b0",
+    "assets/outputs/runs/original/raw_ESM/seed_43/model.pt": "772877e46c050c188e1fe80137cc3684b38fbb34541c4aa7b9bfdc0e496c7c1b",
+    "assets/outputs/runs/original/raw_ESM/seed_44/model.pt": "50ae990c85b67dce4d158eaabf3d09c5dec069bab1a12ba5b675e1c459b5828a",
+    "assets/outputs/runs/original_fusion/scores_capacity_matched/seed_42/model.pt": "176752e0a02409975fe867bc82cf0f3cc97c6a87710077937a1557a40f43713a",
+    "assets/outputs/runs/original_fusion/scores_capacity_matched/seed_43/model.pt": "7cd557a347725fe41e1fdbab234bfad817f7cedc4f5c44e000ec8597fffab68c",
+    "assets/outputs/runs/original_fusion/scores_capacity_matched/seed_44/model.pt": "2e6de467902242fb56e5146f520e353cddde936eb362c0a6c111d7d1388f2438",
+    "assets/external_validation_20261024/outputs/runs/original_fusion/scores_plus_BioGRID_FPP/seed_42/model.pt": "0686fe5ebdca8f3e74384d884de94b9e44f8d0ea523c64da68a0d1a9cab55b81",
+    "assets/external_validation_20261024/outputs/runs/original_fusion/scores_plus_BioGRID_FPP/seed_43/model.pt": "f95eed95e90ee583828aecd02f00b351d7c934089e026315d604d6680093de82",
+    "assets/external_validation_20261024/outputs/runs/original_fusion/scores_plus_BioGRID_FPP/seed_44/model.pt": "702938c13e5b03565ac038b09c63afd9862601e32b81702650494fca6af0975f",
+    "assets/outputs/runs/original_fusion/scores_plus_edge_ablated_FPP/seed_42/model.pt": "d16acdbd8022ba70b0adfc3bbcfe07638eb43e010515f409b08b0f1efa8e7f35",
+    "assets/outputs/runs/original_fusion/scores_plus_edge_ablated_FPP/seed_43/model.pt": "9f2e36a4b73d219c323640a73236314cfaa0de879287454a81d4accf005fd972",
+    "assets/outputs/runs/original_fusion/scores_plus_edge_ablated_FPP/seed_44/model.pt": "03d55f07b4d9aed1759d62d7ef49aa9356f244c35c4fd57704de595d8345d7e5",
+    "assets/outputs/runs/original_fusion/scores_plus_full_FPP/seed_42/model.pt": "a55ddc4c8d1a220ee34cd8e2d2e4bbc7e0dcd7bf5076fb0fc4302c345a8c35d7",
+    "assets/outputs/runs/original_fusion/scores_plus_full_FPP/seed_43/model.pt": "958a97aa4929755bbb95f266f09a2fa71d7603be362323bf2b76f1b7776fcef7",
+    "assets/outputs/runs/original_fusion/scores_plus_full_FPP/seed_44/model.pt": "f2dbee9c69099124124f43be7af661474ee320d50ccaa11170d2bf2caf42e724",
+    "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g0/seed_42/model.pt": "a5ce40a886ebf69454f07b28d32c5c29378b17af81c7cec9813cea5b6a8609b5",
+    "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g0/seed_43/model.pt": "eab6eba9ea24443a101660a8fb13b65baffa7bc1ba5e739fd2ae6cdf3af55a21",
+    "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g0/seed_44/model.pt": "67c68c6903bc3b3e3cf1f050737320c7b7f2f65ef5c9e72d8ef76f033fc85707",
+    "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g1/seed_42/model.pt": "691eeaf9fe5b6b3a71e5975baf2a5abc31155495d9e45d133f7823dff0fd943f",
+    "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g1/seed_43/model.pt": "956ebbf4b3ab6f4d17b7d6fa3a0aadbe62559af5c44a259bec27056485f510b4",
+    "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g1/seed_44/model.pt": "4690659a39ed078f63f53de08e1e344e6b0257e684382a72af5ab96ecdf651e0",
+    "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g2/seed_42/model.pt": "051ddabb6f76b7e2c3f5310b24532917ddbd4758450d08ef2320a6aad11d92e7",
+    "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g2/seed_43/model.pt": "e8d60e8e65ae7fa7e6ae8b78e20c53f77880123ddcafb7378474174f5b34db6a",
+    "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g2/seed_44/model.pt": "c9efcecd0fa867c737494bd7647636777aca56596df4845bee3429339a1879c9",
+    "assets/outputs/runs/original_fusion/scores_plus_raw_ESM/seed_42/model.pt": "61ebc95ff41e38e145d038096397d3fdf8e9dc2c61a28d6cb51a5fb9ae840ba6",
+    "assets/outputs/runs/original_fusion/scores_plus_raw_ESM/seed_43/model.pt": "d565bba0dfccabdbd948cd5a7b95c082b496a4ec48445d25ef1d88257d2637be",
+    "assets/outputs/runs/original_fusion/scores_plus_raw_ESM/seed_44/model.pt": "442ffa6953339e08c0967f6b3767817ab66dde0b9cf9c6ff36bc9089b5164852",
+    "assets/outputs/runs/homology/scores_capacity_matched/seed_42/model.pt": "c608fd2146253e1487459744e2572e87c20006f57a120d25514ffe6d721223a2",
+    "assets/outputs/runs/homology/scores_capacity_matched/seed_43/model.pt": "72237f953711589eeab32ebdb27f3ed3a113e6dd0c9824ad5a5b63a2332fa406",
+    "assets/outputs/runs/homology/scores_capacity_matched/seed_44/model.pt": "1ed2db85a61040c191bdd38d9f7d862cb6b698a0caa2666b112778c717ef3b55",
+    "assets/external_validation_20261024/outputs/runs/homology/scores_plus_BioGRID_FPP/seed_42/model.pt": "280a61b37dd6a163f960800b379b4479b94b0c9a8b541344fc33e8b08eaac5be",
+    "assets/external_validation_20261024/outputs/runs/homology/scores_plus_BioGRID_FPP/seed_43/model.pt": "32312bdda577cfd95196c52da25af40e569cda82124b72d88a55020920e40f2e",
+    "assets/external_validation_20261024/outputs/runs/homology/scores_plus_BioGRID_FPP/seed_44/model.pt": "295011820f8e9a7cebf5bc4b8db88e33f83f8b63bebae88b8ed9d432ca5d3a32",
+    "assets/outputs/runs/homology/scores_plus_full_FPP/seed_42/model.pt": "5c18c389074ec6f829570e4aeec74c84b82dfe36e017b977bb0ada7914e440f1",
+    "assets/outputs/runs/homology/scores_plus_full_FPP/seed_43/model.pt": "30f749b2813e75750292868dcc406dc96ad308a83a19a3f38fb0295cd196006c",
+    "assets/outputs/runs/homology/scores_plus_full_FPP/seed_44/model.pt": "d5f3bca4da02e7b78d72a521c216f4dbfd15dc137452eb2d966bc5228bdfdd65",
+    "assets/outputs/runs/homology/scores_plus_raw_ESM/seed_42/model.pt": "45178b22d86162f378489536dd75b42ecc666214433647d7ffe12e0ebe97128e",
+    "assets/outputs/runs/homology/scores_plus_raw_ESM/seed_43/model.pt": "d4c1a44e908184be23a16f59666141c5b00111fa05c57aa35fdef06dcf838ec7",
+    "assets/outputs/runs/homology/scores_plus_raw_ESM/seed_44/model.pt": "e5360e4e844ba91a0694d62a76ac7a200235639fde37aca9d6229427e938bea4"
+  },
+  "new_fits": 0
+}

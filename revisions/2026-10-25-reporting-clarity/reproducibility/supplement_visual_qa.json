@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-25T12:53:56.677156+00:00",
+  "pdfs": {
+    "named": {
+      "pages": 18,
+      "sha256": "033c791cb3b2785e92d9b47be1b6985baf9838fa635d211cbb89996a3c75cd87",
+      "table4a_note_pages": [
+        6
+      ],
+      "table4c_heading_pages": [
+        7
+      ],
+      "author": "Yuxin Tian, Xianguo Zhang, Weibo Meng, Jieqi Yin, Yongqin Jin",
+      "known_author_identifiers": [
+        "Yuxin Tian",
+        "Xianguo Zhang",
+        "Weibo Meng",
+        "Jieqi Yin",
+        "Yongqin Jin",
+        "yuxin_t02",
+        "2595083628"
+      ]
+    },
+    "anonymous": {
+      "pages": 18,
+      "sha256": "06ea9508720f8681b27e4bdba0cceab4c58ab8a4c8d894d7ba2da2cbb3dc87d6",
+      "table4a_note_pages": [
+        6
+      ],
+      "table4c_heading_pages": [
+        7
+      ],
+      "author": "Anonymous",
+      "known_author_identifiers": []
+    }
+  },
+  "visual_review": {
+    "all_pages_contact_sheets": "Named and anonymous pages 1–18 inspected in four contact sheets.",
+    "full_size_pages": [
+      "named 1",
+      "named 6",
+      "anonymous 2",
+      "anonymous 7"
+    ],
+    "render_dpi": 100,
+    "findings": "Updated date provenance and operator definitions are legible. Table 4A note is directly beneath its table on page 6. Table 4C remains together on page 7. No clipping, overlap, missing glyphs or new figure duplication observed. Long table and paragraph continuations are acceptable.",
+    "contact_sheet_paths": [
+      "work/reporting_clarity_20261025/qa/named-contact-01.png",
+      "work/reporting_clarity_20261025/qa/named-contact-10.png",
+      "work/reporting_clarity_20261025/qa/anonymous-contact-01.png",
+      "work/reporting_clarity_20261025/qa/anonymous-contact-10.png"
+    ]
+  },
+  "integrity": {
+    "both_supplements_18_pages": true,
+    "table4a_note_page": 6,
+    "table4c_kept_together_page": 7,
+    "all_267_table_lines_identical_to_previous_edition": true,
+    "named_anonymous_scientific_body_identical": true,
+    "anonymous_known_identifiers_absent": true,
+    "renderer_unchanged_from_previous_Table4C_fixed_version": true,
+    "renderer_sha256": "5b931490101c72bc633c193db6a7467b021f19be2d66110be27647b4e9e88385",
+    "no_new_statistical_result": true
+  },
+  "remaining_issues": []
+}

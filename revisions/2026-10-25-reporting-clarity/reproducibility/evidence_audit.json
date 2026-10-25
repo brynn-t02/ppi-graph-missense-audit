@@ -1,0 +1,274 @@
+{
+  "completed_utc": "2026-10-25T12:52:06.806108+00:00",
+  "status": "passed_definitions_verified",
+  "scope": "Read existing CSV/JSON and original analysis/figure scripts only; no bootstrap recomputation, inference, training, server or Baidu access. Main and figure files not edited.",
+  "Table4A": {
+    "variant_rows_source": "mean_delta from paired variant-level bootstrap summary; average of 1000 differences",
+    "variant_rows": [
+      {
+        "comparison": "gcn_vs_esm",
+        "model_a": "gcn_enhanced",
+        "model_b": "esm_raw",
+        "metric": "delta_auc",
+        "mean_delta": "0.02075708676995086",
+        "ci95_low": "0.01743681692392569",
+        "ci95_high": "0.024002274926088918",
+        "p_value_bootstrap_sign": "0.0",
+        "n_boot_used": "1000"
+      },
+      {
+        "comparison": "gcn_vs_esm",
+        "model_a": "gcn_enhanced",
+        "model_b": "esm_raw",
+        "metric": "delta_auprc",
+        "mean_delta": "0.042046008834725215",
+        "ci95_low": "0.035261343325958386",
+        "ci95_high": "0.04842684912230947",
+        "p_value_bootstrap_sign": "0.0",
+        "n_boot_used": "1000"
+      }
+    ],
+    "protein_rows_source": "point.delta_auc/point.delta_auprc, not clustered_bootstrap.*_mean",
+    "protein_observed": {
+      "delta_auc": 0.02071961828929414,
+      "delta_auprc": 0.042126430633267264,
+      "delta_brier": -0.006100991898709385,
+      "base_auc": 0.7790050633159713,
+      "graph_auc": 0.7997246816052654,
+      "base_auprc": 0.6074498000033915,
+      "graph_auprc": 0.6495762306366588,
+      "base_brier": 0.18610922882458839,
+      "graph_brier": 0.180008236925879
+    },
+    "protein_bootstrap": {
+      "n_boot": 1000,
+      "delta_auc_ci95": [
+        -0.007956136238110478,
+        0.052735795806166316
+      ],
+      "delta_auprc_ci95": [
+        -0.0020526282555940996,
+        0.07980160082438217
+      ],
+      "delta_brier_ci95": [
+        -0.02018074750792822,
+        0.00553816530633558
+      ],
+      "delta_auc_mean": 0.02222645179737315,
+      "delta_auprc_mean": 0.03986056234136629,
+      "delta_brier_mean": -0.006562453966442236
+    },
+    "CI_definition": "For each resampling scheme, empirical 2.5th and 97.5th quantiles of paired graph-minus-raw differences; percentile, not normal/Wald/basic/BCa intervals.",
+    "variant_sampling": "Sample n test variant rows with replacement; same sampled rows for both retained prediction arrays.",
+    "protein_sampling": "Sample 1413 proteins with replacement; include all variant rows of each sampled protein, repeating rows when a protein is sampled more than once. Conditional on retained fitted predictions.",
+    "checks": "All 4 displayed Delta values and 8 displayed interval limits match archived values at four-decimal rounding. All 267 table lines untouched.",
+    "table_note_added": true
+  },
+  "Figure4": {
+    "current_minimal_patch": "C/D pixels unchanged, E original colors unchanged but all symbols have equal size and alpha 0.85, F bars/colors unchanged with significance stars removed.",
+    "CD_scaling": "(group feature mean - arithmetic mean of the FP/FN group means)/(maximum - minimum); near-equal pairs mapped to zero by np.isclose. With two unequal groups, results are -0.5/+0.5, so hue gives relative direction rather than cross-feature effect magnitude.",
+    "CD_palette": "RdBu_r with vmin=-1, vmax=1; lower blue, higher warm/red. This is different from fixed blue/orange palette in E/F.",
+    "E_rule": "diff_fp_minus_fn < 0 -> blue #2171B5 (FN rescued higher); otherwise orange #F16913 (FP suppressed higher). All 18 displayed differences are nonzero. No p/FDR encoding remains.",
+    "F_rule": "Hedges g > 0 -> blue #2171B5; otherwise orange #D95F0E. All seven plotted values are nonzero. Positive means rescued FN mean exceeds persistent FN mean. No star/significance encoding remains.",
+    "directions_verified_against_means": {
+      "raw_ESM_to_FPP": [
+        {
+          "feature": "degree_bucket",
+          "FP_mean": 0.8697829716193656,
+          "FN_mean": 1.983273596176822,
+          "FP_minus_FN": -1.1134906245574565,
+          "E_color": "blue_FN_higher",
+          "CD_FP_color": "blue_below_row_mean",
+          "CD_FN_color": "warm_above_row_mean"
+        },
+        {
+          "feature": "kcore_bucket",
+          "FP_mean": 0.8380634390651085,
+          "FN_mean": 1.125448028673835,
+          "FP_minus_FN": -0.2873845896087266,
+          "E_color": "blue_FN_higher",
+          "CD_FP_color": "blue_below_row_mean",
+          "CD_FN_color": "warm_above_row_mean"
+        },
+        {
+          "feature": "neighbor_risk_bucket",
+          "FP_mean": 0.5726210350584308,
+          "FN_mean": 1.6941457586618878,
+          "FP_minus_FN": -1.1215247236034571,
+          "E_color": "blue_FN_higher",
+          "CD_FP_color": "blue_below_row_mean",
+          "CD_FN_color": "warm_above_row_mean"
+        },
+        {
+          "feature": "neighbor_pathogenic_rate",
+          "FP_mean": 0.2716960519823648,
+          "FN_mean": 0.4329423986310397,
+          "FP_minus_FN": -0.16124634664867493,
+          "E_color": "blue_FN_higher",
+          "CD_FP_color": "blue_below_row_mean",
+          "CD_FN_color": "warm_above_row_mean"
+        },
+        {
+          "feature": "neighbor_train_variant_count",
+          "FP_mean": 724.9766277128548,
+          "FN_mean": 4043.3548387096776,
+          "FP_minus_FN": -3318.378210996823,
+          "E_color": "blue_FN_higher",
+          "CD_FP_color": "blue_below_row_mean",
+          "CD_FN_color": "warm_above_row_mean"
+        },
+        {
+          "feature": "betweenness_bucket",
+          "FP_mean": 0.9482470784641068,
+          "FN_mean": 1.853046594982079,
+          "FP_minus_FN": -0.9047995165179721,
+          "E_color": "blue_FN_higher",
+          "CD_FP_color": "blue_below_row_mean",
+          "CD_FN_color": "warm_above_row_mean"
+        },
+        {
+          "feature": "clustering_coefficient",
+          "FP_mean": 0.2534412261683994,
+          "FN_mean": 0.20222293444103576,
+          "FP_minus_FN": 0.05121829172736367,
+          "E_color": "orange_FP_higher",
+          "CD_FP_color": "warm_above_row_mean",
+          "CD_FN_color": "blue_below_row_mean"
+        },
+        {
+          "feature": "boundary_role_bucket",
+          "FP_mean": 1.1519198664440735,
+          "FN_mean": 0.3321385902031063,
+          "FP_minus_FN": 0.8197812762409672,
+          "E_color": "orange_FP_higher",
+          "CD_FP_color": "warm_above_row_mean",
+          "CD_FN_color": "blue_below_row_mean"
+        },
+        {
+          "feature": "within_comm_neighbor_fraction",
+          "FP_mean": 0.770237200457445,
+          "FN_mean": 0.5654832747217126,
+          "FP_minus_FN": 0.20475392573573248,
+          "E_color": "orange_FP_higher",
+          "CD_FP_color": "warm_above_row_mean",
+          "CD_FN_color": "blue_below_row_mean"
+        }
+      ],
+      "scores_to_graph_fusion": [
+        {
+          "feature": "degree_bucket",
+          "FP_mean": 1.554054054054054,
+          "FN_mean": 1.8198198198198199,
+          "FP_minus_FN": -0.26576576576576594,
+          "E_color": "blue_FN_higher",
+          "CD_FP_color": "blue_below_row_mean",
+          "CD_FN_color": "warm_above_row_mean"
+        },
+        {
+          "feature": "kcore_bucket",
+          "FP_mean": 1.5518018018018018,
+          "FN_mean": 1.6036036036036037,
+          "FP_minus_FN": -0.05180180180180183,
+          "E_color": "blue_FN_higher",
+          "CD_FP_color": "blue_below_row_mean",
+          "CD_FN_color": "warm_above_row_mean"
+        },
+        {
+          "feature": "neighbor_risk_bucket",
+          "FP_mean": 0.7792792792792793,
+          "FN_mean": 1.7522522522522523,
+          "FP_minus_FN": -0.972972972972973,
+          "E_color": "blue_FN_higher",
+          "CD_FP_color": "blue_below_row_mean",
+          "CD_FN_color": "warm_above_row_mean"
+        },
+        {
+          "feature": "neighbor_pathogenic_rate",
+          "FP_mean": 0.3275912405975564,
+          "FN_mean": 0.4955346631457924,
+          "FP_minus_FN": -0.16794342254823602,
+          "E_color": "blue_FN_higher",
+          "CD_FP_color": "blue_below_row_mean",
+          "CD_FN_color": "warm_above_row_mean"
+        },
+        {
+          "feature": "neighbor_train_variant_count",
+          "FP_mean": 5913.824324324324,
+          "FN_mean": 3554.6801801801803,
+          "FP_minus_FN": 2359.144144144144,
+          "E_color": "orange_FP_higher",
+          "CD_FP_color": "warm_above_row_mean",
+          "CD_FN_color": "blue_below_row_mean"
+        },
+        {
+          "feature": "betweenness_bucket",
+          "FP_mean": 1.554054054054054,
+          "FN_mean": 1.7252252252252251,
+          "FP_minus_FN": -0.1711711711711712,
+          "E_color": "blue_FN_higher",
+          "CD_FP_color": "blue_below_row_mean",
+          "CD_FN_color": "warm_above_row_mean"
+        },
+        {
+          "feature": "clustering_coefficient",
+          "FP_mean": 0.18074876116160157,
+          "FN_mean": 0.21759824288465332,
+          "FP_minus_FN": -0.03684948172305175,
+          "E_color": "blue_FN_higher",
+          "CD_FP_color": "blue_below_row_mean",
+          "CD_FN_color": "warm_above_row_mean"
+        },
+        {
+          "feature": "boundary_role_bucket",
+          "FP_mean": 0.9684684684684685,
+          "FN_mean": 0.7207207207207207,
+          "FP_minus_FN": 0.24774774774774777,
+          "E_color": "orange_FP_higher",
+          "CD_FP_color": "warm_above_row_mean",
+          "CD_FN_color": "blue_below_row_mean"
+        },
+        {
+          "feature": "within_comm_neighbor_fraction",
+          "FP_mean": 0.7651127311495094,
+          "FN_mean": 0.6769208663778774,
+          "FP_minus_FN": 0.08819186477163199,
+          "E_color": "orange_FP_higher",
+          "CD_FP_color": "warm_above_row_mean",
+          "CD_FN_color": "blue_below_row_mean"
+        }
+      ]
+    },
+    "caption_suggestion": "C/D, Row-centered, range-scaled group means: warm/blue colors indicate above/below the within-row mean. E, Blue/orange indicate higher means among rescued false negatives/suppressed false positives, respectively; dots have equal size and opacity. F, Baseline-error-stratified Hedges' g (blue positive; orange negative). These profiles are descriptive; repeated variants within proteins limit inferential interpretation."
+  },
+  "evidence_files": [
+    {
+      "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_reporting_clarity_20261025/source/figure_inputs/data/processed/bootstrap_significance/bootstrap_significance_summary.csv",
+      "sha256": "8e7e6d9b7ccb7ce5a0e4cd03109d61369a7ad18d7e499c2c154339830ceb9e3e"
+    },
+    {
+      "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_reporting_clarity_20261025/source/figure_inputs/data/processed/clustered_bootstrap_exp42/42A_gcn_vs_esm_clustered_bootstrap.json",
+      "sha256": "038fa43c34cd4f74c454c01fb7f91f5b500946de91ac74ef8777640c78ba6307"
+    },
+    {
+      "path": "/Users/teyian/Documents/paper1/server_snapshot_full/root/12_run_bootstrap_significance.py",
+      "sha256": "fb6906a2dc84116b938e4160f42804419a787bf3dde261e75cc85cd36e8c1e23"
+    },
+    {
+      "path": "/Users/teyian/Documents/paper1/server_snapshot_full/root/42_clustered_bootstrap_key_claims.py",
+      "sha256": "ac34f6c408960f31b85236c829596b4c2095161dc9a8aec29bfc5c3d1e4ee58f"
+    },
+    {
+      "path": "/Users/teyian/Documents/paper1/release_candidate_20260605/scripts/figure_generation/make_figure4_prediction_transitions_v2.py",
+      "sha256": "ea88e0764a2eb8f07a437fbabf5e5fd5bd48e33e9d0568388c67c9df6f59afb6"
+    },
+    {
+      "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_reporting_clarity_20261025/source/figure_scripts/figure4_minimal_vector_patch.py",
+      "sha256": "8bdb80c820e6b0eb9fc2d811f5a1a6f39e74bfc18e00e904f85067ab10f5b853"
+    },
+    {
+      "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_reporting_clarity_20261025/source/figure_drafts/Figure4_prediction_transitions_v2_accepted_minimal.audit.json",
+      "sha256": "dce2309191f043bdcd7444b8d5b0615d98401d3eeb6d62122980c9ad77b320f2"
+    }
+  ],
+  "unresolved_issues": []
+}
