@@ -1,0 +1,195 @@
+{
+  "passed": true,
+  "checkpoints": 6,
+  "checks": [
+    {
+      "arm": "raw_ESM",
+      "seed": 42,
+      "checkpoint_sha256": "c5e62f4f7e1d848672c6594c467fe3ab0b194f556d5d3d2440dbe1a5a1b0b9b0",
+      "selected_epoch": 1,
+      "parts": {
+        "val": {
+          "metrics": {
+            "auc": 0.7814192276907073,
+            "auprc": 0.5569380868734662
+          },
+          "metric_difference": {
+            "auc": 0.0,
+            "auprc": 0.0
+          },
+          "max_probability_abs_difference": 0.0
+        },
+        "test": {
+          "metrics": {
+            "auc": 0.7790050633159713,
+            "auprc": 0.6074498000033915
+          },
+          "metric_difference": {
+            "auc": 0.0,
+            "auprc": 0.0
+          },
+          "max_probability_abs_difference": 0.0
+        }
+      },
+      "passed": true
+    },
+    {
+      "arm": "raw_ESM",
+      "seed": 43,
+      "checkpoint_sha256": "772877e46c050c188e1fe80137cc3684b38fbb34541c4aa7b9bfdc0e496c7c1b",
+      "selected_epoch": 1,
+      "parts": {
+        "val": {
+          "metrics": {
+            "auc": 0.7958871115132498,
+            "auprc": 0.5514303190791181
+          },
+          "metric_difference": {
+            "auc": 0.0,
+            "auprc": 0.0
+          },
+          "max_probability_abs_difference": 0.0
+        },
+        "test": {
+          "metrics": {
+            "auc": 0.7808775257076791,
+            "auprc": 0.6192201996602782
+          },
+          "metric_difference": {
+            "auc": 0.0,
+            "auprc": 0.0
+          },
+          "max_probability_abs_difference": 0.0
+        }
+      },
+      "passed": true
+    },
+    {
+      "arm": "raw_ESM",
+      "seed": 44,
+      "checkpoint_sha256": "50ae990c85b67dce4d158eaabf3d09c5dec069bab1a12ba5b675e1c459b5828a",
+      "selected_epoch": 1,
+      "parts": {
+        "val": {
+          "metrics": {
+            "auc": 0.7879803479757852,
+            "auprc": 0.5660572696673845
+          },
+          "metric_difference": {
+            "auc": 0.0,
+            "auprc": 0.0
+          },
+          "max_probability_abs_difference": 0.0
+        },
+        "test": {
+          "metrics": {
+            "auc": 0.7906733303079824,
+            "auprc": 0.608239729221832
+          },
+          "metric_difference": {
+            "auc": 0.0,
+            "auprc": 0.0
+          },
+          "max_probability_abs_difference": 0.0
+        }
+      },
+      "passed": true
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 42,
+      "checkpoint_sha256": "b208b66ed92c9ec609f1b3ebb5550218aadd720b089745fcafd1761ec2dcfcdd",
+      "selected_epoch": 5,
+      "parts": {
+        "val": {
+          "metrics": {
+            "auc": 0.8301557747440048,
+            "auprc": 0.5746283380916462
+          },
+          "metric_difference": {
+            "auc": 0.0,
+            "auprc": 0.0
+          },
+          "max_probability_abs_difference": 0.0
+        },
+        "test": {
+          "metrics": {
+            "auc": 0.7932066715584327,
+            "auprc": 0.6514041513035155
+          },
+          "metric_difference": {
+            "auc": 0.0,
+            "auprc": 0.0
+          },
+          "max_probability_abs_difference": 0.0
+        }
+      },
+      "passed": true
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 43,
+      "checkpoint_sha256": "a4472bcfac34fab4354a1930ed12cae524eb37572c1579da29075147c114293f",
+      "selected_epoch": 4,
+      "parts": {
+        "val": {
+          "metrics": {
+            "auc": 0.8260842012849845,
+            "auprc": 0.5734267007104924
+          },
+          "metric_difference": {
+            "auc": 0.0,
+            "auprc": 0.0
+          },
+          "max_probability_abs_difference": 0.0
+        },
+        "test": {
+          "metrics": {
+            "auc": 0.7954117553894537,
+            "auprc": 0.6354172520533771
+          },
+          "metric_difference": {
+            "auc": 0.0,
+            "auprc": 0.0
+          },
+          "max_probability_abs_difference": 0.0
+        }
+      },
+      "passed": true
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 44,
+      "checkpoint_sha256": "ec440fd5490a88aa96e964c3503f24c77413f79019b723de3d6ba5c3a461a0e0",
+      "selected_epoch": 9,
+      "parts": {
+        "val": {
+          "metrics": {
+            "auc": 0.8228460072793962,
+            "auprc": 0.5926908917886521
+          },
+          "metric_difference": {
+            "auc": 0.0,
+            "auprc": 0.0
+          },
+          "max_probability_abs_difference": 0.0
+        },
+        "test": {
+          "metrics": {
+            "auc": 0.7963421782826532,
+            "auprc": 0.6583585863276157
+          },
+          "metric_difference": {
+            "auc": 0.0,
+            "auprc": 0.0
+          },
+          "max_probability_abs_difference": 0.0
+        }
+      },
+      "passed": true
+    }
+  ],
+  "prediction_abs_tolerance": 2e-06,
+  "metric_abs_tolerance": 1e-08,
+  "frozen_checkpoints_refit": false
+}

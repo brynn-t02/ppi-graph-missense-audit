@@ -1,0 +1,8 @@
+{
+  "state": "complete",
+  "training_runs": 48,
+  "bootstrap_replicates": 2000,
+  "training_process_present": false,
+  "environment_retained": "/Data/u40902/TYX/ppi_audit_20261024/environment/runtime",
+  "checked_utc": "2026-10-24T05:27:56Z"
+}

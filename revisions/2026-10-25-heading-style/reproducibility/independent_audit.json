@@ -1,0 +1,80 @@
+{
+  "scope": "Read-only independent audit of the requested Practical recommendations heading-style change. Paper sources are not edited by this audit.",
+  "source_changes": {
+    "main.tex": {
+      "old_heading_count": 1,
+      "new_heading_count": 1,
+      "exactly_requested_single_replacement": true,
+      "old_sha256": "fb8044fe7bbc26bbb4ac544fe114b621cc7f6f1be3d7d6cd142bf2f65ff5c3fb",
+      "new_sha256": "f8094291125ee8d1a56c60c0a4bbb9660811c6df3edd5b938365ce95743bc352",
+      "diff": [
+        "--- \n",
+        "+++ \n",
+        "@@ -195,5 +195,5 @@\n",
+        " The evaluation has several constraints. ClinVar labels may reflect submission bias and future updates \\cite{Landrum2020ClinVar}. Unknown development-data overlap for CADD and AlphaMissense limits prospective interpretation. Protein-level mapping omits isoform and residue-specific effects. STRING associations extend beyond direct physical interactions \\cite{Szklarczyk2023STRING}; transductive propagation and direct-edge ablation retain indirect cross-partition paths. Outputs from class-weighted training are not calibrated clinical probabilities, and transition counts depend on the chosen threshold. The external set excludes specified variants/proteins but not all homologues or shared annotation evidence; external clinical-score fusion was not evaluated. These findings concern fixed propagation and should not be generalized to trained graph neural networks.",
+        " ",
+        "-\\noindent\\textbf{Practical recommendations.}",
+        "+\\noindent\\textit{Practical recommendations:}",
+        " Compare graph features with raw embeddings and strong score baselines under matched training settings. State whether held-out proteins remain visible in the graph, assess uncertainty at the protein level, and treat selected topology groups as hypotheses. Check calibration and decision thresholds before clinical use.",
+        " "
+      ]
+    },
+    "main_anonymous.tex": {
+      "old_heading_count": 1,
+      "new_heading_count": 1,
+      "exactly_requested_single_replacement": true,
+      "old_sha256": "433e87d0f1e0aa5cfcd1f8b1df21168dc98e54b41b542d16c283e408fbd3e1dd",
+      "new_sha256": "0f1a45d0549cded40b2852e51454660bbeb9543c4a76a303a6d24dda11b9524f",
+      "diff": [
+        "--- \n",
+        "+++ \n",
+        "@@ -190,5 +190,5 @@\n",
+        " The evaluation has several constraints. ClinVar labels may reflect submission bias and future updates \\cite{Landrum2020ClinVar}. Unknown development-data overlap for CADD and AlphaMissense limits prospective interpretation. Protein-level mapping omits isoform and residue-specific effects. STRING associations extend beyond direct physical interactions \\cite{Szklarczyk2023STRING}; transductive propagation and direct-edge ablation retain indirect cross-partition paths. Outputs from class-weighted training are not calibrated clinical probabilities, and transition counts depend on the chosen threshold. The external set excludes specified variants/proteins but not all homologues or shared annotation evidence; external clinical-score fusion was not evaluated. These findings concern fixed propagation and should not be generalized to trained graph neural networks.",
+        " ",
+        "-\\noindent\\textbf{Practical recommendations.}",
+        "+\\noindent\\textit{Practical recommendations:}",
+        " Compare graph features with raw embeddings and strong score baselines under matched training settings. State whether held-out proteins remain visible in the graph, assess uncertainty at the protein level, and treat selected topology groups as hypotheses. Check calibration and decision thresholds before clinical use.",
+        " "
+      ]
+    }
+  },
+  "other_source_file_count": 289,
+  "other_source_changed_or_missing_files": [],
+  "other_source_added_files": [],
+  "supplement_pdf_checks": [
+    {
+      "name": "BIBM2026_supplementary_anonymous_revised.pdf",
+      "sha256": "06ea9508720f8681b27e4bdba0cceab4c58ab8a4c8d894d7ba2da2cbb3dc87d6",
+      "same_as_previous": true
+    },
+    {
+      "name": "BIBM2026_supplementary_named_revised.pdf",
+      "sha256": "033c791cb3b2785e92d9b47be1b6985baf9838fa635d211cbb89996a3c75cd87",
+      "same_as_previous": true
+    }
+  ],
+  "anonymous_main": {
+    "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_heading_style_20261025/source/main_anonymous.pdf",
+    "sha256": "c360bed05c2f7c8f411698f3c33699df1b9fb2b243870ece5a83706a240b71ab",
+    "pages_including_references": 8,
+    "practical_heading_text": true,
+    "reference30_present": true,
+    "visual_qa": {
+      "render_dpi": 120,
+      "pages_inspected": [
+        7,
+        8
+      ],
+      "heading_is_italic_with_colon": true,
+      "no_overlap_or_clipping_observed": true,
+      "references_22_to_30_present_on_page_8": true,
+      "render_paths": [
+        "work/heading_style_20261025/anonymous-7.png",
+        "work/heading_style_20261025/anonymous-8.png"
+      ],
+      "minor_note": "Page 8 reference columns differ by approximately three text lines; unchanged, nonblocking."
+    }
+  },
+  "status": "passed",
+  "blocking_findings": []
+}

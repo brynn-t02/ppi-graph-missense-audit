@@ -1,0 +1,60 @@
+{
+  "verified_hashes": [
+    "model_inputs_main.pt",
+    "clinvar_with_cadd.csv",
+    "clinvar_with_alphamissense.csv",
+    "gcn_embeddings/gcn_node_embeddings.pt",
+    "esm_gcn_edge_ablation_exp41/esm_feature_gcn_train_test_edge_ablated_embeddings.pt",
+    "clinvar_train_main.csv",
+    "clinvar_val_main.csv",
+    "clinvar_test_main.csv",
+    "homology_aware_split/clinvar_train_homology.csv",
+    "homology_aware_split/clinvar_val_homology.csv",
+    "homology_aware_split/clinvar_test_homology.csv",
+    "homology_aware_split/homology_cluster_assignments.csv",
+    "esm_gcn_topology_permutation_exp45/graph_permutation_0/esm_gcn_topology_permuted_embedding.pt",
+    "esm_gcn_topology_permutation_exp45/graph_permutation_0/node_permutation.pt",
+    "esm_gcn_topology_permutation_exp45/graph_permutation_1/esm_gcn_topology_permuted_embedding.pt",
+    "esm_gcn_topology_permutation_exp45/graph_permutation_1/node_permutation.pt",
+    "esm_gcn_topology_permutation_exp45/graph_permutation_2/esm_gcn_topology_permuted_embedding.pt",
+    "esm_gcn_topology_permutation_exp45/graph_permutation_2/node_permutation.pt"
+  ],
+  "splits": {
+    "original": {
+      "rows": {
+        "train": 141864,
+        "val": 17129,
+        "test": 18220
+      },
+      "positives": {
+        "train": 39046,
+        "val": 4392,
+        "test": 5822
+      },
+      "train_imputation_medians": {
+        "CADD_PHRED": 19.84,
+        "am_pathogenicity": 0.1165
+      },
+      "protein_disjoint": true,
+      "cluster_disjoint": null
+    },
+    "homology": {
+      "rows": {
+        "train": 141864,
+        "val": 17129,
+        "test": 18220
+      },
+      "positives": {
+        "train": 45652,
+        "val": 1684,
+        "test": 1924
+      },
+      "train_imputation_medians": {
+        "CADD_PHRED": 21.8,
+        "am_pathogenicity": 0.1448
+      },
+      "protein_disjoint": true,
+      "cluster_disjoint": true
+    }
+  }
+}

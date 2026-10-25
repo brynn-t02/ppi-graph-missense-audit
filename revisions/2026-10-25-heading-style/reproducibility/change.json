@@ -1,0 +1,9 @@
+{
+  "before": "\\noindent\\textbf{Practical recommendations.}",
+  "after": "\\noindent\\textit{Practical recommendations:}",
+  "files": [
+    "source/main.tex",
+    "source/main_anonymous.tex"
+  ],
+  "baseline_commit": "820caf8a5adf45e254def68f26eab9fff5aaf5c7"
+}

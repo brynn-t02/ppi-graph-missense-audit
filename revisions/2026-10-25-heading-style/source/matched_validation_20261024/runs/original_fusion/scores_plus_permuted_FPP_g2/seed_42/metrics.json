@@ -1,0 +1,13 @@
+{
+  "split": "original_fusion",
+  "arm": "scores_plus_permuted_FPP_g2",
+  "seed": 42,
+  "best_epoch": 4,
+  "epochs_run": 9,
+  "val_auc": 0.9731972064663096,
+  "val_auprc": 0.9254863451985871,
+  "test_auc": 0.9683956918063215,
+  "test_auprc": 0.9351830985040313,
+  "seconds": 14.37893533706665,
+  "dim": 1283
+}

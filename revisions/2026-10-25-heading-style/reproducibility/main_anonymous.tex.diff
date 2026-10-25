@@ -1,0 +1,11 @@
+--- 2026-10-25-reporting-clarity/main_anonymous.tex
++++ 2026-10-25-heading-style/main_anonymous.tex
+@@ -189,7 +189,7 @@
+ 
+ The evaluation has several constraints. ClinVar labels may reflect submission bias and future updates \cite{Landrum2020ClinVar}. Unknown development-data overlap for CADD and AlphaMissense limits prospective interpretation. Protein-level mapping omits isoform and residue-specific effects. STRING associations extend beyond direct physical interactions \cite{Szklarczyk2023STRING}; transductive propagation and direct-edge ablation retain indirect cross-partition paths. Outputs from class-weighted training are not calibrated clinical probabilities, and transition counts depend on the chosen threshold. The external set excludes specified variants/proteins but not all homologues or shared annotation evidence; external clinical-score fusion was not evaluated. These findings concern fixed propagation and should not be generalized to trained graph neural networks.
+ 
+-\noindent\textbf{Practical recommendations.}
++\noindent\textit{Practical recommendations:}
+ Compare graph features with raw embeddings and strong score baselines under matched training settings. State whether held-out proteins remain visible in the graph, assess uncertainty at the protein level, and treat selected topology groups as hypotheses. Check calibration and decision thresholds before clinical use.
+ 
+ \section*{Data and Code Availability}

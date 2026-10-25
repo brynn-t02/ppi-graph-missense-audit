@@ -1,0 +1,43 @@
+{
+  "baseline": "820caf8a5adf45e254def68f26eab9fff5aaf5c7",
+  "change": "Bold period lead-in to unnumbered italic colon lead-in only",
+  "pdfs": {
+    "BIBM2026_workshop_named_revised.pdf": {
+      "pages": 8,
+      "sha256": "1da0b069aaa7306185f2454f1f811d416a58b1201b5018c3ef4c78dfa0518808",
+      "heading_page": 7,
+      "heading_fonts": [
+        "TQTHRL+NimbusRomNo9L-ReguItal"
+      ],
+      "heading_italic_not_bold": true,
+      "first6page_character_geometry_and_fonts_identical": true,
+      "all_text_unchanged_except_heading_period_to_colon": true,
+      "all_used_fonts_embedded": true,
+      "abstract_bold": true,
+      "blocking_compile_warnings": false
+    },
+    "BIBM2026_workshop_anonymous_revised.pdf": {
+      "pages": 8,
+      "sha256": "c360bed05c2f7c8f411698f3c33699df1b9fb2b243870ece5a83706a240b71ab",
+      "heading_page": 7,
+      "heading_fonts": [
+        "TQTHRL+NimbusRomNo9L-ReguItal"
+      ],
+      "heading_italic_not_bold": true,
+      "first6page_character_geometry_and_fonts_identical": true,
+      "all_text_unchanged_except_heading_period_to_colon": true,
+      "all_used_fonts_embedded": true,
+      "abstract_bold": true,
+      "blocking_compile_warnings": false
+    }
+  },
+  "previous_versions_preserved": true,
+  "new_experiments": false,
+  "supplements_byte_identical_18pages": true,
+  "new_source_changes_only": [
+    "main_anonymous.tex",
+    "main.tex"
+  ],
+  "named_and_anonymous_pages7_8_visually_checked": true,
+  "no_new_overlap_or_clipping": true
+}
