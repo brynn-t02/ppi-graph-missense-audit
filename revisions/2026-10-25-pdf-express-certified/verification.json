@@ -1,0 +1,107 @@
+{
+  "status": "IEEE PDF eXpress certified PDF received and locally verified",
+  "pdf_express_paper_id": "2026400920",
+  "conference_id": "70697X",
+  "filename": "2026400920.pdf",
+  "bytes": 305836,
+  "sha256": "afb2406c2e39c8b90aa660b18af709373eacf6a41792c950816809a0b4a27371",
+  "baseline": "../2026-10-25-font-clean/BIBM2026_workshop_named_revised.pdf",
+  "baseline_sha256": "1a77062fbfc6abb2c8a59657974c177c36f9bc52f73990cc9f3217be8e925f7c",
+  "certification_marker": "Certified by IEEE PDFExpress at October 25, 2026 15:36:08",
+  "pdf_moddate": "D:20261025153608Z",
+  "certification_time_china": "2026-10-25T23:36:08+08:00",
+  "page_count": 8,
+  "page_size_pt": [
+    612,
+    792
+  ],
+  "all_font_resources_embedded_and_subset": true,
+  "font_objects_checked": 43,
+  "unresolved_font_references": 0,
+  "encrypted": false,
+  "comparison_dpi": 300,
+  "all_pages_pixel_identical": true,
+  "changed_pixels": 0,
+  "exact_character_text_position_size_font_equality": true,
+  "characters_checked": 32155,
+  "all_pages_contact_sheet_visually_reviewed": true,
+  "certified_pdf_bytes_preserved": true,
+  "manuscript_content_modified": false,
+  "conference_final_submission_performed": false,
+  "account_access_by_assistant": false,
+  "evidence_scope": "Author supplied service email screenshot and downloaded PDF; PDF metadata/XMP inspected, no live account query. Email screenshot stays private.",
+  "pages": [
+    {
+      "page": 1,
+      "baseline_characters": 4378,
+      "certified_characters": 4378,
+      "exact_text_and_geometry_equal": true,
+      "extracted_text_equal": true,
+      "same_pixel_dimensions": true,
+      "changed_pixels": 0
+    },
+    {
+      "page": 2,
+      "baseline_characters": 5173,
+      "certified_characters": 5173,
+      "exact_text_and_geometry_equal": true,
+      "extracted_text_equal": true,
+      "same_pixel_dimensions": true,
+      "changed_pixels": 0
+    },
+    {
+      "page": 3,
+      "baseline_characters": 5068,
+      "certified_characters": 5068,
+      "exact_text_and_geometry_equal": true,
+      "extracted_text_equal": true,
+      "same_pixel_dimensions": true,
+      "changed_pixels": 0
+    },
+    {
+      "page": 4,
+      "baseline_characters": 3668,
+      "certified_characters": 3668,
+      "exact_text_and_geometry_equal": true,
+      "extracted_text_equal": true,
+      "same_pixel_dimensions": true,
+      "changed_pixels": 0
+    },
+    {
+      "page": 5,
+      "baseline_characters": 3026,
+      "certified_characters": 3026,
+      "exact_text_and_geometry_equal": true,
+      "extracted_text_equal": true,
+      "same_pixel_dimensions": true,
+      "changed_pixels": 0
+    },
+    {
+      "page": 6,
+      "baseline_characters": 2799,
+      "certified_characters": 2799,
+      "exact_text_and_geometry_equal": true,
+      "extracted_text_equal": true,
+      "same_pixel_dimensions": true,
+      "changed_pixels": 0
+    },
+    {
+      "page": 7,
+      "baseline_characters": 6190,
+      "certified_characters": 6190,
+      "exact_text_and_geometry_equal": true,
+      "extracted_text_equal": true,
+      "same_pixel_dimensions": true,
+      "changed_pixels": 0
+    },
+    {
+      "page": 8,
+      "baseline_characters": 1853,
+      "certified_characters": 1853,
+      "exact_text_and_geometry_equal": true,
+      "extracted_text_equal": true,
+      "same_pixel_dimensions": true,
+      "changed_pixels": 0
+    }
+  ]
+}
