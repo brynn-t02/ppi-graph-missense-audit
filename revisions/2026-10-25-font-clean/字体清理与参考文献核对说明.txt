@@ -1,0 +1,56 @@
+字体清理与参考文献核对说明
+2026年10月25日
+
+一、本轮只处理PDF导出，不改论文内容
+基线为e707e74（2026-10-25-heading-style）。新版本为2026-10-25-font-clean。
+两份主文仍各8页（含参考文献），两份补充材料仍各18页。正文TeX、补充MD、IEEEtran模板、参考文献及引文、数字、公式、图注均与上版字节一致。没有新实验、统计重算、服务器或百度网盘访问。
+
+二、核实到了什么
+具名/匿名正文：各有1个未嵌入的Helvetica默认字体，来自图4标题补丁中的空初始化。
+具名/匿名补充：各有45次无绘字的Helvetica初始化，包含18次页首初始化和27次表格初始化。
+这些资源没有实际绘制任何可见文字。之前检查“实际使用的字体均已嵌入”成立，但不能据此声称“全部字体资源均已嵌入”。本轮将检查范围扩展到页面、嵌套图形及所有间接Font对象。
+
+三、具体修改
+1. 图4文字补丁生成器：Canvas的initialFontName明确指定已注册的DejaVu Sans Bold，避免自动产生Helvetica资源。
+2. 补充材料生成器：SimpleDocTemplate的initialFontName明确设置为已注册DejaVu；所有表格的FONTNAME也明确使用DejaVu。
+3. 重新生成图4矢量PDF、编译具名/匿名正文、生成两份补充。没有只删除字体字典，没有留下无法解析的字体引用。
+4. 保留可复现脚本、改前后差异和独立核验记录。之前各版保持完整，当前单独保存。
+
+四、清理后的验证
+四份PDF中Helvetica字体资源、Helvetica初始化和无法解析的字体引用均为0；全部字体资源均已嵌入并子集化，包括未绘字的资源。
+4份PDF共52页与上一版逐页按300 dpi渲染比较，像素差异总数为0。182,786个字符的文字、位置、字号和字体也完全相同（只忽略字体子集的随机前缀）。
+图4的PNG甚至保持字节一致；其他图和数值输入不变。正文页尺寸为US Letter，612×792 pt；补充保持原有A4版式。
+因此本轮改变的是PDF内部资源及生成器设置，读者看到的文字和图形没有改变。
+
+五、为什么参考文献从28篇变成30篇
+该变化发生在此前补充实验入稿阶段，本轮没有新增、删除或修改任何文献。
+原稿28条全部保留，只新增2条：
+[29] UniProt: the Universal Protein Knowledgebase in 2025
+作用：为HUMSAVAR外部来源验证提供数据库来源。
+[30] BioGRID: a general repository for interaction datasets
+作用：为BioGRID第二网络验证提供数据库来源。
+这两条直接对应workshop第2条建议所推动、已经实际完成的两项验证，保留有明确依据。文献发表年份与数据下载版本不同：BioGRID文章为2006年，实际所用网络版本在方法中写为5.0.262。
+
+原28条的正文引用键及原有重复次数全部保留。原参考文献列表按内部键排序，修订版改为按首次引用顺序列出，因此不少编号变化；编号变化并不表示换了一批文献。
+原有条目中27条文字不变；SuSPect这一条只把正式题名中的“(SAV)”补全，作者、期刊、年份、卷页和DOI未变。原始论文及出版社页面均确认正式题名含该缩写：
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4087249/
+https://www.sciencedirect.com/science/article/pii/S0022283614002253
+
+本次核对建议：保留这2条新增数据来源引用，维持现有30条，不因追求数量与原稿一致而删去来源。未开展新一轮文献扩充或综述改写。全部28条的新旧编号映射见reproducibility/reference_comparison.json。
+
+六、与PDF eXpress的区别
+指定workshop终稿通知要求字体全部嵌入并子集化，并使用PDF eXpress转换或校验。会议编号70697X，通知标示2026年10月1日开放。
+官方通知：
+https://wi-lab.com/cyberchair/2026/bibm26/scripts/BIBM2026_Camera_ready_instruction.php?subarea=S03
+登录入口：
+https://ieee-pdf-express.org/account/login
+
+本轮已完成本地字体和显示一致性检查，但尚未登录作者的PDF eXpress账号、上传论文或获得认证报告；不能把本地检查称为PDF eXpress通过。当前没有可操作的已登录浏览器会话。正式线上检查需要作者账号登录后的服务结果。本轮也没有进行会务终稿提交。
+
+七、核验文件
+quality_checks.json：本轮核验汇总及最终PDF哈希。
+reproducibility/font_before_audit.json、font_after_audit.json：完整字体资源检查。
+reproducibility/pixel_equality_audit.json：52页逐页像素与字符核验。
+reproducibility/reference_comparison.json：28→30文献清单、出处和编号映射。
+reproducibility/中的两个.py.diff：生成器最小修改。
+GitHub上传及远端文件核验状态以随附同步回执为准。

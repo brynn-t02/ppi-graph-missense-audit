@@ -1,0 +1,468 @@
+{
+  "bootstrap_repeats": 2000,
+  "seed": 20261024,
+  "resampling_unit": "STRINGprotein(allvariants,multiplicity)",
+  "rng_policy": "Restartseedperpopulation;validationrngseparate;identicaldrawsforallcomparisons",
+  "precision": "allseedprobabilitiescastfloat64beforeensemble",
+  "metric": "ROC AUC and noninterpolatedsklearnaverageprecision",
+  "scope": "Conditionalonfrozenfits/networks;exploratorywithoutmultiplicityadjustment",
+  "comparisons": {
+    "original": {
+      "full_FPP_vs_raw_ESM": {
+        "delta_auc": 0.010673284312598175,
+        "auc_ci95": [
+          -0.021814724260340257,
+          0.04257863103758204
+        ],
+        "delta_auprc": 0.041217629992141736,
+        "auprc_ci95": [
+          -0.01063858474592705,
+          0.07667889984321657
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 1413,
+        "variants": 18220
+      },
+      "full_FPP_vs_edge_ablated_FPP": {
+        "delta_auc": 0.024767295220375796,
+        "auc_ci95": [
+          0.006595039527339005,
+          0.04937318862729214
+        ],
+        "delta_auprc": 0.04287920359286579,
+        "auprc_ci95": [
+          0.01267147628244813,
+          0.0623471339990469
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 1413,
+        "variants": 18220
+      },
+      "full_FPP_vs_permuted_FPP_graphmean": {
+        "delta_auc": 0.011770066414563907,
+        "auc_ci95": [
+          -0.022890921337389743,
+          0.046191455203382345
+        ],
+        "delta_auprc": 0.043027384253819245,
+        "auprc_ci95": [
+          -0.022857151256922458,
+          0.08831126810944734
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 1413,
+        "variants": 18220
+      },
+      "BioGRID_FPP_vs_raw_ESM": {
+        "delta_auc": -0.02011876894850506,
+        "auc_ci95": [
+          -0.048032302464519075,
+          0.010054862977271152
+        ],
+        "delta_auprc": -0.0024932691731428536,
+        "auprc_ci95": [
+          -0.05395621429437386,
+          0.03630426151071134
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 1413,
+        "variants": 18220
+      },
+      "BioGRID_FPP_vs_full_FPP": {
+        "delta_auc": -0.030792053261103236,
+        "auc_ci95": [
+          -0.06916339779230504,
+          0.004072936968922402
+        ],
+        "delta_auprc": -0.04371089916528459,
+        "auprc_ci95": [
+          -0.08937759038726638,
+          -0.0010820782113221646
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 1413,
+        "variants": 18220
+      }
+    },
+    "original_fusion": {
+      "scores_plus_full_FPP_vs_scores_capacity_matched": {
+        "delta_auc": 0.014699355881748422,
+        "auc_ci95": [
+          0.0064812061483609075,
+          0.022623429554099326
+        ],
+        "delta_auprc": 0.034376100692333766,
+        "auprc_ci95": [
+          0.015561604718946862,
+          0.05581222521977588
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 1413,
+        "variants": 18220
+      },
+      "scores_plus_full_FPP_vs_scores_plus_raw_ESM": {
+        "delta_auc": 0.003201472694618457,
+        "auc_ci95": [
+          0.0008408923260150331,
+          0.00616761363568303
+        ],
+        "delta_auprc": 0.007552132921047394,
+        "auprc_ci95": [
+          0.003049387558497113,
+          0.01405493743580648
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 1413,
+        "variants": 18220
+      },
+      "scores_plus_full_FPP_vs_scores_plus_edge_ablated_FPP": {
+        "delta_auc": 0.0012581400054052505,
+        "auc_ci95": [
+          -0.00040544785544509575,
+          0.003191374773356209
+        ],
+        "delta_auprc": 0.0013909410221149,
+        "auprc_ci95": [
+          -0.001460289301124043,
+          0.004696285824854822
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 1413,
+        "variants": 18220
+      },
+      "scores_plus_full_FPP_vs_scores_plus_permuted_FPP_graphmean": {
+        "delta_auc": 0.002008820695528879,
+        "auc_ci95": [
+          7.941944446866468e-05,
+          0.004538626032698917
+        ],
+        "delta_auprc": 0.005010108196023322,
+        "auprc_ci95": [
+          0.00018184559286438807,
+          0.010964354386060493
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 1413,
+        "variants": 18220
+      },
+      "scores_plus_BioGRID_FPP_vs_scores_capacity_matched": {
+        "delta_auc": 0.012417777016483389,
+        "auc_ci95": [
+          0.0034107769424803675,
+          0.020995380214760023
+        ],
+        "delta_auprc": 0.02787646466367133,
+        "auprc_ci95": [
+          0.007006907579165442,
+          0.05018976084333819
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 1413,
+        "variants": 18220
+      },
+      "scores_plus_BioGRID_FPP_vs_scores_plus_raw_ESM": {
+        "delta_auc": 0.0009198938293534242,
+        "auc_ci95": [
+          -0.0011478498602952969,
+          0.003640390762074094
+        ],
+        "delta_auprc": 0.0010524968923849576,
+        "auprc_ci95": [
+          -0.0037139600034287457,
+          0.006905749259537048
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 1413,
+        "variants": 18220
+      },
+      "scores_plus_BioGRID_FPP_vs_scores_plus_full_FPP": {
+        "delta_auc": -0.0022815788652650326,
+        "auc_ci95": [
+          -0.004202164430362693,
+          -0.0005769834970310953
+        ],
+        "delta_auprc": -0.006499636028662437,
+        "auprc_ci95": [
+          -0.01164192820961508,
+          -0.002332462034348089
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 1413,
+        "variants": 18220
+      }
+    },
+    "homology": {
+      "scores_plus_full_FPP_vs_scores_capacity_matched": {
+        "delta_auc": 0.00012076800092264417,
+        "auc_ci95": [
+          -0.0019167728767167712,
+          0.002032968324645075
+        ],
+        "delta_auprc": -0.0012351584318742725,
+        "auprc_ci95": [
+          -0.02054186568103248,
+          0.015669917788652673
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 3438,
+        "variants": 18220
+      },
+      "scores_plus_raw_ESM_vs_scores_capacity_matched": {
+        "delta_auc": -0.0025456006448274504,
+        "auc_ci95": [
+          -0.004787765555998547,
+          -0.0004351773077939614
+        ],
+        "delta_auprc": -0.013529955577304187,
+        "auprc_ci95": [
+          -0.034285480501610635,
+          0.004531365154447202
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 3438,
+        "variants": 18220
+      },
+      "scores_plus_full_FPP_vs_scores_plus_raw_ESM": {
+        "delta_auc": 0.0026663686457500946,
+        "auc_ci95": [
+          0.0015385399718606696,
+          0.003962379269567833
+        ],
+        "delta_auprc": 0.012294797145429914,
+        "auprc_ci95": [
+          0.005451213376683708,
+          0.01943738685515698
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 3438,
+        "variants": 18220
+      },
+      "scores_plus_BioGRID_FPP_vs_scores_capacity_matched": {
+        "delta_auc": -0.0020365347362769626,
+        "auc_ci95": [
+          -0.004212330217551757,
+          -4.427608878427994e-05
+        ],
+        "delta_auprc": -0.011757884931125284,
+        "auprc_ci95": [
+          -0.031471698689362684,
+          0.005960705497392388
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 3438,
+        "variants": 18220
+      },
+      "scores_plus_BioGRID_FPP_vs_scores_plus_raw_ESM": {
+        "delta_auc": 0.0005090659085504878,
+        "auc_ci95": [
+          -0.0007739598003509457,
+          0.0016914186392674442
+        ],
+        "delta_auprc": 0.0017720706461789026,
+        "auprc_ci95": [
+          -0.006286116311203555,
+          0.01049342102798515
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 3438,
+        "variants": 18220
+      },
+      "scores_plus_BioGRID_FPP_vs_scores_plus_full_FPP": {
+        "delta_auc": -0.0021573027371996067,
+        "auc_ci95": [
+          -0.0035728822789769465,
+          -0.0009007752128874677
+        ],
+        "delta_auprc": -0.010522726499251012,
+        "auprc_ci95": [
+          -0.018844106645211516,
+          -0.0018222979744372675
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 3438,
+        "variants": 18220
+      }
+    },
+    "external_primary": {
+      "full_FPP_vs_raw_ESM": {
+        "delta_auc": 0.03748038022806055,
+        "auc_ci95": [
+          0.017334347961018872,
+          0.056379264334218894
+        ],
+        "delta_auprc": 0.04631696966532095,
+        "auprc_ci95": [
+          0.01514089908695387,
+          0.0744618145057425
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 2498,
+        "variants": 10785
+      },
+      "BioGRID_FPP_vs_raw_ESM": {
+        "delta_auc": 0.012479308070186157,
+        "auc_ci95": [
+          -0.013187257967925572,
+          0.03504010621634833
+        ],
+        "delta_auprc": 0.015059028082034298,
+        "auprc_ci95": [
+          -0.01182795215321035,
+          0.04464928531679787
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 2498,
+        "variants": 10785
+      },
+      "BioGRID_FPP_vs_full_FPP": {
+        "delta_auc": -0.025001072157874393,
+        "auc_ci95": [
+          -0.05133583072973251,
+          -0.0015420476132757823
+        ],
+        "delta_auprc": -0.03125794158328665,
+        "auprc_ci95": [
+          -0.0628089203293389,
+          0.003990747682819684
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 2498,
+        "variants": 10785
+      }
+    },
+    "external_strict": {
+      "full_FPP_vs_raw_ESM": {
+        "delta_auc": 0.03517919763825661,
+        "auc_ci95": [
+          0.0033853072135931195,
+          0.06666768977912756
+        ],
+        "delta_auprc": 0.054962253036207054,
+        "auprc_ci95": [
+          0.011094300225346656,
+          0.09620021653036456
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 1713,
+        "variants": 6934
+      },
+      "BioGRID_FPP_vs_raw_ESM": {
+        "delta_auc": 0.009399960405225283,
+        "auc_ci95": [
+          -0.024985675969479794,
+          0.04352622436563014
+        ],
+        "delta_auprc": 0.022694275173281486,
+        "auprc_ci95": [
+          -0.016446316730860094,
+          0.0650722037202224
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 1713,
+        "variants": 6934
+      },
+      "BioGRID_FPP_vs_full_FPP": {
+        "delta_auc": -0.025779237233031327,
+        "auc_ci95": [
+          -0.05818157246159917,
+          0.005734825101186676
+        ],
+        "delta_auprc": -0.03226797786292557,
+        "auprc_ci95": [
+          -0.07440765100802048,
+          0.018287973364807274
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 1713,
+        "variants": 6934
+      }
+    },
+    "external_all": {
+      "full_FPP_vs_raw_ESM": {
+        "delta_auc": 0.03482074619458353,
+        "auc_ci95": [
+          0.027659081303694204,
+          0.0417157142456301
+        ],
+        "delta_auprc": 0.0399571574240426,
+        "auprc_ci95": [
+          0.028789059607326452,
+          0.050826098983520925
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 9840,
+        "variants": 40900
+      },
+      "BioGRID_FPP_vs_raw_ESM": {
+        "delta_auc": 0.0295661115334116,
+        "auc_ci95": [
+          0.021606447948002365,
+          0.03720550999573055
+        ],
+        "delta_auprc": 0.0384972882091722,
+        "auprc_ci95": [
+          0.028592090035096166,
+          0.048738852018145574
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 9840,
+        "variants": 40900
+      },
+      "BioGRID_FPP_vs_full_FPP": {
+        "delta_auc": -0.005254634661171931,
+        "auc_ci95": [
+          -0.012751745655058136,
+          0.002261002866816558
+        ],
+        "delta_auprc": -0.0014598692148704018,
+        "auprc_ci95": [
+          -0.012177951131714552,
+          0.010390553642183433
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 9840,
+        "variants": 40900
+      }
+    }
+  },
+  "variant_bootstrap_original_full_vs_raw": {
+    "auc_ci95": [
+      0.007554308420720421,
+      0.013899762347133618
+    ],
+    "auprc_ci95": [
+      0.03467359298417201,
+      0.04746398608276461
+    ],
+    "repeats": 2000,
+    "seed": 20261024,
+    "scope": "Variantresamplingignoreswithinproteindependence;descriptivecontrastonly"
+  }
+}

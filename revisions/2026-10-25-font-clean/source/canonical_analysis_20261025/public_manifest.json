@@ -1,0 +1,344 @@
+{
+  "files": [
+    {
+      "file": "external_membership_and_predictions.csv.gz",
+      "bytes": 1805066,
+      "rows": 40900,
+      "columns": [
+        "external_id",
+        "uniprot_id",
+        "protein_variant",
+        "STRING_protein_id",
+        "label",
+        "primary_trainval_unseen",
+        "unseen_all_original",
+        "raw_ESM_seed_42",
+        "raw_ESM_seed_43",
+        "raw_ESM_seed_44",
+        "raw_ESM_ensemble_float64",
+        "full_FPP_seed_42",
+        "full_FPP_seed_43",
+        "full_FPP_seed_44",
+        "full_FPP_ensemble_float64",
+        "BioGRID_FPP_seed_42",
+        "BioGRID_FPP_seed_43",
+        "BioGRID_FPP_seed_44",
+        "BioGRID_FPP_ensemble_float64"
+      ],
+      "sha256": "86028f8df2f63bd5098c1bfa9de9e521f0b1b45aa32b26a7f4470dfc601f423f"
+    },
+    {
+      "file": "frozen_node_order.csv.gz",
+      "bytes": 103632,
+      "rows": 19622,
+      "columns": [
+        "node_index",
+        "STRING_protein_id"
+      ],
+      "sha256": "1a6f47ab2cd884f847eec14b880849b2eb9a40ab7029abce9c609d69ce60b67f"
+    },
+    {
+      "file": "frozen_samples_177213.csv.gz",
+      "bytes": 1411593,
+      "rows": 177213,
+      "columns": [
+        "VariationID",
+        "label",
+        "STRING_protein_id",
+        "original_split",
+        "homology_split",
+        "homology_cluster_id"
+      ],
+      "sha256": "a265ce6d010aeeb89cbabee55d7a5107ddd561034eb37d75b4ad2121951b3edf"
+    },
+    {
+      "file": "test_predictions__homology__scores_capacity_matched.csv.gz",
+      "bytes": 824287,
+      "rows": 18220,
+      "columns": [
+        "VariationID",
+        "label",
+        "STRING_protein_id",
+        "p_seed_42",
+        "p_seed_43",
+        "p_seed_44",
+        "ensemble_float64"
+      ],
+      "sha256": "9b02cba6f531c80ecfed2e3a7335e5a2e06ade1d36f1c56e34babc91827959f5"
+    },
+    {
+      "file": "test_predictions__homology__scores_plus_BioGRID_FPP.csv.gz",
+      "bytes": 833503,
+      "rows": 18220,
+      "columns": [
+        "VariationID",
+        "label",
+        "STRING_protein_id",
+        "p_seed_42",
+        "p_seed_43",
+        "p_seed_44",
+        "ensemble_float64"
+      ],
+      "sha256": "d7caa3b1f4eaec025cfeaab35504156f8080622b79dde7ef0442dceba06c3d0e"
+    },
+    {
+      "file": "test_predictions__homology__scores_plus_full_FPP.csv.gz",
+      "bytes": 834033,
+      "rows": 18220,
+      "columns": [
+        "VariationID",
+        "label",
+        "STRING_protein_id",
+        "p_seed_42",
+        "p_seed_43",
+        "p_seed_44",
+        "ensemble_float64"
+      ],
+      "sha256": "f468470fd333ea18e00932d025b71906a9bcc29374e1b09053566628e182fcb0"
+    },
+    {
+      "file": "test_predictions__homology__scores_plus_raw_ESM.csv.gz",
+      "bytes": 830999,
+      "rows": 18220,
+      "columns": [
+        "VariationID",
+        "label",
+        "STRING_protein_id",
+        "p_seed_42",
+        "p_seed_43",
+        "p_seed_44",
+        "ensemble_float64"
+      ],
+      "sha256": "fae23fe568b826609aa2517245986325620dba5ade5487bb2581e7908176a93b"
+    },
+    {
+      "file": "test_predictions__original__BioGRID_FPP.csv.gz",
+      "bytes": 395875,
+      "rows": 18220,
+      "columns": [
+        "VariationID",
+        "label",
+        "STRING_protein_id",
+        "p_seed_42",
+        "p_seed_43",
+        "p_seed_44",
+        "ensemble_float64"
+      ],
+      "sha256": "f87754194465d1de7c6b3efdbfc1de3ccd4984ff76287e5dbbd37ca8c106c919"
+    },
+    {
+      "file": "test_predictions__original__edge_ablated_FPP.csv.gz",
+      "bytes": 395482,
+      "rows": 18220,
+      "columns": [
+        "VariationID",
+        "label",
+        "STRING_protein_id",
+        "p_seed_42",
+        "p_seed_43",
+        "p_seed_44",
+        "ensemble_float64"
+      ],
+      "sha256": "c43190a7e7c2c0c244de9bc4742b7a12f752eea0e678221a45b0e78ba9dfd5fc"
+    },
+    {
+      "file": "test_predictions__original__full_FPP.csv.gz",
+      "bytes": 394949,
+      "rows": 18220,
+      "columns": [
+        "VariationID",
+        "label",
+        "STRING_protein_id",
+        "p_seed_42",
+        "p_seed_43",
+        "p_seed_44",
+        "ensemble_float64"
+      ],
+      "sha256": "845ca384e6b59ac61efc5799c5360894559d99b311398e00da6cf86d771da245"
+    },
+    {
+      "file": "test_predictions__original__permuted_FPP_g0.csv.gz",
+      "bytes": 390962,
+      "rows": 18220,
+      "columns": [
+        "VariationID",
+        "label",
+        "STRING_protein_id",
+        "p_seed_42",
+        "p_seed_43",
+        "p_seed_44",
+        "ensemble_float64"
+      ],
+      "sha256": "81992d63871fb43cb1d370b344f1d6a197ef356f767b5b6402ac268430e7f13c"
+    },
+    {
+      "file": "test_predictions__original__permuted_FPP_g1.csv.gz",
+      "bytes": 392826,
+      "rows": 18220,
+      "columns": [
+        "VariationID",
+        "label",
+        "STRING_protein_id",
+        "p_seed_42",
+        "p_seed_43",
+        "p_seed_44",
+        "ensemble_float64"
+      ],
+      "sha256": "2b489257a4dbca0c16b66f48cd347e7cd44ee6fbdf2edaaf6ade985e9a2e2156"
+    },
+    {
+      "file": "test_predictions__original__permuted_FPP_g2.csv.gz",
+      "bytes": 390646,
+      "rows": 18220,
+      "columns": [
+        "VariationID",
+        "label",
+        "STRING_protein_id",
+        "p_seed_42",
+        "p_seed_43",
+        "p_seed_44",
+        "ensemble_float64"
+      ],
+      "sha256": "41572bf1c33314784945af291063bf3d3d9ef73e0b519094c8a4972e4a9eaa70"
+    },
+    {
+      "file": "test_predictions__original__raw_ESM.csv.gz",
+      "bytes": 392811,
+      "rows": 18220,
+      "columns": [
+        "VariationID",
+        "label",
+        "STRING_protein_id",
+        "p_seed_42",
+        "p_seed_43",
+        "p_seed_44",
+        "ensemble_float64"
+      ],
+      "sha256": "36ddfbff60328081bb87635033708d60cdacc9be8e5e8a341640d6d6047133e4"
+    },
+    {
+      "file": "test_predictions__original_fusion__scores_capacity_matched.csv.gz",
+      "bytes": 803775,
+      "rows": 18220,
+      "columns": [
+        "VariationID",
+        "label",
+        "STRING_protein_id",
+        "p_seed_42",
+        "p_seed_43",
+        "p_seed_44",
+        "ensemble_float64"
+      ],
+      "sha256": "c84d82140d9c4ddfd91fa5ef9342f1dcc3d842d7270ffabd3500f0bdc9a4ad7a"
+    },
+    {
+      "file": "test_predictions__original_fusion__scores_plus_BioGRID_FPP.csv.gz",
+      "bytes": 809255,
+      "rows": 18220,
+      "columns": [
+        "VariationID",
+        "label",
+        "STRING_protein_id",
+        "p_seed_42",
+        "p_seed_43",
+        "p_seed_44",
+        "ensemble_float64"
+      ],
+      "sha256": "c59387fc147bea04257b7b0426584f9dc4c53b7a8c23eae0c0da57d7d19a0ba7"
+    },
+    {
+      "file": "test_predictions__original_fusion__scores_plus_edge_ablated_FPP.csv.gz",
+      "bytes": 811167,
+      "rows": 18220,
+      "columns": [
+        "VariationID",
+        "label",
+        "STRING_protein_id",
+        "p_seed_42",
+        "p_seed_43",
+        "p_seed_44",
+        "ensemble_float64"
+      ],
+      "sha256": "1419a15f54472e53d4ac0d67b16221678464470bb41863cee55999c08bf192d6"
+    },
+    {
+      "file": "test_predictions__original_fusion__scores_plus_full_FPP.csv.gz",
+      "bytes": 811472,
+      "rows": 18220,
+      "columns": [
+        "VariationID",
+        "label",
+        "STRING_protein_id",
+        "p_seed_42",
+        "p_seed_43",
+        "p_seed_44",
+        "ensemble_float64"
+      ],
+      "sha256": "b60333c3b7e199084a4ac0538cdc8d8ba9b7d6aab60c28019bcd0f0248ed9921"
+    },
+    {
+      "file": "test_predictions__original_fusion__scores_plus_permuted_FPP_g0.csv.gz",
+      "bytes": 806198,
+      "rows": 18220,
+      "columns": [
+        "VariationID",
+        "label",
+        "STRING_protein_id",
+        "p_seed_42",
+        "p_seed_43",
+        "p_seed_44",
+        "ensemble_float64"
+      ],
+      "sha256": "099c2c36cf118a269a196331d0fa7afe7fa23ab46fdc88cd6cf24873492b4543"
+    },
+    {
+      "file": "test_predictions__original_fusion__scores_plus_permuted_FPP_g1.csv.gz",
+      "bytes": 808853,
+      "rows": 18220,
+      "columns": [
+        "VariationID",
+        "label",
+        "STRING_protein_id",
+        "p_seed_42",
+        "p_seed_43",
+        "p_seed_44",
+        "ensemble_float64"
+      ],
+      "sha256": "eac182c36bea2a769c1d3a4a4720c19057be73a1328e536db217a7c469b5d052"
+    },
+    {
+      "file": "test_predictions__original_fusion__scores_plus_permuted_FPP_g2.csv.gz",
+      "bytes": 808687,
+      "rows": 18220,
+      "columns": [
+        "VariationID",
+        "label",
+        "STRING_protein_id",
+        "p_seed_42",
+        "p_seed_43",
+        "p_seed_44",
+        "ensemble_float64"
+      ],
+      "sha256": "613291f2304be5b7ada837821d67333f98f0b0af61723601e2f89817964943eb"
+    },
+    {
+      "file": "test_predictions__original_fusion__scores_plus_raw_ESM.csv.gz",
+      "bytes": 808506,
+      "rows": 18220,
+      "columns": [
+        "VariationID",
+        "label",
+        "STRING_protein_id",
+        "p_seed_42",
+        "p_seed_43",
+        "p_seed_44",
+        "ensemble_float64"
+      ],
+      "sha256": "28b7d44ff2b115e41be8112d6c03ebc46d531573e0366c35eb654048182c087a"
+    }
+  ],
+  "row_precision": "17significantdigitsforbinary64;pdread_csvfloat_precision=round_trip",
+  "no_patient_identifiers": true,
+  "benchmark_cohort_rows": 177213,
+  "external_rows": 40900
+}

@@ -1,0 +1,313 @@
+{
+  "source": "Figure4_prediction_transitions_v2_accepted.pdf",
+  "source_sha256": "835c6840ba23c8f95c0275e4df110c5ee6af8b369c48f19c996e5d93ff17ed64",
+  "output": "Figure4_prediction_transitions_v2_accepted_minimal.pdf",
+  "output_sha256": "d8059c76d34c509ec143170796559fc26c781da141f96e860e193abaa4d79b25",
+  "output_png_sha256": "1f670f6b2c3fc427dd56adca0c144881489da4dc39bff087b1cc653c85ad7956",
+  "method": "Surgical vector-operation patch; no raster overlay and no figure redraw.",
+  "original_operation_count": 1832,
+  "edited_operation_count": 181,
+  "removed_operation_count": 56,
+  "panel_E_uniform_symbols": [
+    {
+      "center_pdf_points": [
+        506.76271299999996,
+        197.7933835
+      ],
+      "old_radius_pdf_points": [
+        5.634714000000002,
+        5.634713500000004
+      ],
+      "new_radius_pdf_points": 4.0,
+      "old_alpha_resource": "/A3",
+      "new_alpha": 0.85
+    },
+    {
+      "center_pdf_points": [
+        506.76271299999996,
+        179.962607
+      ],
+      "old_radius_pdf_points": [
+        5.299209999999988,
+        5.299210000000002
+      ],
+      "new_radius_pdf_points": 4.0,
+      "old_alpha_resource": "/A3",
+      "new_alpha": 0.85
+    },
+    {
+      "center_pdf_points": [
+        506.76271299999996,
+        162.13183
+      ],
+      "old_radius_pdf_points": [
+        5.634714000000002,
+        5.634714000000002
+      ],
+      "new_radius_pdf_points": 4.0,
+      "old_alpha_resource": "/A3",
+      "new_alpha": 0.85
+    },
+    {
+      "center_pdf_points": [
+        506.76271299999996,
+        144.301053
+      ],
+      "old_radius_pdf_points": [
+        5.634714000000002,
+        5.634714000000002
+      ],
+      "new_radius_pdf_points": 4.0,
+      "old_alpha_resource": "/A3",
+      "new_alpha": 0.85
+    },
+    {
+      "center_pdf_points": [
+        506.76271299999996,
+        126.47027599999998
+      ],
+      "old_radius_pdf_points": [
+        5.634714000000002,
+        5.634713999999995
+      ],
+      "new_radius_pdf_points": 4.0,
+      "old_alpha_resource": "/A3",
+      "new_alpha": 0.85
+    },
+    {
+      "center_pdf_points": [
+        506.76271299999996,
+        108.639499
+      ],
+      "old_radius_pdf_points": [
+        5.634714000000002,
+        5.634714000000002
+      ],
+      "new_radius_pdf_points": 4.0,
+      "old_alpha_resource": "/A3",
+      "new_alpha": 0.85
+    },
+    {
+      "center_pdf_points": [
+        506.76271299999996,
+        90.8087225
+      ],
+      "old_radius_pdf_points": [
+        3.5754750000000115,
+        3.575475499999996
+      ],
+      "new_radius_pdf_points": 4.0,
+      "old_alpha_resource": "/A3",
+      "new_alpha": 0.85
+    },
+    {
+      "center_pdf_points": [
+        506.76271299999996,
+        72.9779455
+      ],
+      "old_radius_pdf_points": [
+        5.634714000000002,
+        5.634713499999997
+      ],
+      "new_radius_pdf_points": 4.0,
+      "old_alpha_resource": "/A3",
+      "new_alpha": 0.85
+    },
+    {
+      "center_pdf_points": [
+        506.76271299999996,
+        55.147169000000005
+      ],
+      "old_radius_pdf_points": [
+        5.634714000000002,
+        5.634713999999999
+      ],
+      "new_radius_pdf_points": 4.0,
+      "old_alpha_resource": "/A3",
+      "new_alpha": 0.85
+    },
+    {
+      "center_pdf_points": [
+        610.8240375,
+        197.7933835
+      ],
+      "old_radius_pdf_points": [
+        3.3712014999999838,
+        3.371201499999998
+      ],
+      "new_radius_pdf_points": 4.0,
+      "old_alpha_resource": "/A3",
+      "new_alpha": 0.85
+    },
+    {
+      "center_pdf_points": [
+        610.8240370000001,
+        179.962607
+      ],
+      "old_radius_pdf_points": [
+        2.362407000000019,
+        2.3624070000000046
+      ],
+      "new_radius_pdf_points": 4.0,
+      "old_alpha_resource": "/A4",
+      "new_alpha": 0.85
+    },
+    {
+      "center_pdf_points": [
+        610.824037,
+        162.13183
+      ],
+      "old_radius_pdf_points": [
+        5.634714000000031,
+        5.634714000000002
+      ],
+      "new_radius_pdf_points": 4.0,
+      "old_alpha_resource": "/A3",
+      "new_alpha": 0.85
+    },
+    {
+      "center_pdf_points": [
+        610.824037,
+        144.301053
+      ],
+      "old_radius_pdf_points": [
+        5.634714000000031,
+        5.634714000000002
+      ],
+      "new_radius_pdf_points": 4.0,
+      "old_alpha_resource": "/A3",
+      "new_alpha": 0.85
+    },
+    {
+      "center_pdf_points": [
+        610.8240370000001,
+        126.47027599999998
+      ],
+      "old_radius_pdf_points": [
+        3.419014000000004,
+        3.419013999999997
+      ],
+      "new_radius_pdf_points": 4.0,
+      "old_alpha_resource": "/A3",
+      "new_alpha": 0.85
+    },
+    {
+      "center_pdf_points": [
+        610.8240375,
+        108.6394995
+      ],
+      "old_radius_pdf_points": [
+        3.0339164999999753,
+        3.0339165000000037
+      ],
+      "new_radius_pdf_points": 4.0,
+      "old_alpha_resource": "/A3",
+      "new_alpha": 0.85
+    },
+    {
+      "center_pdf_points": [
+        610.824037,
+        90.8087225
+      ],
+      "old_radius_pdf_points": [
+        4.469373000000019,
+        4.469373500000003
+      ],
+      "new_radius_pdf_points": 4.0,
+      "old_alpha_resource": "/A3",
+      "new_alpha": 0.85
+    },
+    {
+      "center_pdf_points": [
+        610.8240370000001,
+        72.9779455
+      ],
+      "old_radius_pdf_points": [
+        3.1843620000000215,
+        3.1843615000000014
+      ],
+      "new_radius_pdf_points": 4.0,
+      "old_alpha_resource": "/A3",
+      "new_alpha": 0.85
+    },
+    {
+      "center_pdf_points": [
+        610.824037,
+        55.147169
+      ],
+      "old_radius_pdf_points": [
+        3.973928000000001,
+        3.973928000000001
+      ],
+      "new_radius_pdf_points": 4.0,
+      "old_alpha_resource": "/A3",
+      "new_alpha": 0.85
+    }
+  ],
+  "panel_F_removed_stars": [
+    [
+      998.4851045718,
+      191.2088833789
+    ],
+    [
+      998.4851045718,
+      168.8012226402
+    ],
+    [
+      998.4851045718,
+      146.3935619015
+    ],
+    [
+      998.4851045718,
+      123.9859011628
+    ],
+    [
+      998.4851045718,
+      101.5782404241
+    ],
+    [
+      998.4851045718,
+      79.1705796854
+    ],
+    [
+      998.4851045718,
+      56.7629189466
+    ]
+  ],
+  "title_before": "F  Difficulty-matched contrasts retain topology differences",
+  "title_after": "F  Error-stratified contrasts retain topology differences",
+  "hidden_star_or_old_title_text_remaining": false,
+  "same_canvas": true,
+  "pixel_audit": {
+    "dpi": 300,
+    "image_dimensions": [
+      4563,
+      2256
+    ],
+    "total_changed_pixels": 34880,
+    "outside_allowed_regions_changed_pixels": 0,
+    "allowed_regions_pdf_points": {
+      "panel_E_dots": [
+        495,
+        47,
+        625,
+        206
+      ],
+      "panel_F_removed_stars": [
+        994,
+        51,
+        1008,
+        202
+      ],
+      "panel_F_title": [
+        786,
+        212,
+        1094.8860945122,
+        228
+      ]
+    },
+    "panel_A_B_C_D_all_pixels_unchanged": true,
+    "panel_F_bar_values_colors_axes_unchanged": true
+  },
+  "source_unchanged": true
+}

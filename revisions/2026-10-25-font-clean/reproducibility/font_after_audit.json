@@ -1,0 +1,2799 @@
+{
+  "status": "passed_read_only_font_resource_audit",
+  "completed_utc": "2026-10-25T14:04:04.986349+00:00",
+  "files": [
+    {
+      "file": "outputs/BIBM_workshop_font_clean_20261025/source/main.pdf",
+      "sha256": "1a77062fbfc6abb2c8a59657974c177c36f9bc52f73990cc9f3217be8e925f7c",
+      "pages": 8,
+      "passed": true,
+      "stable_during_audit": true,
+      "all_resource_scopes_including_unused_forms": [
+        "page1",
+        "page2",
+        "page3",
+        "page4",
+        "page4//Fm0",
+        "page4//Fm0//M0",
+        "page4//Fm0//M1",
+        "page4//Fm0//M2",
+        "page4//Fm0//M3",
+        "page4//Fm0//M4",
+        "page4//Fm0//M5",
+        "page4//Fm0//PanelEReplacement",
+        "page4//Fm0//PanelEReplacement//M0",
+        "page4//Fm0//PanelEReplacement//M1",
+        "page4//Fm0//PanelEReplacement//M2",
+        "page4//Fm0//TextClarityReplacement",
+        "page5",
+        "page5//Fm1",
+        "page5//Fm2",
+        "page5//Fm2//TextClarityReplacement",
+        "page6",
+        "page6//Fm3",
+        "page6//Fm4",
+        "page7",
+        "page8"
+      ],
+      "font_resource_entries": [
+        {
+          "scope": "page1",
+          "resource_name": "/F0",
+          "object": "4 0 R",
+          "base_font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page1",
+          "resource_name": "/F1",
+          "object": "5 0 R",
+          "base_font": "/BZIVMZ+NimbusRomNo9L-MediItal",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page1",
+          "resource_name": "/F2",
+          "object": "6 0 R",
+          "base_font": "/IXFAWU+NimbusRomNo9L-Medi",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page1",
+          "resource_name": "/F3",
+          "object": "19 0 R",
+          "base_font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F0",
+          "object": "4 0 R",
+          "base_font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F3",
+          "object": "19 0 R",
+          "base_font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F4",
+          "object": "27 0 R",
+          "base_font": "/YEUUOC+CMMI10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F5",
+          "object": "28 0 R",
+          "base_font": "/AKHCZK+CMR10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F6",
+          "object": "29 0 R",
+          "base_font": "/VDVGTR+CMR7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F7",
+          "object": "30 0 R",
+          "base_font": "/CAFSZL+CMSY7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F8",
+          "object": "31 0 R",
+          "base_font": "/DDIEWW+CMR5",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F9",
+          "object": "32 0 R",
+          "base_font": "/FKPJSN+CMEX10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page3",
+          "resource_name": "/F0",
+          "object": "4 0 R",
+          "base_font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page3",
+          "resource_name": "/F10",
+          "object": "46 0 R",
+          "base_font": "/PVTTLK+CMSY6",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page3",
+          "resource_name": "/F11",
+          "object": "47 0 R",
+          "base_font": "/JAGKKY+CMSY8",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page3",
+          "resource_name": "/F3",
+          "object": "19 0 R",
+          "base_font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page3",
+          "resource_name": "/F5",
+          "object": "28 0 R",
+          "base_font": "/AKHCZK+CMR10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4",
+          "resource_name": "/F0",
+          "object": "4 0 R",
+          "base_font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4",
+          "resource_name": "/F3",
+          "object": "19 0 R",
+          "base_font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4",
+          "resource_name": "/F5",
+          "object": "28 0 R",
+          "base_font": "/AKHCZK+CMR10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4//Fm0",
+          "resource_name": "/F1",
+          "object": "53 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4//Fm0",
+          "resource_name": "/F2",
+          "object": "60 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4//Fm0//PanelEReplacement",
+          "resource_name": "/F2",
+          "object": "76 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4//Fm0//PanelEReplacement",
+          "resource_name": "/F1",
+          "object": "83 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4//Fm0//TextClarityReplacement",
+          "resource_name": "/F1",
+          "object": "99 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4//Fm0//TextClarityReplacement",
+          "resource_name": "/F2",
+          "object": "106 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page5",
+          "resource_name": "/F0",
+          "object": "4 0 R",
+          "base_font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page5",
+          "resource_name": "/F11",
+          "object": "47 0 R",
+          "base_font": "/JAGKKY+CMSY8",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page5//Fm1",
+          "resource_name": "/F1",
+          "object": "127 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page5//Fm1",
+          "resource_name": "/F2",
+          "object": "134 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page5//Fm2",
+          "resource_name": "/F2",
+          "object": "147 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page5//Fm2",
+          "resource_name": "/F1",
+          "object": "154 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page5//Fm2//TextClarityReplacement",
+          "resource_name": "/F1",
+          "object": "164 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page6",
+          "resource_name": "/F0",
+          "object": "4 0 R",
+          "base_font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page6",
+          "resource_name": "/F3",
+          "object": "19 0 R",
+          "base_font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page6//Fm3",
+          "resource_name": "/F1",
+          "object": "183 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page6//Fm3",
+          "resource_name": "/F1+0",
+          "object": "190 0 R",
+          "base_font": "/AAAAAA+DejaVuSans-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page6//Fm3",
+          "resource_name": "/F2",
+          "object": "194 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page6//Fm4",
+          "resource_name": "/F2",
+          "object": "209 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page6//Fm4",
+          "resource_name": "/F1",
+          "object": "216 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page7",
+          "resource_name": "/F0",
+          "object": "4 0 R",
+          "base_font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page7",
+          "resource_name": "/F3",
+          "object": "19 0 R",
+          "base_font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page8",
+          "resource_name": "/F0",
+          "object": "4 0 R",
+          "base_font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page8",
+          "resource_name": "/F3",
+          "object": "19 0 R",
+          "base_font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        }
+      ],
+      "all_indirect_fonts_including_unreferenced_objects": [
+        {
+          "object": "4 0 R",
+          "base_font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "5 0 R",
+          "base_font": "/BZIVMZ+NimbusRomNo9L-MediItal",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "6 0 R",
+          "base_font": "/IXFAWU+NimbusRomNo9L-Medi",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "19 0 R",
+          "base_font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "27 0 R",
+          "base_font": "/YEUUOC+CMMI10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "28 0 R",
+          "base_font": "/AKHCZK+CMR10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "29 0 R",
+          "base_font": "/VDVGTR+CMR7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "30 0 R",
+          "base_font": "/CAFSZL+CMSY7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "31 0 R",
+          "base_font": "/DDIEWW+CMR5",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "32 0 R",
+          "base_font": "/FKPJSN+CMEX10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "46 0 R",
+          "base_font": "/PVTTLK+CMSY6",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "47 0 R",
+          "base_font": "/JAGKKY+CMSY8",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "53 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "54 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "60 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "61 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "76 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "77 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "83 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "84 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "99 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "100 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "106 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "107 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "127 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "128 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "134 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "135 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "147 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "148 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "154 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "155 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "164 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "165 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "183 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "184 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "190 0 R",
+          "base_font": "/AAAAAA+DejaVuSans-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "194 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "195 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "209 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "210 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "216 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "217 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        }
+      ],
+      "Tf_operators_checked": 770,
+      "invalid_Tf_references": [],
+      "Helvetica_indirect_fonts": [],
+      "Helvetica_Tf": [],
+      "actual_Helvetica_characters": [],
+      "all_fonts_embedded_and_subset": true,
+      "page_character_counts": [
+        {
+          "page": 1,
+          "characters": 4378
+        },
+        {
+          "page": 2,
+          "characters": 5173
+        },
+        {
+          "page": 3,
+          "characters": 5068
+        },
+        {
+          "page": 4,
+          "characters": 3668
+        },
+        {
+          "page": 5,
+          "characters": 3026
+        },
+        {
+          "page": 6,
+          "characters": 2799
+        },
+        {
+          "page": 7,
+          "characters": 6190
+        },
+        {
+          "page": 8,
+          "characters": 1853
+        }
+      ]
+    },
+    {
+      "file": "outputs/BIBM_workshop_font_clean_20261025/source/main_anonymous.pdf",
+      "sha256": "aa2c4f428b744674eb95aa09917dbfc0cd1a6aeff00ac6058c7e36a33257e9c1",
+      "pages": 8,
+      "passed": true,
+      "stable_during_audit": true,
+      "all_resource_scopes_including_unused_forms": [
+        "page1",
+        "page2",
+        "page3",
+        "page4",
+        "page4//Fm0",
+        "page4//Fm0//M0",
+        "page4//Fm0//M1",
+        "page4//Fm0//M2",
+        "page4//Fm0//M3",
+        "page4//Fm0//M4",
+        "page4//Fm0//M5",
+        "page4//Fm0//PanelEReplacement",
+        "page4//Fm0//PanelEReplacement//M0",
+        "page4//Fm0//PanelEReplacement//M1",
+        "page4//Fm0//PanelEReplacement//M2",
+        "page4//Fm0//TextClarityReplacement",
+        "page5",
+        "page5//Fm1",
+        "page5//Fm2",
+        "page5//Fm2//TextClarityReplacement",
+        "page6",
+        "page6//Fm3",
+        "page6//Fm4",
+        "page7",
+        "page8"
+      ],
+      "font_resource_entries": [
+        {
+          "scope": "page1",
+          "resource_name": "/F0",
+          "object": "4 0 R",
+          "base_font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page1",
+          "resource_name": "/F1",
+          "object": "5 0 R",
+          "base_font": "/BZIVMZ+NimbusRomNo9L-MediItal",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page1",
+          "resource_name": "/F2",
+          "object": "6 0 R",
+          "base_font": "/IXFAWU+NimbusRomNo9L-Medi",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page1",
+          "resource_name": "/F3",
+          "object": "19 0 R",
+          "base_font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F0",
+          "object": "4 0 R",
+          "base_font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F4",
+          "object": "27 0 R",
+          "base_font": "/YEUUOC+CMMI10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F5",
+          "object": "28 0 R",
+          "base_font": "/AKHCZK+CMR10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F6",
+          "object": "29 0 R",
+          "base_font": "/VDVGTR+CMR7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F7",
+          "object": "30 0 R",
+          "base_font": "/CAFSZL+CMSY7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F8",
+          "object": "31 0 R",
+          "base_font": "/DDIEWW+CMR5",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F9",
+          "object": "32 0 R",
+          "base_font": "/FKPJSN+CMEX10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F3",
+          "object": "19 0 R",
+          "base_font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page3",
+          "resource_name": "/F0",
+          "object": "4 0 R",
+          "base_font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page3",
+          "resource_name": "/F10",
+          "object": "47 0 R",
+          "base_font": "/PVTTLK+CMSY6",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page3",
+          "resource_name": "/F11",
+          "object": "48 0 R",
+          "base_font": "/JAGKKY+CMSY8",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page3",
+          "resource_name": "/F3",
+          "object": "19 0 R",
+          "base_font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page3",
+          "resource_name": "/F5",
+          "object": "28 0 R",
+          "base_font": "/AKHCZK+CMR10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4",
+          "resource_name": "/F0",
+          "object": "4 0 R",
+          "base_font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4",
+          "resource_name": "/F3",
+          "object": "19 0 R",
+          "base_font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4",
+          "resource_name": "/F5",
+          "object": "28 0 R",
+          "base_font": "/AKHCZK+CMR10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4//Fm0",
+          "resource_name": "/F1",
+          "object": "53 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4//Fm0",
+          "resource_name": "/F2",
+          "object": "60 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4//Fm0//PanelEReplacement",
+          "resource_name": "/F2",
+          "object": "76 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4//Fm0//PanelEReplacement",
+          "resource_name": "/F1",
+          "object": "83 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4//Fm0//TextClarityReplacement",
+          "resource_name": "/F1",
+          "object": "99 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4//Fm0//TextClarityReplacement",
+          "resource_name": "/F2",
+          "object": "106 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page5",
+          "resource_name": "/F0",
+          "object": "4 0 R",
+          "base_font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page5",
+          "resource_name": "/F11",
+          "object": "48 0 R",
+          "base_font": "/JAGKKY+CMSY8",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page5//Fm1",
+          "resource_name": "/F1",
+          "object": "127 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page5//Fm1",
+          "resource_name": "/F2",
+          "object": "134 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page5//Fm2",
+          "resource_name": "/F2",
+          "object": "147 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page5//Fm2",
+          "resource_name": "/F1",
+          "object": "154 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page5//Fm2//TextClarityReplacement",
+          "resource_name": "/F1",
+          "object": "164 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page6",
+          "resource_name": "/F0",
+          "object": "4 0 R",
+          "base_font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page6",
+          "resource_name": "/F3",
+          "object": "19 0 R",
+          "base_font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page6//Fm3",
+          "resource_name": "/F1",
+          "object": "183 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page6//Fm3",
+          "resource_name": "/F1+0",
+          "object": "190 0 R",
+          "base_font": "/AAAAAA+DejaVuSans-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page6//Fm3",
+          "resource_name": "/F2",
+          "object": "194 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page6//Fm4",
+          "resource_name": "/F2",
+          "object": "209 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page6//Fm4",
+          "resource_name": "/F1",
+          "object": "216 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page7",
+          "resource_name": "/F0",
+          "object": "4 0 R",
+          "base_font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page7",
+          "resource_name": "/F3",
+          "object": "19 0 R",
+          "base_font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page8",
+          "resource_name": "/F0",
+          "object": "4 0 R",
+          "base_font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page8",
+          "resource_name": "/F3",
+          "object": "19 0 R",
+          "base_font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        }
+      ],
+      "all_indirect_fonts_including_unreferenced_objects": [
+        {
+          "object": "4 0 R",
+          "base_font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "5 0 R",
+          "base_font": "/BZIVMZ+NimbusRomNo9L-MediItal",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "6 0 R",
+          "base_font": "/IXFAWU+NimbusRomNo9L-Medi",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "19 0 R",
+          "base_font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "27 0 R",
+          "base_font": "/YEUUOC+CMMI10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "28 0 R",
+          "base_font": "/AKHCZK+CMR10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "29 0 R",
+          "base_font": "/VDVGTR+CMR7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "30 0 R",
+          "base_font": "/CAFSZL+CMSY7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "31 0 R",
+          "base_font": "/DDIEWW+CMR5",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "32 0 R",
+          "base_font": "/FKPJSN+CMEX10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "47 0 R",
+          "base_font": "/PVTTLK+CMSY6",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "48 0 R",
+          "base_font": "/JAGKKY+CMSY8",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "53 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "54 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "60 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "61 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "76 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "77 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "83 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "84 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "99 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "100 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "106 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "107 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "127 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "128 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "134 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "135 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "147 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "148 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "154 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "155 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "164 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "165 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "183 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "184 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "190 0 R",
+          "base_font": "/AAAAAA+DejaVuSans-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "194 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "195 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "209 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "210 0 R",
+          "base_font": "/EVICAO+DejaVuSans-Bold",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "216 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "217 0 R",
+          "base_font": "/BMQQDV+DejaVuSans",
+          "subtype": "/CIDFontType2",
+          "embedded": true,
+          "subset": true
+        }
+      ],
+      "Tf_operators_checked": 761,
+      "invalid_Tf_references": [],
+      "Helvetica_indirect_fonts": [],
+      "Helvetica_Tf": [],
+      "actual_Helvetica_characters": [],
+      "all_fonts_embedded_and_subset": true,
+      "page_character_counts": [
+        {
+          "page": 1,
+          "characters": 4565
+        },
+        {
+          "page": 2,
+          "characters": 5210
+        },
+        {
+          "page": 3,
+          "characters": 4892
+        },
+        {
+          "page": 4,
+          "characters": 3724
+        },
+        {
+          "page": 5,
+          "characters": 3026
+        },
+        {
+          "page": 6,
+          "characters": 2799
+        },
+        {
+          "page": 7,
+          "characters": 6186
+        },
+        {
+          "page": 8,
+          "characters": 1508
+        }
+      ]
+    },
+    {
+      "file": "outputs/BIBM_workshop_font_clean_20261025/BIBM2026_supplementary_named_revised.pdf",
+      "sha256": "ad7d9e51c2bbd14eab8194c214b8e4feb29a19b7d0bf68dfd3283986d8cbe6cc",
+      "pages": 18,
+      "passed": true,
+      "stable_during_audit": true,
+      "all_resource_scopes_including_unused_forms": [
+        "page1",
+        "page2",
+        "page3",
+        "page4",
+        "page5",
+        "page6",
+        "page7",
+        "page8",
+        "page9",
+        "page10",
+        "page11",
+        "page12",
+        "page13",
+        "page14",
+        "page15",
+        "page16",
+        "page17",
+        "page18"
+      ],
+      "font_resource_entries": [
+        {
+          "scope": "page1",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page1",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page1",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page3",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page3",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page3",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page5",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page5",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page5",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page6",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page6",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page6",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page7",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page7",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page7",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page8",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page8",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page8",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page9",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page9",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page9",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page10",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page10",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page10",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page11",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page11",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page11",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page12",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page12",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page12",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page13",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page13",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page13",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page14",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page14",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page14",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page15",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page15",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page15",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page16",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page16",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page16",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page17",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page17",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page17",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page18",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page18",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page18",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        }
+      ],
+      "all_indirect_fonts_including_unreferenced_objects": [
+        {
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        }
+      ],
+      "Tf_operators_checked": 1373,
+      "invalid_Tf_references": [],
+      "Helvetica_indirect_fonts": [],
+      "Helvetica_Tf": [],
+      "actual_Helvetica_characters": [],
+      "all_fonts_embedded_and_subset": true,
+      "page_character_counts": [
+        {
+          "page": 1,
+          "characters": 4166
+        },
+        {
+          "page": 2,
+          "characters": 4604
+        },
+        {
+          "page": 3,
+          "characters": 5069
+        },
+        {
+          "page": 4,
+          "characters": 3046
+        },
+        {
+          "page": 5,
+          "characters": 2905
+        },
+        {
+          "page": 6,
+          "characters": 2013
+        },
+        {
+          "page": 7,
+          "characters": 2615
+        },
+        {
+          "page": 8,
+          "characters": 2117
+        },
+        {
+          "page": 9,
+          "characters": 2312
+        },
+        {
+          "page": 10,
+          "characters": 3238
+        },
+        {
+          "page": 11,
+          "characters": 2814
+        },
+        {
+          "page": 12,
+          "characters": 4690
+        },
+        {
+          "page": 13,
+          "characters": 3470
+        },
+        {
+          "page": 14,
+          "characters": 4042
+        },
+        {
+          "page": 15,
+          "characters": 5141
+        },
+        {
+          "page": 16,
+          "characters": 2838
+        },
+        {
+          "page": 17,
+          "characters": 2076
+        },
+        {
+          "page": 18,
+          "characters": 2349
+        }
+      ]
+    },
+    {
+      "file": "outputs/BIBM_workshop_font_clean_20261025/BIBM2026_supplementary_anonymous_revised.pdf",
+      "sha256": "1e6971c0a5f7a2bb12bb894a8569206ca777a23631eb0fa915a8b0560a022c79",
+      "pages": 18,
+      "passed": true,
+      "stable_during_audit": true,
+      "all_resource_scopes_including_unused_forms": [
+        "page1",
+        "page2",
+        "page3",
+        "page4",
+        "page5",
+        "page6",
+        "page7",
+        "page8",
+        "page9",
+        "page10",
+        "page11",
+        "page12",
+        "page13",
+        "page14",
+        "page15",
+        "page16",
+        "page17",
+        "page18"
+      ],
+      "font_resource_entries": [
+        {
+          "scope": "page1",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page1",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page1",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page2",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page3",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page3",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page3",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page4",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page5",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page5",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page5",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page6",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page6",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page6",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page7",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page7",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page7",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page8",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page8",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page8",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page9",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page9",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page9",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page10",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page10",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page10",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page11",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page11",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page11",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page12",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page12",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page12",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page13",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page13",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page13",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page14",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page14",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page14",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page15",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page15",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page15",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page16",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page16",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page16",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page17",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page17",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page17",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page18",
+          "resource_name": "/F1+0",
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page18",
+          "resource_name": "/F2+0",
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "scope": "page18",
+          "resource_name": "/F3+0",
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        }
+      ],
+      "all_indirect_fonts_including_unreferenced_objects": [
+        {
+          "object": "23 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "27 0 R",
+          "base_font": "/AAAAAA+DejaVuSerif-Bold",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "object": "31 0 R",
+          "base_font": "/AAAAAA+DejaVuSansMono",
+          "subtype": "/TrueType",
+          "embedded": true,
+          "subset": true
+        }
+      ],
+      "Tf_operators_checked": 1370,
+      "invalid_Tf_references": [],
+      "Helvetica_indirect_fonts": [],
+      "Helvetica_Tf": [],
+      "actual_Helvetica_characters": [],
+      "all_fonts_embedded_and_subset": true,
+      "page_character_counts": [
+        {
+          "page": 1,
+          "characters": 4349
+        },
+        {
+          "page": 2,
+          "characters": 4132
+        },
+        {
+          "page": 3,
+          "characters": 5069
+        },
+        {
+          "page": 4,
+          "characters": 3046
+        },
+        {
+          "page": 5,
+          "characters": 2905
+        },
+        {
+          "page": 6,
+          "characters": 2013
+        },
+        {
+          "page": 7,
+          "characters": 2615
+        },
+        {
+          "page": 8,
+          "characters": 2117
+        },
+        {
+          "page": 9,
+          "characters": 2312
+        },
+        {
+          "page": 10,
+          "characters": 3238
+        },
+        {
+          "page": 11,
+          "characters": 2814
+        },
+        {
+          "page": 12,
+          "characters": 4690
+        },
+        {
+          "page": 13,
+          "characters": 3470
+        },
+        {
+          "page": 14,
+          "characters": 4042
+        },
+        {
+          "page": 15,
+          "characters": 5141
+        },
+        {
+          "page": 16,
+          "characters": 2838
+        },
+        {
+          "page": 17,
+          "characters": 2076
+        },
+        {
+          "page": 18,
+          "characters": 2349
+        }
+      ]
+    }
+  ],
+  "all_four_passed": true,
+  "all_Tf_references_valid": true,
+  "inspection_method": "Recursively inventory every page/Form font resource including unused Forms; independently enumerate every indirect Font object; validate every Tf resource name in its local/inherited context; extract actual characters with pdfplumber.",
+  "before_audit": "work/font_cleanup_20261025/font_before_audit.json",
+  "source_prevention_caveat": "BaseDocTemplate._makeCanvas passes initialFontName=self.initialFontName (default None), overriding functools.partial Canvas defaults. Set initialFontName directly on SimpleDocTemplate (or overwrite None explicitly in canvasmaker), and set table FONTNAME.",
+  "no_source_or_pdf_edits": true,
+  "scope_limit": "Pixel equality is root separate check; this report checks all fonts and references."
+}

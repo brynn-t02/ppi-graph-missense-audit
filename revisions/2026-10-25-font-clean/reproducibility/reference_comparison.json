@@ -1,0 +1,327 @@
+{
+  "scope": "Read-only exact comparison of the retained submitted-original LaTeX with the current heading-style named main. No manuscript edited, no network/server access.",
+  "original_source": {
+    "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_original_minimal_20261025/reproducibility/original/original.tex",
+    "sha256": "aeea104debe2cdc6d9ce430ce5f1f4c4fba4acb0c0246a0e49fe6d116040d811",
+    "retained_original_pdf_sha256": "ba61aaa683dd33a30b0bd5f01ea1eebcaced6f4dafc2ec88ff756e3cb4dd6ca1",
+    "provenance_record": "work/original_minimal_20261025/original_source_provenance.json"
+  },
+  "current_source": {
+    "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_heading_style_20261025/source/main.tex",
+    "sha256": "f8094291125ee8d1a56c60c0a4bbb9660811c6df3edd5b938365ce95743bc352"
+  },
+  "summary": {
+    "original_bibitem_count": 28,
+    "current_bibitem_count": 30,
+    "added_count": 2,
+    "deleted_count": 0,
+    "retained_original_count": 28,
+    "retained_entry_text_unchanged_count": 27,
+    "retained_entry_text_changed_count": 1,
+    "all_original_citations_retained": true,
+    "citation_key_occurrence_sequence_identical_after_removing_two_new_keys": true,
+    "current_bibliography_is_first_citation_order": true,
+    "original_bibliography_was_lexicographically_sorted_by_key": true,
+    "original_citation_key_occurrences": 33,
+    "current_citation_key_occurrences": 35,
+    "assessment_zh": "实际只新增2篇，都是新增实验使用的数据库来源。原有28篇没有删除，其中27篇条目文字相同，1篇只补入标题缩写 (SAV)；全部原有正文引文的键序列和重复次数保持，编号主要因参考文献按首次引用顺序重排而改变。"
+  },
+  "added_references": [
+    {
+      "key": "UniProt2025",
+      "number": 29,
+      "line": 238,
+      "entry": "The UniProt Consortium, ``UniProt: the Universal Protein Knowledgebase in 2025,'' \\emph{Nucleic Acids Research}, vol. 53, no. D1, pp. D609--D617, 2025, doi: 10.1093/nar/gkae1010.",
+      "title": "UniProt: the Universal Protein Knowledgebase in 2025",
+      "role_zh": "为新增的 UniProtKB/Swiss-Prot HUMSAVAR 外部来源验证提供数据库来源引用；不是一项新模型的文献，也不是将其称为完全独立的临床队列。",
+      "resource_version_in_methods": "HUMSAVAR 2026_03",
+      "citation_page_in_named_pdf": 2,
+      "workshop_connection_zh": "直接支持 workshop 第2条独立测试集或第二网络建议中新增的外部来源验证。用户随后授权两项都做，并授权将结果入稿。",
+      "version_caveat_zh": "引用为 UniProt 2025 数据库论文，实际资源版本在方法和来源清单单独注明为 2026_03；引用年份不代表所用下载版本。",
+      "citation_occurrences": [
+        {
+          "key": "UniProt2025",
+          "line": 88,
+          "section": "Materials and Methods",
+          "subsection": "Additional matched and external validation",
+          "context_tex": "Frozen original-split classifiers were evaluated without external tuning on UniProtKB/\\allowbreak{}Swiss-Prot HUMSAVAR 2026\\_03 \\cite{UniProt2025}. Pathogenic/likely pathogenic and benign/likely benign records defined the two classes. After exact canonical-sequence mapping and reference-residue checks, original variants were excluded by the union of accession/node/gene-plus-substitution and dbSNP keys. The primary set excluded training/validation proteins and identical sequences (10,785 variants; 2,498 proteins); a nested stricter set additionally excluded original test proteins and identical sequences (6,934; 1,713). All remained frozen-graph nodes. BioGRID 5.0.262 physical-category edges \\cite{Stark2006BioGRID}, excluding RNA-related methods and ambiguous mappings, yielded 931,458 undirected edges on the same 19,622 nodes. Nine additional matched fits covered BioGRID representation prediction and fusion in both splits. Protocols and complete metrics are in Supplementary Methods 5--6 and Tables 11--17."
+        }
+      ],
+      "directly_introduced_by_workshop_validation": true
+    },
+    {
+      "key": "Stark2006BioGRID",
+      "number": 30,
+      "line": 239,
+      "entry": "C. Stark, B.-J. Breitkreutz, T. Reguly, L. Boucher, A. Breitkreutz, and M. Tyers, ``BioGRID: a general repository for interaction datasets,'' \\emph{Nucleic Acids Research}, vol. 34, pp. D535--D539, 2006, doi: 10.1093/nar/gkj109.",
+      "title": "BioGRID: a general repository for interaction datasets",
+      "role_zh": "为新增 BioGRID 第二网络验证提供数据库来源引用；对应以 BioGRID 物理类别边替换 STRING 的验证和九次匹配拟合。",
+      "resource_version_in_methods": "BioGRID 5.0.262",
+      "citation_page_in_named_pdf": 3,
+      "workshop_connection_zh": "直接支持 workshop 第2条独立测试集或第二网络建议中的第二网络验证。用户随后授权两项都做，并授权将结果入稿。",
+      "version_caveat_zh": "2006 为 BioGRID 数据库论文的发表年，实际使用的数据库版本为 5.0.262；不是使用 2006 年的网络快照。",
+      "citation_occurrences": [
+        {
+          "key": "Stark2006BioGRID",
+          "line": 88,
+          "section": "Materials and Methods",
+          "subsection": "Additional matched and external validation",
+          "context_tex": "Frozen original-split classifiers were evaluated without external tuning on UniProtKB/\\allowbreak{}Swiss-Prot HUMSAVAR 2026\\_03 \\cite{UniProt2025}. Pathogenic/likely pathogenic and benign/likely benign records defined the two classes. After exact canonical-sequence mapping and reference-residue checks, original variants were excluded by the union of accession/node/gene-plus-substitution and dbSNP keys. The primary set excluded training/validation proteins and identical sequences (10,785 variants; 2,498 proteins); a nested stricter set additionally excluded original test proteins and identical sequences (6,934; 1,713). All remained frozen-graph nodes. BioGRID 5.0.262 physical-category edges \\cite{Stark2006BioGRID}, excluding RNA-related methods and ambiguous mappings, yielded 931,458 undirected edges on the same 19,622 nodes. Nine additional matched fits covered BioGRID representation prediction and fusion in both splits. Protocols and complete metrics are in Supplementary Methods 5--6 and Tables 11--17."
+        }
+      ],
+      "directly_introduced_by_workshop_validation": true
+    }
+  ],
+  "deleted_references": [],
+  "modified_retained_references": [
+    {
+      "key": "Yates2014SuSPect",
+      "old_number": 26,
+      "new_number": 12,
+      "old_entry": "C. M. Yates, I. Filippis, L. A. Kelley, and M. J. E. Sternberg, ``SuSPect: enhanced prediction of single amino acid variant phenotype using network features,'' \\emph{Journal of Molecular Biology}, vol. 426, pp. 2692--2701, 2014, doi: 10.1016/j.jmb.2014.04.026.",
+      "new_entry": "C. M. Yates, I. Filippis, L. A. Kelley, and M. J. E. Sternberg, ``SuSPect: enhanced prediction of single amino acid variant (SAV) phenotype using network features,'' \\emph{Journal of Molecular Biology}, vol. 426, pp. 2692--2701, 2014, doi: 10.1016/j.jmb.2014.04.026.",
+      "change_zh": "标题补入缩写 (SAV)，同一条文献；作者、期刊、年份、卷页、DOI 均未改。此只读本地比较未另行联网核验原始发表标题。"
+    }
+  ],
+  "renumbering": [
+    {
+      "key": "Barabasi2011NetworkMedicine",
+      "title": "Network medicine: a network-based approach to human disease",
+      "original_number": 1,
+      "current_number": 8,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Benjamini1995FDR",
+      "title": "Controlling the false discovery rate: a practical and powerful approach to multiple testing",
+      "original_number": 2,
+      "current_number": 27,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Chen2018InteractomePerturbation",
+      "title": "An interactome perturbation framework prioritizes damaging missense mutations for developmental disorders",
+      "original_number": 3,
+      "current_number": 11,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Cheng2021VEGN",
+      "title": "VEGN: variant effect prediction with graph neural networks",
+      "original_number": 4,
+      "current_number": 15,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Cheng2023AlphaMissense",
+      "title": "Accurate proteome-wide missense variant effect prediction with AlphaMissense",
+      "original_number": 5,
+      "current_number": 6,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Efron1993Bootstrap",
+      "title": "An Introduction to the Bootstrap",
+      "original_number": 6,
+      "current_number": 26,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Frazer2021EVE",
+      "title": "Disease variant prediction with deep generative models of evolutionary data",
+      "original_number": 7,
+      "current_number": 5,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Ghadie2025DiseaseSpecificGNN",
+      "title": "Disease-specific prediction of missense variant pathogenicity with DNA language models and graph neural networks",
+      "original_number": 8,
+      "current_number": 17,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Ioannidis2016REVEL",
+      "title": "REVEL: an ensemble method for predicting the pathogenicity of rare missense variants",
+      "original_number": 9,
+      "current_number": 2,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Kingma2015Adam",
+      "title": "Adam: a method for stochastic optimization",
+      "original_number": 10,
+      "current_number": 24,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Kipf2017GCN",
+      "title": "Semi-supervised classification with graph convolutional networks",
+      "original_number": 11,
+      "current_number": 22,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Kircher2014CADD",
+      "title": "A general framework for estimating the relative pathogenicity of human genetic variants",
+      "original_number": 12,
+      "current_number": 1,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Landrum2020ClinVar",
+      "title": "ClinVar: improvements to accessing data",
+      "original_number": 13,
+      "current_number": 20,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Lin2023ESM",
+      "title": "Evolutionary-scale prediction of atomic-level protein structure with a language model",
+      "original_number": 14,
+      "current_number": 7,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Littmann2022ProteinMLTips",
+      "title": "Ten quick tips for sequence-based prediction of protein properties using machine learning",
+      "original_number": 15,
+      "current_number": 18,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Menche2015DiseaseModules",
+      "title": "Disease networks. Uncovering disease-disease relationships through the incomplete interactome",
+      "original_number": 16,
+      "current_number": 9,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Ozturk2022NetworkFeatures",
+      "title": "Predicting functional consequences of mutations using molecular interaction network features",
+      "original_number": 17,
+      "current_number": 13,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Qi2021MVP",
+      "title": "MVP predicts the pathogenicity of missense variants by deep learning",
+      "original_number": 18,
+      "current_number": 3,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Sahni2015InteractionPerturbation",
+      "title": "Widespread macromolecular interaction perturbations in human genetic disorders",
+      "original_number": 19,
+      "current_number": 10,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Saito2015PrecisionRecall",
+      "title": "The precision-recall plot is more informative than the ROC plot when evaluating binary classifiers on imbalanced datasets",
+      "original_number": 20,
+      "current_number": 28,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Schubach2024CADDv17",
+      "title": "CADD v1.7: using protein language models, regulatory CNNs and other nucleotide-level scores to improve genome-wide variant predictions",
+      "original_number": 21,
+      "current_number": 25,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Steinegger2017MMseqs2",
+      "title": "MMseqs2 enables sensitive protein sequence searching for the analysis of massive data sets",
+      "original_number": 22,
+      "current_number": 23,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Sundaram2018PrimateAI",
+      "title": "Predicting the clinical impact of human mutation with deep neural networks",
+      "original_number": 23,
+      "current_number": 4,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Szklarczyk2023STRING",
+      "title": "The STRING database in 2023: protein-protein association networks and functional enrichment analyses for any sequenced genome of interest",
+      "original_number": 24,
+      "current_number": 21,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Teufel2023GraphPart",
+      "title": "GraphPart: homology partitioning for biological sequence analysis",
+      "original_number": 25,
+      "current_number": 19,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Yates2014SuSPect",
+      "title": "SuSPect: enhanced prediction of single amino acid variant phenotype using network features",
+      "original_number": 26,
+      "current_number": 12,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": false
+    },
+    {
+      "key": "Yu2025GNNMAP",
+      "title": "A graph neural network approach for accurate prediction of pathogenicity in multi-type variants",
+      "original_number": 27,
+      "current_number": 16,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    },
+    {
+      "key": "Zhang2022gMVP",
+      "title": "Predicting functional effect of missense variants using graph attention neural networks",
+      "original_number": 28,
+      "current_number": 14,
+      "status": "retained_original_reference",
+      "entry_text_unchanged": true
+    }
+  ],
+  "workshop_request_evidence": {
+    "local_file": "outputs/Workshop逐条修订结论_20261024.txt",
+    "line": 8,
+    "quote": "An independent test set or a second network would strengthen the claims.",
+    "scope_note_zh": "该记录的实验状态属于早期历史快照；这里只引用原评审句，不采用其中已经过时的未完成状态。完成状态见当前 continuation_state/external validation publication receipts。"
+  },
+  "recommendation_zh": "保留这两条来源引用合理，删除它们会使新加入的数据/网络来源缺少正式归属。修订稿增加与新增验证直接相关的必要文献，不等于无依据扩充文献。不要把其余28条的编号变化解释为新增。新增数据的独立性边界仍按正文保留。",
+  "limitations": [
+    "This is a local exact-source comparison; it does not independently revalidate every reference bibliographic field against publisher records."
+  ],
+  "original_title_independently_verified": {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4087249/",
+    "publisher_url": "https://www.sciencedirect.com/science/article/pii/S0022283614002253",
+    "finding": "Published title includes (SAV); existing correction retained. No reference changed in this font-only revision."
+  }
+}

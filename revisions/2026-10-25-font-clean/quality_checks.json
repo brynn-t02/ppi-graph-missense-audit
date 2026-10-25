@@ -1,0 +1,44 @@
+{
+  "baseline_commit": "e707e74c96e67b1f77b182d834ac55735570ebe3",
+  "manuscript_tex_md_ieeeclass_byte_unchanged": true,
+  "all_scientific_text_equations_bibliography_citations_unchanged": true,
+  "source_files_changed": [
+    "figure_scripts/figure4_reporting_clarity.py",
+    "figure_drafts/Figure4_prediction_transitions_v2_accepted_minimal_clarified.pdf",
+    "figure_drafts/Figure4_prediction_transitions_v2_accepted_minimal_clarified.audit.json"
+  ],
+  "render_supplement_script_changed": true,
+  "figure4_png_byte_identical": true,
+  "canonical49_files_unchanged": true,
+  "pdfs": {
+    "BIBM2026_supplementary_anonymous_revised.pdf": {
+      "sha256": "1e6971c0a5f7a2bb12bb894a8569206ca777a23631eb0fa915a8b0560a022c79",
+      "pages": 18,
+      "bytes": 121454
+    },
+    "BIBM2026_supplementary_named_revised.pdf": {
+      "sha256": "ad7d9e51c2bbd14eab8194c214b8e4feb29a19b7d0bf68dfd3283986d8cbe6cc",
+      "pages": 18,
+      "bytes": 121752
+    },
+    "BIBM2026_workshop_anonymous_revised.pdf": {
+      "sha256": "aa2c4f428b744674eb95aa09917dbfc0cd1a6aeff00ac6058c7e36a33257e9c1",
+      "pages": 8,
+      "bytes": 279868
+    },
+    "BIBM2026_workshop_named_revised.pdf": {
+      "sha256": "1a77062fbfc6abb2c8a59657974c177c36f9bc52f73990cc9f3217be8e925f7c",
+      "pages": 8,
+      "bytes": 280913
+    }
+  },
+  "pdf_express_certification_completed": false,
+  "conference_submission_completed": false,
+  "all_font_resources_embedded_and_subset": true,
+  "helvetica_resources_remaining": 0,
+  "unresolved_font_references": 0,
+  "pages_compared_at_300dpi": 52,
+  "changed_pixels_total": 0,
+  "all_character_geometry_text_fonts_identical": true,
+  "representative_pages_visually_inspected": true
+}

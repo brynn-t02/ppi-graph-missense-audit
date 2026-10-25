@@ -1,0 +1,86 @@
+{
+  "source": "Figure3_topology_context_v1_accepted.pdf",
+  "source_sha256": "71a3aab296cc4bc6f09f4f39421915cad84892b2cf73c82f22083a61abe6f8fe",
+  "output": "Figure3_topology_context_v1_accepted_clarified.pdf",
+  "output_sha256": "1012fa80e12572fb33fded6ed54d4e40ba992f0915ba4c79e32d7e3ff598932c",
+  "output_png_sha256": "9da7b551e435eda5b3b4b99539f443af14c4bc4e3ae72b95b68e116e68b4cd35",
+  "method": "Remove original text operators and insert new transparent vector text Form; retain all other original content bytes.",
+  "removed_text_blocks": [
+    {
+      "start": 16603,
+      "end": 16755,
+      "text": "C  Bridge role and local density shape gain"
+    },
+    {
+      "start": 35884,
+      "end": 36081,
+      "text": "PPI-GCN gains concentrate in specific network topology contexts"
+    }
+  ],
+  "inserted_text": [
+    {
+      "text": "Exploratory PPI-GCN gains across network topology contexts",
+      "x": "center",
+      "y": 505.564125,
+      "size": 14,
+      "weight": "bold",
+      "ha": "center",
+      "color": "black"
+    },
+    {
+      "text": "C  Gains across betweenness and clustering strata",
+      "x": 688,
+      "y": 464.74875,
+      "size": 9,
+      "weight": "bold",
+      "ha": "left",
+      "color": "black"
+    }
+  ],
+  "old_text_physically_removed_and_not_extractable": true,
+  "new_text_extractable": true,
+  "new_glyphs_embedded": true,
+  "portable_font_files": {
+    "normal": {
+      "path": "resources/fonts/DejaVuSans.ttf",
+      "sha256": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22"
+    },
+    "bold": {
+      "path": "resources/fonts/DejaVuSans-Bold.ttf",
+      "sha256": "b184b89e3c1075f22f6b71575b6fc20d4972b3cfd3b23322ca6fd596dcaef167"
+    }
+  },
+  "all_font_point_sizes_preserved": true,
+  "same_canvas": true,
+  "canvas_pt": [
+    955.164,
+    523.40475
+  ],
+  "data_axes_colors_and_non_text_geometry_unchanged": true,
+  "pixel_audit": {
+    "dpi": 300,
+    "dimensions": [
+      3980,
+      2181
+    ],
+    "changed_pixels": 66290,
+    "outside_allowed_text_regions_changed_pixels": 0,
+    "allowed_text_regions_pdf_points": {
+      "overall_title": [
+        219,
+        499,
+        741,
+        521
+      ],
+      "panel_C_title": [
+        685,
+        461,
+        950,
+        476
+      ]
+    }
+  },
+  "source_unchanged": true,
+  "abbreviations_needed": false,
+  "position_changes": "Main titles recentered; Figure1 D/F annotations wrap at original point size; Figure3 C title moved left within existing title-row whitespace."
+}

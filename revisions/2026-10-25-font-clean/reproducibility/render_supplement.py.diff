@@ -1,0 +1,20 @@
+--- previous/render_supplement.py
++++ font-clean/render_supplement.py
+@@ -74,7 +74,8 @@
+         cols=[width*w/sum(weights) for w in weights]
+         data=[[Paragraph(('<b>'+fmt(v)+'</b>') if ri==0 else fmt(v),styles['TableRevision']) for v in row] for ri,row in enumerate(rows)]
+         table=Table(data,colWidths=cols,repeatRows=1,hAlign='LEFT')
+-        table.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.HexColor('#e6edf3')),
++        table.setStyle(TableStyle([('FONTNAME',(0,0),(-1,-1),'DejaVu'),
++            ('BACKGROUND',(0,0),(-1,0),colors.HexColor('#e6edf3')),
+             ('VALIGN',(0,0),(-1,-1),'TOP'),('LINEBELOW',(0,0),(-1,0),.6,colors.HexColor('#64748b')),
+             ('LINEBELOW',(0,1),(-1,-1),.25,colors.HexColor('#d8dfe5')),
+             ('LEFTPADDING',(0,0),(-1,-1),5),('RIGHTPADDING',(0,0),(-1,-1),5),
+@@ -111,6 +112,6 @@
+ 
+ path=B/('BIBM2026_supplementary_anonymous_revised.pdf' if args.anonymous else 'BIBM2026_supplementary_named_revised.pdf')
+ doc=SimpleDocTemplate(str(path),pagesize=A4,rightMargin=42,leftMargin=42,topMargin=42,bottomMargin=43,
+-    title='Supplementary Information - PPI Graph Augmentation Audit',author=('Anonymous' if args.anonymous else 'Yuxin Tian, Xianguo Zhang, Weibo Meng, Jieqi Yin, Yongqin Jin'),allowSplitting=True)
++    title='Supplementary Information - PPI Graph Augmentation Audit',author=('Anonymous' if args.anonymous else 'Yuxin Tian, Xianguo Zhang, Weibo Meng, Jieqi Yin, Yongqin Jin'),allowSplitting=True,initialFontName='DejaVu')
+ doc.build(story,onFirstPage=footer,onLaterPages=footer)
+ print(path)

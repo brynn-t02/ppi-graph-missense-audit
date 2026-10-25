@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "new_fits": 0,
+  "frozen_checkpoints": 57,
+  "representation_checkpoints_canonically_inferred": 21,
+  "seed_metric_rows": 90,
+  "ensemble_rows": 30,
+  "protein_bootstrap_comparisons": 27,
+  "independent_sklearn_complete_ci_checks": [
+    {
+      "population": "original",
+      "comparison": "full_FPP_vs_raw_ESM",
+      "repeats_independently_recomputed": 2000,
+      "max_abs_ci_error": 2.0816681711721685e-16
+    },
+    {
+      "population": "original_fusion",
+      "comparison": "scores_plus_full_FPP_vs_scores_plus_raw_ESM",
+      "repeats_independently_recomputed": 2000,
+      "max_abs_ci_error": 1.1275702593849246e-16
+    },
+    {
+      "population": "homology",
+      "comparison": "scores_plus_full_FPP_vs_scores_capacity_matched",
+      "repeats_independently_recomputed": 2000,
+      "max_abs_ci_error": 1.0820337681405334e-16
+    },
+    {
+      "population": "external_primary",
+      "comparison": "full_FPP_vs_raw_ESM",
+      "repeats_independently_recomputed": 2000,
+      "max_abs_ci_error": 1.0928757898653885e-16
+    },
+    {
+      "population": "external_strict",
+      "comparison": "full_FPP_vs_raw_ESM",
+      "repeats_independently_recomputed": 2000,
+      "max_abs_ci_error": 2.1640675362810669e-16
+    }
+  ],
+  "weighted_kernel_synthetic_tests": {
+    "passed": true,
+    "synthetic_tied_weight_cases": 14,
+    "tolerance": 1e-12
+  },
+  "all_original_inputs_unchanged": true,
+  "full_manifest_labels_splits_clusters_verified": true,
+  "public_files": 22,
+  "seconds": 200.89135193824768
+}

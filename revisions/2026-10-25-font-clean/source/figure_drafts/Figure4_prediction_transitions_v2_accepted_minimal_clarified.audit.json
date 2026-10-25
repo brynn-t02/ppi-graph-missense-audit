@@ -1,0 +1,28 @@
+{
+  "source_sha256": "d8059c76d34c509ec143170796559fc26c781da141f96e860e193abaa4d79b25",
+  "output_sha256": "28ce5087235d2ecf07be057f0771aa1616072ad85a7051a5c8b293aa68b8620d",
+  "output_png_sha256": "529bb547d99a1a970ce52d42fe662410d33aa0f86922b17839e696bfb8f93cd8",
+  "font_sha256": "b184b89e3c1075f22f6b71575b6fc20d4972b3cfd3b23322ca6fd596dcaef167",
+  "old_heading": "E  Topology features separate corrected groups",
+  "new_heading": "E  Mean topology differences between corrected groups",
+  "font": "DejaVu Sans Bold",
+  "font_size_pt": 9,
+  "baseline": [
+    449.528985,
+    216.274927
+  ],
+  "title_right_edge_pt": 734.7780084375,
+  "original_text_block_removed": true,
+  "white_cover_used": false,
+  "dpi": 300,
+  "allowed_change_region_pdf_points": [
+    447,
+    212,
+    740,
+    229
+  ],
+  "changed_pixels": 18376,
+  "pixels_changed_outside_heading": 0,
+  "all_other_panels_axes_points_colors_and_numbers_unchanged": true,
+  "source_unchanged": true
+}

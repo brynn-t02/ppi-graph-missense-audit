@@ -1,0 +1,138 @@
+{
+  "source": "Figure1_connectivity_topology_controls_v2_accepted_minimal.pdf",
+  "source_sha256": "d66058d280efc1e3704bea1b02faaa8eff1140957e866f67c66e7bb35f897c5d",
+  "output": "Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+  "output_sha256": "6fab8facd7e5af9bd701ea7475f733c6eaf03751a29ec86fc3fcacacf5fd4cf0",
+  "output_png_sha256": "d35d32a180bc19c5b5b4eae0ee021f807c133a66997ac0dc6e54b016ed4d6aef",
+  "method": "Remove original text operators and insert new transparent vector text Form; retain all other original content bytes.",
+  "removed_text_blocks": [
+    {
+      "start": 25595,
+      "end": 25690,
+      "text": "AUC gain"
+    },
+    {
+      "start": 25691,
+      "end": 25801,
+      "text": "removed"
+    },
+    {
+      "start": 31619,
+      "end": 31752,
+      "text": "returns to"
+    },
+    {
+      "start": 31753,
+      "end": 31850,
+      "text": "ESM level"
+    },
+    {
+      "start": 32945,
+      "end": 33178,
+      "text": "PPI graph augmentation depends on topology alignment and train-test connectivity"
+    }
+  ],
+  "inserted_text": [
+    {
+      "text": "Fixed-propagation audit under connectivity and topology controls",
+      "x": "center",
+      "y": 553.228125,
+      "size": 13.5,
+      "weight": "bold",
+      "ha": "center",
+      "color": "black"
+    },
+    {
+      "text": "AUC near the",
+      "x": 221.5,
+      "y": 153.0337693798,
+      "size": 7.4,
+      "ha": "center",
+      "color": "#4D4D4D"
+    },
+    {
+      "text": "raw-ESM",
+      "x": 221.5,
+      "y": 145.2056443798,
+      "size": 7.4,
+      "ha": "center",
+      "color": "#4D4D4D"
+    },
+    {
+      "text": "reference",
+      "x": 221.5,
+      "y": 137.3775193798,
+      "size": 7.4,
+      "ha": "center",
+      "color": "#4D4D4D"
+    },
+    {
+      "text": "Point estimates",
+      "x": 867.5,
+      "y": 153.0337693798,
+      "size": 7.4,
+      "ha": "center",
+      "color": "#4D4D4D"
+    },
+    {
+      "text": "near raw ESM",
+      "x": 867.5,
+      "y": 145.2056443798,
+      "size": 7.4,
+      "ha": "center",
+      "color": "#4D4D4D"
+    }
+  ],
+  "old_text_physically_removed_and_not_extractable": true,
+  "new_text_extractable": true,
+  "new_glyphs_embedded": true,
+  "portable_font_files": {
+    "normal": {
+      "path": "resources/fonts/DejaVuSans.ttf",
+      "sha256": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22"
+    },
+    "bold": {
+      "path": "resources/fonts/DejaVuSans-Bold.ttf",
+      "sha256": "b184b89e3c1075f22f6b71575b6fc20d4972b3cfd3b23322ca6fd596dcaef167"
+    }
+  },
+  "all_font_point_sizes_preserved": true,
+  "same_canvas": true,
+  "canvas_pt": [
+    922.6925,
+    571.06875
+  ],
+  "data_axes_colors_and_non_text_geometry_unchanged": true,
+  "pixel_audit": {
+    "dpi": 300,
+    "dimensions": [
+      3845,
+      2380
+    ],
+    "changed_pixels": 72305,
+    "outside_allowed_text_regions_changed_pixels": 0,
+    "allowed_text_regions_pdf_points": {
+      "overall_title": [
+        143,
+        547,
+        790,
+        568
+      ],
+      "panel_D_annotation": [
+        196,
+        134,
+        248,
+        162
+      ],
+      "panel_F_annotation": [
+        836,
+        142,
+        900,
+        162
+      ]
+    }
+  },
+  "source_unchanged": true,
+  "abbreviations_needed": false,
+  "position_changes": "Main titles recentered; Figure1 D/F annotations wrap at original point size; Figure3 C title moved left within existing title-row whitespace."
+}

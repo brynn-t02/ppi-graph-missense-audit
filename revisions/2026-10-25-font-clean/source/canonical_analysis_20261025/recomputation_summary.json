@@ -1,0 +1,28 @@
+{
+  "new_fits": 0,
+  "frozen_selected_checkpoints": 57,
+  "canonical_representation_checkpoints": 21,
+  "unchanged_fusion_score_prediction_fits": 36,
+  "paired_protein_comparisons": 27,
+  "interval_metric_entries": 54,
+  "interval_sign_or_zero_crossing_changes": 0,
+  "point_delta_direction_changes": 0,
+  "interval_class_counts": {
+    "crosses_zero": 26,
+    "positive": 20,
+    "negative": 8
+  },
+  "max_internal_probability_change": 3.5762786865234375e-07,
+  "max_prior_external_node_probability_change": 4.470348358154297e-07,
+  "max_old_within_protein_probability_spread": 2.384185791015625e-07,
+  "max_canonical_within_protein_probability_spread": 0.0,
+  "max_seed_test_auc_change": 1.2198474626856637e-05,
+  "max_seed_test_ap_change": 0.0003068414038109868,
+  "probability_gate": 2e-06,
+  "external_predictions": "All external populations were remapped using the same new canonical CPU node probabilities; not simply retained from old GPU node inference.",
+  "rng_change": "Seed 20261024 is restarted per population. Earlier matched analysis consumed a continuous stream across populations; new CIs may differ slightly for this reason as well as canonical ties/float64 averaging.",
+  "claim_limit": "Unadjusted exploratory intervals condition on frozen fits/networks/memberships; unchanged sign classifications do not establish new training robustness or independent patient/evidence validation.",
+  "public_files": 22,
+  "public_bytes": 15864577,
+  "evidence": "old_to_canonical_comparison.json contains all 54 old/new point and CI records; public_release_verification.json verifies gzip roundtrip and metrics; verification.json includes five complete independent sklearn 2000-resample checks."
+}

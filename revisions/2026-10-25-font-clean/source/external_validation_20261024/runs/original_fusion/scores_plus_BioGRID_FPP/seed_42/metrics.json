@@ -1,0 +1,14 @@
+{
+  "split": "original_fusion",
+  "arm": "scores_plus_BioGRID_FPP",
+  "seed": 42,
+  "best_epoch": 3,
+  "epochs_run": 8,
+  "val_auc": 0.9730993353271518,
+  "val_auprc": 0.9284969230382327,
+  "test_auc": 0.9680786700063382,
+  "test_auprc": 0.9307648151585177,
+  "seconds": 11.247514247894287,
+  "dim": 1283,
+  "checkpoint_sha256": "0686fe5ebdca8f3e74384d884de94b9e44f8d0ea523c64da68a0d1a9cab55b81"
+}

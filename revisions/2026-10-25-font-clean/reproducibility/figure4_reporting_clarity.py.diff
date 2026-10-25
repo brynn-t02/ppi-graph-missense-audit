@@ -1,0 +1,12 @@
+--- previous/figure4_reporting_clarity.py
++++ font-clean/figure4_reporting_clarity.py
+@@ -56,7 +56,8 @@
+     pdfmetrics.registerFont(TTFont('OriginalFigureDejaVuSansBold', str(FONT)))
+     overlay = BytesIO()
+     width, height = float(page.mediabox.width), float(page.mediabox.height)
+-    canvas = Canvas(overlay, pagesize=(width, height), pageCompression=1)
++    canvas = Canvas(overlay, pagesize=(width, height), pageCompression=1,
++                    initialFontName='OriginalFigureDejaVuSansBold')
+     canvas.setFont('OriginalFigureDejaVuSansBold', 9)
+     canvas.setFillColorRGB(0, 0, 0)
+     canvas.drawString(x, y, NEW)

@@ -1,0 +1,986 @@
+{
+  "status": "passed",
+  "scope": "Read-only comparison of four PDFs after unused-font cleanup; no PDF changed by audit.",
+  "raster": {
+    "renderer": "pdftoppm",
+    "dpi": 300,
+    "comparison": "exact RGB channel equality"
+  },
+  "character_comparison": {
+    "library": "pdfplumber",
+    "fields": [
+      "text",
+      "x0",
+      "top",
+      "size",
+      "fontname"
+    ],
+    "fontname_normalization": "strip initial six uppercase letters plus plus-sign subset prefix",
+    "numeric_tolerance": 0
+  },
+  "pairs": [
+    {
+      "label": "main_named",
+      "old_path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_heading_style_20261025/BIBM2026_workshop_named_revised.pdf",
+      "new_path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/main.pdf",
+      "old_sha256": "1da0b069aaa7306185f2454f1f811d416a58b1201b5018c3ef4c78dfa0518808",
+      "new_sha256": "1a77062fbfc6abb2c8a59657974c177c36f9bc52f73990cc9f3217be8e925f7c",
+      "expected_pages": 8,
+      "pages": [
+        {
+          "page": 1,
+          "old_character_count": 4378,
+          "new_character_count": 4378,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "new_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 2,
+          "old_character_count": 5173,
+          "new_character_count": 5173,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "new_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 3,
+          "old_character_count": 5068,
+          "new_character_count": 5068,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "new_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 4,
+          "old_character_count": 3668,
+          "new_character_count": 3668,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "new_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 5,
+          "old_character_count": 3026,
+          "new_character_count": 3026,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "new_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 6,
+          "old_character_count": 2799,
+          "new_character_count": 2799,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "new_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 7,
+          "old_character_count": 6190,
+          "new_character_count": 6190,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "new_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 8,
+          "old_character_count": 1853,
+          "new_character_count": 1853,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "new_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "changed_pixels": 0
+        }
+      ],
+      "old_page_count": 8,
+      "new_page_count": 8,
+      "source_files_still_same_hash": true,
+      "reused_after_refresh_hash_verification": true
+    },
+    {
+      "label": "main_anonymous",
+      "old_path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_heading_style_20261025/BIBM2026_workshop_anonymous_revised.pdf",
+      "new_path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/main_anonymous.pdf",
+      "old_sha256": "c360bed05c2f7c8f411698f3c33699df1b9fb2b243870ece5a83706a240b71ab",
+      "new_sha256": "aa2c4f428b744674eb95aa09917dbfc0cd1a6aeff00ac6058c7e36a33257e9c1",
+      "expected_pages": 8,
+      "pages": [
+        {
+          "page": 1,
+          "old_character_count": 4565,
+          "new_character_count": 4565,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "new_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 2,
+          "old_character_count": 5210,
+          "new_character_count": 5210,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "new_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 3,
+          "old_character_count": 4892,
+          "new_character_count": 4892,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "new_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 4,
+          "old_character_count": 3724,
+          "new_character_count": 3724,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "new_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 5,
+          "old_character_count": 3026,
+          "new_character_count": 3026,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "new_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 6,
+          "old_character_count": 2799,
+          "new_character_count": 2799,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "new_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 7,
+          "old_character_count": 6186,
+          "new_character_count": 6186,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "new_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 8,
+          "old_character_count": 1508,
+          "new_character_count": 1508,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "new_rgb_shape": [
+            3300,
+            2550,
+            3
+          ],
+          "changed_pixels": 0
+        }
+      ],
+      "old_page_count": 8,
+      "new_page_count": 8,
+      "source_files_still_same_hash": true,
+      "reused_after_refresh_hash_verification": true
+    },
+    {
+      "label": "supplement_named",
+      "old_path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_heading_style_20261025/BIBM2026_supplementary_named_revised.pdf",
+      "new_path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/BIBM2026_supplementary_named_revised.pdf",
+      "old_sha256": "033c791cb3b2785e92d9b47be1b6985baf9838fa635d211cbb89996a3c75cd87",
+      "new_sha256": "ad7d9e51c2bbd14eab8194c214b8e4feb29a19b7d0bf68dfd3283986d8cbe6cc",
+      "expected_pages": 18,
+      "pages": [
+        {
+          "page": 1,
+          "old_character_count": 4166,
+          "new_character_count": 4166,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 2,
+          "old_character_count": 4604,
+          "new_character_count": 4604,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 3,
+          "old_character_count": 5069,
+          "new_character_count": 5069,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 4,
+          "old_character_count": 3046,
+          "new_character_count": 3046,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 5,
+          "old_character_count": 2905,
+          "new_character_count": 2905,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 6,
+          "old_character_count": 2013,
+          "new_character_count": 2013,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 7,
+          "old_character_count": 2615,
+          "new_character_count": 2615,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 8,
+          "old_character_count": 2117,
+          "new_character_count": 2117,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 9,
+          "old_character_count": 2312,
+          "new_character_count": 2312,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 10,
+          "old_character_count": 3238,
+          "new_character_count": 3238,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 11,
+          "old_character_count": 2814,
+          "new_character_count": 2814,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 12,
+          "old_character_count": 4690,
+          "new_character_count": 4690,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 13,
+          "old_character_count": 3470,
+          "new_character_count": 3470,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 14,
+          "old_character_count": 4042,
+          "new_character_count": 4042,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 15,
+          "old_character_count": 5141,
+          "new_character_count": 5141,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 16,
+          "old_character_count": 2838,
+          "new_character_count": 2838,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 17,
+          "old_character_count": 2076,
+          "new_character_count": 2076,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 18,
+          "old_character_count": 2349,
+          "new_character_count": 2349,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        }
+      ],
+      "old_page_count": 18,
+      "new_page_count": 18,
+      "source_files_still_same_hash": true
+    },
+    {
+      "label": "supplement_anonymous",
+      "old_path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_heading_style_20261025/BIBM2026_supplementary_anonymous_revised.pdf",
+      "new_path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/BIBM2026_supplementary_anonymous_revised.pdf",
+      "old_sha256": "06ea9508720f8681b27e4bdba0cceab4c58ab8a4c8d894d7ba2da2cbb3dc87d6",
+      "new_sha256": "1e6971c0a5f7a2bb12bb894a8569206ca777a23631eb0fa915a8b0560a022c79",
+      "expected_pages": 18,
+      "pages": [
+        {
+          "page": 1,
+          "old_character_count": 4349,
+          "new_character_count": 4349,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 2,
+          "old_character_count": 4132,
+          "new_character_count": 4132,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 3,
+          "old_character_count": 5069,
+          "new_character_count": 5069,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 4,
+          "old_character_count": 3046,
+          "new_character_count": 3046,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 5,
+          "old_character_count": 2905,
+          "new_character_count": 2905,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 6,
+          "old_character_count": 2013,
+          "new_character_count": 2013,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 7,
+          "old_character_count": 2615,
+          "new_character_count": 2615,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 8,
+          "old_character_count": 2117,
+          "new_character_count": 2117,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 9,
+          "old_character_count": 2312,
+          "new_character_count": 2312,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 10,
+          "old_character_count": 3238,
+          "new_character_count": 3238,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 11,
+          "old_character_count": 2814,
+          "new_character_count": 2814,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 12,
+          "old_character_count": 4690,
+          "new_character_count": 4690,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 13,
+          "old_character_count": 3470,
+          "new_character_count": 3470,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 14,
+          "old_character_count": 4042,
+          "new_character_count": 4042,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 15,
+          "old_character_count": 5141,
+          "new_character_count": 5141,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 16,
+          "old_character_count": 2838,
+          "new_character_count": 2838,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 17,
+          "old_character_count": 2076,
+          "new_character_count": 2076,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        },
+        {
+          "page": 18,
+          "old_character_count": 2349,
+          "new_character_count": 2349,
+          "exact_character_signature_equality": true,
+          "old_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "new_rgb_shape": [
+            3508,
+            2481,
+            3
+          ],
+          "changed_pixels": 0
+        }
+      ],
+      "old_page_count": 18,
+      "new_page_count": 18,
+      "source_files_still_same_hash": true
+    }
+  ],
+  "total_pages_checked": 52,
+  "total_changed_pixels": 0,
+  "representative_pngs": [
+    {
+      "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/font_cleanup_20261025/font_clean_main_named_page6_300dpi.png",
+      "sha256": "703dc1a01c5f22ec1353729ce83ca7743f4c1131a16cd3dfda853e2361e6014c",
+      "label": "main_named",
+      "page": 6
+    },
+    {
+      "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/font_cleanup_20261025/font_clean_supplement_named_page3_300dpi.png",
+      "sha256": "154442a2cf996e1d22cf902e165150e952bb8bcaaf7eec3b339ccd825e2b0bfd",
+      "label": "supplement_named",
+      "page": 3
+    }
+  ],
+  "findings": [],
+  "main_results_reused_after_hash_verification": true,
+  "refresh_reason": "Supplement-only rebuild to remove unused per-page initialization font resource.",
+  "all_52_pages_exact_rgb_equal": true,
+  "all_character_signatures_exactly_equal": true,
+  "representative_visual_inspection": {
+    "main_page6": "Previously inspected; main PDFs retained identical hashes.",
+    "supplement_page3": "Refreshed from rebuilt named supplement and inspected again; pass, no new overlap/clipping or changed content observed."
+  }
+}
