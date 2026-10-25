@@ -1,0 +1,310 @@
+{
+  "date": "2026-10-25T15:04:57.985579+08:00",
+  "task_evolution": "Initial read-only audit was superseded by explicit root/user authorization to restore Fig1E and Fig2D in a new dated version. Only the two new-version figure scripts and their PNG/PDF outputs were changed by this subagent.",
+  "baseline_original": "outputs/BIBM_workshop_IEEE_checked_20261024/投稿前原版/BIBM2026_main_paper_anonymous.pdf; pages4–6",
+  "layout_baseline": "outputs/BIBM_workshop_layout_revision_20261024/source/figure_scripts",
+  "statistics_baseline": "outputs/BIBM_workshop_review_synthesis_20261025/source/canonical_analysis_20261025",
+  "destination": "outputs/BIBM_workshop_architecture_clarified_20261025/source",
+  "panel_mapping": [
+    {
+      "original_panel": "Fig1A",
+      "review_synthesis_location": "Main Fig1A",
+      "restored_location": "Main Fig1A",
+      "status": "layout_restored",
+      "detail_zh": "恢复原六面板中的左上竖排流程；不改科学流程。"
+    },
+    {
+      "original_panel": "Fig1B",
+      "review_synthesis_location": "Main Fig1B",
+      "restored_location": "Main Fig1B",
+      "status": "current_canonical_retained",
+      "detail_zh": "当前三种子均值/样本SD，不能换回原参考单次结果。"
+    },
+    {
+      "original_panel": "Fig1C",
+      "review_synthesis_location": "Main Fig1C",
+      "restored_location": "Main Fig1C",
+      "status": "current_canonical_retained",
+      "detail_zh": "当前统一float64集成及2,000次variant/protein区间，不能换回历史参考run区间。"
+    },
+    {
+      "original_panel": "Fig1D",
+      "review_synthesis_location": "Main Fig1D",
+      "restored_location": "Main Fig1D",
+      "status": "current_canonical_retained",
+      "detail_zh": "当前共同算子/种子/预算下消融，不能换回旧算子结果。"
+    },
+    {
+      "original_panel": "Fig1E",
+      "review_synthesis_location": "Supplementary FigS3A",
+      "restored_location": "Main Fig1E",
+      "status": "historical_panel_restored",
+      "detail_zh": "历史partial ablation原均值/SD恢复原位置；明确seed/budget/operator不匹配，0%/100%端点复用，仅描述性。"
+    },
+    {
+      "original_panel": "Fig1F",
+      "review_synthesis_location": "Main Fig1E",
+      "restored_location": "Main Fig1F",
+      "status": "panel_letter_restored",
+      "detail_zh": "当前canonical topology permutation数值不变，回F位置。"
+    },
+    {
+      "original_panel": "Fig2A",
+      "review_synthesis_location": "Main Fig2A",
+      "restored_location": "Main Fig2A",
+      "status": "layout_and_wording_restored",
+      "detail_zh": "恢复原竖排覆盖率/融合流程；Same hidden-layer architecture，图注说明same hidden-layer architecture。"
+    },
+    {
+      "original_panel": "Fig2B",
+      "review_synthesis_location": "Main Fig2B",
+      "restored_location": "Main Fig2B",
+      "status": "current_canonical_retained",
+      "detail_zh": "保留当前canonical原划分融合三种子均值和样本SD。"
+    },
+    {
+      "original_panel": "Fig2C",
+      "review_synthesis_location": "Main Fig2C",
+      "restored_location": "Main Fig2C",
+      "status": "current_canonical_retained",
+      "detail_zh": "保留当前canonical paired protein bootstrap集成差及区间。"
+    },
+    {
+      "original_panel": "Fig2D",
+      "review_synthesis_location": "Supplementary FigS3B",
+      "restored_location": "Main Fig2D",
+      "status": "historical_panel_restored",
+      "detail_zh": "每臂历史单次拟合；AUC=.7248/.7606, AP=.2418/.2768；明确n=1且无重复不确定性。"
+    },
+    {
+      "original_panel": "Fig2E",
+      "review_synthesis_location": "Main Fig2D",
+      "restored_location": "Main Fig2E",
+      "status": "panel_letter_restored",
+      "detail_zh": "保留每臂三种子当前canonical homology fusion；不能回退旧单次graph对多次baseline。"
+    },
+    {
+      "original_panel": "Fig2F",
+      "review_synthesis_location": "Main Fig2E",
+      "restored_location": "Main Fig2F",
+      "status": "panel_letter_restored",
+      "detail_zh": "原test prevalence31.95%/10.56%不变。"
+    },
+    {
+      "original_panel": "Fig3A",
+      "review_synthesis_location": "Supplementary FigS2A",
+      "restored_location": "Supplementary FigS2A",
+      "status": "byte_identical_this_revision",
+      "detail_zh": "历史拓扑图原数据保留；已注明同测试集选择53cells及未校正蛋白依赖/选择不确定性。"
+    },
+    {
+      "original_panel": "Fig3B",
+      "review_synthesis_location": "Supplementary FigS2B",
+      "restored_location": "Supplementary FigS2B",
+      "status": "byte_identical_this_revision",
+      "detail_zh": "历史拓扑图原数据保留；已注明同测试集选择53cells及未校正蛋白依赖/选择不确定性。"
+    },
+    {
+      "original_panel": "Fig3C",
+      "review_synthesis_location": "Supplementary FigS2C",
+      "restored_location": "Supplementary FigS2C",
+      "status": "byte_identical_this_revision",
+      "detail_zh": "历史拓扑图原数据保留；已注明同测试集选择53cells及未校正蛋白依赖/选择不确定性。"
+    },
+    {
+      "original_panel": "Fig3D",
+      "review_synthesis_location": "Supplementary FigS2D",
+      "restored_location": "Supplementary FigS2D",
+      "status": "byte_identical_this_revision",
+      "detail_zh": "历史拓扑图原数据保留；已注明同测试集选择53cells及未校正蛋白依赖/选择不确定性。"
+    },
+    {
+      "original_panel": "Fig3E",
+      "review_synthesis_location": "Supplementary FigS2E",
+      "restored_location": "Supplementary FigS2E",
+      "status": "byte_identical_this_revision",
+      "detail_zh": "历史拓扑图原数据保留；已注明同测试集选择53cells及未校正蛋白依赖/选择不确定性。"
+    },
+    {
+      "original_panel": "Fig3F",
+      "review_synthesis_location": "Supplementary FigS2F",
+      "restored_location": "Supplementary FigS2F",
+      "status": "byte_identical_this_revision",
+      "detail_zh": "历史拓扑图原数据保留；已注明同测试集选择53cells及未校正蛋白依赖/选择不确定性。"
+    },
+    {
+      "original_panel": "Fig4A",
+      "review_synthesis_location": "Supplementary FigS1A",
+      "restored_location": "Supplementary FigS1A",
+      "status": "byte_identical_this_revision",
+      "detail_zh": "历史转移计数/特征均值保留，整图本轮字节不变。"
+    },
+    {
+      "original_panel": "Fig4B",
+      "review_synthesis_location": "Supplementary FigS1B",
+      "restored_location": "Supplementary FigS1B",
+      "status": "byte_identical_this_revision",
+      "detail_zh": "历史转移计数/特征均值保留，整图本轮字节不变。"
+    },
+    {
+      "original_panel": "Fig4C",
+      "review_synthesis_location": "Supplementary FigS1C",
+      "restored_location": "Supplementary FigS1C",
+      "status": "byte_identical_this_revision",
+      "detail_zh": "历史转移计数/特征均值保留，整图本轮字节不变。"
+    },
+    {
+      "original_panel": "Fig4D",
+      "review_synthesis_location": "Supplementary FigS1D",
+      "restored_location": "Supplementary FigS1D",
+      "status": "byte_identical_this_revision",
+      "detail_zh": "历史转移计数/特征均值保留，整图本轮字节不变。"
+    },
+    {
+      "original_panel": "Fig4E",
+      "review_synthesis_location": "Supplementary FigS1E",
+      "restored_location": "Supplementary FigS1E",
+      "status": "byte_identical_this_revision",
+      "detail_zh": "保留描述性FP−FN原均值差，不恢复旧FDR点大小/透明度/显著性编码。"
+    },
+    {
+      "original_panel": "Fig4F",
+      "review_synthesis_location": "Supplementary FigS1F",
+      "restored_location": "Supplementary FigS1F",
+      "status": "byte_identical_this_revision",
+      "detail_zh": "历史Hedges g保留，不能恢复显著性星号或difficulty-matched；实际是baseline-error-stratified。"
+    }
+  ],
+  "new_experiment_figure": {
+    "location": "Main Fig3A/B",
+    "status": "kept_byte_identical",
+    "source": "canonical_analysis_20261025/cluster_bootstrap.json",
+    "interpretation_zh": "外部STRING增益受区间支持；BioGRID外部及相对raw fusion增益仍不确定；结果依赖网络/基线，strict是嵌套敏感性子集，不是第二个独立患者队列。"
+  },
+  "architecture_wording": {
+    "initial_no_redraw_option": "Keeping the five-panel figure with its existing Same MLP hidden layers label would be defensible if the caption explicitly defined common architecture and independently fitted weights; it was no longer necessary once restoring the six-panel figure required re-rendering.",
+    "implemented": "Same hidden-layer architecture in Fig2A and main caption.",
+    "meaning_zh": "层宽/结构相同，各模型独立训练；输入维数/输入层参数数目可以不同，并不共享同一组训练权重。"
+  },
+  "minimum_preservation_strategy": {
+    "main": [
+      "Fig1 six panels",
+      "Fig2 six panels",
+      "Fig3 new external/network validation"
+    ],
+    "supplement": [
+      "S1 historical prediction transitions",
+      "S2 historical topology profiles"
+    ],
+    "duplicated_S3": "Two panels now restored to main. Root may remove duplicate presentation from new supplement; the prior dated S3 and all earlier snapshots remain preserved.",
+    "canvas_inches": [
+      7.4,
+      4.7
+    ],
+    "no_font_or_canvas_shrink_used_to_force_pagination": true,
+    "main_page_count": "Root to confirm final compile remains <=8; no main TeX edits by figure subagent."
+  },
+  "nonrevertible_corrections": [
+    "Current matched means/sample SD/canonical ensemble CIs must not be replaced by historical reference-run metrics.",
+    "Historical partial removal is not a matched dose-response and endpoints are not independent observations.",
+    "Single-fit historical homology representation has no repeated-seed uncertainty.",
+    "S1E/F significance encodings remain removed because historical feature tests treated repeated protein variants as independent; no continuous-score matching.",
+    "S2 selection/within-cell interval limitations and transductive external restrictions remain explicit."
+  ],
+  "numerical_verification": {
+    "result": "pass",
+    "proof": "figure_restoration_numerical_proof.json",
+    "all_current_plot_values_exactly_equal_to_synthesis_canonical_baseline": true,
+    "historical_inputs_byte_identical": true,
+    "other_three_figures_byte_identical": true
+  },
+  "visual_verification": {
+    "figures_viewed": [
+      "Figure1_fixed_propagation_audit.png",
+      "Figure2_fusion_homology.png"
+    ],
+    "result": "pass",
+    "issues": [],
+    "details_zh": "最终两处标签已更正并重渲染复查；六面板无文本相撞、区间裁切或图例遮挡；历史限定在图内和正文图注可见。恢复旧布局字级，未额外缩小。PDF页面级检查由root完成。"
+  },
+  "manuscript_reference_check": {
+    "result": "pass at inspected source state",
+    "Fig1E": "historical partial ablation",
+    "Fig1F": "current topology permutation",
+    "Fig2D": "historical one fit per arm",
+    "Fig2E": "current matched homology fusion",
+    "Fig2F": "test prevalence",
+    "supplement_tables": [
+      2,
+      4,
+      8
+    ],
+    "S1_S2": "historical correct references retained",
+    "current_main_numeric_conclusions": "No contradictions found with figures/canonical records."
+  },
+  "files": {
+    "figure_scripts/figure1_revised.py": {
+      "sha256": "10abfca16d246a1d62f9391677c6c9a753ce6ae60bb724a39c1efe0d602f571f",
+      "bytes": 9478
+    },
+    "figure_scripts/figure2_revised.py": {
+      "sha256": "a175e3dc96bb9a7b5ef8a3ef13109eab36412ddb63498bd2d2b91249fb3fe6c3",
+      "bytes": 11435
+    },
+    "figure_drafts/Figure2_fusion_homology.pdf": {
+      "sha256": "a2f1f297a77d6dc2291dcc8ee7ee32bd2d6bef24f045b8b866c34504bd6cc2ff",
+      "bytes": 31533
+    },
+    "figure_drafts/Figure2_fusion_homology.png": {
+      "sha256": "0f390ed5b7c15e2d966c2a41e2e3517c0963f8bb57ac11051909d67af7bda6d6",
+      "bytes": 235530
+    },
+    "figure_drafts/Figure1_fixed_propagation_audit.png": {
+      "sha256": "c043f37f8ef487032018d650388f1a41cd97919ae228285000d085ce2d463fe3",
+      "bytes": 246294
+    },
+    "figure_drafts/Figure1_fixed_propagation_audit.pdf": {
+      "sha256": "58ffe759f3820de6689ee239f4f51d3fcd134cf731e785f3d48706a00aec523f",
+      "bytes": 33311
+    }
+  },
+  "source_diffs": [
+    "figure1_revised.py.from_layout.diff",
+    "figure1_revised.py.from_synthesis.diff",
+    "figure2_revised.py.from_layout.diff",
+    "figure2_revised.py.from_synthesis.diff"
+  ],
+  "unchanged_assets": {
+    "figure_drafts/Figure3_external_validation.pdf": {
+      "same_bytes": true,
+      "sha256": "12c910b00d9b8123226f324f6701bec8be017f430048552d6e29a340d5eba8a5"
+    },
+    "figure_drafts/Figure3_external_validation.png": {
+      "same_bytes": true,
+      "sha256": "4d406f8c5549768a827bacc1713596955a44aafefd382042120d88b08ea90651"
+    },
+    "figure_drafts/Figure3_exploratory_topology.pdf": {
+      "same_bytes": true,
+      "sha256": "30958eb52a1a0d6cba6380f23e857e753d9f93259af2c608b1b8eeb2907618d0"
+    },
+    "figure_drafts/Figure3_exploratory_topology.png": {
+      "same_bytes": true,
+      "sha256": "95c5a2ef6c8ef7a71d74ca6cd368ee36f76a5d18d1931c9dd88af734d275e4fa"
+    },
+    "figure_drafts/Figure4_prediction_transitions.pdf": {
+      "same_bytes": true,
+      "sha256": "ef79c34ce84ada751fee94f10f0400786b42bb59bb18f4c67a958c5bdad6ad16"
+    },
+    "figure_drafts/Figure4_prediction_transitions.png": {
+      "same_bytes": true,
+      "sha256": "0c53a2f977ef7d7557215e74321e3c1ca901b134b61459396e8b6654243889bd"
+    }
+  },
+  "no_new_experiments": true,
+  "no_server_access": true,
+  "no_git_actions": true,
+  "final_label_changes": [
+    "Fig1 suptitle: removed Matched to avoid applying matched status to historical panel E.",
+    "Fig2A: Same hidden-layer architecture."
+  ]
+}

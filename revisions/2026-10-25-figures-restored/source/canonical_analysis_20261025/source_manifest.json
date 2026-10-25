@@ -1,0 +1,717 @@
+{
+  "inputs": [
+    {
+      "path": "assets/data/clinvar_test_main.csv",
+      "sha256": "c89d6507c8b8b45c4177f2434c7ecfa8435f60d03b327a9c4493e0b51a6c45e6"
+    },
+    {
+      "path": "assets/data/clinvar_train_main.csv",
+      "sha256": "14340ecc0335d2ff2489013422a738852cf4856257d4c2a8195c1a975b6bff69"
+    },
+    {
+      "path": "assets/data/clinvar_val_main.csv",
+      "sha256": "072e0f596313bc4c46c92ad3b974fe3643d47ff342dae5e5e103a614e99af62d"
+    },
+    {
+      "path": "assets/data/clinvar_with_alphamissense.csv",
+      "sha256": "4df4043715f2cc390ca5d70135a505b04248e5fb9b0858542c67ae2962c195d1"
+    },
+    {
+      "path": "assets/data/clinvar_with_cadd.csv",
+      "sha256": "640207f18abd7a7c4089937462a13ecc2a6d1f33cbb42fa03b99d250a6c6f7a3"
+    },
+    {
+      "path": "assets/data/gcn_embeddings/gcn_node_embeddings.pt",
+      "sha256": "5a9fbe0787878c821665e22227af30a40c7ad9400a891b807f515ad2a556bd6e"
+    },
+    {
+      "path": "assets/data/homology_aware_split/clinvar_test_homology.csv",
+      "sha256": "898a1140985769f543321afbc58caa823fb461b9f82e63e4652a7ee27cff2d17"
+    },
+    {
+      "path": "assets/data/homology_aware_split/clinvar_train_homology.csv",
+      "sha256": "6e82fa449aa47688dc2a8f1b78fdc52ceb04f3d261e3ba3c4720069f48e2c085"
+    },
+    {
+      "path": "assets/data/homology_aware_split/clinvar_val_homology.csv",
+      "sha256": "b02600cde8a2c1dda0867a9f58f4a069af534dbad2d7f6a35a83314229e68451"
+    },
+    {
+      "path": "assets/data/model_inputs_main.pt",
+      "sha256": "0f9b61664620e5c94d2ceca84b4b605a5dcce9e02677d6b641f8f64d3e4c397d"
+    },
+    {
+      "path": "assets/external_validation_20261024/code/analyze_external_validation.py",
+      "sha256": "aae413c283c2d5cca98c1e4400662181a3049863bbe583e5cb5013158134ecc9"
+    },
+    {
+      "path": "assets/external_validation_20261024/cohort_recon/external_cohort_all_variant_disjoint.csv",
+      "sha256": "4112d1dec2803423ab43c1fe82f9f98a99b41adce452517b7dcf64327e8ee048"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/derived_embeddings/BioGRID_FPP.pt",
+      "sha256": "297016e36374d11bd2a1586da43c14368ffb7b300b0442fa02135833814e668a"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/node_predictions/BioGRID_FPP/seed_42.npy",
+      "sha256": "15474e2f85353f9c408870034316b3fd68771a0bf8cef69c911b98d2e0c711ef"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/node_predictions/BioGRID_FPP/seed_43.npy",
+      "sha256": "36fe53c8954d21df079710794fb7c072675818d783cc3b422872d798e0d48a0a"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/node_predictions/BioGRID_FPP/seed_44.npy",
+      "sha256": "612240068e40d1e427101a871ee0bc08ec05092b85629ce5832efd165190e569"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/node_predictions/full_FPP/seed_42.npy",
+      "sha256": "e74ebbc43f4b3c6c3fa362f689534b8c5c3cf446e0a2be44d1fc135144b07560"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/node_predictions/full_FPP/seed_43.npy",
+      "sha256": "32271640f3e7cc26c7782284f1bfbb9716073dd08655484c20b463810d2db4d8"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/node_predictions/full_FPP/seed_44.npy",
+      "sha256": "3c135abb45f9eb7179da61a34c870054813ebec3fbdf4c43eacbe62527b4a99e"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/node_predictions/raw_ESM/seed_42.npy",
+      "sha256": "7df0230eaa642901357944db79b15730bd40e3028e33ff5637211766d654d639"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/node_predictions/raw_ESM/seed_43.npy",
+      "sha256": "188395644866bdfbc4131a0dc8711c7931e730f8d6cc7226f1ffc0c09eb1f4d6"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/node_predictions/raw_ESM/seed_44.npy",
+      "sha256": "efa48fc3c0ae5e5e25088856c4aea5f2078f397e341f06bc707a64bfdac1d0cb"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/per_run_metrics.csv",
+      "sha256": "976bccfce7f27aa2a16ed3eccd52b34aa78927c424d0addc7b563fe43fd3f547"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/runs/homology/scores_plus_BioGRID_FPP/seed_42/model.pt",
+      "sha256": "280a61b37dd6a163f960800b379b4479b94b0c9a8b541344fc33e8b08eaac5be"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/runs/homology/scores_plus_BioGRID_FPP/seed_42/test_probs.npy",
+      "sha256": "e7d6af48264a9f2f719d9db3bc1c8fb019345a13a7b43c394bab8a8e79de3e6d"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/runs/homology/scores_plus_BioGRID_FPP/seed_43/model.pt",
+      "sha256": "32312bdda577cfd95196c52da25af40e569cda82124b72d88a55020920e40f2e"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/runs/homology/scores_plus_BioGRID_FPP/seed_43/test_probs.npy",
+      "sha256": "6fdc21650691cb2d40cc2ee31939b7adca1c2257e3ac66c0fc5ff7a47babdc57"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/runs/homology/scores_plus_BioGRID_FPP/seed_44/model.pt",
+      "sha256": "295011820f8e9a7cebf5bc4b8db88e33f83f8b63bebae88b8ed9d432ca5d3a32"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/runs/homology/scores_plus_BioGRID_FPP/seed_44/test_probs.npy",
+      "sha256": "1e32ec8128b87ef99e83b68363a1e898401be42285fe6b910355bf14a14b28e8"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_42/model.pt",
+      "sha256": "91afbf673617623bee5326eb66f1976bed2c35efc6f7093ab5b3ff9c91bc15fa"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_42/test_probs.npy",
+      "sha256": "204342da9d8cbadcbc48d3a2411d568a70950cb64a96552f1ef696e73a3932fc"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_42/val_probs.npy",
+      "sha256": "b66b895283ca33c65307c2711d5f3bb2537f8d31094f7e77ca4c5bc6739e4058"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_43/model.pt",
+      "sha256": "3a7e12dfbec8e431c70479c9fc8cfdc2992efa99044ff781f39c0f9e04c182b6"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_43/test_probs.npy",
+      "sha256": "69ec9941f409755685981b142b623d8eddde8d5aac61245d98603dcd963c9f20"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_43/val_probs.npy",
+      "sha256": "dc660fd65ec8a42320be468cb7f4b3137820965d619d1e24b21341b6485e1fde"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_44/model.pt",
+      "sha256": "a46d0439f01fa11025bea2fa450af7f4e918bbef223292a2bd499a62a11c090b"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_44/test_probs.npy",
+      "sha256": "2fbbfd5afb55f27dc34f5328a1592758062c3c8daaa3b81892114a7fe2630a5c"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_44/val_probs.npy",
+      "sha256": "5752dfb7faaceb9ce2fffbd230d08115ec54fa29d909d4e36b85588c7b952105"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/runs/original_fusion/scores_plus_BioGRID_FPP/seed_42/model.pt",
+      "sha256": "0686fe5ebdca8f3e74384d884de94b9e44f8d0ea523c64da68a0d1a9cab55b81"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/runs/original_fusion/scores_plus_BioGRID_FPP/seed_42/test_probs.npy",
+      "sha256": "29f918ac4c5fcfda3111fc36f0d30f7e027904bd18ed75d2016186aa0e4b2cc8"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/runs/original_fusion/scores_plus_BioGRID_FPP/seed_43/model.pt",
+      "sha256": "f95eed95e90ee583828aecd02f00b351d7c934089e026315d604d6680093de82"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/runs/original_fusion/scores_plus_BioGRID_FPP/seed_43/test_probs.npy",
+      "sha256": "78f15cd136a2eaad82f7aad10355aa97fdf1336cd6bbbd2e99f18bb69e7ae5cc"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/runs/original_fusion/scores_plus_BioGRID_FPP/seed_44/model.pt",
+      "sha256": "702938c13e5b03565ac038b09c63afd9862601e32b81702650494fca6af0975f"
+    },
+    {
+      "path": "assets/external_validation_20261024/outputs/runs/original_fusion/scores_plus_BioGRID_FPP/seed_44/test_probs.npy",
+      "sha256": "cbd04b8df530656c174c4f05dbe161aca1c7247e042ee55592cd280d5ee5e8fe"
+    },
+    {
+      "path": "assets/outputs/derived_embeddings/edge_ablated_FPP.pt",
+      "sha256": "52aaf62c2549e10b301b919644f51d614c888cd4e13a7ddeab2b6aee3040004c"
+    },
+    {
+      "path": "assets/outputs/derived_embeddings/permuted_FPP_g0.pt",
+      "sha256": "30cc43cc962fd3a2b01bcceb05cef903d85ca891846aa553e6d4f87804c1da2f"
+    },
+    {
+      "path": "assets/outputs/derived_embeddings/permuted_FPP_g1.pt",
+      "sha256": "6665a5d58cf6a7c491ba6003403b2941e9fa7e00e0a4f853b3b68ed82cbe4309"
+    },
+    {
+      "path": "assets/outputs/derived_embeddings/permuted_FPP_g2.pt",
+      "sha256": "316fc4a5eb3dc387fa19730733b848a7c2e9924fba193dcbd5fed7d0affafbea"
+    },
+    {
+      "path": "assets/outputs/per_run_metrics.csv",
+      "sha256": "149c99e8402715294a47fa076a0155758b1106aaceef57aa71dd123099b58714"
+    },
+    {
+      "path": "assets/outputs/runs/homology/scores_capacity_matched/seed_42/model.pt",
+      "sha256": "c608fd2146253e1487459744e2572e87c20006f57a120d25514ffe6d721223a2"
+    },
+    {
+      "path": "assets/outputs/runs/homology/scores_capacity_matched/seed_42/test_probs.npy",
+      "sha256": "2c5947af1426d590c0e581921e1a0b9a1e74ef48db9f7684e9bd124ee76665db"
+    },
+    {
+      "path": "assets/outputs/runs/homology/scores_capacity_matched/seed_43/model.pt",
+      "sha256": "72237f953711589eeab32ebdb27f3ed3a113e6dd0c9824ad5a5b63a2332fa406"
+    },
+    {
+      "path": "assets/outputs/runs/homology/scores_capacity_matched/seed_43/test_probs.npy",
+      "sha256": "853a98b9351aefc682ec4f9972ef4485d55037c14762c2a6a86663c05a5d8849"
+    },
+    {
+      "path": "assets/outputs/runs/homology/scores_capacity_matched/seed_44/model.pt",
+      "sha256": "1ed2db85a61040c191bdd38d9f7d862cb6b698a0caa2666b112778c717ef3b55"
+    },
+    {
+      "path": "assets/outputs/runs/homology/scores_capacity_matched/seed_44/test_probs.npy",
+      "sha256": "55aa9bc98763223dcb81db43ca4b84d0a0ea54aef5fc3613932dfa4e1068e61d"
+    },
+    {
+      "path": "assets/outputs/runs/homology/scores_plus_full_FPP/seed_42/model.pt",
+      "sha256": "5c18c389074ec6f829570e4aeec74c84b82dfe36e017b977bb0ada7914e440f1"
+    },
+    {
+      "path": "assets/outputs/runs/homology/scores_plus_full_FPP/seed_42/test_probs.npy",
+      "sha256": "1f59c48c1d2e05bcd5d9648b2d89a3da739bd092a79d6014d9b6e75bd3695d06"
+    },
+    {
+      "path": "assets/outputs/runs/homology/scores_plus_full_FPP/seed_43/model.pt",
+      "sha256": "30f749b2813e75750292868dcc406dc96ad308a83a19a3f38fb0295cd196006c"
+    },
+    {
+      "path": "assets/outputs/runs/homology/scores_plus_full_FPP/seed_43/test_probs.npy",
+      "sha256": "d2e61551fd4ac0e1c146bee4d5cfd11027e8d887b39ead3a576477f90a7e77be"
+    },
+    {
+      "path": "assets/outputs/runs/homology/scores_plus_full_FPP/seed_44/model.pt",
+      "sha256": "d5f3bca4da02e7b78d72a521c216f4dbfd15dc137452eb2d966bc5228bdfdd65"
+    },
+    {
+      "path": "assets/outputs/runs/homology/scores_plus_full_FPP/seed_44/test_probs.npy",
+      "sha256": "9fd0ad818f27ddfcfe817a9a60ac06fb591d1b99fc4f3bcbe80f52d4c94a1246"
+    },
+    {
+      "path": "assets/outputs/runs/homology/scores_plus_raw_ESM/seed_42/model.pt",
+      "sha256": "45178b22d86162f378489536dd75b42ecc666214433647d7ffe12e0ebe97128e"
+    },
+    {
+      "path": "assets/outputs/runs/homology/scores_plus_raw_ESM/seed_42/test_probs.npy",
+      "sha256": "61a959f54f1aa3d559435d7f3ae1d4481724c853b2a99fee5d22988645fc06eb"
+    },
+    {
+      "path": "assets/outputs/runs/homology/scores_plus_raw_ESM/seed_43/model.pt",
+      "sha256": "d4c1a44e908184be23a16f59666141c5b00111fa05c57aa35fdef06dcf838ec7"
+    },
+    {
+      "path": "assets/outputs/runs/homology/scores_plus_raw_ESM/seed_43/test_probs.npy",
+      "sha256": "07026069e3d8f5954930479d211c4c942a70f0255053026620e82e19e480ae71"
+    },
+    {
+      "path": "assets/outputs/runs/homology/scores_plus_raw_ESM/seed_44/model.pt",
+      "sha256": "e5360e4e844ba91a0694d62a76ac7a200235639fde37aca9d6229427e938bea4"
+    },
+    {
+      "path": "assets/outputs/runs/homology/scores_plus_raw_ESM/seed_44/test_probs.npy",
+      "sha256": "4be8a10061bb70e17fa615104aeb3dca70a24bd4a6efca42e32e46e3bdadb353"
+    },
+    {
+      "path": "assets/outputs/runs/original/edge_ablated_FPP/seed_42/model.pt",
+      "sha256": "04f0de5f73c9699fccf26440cc891b8b5ffcae003faaa00ddea01912e6c9d8cf"
+    },
+    {
+      "path": "assets/outputs/runs/original/edge_ablated_FPP/seed_42/test_probs.npy",
+      "sha256": "55e949bdc6a6ca8b5996ec3d9233e06c0bbbb562274b4becf50fbf070e913cd4"
+    },
+    {
+      "path": "assets/outputs/runs/original/edge_ablated_FPP/seed_42/val_probs.npy",
+      "sha256": "1f72e720dbfdfa53c05c9a792b4cdc28bea9b7e9f35d7e37b91bb356f9b18709"
+    },
+    {
+      "path": "assets/outputs/runs/original/edge_ablated_FPP/seed_43/model.pt",
+      "sha256": "a471efa7097de2e2dc34e815fc103da8698c51fe7f18a8608ead1d9cbb5733fb"
+    },
+    {
+      "path": "assets/outputs/runs/original/edge_ablated_FPP/seed_43/test_probs.npy",
+      "sha256": "2af302f7ae8481ea5cb3ccf84a0f5848524cb3b6a4f0b71188af894d61c4d502"
+    },
+    {
+      "path": "assets/outputs/runs/original/edge_ablated_FPP/seed_43/val_probs.npy",
+      "sha256": "80f03c6025340abe418bfa8d1f2f2e427af7cc8d4eb05010bbe0262de0ce4e1e"
+    },
+    {
+      "path": "assets/outputs/runs/original/edge_ablated_FPP/seed_44/model.pt",
+      "sha256": "f96396e3e9bbac54e2360f51a5421b23e67116eaa1a233af420629ef2329b4c1"
+    },
+    {
+      "path": "assets/outputs/runs/original/edge_ablated_FPP/seed_44/test_probs.npy",
+      "sha256": "8a57fad24f178f6b23c55c1fc84b5b86472ce05fd08379a8647ce72b8297aa7a"
+    },
+    {
+      "path": "assets/outputs/runs/original/edge_ablated_FPP/seed_44/val_probs.npy",
+      "sha256": "afde6fd317475cd197bd54ea88f8cac14311bf320887ea6ed9f63378b6359bf0"
+    },
+    {
+      "path": "assets/outputs/runs/original/full_FPP/seed_42/model.pt",
+      "sha256": "b208b66ed92c9ec609f1b3ebb5550218aadd720b089745fcafd1761ec2dcfcdd"
+    },
+    {
+      "path": "assets/outputs/runs/original/full_FPP/seed_42/test_probs.npy",
+      "sha256": "b150c286b265043f6ab409e7dc477aae5a105dfd1941d256899e45903c44d7b9"
+    },
+    {
+      "path": "assets/outputs/runs/original/full_FPP/seed_42/val_probs.npy",
+      "sha256": "0a326aab67b029f83db50c209dfcd0567c2604079a9f160174f0c03cd853bd24"
+    },
+    {
+      "path": "assets/outputs/runs/original/full_FPP/seed_43/model.pt",
+      "sha256": "a4472bcfac34fab4354a1930ed12cae524eb37572c1579da29075147c114293f"
+    },
+    {
+      "path": "assets/outputs/runs/original/full_FPP/seed_43/test_probs.npy",
+      "sha256": "20e1173fa03624bee12bee69f4938851fc7c738764093d7d1899324af7b857be"
+    },
+    {
+      "path": "assets/outputs/runs/original/full_FPP/seed_43/val_probs.npy",
+      "sha256": "c8e998bddf0d1896376d94a94693d38a14b3e8eeb3cae7bc7bbdc98f5ae2e92b"
+    },
+    {
+      "path": "assets/outputs/runs/original/full_FPP/seed_44/model.pt",
+      "sha256": "ec440fd5490a88aa96e964c3503f24c77413f79019b723de3d6ba5c3a461a0e0"
+    },
+    {
+      "path": "assets/outputs/runs/original/full_FPP/seed_44/test_probs.npy",
+      "sha256": "ee0e2be8e17d434f54740da6ba9430d2c803b7dfc38d182b4f50c60c8b7d4cb8"
+    },
+    {
+      "path": "assets/outputs/runs/original/full_FPP/seed_44/val_probs.npy",
+      "sha256": "5ed60da0a7d76828baaa73c23cb5a8761dff338c41063faf1ad73594a0b3005a"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g0/seed_42/model.pt",
+      "sha256": "be32a1f81e915086f774c8965c7a946164b3fbefc4b060f9cda2c79f687e776b"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g0/seed_42/test_probs.npy",
+      "sha256": "bafddda97adefe32d423078876b2e530a6b699cc16717a846720df41fa2538ee"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g0/seed_42/val_probs.npy",
+      "sha256": "5e4be25e91cfe5b9c144113ff1cc1990ab4b7bfc519b656e2f6ca9ba8108097d"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g0/seed_43/model.pt",
+      "sha256": "03a077d3502d282cddc87807c19f34737ff8742505694ea9d77d4ff1a342f0ea"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g0/seed_43/test_probs.npy",
+      "sha256": "5ed4cdb6fa998b7f4bc378faca738c5ce5c39629155c60b7019a281e20d8f2c7"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g0/seed_43/val_probs.npy",
+      "sha256": "a343645dba882695948d79982e0605197d969b3fa9f31cbad187376e2164f8b5"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g0/seed_44/model.pt",
+      "sha256": "79f6d13c8f492fe76a462bd5a8b675bf0f4b358b27ca891808671aa13aa59dcf"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g0/seed_44/test_probs.npy",
+      "sha256": "19b3affdc33b0e441265cdd6b8fa751940ca9be4da988daa6ca2024cc28ec72b"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g0/seed_44/val_probs.npy",
+      "sha256": "db259c18fd415331d4f285655e26250e47a01e89ca55acb8026fb71e2feeb403"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g1/seed_42/model.pt",
+      "sha256": "d47cf8cbd14a6541002e67339a84d4555a828fe286c01ae0454457df645645eb"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g1/seed_42/test_probs.npy",
+      "sha256": "9b3d2e3f57fae3f0bd1baaf5ffbcd24ecb88c19fa8091cf4792d8a086d299a4e"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g1/seed_42/val_probs.npy",
+      "sha256": "b6e1965a79ee1b28f47ad9caf757fcf96e1069e93f05e65acbbd98a91096fcb3"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g1/seed_43/model.pt",
+      "sha256": "b6c92d3fea94854cd7b90584dbd28fc910d60a81aeb1fa3e84174dc102338719"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g1/seed_43/test_probs.npy",
+      "sha256": "a7b9026c567d065366de08c95ab6972e0afa7a7e5695d7892345d87ff7e4494a"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g1/seed_43/val_probs.npy",
+      "sha256": "e270032f5385522be6123ad0d948c157327d018987d2e5b648bcefce7cb624c5"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g1/seed_44/model.pt",
+      "sha256": "f9cb644e4551400dded36d295cf1ad8a9221d8a5f096565446391d8b65422e5f"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g1/seed_44/test_probs.npy",
+      "sha256": "192202a8f83d84daf9633249c51a9b92ffe705c63697c0d4785b3abf682fe670"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g1/seed_44/val_probs.npy",
+      "sha256": "8467b518755778340d2a89789dc5b260d64f3cd784e748e100d3f5e420f5ab4a"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g2/seed_42/model.pt",
+      "sha256": "497447b8928a38ee6bfb8b5dfc9f9d72b34c42bc91063cca3ea799126f42fd56"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g2/seed_42/test_probs.npy",
+      "sha256": "de8e022d98bd989d4abdf9a7e152b5e601463c64ffe452f54686a6b97fe29b3c"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g2/seed_42/val_probs.npy",
+      "sha256": "28d3c7fcd7570ac07e6091ced4a8a7f0925894a915e5f821d16a5181fc534b85"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g2/seed_43/model.pt",
+      "sha256": "198ba0bf2eecef5c2f09699a0ae08d29744dd2e9db93340d59150a17993a87db"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g2/seed_43/test_probs.npy",
+      "sha256": "f7035b4a469797fcffd86be33ceba125b6352a7c8b50d834f0f6ed0e2f57676b"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g2/seed_43/val_probs.npy",
+      "sha256": "6684d5e7e09e7f3a2a747c0c296e95879c7af5df2cdad2b4a5a89de6ca3c613e"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g2/seed_44/model.pt",
+      "sha256": "f49ebdb03129d686304845dc8fbbe305903fed3beae9666493b936b378428666"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g2/seed_44/test_probs.npy",
+      "sha256": "23f194befdbb280ec6fdc9203733fc12eb8fce61ec515a0af2bf32a312c0c1d3"
+    },
+    {
+      "path": "assets/outputs/runs/original/permuted_FPP_g2/seed_44/val_probs.npy",
+      "sha256": "d2061054470d32ae1d3dcacf4a0bfab8ae6459f4734de468c361212d1bc71fb2"
+    },
+    {
+      "path": "assets/outputs/runs/original/raw_ESM/seed_42/model.pt",
+      "sha256": "c5e62f4f7e1d848672c6594c467fe3ab0b194f556d5d3d2440dbe1a5a1b0b9b0"
+    },
+    {
+      "path": "assets/outputs/runs/original/raw_ESM/seed_42/test_probs.npy",
+      "sha256": "2fdc76ebb26c4833b769f684295de884d9da523c5053f318bdb533cc1e6cf1ce"
+    },
+    {
+      "path": "assets/outputs/runs/original/raw_ESM/seed_42/val_probs.npy",
+      "sha256": "cccf76f6c8bdf7f138f0ff4d5da6b671082efbc2506fea2bb85cc344ece20e91"
+    },
+    {
+      "path": "assets/outputs/runs/original/raw_ESM/seed_43/model.pt",
+      "sha256": "772877e46c050c188e1fe80137cc3684b38fbb34541c4aa7b9bfdc0e496c7c1b"
+    },
+    {
+      "path": "assets/outputs/runs/original/raw_ESM/seed_43/test_probs.npy",
+      "sha256": "4d6b599275242e977cd2b1c659d00653f757ce36e6c90ed97ddbb12575abe620"
+    },
+    {
+      "path": "assets/outputs/runs/original/raw_ESM/seed_43/val_probs.npy",
+      "sha256": "9d9129022d17ee890358021693a9487e47380041182bf1757196477e7d51d6a3"
+    },
+    {
+      "path": "assets/outputs/runs/original/raw_ESM/seed_44/model.pt",
+      "sha256": "50ae990c85b67dce4d158eaabf3d09c5dec069bab1a12ba5b675e1c459b5828a"
+    },
+    {
+      "path": "assets/outputs/runs/original/raw_ESM/seed_44/test_probs.npy",
+      "sha256": "892774312491d28849922a4a362e931475447327e7cc7f44d81452993ad05286"
+    },
+    {
+      "path": "assets/outputs/runs/original/raw_ESM/seed_44/val_probs.npy",
+      "sha256": "38c08d76d6bb5ea4f097a44328008a432d6b24728185388d8f96ed04af5150cc"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_capacity_matched/seed_42/model.pt",
+      "sha256": "176752e0a02409975fe867bc82cf0f3cc97c6a87710077937a1557a40f43713a"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_capacity_matched/seed_42/test_probs.npy",
+      "sha256": "95a352a6ef81f3cf8fcf1770cd1f3177280eaa75fc57cc7d9541c51516b18e6c"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_capacity_matched/seed_43/model.pt",
+      "sha256": "7cd557a347725fe41e1fdbab234bfad817f7cedc4f5c44e000ec8597fffab68c"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_capacity_matched/seed_43/test_probs.npy",
+      "sha256": "50be7caa361b9ce5ea068dbd4690363da6318f2f8ab86c396f6be3c902bc39cf"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_capacity_matched/seed_44/model.pt",
+      "sha256": "2e6de467902242fb56e5146f520e353cddde936eb362c0a6c111d7d1388f2438"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_capacity_matched/seed_44/test_probs.npy",
+      "sha256": "ae75719d5ecda83725a6818be455dc13d928e774f90659f07af0a5a7a66094ef"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_edge_ablated_FPP/seed_42/model.pt",
+      "sha256": "d16acdbd8022ba70b0adfc3bbcfe07638eb43e010515f409b08b0f1efa8e7f35"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_edge_ablated_FPP/seed_42/test_probs.npy",
+      "sha256": "9f76267ae4436d72872bf386a8b46083bd405aa176983f6232635c5bd3facbd2"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_edge_ablated_FPP/seed_43/model.pt",
+      "sha256": "9f2e36a4b73d219c323640a73236314cfaa0de879287454a81d4accf005fd972"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_edge_ablated_FPP/seed_43/test_probs.npy",
+      "sha256": "aca862108a7fe571867fae198efac4a4ada42e61e59be2d53858671857c6e2ba"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_edge_ablated_FPP/seed_44/model.pt",
+      "sha256": "03d55f07b4d9aed1759d62d7ef49aa9356f244c35c4fd57704de595d8345d7e5"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_edge_ablated_FPP/seed_44/test_probs.npy",
+      "sha256": "7abf143252854528d86472509d37661582ccfa28caa6ed4b6a10e64a58a7c73f"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_full_FPP/seed_42/model.pt",
+      "sha256": "a55ddc4c8d1a220ee34cd8e2d2e4bbc7e0dcd7bf5076fb0fc4302c345a8c35d7"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_full_FPP/seed_42/test_probs.npy",
+      "sha256": "1bc59add982238c1bd3ec998f9beb717baf796f76cdb2e7224fb118a618844fb"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_full_FPP/seed_43/model.pt",
+      "sha256": "958a97aa4929755bbb95f266f09a2fa71d7603be362323bf2b76f1b7776fcef7"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_full_FPP/seed_43/test_probs.npy",
+      "sha256": "4f825d169f125e93534672f63955bfcdf1df0be567f5c2dfff7e1cca23c6cbb9"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_full_FPP/seed_44/model.pt",
+      "sha256": "f2dbee9c69099124124f43be7af661474ee320d50ccaa11170d2bf2caf42e724"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_full_FPP/seed_44/test_probs.npy",
+      "sha256": "8d769033c71b55c364cff26d889142e17a84e65a1e83467081fff3ce4e674679"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g0/seed_42/model.pt",
+      "sha256": "a5ce40a886ebf69454f07b28d32c5c29378b17af81c7cec9813cea5b6a8609b5"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g0/seed_42/test_probs.npy",
+      "sha256": "47237ab5b969c73c1e3783ecbffded372321f54c56329e062c8eae4e532431d3"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g0/seed_43/model.pt",
+      "sha256": "eab6eba9ea24443a101660a8fb13b65baffa7bc1ba5e739fd2ae6cdf3af55a21"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g0/seed_43/test_probs.npy",
+      "sha256": "efb17cc3f80959ee86b3aaaead5215eb58ffd6ff8419bdba74f937b5b8f83a20"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g0/seed_44/model.pt",
+      "sha256": "67c68c6903bc3b3e3cf1f050737320c7b7f2f65ef5c9e72d8ef76f033fc85707"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g0/seed_44/test_probs.npy",
+      "sha256": "ba6858372699b4ffec464242db4baaf0b36557692460cf6edeb83de84607faa5"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g1/seed_42/model.pt",
+      "sha256": "691eeaf9fe5b6b3a71e5975baf2a5abc31155495d9e45d133f7823dff0fd943f"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g1/seed_42/test_probs.npy",
+      "sha256": "3ce08bb295f9fb8793a3139294a6b726805cc3ae2a527815ee579830bca28c65"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g1/seed_43/model.pt",
+      "sha256": "956ebbf4b3ab6f4d17b7d6fa3a0aadbe62559af5c44a259bec27056485f510b4"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g1/seed_43/test_probs.npy",
+      "sha256": "c1220e9dc11f78e2136f4d957f9f5382513a8974269721ec011f32d0663cdb6b"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g1/seed_44/model.pt",
+      "sha256": "4690659a39ed078f63f53de08e1e344e6b0257e684382a72af5ab96ecdf651e0"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g1/seed_44/test_probs.npy",
+      "sha256": "91ac47886dd559f470603f35c801ed9b0d383eaf57c1ff2278c3becfe2c7f259"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g2/seed_42/model.pt",
+      "sha256": "051ddabb6f76b7e2c3f5310b24532917ddbd4758450d08ef2320a6aad11d92e7"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g2/seed_42/test_probs.npy",
+      "sha256": "eb767a452f54dd625740beda8d4d35a66b92281f4874f577c227dae118384933"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g2/seed_43/model.pt",
+      "sha256": "e8d60e8e65ae7fa7e6ae8b78e20c53f77880123ddcafb7378474174f5b34db6a"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g2/seed_43/test_probs.npy",
+      "sha256": "101bcbf9a90b5362ed3fbcdf522f5d57c7d0fb297879d2d0bb3a46237b0cd3b6"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g2/seed_44/model.pt",
+      "sha256": "c9efcecd0fa867c737494bd7647636777aca56596df4845bee3429339a1879c9"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g2/seed_44/test_probs.npy",
+      "sha256": "3c6098e06082bbf8820b0c8493cd790fa31b689ddc6587cd110bc52a0e0e5b44"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_raw_ESM/seed_42/model.pt",
+      "sha256": "61ebc95ff41e38e145d038096397d3fdf8e9dc2c61a28d6cb51a5fb9ae840ba6"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_raw_ESM/seed_42/test_probs.npy",
+      "sha256": "99886af50539c65a0a25ee7526086a3ae22a9b7c02ef4a6cb8ec798536c381be"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_raw_ESM/seed_43/model.pt",
+      "sha256": "d565bba0dfccabdbd948cd5a7b95c082b496a4ec48445d25ef1d88257d2637be"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_raw_ESM/seed_43/test_probs.npy",
+      "sha256": "f76c059dad09dde1c817777a6bb7c747d3d128fd89b49ec3f846ba68fd976298"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_raw_ESM/seed_44/model.pt",
+      "sha256": "442ffa6953339e08c0967f6b3767817ab66dde0b9cf9c6ff36bc9089b5164852"
+    },
+    {
+      "path": "assets/outputs/runs/original_fusion/scores_plus_raw_ESM/seed_44/test_probs.npy",
+      "sha256": "1a65f4aa0b25c6128b2ee43a000822b1c8d6d1bae551971d299f272cc34e7fd6"
+    }
+  ],
+  "selected_checkpoints": {
+    "assets/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_42/model.pt": "91afbf673617623bee5326eb66f1976bed2c35efc6f7093ab5b3ff9c91bc15fa",
+    "assets/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_43/model.pt": "3a7e12dfbec8e431c70479c9fc8cfdc2992efa99044ff781f39c0f9e04c182b6",
+    "assets/external_validation_20261024/outputs/runs/original/BioGRID_FPP/seed_44/model.pt": "a46d0439f01fa11025bea2fa450af7f4e918bbef223292a2bd499a62a11c090b",
+    "assets/outputs/runs/original/edge_ablated_FPP/seed_42/model.pt": "04f0de5f73c9699fccf26440cc891b8b5ffcae003faaa00ddea01912e6c9d8cf",
+    "assets/outputs/runs/original/edge_ablated_FPP/seed_43/model.pt": "a471efa7097de2e2dc34e815fc103da8698c51fe7f18a8608ead1d9cbb5733fb",
+    "assets/outputs/runs/original/edge_ablated_FPP/seed_44/model.pt": "f96396e3e9bbac54e2360f51a5421b23e67116eaa1a233af420629ef2329b4c1",
+    "assets/outputs/runs/original/full_FPP/seed_42/model.pt": "b208b66ed92c9ec609f1b3ebb5550218aadd720b089745fcafd1761ec2dcfcdd",
+    "assets/outputs/runs/original/full_FPP/seed_43/model.pt": "a4472bcfac34fab4354a1930ed12cae524eb37572c1579da29075147c114293f",
+    "assets/outputs/runs/original/full_FPP/seed_44/model.pt": "ec440fd5490a88aa96e964c3503f24c77413f79019b723de3d6ba5c3a461a0e0",
+    "assets/outputs/runs/original/permuted_FPP_g0/seed_42/model.pt": "be32a1f81e915086f774c8965c7a946164b3fbefc4b060f9cda2c79f687e776b",
+    "assets/outputs/runs/original/permuted_FPP_g0/seed_43/model.pt": "03a077d3502d282cddc87807c19f34737ff8742505694ea9d77d4ff1a342f0ea",
+    "assets/outputs/runs/original/permuted_FPP_g0/seed_44/model.pt": "79f6d13c8f492fe76a462bd5a8b675bf0f4b358b27ca891808671aa13aa59dcf",
+    "assets/outputs/runs/original/permuted_FPP_g1/seed_42/model.pt": "d47cf8cbd14a6541002e67339a84d4555a828fe286c01ae0454457df645645eb",
+    "assets/outputs/runs/original/permuted_FPP_g1/seed_43/model.pt": "b6c92d3fea94854cd7b90584dbd28fc910d60a81aeb1fa3e84174dc102338719",
+    "assets/outputs/runs/original/permuted_FPP_g1/seed_44/model.pt": "f9cb644e4551400dded36d295cf1ad8a9221d8a5f096565446391d8b65422e5f",
+    "assets/outputs/runs/original/permuted_FPP_g2/seed_42/model.pt": "497447b8928a38ee6bfb8b5dfc9f9d72b34c42bc91063cca3ea799126f42fd56",
+    "assets/outputs/runs/original/permuted_FPP_g2/seed_43/model.pt": "198ba0bf2eecef5c2f09699a0ae08d29744dd2e9db93340d59150a17993a87db",
+    "assets/outputs/runs/original/permuted_FPP_g2/seed_44/model.pt": "f49ebdb03129d686304845dc8fbbe305903fed3beae9666493b936b378428666",
+    "assets/outputs/runs/original/raw_ESM/seed_42/model.pt": "c5e62f4f7e1d848672c6594c467fe3ab0b194f556d5d3d2440dbe1a5a1b0b9b0",
+    "assets/outputs/runs/original/raw_ESM/seed_43/model.pt": "772877e46c050c188e1fe80137cc3684b38fbb34541c4aa7b9bfdc0e496c7c1b",
+    "assets/outputs/runs/original/raw_ESM/seed_44/model.pt": "50ae990c85b67dce4d158eaabf3d09c5dec069bab1a12ba5b675e1c459b5828a",
+    "assets/outputs/runs/original_fusion/scores_capacity_matched/seed_42/model.pt": "176752e0a02409975fe867bc82cf0f3cc97c6a87710077937a1557a40f43713a",
+    "assets/outputs/runs/original_fusion/scores_capacity_matched/seed_43/model.pt": "7cd557a347725fe41e1fdbab234bfad817f7cedc4f5c44e000ec8597fffab68c",
+    "assets/outputs/runs/original_fusion/scores_capacity_matched/seed_44/model.pt": "2e6de467902242fb56e5146f520e353cddde936eb362c0a6c111d7d1388f2438",
+    "assets/external_validation_20261024/outputs/runs/original_fusion/scores_plus_BioGRID_FPP/seed_42/model.pt": "0686fe5ebdca8f3e74384d884de94b9e44f8d0ea523c64da68a0d1a9cab55b81",
+    "assets/external_validation_20261024/outputs/runs/original_fusion/scores_plus_BioGRID_FPP/seed_43/model.pt": "f95eed95e90ee583828aecd02f00b351d7c934089e026315d604d6680093de82",
+    "assets/external_validation_20261024/outputs/runs/original_fusion/scores_plus_BioGRID_FPP/seed_44/model.pt": "702938c13e5b03565ac038b09c63afd9862601e32b81702650494fca6af0975f",
+    "assets/outputs/runs/original_fusion/scores_plus_edge_ablated_FPP/seed_42/model.pt": "d16acdbd8022ba70b0adfc3bbcfe07638eb43e010515f409b08b0f1efa8e7f35",
+    "assets/outputs/runs/original_fusion/scores_plus_edge_ablated_FPP/seed_43/model.pt": "9f2e36a4b73d219c323640a73236314cfaa0de879287454a81d4accf005fd972",
+    "assets/outputs/runs/original_fusion/scores_plus_edge_ablated_FPP/seed_44/model.pt": "03d55f07b4d9aed1759d62d7ef49aa9356f244c35c4fd57704de595d8345d7e5",
+    "assets/outputs/runs/original_fusion/scores_plus_full_FPP/seed_42/model.pt": "a55ddc4c8d1a220ee34cd8e2d2e4bbc7e0dcd7bf5076fb0fc4302c345a8c35d7",
+    "assets/outputs/runs/original_fusion/scores_plus_full_FPP/seed_43/model.pt": "958a97aa4929755bbb95f266f09a2fa71d7603be362323bf2b76f1b7776fcef7",
+    "assets/outputs/runs/original_fusion/scores_plus_full_FPP/seed_44/model.pt": "f2dbee9c69099124124f43be7af661474ee320d50ccaa11170d2bf2caf42e724",
+    "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g0/seed_42/model.pt": "a5ce40a886ebf69454f07b28d32c5c29378b17af81c7cec9813cea5b6a8609b5",
+    "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g0/seed_43/model.pt": "eab6eba9ea24443a101660a8fb13b65baffa7bc1ba5e739fd2ae6cdf3af55a21",
+    "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g0/seed_44/model.pt": "67c68c6903bc3b3e3cf1f050737320c7b7f2f65ef5c9e72d8ef76f033fc85707",
+    "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g1/seed_42/model.pt": "691eeaf9fe5b6b3a71e5975baf2a5abc31155495d9e45d133f7823dff0fd943f",
+    "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g1/seed_43/model.pt": "956ebbf4b3ab6f4d17b7d6fa3a0aadbe62559af5c44a259bec27056485f510b4",
+    "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g1/seed_44/model.pt": "4690659a39ed078f63f53de08e1e344e6b0257e684382a72af5ab96ecdf651e0",
+    "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g2/seed_42/model.pt": "051ddabb6f76b7e2c3f5310b24532917ddbd4758450d08ef2320a6aad11d92e7",
+    "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g2/seed_43/model.pt": "e8d60e8e65ae7fa7e6ae8b78e20c53f77880123ddcafb7378474174f5b34db6a",
+    "assets/outputs/runs/original_fusion/scores_plus_permuted_FPP_g2/seed_44/model.pt": "c9efcecd0fa867c737494bd7647636777aca56596df4845bee3429339a1879c9",
+    "assets/outputs/runs/original_fusion/scores_plus_raw_ESM/seed_42/model.pt": "61ebc95ff41e38e145d038096397d3fdf8e9dc2c61a28d6cb51a5fb9ae840ba6",
+    "assets/outputs/runs/original_fusion/scores_plus_raw_ESM/seed_43/model.pt": "d565bba0dfccabdbd948cd5a7b95c082b496a4ec48445d25ef1d88257d2637be",
+    "assets/outputs/runs/original_fusion/scores_plus_raw_ESM/seed_44/model.pt": "442ffa6953339e08c0967f6b3767817ab66dde0b9cf9c6ff36bc9089b5164852",
+    "assets/outputs/runs/homology/scores_capacity_matched/seed_42/model.pt": "c608fd2146253e1487459744e2572e87c20006f57a120d25514ffe6d721223a2",
+    "assets/outputs/runs/homology/scores_capacity_matched/seed_43/model.pt": "72237f953711589eeab32ebdb27f3ed3a113e6dd0c9824ad5a5b63a2332fa406",
+    "assets/outputs/runs/homology/scores_capacity_matched/seed_44/model.pt": "1ed2db85a61040c191bdd38d9f7d862cb6b698a0caa2666b112778c717ef3b55",
+    "assets/external_validation_20261024/outputs/runs/homology/scores_plus_BioGRID_FPP/seed_42/model.pt": "280a61b37dd6a163f960800b379b4479b94b0c9a8b541344fc33e8b08eaac5be",
+    "assets/external_validation_20261024/outputs/runs/homology/scores_plus_BioGRID_FPP/seed_43/model.pt": "32312bdda577cfd95196c52da25af40e569cda82124b72d88a55020920e40f2e",
+    "assets/external_validation_20261024/outputs/runs/homology/scores_plus_BioGRID_FPP/seed_44/model.pt": "295011820f8e9a7cebf5bc4b8db88e33f83f8b63bebae88b8ed9d432ca5d3a32",
+    "assets/outputs/runs/homology/scores_plus_full_FPP/seed_42/model.pt": "5c18c389074ec6f829570e4aeec74c84b82dfe36e017b977bb0ada7914e440f1",
+    "assets/outputs/runs/homology/scores_plus_full_FPP/seed_43/model.pt": "30f749b2813e75750292868dcc406dc96ad308a83a19a3f38fb0295cd196006c",
+    "assets/outputs/runs/homology/scores_plus_full_FPP/seed_44/model.pt": "d5f3bca4da02e7b78d72a521c216f4dbfd15dc137452eb2d966bc5228bdfdd65",
+    "assets/outputs/runs/homology/scores_plus_raw_ESM/seed_42/model.pt": "45178b22d86162f378489536dd75b42ecc666214433647d7ffe12e0ebe97128e",
+    "assets/outputs/runs/homology/scores_plus_raw_ESM/seed_43/model.pt": "d4c1a44e908184be23a16f59666141c5b00111fa05c57aa35fdef06dcf838ec7",
+    "assets/outputs/runs/homology/scores_plus_raw_ESM/seed_44/model.pt": "e5360e4e844ba91a0694d62a76ac7a200235639fde37aca9d6229427e938bea4"
+  },
+  "source_code_sha256": "49935b81bee0ad34ed9bd4aeff467e90821f2ab9833c5b5c4f846d43c8cb7ff0",
+  "protocol_sha256": "facf4138bee9678a15df1e8e67c0f80891072d51838a3fdf4c4b1da95716ebb7"
+}

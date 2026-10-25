@@ -1,0 +1,128 @@
+{
+  "passed": true,
+  "benchmark_prediction_files": [
+    {
+      "file": "test_predictions__homology__scores_capacity_matched.csv.gz",
+      "rows": 18220,
+      "scores_bit_identical": true,
+      "metrics_recomputed_from_export": true
+    },
+    {
+      "file": "test_predictions__homology__scores_plus_BioGRID_FPP.csv.gz",
+      "rows": 18220,
+      "scores_bit_identical": true,
+      "metrics_recomputed_from_export": true
+    },
+    {
+      "file": "test_predictions__homology__scores_plus_full_FPP.csv.gz",
+      "rows": 18220,
+      "scores_bit_identical": true,
+      "metrics_recomputed_from_export": true
+    },
+    {
+      "file": "test_predictions__homology__scores_plus_raw_ESM.csv.gz",
+      "rows": 18220,
+      "scores_bit_identical": true,
+      "metrics_recomputed_from_export": true
+    },
+    {
+      "file": "test_predictions__original__BioGRID_FPP.csv.gz",
+      "rows": 18220,
+      "scores_bit_identical": true,
+      "metrics_recomputed_from_export": true
+    },
+    {
+      "file": "test_predictions__original__edge_ablated_FPP.csv.gz",
+      "rows": 18220,
+      "scores_bit_identical": true,
+      "metrics_recomputed_from_export": true
+    },
+    {
+      "file": "test_predictions__original__full_FPP.csv.gz",
+      "rows": 18220,
+      "scores_bit_identical": true,
+      "metrics_recomputed_from_export": true
+    },
+    {
+      "file": "test_predictions__original__permuted_FPP_g0.csv.gz",
+      "rows": 18220,
+      "scores_bit_identical": true,
+      "metrics_recomputed_from_export": true
+    },
+    {
+      "file": "test_predictions__original__permuted_FPP_g1.csv.gz",
+      "rows": 18220,
+      "scores_bit_identical": true,
+      "metrics_recomputed_from_export": true
+    },
+    {
+      "file": "test_predictions__original__permuted_FPP_g2.csv.gz",
+      "rows": 18220,
+      "scores_bit_identical": true,
+      "metrics_recomputed_from_export": true
+    },
+    {
+      "file": "test_predictions__original__raw_ESM.csv.gz",
+      "rows": 18220,
+      "scores_bit_identical": true,
+      "metrics_recomputed_from_export": true
+    },
+    {
+      "file": "test_predictions__original_fusion__scores_capacity_matched.csv.gz",
+      "rows": 18220,
+      "scores_bit_identical": true,
+      "metrics_recomputed_from_export": true
+    },
+    {
+      "file": "test_predictions__original_fusion__scores_plus_BioGRID_FPP.csv.gz",
+      "rows": 18220,
+      "scores_bit_identical": true,
+      "metrics_recomputed_from_export": true
+    },
+    {
+      "file": "test_predictions__original_fusion__scores_plus_edge_ablated_FPP.csv.gz",
+      "rows": 18220,
+      "scores_bit_identical": true,
+      "metrics_recomputed_from_export": true
+    },
+    {
+      "file": "test_predictions__original_fusion__scores_plus_full_FPP.csv.gz",
+      "rows": 18220,
+      "scores_bit_identical": true,
+      "metrics_recomputed_from_export": true
+    },
+    {
+      "file": "test_predictions__original_fusion__scores_plus_permuted_FPP_g0.csv.gz",
+      "rows": 18220,
+      "scores_bit_identical": true,
+      "metrics_recomputed_from_export": true
+    },
+    {
+      "file": "test_predictions__original_fusion__scores_plus_permuted_FPP_g1.csv.gz",
+      "rows": 18220,
+      "scores_bit_identical": true,
+      "metrics_recomputed_from_export": true
+    },
+    {
+      "file": "test_predictions__original_fusion__scores_plus_permuted_FPP_g2.csv.gz",
+      "rows": 18220,
+      "scores_bit_identical": true,
+      "metrics_recomputed_from_export": true
+    },
+    {
+      "file": "test_predictions__original_fusion__scores_plus_raw_ESM.csv.gz",
+      "rows": 18220,
+      "scores_bit_identical": true,
+      "metrics_recomputed_from_export": true
+    }
+  ],
+  "external_all_rows": 40900,
+  "external_primary_rows": 10785,
+  "external_strict_rows": 6934,
+  "all_seed_and_ensemble_predictions_bit_exact_after_csv_round_trip": true,
+  "all_exported_metrics_recomputed_with_sklearn": true,
+  "all6split_tables_and_homologyclusters_matched_byVariationID": true,
+  "representation_within_protein_score_consistency": true,
+  "patients_or_private_correspondence_fields": false,
+  "checked_utc": "2026-10-24T16:14:55Z"
+}

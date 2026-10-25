@@ -1,0 +1,52 @@
+[
+  {
+    "file": "main.tex",
+    "before": "Models shared hidden layers and preprocessing, although score-only models had fewer input weights.",
+    "after": "Models used the same hidden-layer architecture and preprocessing, although score-only models had fewer input-layer parameters."
+  },
+  {
+    "file": "main.tex",
+    "before": "External-score coverage and fusion controls, sharing hidden-layer architecture and training protocol.",
+    "after": "External-score coverage and fusion controls using the same hidden-layer architecture and training protocol."
+  },
+  {
+    "file": "main_anonymous.tex",
+    "before": "Models shared hidden layers and preprocessing, although score-only models had fewer input weights.",
+    "after": "Models used the same hidden-layer architecture and preprocessing, although score-only models had fewer input-layer parameters."
+  },
+  {
+    "file": "main_anonymous.tex",
+    "before": "External-score coverage and fusion controls, sharing hidden-layer architecture and training protocol.",
+    "after": "External-score coverage and fusion controls using the same hidden-layer architecture and training protocol."
+  },
+  {
+    "file": "Supplementary_Information_revised.md",
+    "before": "The relative fusion-control comparisons share hidden-layer architecture, training protocol and preprocessing,",
+    "after": "The relative fusion-control comparisons use the same hidden-layer architecture, training protocol and preprocessing,"
+  },
+  {
+    "file": "Supplementary_Information_revised.md",
+    "before": "Shared hidden layers, training protocol and preprocessing",
+    "after": "Same hidden-layer architecture, training protocol and preprocessing"
+  },
+  {
+    "file": "Supplementary_Information_revised.md",
+    "before": "Score-only models share hidden layers with fusion but have fewer fitted input weights.",
+    "after": "Score-only and fusion models use the same hidden-layer architecture, but score-only models have fewer input-layer parameters."
+  },
+  {
+    "file": "Supplementary_Information_anonymous.md",
+    "before": "The relative fusion-control comparisons share hidden-layer architecture, training protocol and preprocessing,",
+    "after": "The relative fusion-control comparisons use the same hidden-layer architecture, training protocol and preprocessing,"
+  },
+  {
+    "file": "Supplementary_Information_anonymous.md",
+    "before": "Shared hidden layers, training protocol and preprocessing",
+    "after": "Same hidden-layer architecture, training protocol and preprocessing"
+  },
+  {
+    "file": "Supplementary_Information_anonymous.md",
+    "before": "Score-only models share hidden layers with fusion but have fewer fitted input weights.",
+    "after": "Score-only and fusion models use the same hidden-layer architecture, but score-only models have fewer input-layer parameters."
+  }
+]

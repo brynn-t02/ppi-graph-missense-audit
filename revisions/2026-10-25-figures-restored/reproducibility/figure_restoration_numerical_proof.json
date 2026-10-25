@@ -1,0 +1,260 @@
+{
+  "Figure1": {
+    "current_values_equal_to_canonical_baseline": {
+      "rraw": true,
+      "rfull": true,
+      "redge": true,
+      "rperm": true,
+      "PROT_AUC": true,
+      "PROT_AUPRC": true,
+      "VAR_AUC": true,
+      "VAR_AUPRC": true
+    },
+    "current_values": {
+      "rraw": {
+        "test_auc_mean": 0.783517402150408,
+        "test_auc_sd": 0.0062664889155283916,
+        "test_auprc_mean": 0.6117337391077605,
+        "test_auprc_sd": 0.006616647083326858
+      },
+      "rfull": {
+        "test_auc_mean": 0.7949876719439996,
+        "test_auc_sd": 0.0016161326817645749,
+        "test_auprc_mean": 0.6485095505690932,
+        "test_auprc_sd": 0.011676231252294618
+      },
+      "redge": {
+        "test_auc_mean": 0.7701609521650408,
+        "test_auc_sd": 0.007726192680806381,
+        "test_auprc_mean": 0.6076579000391689,
+        "test_auprc_sd": 0.014010524797749589
+      },
+      "rperm": {
+        "test_auc_mean": 0.7802818377632461,
+        "test_auc_sd": 0.009213280443186783,
+        "test_auprc_mean": 0.6102855870484558,
+        "test_auprc_sd": 0.008438474125120714
+      },
+      "PROT_AUC": [
+        0.010673284312598175,
+        -0.021814724260340257,
+        0.04257863103758204
+      ],
+      "PROT_AUPRC": [
+        0.041217629992141736,
+        -0.01063858474592705,
+        0.07667889984321657
+      ],
+      "VAR_AUC": [
+        0.010673284312598175,
+        0.007554308420720421,
+        0.013899762347133618
+      ],
+      "VAR_AUPRC": [
+        0.041217629992141736,
+        0.03467359298417201,
+        0.04746398608276461
+      ]
+    },
+    "canonical_root": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_architecture_clarified_20261025/source/canonical_analysis_20261025"
+  },
+  "Figure2": {
+    "current_values_equal_to_canonical_baseline": {
+      "orig_caddam": true,
+      "orig_raw": true,
+      "orig_edge": true,
+      "orig_perm": true,
+      "orig_real": true,
+      "homo_caddam": true,
+      "homo_raw": true,
+      "homo_graph": true,
+      "margin_rows": true,
+      "orig_prev": true,
+      "homo_prev": true
+    },
+    "current_values": {
+      "orig_caddam": {
+        "test_auc_mean": 0.9572418088362747,
+        "test_auc_sd": 5.7597133804577455e-05,
+        "test_auprc_mean": 0.9071955958233566,
+        "test_auprc_sd": 0.0002256487782253078
+      },
+      "orig_raw": {
+        "test_auc_mean": 0.9681929057310562,
+        "test_auc_sd": 0.0010853375827493013,
+        "test_auprc_mean": 0.9326279932970661,
+        "test_auprc_sd": 0.0036736396425267616
+      },
+      "orig_edge": {
+        "test_auc_mean": 0.9703837522358331,
+        "test_auc_sd": 0.00040752769105530025,
+        "test_auprc_mean": 0.9393608023582748,
+        "test_auprc_sd": 0.00088231699302257
+      },
+      "orig_perm": {
+        "test_auc_mean": 0.9692169772583489,
+        "test_auc_sd": 0.0006344089688519488,
+        "test_auprc_mean": 0.9353929192922058,
+        "test_auprc_sd": 0.0009029127258740843
+      },
+      "orig_real": {
+        "test_auc_mean": 0.9715596385479519,
+        "test_auc_sd": 0.0007429663708588232,
+        "test_auprc_mean": 0.9409115614128521,
+        "test_auprc_sd": 0.00172545464342441
+      },
+      "homo_caddam": {
+        "test_auc_mean": 0.9754786737711996,
+        "test_auc_sd": 6.639971814298041e-05,
+        "test_auprc_mean": 0.8403043171838797,
+        "test_auprc_sd": 0.0005916689213931989
+      },
+      "homo_raw": {
+        "test_auc_mean": 0.9727258395106334,
+        "test_auc_sd": 0.0003204854873690711,
+        "test_auprc_mean": 0.8252803683457399,
+        "test_auprc_sd": 0.0016352940025928138
+      },
+      "homo_graph": {
+        "test_auc_mean": 0.9751776973104292,
+        "test_auc_sd": 0.0007337462828409526,
+        "test_auprc_mean": 0.8368842517697068,
+        "test_auprc_sd": 0.005980771958213613
+      },
+      "margin_rows": {
+        "real_vs_archmatched_cadd_am": {
+          "delta_auc": 0.014699355881748422,
+          "delta_auprc": 0.034376100692333766,
+          "delta_auc_ci95_low": 0.0064812061483609075,
+          "delta_auc_ci95_high": 0.022623429554099326,
+          "delta_auprc_ci95_low": 0.015561604718946862,
+          "delta_auprc_ci95_high": 0.05581222521977588
+        },
+        "real_vs_raw_esm_fusion": {
+          "delta_auc": 0.003201472694618457,
+          "delta_auprc": 0.007552132921047394,
+          "delta_auc_ci95_low": 0.0008408923260150331,
+          "delta_auc_ci95_high": 0.00616761363568303,
+          "delta_auprc_ci95_low": 0.003049387558497113,
+          "delta_auprc_ci95_high": 0.01405493743580648
+        },
+        "real_vs_edge_ablated_fusion": {
+          "delta_auc": 0.0012581400054052505,
+          "delta_auprc": 0.0013909410221149,
+          "delta_auc_ci95_low": -0.00040544785544509575,
+          "delta_auc_ci95_high": 0.003191374773356209,
+          "delta_auprc_ci95_low": -0.001460289301124043,
+          "delta_auprc_ci95_high": 0.004696285824854822
+        },
+        "real_vs_topology_permuted_fusion": {
+          "delta_auc": 0.002008820695528879,
+          "delta_auprc": 0.005010108196023322,
+          "delta_auc_ci95_low": 7.941944446866468e-05,
+          "delta_auc_ci95_high": 0.004538626032698917,
+          "delta_auprc_ci95_low": 0.00018184559286438807,
+          "delta_auprc_ci95_high": 0.010964354386060493
+        }
+      },
+      "orig_prev": 0.3195389681668496,
+      "homo_prev": 0.10559824368825467
+    },
+    "canonical_root": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_architecture_clarified_20261025/source/canonical_analysis_20261025"
+  },
+  "historical_inputs": {
+    "figure_inputs/data/processed/esm_gcn_partial_edge_ablation_exp44/edge_ablation_curve_summary.csv": {
+      "sha256": "8a7e2912661d2e3bd2c2b531d967e0235a76d4356331e2a100dcf96b64f318f7",
+      "byte_identical_to_synthesis": true
+    },
+    "figure_inputs/data/processed/homology_rerun_core/homology_rerun_summary.json": {
+      "sha256": "4576c551911ca904b6b29978dd06b58b6c1baac1e1166198640208b8cbba5a5b",
+      "byte_identical_to_synthesis": true
+    }
+  },
+  "historical_homology_values": {
+    "esm_raw_homology": {
+      "best_epoch": 1,
+      "best_val_auc": 0.7314769517766283,
+      "val_auc": 0.7314769517766283,
+      "val_auprc": 0.21711857442556587,
+      "test_auc": 0.7247726123370454,
+      "test_auprc": 0.24180435223323704
+    },
+    "gcn_enhanced_homology": {
+      "best_epoch": 3,
+      "best_val_auc": 0.7644540354287569,
+      "val_auc": 0.7644540354287569,
+      "val_auprc": 0.24501308826491286,
+      "test_auc": 0.7606031051585176,
+      "test_auprc": 0.2767878916385998
+    }
+  },
+  "other_figures_unchanged": {
+    "figure_drafts/Figure3_external_validation.pdf": {
+      "same_bytes": true,
+      "sha256": "12c910b00d9b8123226f324f6701bec8be017f430048552d6e29a340d5eba8a5"
+    },
+    "figure_drafts/Figure3_external_validation.png": {
+      "same_bytes": true,
+      "sha256": "4d406f8c5549768a827bacc1713596955a44aafefd382042120d88b08ea90651"
+    },
+    "figure_drafts/Figure3_exploratory_topology.pdf": {
+      "same_bytes": true,
+      "sha256": "30958eb52a1a0d6cba6380f23e857e753d9f93259af2c608b1b8eeb2907618d0"
+    },
+    "figure_drafts/Figure3_exploratory_topology.png": {
+      "same_bytes": true,
+      "sha256": "95c5a2ef6c8ef7a71d74ca6cd368ee36f76a5d18d1931c9dd88af734d275e4fa"
+    },
+    "figure_drafts/Figure4_prediction_transitions.pdf": {
+      "same_bytes": true,
+      "sha256": "ef79c34ce84ada751fee94f10f0400786b42bb59bb18f4c67a958c5bdad6ad16"
+    },
+    "figure_drafts/Figure4_prediction_transitions.png": {
+      "same_bytes": true,
+      "sha256": "0c53a2f977ef7d7557215e74321e3c1ca901b134b61459396e8b6654243889bd"
+    }
+  },
+  "new_figure_artifacts": {
+    "Figure1_fixed_propagation_audit.pdf": {
+      "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_architecture_clarified_20261025/source/figure_drafts/Figure1_fixed_propagation_audit.pdf",
+      "sha256": "58ffe759f3820de6689ee239f4f51d3fcd134cf731e785f3d48706a00aec523f",
+      "bytes": 33311,
+      "page_box_pt": [
+        536.279125,
+        344.101125
+      ],
+      "text": "ESM protein features\nFixed STRING propagation\nTrained MLP classifier\nInterpret gains using\ncontrols, splits and uncertainty\nA  Study overview\nAUC AUPRC\n0.55\n0.60\n0.65\n0.70\n0.75\n0.80\n0.85\n0.90\nT est performance\nDelta=+0.0115\nDelta=+0.0368\nB  Matched means (3 seeds)\nRaw ESM\nFull FPP\n−0.025 0.000 0.025 0.050 0.075\nDelta performance\nAUC\nvariant\nAUC\nprotein\nAUPRC\nvariant\nAUPRC\nprotein\nC  Bootstrap uncertainty\nAUC AUPRC\n0.60\n0.65\n0.70\n0.75\n0.80\n0.85\n0.90\nT est performance\nD  Direct-edge ablation\nRaw ESM\nFull FPP\nAblated FPP\n0 25 50 75 100\nDirect train-test pairs removed\n(%)\n−0.02\n−0.01\n0.00\n0.01\n0.02\n0.03\n0.04\nDelta AUC vs ESM raw\nE  Historical partial ablation\nRandom removal\nHigh first\nLow first\nAUC AUPRC\n0.60\n0.65\n0.70\n0.75\n0.80\n0.85\n0.90\nT est performance\nF  Topology permutation\nRaw ESM\nReal FPP\nPermuted FPP\nFixed STRING propagation: connectivity and topology audit\nB/D/F: matched protocols; E: historical unmatched seeds/budgets/operator, shared 0/100% endpoints."
+    },
+    "Figure1_fixed_propagation_audit.png": {
+      "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_architecture_clarified_20261025/source/figure_drafts/Figure1_fixed_propagation_audit.png",
+      "sha256": "c043f37f8ef487032018d650388f1a41cd97919ae228285000d085ce2d463fe3",
+      "bytes": 246294
+    },
+    "Figure2_fusion_homology.pdf": {
+      "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_architecture_clarified_20261025/source/figure_drafts/Figure2_fusion_homology.pdf",
+      "sha256": "a2f1f297a77d6dc2291dcc8ee7ee32bd2d6bef24f045b8b866c34504bd6cc2ff",
+      "bytes": 31533,
+      "page_box_pt": [
+        539.2635,
+        344.101125
+      ],
+      "text": "ClinVar-STRING\n177,213 variants\nCADD\n177,205\n99.995%\nAlphaMissense\n171,753\n96.92%\nCADD+AM baseline\n+ controls: raw ESM\nablated / permuted / real FPP\nSame hidden-layer architecture\nA  Fusion-control setup\nScores +Raw +Abl.+Perm. +Real\n0.90\n0.92\n0.94\n0.96\n0.98\n1.00\nT est performance\nB  Matched original fusion\nAUC AUPRC\n0.00 0.02 0.04 0.06\nDelta performance\nvs scores\nvs raw\nvs ablated\nvs permuted\nC  Real FPP margins\nAUC\nAUPRC\nAUC AUPRC\n0.2\n0.3\n0.4\n0.5\n0.6\n0.7\n0.8\nT est performance\nD  Historical homology (n=1)\nESM\nFPP\n0.80 0.85 0.90 0.95\nT est performance\nScores\n(n=3)\n+Raw\n(n=3)\n+FPP\n(n=3)\nE  Homology fusion\nAUC AUPRC\nOriginal\nsplit\nHomology\nsplit\n0.00\n0.05\n0.10\n0.15\n0.20\n0.25\n0.30\n0.35\nPositive rate\n31.95%\n10.56%\nF  Test-set prevalence\nFixed-propagation fusion controls and homology stress test\nD: one retained fit per arm; no repeat uncertainty. B/C/E: current matched comparisons."
+    },
+    "Figure2_fusion_homology.png": {
+      "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_architecture_clarified_20261025/source/figure_drafts/Figure2_fusion_homology.png",
+      "sha256": "0f390ed5b7c15e2d966c2a41e2e3517c0963f8bb57ac11051909d67af7bda6d6",
+      "bytes": 235530
+    }
+  },
+  "canvas_inches": [
+    7.4,
+    4.7
+  ],
+  "layout_baseline": "BIBM_workshop_layout_revision_20261024",
+  "numerical_regression_result": "pass",
+  "final_label_changes": [
+    "Fig1 suptitle: removed Matched to avoid applying matched status to historical panel E.",
+    "Fig2A: Same hidden-layer architecture."
+  ],
+  "final_label_change_visual_check": "pass; both regenerated PNGs inspected, no clipping or overlap; numeric code untouched."
+}

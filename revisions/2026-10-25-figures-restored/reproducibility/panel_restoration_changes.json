@@ -1,0 +1,18 @@
+[
+  {
+    "file": "main.tex",
+    "main_figures": "Restore historical1E/2D in original positions; current permutation1F/homologyfusion2E; no scientific values changed"
+  },
+  {
+    "file": "main_anonymous.tex",
+    "main_figures": "Restore historical1E/2D in original positions; current permutation1F/homologyfusion2E; no scientific values changed"
+  },
+  {
+    "file": "Supplementary_Information_revised.md",
+    "references": "Restore main1E/2D references; remove duplicate S3 display; retain archivedS3 assets"
+  },
+  {
+    "file": "Supplementary_Information_anonymous.md",
+    "references": "Restore main1E/2D references; remove duplicate S3 display; retain archivedS3 assets"
+  }
+]

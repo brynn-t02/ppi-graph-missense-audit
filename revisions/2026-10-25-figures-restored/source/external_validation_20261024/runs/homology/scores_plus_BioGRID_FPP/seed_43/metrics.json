@@ -1,0 +1,14 @@
+{
+  "split": "homology",
+  "arm": "scores_plus_BioGRID_FPP",
+  "seed": 43,
+  "best_epoch": 5,
+  "epochs_run": 10,
+  "val_auc": 0.9719760524856802,
+  "val_auprc": 0.8238369647660415,
+  "test_auc": 0.973125172867441,
+  "test_auprc": 0.8274652573187422,
+  "seconds": 14.724741697311401,
+  "dim": 1283,
+  "checkpoint_sha256": "32312bdda577cfd95196c52da25af40e569cda82124b72d88a55020920e40f2e"
+}

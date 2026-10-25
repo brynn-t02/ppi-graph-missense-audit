@@ -1,0 +1,38 @@
+--- layout/figure2_revised.py
++++ architecture_clarified/figure2_revised.py
+@@ -82,7 +82,9 @@
+ homo_prev = sum(int(r["Label"]) for r in homo_test) / len(homo_test)
+ 
+ 
+-MATCHED = PROJECT / "matched_validation_20261024"
++MATCHED = Path(os.environ.get("CANONICAL_ANALYSIS_ROOT", PROJECT / "canonical_analysis_20261025"))
++if not MATCHED.is_dir():
++    raise FileNotFoundError(f"Canonical analysis directory required: {MATCHED}")
+ import pandas as pd
+ newruns = pd.read_csv(MATCHED / "per_run_metrics.csv")
+ newboot = json.loads((MATCHED / "cluster_bootstrap.json").read_text())
+@@ -121,6 +123,7 @@
+     box(.5,.13,.95,.18,"+ controls: raw ESM\nablated / permuted / real FPP", "#9ECAE1")
+     for a,b in [((.4,.83),(.23,.77)),((.6,.83),(.77,.77)),((.23,.55),(.42,.47)),((.77,.55),(.58,.47)),((.5,.315),(.5,.22))]:
+         ax.add_patch(FancyArrowPatch(a,b,arrowstyle="->",mutation_scale=6,color="#555555",lw=.7))
++    ax.text(.5, -.055, "Same hidden-layer architecture", ha="center", va="top", fontsize=5.8)
+ 
+ 
+ def panel_b(ax):
+@@ -185,7 +188,7 @@
+ 
+ 
+ def panel_d(ax):
+-    ax.set_title("D  Historical homology test", loc="left", fontweight="bold")
++    ax.set_title("D  Historical homology (n=1)", loc="left", fontweight="bold")
+     labels = ["AUC", "AUPRC"]
+     esm = [float(homo["esm_raw_homology"]["test_auc"]), float(homo["esm_raw_homology"]["test_auprc"])]
+     gcn = [float(homo["gcn_enhanced_homology"]["test_auc"]), float(homo["gcn_enhanced_homology"]["test_auprc"])]
+@@ -254,6 +257,7 @@
+ fig.suptitle("Fixed-propagation fusion controls and homology stress test",
+              fontsize=9.0, fontweight="bold", y=0.985)
+ fig.subplots_adjust(left=0.065, right=0.985, top=0.89, bottom=0.10, hspace=0.64)
++fig.text(0.5, 0.015, "D: one retained fit per arm; no repeat uncertainty. B/C/E: current matched comparisons.", ha="center", fontsize=6.6)
+ 
+ for name in ["Figure2_fusion_homology"]:
+     fig.savefig(OUT_DIR / f"{name}.png", bbox_inches="tight", dpi=300)

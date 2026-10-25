@@ -1,0 +1,92 @@
+{
+  "status": "passed_scientific_content_preservation",
+  "completed_utc": "2026-10-25T07:12:27.283097+00:00",
+  "scope": "Read-only science/source comparison after restoring historical panels. No source edits, model runs, server access or image rendering.",
+  "baseline": "outputs/BIBM_workshop_review_synthesis_20261025/source",
+  "current": "outputs/BIBM_workshop_architecture_clarified_20261025/source",
+  "checks": {
+    "main_decimal_numeric_sequence_unchanged": true,
+    "main_equations_unchanged": true,
+    "main_citation_order_and_keys_unchanged": true,
+    "bibliography_byte_identical": true,
+    "current_tables11_to17_byte_identical": true,
+    "all_supplement_table_numeric_cells_unchanged": true,
+    "supplement_display_formulas_unchanged": true,
+    "S1_S2_content_unchanged": true,
+    "duplicate_S3_display_removed": true,
+    "named_anonymous_supplement_body_equal": true,
+    "named_anonymous_main_scientific_body_equal": true,
+    "no_shared_weights_implication": true,
+    "all_epoch_claim_scoped_to_current": true,
+    "historical_1E_explicit": true,
+    "historical_2D_explicit": true,
+    "supp_unified_policy_excludes_historical": true,
+    "canonical_all49_files_identical": true,
+    "figure_drafts/Figure3_external_validation.pdf_byte_identical": true,
+    "figure_drafts/Figure3_external_validation.png_byte_identical": true,
+    "figure_drafts/Figure4_prediction_transitions.png_byte_identical": true
+  },
+  "canonical_files_verified": 49,
+  "restored_panels": {
+    "Figure1E": {
+      "source": "figure_inputs/data/processed/esm_gcn_partial_edge_ablation_exp44/edge_ablation_curve_summary.csv",
+      "role": "Historical descriptive curve; different seeds/budgets/control operator and reused0/100% endpoints; not extension of matchedFig1D",
+      "current_panels": "B/C/D/F continue to read canonical per_run_metrics.csv and cluster_bootstrap.json"
+    },
+    "Figure2D": {
+      "source": "figure_inputs/data/processed/homology_rerun_core/homology_rerun_summary.json",
+      "role": "One retained fit per arm; no repeat uncertainty; historical AUC .7248/.7606 and AP .2418/.2768",
+      "current_panels": "B/C/E continue to use canonical metrics;F uses frozen actual split prevalence"
+    }
+  },
+  "scientific_interpretation": "Restoring historical panels is compatible with user-requested minimum editorial scope because both the display and captions identify their weaker/nonmatched provenance. Current canonical metrics were not rolled back; no restored FDR significance claims, new effect claims or model changes.",
+  "unresolved_scientific_errors": [],
+  "sources": [
+    {
+      "path": "outputs/BIBM_workshop_architecture_clarified_20261025/source/main.tex",
+      "sha256": "6b8e17e46c63659c2d25d4fcaba274166f0abf2629166e0b5046ccae9ebbfe5e"
+    },
+    {
+      "path": "outputs/BIBM_workshop_architecture_clarified_20261025/source/main_anonymous.tex",
+      "sha256": "524101daf7b5cc3be42d4faaba8451dd5140753b3e066ef93f5e09494a073ad3"
+    },
+    {
+      "path": "outputs/BIBM_workshop_architecture_clarified_20261025/source/Supplementary_Information_revised.md",
+      "sha256": "6125bc6f8230338862593100168a359f87fe1770cf75b902545c391dac20c572"
+    },
+    {
+      "path": "outputs/BIBM_workshop_architecture_clarified_20261025/source/Supplementary_Information_anonymous.md",
+      "sha256": "7f9a65f615eeb47b8e869b5baf949818c9ae0c834c7633a7c94695d1b6282d37"
+    },
+    {
+      "path": "outputs/BIBM_workshop_architecture_clarified_20261025/source/figure_scripts/figure1_revised.py",
+      "sha256": "10abfca16d246a1d62f9391677c6c9a753ce6ae60bb724a39c1efe0d602f571f"
+    },
+    {
+      "path": "outputs/BIBM_workshop_architecture_clarified_20261025/source/figure_scripts/figure2_revised.py",
+      "sha256": "a175e3dc96bb9a7b5ef8a3ef13109eab36412ddb63498bd2d2b91249fb3fe6c3"
+    }
+  ],
+  "limits": [
+    "Final PDF layout/page count is reviewed separately.",
+    "GitHub synchronization is outside this source audit."
+  ],
+  "observations": [],
+  "resolved_observations": [
+    {
+      "severity": "minor_reference_precision",
+      "location": "main TableI footnote",
+      "recommendation": "Historical settings and reference estimates for Figs. 1E and 2D are in Supplementary Tables 2 and 8.",
+      "reason": "Table8 explicitly details partial-ablation protocols, while the historical homology representation estimates are inTable2; current Table8 homology rows concern fusion.",
+      "blocking": false,
+      "resolution": "Main and anonymous TableI footnote now accurately references Supplementary Tables2and8; verified in source."
+    }
+  ],
+  "pure_layout_changes": [
+    {
+      "path": "outputs/BIBM_workshop_architecture_clarified_20261025/source/main.tex",
+      "change": "IEEEtriggeratref changed from 27 to 26 to balance final named reference columns; anonymous remains 27.",
+      "scientific_impact": "None; reference text, keys and order unchanged."
+    }
+  ]
+}

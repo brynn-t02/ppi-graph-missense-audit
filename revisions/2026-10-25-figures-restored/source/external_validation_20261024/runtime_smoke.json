@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "test_set_used": false,
+  "new_fits_completed": 0,
+  "cases": [
+    {
+      "arm": "BioGRID_FPP",
+      "split": "original",
+      "dim": 1280,
+      "training_batches": 4,
+      "validation": {
+        "auc": 0.7021391449090633,
+        "auprc": 0.4290944586247625
+      },
+      "elapsed_seconds": 0.705873966217041
+    },
+    {
+      "arm": "scores_plus_BioGRID_FPP",
+      "split": "homology",
+      "dim": 1283,
+      "training_batches": 4,
+      "validation": {
+        "auc": 0.9288010709982322,
+        "auprc": 0.6144977799251274
+      },
+      "elapsed_seconds": 0.13240504264831543
+    }
+  ]
+}

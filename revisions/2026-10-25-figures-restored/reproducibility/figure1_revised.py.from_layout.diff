@@ -1,0 +1,30 @@
+--- layout/figure1_revised.py
++++ architecture_clarified/figure1_revised.py
+@@ -49,7 +49,9 @@
+ 
+ PROJECT = Path(__file__).resolve().parents[1]
+ 
+-MATCHED = PROJECT / "matched_validation_20261024"
++MATCHED = Path(os.environ.get("CANONICAL_ANALYSIS_ROOT", PROJECT / "canonical_analysis_20261025"))
++if not MATCHED.is_dir():
++    raise FileNotFoundError(f"Canonical analysis directory required: {MATCHED}")
+ import pandas as pd
+ newruns = pd.read_csv(MATCHED / "per_run_metrics.csv")
+ newboot = json.loads((MATCHED / "cluster_bootstrap.json").read_text())
+@@ -211,14 +213,14 @@
+ panel_f(axes[5])
+ 
+ fig.suptitle(
+-    "Matched fixed STRING propagation: connectivity and topology audit",
++    "Fixed STRING propagation: connectivity and topology audit",
+     fontsize=9.0,
+     fontweight="bold",
+     y=0.985,
+ )
+ 
+ fig.subplots_adjust(left=0.065, right=0.985, top=0.88, bottom=0.13)
+-fig.text(0.5, 0.015, "B/D/F: matched classifier protocols and propagation; E: historical unmatched curve.", ha="center", fontsize=6.6)
++fig.text(0.5, 0.015, "B/D/F: matched protocols; E: historical unmatched seeds/budgets/operator, shared 0/100% endpoints.", ha="center", fontsize=6.6)
+ png = OUT_DIR / "Figure1_fixed_propagation_audit.png"
+ pdf = OUT_DIR / "Figure1_fixed_propagation_audit.pdf"
+ fig.savefig(png, bbox_inches="tight", dpi=300)

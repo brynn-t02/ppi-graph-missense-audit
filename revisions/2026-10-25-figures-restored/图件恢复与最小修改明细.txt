@@ -1,0 +1,70 @@
+图件恢复与最小修改明细
+日期：2026年10月25日
+比较基线：2026-10-25-review-synthesis（GitHub 2c1cc25dd4fb4279b8209e191ec631d20c76d3c3）
+本版：2026-10-25-figures-restored
+
+一、本轮结论
+上一轮移入补充图S3的两个历史面板，现恢复到正文原位置：部分删边曲线回到图1E，同源划分的历史表示比较回到图2D。图1、图2恢复六面板布局；新增的外部来源/第二网络图3继续保留。主稿仍为7页（含参考文献），未缩小字号、页边距或列宽，符合本任务最多8页的限制。
+
+原稿四张图的分析内容都有保留位置；原拓扑图和预测变化图继续在补充材料S2、S1。本轮没有把这两张补充图再次挪回正文。这样能保留新增实验，同时减少对现有正文结构的扰动。
+
+二、恢复的图和位置
+1. 图1E：从上一版S3A恢复历史部分删边曲线。保留其原始均值、标准差和端点数据，不将历史数据替换成新训练结果。图中及图注说明：种子/训练预算/算子不完全匹配，部分端点复用；仅作描述性补充，不能当成图1D当前匹配实验的连续剂量曲线。
+2. 图1F：当前拓扑置换面板由上一版图1E恢复为F，数值不变。
+3. 图2D：从上一版S3B恢复历史同源表示比较。Raw/FPP的AUC为0.7248/0.7606，AP为0.2418/0.2768，保留原值；标注每组仅一次拟合，不提供重复训练的误差估计。
+4. 图2E：当前三种子同源融合面板由上一版D恢复为E，仍使用当前统一统计结果。
+5. 图2F：测试集阳性比例由上一版E恢复为F，数值不变。
+6. 图1、图2恢复先前的六面板排布和画布尺寸。图1总标题去掉会误指整个图均为匹配实验的“Matched”；图2A明确写“Same hidden-layer architecture”。这两张图因恢复面板而重新生成。
+
+三、原图和新图的完整去向
+原稿图1A–F → 当前正文图1A–F：六面板均保留；已有当前实验结果的面板继续用校核后的当前数值。
+原稿图2A–F → 当前正文图2A–F：六面板均保留；D标明历史单次拟合，E保留当前三种子结果。
+原稿图3A–F（拓扑分析）→ 当前补充图S2A–F：本轮图文件完全未改。
+原稿图4A–F（预测变化/特征描述）→ 当前补充图S1A–F：本轮图文件完全未改。
+新增外部来源/第二网络实验 → 当前正文图3A–B：本轮PDF和PNG均与上一版逐字节相同。
+
+S3原来只是上述两个历史面板的合图。两面板回正文后，当前补充PDF不再重复展示S3，页数从21页变为20页；S3图文件仍保留在源码中，上一版含S3的PDF和所有历史版本也全部保留。
+
+四、“共享隐藏层”的措辞修正
+实际含义是各模型采用相同的隐藏层架构和预处理，各自拟合；输入维数不同，因此输入层参数数目可以不同。为避免读者误解为模型间共享训练权重，同步修正了五类位置（具名、匿名两套文件均改）：
+
+1. 正文Methods：
+修改前：Models shared hidden layers and preprocessing, although score-only models had fewer input weights.
+修改后：Models used the same hidden-layer architecture and preprocessing, although score-only models had fewer input-layer parameters.
+
+2. 图2A图注：
+修改前：External-score coverage and fusion controls, sharing hidden-layer architecture and training protocol.
+修改后：External-score coverage and fusion controls using the same hidden-layer architecture and training protocol.
+
+3. 补充材料融合比较的说明：
+修改前：The relative fusion-control comparisons share hidden-layer architecture, training protocol and preprocessing,
+修改后：The relative fusion-control comparisons use the same hidden-layer architecture, training protocol and preprocessing,
+
+4. 补充表8：
+修改前：Shared hidden layers, training protocol and preprocessing
+修改后：Same hidden-layer architecture, training protocol and preprocessing
+
+5. 补充Methods5：
+修改前：Score-only models share hidden layers with fusion but have fewer fitted input weights.
+修改后：Score-only and fusion models use the same hidden-layer architecture, but score-only models have fewer input-layer parameters.
+
+五、为使图与正文一致而同步修改的细节
+1. 正文置换实验引用改回图1F；当前同源融合引用改回图2E；补回图1E、图2D的简短历史来源说明。
+2. 图1图注逐项区分当前匹配面板B–D/F与历史E。“最多50个epoch”限定在当前匹配实验，避免套到历史曲线上。
+3. 图2图注区分历史单次表示D与当前三种子融合E，不把单次历史值写成重复实验的均值。
+4. 表I脚注补充图1E/图2D的历史设置和参考估计可查补充表2、8；当前匹配实验仍指向Methods5–6和表11。
+5. 补充表2、4、8及统一统计说明同步修正面板编号。当前统一统计适用于当前匹配/外部验证面板；历史1E、2D保留其归档估计和原设置。
+6. 补充材料源数据说明列出当前显示的S1–S2；图件目录README说明S3文件是保留的历史副本。
+7. 恢复面板及图注后，具名稿最后一页参考文献的换栏点从第27条调到第26条，使两栏更接近等高；参考文献内容、次序及匿名稿换栏点不变。
+
+六、保留的必要校正及原因
+当前匹配实验的均值、样本标准差、统一float64集成结果和按蛋白重采样区间均保持上一版，不退回早期不一致的计算口径。恢复图的原结构不需要恢复已修正的旧数值。
+
+补充S1的原计数、均值差和描述性效应量仍在。先前去掉的显著性星号/FDR编码不恢复，因为旧检验把共享蛋白特征的变异行当成独立样本；这些标记的推断依据不足。补充S2也继续保留事后选择分组等限制。本轮没有删除这些分析图。
+
+外部STRING增益仍有区间支持；BioGRID外部增益及相对raw融合的增量收益仍不确定。历史单次面板不能改变当前重复实验和区间给出的判断。未新增训练、推理或统计重算。
+
+七、验证和版本保留
+当前canonical目录49个文件、补充表11–17、所有补充表的数值、主文公式、引用顺序和参考文献均保持不变。新增图3及S1/S2文件与上一版校验和完全一致。主稿7页、补充20页；具名和匿名版本均单独提供。
+
+reproducibility目录提供主文/补充材料精确diff、图脚本diff、图件去向和数值核验记录，可逐项追溯。本次单独新增GitHub版本，不覆盖旧版本。未使用百度网盘、未访问实验服务器、未下载大型文件。实际会议投稿系统的上传和最终作者审核仍需另行完成。
