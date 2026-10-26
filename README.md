@@ -4,6 +4,8 @@ Code and compact evidence archive for an evaluation study of fixed protein-featu
 
 ## Manuscript revisions
 
+**Submission source package (26 October 2026):** [tar.gz](submission/2026-10-26-source-package/BIBM2026_manuscript_source.tar.gz), [ZIP](submission/2026-10-26-source-package/BIBM2026_manuscript_source.zip), and [clean-build verification](submission/2026-10-26-source-package/). The seven required manuscript inputs reproduce all eight certified pages exactly at 300 dpi; no paper content changed. Copyright and final submission remain separate author actions.
+
 **PDF eXpress certified main:** [25 October 2026 returned 8-page PDF](revisions/2026-10-25-pdf-express-certified/2026400920.pdf) ([verification](revisions/2026-10-25-pdf-express-certified/verification.json)). All pages are pixel-identical to the font-clean main below. Certification is verified from the author-provided service email and returned PDF metadata; final conference submission is still separate. [Supplementary Information](revisions/2026-10-25-font-clean/BIBM2026_supplementary_named_revised.pdf).
 
 - **Latest: [25 October 2026 embedded-font cleanup](revisions/2026-10-25-font-clean/)** — [8-page named main](revisions/2026-10-25-font-clean/BIBM2026_workshop_named_revised.pdf), [anonymous main](revisions/2026-10-25-font-clean/BIBM2026_workshop_anonymous_revised.pdf), [Supplementary Information — 18 pages](revisions/2026-10-25-font-clean/BIBM2026_supplementary_named_revised.pdf), [change and reference audit](revisions/2026-10-25-font-clean/字体清理与参考文献核对说明.txt). All font resources embedded and subset; all 52 pages pixel-identical at 300 dpi. No content or reference changes. The returned certified main is linked above; earlier versions preserved.

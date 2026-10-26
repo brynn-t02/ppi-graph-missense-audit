@@ -1,0 +1,132 @@
+{
+  "certified_sha256": "afb2406c2e39c8b90aa660b18af709373eacf6a41792c950816809a0b4a27371",
+  "rebuilt_sha256": "c4f03eee13971b3e1d5bf98d9e24c5629e52f2be7f446279cef30dc66b6125f3",
+  "engine": "Tectonic 0.16.9, cached resources only",
+  "source_files": [
+    {
+      "path": "main.tex",
+      "bytes": 36163,
+      "sha256": "f8094291125ee8d1a56c60c0a4bbb9660811c6df3edd5b938365ce95743bc352"
+    },
+    {
+      "path": "IEEEtran.cls",
+      "bytes": 288304,
+      "sha256": "c972aca108fda004c3514d63658e02816da2e54d9a1451e870b9bd970e003f55"
+    },
+    {
+      "path": "figure_drafts/Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+      "bytes": 104362,
+      "sha256": "6fab8facd7e5af9bd701ea7475f733c6eaf03751a29ec86fc3fcacacf5fd4cf0"
+    },
+    {
+      "path": "figure_drafts/Figure2_fusion_homology_v1_accepted.pdf",
+      "bytes": 31785,
+      "sha256": "bb2429ea938a2a852dafbb67b296d96e30f20ada46cdc0a2ac83526f9649865d"
+    },
+    {
+      "path": "figure_drafts/Figure3_topology_context_v1_accepted_clarified.pdf",
+      "bytes": 70504,
+      "sha256": "1012fa80e12572fb33fded6ed54d4e40ba992f0915ba4c79e32d7e3ff598932c"
+    },
+    {
+      "path": "figure_drafts/Figure4_prediction_transitions_v2_accepted_minimal_clarified.pdf",
+      "bytes": 81981,
+      "sha256": "28ce5087235d2ecf07be057f0771aa1616072ad85a7051a5c8b293aa68b8620d"
+    },
+    {
+      "path": "figure_drafts/Figure5_external_validation.pdf",
+      "bytes": 25923,
+      "sha256": "12c910b00d9b8123226f324f6701bec8be017f430048552d6e29a340d5eba8a5"
+    }
+  ],
+  "comparison_dpi": 300,
+  "pages": [
+    {
+      "page": 1,
+      "page_size_points": [
+        612,
+        792
+      ],
+      "changed_pixels": 0,
+      "exact_character_geometry_equal": true
+    },
+    {
+      "page": 2,
+      "page_size_points": [
+        612,
+        792
+      ],
+      "changed_pixels": 0,
+      "exact_character_geometry_equal": true
+    },
+    {
+      "page": 3,
+      "page_size_points": [
+        612,
+        792
+      ],
+      "changed_pixels": 0,
+      "exact_character_geometry_equal": true
+    },
+    {
+      "page": 4,
+      "page_size_points": [
+        612,
+        792
+      ],
+      "changed_pixels": 0,
+      "exact_character_geometry_equal": true
+    },
+    {
+      "page": 5,
+      "page_size_points": [
+        612,
+        792
+      ],
+      "changed_pixels": 0,
+      "exact_character_geometry_equal": true
+    },
+    {
+      "page": 6,
+      "page_size_points": [
+        612,
+        792
+      ],
+      "changed_pixels": 0,
+      "exact_character_geometry_equal": true
+    },
+    {
+      "page": 7,
+      "page_size_points": [
+        612,
+        792
+      ],
+      "changed_pixels": 0,
+      "exact_character_geometry_equal": true
+    },
+    {
+      "page": 8,
+      "page_size_points": [
+        612,
+        792
+      ],
+      "changed_pixels": 0,
+      "exact_character_geometry_equal": true
+    }
+  ],
+  "online_certification_applies_to_rebuilt_pdf": false,
+  "problem_log_lines": [],
+  "font_resources_checked": 44,
+  "all_fonts_embedded": true,
+  "passed": true,
+  "source_archives_identical": true,
+  "source_files_unchanged": true,
+  "main_certified_pdf_unchanged": true,
+  "manuscript_changed": false,
+  "conference_submission_performed": false,
+  "copyright_signed_by_assistant": false,
+  "official_requirements_checked_urls": [
+    "https://wi-lab.com/cyberchair/2026/bibm26/scripts/BIBM2026_Camera_ready_instruction.php?subarea=S03",
+    "https://wi-lab.com/cyberchair/2026/bibm26/scripts/final.php?subarea=S03"
+  ]
+}
