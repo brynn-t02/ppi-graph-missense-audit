@@ -1,0 +1,149 @@
+{
+  "main_text": [
+    {
+      "location": "Results III.B paragraph1",
+      "before": "Under the original split, single-score CADD and AlphaMissense baselines achieved AUC 0.9207 and 0.9470. In the historical fusion audit, the same-hidden-layer \\CADDAM{} baseline reached mean AUC 0.9572; adding raw ESM, real PPI-GCN, edge-ablated or permuted representations gave 0.9680, 0.9718, 0.9708 and 0.9694 (Fig. 2B). The historical real-minus-raw fusion interval was positive, while ablated/permuted contrasts included zero (Fig. 2C). Current matched fusion yielded a small real-minus-raw margin ($\\Delta$AUC +0.0032, protein 95\\% CI [+0.0008, +0.0062]); the ablated contrast remained uncertain. The permutation contrast was small and positive conditional on the sampled graphs (Supplementary Table 12).",
+      "after": "Under the original split, single-score CADD and AlphaMissense baselines achieved AUC 0.9207 and 0.9470, respectively. The architecture-matched CADD+AlphaMissense baseline achieved mean AUC 0.9572 and AUPRC 0.9072. Adding raw ESM, edge-ablated FPP, topology-permuted FPP and full FPP yielded mean AUCs of 0.9682, 0.9704, 0.9692 and 0.9716, respectively (Fig. 2B; Supplementary Table 11). On averaged ensemble predictions, full FPP fusion improved over the score baseline by $\\Delta$AUC +0.0147 (protein-clustered 95\\% CI [+0.0065, +0.0226]) and over raw-ESM fusion by +0.0032 ([+0.0008, +0.0062]). Its margins over edge-ablated fusion (+0.0013, [$-$0.0004, +0.0032]) and topology-permuted fusion (+0.0020, [+0.0001, +0.0045]) were smaller (Fig. 2C; Supplementary Table 12). These results indicate substantial complementarity from protein representations, with a more limited additional contribution from the original STRING topology."
+    },
+    {
+      "location": "Results III.B paragraph2",
+      "before": "Under the homology-aware split, historical single-fit PPI-GCN exceeded raw ESM (AUC 0.7606 versus 0.7248; Fig. 2D). The retained graph-fusion estimate (0.9741) was lower than the repeated \\CADDAM{} baseline (0.9754); raw fusion averaged 0.9728 (Fig. 2E). Current three-seed means were 0.9755 for scores, 0.9727 for raw fusion and 0.9752 for graph fusion. On ensemble predictions, graph-minus-score $\\Delta$AUC was +0.0001, CI [-0.0019, +0.0020], and its AUPRC interval also crossed zero. The graph-versus-score effect remained uncertain under homology-aware splitting. Mean metrics and metrics of averaged probabilities can give different close rankings.",
+      "after": "Under the homology-aware split, a separate single-fit representation comparison yielded AUC 0.7248 for raw ESM and 0.7606 for full FPP (Fig. 2D). In the matched three-seed fusion comparison, the CADD+AlphaMissense baseline achieved mean AUC 0.9755 and AUPRC 0.8403, compared with 0.9727 and 0.8253 for raw-ESM fusion and 0.9752 and 0.8369 for full-FPP fusion (Fig. 2E; Supplementary Table 11). On ensemble predictions, full-FPP fusion exceeded raw-ESM fusion by $\\Delta$AUC +0.0027 (protein-clustered 95\\% CI [+0.0015, +0.0040]), but its difference from the strong score baseline was +0.0001 ([$-$0.0019, +0.0020]; Supplementary Table 12). Thus, graph fusion provided a positive increment over raw-embedding fusion without establishing a clear additional benefit over CADD+AlphaMissense under homology-aware splitting. The test-set positive rate differed between the original and homology-aware splits (31.95\\% versus 10.56\\%; Fig. 2F), limiting direct cross-split AUPRC comparison."
+    },
+    {
+      "location": "Results III.C paragraph1",
+      "before": "ESM representation space showed modest correspondence with PPI topology. Neighbour pairs had mean cosine similarity 0.8789 versus 0.8639 for random pairs; within-community similarity also exceeded between-community similarity (Fig. 3A). Graph-associated gains were non-monotonic: mid-k-core variants showed $\\Delta$AUC +0.0775, whereas high-degree variants showed -0.0178. Betweenness, clustering and neighbour-risk profiles varied across strata (Fig. 3B--D).",
+      "after": "ESM protein representations showed modest correspondence with PPI topology. Directly connected protein pairs had a mean cosine similarity of 0.8789, compared with 0.8639 for randomly paired proteins; within-community similarity also exceeded between-community similarity (Fig. 3A). Performance differences between fixed PPI-GCN propagation and raw ESM varied non-monotonically across network strata. For example, mid-k-core variants showed a $\\Delta$AUC of +0.0775, whereas high-degree variants showed $-$0.0178 (Fig. 3B). Betweenness, clustering and neighbour-risk strata also exhibited heterogeneous performance differences (Fig. 3C,D)."
+    },
+    {
+      "location": "Results III.C paragraph2",
+      "before": "Exploratory joint maps included both positive and negative profiles, such as mid-k-core/high-betweenness ($\\Delta$AUC +0.1429) and high-k-core/low-clustering (-0.0532; Fig. 3E/F). All 53 joint cells and highlighted profiles were inspected on the same test set. Their variant-resampled intervals do not account for protein dependence or post-hoc selection. These observations identify hypotheses for independent validation rather than confirmed benefiting subgroups.",
+      "after": "Among 53 joint topology cells examined on the same test set, we observed both positive and negative performance differences, including mid-k-core/high-betweenness ($\\Delta$AUC +0.1429) and high-k-core/low-clustering ($\\Delta$AUC $-$0.0532; Fig. 3E,F). Because the highlighted cells were selected after examining the test-set results and their intervals were computed using variant-level resampling, these estimates do not account for within-protein dependence or subgroup-selection uncertainty. We therefore interpret these patterns as exploratory findings that require independent validation."
+    },
+    {
+      "location": "Figure2 caption",
+      "before": "\\caption{Historical fusion and homology-aware evaluation. A, Score coverage and fusion setup. Architecture-matched refers to the same hidden-layer architecture, not equal input-layer parameter counts or shared fitted weights. B, Original-split means and population SD across three classifier seeds per arm, except permuted fusion (3 graphs $\\times$ 3 seeds). C, Ensemble differences with paired protein-bootstrap intervals, conditional on fitted models and sampled graphs. D, One retained representation fit per arm under homology splitting. E, Baseline/raw-fusion means use three fits; graph fusion uses one retained fit. F, Split prevalence. Current matched comparisons appear in the text and Supplementary Tables 11--12.}",
+      "after": "\\caption{Strong-predictor fusion and homology-aware evaluation. A, Score coverage and fusion-control setup; architecture matching refers to the hidden-layer configuration, not equal input-layer parameter counts. B, Original-split fusion performance under matched training settings; error bars represent sample standard deviation across classifier fits. C, Full-FPP fusion differences relative to score-only and protein-representation controls, with paired protein-clustered bootstrap 95\\% intervals computed from ensemble predictions. D, Single-fit comparison of raw ESM and full FPP representations under the homology-aware split. E, Three-seed matched fusion comparisons under the homology-aware split. F, Test-set positive prevalence for the original and homology-aware splits. Permutation controls use three graphs and three classifier seeds per graph.}"
+    },
+    {
+      "location": "Figure3 caption",
+      "before": "\\caption{Exploratory topology-context profiles from retained reference predictions. A, ESM similarity by network relation. B--D, Gains across degree, k-core, betweenness, clustering and neighbour-risk strata. E/F, Joint-cell profiles selected from 53 inspected cells. These descriptive, post-hoc profiles are not independently confirmed; historical within-cell intervals omit protein dependence and selection uncertainty.}",
+      "after": "\\caption{Exploratory topology-context analysis of fixed protein-feature propagation. A, ESM similarity across protein-network relationships. B--D, Performance differences between fixed PPI-GCN propagation and raw ESM across degree, k-core, betweenness, clustering and neighbour-risk strata. E, Distribution of AUC differences across 53 joint topology cells. F, Selected positive and negative joint-cell profiles with variant-level bootstrap intervals. Panels B--F use a fixed reference model pair. The selected profiles are descriptive, and their intervals do not account for within-protein dependence or post-hoc subgroup selection.}"
+    }
+  ],
+  "supplement_text": [
+    {
+      "file": "source/Supplementary_Information_revised.md",
+      "location": "Notes on scope / Figure 2 source mapping",
+      "before": "Figures 2–4 retain their fit-specific representation, fusion, topology and transition analyses in Tables 2–10; Table 4B–C retains the corresponding fusion uncertainty.",
+      "after": "Main Figure 2B/E uses matched fusion results from Table 11, and Figure 2C uses the paired ensemble intervals in Table 12. Figure 2D retains the single-fit representation comparison in Table 2. Figures 3–4 retain their fixed-reference topology and transition analyses in Tables 5–6 and 10; Tables 3 and 4B–C retain separate fusion comparisons.",
+      "reason": "Directly map updated Figure2B/C/E to matched Tables11/12 while preserving Figure2D and the separate reference tables.",
+      "numerical_table_rows_changed": false
+    },
+    {
+      "file": "source/Supplementary_Information_revised.md",
+      "location": "Table 3 introduction",
+      "before": "Table 3 supplies the historical fusion estimates in main Figure 2B and 2E, including repeated classifier runs where available and a single retained homology graph-fusion estimate. Older single-tool rows are reference context. Current matched fusion estimates and paired ensemble intervals are reported separately in Tables 11 and 12.",
+      "after": "Table 3 preserves separate fusion-control estimates and single-tool reference context, including repeated classifier runs where available and a single-fit homology graph-fusion estimate. The matched fusion results in main Figure 2B/E are supplied by Table 11, and the paired ensemble intervals in Figure 2C by Table 12. The fitted prediction sets in Table 3 are not substituted for these matched comparisons.",
+      "reason": "Remove the obsolete claim that the printed reference-fusion values supply Figure2B/E; retain every Table3 value.",
+      "numerical_table_rows_changed": false
+    },
+    {
+      "file": "source/Supplementary_Information_revised.md",
+      "location": "Table 3B protocol note",
+      "before": "Historical note for Table 3B (superseded for the current fusion comparison by Table 11): the homology-aware graph-fusion row is a single retained point estimate. It is reported as a stress-test result, not as a fully symmetric repeated-ensemble comparison. Relative to the repeated-run architecture-matched CADD+AlphaMissense mean, the retained graph-fusion point estimate was -0.0013 AUC and -0.0068 AUPRC.",
+      "after": "The graph-fusion row in Table 3B is a separate single-fit stress-test result, not a fully symmetric repeated-ensemble comparison. Within Table 3B, its differences from the repeated-run architecture-matched CADD+AlphaMissense mean are -0.0013 AUC and -0.0068 AUPRC. Main Figure 2E instead uses three matched classifier fits per arm from Table 11 and the paired ensemble intervals in Table 12.",
+      "reason": "Keep the true single-fit context of the retained table without incorrectly applying it to the updated three-seed Figure2E.",
+      "numerical_table_rows_changed": false
+    },
+    {
+      "file": "source/Supplementary_Information_revised.md",
+      "location": "Table 4 summary / separate fusion interval set",
+      "before": "Table 4B shows that the real FPP fusion margin over raw ESM fusion remained positive under protein-clustered paired bootstrap, but the smaller margins over edge-ablated and topology-permuted graph controls crossed zero.",
+      "after": "For its separate fitted prediction set, Table 4B shows that the real FPP fusion margin over raw ESM fusion remained positive under protein-clustered paired bootstrap, but the smaller margins over edge-ablated and topology-permuted graph controls crossed zero.",
+      "reason": "Clarify that the unchanged Table4B intervals are a separate fitted comparison, not the new Figure2C intervals.",
+      "numerical_table_rows_changed": false
+    },
+    {
+      "file": "source/Supplementary_Information_revised.md",
+      "location": "Table 4 / Figure 2C and 2E source mapping",
+      "before": "Table 4A supplies the matched ensemble intervals in main Figure 1C, and Table 4B supplies the historical fusion intervals in main Figure 2C. The homology graph-fusion estimate in Table 3B and main Figure 2E is a single retained fit. Current homology comparisons in Tables 11–12 use three matched fits in every arm and supersede the earlier asymmetric comparison for current inference.",
+      "after": "Table 4A supplies the matched ensemble intervals in main Figure 1C. Main Figure 2C uses the matched fusion intervals in Table 12; Tables 4B–C retain their separate fitted comparisons. Main Figure 2E uses three matched fits per arm in Tables 11–12, while the graph-fusion estimate in Table 3B remains a separate single-fit result. Figure 2D retains the single-fit representation comparison in Table 2.",
+      "reason": "Correct only the direct Figure2 sources and repetition counts; preserve all legacy bootstrap and fit records.",
+      "numerical_table_rows_changed": false
+    },
+    {
+      "file": "source/Supplementary_Information_revised.md",
+      "location": "Table 5 opening sentence",
+      "before": "These historical reference-pair results correspond to main Figure 3.",
+      "after": "The topology-stratified results correspond to the fixed reference model pair used in Figure 3.",
+      "reason": "Exact Figure3 wording requested by the user; topology graph distinction,53cells and external-validation limitations remain unchanged.",
+      "numerical_table_rows_changed": false
+    },
+    {
+      "file": "source/Supplementary_Information_revised.md",
+      "location": "Table 5 joint-cell interval sentence",
+      "before": "Their historical intervals resampled variants within each cell, without accounting for repeated variants within proteins or for subgroup selection.",
+      "after": "The reported intervals resampled variants within each cell, without accounting for repeated variants within proteins or for subgroup selection.",
+      "reason": "Exact requested sentence replacement, without recomputing or modifying any Figure3 result.",
+      "numerical_table_rows_changed": false
+    },
+    {
+      "file": "source/Supplementary_Information_revised.md",
+      "location": "Table 6 / direct Figure 2 comparison",
+      "before": "All strong-predictor transition counts in this table correspond to the exploratory retained-reference model pair used in main Figure 4, not to the historical repeated ensembles in main Figure 2B or the current matched ensembles in Tables 11–12.",
+      "after": "All strong-predictor transition counts in this table correspond to the exploratory retained-reference model pair used in main Figure 4, not to the matched fusion model sets used in main Figure 2B/C/E and Tables 11–12.",
+      "reason": "Update the Figure2 comparison label while keeping Figure4 counts and analysis fully unchanged.",
+      "numerical_table_rows_changed": false
+    },
+    {
+      "file": "source/Supplementary_Information_revised.md",
+      "location": "Table 8 / matched Figure 2 applicability",
+      "before": "The other reference-fit and fusion rows retain their original settings and are not substituted for the matched Figure 1 results.",
+      "after": "The other reference-fit and fusion rows retain their original settings and are not substituted for the matched Figure 1B–D/F or Figure 2B/C/E results. Figure 2D remains the single-fit representation comparison.",
+      "reason": "Keep all Table8 run rows; distinguish their reference-fusion settings from updated Figure2B/C/E and preserve single-fit2D.",
+      "numerical_table_rows_changed": false
+    },
+    {
+      "file": "source/Supplementary_Information_revised.md",
+      "location": "Source-data archive / Figure 2 inputs",
+      "before": "The compact source-data archive contains the matched source data for main Figure 1B–D/F, the separate sensitivity data for Figure 1E, the historical source data for Figures 2–4 and the external-source and network-comparison data for Figure 5, together with topology-stratified metrics, joint topology maps, corrected-sample statistics, fusion-control summaries, bootstrap outputs and checksums.",
+      "after": "The compact source-data archive contains the matched source data for main Figure 1B–D/F and Figure 2B/C/E, the separate sensitivity data for Figure 1E, the single-fit representation data for Figure 2D, the fixed-reference source data for Figures 3–4 and the external-source and network-comparison data for Figure 5, together with topology-stratified metrics, joint topology maps, corrected-sample statistics, fusion-control summaries, bootstrap outputs and checksums.",
+      "reason": "Update only the mapping from Figure2 panels to their actual saved source sets.",
+      "numerical_table_rows_changed": false
+    },
+    {
+      "file": "source/Supplementary_Information_revised.md",
+      "location": "Source-data archive / Figure 2 panel applicability",
+      "before": "Unified current summaries support Tables 11–17, the matched Figure 1B–D/F results in the main text and main Figure 5; separate sensitivity and historical figure estimates retain their archived inputs and conventions.",
+      "after": "Unified current summaries support Tables 11–17, the matched Figure 1B–D/F and Figure 2B/C/E results in the main text and main Figure 5; separate sensitivity and reference-fit estimates retain their archived inputs and conventions.",
+      "reason": "Include the authorized matched Figure2 panels without changing unrelated archive or data-provider statements.",
+      "numerical_table_rows_changed": false
+    },
+    {
+      "file": "source/Supplementary_Information_revised.md",
+      "location": "Methods 5 / matched Figure 2 reporting convention",
+      "before": "Main Figure 1B–D/F uses this convention; Figure 1E and Figures 2–4 retain their separate sensitivity or reference-fit estimates and protocols.",
+      "after": "Main Figure 1B–D/F and Figure 2B/C/E use this convention; Figure 1E, Figure 2D and Figures 3–4 retain their separate sensitivity or reference-fit estimates and protocols.",
+      "reason": "Map only the updated Figure2 panels to the existing float64/common-protocol convention; keep2D and3/4 separate.",
+      "numerical_table_rows_changed": false
+    }
+  ],
+  "mechanical_page_placement": [
+    {
+      "location": "Figure2 page placement",
+      "before": "figure* [!p]",
+      "after": "figure* [!t]"
+    },
+    {
+      "location": "Figure3 page placement",
+      "before": "figure* [!p]",
+      "after": "figure* [!t]"
+    },
+    {
+      "location": "Reference-column balance hook",
+      "before": "\\IEEEtriggeratref{26}",
+      "after": "\\IEEEtriggeratref{16}"
+    }
+  ]
+}

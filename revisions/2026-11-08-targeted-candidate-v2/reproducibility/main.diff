@@ -1,0 +1,55 @@
+--- v1/source/main.tex
++++ v2/source/main.tex
+@@ -130,29 +130,29 @@
+ 
+ \subsection{Strong predictors and homology-aware evaluation bound PPI context gains}
+ 
+-Under the original split, single-score CADD and AlphaMissense baselines achieved AUC 0.9207 and 0.9470. In the historical fusion audit, the same-hidden-layer \CADDAM{} baseline reached mean AUC 0.9572; adding raw ESM, real PPI-GCN, edge-ablated or permuted representations gave 0.9680, 0.9718, 0.9708 and 0.9694 (Fig. 2B). The historical real-minus-raw fusion interval was positive, while ablated/permuted contrasts included zero (Fig. 2C). Current matched fusion yielded a small real-minus-raw margin ($\Delta$AUC +0.0032, protein 95\% CI [+0.0008, +0.0062]); the ablated contrast remained uncertain. The permutation contrast was small and positive conditional on the sampled graphs (Supplementary Table 12).
+-
+-Under the homology-aware split, historical single-fit PPI-GCN exceeded raw ESM (AUC 0.7606 versus 0.7248; Fig. 2D). The retained graph-fusion estimate (0.9741) was lower than the repeated \CADDAM{} baseline (0.9754); raw fusion averaged 0.9728 (Fig. 2E). Current three-seed means were 0.9755 for scores, 0.9727 for raw fusion and 0.9752 for graph fusion. On ensemble predictions, graph-minus-score $\Delta$AUC was +0.0001, CI [-0.0019, +0.0020], and its AUPRC interval also crossed zero. The graph-versus-score effect remained uncertain under homology-aware splitting. Mean metrics and metrics of averaged probabilities can give different close rankings.
+-
+-\begin{figure*}[!p]
++Under the original split, single-score CADD and AlphaMissense baselines achieved AUC 0.9207 and 0.9470, respectively. The architecture-matched CADD+AlphaMissense baseline achieved mean AUC 0.9572 and AUPRC 0.9072. Adding raw ESM, edge-ablated FPP, topology-permuted FPP and full FPP yielded mean AUCs of 0.9682, 0.9704, 0.9692 and 0.9716, respectively (Fig. 2B; Supplementary Table 11). On averaged ensemble predictions, full FPP fusion improved over the score baseline by $\Delta$AUC +0.0147 (protein-clustered 95\% CI [+0.0065, +0.0226]) and over raw-ESM fusion by +0.0032 ([+0.0008, +0.0062]). Its margins over edge-ablated fusion (+0.0013, [$-$0.0004, +0.0032]) and topology-permuted fusion (+0.0020, [+0.0001, +0.0045]) were smaller (Fig. 2C; Supplementary Table 12). These results indicate substantial complementarity from protein representations, with a more limited additional contribution from the original STRING topology.
++
++Under the homology-aware split, a separate single-fit representation comparison yielded AUC 0.7248 for raw ESM and 0.7606 for full FPP (Fig. 2D). In the matched three-seed fusion comparison, the CADD+AlphaMissense baseline achieved mean AUC 0.9755 and AUPRC 0.8403, compared with 0.9727 and 0.8253 for raw-ESM fusion and 0.9752 and 0.8369 for full-FPP fusion (Fig. 2E; Supplementary Table 11). On ensemble predictions, full-FPP fusion exceeded raw-ESM fusion by $\Delta$AUC +0.0027 (protein-clustered 95\% CI [+0.0015, +0.0040]), but its difference from the strong score baseline was +0.0001 ([$-$0.0019, +0.0020]; Supplementary Table 12). Thus, graph fusion provided a positive increment over raw-embedding fusion without establishing a clear additional benefit over CADD+AlphaMissense under homology-aware splitting. The test-set positive rate differed between the original and homology-aware splits (31.95\% versus 10.56\%; Fig. 2F), limiting direct cross-split AUPRC comparison.
++
++\begin{figure*}[!t]
+ \centering
+ \includegraphics[width=0.98\textwidth]{figure_drafts/Figure2_fusion_homology_v1_accepted.pdf}
+-\caption{Historical fusion and homology-aware evaluation. A, Score coverage and fusion setup. Architecture-matched refers to the same hidden-layer architecture, not equal input-layer parameter counts or shared fitted weights. B, Original-split means and population SD across three classifier seeds per arm, except permuted fusion (3 graphs $\times$ 3 seeds). C, Ensemble differences with paired protein-bootstrap intervals, conditional on fitted models and sampled graphs. D, One retained representation fit per arm under homology splitting. E, Baseline/raw-fusion means use three fits; graph fusion uses one retained fit. F, Split prevalence. Current matched comparisons appear in the text and Supplementary Tables 11--12.}
++\caption{Strong-predictor fusion and homology-aware evaluation. A, Score coverage and fusion-control setup; architecture matching refers to the hidden-layer configuration, not equal input-layer parameter counts. B, Original-split fusion performance under matched training settings; error bars represent sample standard deviation across classifier fits. C, Full-FPP fusion differences relative to score-only and protein-representation controls, with paired protein-clustered bootstrap 95\% intervals computed from ensemble predictions. D, Single-fit comparison of raw ESM and full FPP representations under the homology-aware split. E, Three-seed matched fusion comparisons under the homology-aware split. F, Test-set positive prevalence for the original and homology-aware splits. Permutation controls use three graphs and three classifier seeds per graph.}
+ \label{fig:fusion_homology}
+ \end{figure*}
+ 
+ \subsection{Exploratory graph gains across topology contexts}
+ 
+-ESM representation space showed modest correspondence with PPI topology. Neighbour pairs had mean cosine similarity 0.8789 versus 0.8639 for random pairs; within-community similarity also exceeded between-community similarity (Fig. 3A). Graph-associated gains were non-monotonic: mid-k-core variants showed $\Delta$AUC +0.0775, whereas high-degree variants showed -0.0178. Betweenness, clustering and neighbour-risk profiles varied across strata (Fig. 3B--D).
+-
+-Exploratory joint maps included both positive and negative profiles, such as mid-k-core/high-betweenness ($\Delta$AUC +0.1429) and high-k-core/low-clustering (-0.0532; Fig. 3E/F). All 53 joint cells and highlighted profiles were inspected on the same test set. Their variant-resampled intervals do not account for protein dependence or post-hoc selection. These observations identify hypotheses for independent validation rather than confirmed benefiting subgroups.
+-
+-
+-
+-\begin{figure*}[!p]
++ESM protein representations showed modest correspondence with PPI topology. Directly connected protein pairs had a mean cosine similarity of 0.8789, compared with 0.8639 for randomly paired proteins; within-community similarity also exceeded between-community similarity (Fig. 3A). Performance differences between fixed PPI-GCN propagation and raw ESM varied non-monotonically across network strata. For example, mid-k-core variants showed a $\Delta$AUC of +0.0775, whereas high-degree variants showed $-$0.0178 (Fig. 3B). Betweenness, clustering and neighbour-risk strata also exhibited heterogeneous performance differences (Fig. 3C,D).
++
++Among 53 joint topology cells examined on the same test set, we observed both positive and negative performance differences, including mid-k-core/high-betweenness ($\Delta$AUC +0.1429) and high-k-core/low-clustering ($\Delta$AUC $-$0.0532; Fig. 3E,F). Because the highlighted cells were selected after examining the test-set results and their intervals were computed using variant-level resampling, these estimates do not account for within-protein dependence or subgroup-selection uncertainty. We therefore interpret these patterns as exploratory findings that require independent validation.
++
++
++
++\begin{figure*}[!t]
+ \centering
+ \includegraphics[width=0.98\textwidth]{figure_drafts/Figure3_topology_context_v1_accepted_clarified.pdf}
+-\caption{Exploratory topology-context profiles from retained reference predictions. A, ESM similarity by network relation. B--D, Gains across degree, k-core, betweenness, clustering and neighbour-risk strata. E/F, Joint-cell profiles selected from 53 inspected cells. These descriptive, post-hoc profiles are not independently confirmed; historical within-cell intervals omit protein dependence and selection uncertainty.}
++\caption{Exploratory topology-context analysis of fixed protein-feature propagation. A, ESM similarity across protein-network relationships. B--D, Performance differences between fixed PPI-GCN propagation and raw ESM across degree, k-core, betweenness, clustering and neighbour-risk strata. E, Distribution of AUC differences across 53 joint topology cells. F, Selected positive and negative joint-cell profiles with variant-level bootstrap intervals. Panels B--F use a fixed reference model pair. The selected profiles are descriptive, and their intervals do not account for within-protein dependence or post-hoc subgroup selection.}
+ \label{fig:topology_context}
+ \end{figure*}
+ 
+@@ -206,7 +206,7 @@
+ 
+ OpenAI ChatGPT, OpenAI Codex and Anthropic Claude assisted with literature organization, code development for the Methods and Results analyses, and manuscript language editing. AI-assisted scripts supported environment restoration, model fitting, data checks and statistical analysis. The authors take responsibility for reviewing the code, outputs, interpretation, references and final manuscript.
+ 
+-\IEEEtriggeratref{26}
++\IEEEtriggeratref{16}
+ \begin{thebibliography}{99}
+ \bibitem{Kircher2014CADD} M. Kircher et al., ``A general framework for estimating the relative pathogenicity of human genetic variants,'' \emph{Nature Genetics}, vol. 46, pp. 310--315, 2014, doi: 10.1038/ng.2892.
+ \bibitem{Ioannidis2016REVEL} N. M. Ioannidis et al., ``REVEL: an ensemble method for predicting the pathogenicity of rare missense variants,'' \emph{American Journal of Human Genetics}, vol. 99, pp. 877--885, 2016, doi: 10.1016/j.ajhg.2016.08.016.

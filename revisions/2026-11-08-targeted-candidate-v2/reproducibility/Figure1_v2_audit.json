@@ -1,0 +1,96 @@
+{
+  "source": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_20261108/source/figure_drafts/Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+  "source_sha256": "8d1a903c100023e01a9514f067dfa9d57e9bb8b754f9c6697fc68bfca9ee339a",
+  "output": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_v2_20261108/source/figure_drafts/Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+  "output_sha256": "304feefa0e4fabff825462f2bcb4c54c1f02d7219bdcababf63306f4c48a3303",
+  "changes": [
+    {
+      "panel": "D",
+      "before": "Full minus ablated\nensemble AUC:\n+0.0248",
+      "after": "Full − edge-ablated\nΔAUC +0.0248"
+    },
+    {
+      "panel": "F",
+      "before": "Permutation:\n3 graphs x 3 seeds",
+      "after": "Point estimates\nnear raw ESM"
+    }
+  ],
+  "method": "Removed only five old text blocks from existing numeric-panel Form; all non-text vector operations kept verbatim; four requested lines inserted as embedded DejaVu Sans 7.4pt text at same annotation anchors.",
+  "all_other_existing_form_streams_byte_identical": true,
+  "bars_error_lines_colors_layout_unchanged": true,
+  "source_unchanged": true,
+  "pixel_comparison_dpi": 300,
+  "changed_pixels": 14771,
+  "allowed_annotation_rectangles_pdf_pt": {
+    "D annotation": [
+      183,
+      135,
+      260,
+      161
+    ],
+    "F annotation": [
+      830,
+      142,
+      907,
+      161
+    ]
+  },
+  "outside_annotation_rectangles_changed_pixels": 0,
+  "other_panels_changed_pixels": {
+    "A": 0,
+    "B": 0,
+    "C": 0,
+    "E": 0
+  },
+  "fonts": [
+    {
+      "resource": "/F1",
+      "base_font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "resource": "/F2",
+      "base_font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "resource": "/F2",
+      "base_font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "resource": "/F1",
+      "base_font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "resource": "/F1",
+      "base_font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "resource": "/F2",
+      "base_font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "resource": "/F2",
+      "base_font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "resource": "/F1",
+      "base_font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "resource": "/F1",
+      "base_font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    }
+  ],
+  "all_font_resources_embedded": true,
+  "new_training": false,
+  "new_statistics": false,
+  "visual_review": "Passed. The full 300dpi preview was inspected: requested D/F text legible, no overlap/clipping, all other chart elements unchanged."
+}

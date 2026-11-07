@@ -1,0 +1,220 @@
+{
+  "status": "passed",
+  "review_type": "Read-only cumulative scope QA",
+  "baseline_v1": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_20261108/source",
+  "candidate_v2": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_v2_20261108/source",
+  "previously_completed_v1_edits_preserved": true,
+  "v1_completed_main_edit_blocks_preserved": 9,
+  "new_main_text_blocks": 6,
+  "additional_mechanical_layout_commands": [
+    {
+      "location": "fig:fusion_homology",
+      "before": "\\begin{figure*}[!p]",
+      "after": "\\begin{figure*}[!t]"
+    },
+    {
+      "location": "fig:topology_context",
+      "before": "\\begin{figure*}[!p]",
+      "after": "\\begin{figure*}[!t]"
+    },
+    {
+      "location": "Reference column balancing trigger",
+      "before": "\\IEEEtriggeratref{26}",
+      "after": "\\IEEEtriggeratref{16}"
+    }
+  ],
+  "figure1_authorized_annotation_exceptions": [
+    {
+      "panel": "D",
+      "before": "Full minus ablated\nensemble AUC:\n+0.0248",
+      "after": "Full − edge-ablated\nΔAUC +0.0248"
+    },
+    {
+      "panel": "F",
+      "before": "Permutation:\n3 graphs x 3 seeds",
+      "after": "Point estimates\nnear raw ESM"
+    }
+  ],
+  "checks": [
+    {
+      "check": "Exactly six authorized main text blocks plus three disclosed layout commands",
+      "passed": true,
+      "evidence": {
+        "text_locations": [
+          "Results III.B paragraph1",
+          "Results III.B paragraph2",
+          "Results III.C paragraph1",
+          "Results III.C paragraph2",
+          "Figure2 caption",
+          "Figure3 caption"
+        ],
+        "mechanical_changes": [
+          {
+            "location": "fig:fusion_homology",
+            "before": "\\begin{figure*}[!p]",
+            "after": "\\begin{figure*}[!t]"
+          },
+          {
+            "location": "fig:topology_context",
+            "before": "\\begin{figure*}[!p]",
+            "after": "\\begin{figure*}[!t]"
+          },
+          {
+            "location": "Reference column balancing trigger",
+            "before": "\\IEEEtriggeratref{26}",
+            "after": "\\IEEEtriggeratref{16}"
+          }
+        ]
+      }
+    },
+    {
+      "check": "All nine completed v1 main edits remain intact",
+      "passed": true,
+      "evidence": [
+        "Introduction last paragraph",
+        "Methods II.C classifier/training subsection",
+        "Methods II.D topology statistics",
+        "Methods II.E heading",
+        "Methods II.E first paragraph",
+        "Table I caption, eight rows, and note",
+        "Results III.A heading",
+        "Results III.A three paragraphs",
+        "Figure 1 caption"
+      ]
+    },
+    {
+      "check": "Everything before Results III.B remains byte-identical to v1",
+      "passed": true,
+      "evidence": "Includes title/authors, Abstract, Introduction, Methods, Table I, Section III.A, Figure 1 caption and its placement."
+    },
+    {
+      "check": "Preamble, font and margin declarations unchanged",
+      "passed": true,
+      "evidence": "No font-size, margin, class, package or scaling substitutions."
+    },
+    {
+      "check": "All includegraphics paths and widths unchanged",
+      "passed": true,
+      "evidence": [
+        "\\includegraphics[width=0.98\\textwidth]{figure_drafts/Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf}",
+        "\\includegraphics[width=0.98\\textwidth]{figure_drafts/Figure2_fusion_homology_v1_accepted.pdf}",
+        "\\includegraphics[width=0.98\\textwidth]{figure_drafts/Figure3_topology_context_v1_accepted_clarified.pdf}",
+        "\\includegraphics[width=0.98\\textwidth]{figure_drafts/Figure4_prediction_transitions_v2_accepted_minimal_clarified.pdf}",
+        "\\includegraphics[width=0.98\\textwidth]{figure_drafts/Figure5_external_validation.pdf}"
+      ]
+    },
+    {
+      "check": "Bibliography content byte-identical",
+      "passed": true,
+      "evidence": "Only IEEEtriggeratref changed from 26 to 16 before the unchanged reference environment."
+    },
+    {
+      "check": "Results III.D/E and Discussion unchanged",
+      "passed": true,
+      "evidence": "No fixed-reference Figure 4 counts, external results, Discussion or AI disclosure changed."
+    },
+    {
+      "check": "SI contains only twelve declared directly related text edits",
+      "passed": true,
+      "evidence": {
+        "blocks": 12,
+        "locations": [
+          "Notes on scope / Figure 2 source mapping",
+          "Table 3 introduction",
+          "Table 3B protocol note",
+          "Table 4 summary / separate fusion interval set",
+          "Table 4 / Figure 2C and 2E source mapping",
+          "Table 5 opening sentence",
+          "Table 5 joint-cell interval sentence",
+          "Table 6 / direct Figure 2 comparison",
+          "Table 8 / matched Figure 2 applicability",
+          "Source-data archive / Figure 2 inputs",
+          "Source-data archive / Figure 2 panel applicability",
+          "Methods 5 / matched Figure 2 reporting convention"
+        ]
+      }
+    },
+    {
+      "check": "All 267 SI table rows unchanged",
+      "passed": true,
+      "evidence": "Includes all Figure 3 data, old Tables 3/4B/C, and matched Tables 11/12. No numerical relabelling or recalculation."
+    },
+    {
+      "check": "Figure 3 exact requested SI wording present",
+      "passed": true,
+      "evidence": "Graph distinction, 53 joint cells, and lack of independent external confirmation remain intact."
+    },
+    {
+      "check": "Figures 3–5 PDFs byte-identical to v1",
+      "passed": true,
+      "evidence": {
+        "3": {
+          "identical": true,
+          "sha256": "1012fa80e12572fb33fded6ed54d4e40ba992f0915ba4c79e32d7e3ff598932c"
+        },
+        "4": {
+          "identical": true,
+          "sha256": "28ce5087235d2ecf07be057f0771aa1616072ad85a7051a5c8b293aa68b8620d"
+        },
+        "5": {
+          "identical": true,
+          "sha256": "12c910b00d9b8123226f324f6701bec8be017f430048552d6e29a340d5eba8a5"
+        }
+      }
+    },
+    {
+      "check": "Figure 1 preserves v1 scientific content except two explicitly authorized text annotations",
+      "passed": true,
+      "evidence": {
+        "authorization": "Root confirmed these two exact user-requested annotations in this scope-QA turn.",
+        "annotation_exceptions": [
+          {
+            "panel": "D",
+            "before": "Full minus ablated\nensemble AUC:\n+0.0248",
+            "after": "Full − edge-ablated\nΔAUC +0.0248"
+          },
+          {
+            "panel": "F",
+            "before": "Permutation:\n3 graphs x 3 seeds",
+            "after": "Point estimates\nnear raw ESM"
+          }
+        ],
+        "saved_asset_sha256": "304feefa0e4fabff825462f2bcb4c54c1f02d7219bdcababf63306f4c48a3303",
+        "outside_annotation_rectangles_changed_pixels": 0,
+        "scientific_vector_geometry_unchanged": true,
+        "new_pixel_or_statistical_analysis_this_review": false
+      }
+    },
+    {
+      "check": "Figure 2 asset matches its narrow B/C/E audit",
+      "passed": true,
+      "evidence": {
+        "saved_asset_sha256": "2eb2b750e1963cbb745c1d5fd9647d3845318ff3ab9a1b639182387a12c370e7",
+        "previously_verified_preserved_pixels": {
+          "A": 0,
+          "D": 0,
+          "F": 0
+        },
+        "new_pixel_or_statistical_analysis_this_review": false
+      }
+    },
+    {
+      "check": "All protected prior-source files intact",
+      "passed": true,
+      "evidence": {
+        "files_checked": 352,
+        "mismatches": []
+      }
+    }
+  ],
+  "findings": [],
+  "main_tex_sha256": "b0d2108d51b3ce209fab6f6d5cbffcd7b8eb57b835166d43acd03aa10eccb408",
+  "si_md_sha256": "c35a895264889756e7cef06e9426e0ba53efe1f0be34529c760b5a8ecc3d0106",
+  "all267SI_table_rows_unchanged": true,
+  "no_manuscript_or_figure_edits_by_reviewer": true,
+  "new_training": false,
+  "new_inference": false,
+  "new_bootstrap_or_metric_recomputation": false,
+  "compilation_or_rendering_performed_by_reviewer": false,
+  "pagination_scope": "Root changed only Figure 2/3 float options !p→!t and IEEEtriggeratref 26→16 to retain eight pages. Actual PDF visual and page verification is the root delivery check."
+}

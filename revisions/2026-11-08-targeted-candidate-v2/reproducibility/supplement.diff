@@ -1,0 +1,90 @@
+--- targeted_v1/Supplementary_Information_revised.md
++++ targeted_v2/Supplementary_Information_revised.md
+@@ -12,7 +12,7 @@
+ 
+ This Supplementary Information provides reconstruction details, split statistics, model comparisons, uncertainty estimates, topology-stratified summaries and negative-control results. Full figure source data, topology-stratified metrics, corrected-sample statistics and fusion-control summaries are included in the prepared compact source-data archive.
+ 
+-Figure guide: Main Figure 1B–D/F uses matched representation results from Tables 11–12; Table 4A supplies both resampling intervals for Figure 1C. Figure 1E uses the separate partial-ablation sensitivity protocol in Table 8. Figures 2–4 retain their fit-specific representation, fusion, topology and transition analyses in Tables 2–10; Table 4B–C retains the corresponding fusion uncertainty. Tables 11–13 contain the matched results, with the restored runtime and common propagation operator in Methods 5. External-source and BioGRID validation are documented in Methods 6, Tables 14–17 and main Figure 5. Different protocols and fitted prediction sets should not be interchanged.
++Figure guide: Main Figure 1B–D/F uses matched representation results from Tables 11–12; Table 4A supplies both resampling intervals for Figure 1C. Figure 1E uses the separate partial-ablation sensitivity protocol in Table 8. Main Figure 2B/E uses matched fusion results from Table 11, and Figure 2C uses the paired ensemble intervals in Table 12. Figure 2D retains the single-fit representation comparison in Table 2. Figures 3–4 retain their fixed-reference topology and transition analyses in Tables 5–6 and 10; Tables 3 and 4B–C retain separate fusion comparisons. Tables 11–13 contain the matched results, with the restored runtime and common propagation operator in Methods 5. External-source and BioGRID validation are documented in Methods 6, Tables 14–17 and main Figure 5. Different protocols and fitted prediction sets should not be interchanged.
+ 
+ ## Supplementary Methods
+ 
+@@ -121,7 +121,7 @@
+ 
+ ### Supplementary Table 3. Historical external predictor and fusion-control performance
+ 
+-Table 3 supplies the historical fusion estimates in main Figure 2B and 2E, including repeated classifier runs where available and a single retained homology graph-fusion estimate. Older single-tool rows are reference context. Current matched fusion estimates and paired ensemble intervals are reported separately in Tables 11 and 12.
++Table 3 preserves separate fusion-control estimates and single-tool reference context, including repeated classifier runs where available and a single-fit homology graph-fusion estimate. The matched fusion results in main Figure 2B/E are supplied by Table 11, and the paired ensemble intervals in Figure 2C by Table 12. The fitted prediction sets in Table 3 are not substituted for these matched comparisons.
+ 
+ #### Supplementary Table 3A. Original split
+ 
+@@ -147,7 +147,7 @@
+ | + raw ESM | 3 | 0.9715 | 0.8228 | 0.9728 +/- 0.0003 | 0.8249 +/- 0.0016 |
+ | + FPP | 1 | 0.9732 | 0.8273 | 0.9741 | 0.8333 |
+ 
+-Historical note for Table 3B (superseded for the current fusion comparison by Table 11): the homology-aware graph-fusion row is a single retained point estimate. It is reported as a stress-test result, not as a fully symmetric repeated-ensemble comparison. Relative to the repeated-run architecture-matched CADD+AlphaMissense mean, the retained graph-fusion point estimate was -0.0013 AUC and -0.0068 AUPRC.
++The graph-fusion row in Table 3B is a separate single-fit stress-test result, not a fully symmetric repeated-ensemble comparison. Within Table 3B, its differences from the repeated-run architecture-matched CADD+AlphaMissense mean are -0.0013 AUC and -0.0068 AUPRC. Main Figure 2E instead uses three matched classifier fits per arm from Table 11 and the paired ensemble intervals in Table 12.
+ 
+ ### Supplementary Table 4. Uncertainty and repeated-run summary
+ 
+@@ -186,13 +186,13 @@
+ | R0 | AUC | +0.0133 | +0.0119 | +0.0146 | 1,000 |
+ | R0 | AUPRC | +0.0310 | +0.0268 | +0.0350 | 1,000 |
+ 
+-Table 4A shows that variant-level resampling supports positive matched ensemble FPP gains, whereas protein-clustered resampling widens uncertainty. Table 4B shows that the real FPP fusion margin over raw ESM fusion remained positive under protein-clustered paired bootstrap, but the smaller margins over edge-ablated and topology-permuted graph controls crossed zero. Table 4C is retained as an earlier retained-reference context analysis and is not architecture-matched.
+-
+-Table 4A supplies the matched ensemble intervals in main Figure 1C, and Table 4B supplies the historical fusion intervals in main Figure 2C. The homology graph-fusion estimate in Table 3B and main Figure 2E is a single retained fit. Current homology comparisons in Tables 11–12 use three matched fits in every arm and supersede the earlier asymmetric comparison for current inference.
++Table 4A shows that variant-level resampling supports positive matched ensemble FPP gains, whereas protein-clustered resampling widens uncertainty. For its separate fitted prediction set, Table 4B shows that the real FPP fusion margin over raw ESM fusion remained positive under protein-clustered paired bootstrap, but the smaller margins over edge-ablated and topology-permuted graph controls crossed zero. Table 4C is retained as an earlier retained-reference context analysis and is not architecture-matched.
++
++Table 4A supplies the matched ensemble intervals in main Figure 1C. Main Figure 2C uses the matched fusion intervals in Table 12; Tables 4B–C retain their separate fitted comparisons. Main Figure 2E uses three matched fits per arm in Tables 11–12, while the graph-fusion estimate in Table 3B remains a separate single-fit result. Figure 2D retains the single-fit representation comparison in Table 2.
+ 
+ ### Supplementary Table 5. Topology-stratified FPP gain over raw ESM
+ 
+-These historical reference-pair results correspond to main Figure 3. Its topology-description graph is distinct from the propagation graph (Methods 2); all 53 joint cells and the highlighted profiles were inspected on the same test set. They have not been independently confirmed in the external source.
++The topology-stratified results correspond to the fixed reference model pair used in Figure 3. Its topology-description graph is distinct from the propagation graph (Methods 2); all 53 joint cells and the highlighted profiles were inspected on the same test set. They have not been independently confirmed in the external source.
+ 
+ | Stratum | n | Positive rate | Delta AUC | Delta AUPRC |
+ |---|---:|---:|---:|---:|
+@@ -230,13 +230,13 @@
+ 
+ Full topology maps are provided in the prepared source-data archive rather than printed in full in the PDF supplement.
+ 
+-These joint cells were selected from the same test-set topology map used for estimation. Their historical intervals resampled variants within each cell, without accounting for repeated variants within proteins or for subgroup selection. The cells and intervals are descriptive exploratory profiles, not confirmatory evidence for independently validated topology-defined subgroups.
++These joint cells were selected from the same test-set topology map used for estimation. The reported intervals resampled variants within each cell, without accounting for repeated variants within proteins or for subgroup selection. The cells and intervals are descriptive exploratory profiles, not confirmatory evidence for independently validated topology-defined subgroups.
+ 
+ ### Supplementary Table 6. Descriptive corrected-sample and baseline-error-stratified profiles
+ 
+ Corrected-sample group counts for raw ESM to FPP:
+ 
+-All strong-predictor transition counts in this table correspond to the exploratory retained-reference model pair used in main Figure 4, not to the historical repeated ensembles in main Figure 2B or the current matched ensembles in Tables 11–12.
++All strong-predictor transition counts in this table correspond to the exploratory retained-reference model pair used in main Figure 4, not to the matched fusion model sets used in main Figure 2B/C/E and Tables 11–12.
+ 
+ | Group | n | Positive rate |
+ |---|---:|---:|
+@@ -330,7 +330,7 @@
+ | Homology CADD+AM and raw-ESM fusion | 3 classifier seeds 42-44 per arm | 50 | Repeated baseline means |
+ | Homology graph fusion | 1 retained run | 50 | Descriptive only; asymmetric comparison |
+ 
+-Table 8 records the separate sensitivity and reference protocols; matched representation comparisons in Figure 1B–D/F use the common operator and three classifier seeds (42–44), with at most 50 epochs (Methods 5; Tables 11–12). The partial-ablation interior fractions in Figure 1E use 30 epochs, different classifier seeds and a control convention that adds one self-loop after symmetrization. Matched graph controls use the full-graph convention, which adds loops before symmetrization. The 0% endpoint reuses one full-graph reference estimate and the 100% endpoint reuses the same five direct-ablation fits across the three strategies. Thus Figure 1E is a separate sensitivity series, not a completely matched dose-response comparison, and its endpoints are not independent confirmations. The other reference-fit and fusion rows retain their original settings and are not substituted for the matched Figure 1 results.
++Table 8 records the separate sensitivity and reference protocols; matched representation comparisons in Figure 1B–D/F use the common operator and three classifier seeds (42–44), with at most 50 epochs (Methods 5; Tables 11–12). The partial-ablation interior fractions in Figure 1E use 30 epochs, different classifier seeds and a control convention that adds one self-loop after symmetrization. Matched graph controls use the full-graph convention, which adds loops before symmetrization. The 0% endpoint reuses one full-graph reference estimate and the 100% endpoint reuses the same five direct-ablation fits across the three strategies. Thus Figure 1E is a separate sensitivity series, not a completely matched dose-response comparison, and its endpoints are not independent confirmations. The other reference-fit and fusion rows retain their original settings and are not substituted for the matched Figure 1B–D/F or Figure 2B/C/E results. Figure 2D remains the single-fit representation comparison.
+ 
+ ### Supplementary Table 9. Historical post-hoc complete-case evaluation of matched fusion predictions
+ 
+@@ -370,7 +370,7 @@
+ 
+ ## Source-data archive status
+ 
+-The compact source-data archive contains the matched source data for main Figure 1B–D/F, the separate sensitivity data for Figure 1E, the historical source data for Figures 2–4 and the external-source and network-comparison data for Figure 5, together with topology-stratified metrics, joint topology maps, corrected-sample statistics, fusion-control summaries, bootstrap outputs and checksums. The source package also includes the complete 177,213-row sample/split/cluster manifest, frozen node order, per-seed test predictions and external membership/prediction records in `canonical_analysis_20261025/public/`. Unified current summaries support Tables 11–17, the matched Figure 1B–D/F results in the main text and main Figure 5; separate sensitivity and historical figure estimates retain their archived inputs and conventions. Figure-generation and minimal figure-correction scripts are retained with the figure assets, and executed protocols, source manifests and reconstruction programs are retained in the public experimental addendum. Large third-party resources, including provider-controlled CADD and AlphaMissense score files, are not redistributed and should be obtained from their original providers.
++The compact source-data archive contains the matched source data for main Figure 1B–D/F and Figure 2B/C/E, the separate sensitivity data for Figure 1E, the single-fit representation data for Figure 2D, the fixed-reference source data for Figures 3–4 and the external-source and network-comparison data for Figure 5, together with topology-stratified metrics, joint topology maps, corrected-sample statistics, fusion-control summaries, bootstrap outputs and checksums. The source package also includes the complete 177,213-row sample/split/cluster manifest, frozen node order, per-seed test predictions and external membership/prediction records in `canonical_analysis_20261025/public/`. Unified current summaries support Tables 11–17, the matched Figure 1B–D/F and Figure 2B/C/E results in the main text and main Figure 5; separate sensitivity and reference-fit estimates retain their archived inputs and conventions. Figure-generation and minimal figure-correction scripts are retained with the figure assets, and executed protocols, source manifests and reconstruction programs are retained in the public experimental addendum. Large third-party resources, including provider-controlled CADD and AlphaMissense score files, are not redistributed and should be obtained from their original providers.
+ 
+ 
+ ### Supplementary Methods 5. Matched validation and restored runtime (24 October 2026)
+@@ -383,7 +383,7 @@
+ 
+ The original-split representation comparison uses raw ESM, full FPP, ablated FPP (three fits each) and three topology permutations by three seeds (nine fits). Original-split fusion uses score-only, raw, full and ablated arms (three fits each) plus permuted fusion (nine). Homology fusion uses score-only, raw and full FPP (three fits each). Score-only and fusion models use the same hidden-layer architecture, but score-only models have fewer input-layer parameters. The smoke checks used four training batches plus validation, without test evaluation.
+ 
+-**Unified current reporting.** Tables 11–17, the current matched results reported in the main text and the external/network comparisons in main Figure 5 use a single post-processing convention. Main Figure 1B–D/F uses this convention; Figure 1E and Figures 2–4 retain their separate sensitivity or reference-fit estimates and protocols. For all 21 protein-only representation checkpoints, CPU evaluation in float32 with fixed batches of 1,024 nodes in the frozen node order produces one stored probability per protein, which is mapped to its variant rows. On the original validation/test rows, the largest difference from the earlier variant-batched probabilities was 3.58e-7; the maximum within-protein spread decreased from 2.38e-7 to exactly zero. Fusion inputs remain variant-specific. Seed probabilities are converted to float64 before averaging; all AUPRC values are non-interpolated average precision computed consistently with scikit-learn. This inference and aggregation standardization involved no model refitting or checkpoint changes. It can slightly change rank-based metrics through exact ties; earlier outputs remain archived separately rather than mixed with the current tables.
++**Unified current reporting.** Tables 11–17, the current matched results reported in the main text and the external/network comparisons in main Figure 5 use a single post-processing convention. Main Figure 1B–D/F and Figure 2B/C/E use this convention; Figure 1E, Figure 2D and Figures 3–4 retain their separate sensitivity or reference-fit estimates and protocols. For all 21 protein-only representation checkpoints, CPU evaluation in float32 with fixed batches of 1,024 nodes in the frozen node order produces one stored probability per protein, which is mapped to its variant rows. On the original validation/test rows, the largest difference from the earlier variant-batched probabilities was 3.58e-7; the maximum within-protein spread decreased from 2.38e-7 to exactly zero. Fusion inputs remain variant-specific. Seed probabilities are converted to float64 before averaging; all AUPRC values are non-interpolated average precision computed consistently with scikit-learn. This inference and aggregation standardization involved no model refitting or checkpoint changes. It can slightly change rank-based metrics through exact ties; earlier outputs remain archived separately rather than mixed with the current tables.
+ 
+ ### Supplementary Table 11. Current matched fitted-run summaries
+ 

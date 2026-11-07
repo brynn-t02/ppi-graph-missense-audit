@@ -1,0 +1,588 @@
+{
+  "status": "passed",
+  "baseline": "immediately preceding targeted v1 candidate; cumulative continuation",
+  "previous_Introduction_Methods_TableI_IIIA_Fig1caption_byte_unchanged": true,
+  "Results_IIIB_IIIC_and_captions_replaced": true,
+  "IIID_onward_unchanged_except_reference_balance_hook": true,
+  "Figure3_to5_byte_unchanged": true,
+  "all_267_SI_table_rows_byte_unchanged": true,
+  "figure_dimensions_in_LaTeX_unchanged": true,
+  "protected_files_checked": 352,
+  "protected_files_changed": 0,
+  "new_training": false,
+  "new_inference": false,
+  "bootstrap_rerun": false,
+  "new_statistics": "Only requested sample SD from existing per-fit records; no other recomputation.",
+  "blocking_log_lines": [],
+  "unresolved_refs": [],
+  "page_placement_changes": [
+    "Figure2/3 !p to !t",
+    "IEEEtriggeratref26 to16"
+  ],
+  "documents": [
+    {
+      "document": "main",
+      "pages": 8,
+      "file": "BIBM2026_workshop_targeted_candidate_v2.pdf",
+      "sha256": "965d8d95b1125028cf7190f59e1d926c65a58c883b29e02c843f27051b57fe7c",
+      "bytes": 371600,
+      "fonts": [
+        {
+          "resource": "/F0",
+          "font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/BZIVMZ+NimbusRomNo9L-MediItal",
+          "embedded": true
+        },
+        {
+          "resource": "/F2",
+          "font": "/IXFAWU+NimbusRomNo9L-Medi",
+          "embedded": true
+        },
+        {
+          "resource": "/F3",
+          "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "embedded": true
+        },
+        {
+          "resource": "/F0",
+          "font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "embedded": true
+        },
+        {
+          "resource": "/F3",
+          "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "embedded": true
+        },
+        {
+          "resource": "/F4",
+          "font": "/YEUUOC+CMMI10",
+          "embedded": true
+        },
+        {
+          "resource": "/F5",
+          "font": "/AKHCZK+CMR10",
+          "embedded": true
+        },
+        {
+          "resource": "/F6",
+          "font": "/VDVGTR+CMR7",
+          "embedded": true
+        },
+        {
+          "resource": "/F7",
+          "font": "/CAFSZL+CMSY7",
+          "embedded": true
+        },
+        {
+          "resource": "/F8",
+          "font": "/DDIEWW+CMR5",
+          "embedded": true
+        },
+        {
+          "resource": "/F9",
+          "font": "/FKPJSN+CMEX10",
+          "embedded": true
+        },
+        {
+          "resource": "/F0",
+          "font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "embedded": true
+        },
+        {
+          "resource": "/F10",
+          "font": "/PVTTLK+CMSY8",
+          "embedded": true
+        },
+        {
+          "resource": "/F3",
+          "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "embedded": true
+        },
+        {
+          "resource": "/F5",
+          "font": "/AKHCZK+CMR10",
+          "embedded": true
+        },
+        {
+          "resource": "/F11",
+          "font": "/JAGKKY+CMSY10",
+          "embedded": true
+        },
+        {
+          "resource": "/F0",
+          "font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "embedded": true
+        },
+        {
+          "resource": "/F5",
+          "font": "/AKHCZK+CMR10",
+          "embedded": true
+        },
+        {
+          "resource": "/F11",
+          "font": "/JAGKKY+CMSY10",
+          "embedded": true
+        },
+        {
+          "resource": "/F3",
+          "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F2",
+          "font": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        },
+        {
+          "resource": "/F2",
+          "font": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F2",
+          "font": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        },
+        {
+          "resource": "/F2",
+          "font": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        },
+        {
+          "resource": "/F0",
+          "font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "embedded": true
+        },
+        {
+          "resource": "/F3",
+          "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "embedded": true
+        },
+        {
+          "resource": "/F5",
+          "font": "/AKHCZK+CMR10",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F2",
+          "font": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        },
+        {
+          "resource": "/F2",
+          "font": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        },
+        {
+          "resource": "/F0",
+          "font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "embedded": true
+        },
+        {
+          "resource": "/F3",
+          "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "embedded": true
+        },
+        {
+          "resource": "/F2",
+          "font": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F0",
+          "font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "embedded": true
+        },
+        {
+          "resource": "/F3",
+          "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F2",
+          "font": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F2",
+          "font": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        },
+        {
+          "resource": "/F0",
+          "font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "embedded": true
+        },
+        {
+          "resource": "/F3",
+          "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "embedded": true
+        }
+      ],
+      "all_font_resources_embedded": true,
+      "visual_review": "passed: all pages inspected, no overlap/cropping/broken tables"
+    },
+    {
+      "document": "supplement",
+      "pages": 19,
+      "file": "BIBM2026_supplementary_targeted_candidate_v2.pdf",
+      "sha256": "d903eda2aa64a20c6c0b475817ff6213be52149b2f0990fa50af8359297b77a1",
+      "bytes": 123546,
+      "fonts": [
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        }
+      ],
+      "all_font_resources_embedded": true,
+      "visual_review": "passed: all pages inspected, no overlap/cropping/broken tables"
+    }
+  ],
+  "certified_or_submitted": false,
+  "all_27_pages_visually_reviewed": true
+}
