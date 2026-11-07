@@ -1,0 +1,8 @@
+[
+  {
+    "location": "Immediately after \\maketitle",
+    "before": "\\maketitle",
+    "after": "\\maketitle\n\\raggedbottom",
+    "purpose": "Prevent flushbottom stretching paragraph glue; no text, font, figure, metric or margin changes."
+  }
+]

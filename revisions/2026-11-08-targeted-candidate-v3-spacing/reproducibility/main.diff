@@ -1,0 +1,10 @@
+--- v2/source/main.tex
++++ v3/source/main.tex
+@@ -28,6 +28,7 @@
+ 
+ \begin{document}
+ \maketitle
++\raggedbottom
+ 
+ 
+ \begin{abstract}

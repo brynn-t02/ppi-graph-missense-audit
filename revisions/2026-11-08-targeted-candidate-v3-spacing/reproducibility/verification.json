@@ -1,0 +1,278 @@
+{
+  "status": "passed",
+  "cumulative_baseline": "targeted_candidate_v2_20261108",
+  "main_pages": 8,
+  "only_source_change": "Add \\raggedbottom after \\maketitle",
+  "all_page_text_exactly_identical": true,
+  "all_five_figure_files_byte_identical": true,
+  "supplement_PDF_and_source_byte_identical": true,
+  "font_size_margins_and_image_sizes_unchanged": true,
+  "paragraph_gap_pt": {
+    "before": 45.92075,
+    "after": 1.992529999999988
+  },
+  "protected_v2_files_checked": 41,
+  "all_fonts_embedded": true,
+  "font_resources": [
+    {
+      "resource": "/F0",
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "resource": "/F1",
+      "font": "/BZIVMZ+NimbusRomNo9L-MediItal",
+      "embedded": true
+    },
+    {
+      "resource": "/F2",
+      "font": "/IXFAWU+NimbusRomNo9L-Medi",
+      "embedded": true
+    },
+    {
+      "resource": "/F3",
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "resource": "/F0",
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "resource": "/F3",
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "resource": "/F4",
+      "font": "/YEUUOC+CMMI10",
+      "embedded": true
+    },
+    {
+      "resource": "/F5",
+      "font": "/AKHCZK+CMR10",
+      "embedded": true
+    },
+    {
+      "resource": "/F6",
+      "font": "/VDVGTR+CMR7",
+      "embedded": true
+    },
+    {
+      "resource": "/F7",
+      "font": "/CAFSZL+CMSY7",
+      "embedded": true
+    },
+    {
+      "resource": "/F8",
+      "font": "/DDIEWW+CMR5",
+      "embedded": true
+    },
+    {
+      "resource": "/F9",
+      "font": "/FKPJSN+CMEX10",
+      "embedded": true
+    },
+    {
+      "resource": "/F0",
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "resource": "/F10",
+      "font": "/PVTTLK+CMSY8",
+      "embedded": true
+    },
+    {
+      "resource": "/F3",
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "resource": "/F5",
+      "font": "/AKHCZK+CMR10",
+      "embedded": true
+    },
+    {
+      "resource": "/F11",
+      "font": "/JAGKKY+CMSY10",
+      "embedded": true
+    },
+    {
+      "resource": "/F0",
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "resource": "/F5",
+      "font": "/AKHCZK+CMR10",
+      "embedded": true
+    },
+    {
+      "resource": "/F11",
+      "font": "/JAGKKY+CMSY10",
+      "embedded": true
+    },
+    {
+      "resource": "/F3",
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "resource": "/F1",
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "resource": "/F2",
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "resource": "/F2",
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "resource": "/F1",
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "resource": "/F1",
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "resource": "/F2",
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "resource": "/F2",
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "resource": "/F1",
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "resource": "/F1",
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "resource": "/F0",
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "resource": "/F3",
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "resource": "/F5",
+      "font": "/AKHCZK+CMR10",
+      "embedded": true
+    },
+    {
+      "resource": "/F1",
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "resource": "/F2",
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "resource": "/F2",
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "resource": "/F1",
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "resource": "/F0",
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "resource": "/F3",
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "resource": "/F2",
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "resource": "/F1",
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "resource": "/F1",
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "resource": "/F0",
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "resource": "/F3",
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "resource": "/F1",
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "resource": "/F1+0",
+      "font": "/AAAAAA+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "resource": "/F2",
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "resource": "/F2",
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "resource": "/F1",
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "resource": "/F0",
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "resource": "/F3",
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    }
+  ],
+  "no_training_inference_or_statistics": true,
+  "certified_or_submitted": false,
+  "main_sha256": "095184c89131a59838f25440acfc8751ba2406e9af9afd2e9cdc92d717b73087",
+  "all_8_main_pages_visually_reviewed": true,
+  "independent_review": "Same content-stream character sequence, fonts, font sizes and x positions; only vertical spacing changes. Pages7/8 unchanged."
+}
