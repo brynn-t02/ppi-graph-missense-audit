@@ -1,0 +1,124 @@
+/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/targeted_revision_v6_figure3_20261108/figure/render_figure3_matched.py:62: DeprecationWarning: Calling `PageObject.replace_contents()` for pages not assigned to a writer is deprecated and will be removed in pypdf 7.0.0. Attach the page to the writer first or use `PdfWriter(clone_from=...)` directly. The existing approach has proved being unreliable.
+  old.replace_contents(cs)
+{
+  "source_pdf": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_v5_text_20261108/source/figure_drafts/Figure3_topology_context_v1_accepted_clarified.pdf",
+  "source_sha256": "1012fa80e12572fb33fded6ed54d4e40ba992f0915ba4c79e32d7e3ff598932c",
+  "output_sha256": "03d5e58c6c2997798cc66cb2d012e289337d1f0987ac14d89991761e6eb3e132",
+  "png_sha256": "de902ff616c4dc963d1127c9f1fc8946cf7cb0b89b78df6f65df33f947baf06e",
+  "input_sha256": {
+    "B": "5fdef909fa77c9baeeb63aafce3005e492f0020e142a64c888577a66a9586c15",
+    "C_betweenness": "fc9db3ba45114dd05facfecc522c1a9449871c54bfc31bc1718d19ba56c50308",
+    "C_clustering": "649123289f85d88adf1da31c3409c72f46de9da4b2de07e43bd2420f135851a4",
+    "D": "332567492dae39dca093a5a2213df7c968192e1cb59efde09d92d4ee5ffde68c",
+    "E": "4a3852487556fe8f803f2ffea22fe0d5eaca88670c0263658553d8c50a5c3a21",
+    "F": "07d93068516624ff9d9346b1a80b1e6688b195fb8b9c85de76fd2f7c7671a807"
+  },
+  "canvas_pt": [
+    955.164,
+    523.40475
+  ],
+  "axes_pt": [
+    [
+      50.7,
+      296.886155,
+      224.316,
+      161.862595
+    ],
+    [
+      387.174,
+      296.886155,
+      224.316,
+      161.862595
+    ],
+    [
+      723.648,
+      296.886155,
+      224.316,
+      161.862595
+    ],
+    [
+      50.7,
+      34.66875,
+      224.316,
+      161.862595
+    ],
+    [
+      387.174,
+      34.66875,
+      224.316,
+      161.862595
+    ],
+    [
+      723.648,
+      34.66875,
+      224.316,
+      161.862595
+    ]
+  ],
+  "fonts_and_colors_follow_original": true,
+  "all_fonts_embedded": true,
+  "original_A_vector_ops": 306,
+  "original_A_clip_pt": [
+    0,
+    263.40475000000004,
+    340,
+    478.40475000000004
+  ],
+  "original_A_pixel_bounds": [
+    2,
+    190,
+    1414,
+    1081
+  ],
+  "original_A_changed_pixels_300dpi": 0,
+  "original_A_pixel_sha256": "ebc42215de8ea5b84d01f7d875e4f41df3f045d06ea06c97ae6fdad17e2eebdd",
+  "new_A_pixel_sha256": "ebc42215de8ea5b84d01f7d875e4f41df3f045d06ea06c97ae6fdad17e2eebdd",
+  "original_four_selected_cells": [
+    "mid_kcore__high_betweenness",
+    "mid_kcore__mid_clustering",
+    "high_neighbor_risk__mid_kcore",
+    "high_kcore__low_clustering"
+  ],
+  "all_53_cells_histogram_count": 53,
+  "histogram_original_bins": [
+    -0.075,
+    -0.05583333333333333,
+    -0.03666666666666667,
+    -0.0175,
+    0.0016666666666666635,
+    0.02083333333333333,
+    0.039999999999999994,
+    0.05916666666666666,
+    0.07833333333333332,
+    0.09749999999999999,
+    0.11666666666666665,
+    0.1358333333333333,
+    0.155
+  ],
+  "histogram_new_bins": [
+    -0.09416666666666666,
+    -0.075,
+    -0.05583333333333333,
+    -0.03666666666666667,
+    -0.0175,
+    0.0016666666666666635,
+    0.02083333333333333,
+    0.039999999999999994,
+    0.05916666666666666,
+    0.07833333333333332,
+    0.09749999999999999,
+    0.11666666666666665,
+    0.1358333333333333,
+    0.155
+  ],
+  "axis_changes": {
+    "B": null,
+    "C": null,
+    "D": null,
+    "E": "One original-width bin added left because minimum delta AUC=-0.0767215 is below old -0.075 boundary. Counts updated across all 53 frozen cells.",
+    "F": "Limits expanded from [-0.075,0.175] to [-0.225,0.225] to show full new protein-bootstrap intervals and leave room for endpoint tick labels."
+  },
+  "panel_F_interval": "2000 paired within-cell protein-clustered bootstrap resamples; conditional on fitted ensemble; unadjusted for subgroup selection/multiplicity",
+  "no_hidden_old_B_to_F_text": true,
+  "no_training_or_prediction_recomputation": true
+}

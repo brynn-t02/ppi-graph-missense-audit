@@ -1,0 +1,260 @@
+{
+  "status": "passed",
+  "date": "2026-11-08",
+  "baseline": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_v4_figure4_20261108",
+  "candidate": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_v5_text_20261108",
+  "checks": [
+    {
+      "name": "Exactly seven requested text replacements",
+      "pass": true
+    },
+    {
+      "name": "Unique original occurrence 1",
+      "pass": true
+    },
+    {
+      "name": "New occurrence present 1",
+      "pass": true
+    },
+    {
+      "name": "Unique original occurrence 2",
+      "pass": true
+    },
+    {
+      "name": "New occurrence present 2",
+      "pass": true
+    },
+    {
+      "name": "Unique original occurrence 3",
+      "pass": true
+    },
+    {
+      "name": "New occurrence present 3",
+      "pass": true
+    },
+    {
+      "name": "Unique original occurrence 4",
+      "pass": true
+    },
+    {
+      "name": "New occurrence present 4",
+      "pass": true
+    },
+    {
+      "name": "Unique original occurrence 5",
+      "pass": true
+    },
+    {
+      "name": "New occurrence present 5",
+      "pass": true
+    },
+    {
+      "name": "Unique original occurrence 6",
+      "pass": true
+    },
+    {
+      "name": "New occurrence present 6",
+      "pass": true
+    },
+    {
+      "name": "Unique original occurrence 7",
+      "pass": true
+    },
+    {
+      "name": "New occurrence present 7",
+      "pass": true
+    },
+    {
+      "name": "Only necessary layout command removed",
+      "pass": true
+    },
+    {
+      "name": "Seven requested text changes plus one layout command removal reconstruct v5 byte for byte",
+      "pass": true
+    },
+    {
+      "name": "Reversing seven replacements reconstructs v4 except removed layout command",
+      "pass": true
+    },
+    {
+      "name": "Exact user text after LaTeX encoding normalization 1",
+      "pass": true
+    },
+    {
+      "name": "Exact user text after LaTeX encoding normalization 2",
+      "pass": true
+    },
+    {
+      "name": "Exact user text after LaTeX encoding normalization 3",
+      "pass": true
+    },
+    {
+      "name": "Exact user text after LaTeX encoding normalization 4",
+      "pass": true
+    },
+    {
+      "name": "Exact user text after LaTeX encoding normalization 5",
+      "pass": true
+    },
+    {
+      "name": "Exact user text after LaTeX encoding normalization 6",
+      "pass": true
+    },
+    {
+      "name": "Exact user text after LaTeX encoding normalization 7",
+      "pass": true
+    },
+    {
+      "name": "Results III.E and Figure5 source including caption unchanged",
+      "pass": true
+    },
+    {
+      "name": "Figure4 caption other text including color and dependence limits unchanged",
+      "pass": true
+    },
+    {
+      "name": "Figure asset unchanged Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+      "pass": true
+    },
+    {
+      "name": "Figure asset unchanged Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.png",
+      "pass": true
+    },
+    {
+      "name": "Figure asset unchanged Figure2_fusion_homology_v1_accepted.pdf",
+      "pass": true
+    },
+    {
+      "name": "Figure asset unchanged Figure2_fusion_homology_v1_accepted.png",
+      "pass": true
+    },
+    {
+      "name": "Figure asset unchanged Figure3_topology_context_v1_accepted_clarified.pdf",
+      "pass": true
+    },
+    {
+      "name": "Figure asset unchanged Figure4_prediction_transitions_matched_ensembles.pdf",
+      "pass": true
+    },
+    {
+      "name": "Figure asset unchanged Figure4_prediction_transitions_matched_ensembles.png",
+      "pass": true
+    },
+    {
+      "name": "Figure asset unchanged Figure4_prediction_transitions_v2_accepted_minimal_clarified.pdf",
+      "pass": true
+    },
+    {
+      "name": "Figure asset unchanged Figure5_external_validation.pdf",
+      "pass": true
+    },
+    {
+      "name": "Supplementary Markdown unchanged",
+      "pass": true
+    },
+    {
+      "name": "Copied compiled supplementary PDF unchanged",
+      "pass": true
+    },
+    {
+      "name": "Final main PDF eight pages",
+      "pass": true
+    },
+    {
+      "name": "Requested added III.D sentence present in PDF page5",
+      "pass": true
+    },
+    {
+      "name": "Caption A-B updated in PDF page7",
+      "pass": true
+    },
+    {
+      "name": "Caption F updated in PDF page7",
+      "pass": true
+    },
+    {
+      "name": "Discussion paragraph1 full requested text present across pages5-6",
+      "pass": true
+    },
+    {
+      "name": "Discussion paragraph2 full requested text present page6",
+      "pass": true
+    },
+    {
+      "name": "Discussion paragraph3 full requested text present page6",
+      "pass": true
+    },
+    {
+      "name": "Acknowledgment full requested text present page8",
+      "pass": true
+    },
+    {
+      "name": "All30references complete onpage8",
+      "pass": true
+    }
+  ],
+  "figure_asset_hashes": [
+    {
+      "path": "source/figure_drafts/Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+      "sha256": "304feefa0e4fabff825462f2bcb4c54c1f02d7219bdcababf63306f4c48a3303"
+    },
+    {
+      "path": "source/figure_drafts/Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.png",
+      "sha256": "f9c11f08c6645f71efd79ca3f9004627fbc847366c0a05be1c84dc9621b803bc"
+    },
+    {
+      "path": "source/figure_drafts/Figure2_fusion_homology_v1_accepted.pdf",
+      "sha256": "2eb2b750e1963cbb745c1d5fd9647d3845318ff3ab9a1b639182387a12c370e7"
+    },
+    {
+      "path": "source/figure_drafts/Figure2_fusion_homology_v1_accepted.png",
+      "sha256": "4228db5148ffa36a73c7840544818260c8eee1f59a1781fe336324147feacac2"
+    },
+    {
+      "path": "source/figure_drafts/Figure3_topology_context_v1_accepted_clarified.pdf",
+      "sha256": "1012fa80e12572fb33fded6ed54d4e40ba992f0915ba4c79e32d7e3ff598932c"
+    },
+    {
+      "path": "source/figure_drafts/Figure4_prediction_transitions_matched_ensembles.pdf",
+      "sha256": "17d756b6d9a0fdbab671cef953150e2ba5a0f0fdd9269ad2b0229a79030811eb"
+    },
+    {
+      "path": "source/figure_drafts/Figure4_prediction_transitions_matched_ensembles.png",
+      "sha256": "e05b6ac13ec46bfc45839ed68ab8113de85cefab8c758748fb7cede0853551e9"
+    },
+    {
+      "path": "source/figure_drafts/Figure4_prediction_transitions_v2_accepted_minimal_clarified.pdf",
+      "sha256": "28ce5087235d2ecf07be057f0771aa1616072ad85a7051a5c8b293aa68b8620d"
+    },
+    {
+      "path": "source/figure_drafts/Figure5_external_validation.pdf",
+      "sha256": "12c910b00d9b8123226f324f6701bec8be017f430048552d6e29a340d5eba8a5"
+    }
+  ],
+  "manuscript_edits": false,
+  "no_new_experiments": true,
+  "notes": [
+    "Seven user-specified text replacements plus removal of obsolete IEEEtriggeratref{16} layout command. Full reverse reconstruction verifies no unrelated source changes.",
+    "Figure4 colors, data, dimensions, layout and all other figure assets byte-identical.",
+    "SI verified unchanged; existing Tables6/10 PDF values independently checked in si_audit/verification.json."
+  ],
+  "final_pdf": {
+    "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_v5_text_20261108/BIBM2026_workshop_targeted_candidate_v5_text.pdf",
+    "sha256": "1a5732a38bf10ceb6f1042796a8a42a3c9ca3b95144bacb3cb55389387646662",
+    "pages": 8,
+    "reference_count_page8": 30
+  },
+  "visual_review": {
+    "pages": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "render_dir": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/targeted_revision_v5_text_20261108/visual_qa",
+    "clipping_or_missing_glyphs": false,
+    "figure4_caption_and_discussion_visible": true,
+    "reference_page_complete": true,
+    "layout_change": "Only obsolete IEEEtriggeratref{16} removed; no font, figure size or margin change."
+  }
+}

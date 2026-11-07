@@ -1,0 +1,38 @@
+{
+  "Figure3_topology_context_matched_ensembles.pdf": {
+    "bytes": 92890,
+    "sha256": "03d5e58c6c2997798cc66cb2d012e289337d1f0987ac14d89991761e6eb3e132"
+  },
+  "Figure3_topology_context_matched_ensembles.png": {
+    "bytes": 285772,
+    "sha256": "de902ff616c4dc963d1127c9f1fc8946cf7cb0b89b78df6f65df33f947baf06e"
+  },
+  "README.txt": {
+    "bytes": 1256,
+    "sha256": "7d7a09932029b05d0b9f52e6e910344f7bef10ee0e68f4556e3abba6e95619f4"
+  },
+  "figure3_render_audit.json": {
+    "bytes": 3511,
+    "sha256": "761d9de9f75711bdaead12e32bf43ef2f13585680ba1e10b979a7867e59266b1"
+  },
+  "font_embedding_audit.txt": {
+    "bytes": 658,
+    "sha256": "a592b7402a357bd523ce1619d805b256e2e9ac710c60a0c8900a554e6ef14b08"
+  },
+  "panel_data.json": {
+    "bytes": 97487,
+    "sha256": "a24cb510583cbff4e5153bf7ca1708615544e3d74cd39fabeefe97e6faf62cfa"
+  },
+  "render_figure3_matched.py": {
+    "bytes": 12283,
+    "sha256": "42706c99ab1cc3263071de6e9786f31dc0615d6f09cf5f03e52dd6871277b664"
+  },
+  "run.log": {
+    "bytes": 3942,
+    "sha256": "4bfb570781ea21c061a142931fafcabeef4afd667765cc88d4dc9ff92ac6cb0e"
+  },
+  "visual_and_text_QA.json": {
+    "bytes": 350,
+    "sha256": "c1b8691801141f93dab20b32975ce7c7280c3c1f462877ac9051082ecbb50c2c"
+  }
+}

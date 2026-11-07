@@ -1,0 +1,43 @@
+[
+  {
+    "location": "Results III.D: one added sentence",
+    "before": "The net change was 33 additional classification errors at this threshold.",
+    "after": "The net change was 33 additional classification errors at this threshold. Thus, the higher AUC and AUPRC point estimates did not translate into fewer classification errors at the fixed threshold of 0.5."
+  },
+  {
+    "location": "Figure 4 caption A–B",
+    "before": "A--B, Prediction transitions for raw ESM versus full FPP and CADD+AlphaMissense versus full-FPP fusion at a decision threshold of 0.5.",
+    "after": "A--B, Prediction transitions at a threshold of 0.5 using mean probabilities across three classifier seeds per model: raw ESM versus full FPP (A), and CADD+AlphaMissense versus full-FPP fusion (B)."
+  },
+  {
+    "location": "Figure 4 caption F",
+    "before": "F, Descriptive Hedges' \\textit{g} comparing rescued and persistent false negatives within baseline false-negative cases.",
+    "after": "F, Descriptive Hedges' \\textit{g} comparing false negatives rescued by full FPP with persistent false negatives within the raw-ESM baseline false-negative group."
+  },
+  {
+    "location": "Discussion paragraph 1",
+    "before": "PPI graph augmentation improved benchmark performance in the shared-graph evaluation, with effects that varied by evaluation design and baseline choice. The historical and matched audits show sensitivity to graph connectivity, but protein-level uncertainty limits the full-versus-raw claim. With \\CADDAM{} included, protein-representation controls retained much of the gain, while the current real-minus-raw fusion margin was small and positive. These results support representation complementarity with a limited additional STRING margin under the original split.",
+    "after": "Under the original protein-level split, full FPP achieved higher mean AUC and AUPRC than raw ESM, although the protein-clustered confidence interval for the ensemble AUC gain included zero. Removing direct train-test connections reduced performance under matched training settings, indicating connectivity sensitivity without isolating the effect of direct edges from changes in graph normalization. With CADD+AlphaMissense included, much of the fusion improvement was also observed after adding raw ESM, while full FPP provided a smaller additional increment over raw-ESM fusion (ensemble $\\Delta$AUC +0.0032, 95\\% CI [+0.0008, +0.0062]). These findings support protein-representation complementarity, with a limited additional contribution from STRING graph context under the original split."
+  },
+  {
+    "location": "Discussion paragraph 2",
+    "before": "Under the homology-aware split, the historical graph-fusion point was below the repeated score baseline, but the current matched graph-versus-score interval spanned zero. Additional input weights, redundant high-dimensional features, overfitting, feature scaling and changed protein composition are possible explanations for weaker fusion; these mechanisms were not experimentally separated. The prevalence shift limits cross-split AUPRC comparisons.",
+    "after": "Under the homology-aware split, full-FPP fusion improved over raw-ESM fusion (ensemble $\\Delta$AUC +0.0027, protein-clustered 95\\% CI [+0.0015, +0.0040]) but did not establish a clear advantage over the architecture-matched CADD+AlphaMissense baseline ($\\Delta$AUC +0.0001, 95\\% CI [$-$0.0019, +0.0020]). Redundant high-dimensional features, additional input-layer parameters, overfitting, feature scaling and differences in protein composition may contribute to the limited incremental benefit; these explanations were not tested individually. The difference in test-set positive prevalence also limits direct AUPRC comparisons between the original and homology-aware splits."
+  },
+  {
+    "location": "Discussion paragraph 3",
+    "before": "Graph propagation changed predictions in heterogeneous topology contexts. The observed profiles may reflect densely connected functional neighbourhoods or boundary-like network roles, but their post-hoc selection requires independent confirmation. External HUMSAVAR validation supports STRING transfer under the stated exclusions; BioGRID's uncertain incremental gains limit generalization across networks. Both databases may share underlying evidence, and the networks overlap. This is not independent-patient or prospective validation.",
+    "after": "The matched ensembles showed different error trade-offs at the same decision threshold. At 0.5, full FPP produced 33 more classification errors than raw ESM despite higher AUC and AUPRC point estimates, whereas full-FPP fusion produced 455 fewer errors than the score-only baseline (Fig. 4A,B). Ranking improvements therefore did not uniformly translate into fewer threshold-specific errors. The topology profiles describe differences between error-transition groups rather than established correction mechanisms. External HUMSAVAR evaluation supports transfer of STRING-based representations under the specified exclusions, while BioGRID's external gains over raw ESM and incremental fusion gains over raw-embedding fusion remained uncertain. HUMSAVAR and ClinVar may share annotation evidence, and STRING and BioGRID overlap; these comparisons do not constitute independent-patient or prospective validation."
+  },
+  {
+    "location": "Acknowledgment",
+    "before": "OpenAI ChatGPT, OpenAI Codex and Anthropic Claude assisted with literature organization, code development for the Methods and Results analyses, and manuscript language editing. AI-assisted scripts supported environment restoration, model fitting, data checks and statistical analysis. The authors take responsibility for reviewing the code, outputs, interpretation, references and final manuscript.",
+    "after": "OpenAI ChatGPT, OpenAI Codex and Anthropic Claude assisted with literature organization, code development, manuscript language editing, and scripts for environment restoration, model fitting. We take responsibility for study design, experimental execution and verification, code review, result interpretation, reference checking and the final manuscript."
+  },
+  {
+    "location": "Layout only: remove obsolete forced bibliography column break",
+    "before": "\\IEEEtriggeratref{16}\n",
+    "after": "",
+    "reason": "Prevent otherwise empty page8 right column and ninth-page overflow after authorized prose expansion."
+  }
+]

@@ -1,0 +1,17 @@
+model_pair,count,before,after,difference
+esm_vs_gcn,count_both_correct,11875,12520,645
+esm_vs_gcn,count_both_wrong,3965,3747,-218
+esm_vs_gcn,count_improved,1436,960,-476
+esm_vs_gcn,count_degraded,944,993,49
+esm_vs_gcn,count_FN_rescued,837,366,-471
+esm_vs_gcn,count_FP_suppressed,599,594,-5
+esm_vs_gcn,count_TN_to_FP,904,958,54
+esm_vs_gcn,count_TP_to_FN,40,35,-5
+cadd_am_vs_full,count_both_correct,15981,16055,74
+cadd_am_vs_full,count_both_wrong,1298,1262,-36
+cadd_am_vs_full,count_improved,666,679,13
+cadd_am_vs_full,count_degraded,275,224,-51
+cadd_am_vs_full,count_FN_rescued,222,170,-52
+cadd_am_vs_full,count_FP_suppressed,444,509,65
+cadd_am_vs_full,count_TN_to_FP,170,99,-71
+cadd_am_vs_full,count_TP_to_FN,105,125,20

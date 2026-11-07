@@ -1,0 +1,119 @@
+--- v5/Supplementary_Information_revised.md
++++ v6/Supplementary_Information_revised.md
+@@ -12,7 +12,7 @@
+ 
+ This Supplementary Information provides reconstruction details, split statistics, model comparisons, uncertainty estimates, topology-stratified summaries and negative-control results. Full figure source data, topology-stratified metrics, corrected-sample statistics and fusion-control summaries are included in the prepared compact source-data archive.
+ 
+-Figure guide: Main Figure 1B–D/F uses matched representation results from Tables 11–12; Table 4A supplies both resampling intervals for Figure 1C. Figure 1E uses the separate partial-ablation sensitivity protocol in Table 8. Main Figure 2B/E uses matched fusion results from Table 11, and Figure 2C uses the paired ensemble intervals in Table 12. Figure 2D retains the single-fit representation comparison in Table 2. Figure 3 retains its fixed-reference topology analysis in Table 5; Figure 4 uses matched original-split ensembles for the transition and feature profiles in Tables 6 and 10; Tables 3 and 4B–C retain separate fusion comparisons. Tables 11–13 contain the matched results, with the restored runtime and common propagation operator in Methods 5. External-source and BioGRID validation are documented in Methods 6, Tables 14–17 and main Figure 5. Different protocols and fitted prediction sets should not be interchanged.
++Figure guide: Main Figure 1B–D/F uses matched representation results from Tables 11–12; Table 4A supplies both resampling intervals for Figure 1C. Figure 1E uses the separate partial-ablation sensitivity protocol in Table 8. Main Figure 2B/E uses matched fusion results from Table 11, and Figure 2C uses the paired ensemble intervals in Table 12. Figure 2D retains the single-fit representation comparison in Table 2. Figure 3A shows ESM similarity, while Figure 3B–F uses matched original-split ensembles for the topology analysis and protein-clustered intervals in Table 5; Figure 4 uses matched original-split ensembles for the transition and feature profiles in Tables 6 and 10; Tables 3 and 4B–C retain separate fusion comparisons. Tables 11–13 contain the matched results, with the restored runtime and common propagation operator in Methods 5. External-source and BioGRID validation are documented in Methods 6, Tables 14–17 and main Figure 5. Different protocols and fitted prediction sets should not be interchanged.
+ 
+ ## Supplementary Methods
+ 
+@@ -192,45 +192,43 @@
+ 
+ ### Supplementary Table 5. Topology-stratified FPP gain over raw ESM
+ 
+-The topology-stratified results correspond to the fixed reference model pair used in Figure 3. Its topology-description graph is distinct from the propagation graph (Methods 2); all 53 joint cells and the highlighted profiles were inspected on the same test set. They have not been independently confirmed in the external source.
++These results use matched raw-ESM and full-FPP ensembles, with probabilities averaged in float64 across classifier seeds 42–44. The original test memberships, topology buckets, 53 joint cells and four highlighted cells are fixed. The topology-description graph is distinct from the propagation graph (Methods 2). The same test set was used to examine the original cells and select the highlighted profiles; these profiles have not been independently confirmed in the external source.
+ 
+ | Stratum | n | Positive rate | Delta AUC | Delta AUPRC |
+-|---|---:|---:|---:|---:|
+-| Degree-low | 2,795 | 0.0426 | +0.0314 | +0.0109 |
+-| Degree-mid | 4,762 | 0.2089 | +0.0339 | +0.0280 |
+-| Degree-high | 10,663 | 0.4415 | -0.0178 | -0.0021 |
+-| K-core-low | 2,847 | 0.0425 | +0.0297 | +0.0116 |
+-| K-core-mid | 5,685 | 0.3078 | +0.0775 | +0.1049 |
+-| K-core-high | 9,688 | 0.4078 | -0.0276 | +0.0015 |
+-| Risk-low | 6,323 | 0.1056 | +0.0641 | +0.0631 |
+-| Risk-mid | 5,829 | 0.2882 | +0.0265 | +0.0515 |
+-| Risk-high | 6,019 | 0.5772 | +0.0284 | +0.0270 |
+-| Betweenness-low | 3,050 | 0.1393 | +0.0614 | +0.0769 |
+-| Betweenness-mid | 4,486 | 0.1899 | +0.0522 | +0.0501 |
+-| Betweenness-high | 10,684 | 0.4254 | -0.0145 | +0.0027 |
+-| Clustering-low | 8,234 | 0.2888 | -0.0036 | -0.0099 |
+-| Clustering-mid | 5,950 | 0.4198 | +0.0544 | +0.0444 |
+-| Clustering-high | 4,036 | 0.2344 | +0.0348 | +0.0941 |
+-| Boundary-like | 6,198 | 0.3527 | +0.0182 | +0.0200 |
+-| Boundary-mixed | 6,598 | 0.2963 | +0.0140 | +0.0503 |
+-| Boundary-internal | 5,397 | 0.3111 | +0.0383 | +0.0151 |
+-
+-The risk strata contain 18,171 variants: 49 variants from 10 proteins had fewer than five labelled training-neighbour variants and were assigned the insufficient-signal code -1. The boundary strata contain 18,193 variants: 27 variants from five proteins had community ID -1 after communities with fewer than 50 nodes were excluded by the historical topology script. Of these, four variants mapped to two isolated proteins; the other 23 mapped to three non-isolated proteins. Their within-community fraction was undefined. Both omitted groups were smaller than the historical minimum group size of 50. Other strata cover all 18,220 test variants.
++| --- | --- | --- | --- | --- |
++| Degree-low | 2,795 | 0.0426 | +0.0185 | +0.0050 |
++| Degree-mid | 4,762 | 0.2089 | +0.0135 | +0.0195 |
++| Degree-high | 10,663 | 0.4415 | -0.0216 | +0.0061 |
++| K-core-low | 2,847 | 0.0425 | +0.0175 | +0.0044 |
++| K-core-mid | 5,685 | 0.3078 | +0.0603 | +0.0960 |
++| K-core-high | 9,688 | 0.4078 | -0.0283 | +0.0125 |
++| Risk-low | 6,323 | 0.1056 | +0.0231 | +0.0474 |
++| Risk-mid | 5,829 | 0.2882 | +0.0334 | +0.0617 |
++| Risk-high | 6,019 | 0.5772 | +0.0133 | +0.0291 |
++| Betweenness-low | 3,050 | 0.1393 | +0.0545 | +0.0781 |
++| Betweenness-mid | 4,486 | 0.1899 | +0.0368 | +0.0417 |
++| Betweenness-high | 10,684 | 0.4254 | -0.0210 | +0.0086 |
++| Clustering-low | 8,234 | 0.2888 | -0.0022 | -0.0122 |
++| Clustering-mid | 5,950 | 0.4198 | +0.0343 | +0.0471 |
++| Clustering-high | 4,036 | 0.2344 | +0.0309 | +0.0902 |
++| Boundary-like | 6,198 | 0.3527 | +0.0026 | +0.0076 |
++| Boundary-mixed | 6,598 | 0.2963 | +0.0060 | +0.0587 |
++| Boundary-internal | 5,397 | 0.3111 | +0.0135 | +0.0184 |
++
++The risk strata contain 18,171 variants: 49 variants from 10 proteins had fewer than five labelled training-neighbour variants and were assigned the insufficient-signal code -1. The boundary strata contain 18,193 variants: 27 variants from five proteins had community ID -1 after communities with fewer than 50 nodes were excluded by the topology script. Of these, four variants mapped to two isolated proteins; the other 23 mapped to three non-isolated proteins. Their within-community fraction was undefined. Both omitted groups were smaller than the minimum group size of 50. Other strata cover all 18,220 test variants.
+ 
+ Selected exploratory joint topology cells:
+ 
+-Cell codes: J0, mid k-core / high betweenness; J1, mid k-core / mid clustering; J2, high neighbour risk / mid k-core; J3, high k-core / low clustering.
++Cell codes: J0, mid k-core / high betweenness; J1, mid k-core / mid clustering; J2, high neighbour risk / mid k-core; J3, high k-core / low clustering. The displayed cells are unchanged from the original selection.
+ 
+ | ID | n | Pos. rate | Delta AUC | Delta AUPRC | AUC CI |
+-|---|---:|---:|---:|---:|---|
+-| J0 | 1,950 | 0.4297 | +0.1429 | +0.1533 | +0.1246 to +0.1617 |
+-| J1 | 2,089 | 0.4045 | +0.1408 | +0.1428 | +0.1234 to +0.1581 |
+-| J2 | 1,904 | 0.5767 | +0.1274 | +0.0983 | +0.1045 to +0.1499 |
+-| J3 | 4,791 | 0.3870 | -0.0532 | -0.0480 | -0.0611 to -0.0457 |
+-
+-Full topology maps are provided in the prepared source-data archive rather than printed in full in the PDF supplement.
+-
+-These joint cells were selected from the same test-set topology map used for estimation. The reported intervals resampled variants within each cell, without accounting for repeated variants within proteins or for subgroup selection. The cells and intervals are descriptive exploratory profiles, not confirmatory evidence for independently validated topology-defined subgroups.
++| --- | --- | --- | --- | --- | --- |
++| J0 | 1,950 | 0.4297 | +0.1115 | +0.1202 | -0.0012 to +0.1782 |
++| J1 | 2,089 | 0.4045 | +0.0861 | +0.0836 | +0.0065 to +0.1445 |
++| J2 | 1,904 | 0.5767 | +0.0832 | +0.0686 | -0.0177 to +0.1514 |
++| J3 | 4,791 | 0.3870 | -0.0486 | -0.0424 | -0.2020 to +0.0312 |
++
++J0–J3 contain 126, 163, 134 and 95 distinct proteins, respectively. Paired 95% intervals use 2,000 protein-clustered resamples within each fixed cell: sampled proteins contribute all their variants, with the same multiplicities for both models. Percentile intervals condition on the fitted ensembles and graph; they do not include retraining, graph-sampling or subgroup-selection uncertainty and are not adjusted for multiple comparisons. All 2,000 resamples were evaluable in the four displayed cells. The low-k-core/mid-betweenness, low-k-core/high-betweenness, low-k-core/high-clustering and mid-neighbour-risk/low-k-core cells had 2, 227, 95 and 724 single-class resamples, respectively; their undefined AUC/AP differences were excluded from the corresponding percentile intervals, without replacement draws. Full point estimates, protein counts, finite-replicate counts, intervals and memberships for all 53 cells, together with the 18 one-dimensional strata, are supplied in the compact source-data archive. These exploratory profiles do not independently confirm topology-defined benefit subgroups.
+ 
+ ### Supplementary Table 6. Descriptive corrected-sample and baseline-error-stratified profiles
+ 
+@@ -337,7 +335,7 @@
+ | Homology CADD+AM and raw-ESM fusion | 3 classifier seeds 42-44 per arm | 50 | Repeated baseline means |
+ | Homology graph fusion | 1 retained run | 50 | Descriptive only; asymmetric comparison |
+ 
+-Table 8 records the separate sensitivity and reference protocols; matched representation comparisons in Figure 1B–D/F use the common operator and three classifier seeds (42–44), with at most 50 epochs (Methods 5; Tables 11–12). The partial-ablation interior fractions in Figure 1E use 30 epochs, different classifier seeds and a control convention that adds one self-loop after symmetrization. Matched graph controls use the full-graph convention, which adds loops before symmetrization. The 0% endpoint reuses one full-graph reference estimate and the 100% endpoint reuses the same five direct-ablation fits across the three strategies. Thus Figure 1E is a separate sensitivity series, not a completely matched dose-response comparison, and its endpoints are not independent confirmations. The other reference-fit and fusion rows retain their original settings and are not substituted for the matched Figure 1B–D/F or Figure 2B/C/E results. Figure 2D remains the single-fit representation comparison. Figure 4 uses the matched original-split raw/full and score/full-fusion ensembles described in Methods 5; its error profiles require no additional classifier fitting.
++Table 8 records the separate sensitivity and reference protocols; matched representation comparisons in Figure 1B–D/F use the common operator and three classifier seeds (42–44), with at most 50 epochs (Methods 5; Tables 11–12). The partial-ablation interior fractions in Figure 1E use 30 epochs, different classifier seeds and a control convention that adds one self-loop after symmetrization. Matched graph controls use the full-graph convention, which adds loops before symmetrization. The 0% endpoint reuses one full-graph reference estimate and the 100% endpoint reuses the same five direct-ablation fits across the three strategies. Thus Figure 1E is a separate sensitivity series, not a completely matched dose-response comparison, and its endpoints are not independent confirmations. The other reference-fit and fusion rows retain their original settings and are not substituted for the matched Figure 1B–D/F, Figure 2B/C/E or Figure 3B–F results. Figure 2D remains the single-fit representation comparison. Figure 3B–F uses the matched original-split raw/full ensembles with frozen topology groups and protein-clustered intervals (Table 5), requiring no additional classifier fitting. Figure 4 uses the matched original-split raw/full and score/full-fusion ensembles described in Methods 5; its error profiles require no additional classifier fitting.
+ 
+ ### Supplementary Table 9. Historical post-hoc complete-case evaluation of matched fusion predictions
+ 
+@@ -377,7 +375,7 @@
+ 
+ ## Source-data archive status
+ 
+-The compact source-data archive contains the matched source data for main Figure 1B–D/F and Figure 2B/C/E, the separate sensitivity data for Figure 1E, the single-fit representation data for Figure 2D, the fixed-reference source data for Figure 3, the matched-ensemble transition and feature data for Figure 4 and the external-source and network-comparison data for Figure 5, together with topology-stratified metrics, joint topology maps, corrected-sample statistics, fusion-control summaries, bootstrap outputs and checksums. The source package also includes the complete 177,213-row sample/split/cluster manifest, frozen node order, per-seed test predictions and external membership/prediction records in `canonical_analysis_20261025/public/`. Unified current summaries support Tables 11–17, the matched Figure 1B–D/F and Figure 2B/C/E results in the main text and main Figure 5; matched ensemble predictions also supply Figure 4 and Tables 6 and 10; separate sensitivity and reference-fit estimates retain their archived inputs and conventions. Figure-generation and minimal figure-correction scripts are retained with the figure assets, and executed protocols, source manifests and reconstruction programs are retained in the public experimental addendum. Large third-party resources, including provider-controlled CADD and AlphaMissense score files, are not redistributed and should be obtained from their original providers.
++The compact source-data archive contains the matched source data for main Figure 1B–D/F and Figure 2B/C/E, the separate sensitivity data for Figure 1E, the single-fit representation data for Figure 2D, the matched-ensemble topology metrics and protein-clustered intervals for Figure 3B–F, the ESM-similarity source data for Figure 3A, the matched-ensemble transition and feature data for Figure 4 and the external-source and network-comparison data for Figure 5, together with topology-stratified metrics, joint topology maps, corrected-sample statistics, fusion-control summaries, bootstrap outputs and checksums. The source package also includes the complete 177,213-row sample/split/cluster manifest, frozen node order, per-seed test predictions and external membership/prediction records in `canonical_analysis_20261025/public/`. Unified current summaries support Tables 11–17, the matched Figure 1B–D/F and Figure 2B/C/E results in the main text and main Figure 5; matched ensemble predictions also supply Figure 3B–F, Figure 4 and Tables 5, 6 and 10; separate sensitivity and reference-fit estimates retain their archived inputs and conventions. Figure-generation and minimal figure-correction scripts are retained with the figure assets, and executed protocols, source manifests and reconstruction programs are retained in the public experimental addendum. Large third-party resources, including provider-controlled CADD and AlphaMissense score files, are not redistributed and should be obtained from their original providers.
+ 
+ 
+ ### Supplementary Methods 5. Matched validation and restored runtime (24 October 2026)
+@@ -390,11 +388,11 @@
+ 
+ The original-split representation comparison uses raw ESM, full FPP, ablated FPP (three fits each) and three topology permutations by three seeds (nine fits). Original-split fusion uses score-only, raw, full and ablated arms (three fits each) plus permuted fusion (nine). Homology fusion uses score-only, raw and full FPP (three fits each). Score-only and fusion models use the same hidden-layer architecture, but score-only models have fewer input-layer parameters. The smoke checks used four training batches plus validation, without test evaluation.
+ 
+-**Unified current reporting.** Tables 11–17, the current matched results reported in the main text and the external/network comparisons in main Figure 5 use a single post-processing convention. Main Figure 1B–D/F, Figure 2B/C/E and the matched-ensemble analysis in Figure 4 use this convention; Figure 1E, Figure 2D and Figure 3 retain their separate sensitivity or reference-fit estimates and protocols. For all 21 protein-only representation checkpoints, CPU evaluation in float32 with fixed batches of 1,024 nodes in the frozen node order produces one stored probability per protein, which is mapped to its variant rows. On the original validation/test rows, the largest difference from the earlier variant-batched probabilities was 3.58e-7; the maximum within-protein spread decreased from 2.38e-7 to exactly zero. Fusion inputs remain variant-specific. Seed probabilities are converted to float64 before averaging; all AUPRC values are non-interpolated average precision computed consistently with scikit-learn. This inference and aggregation standardization involved no model refitting or checkpoint changes. It can slightly change rank-based metrics through exact ties; earlier outputs remain archived separately rather than mixed with the current tables.
++**Unified current reporting.** Tables 11–17, the current matched results reported in the main text and the external/network comparisons in main Figure 5 use a single post-processing convention. Main Figure 1B–D/F, Figure 2B/C/E, Figure 3B–F and the matched-ensemble analysis in Figure 4 use this convention; Figure 1E and Figure 2D retain their separate sensitivity or reference-fit estimates and protocols. For all 21 protein-only representation checkpoints, CPU evaluation in float32 with fixed batches of 1,024 nodes in the frozen node order produces one stored probability per protein, which is mapped to its variant rows. On the original validation/test rows, the largest difference from the earlier variant-batched probabilities was 3.58e-7; the maximum within-protein spread decreased from 2.38e-7 to exactly zero. Fusion inputs remain variant-specific. Seed probabilities are converted to float64 before averaging; all AUPRC values are non-interpolated average precision computed consistently with scikit-learn. This inference and aggregation standardization involved no model refitting or checkpoint changes. It can slightly change rank-based metrics through exact ties; earlier outputs remain archived separately rather than mixed with the current tables.
+ 
+ ### Supplementary Table 11. Current matched fitted-run summaries
+ 
+-Current values use canonical per-run metrics and means ± sample SD (ddof=1) across classifier fits; historical tables retain their original summary convention. Permutation rows are shown separately by graph; their three seeds are classifier repeats conditional on that graph. Tables 2–3 and 8–9 retain their separate fitted-run sources. Figure 4 and Tables 6 and 10 use the matched original-split ensembles described in Methods 5.
++Current values use canonical per-run metrics and means ± sample SD (ddof=1) across classifier fits; historical tables retain their original summary convention. Permutation rows are shown separately by graph; their three seeds are classifier repeats conditional on that graph. Tables 2–3 and 8–9 retain their separate fitted-run sources. Figure 3B–F, Figure 4 and Tables 5, 6 and 10 use the matched original-split ensembles described in Methods 5.
+ 
+ | Split | Arm | Fits | Test AUC | Test AUPRC |
+ |---|---|---:|---:|---:|

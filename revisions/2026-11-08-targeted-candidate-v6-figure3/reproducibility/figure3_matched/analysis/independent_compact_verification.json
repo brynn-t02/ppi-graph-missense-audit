@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "rows": 18220,
+  "group_membership_checks": 71,
+  "point_metric_checks": 426,
+  "percentile_endpoint_checks": 284,
+  "independent_weighted_bootstrap_draw_checks": 284,
+  "selected_objects_unchanged": true,
+  "all53_explicit_memberships_verified": true,
+  "metric_algorithm": "Weighted Mann-Whitney pair counts and distinct-score noninterpolated AP, independently of production trapezoidal AUC",
+  "full_bootstrap_rerun": false
+}
