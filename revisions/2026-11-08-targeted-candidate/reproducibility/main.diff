@@ -1,0 +1,97 @@
+--- certified_revision_source/main.tex
++++ targeted_candidate/main.tex
+@@ -49,7 +49,7 @@
+ 
+ A shared-graph setting mixes several effects. Train, validation and test variants may have distinct protein identifiers while their proteins remain directly connected in the same PPI graph. Related proteins may also cross partitions when homology is not explicitly controlled \cite{Littmann2022ProteinMLTips,Teufel2023GraphPart}. Strong variant-effect predictors such as CADD and AlphaMissense can further reduce the marginal contribution of graph propagation. We evaluate protein-topology correspondence, graph connectivity, protein-level uncertainty, homology-aware performance and complementarity to established predictors.
+ 
+-We conduct a systematic audit using a reconstructed ClinVar-STRING missense dataset and evaluate raw ESM representations, fixed PPI-GCN propagation, CADD, AlphaMissense and fusion models. The study separates connectivity and representation complementarity, tests strong-predictor fusion under homology-aware splitting, and examines exploratory topology contexts and error transitions. External-source and second-network validation test the transfer and network dependence of the findings.
++We conduct a systematic audit using a reconstructed ClinVar-STRING missense dataset and evaluate raw ESM representations, fixed PPI-GCN propagation, CADD, AlphaMissense and fusion models. This study makes three contributions. First, it provides a controlled evaluation framework to examine the roles of graph topology, representation complementarity, train-test graph connectivity and downstream classifier capacity, supported by matched comparisons and protein-level uncertainty estimates. Second, it quantifies how strong variant-effect predictors and homology-aware splitting affect the incremental value of PPI graph augmentation, with external-source and second-network validation providing additional evidence on the generalizability of these findings. Third, it relates graph-associated performance differences and prediction changes to network topology contexts and error transitions, providing exploratory insights and practical guidance on when PPI context may add useful information.
+ 
+ \section{Materials and Methods}
+ 
+@@ -72,58 +72,59 @@
+ 
+ The original split assigned train, validation and test variants by STRING protein ID, with no shared proteins across partitions. The split contained 141,864 training variants, 17,129 validation variants and 18,220 test variants. The homology-aware split used MMseqs-derived protein clusters with minimum identity 0.40 and coverage 0.50 (mode 0); each cluster was assigned wholly to one partition, preserving the same row counts \cite{Steinegger2017MMseqs2}. We use this split as a stress test. Its test positive rate was 10.56\%, compared with 31.95\% in the original split, which limits direct cross-split AUPRC comparison.
+ 
+-All representation and fusion models used downstream MLP classifiers selected by validation AUC and optimized with Adam \cite{Kingma2015Adam}. Multi-feature models used 512/128 hidden units and dropout 0.3; historical single-score baselines used 32/16 units and dropout 0.2. Architecture-matched comparisons used the same 512/128 hidden-layer architecture and preprocessing, although score-only models had fewer input-layer parameters. Current matched runs used seeds 42--44, batch size 1,024, learning rate $10^{-3}$, weight decay $10^{-5}$, at most 50 epochs and patience five. Historical negative controls had different seeds, budgets and self-loop conventions (Table~\ref{tab:run_sources}; Supplementary Table 8); current controls use the full-graph operator throughout. Training used class-weighted binary cross-entropy with positive-class weight $N_{\mathrm{negative}}/N_{\mathrm{positive}}$. CADD v1.7 and AlphaMissense scores \cite{Kircher2014CADD,Schubach2024CADDv17,Cheng2023AlphaMissense} covered 99.995\% and 96.92\% of variants. Missing scores were imputed with training-set medians, with an AlphaMissense missingness indicator. Inputs were not standardized; alternative feature scaling was not evaluated.
++All representation and fusion models used downstream MLP classifiers selected by validation AUC and optimized with Adam \cite{Kingma2015Adam}. Multi-feature models used 512/128 hidden units and dropout 0.3, while single-score baselines used 32/16 units and dropout 0.2. Architecture-matched score-only and fusion comparisons shared the 512/128 hidden-layer architecture and preprocessing, although their input-layer parameter counts differed. Matched comparisons used classifier seeds 42--44, batch size 1,024, learning rate $10^{-3}$, weight decay $10^{-5}$, a maximum of 50 epochs and early stopping with patience five. Graph controls in the matched comparisons used the same propagation operator. Training settings for additional sensitivity analyses are specified in Table~\ref{tab:run_sources} and Supplementary Table 8. Training used class-weighted binary cross-entropy with positive-class weight $N_{\mathrm{negative}}/N_{\mathrm{positive}}$. CADD v1.7 and AlphaMissense scores \cite{Kircher2014CADD,Schubach2024CADDv17,Cheng2023AlphaMissense} covered 99.995\% and 96.92\% of variants. Missing scores were imputed with training-set medians, with an AlphaMissense missingness indicator. Inputs were not standardized; alternative feature scaling was not evaluated.
+ 
+ \subsection{Audit analyses}
+ 
+ Uncertainty was assessed using variant-level bootstrap and protein-clustered bootstrap \cite{Efron1993Bootstrap}. Connectivity tests removed direct train-test PPI edges and regenerated PPI-GCN embeddings. Partial edge-ablation curves removed 0\%, 25\%, 50\%, 75\% and 100\% of direct train-test protein pairs using random removal, higher-STRING-score-first removal and lower-STRING-score-first removal. Topology permutation preserved the unlabeled graph structure and randomized the correspondence between protein identity and graph position, testing whether generic graph smoothing explained the gain. Fusion controls concatenated \CADDAM{} features with raw ESM, edge-ablated PPI-GCN and topology-permuted PPI-GCN representations, separating protein-representation complementarity from topology-specific effects.
+ 
+-Topology-context analyses stratified test variants by degree, k-core, betweenness, clustering coefficient, neighbour-risk and community-boundary features. Neighbour-risk and neighbour pathogenic-rate features for validation and test proteins were computed from training-set labels only; validation and test labels were not used to construct these topology-context features. Corrected-sample analyses compared variants whose predictions were corrected or degraded after adding graph context. Historical feature-wise tests treated repeated variants within a protein as independent; false-discovery-rate correction \cite{Benjamini1995FDR} does not resolve that dependence. We therefore retain descriptive profiles but omit their significance encodings. AUPRC was interpreted within each split because precision-recall metrics are sensitive to class prevalence \cite{Saito2015PrecisionRecall}.
+-
+-
+-\subsection{Additional matched and external validation}
+-
+-We completed 48 matched STRING fits across representations, original-split fusion and homology-aware fusion. Current representation predictions were evaluated once per protein, ensemble probabilities averaged in float64, and AUPRC computed as non-interpolated average precision. Paired protein-bootstrap intervals use 2,000 resamples and condition on fitted models and sampled graphs; they omit retraining uncertainty and are exploratory without multiplicity adjustment.
++Topology-context analyses stratified test variants by degree, k-core, betweenness, clustering coefficient, neighbour-risk and community-boundary features. Neighbour-risk and neighbour pathogenic-rate features for validation and test proteins were computed from training-set labels only; validation and test labels were not used to construct these topology-context features. Corrected-sample analyses compared variants whose predictions were corrected or degraded after adding graph context. Corrected-sample topology-feature comparisons are reported descriptively because multiple variants from the same protein share network features and are not statistically independent. No inferential significance is claimed for these profiles. AUPRC was interpreted within each split because precision-recall metrics are sensitive to class prevalence \cite{Saito2015PrecisionRecall}.
++
++
++\subsection{Matched comparisons and external validation}
++
++We fitted 48 models under matched STRING protocols across representation-only comparisons, original-split fusion and homology-aware fusion. For representation-only models, predictions were computed once per protein and mapped to the corresponding variants. Ensemble probabilities were averaged in float64, and AUPRC was calculated as non-interpolated average precision. Paired protein-clustered bootstrap 95\% intervals used 2,000 resamples conditional on fitted models and sampled graphs; they do not include retraining or graph-sampling uncertainty and were not adjusted for multiple comparisons.
+ 
+ Frozen original-split classifiers were evaluated without external tuning on UniProtKB/\allowbreak{}Swiss-Prot HUMSAVAR 2026\_03 \cite{UniProt2025}. Pathogenic/likely pathogenic and benign/likely benign records defined the two classes. After exact canonical-sequence mapping and reference-residue checks, original variants were excluded by the union of accession/node/gene-plus-substitution and dbSNP keys. The primary set excluded training/validation proteins and identical sequences (10,785 variants; 2,498 proteins); a nested stricter set additionally excluded original test proteins and identical sequences (6,934; 1,713). All remained frozen-graph nodes. BioGRID 5.0.262 physical-category edges \cite{Stark2006BioGRID}, excluding RNA-related methods and ambiguous mappings, yielded 931,458 undirected edges on the same 19,622 nodes. Nine additional matched fits covered BioGRID representation prediction and fusion in both splits. Protocols and complete metrics are in Supplementary Methods 5--6 and Tables 11--17.
+ 
+ \begin{table}[t]
+-\caption{Run provenance. Original figures retain historical estimates; additional validation uses a common protocol.}
++\caption{Summary of experimental configurations and repeated runs.}
+ \label{tab:run_sources}
+ \centering\footnotesize
+ \setlength{\tabcolsep}{3pt}
+ \renewcommand{\arraystretch}{1.08}
+-\begin{tabular}{>{\raggedright\arraybackslash}p{.31\columnwidth}>{\raggedright\arraybackslash}p{.21\columnwidth}>{\raggedright\arraybackslash}p{.40\columnwidth}}
++\begin{tabular}{>{\raggedright\arraybackslash}p{.28\columnwidth}>{\raggedright\arraybackslash}p{.33\columnwidth}>{\raggedright\arraybackslash}p{.31\columnwidth}}
+ \hline
+-Evidence & Fits & Summary/protocol \\
++Analysis & Fits / evaluations & Configuration \\
+ \hline
+-Fig. 1B/C; Figs. 3/4 & 1 pair/contrast & Retained reference \\
+-Fig. 1D/E/F & 5 / 3$^*$ / 9 & Historical; unequal settings \\
+-Fig. 2B/C & 3/arm$^\dagger$ & Historical mean/SD; ensemble intervals \\
+-Fig. 2D/E & 1/arm; 3/3/1 & Historical; mixed repetitions \\
+-Matched STRING & 48 total & 3/arm$^\dagger$, common operator/budget \\
+-BioGRID & 9 total & 3 fits in each of 3 settings \\
+-External set & 3 models/arm & Frozen predictions; no fitting \\
++Original-split representations & 3 per arm; 3 graphs $\times$ 3 seeds for permutation & Matched propagation and training settings \\
++Partial edge-ablation sensitivity & 3 per strategy and interior fraction & Separate sensitivity protocol; endpoints reused \\
++Original-split fusion & 3 per arm; 3 graphs $\times$ 3 seeds for permutation & Architecture-matched fusion controls \\
++Homology-aware representations & 1 per arm & Fixed reference comparison \\
++Homology-aware fusion & 3 per arm & Matched training settings \\
++Topology and error profiles & Fixed reference prediction pairs & Descriptive post-hoc analyses \\
++BioGRID validation & 9 total & Three settings, three fits each \\
++External-source evaluation & 3 frozen models per arm & Inference without refitting \\
+ \hline
+ \end{tabular}
+ \par\smallskip\raggedright
+-$^*$Three per strategy/interior fraction; 0\%/100\% endpoints are reused. $^\dagger$Permutation arms use 3 graphs $\times$ 3 classifier seeds. Historical representation ablation/permutation fits allow 30 epochs; reference and current matched fits allow 50. Full provenance and historical population-SD versus current sample-SD conventions are in Supplementary Table 8 and Methods 5.
++Matched STRING comparisons used three classifier seeds, a common propagation operator and a maximum of 50 training epochs. Partial edge-ablation sensitivity analyses used a separate 30-epoch protocol, with reused endpoints. Homology-aware representation profiles used single reference fits. Detailed configurations are provided in Supplementary Table 8.
+ \end{table}
+ 
+ \section{Results}
+ 
+-\subsection{Full-graph PPI-GCN gains depend on graph connectivity}
+-
+-Under the original protein-level split, the retained reference pair gave raw ESM AUC 0.7790 and AUPRC 0.6074, compared with PPI-GCN AUC 0.7997 and AUPRC 0.6496 (Fig. 1B). Variant-level bootstrap supported a positive difference, whereas protein-clustered intervals included zero: $\Delta$ AUC [-0.0080, +0.0527] and $\Delta$ AUPRC [-0.0021, +0.0798] (Fig. 1C). These historical figures describe the retained fits; current matched results are reported separately below.
+-
+-The graph contained 1,242,422 direct train-test edge-index entries (9.06\%; 621,211 unique undirected pairs). Historical edge-ablation runs gave AUC 0.7791 and AUPRC 0.6255 (Fig. 1D); partial removal showed declining AUC gains (Fig. 1E). These comparisons used unequal seeds/budgets, a different control operator and reused endpoints. They describe connectivity sensitivity but do not isolate a causal direct-edge effect; edge removal also changes normalization and retains indirect cross-partition paths.
+-
+-Historical topology permutation gave mean AUC 0.7757 and AUPRC 0.6052, near the raw-ESM range (Fig. 1F). With the common operator, seeds and budget, current mean AUCs were 0.7835 (raw), 0.7950 (full), 0.7702 (ablated) and 0.7803 (permuted). The ensemble full-minus-raw protein interval still crossed zero ($\Delta$AUC +0.0107, 95\% CI [-0.0218, +0.0426]). Full propagation exceeded ablation (+0.0248, [+0.0066, +0.0494]), whereas its permutation contrast remained uncertain. Complete repeated-run metrics are in Supplementary Table 11.
++\subsection{Connectivity sensitivity of fixed PPI propagation}
++
++Under the original protein-level split, we compared raw ESM representations with fixed PPI propagation using three matched classifier seeds. Raw ESM achieved mean AUC 0.7835 and AUPRC 0.6117, whereas full FPP achieved 0.7950 and 0.6485, respectively (Fig.~\ref{fig:connectivity}B; Supplementary Table 11). The paired ensemble AUC difference was +0.0107, with a protein-clustered 95\% confidence interval of [-0.0218, +0.0426]; the corresponding AUPRC difference was +0.0412 [-0.0106, +0.0767] (Fig.~\ref{fig:connectivity}C; Supplementary Table 12). Thus, although mean performance improved with propagation, protein-level uncertainty did not establish a consistent full-versus-raw benefit.
++
++The STRING graph contained 1,242,422 direct train-test edge-index entries (9.06\% of all entries), corresponding to 621,211 unique undirected protein pairs. To assess connectivity sensitivity, we removed these direct edges and evaluated the resulting representations using the matched training protocol. Full FPP achieved mean AUC 0.7950 and AUPRC 0.6485, compared with 0.7702 and 0.6077 for edge-ablated FPP (Fig.~\ref{fig:connectivity}D; Supplementary Table 11). The paired ensemble AUC difference was +0.0248 (protein-clustered 95\% CI [+0.0066, +0.0494]; Supplementary Table 12). A separate partial edge-ablation sensitivity analysis examined different removal fractions and strategies (Fig.~\ref{fig:connectivity}E). This analysis used a separate training protocol and reused endpoint estimates, as detailed in Table~\ref{tab:run_sources} and Supplementary Table 8. Edge removal also changes graph normalization and retains indirect cross-partition paths, so the observed differences cannot be attributed exclusively to direct connections.
++
++To examine protein-topology correspondence, we randomly permuted protein assignments to graph positions while preserving the unlabeled network topology. Across three graph permutations and three classifier seeds per permutation, topology-permuted FPP achieved mean AUC 0.7803 and AUPRC 0.6103, compared with 0.7950 and 0.6485 for full FPP (Fig.~\ref{fig:connectivity}F; Supplementary Table 11). The paired ensemble full-minus-permuted AUC difference was +0.0118, with a protein-clustered 95\% confidence interval of [-0.0229, +0.0462] (Supplementary Table 12). The permutation results were close to raw ESM performance, while the additional benefit attributable to the original protein-topology correspondence remained uncertain.
+ 
+ \begin{figure*}[!t]
+ \centering
+ \includegraphics[width=0.98\textwidth]{figure_drafts/Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf}
+-\caption{Workflow and historical audit of fixed PPI propagation. A, ESM features are propagated over STRING before downstream MLP classification; connectivity and topology controls probe the apparent gain. B/C, Retained reference pair and its variant/protein bootstrap intervals. Displayed differences follow the conventions in Supplementary Table 4A. D, Five historical edge-ablation fits compared with reference raw/full estimates. E, Historical partial-ablation curve; seeds, budgets and control operator are unmatched, and endpoints reused. F, Three graph permutations by three classifier seeds. Historical negative controls allow 30 epochs; the reference pair allows 50. Current common-protocol results are reported in the text and Supplementary Table 11.}
++\caption{Fixed protein-feature propagation under connectivity and topology controls. A, ESM features are propagated over the STRING network before downstream MLP classification. B, Mean AUC and AUPRC for raw ESM and full FPP under matched classifier seeds; error bars denote sample standard deviation. C, Paired ensemble differences under variant-level and protein-clustered bootstrap resampling. D, Matched comparison of raw ESM, full FPP and direct-edge-ablated FPP. E, Partial train-test edge-ablation sensitivity analysis using a separate training protocol with reused endpoint estimates; implementation details are provided in Supplementary Table 8. F, Topology-permutation control using three graph permutations and three classifier seeds per graph. Bootstrap intervals are conditional on fitted models and the evaluated graphs.}
+ \label{fig:connectivity}
+ \end{figure*}
+ 

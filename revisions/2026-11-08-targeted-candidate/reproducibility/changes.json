@@ -1,0 +1,135 @@
+[
+  {
+    "file": "source/main.tex",
+    "location": "Introduction last paragraph",
+    "before": "We conduct a systematic audit using a reconstructed ClinVar-STRING missense dataset and evaluate raw ESM representations, fixed PPI-GCN propagation, CADD, AlphaMissense and fusion models. The study separates connectivity and representation complementarity, tests strong-predictor fusion under homology-aware splitting, and examines exploratory topology contexts and error transitions. External-source and second-network validation test the transfer and network dependence of the findings.",
+    "after": "We conduct a systematic audit using a reconstructed ClinVar-STRING missense dataset and evaluate raw ESM representations, fixed PPI-GCN propagation, CADD, AlphaMissense and fusion models. This study makes three contributions. First, it provides a controlled evaluation framework to examine the roles of graph topology, representation complementarity, train-test graph connectivity and downstream classifier capacity, supported by matched comparisons and protein-level uncertainty estimates. Second, it quantifies how strong variant-effect predictors and homology-aware splitting affect the incremental value of PPI graph augmentation, with external-source and second-network validation providing additional evidence on the generalizability of these findings. Third, it relates graph-associated performance differences and prediction changes to network topology contexts and error transitions, providing exploratory insights and practical guidance on when PPI context may add useful information.",
+    "reason": "按用户给定全文替换。"
+  },
+  {
+    "file": "source/main.tex",
+    "location": "Methods II.C classifier/training subsection",
+    "before": "Multi-feature models used 512/128 hidden units and dropout 0.3; historical single-score baselines used 32/16 units and dropout 0.2. Architecture-matched comparisons used the same 512/128 hidden-layer architecture and preprocessing, although score-only models had fewer input-layer parameters. Current matched runs used seeds 42--44, batch size 1,024, learning rate $10^{-3}$, weight decay $10^{-5}$, at most 50 epochs and patience five. Historical negative controls had different seeds, budgets and self-loop conventions (Table~\\ref{tab:run_sources}; Supplementary Table 8); current controls use the full-graph operator throughout.",
+    "after": "Multi-feature models used 512/128 hidden units and dropout 0.3, while single-score baselines used 32/16 units and dropout 0.2. Architecture-matched score-only and fusion comparisons shared the 512/128 hidden-layer architecture and preprocessing, although their input-layer parameter counts differed. Matched comparisons used classifier seeds 42--44, batch size 1,024, learning rate $10^{-3}$, weight decay $10^{-5}$, a maximum of 50 epochs and early stopping with patience five. Graph controls in the matched comparisons used the same propagation operator. Training settings for additional sensitivity analyses are specified in Table~\\ref{tab:run_sources} and Supplementary Table 8.",
+    "reason": "保留第一句话和末尾训练损失/预测器/缺失处理内容，只替换指定连续片段。"
+  },
+  {
+    "file": "source/main.tex",
+    "location": "Methods II.D topology statistics",
+    "before": "Historical feature-wise tests treated repeated variants within a protein as independent; false-discovery-rate correction \\cite{Benjamini1995FDR} does not resolve that dependence. We therefore retain descriptive profiles but omit their significance encodings.",
+    "after": "Corrected-sample topology-feature comparisons are reported descriptively because multiple variants from the same protein share network features and are not statistically independent. No inferential significance is claimed for these profiles.",
+    "reason": "只替换用户指定的两句。"
+  },
+  {
+    "file": "source/main.tex",
+    "location": "Methods II.E heading",
+    "before": "\\subsection{Additional matched and external validation}",
+    "after": "\\subsection{Matched comparisons and external validation}",
+    "reason": "按指定小节标题替换。"
+  },
+  {
+    "file": "source/main.tex",
+    "location": "Methods II.E first paragraph",
+    "before": "We completed 48 matched STRING fits across representations, original-split fusion and homology-aware fusion. Current representation predictions were evaluated once per protein, ensemble probabilities averaged in float64, and AUPRC computed as non-interpolated average precision. Paired protein-bootstrap intervals use 2,000 resamples and condition on fitted models and sampled graphs; they omit retraining uncertainty and are exploratory without multiplicity adjustment.",
+    "after": "We fitted 48 models under matched STRING protocols across representation-only comparisons, original-split fusion and homology-aware fusion. For representation-only models, predictions were computed once per protein and mapped to the corresponding variants. Ensemble probabilities were averaged in float64, and AUPRC was calculated as non-interpolated average precision. Paired protein-clustered bootstrap 95\\% intervals used 2,000 resamples conditional on fitted models and sampled graphs; they do not include retraining or graph-sampling uncertainty and were not adjusted for multiple comparisons.",
+    "reason": "完整替换指定首段，其外部验证段落原样保留。"
+  },
+  {
+    "file": "source/main.tex",
+    "location": "Table I caption, eight rows, and note",
+    "before": "\\begin{table}[t]\n\\caption{Run provenance. Original figures retain historical estimates; additional validation uses a common protocol.}\n\\label{tab:run_sources}\n\\centering\\footnotesize\n\\setlength{\\tabcolsep}{3pt}\n\\renewcommand{\\arraystretch}{1.08}\n\\begin{tabular}{>{\\raggedright\\arraybackslash}p{.31\\columnwidth}>{\\raggedright\\arraybackslash}p{.21\\columnwidth}>{\\raggedright\\arraybackslash}p{.40\\columnwidth}}\n\\hline\nEvidence & Fits & Summary/protocol \\\\\n\\hline\nFig. 1B/C; Figs. 3/4 & 1 pair/contrast & Retained reference \\\\\nFig. 1D/E/F & 5 / 3$^*$ / 9 & Historical; unequal settings \\\\\nFig. 2B/C & 3/arm$^\\dagger$ & Historical mean/SD; ensemble intervals \\\\\nFig. 2D/E & 1/arm; 3/3/1 & Historical; mixed repetitions \\\\\nMatched STRING & 48 total & 3/arm$^\\dagger$, common operator/budget \\\\\nBioGRID & 9 total & 3 fits in each of 3 settings \\\\\nExternal set & 3 models/arm & Frozen predictions; no fitting \\\\\n\\hline\n\\end{tabular}\n\\par\\smallskip\\raggedright\n$^*$Three per strategy/interior fraction; 0\\%/100\\% endpoints are reused. $^\\dagger$Permutation arms use 3 graphs $\\times$ 3 classifier seeds. Historical representation ablation/permutation fits allow 30 epochs; reference and current matched fits allow 50. Full provenance and historical population-SD versus current sample-SD conventions are in Supplementary Table 8 and Methods 5.\n\\end{table}",
+    "after": "\\begin{table}[t]\n\\caption{Summary of experimental configurations and repeated runs.}\n\\label{tab:run_sources}\n\\centering\\footnotesize\n\\setlength{\\tabcolsep}{3pt}\n\\renewcommand{\\arraystretch}{1.08}\n\\begin{tabular}{>{\\raggedright\\arraybackslash}p{.28\\columnwidth}>{\\raggedright\\arraybackslash}p{.33\\columnwidth}>{\\raggedright\\arraybackslash}p{.31\\columnwidth}}\n\\hline\nAnalysis & Fits / evaluations & Configuration \\\\\n\\hline\nOriginal-split representations & 3 per arm; 3 graphs $\\times$ 3 seeds for permutation & Matched propagation and training settings \\\\\nPartial edge-ablation sensitivity & 3 per strategy and interior fraction & Separate sensitivity protocol; endpoints reused \\\\\nOriginal-split fusion & 3 per arm; 3 graphs $\\times$ 3 seeds for permutation & Architecture-matched fusion controls \\\\\nHomology-aware representations & 1 per arm & Fixed reference comparison \\\\\nHomology-aware fusion & 3 per arm & Matched training settings \\\\\nTopology and error profiles & Fixed reference prediction pairs & Descriptive post-hoc analyses \\\\\nBioGRID validation & 9 total & Three settings, three fits each \\\\\nExternal-source evaluation & 3 frozen models per arm & Inference without refitting \\\\\n\\hline\n\\end{tabular}\n\\par\\smallskip\\raggedright\nMatched STRING comparisons used three classifier seeds, a common propagation operator and a maximum of 50 training epochs. Partial edge-ablation sensitivity analyses used a separate 30-epoch protocol, with reused endpoints. Homology-aware representation profiles used single reference fits. Detailed configurations are provided in Supplementary Table 8.\n\\end{table}",
+    "reason": "逐项采用用户给定三列、八行及表注；仅调整三列宽度以适配单栏，保留IEEE表环境和字号。"
+  },
+  {
+    "file": "source/main.tex",
+    "location": "Results III.A heading",
+    "before": "\\subsection{Full-graph PPI-GCN gains depend on graph connectivity}",
+    "after": "\\subsection{Connectivity sensitivity of fixed PPI propagation}",
+    "reason": "按附件指定标题替换。"
+  },
+  {
+    "file": "source/main.tex",
+    "location": "Results III.A three paragraphs",
+    "before": "Under the original protein-level split, the retained reference pair gave raw ESM AUC 0.7790 and AUPRC 0.6074, compared with PPI-GCN AUC 0.7997 and AUPRC 0.6496 (Fig. 1B). Variant-level bootstrap supported a positive difference, whereas protein-clustered intervals included zero: $\\Delta$ AUC [-0.0080, +0.0527] and $\\Delta$ AUPRC [-0.0021, +0.0798] (Fig. 1C). These historical figures describe the retained fits; current matched results are reported separately below.\n\nThe graph contained 1,242,422 direct train-test edge-index entries (9.06\\%; 621,211 unique undirected pairs). Historical edge-ablation runs gave AUC 0.7791 and AUPRC 0.6255 (Fig. 1D); partial removal showed declining AUC gains (Fig. 1E). These comparisons used unequal seeds/budgets, a different control operator and reused endpoints. They describe connectivity sensitivity but do not isolate a causal direct-edge effect; edge removal also changes normalization and retains indirect cross-partition paths.\n\nHistorical topology permutation gave mean AUC 0.7757 and AUPRC 0.6052, near the raw-ESM range (Fig. 1F). With the common operator, seeds and budget, current mean AUCs were 0.7835 (raw), 0.7950 (full), 0.7702 (ablated) and 0.7803 (permuted). The ensemble full-minus-raw protein interval still crossed zero ($\\Delta$AUC +0.0107, 95\\% CI [-0.0218, +0.0426]). Full propagation exceeded ablation (+0.0248, [+0.0066, +0.0494]), whereas its permutation contrast remained uncertain. Complete repeated-run metrics are in Supplementary Table 11.",
+    "after": "Under the original protein-level split, we compared raw ESM representations with fixed PPI propagation using three matched classifier seeds. Raw ESM achieved mean AUC 0.7835 and AUPRC 0.6117, whereas full FPP achieved 0.7950 and 0.6485, respectively (Fig.~\\ref{fig:connectivity}B; Supplementary Table 11). The paired ensemble AUC difference was +0.0107, with a protein-clustered 95\\% confidence interval of [-0.0218, +0.0426]; the corresponding AUPRC difference was +0.0412 [-0.0106, +0.0767] (Fig.~\\ref{fig:connectivity}C; Supplementary Table 12). Thus, although mean performance improved with propagation, protein-level uncertainty did not establish a consistent full-versus-raw benefit.\n\nThe STRING graph contained 1,242,422 direct train-test edge-index entries (9.06\\% of all entries), corresponding to 621,211 unique undirected protein pairs. To assess connectivity sensitivity, we removed these direct edges and evaluated the resulting representations using the matched training protocol. Full FPP achieved mean AUC 0.7950 and AUPRC 0.6485, compared with 0.7702 and 0.6077 for edge-ablated FPP (Fig.~\\ref{fig:connectivity}D; Supplementary Table 11). The paired ensemble AUC difference was +0.0248 (protein-clustered 95\\% CI [+0.0066, +0.0494]; Supplementary Table 12). A separate partial edge-ablation sensitivity analysis examined different removal fractions and strategies (Fig.~\\ref{fig:connectivity}E). This analysis used a separate training protocol and reused endpoint estimates, as detailed in Table~\\ref{tab:run_sources} and Supplementary Table 8. Edge removal also changes graph normalization and retains indirect cross-partition paths, so the observed differences cannot be attributed exclusively to direct connections.\n\nTo examine protein-topology correspondence, we randomly permuted protein assignments to graph positions while preserving the unlabeled network topology. Across three graph permutations and three classifier seeds per permutation, topology-permuted FPP achieved mean AUC 0.7803 and AUPRC 0.6103, compared with 0.7950 and 0.6485 for full FPP (Fig.~\\ref{fig:connectivity}F; Supplementary Table 11). The paired ensemble full-minus-permuted AUC difference was +0.0118, with a protein-clustered 95\\% confidence interval of [-0.0229, +0.0462] (Supplementary Table 12). The permutation results were close to raw ESM performance, while the additional benefit attributable to the original protein-topology correspondence remained uncertain.",
+    "reason": "逐段采用附件全文；仅将百分号、连接号、数学量及交叉引用转为LaTeX安全格式。"
+  },
+  {
+    "file": "source/main.tex",
+    "location": "Figure 1 caption",
+    "before": "\\caption{Workflow and historical audit of fixed PPI propagation. A, ESM features are propagated over STRING before downstream MLP classification; connectivity and topology controls probe the apparent gain. B/C, Retained reference pair and its variant/protein bootstrap intervals. Displayed differences follow the conventions in Supplementary Table 4A. D, Five historical edge-ablation fits compared with reference raw/full estimates. E, Historical partial-ablation curve; seeds, budgets and control operator are unmatched, and endpoints reused. F, Three graph permutations by three classifier seeds. Historical negative controls allow 30 epochs; the reference pair allows 50. Current common-protocol results are reported in the text and Supplementary Table 11.}",
+    "after": "\\caption{Fixed protein-feature propagation under connectivity and topology controls. A, ESM features are propagated over the STRING network before downstream MLP classification. B, Mean AUC and AUPRC for raw ESM and full FPP under matched classifier seeds; error bars denote sample standard deviation. C, Paired ensemble differences under variant-level and protein-clustered bootstrap resampling. D, Matched comparison of raw ESM, full FPP and direct-edge-ablated FPP. E, Partial train-test edge-ablation sensitivity analysis using a separate training protocol with reused endpoint estimates; implementation details are provided in Supplementary Table 8. F, Topology-permutation control using three graph permutations and three classifier seeds per graph. Bootstrap intervals are conditional on fitted models and the evaluated graphs.}",
+    "reason": "采用附件指定完整图注，当前variant/protein CI均已从真实已保存文件找到。"
+  },
+  {
+    "file": "source/Supplementary_Information_revised.md",
+    "location": "Notes on scope / Figure 1 table mapping",
+    "before": "Status guide: Main Figures 1–4 and Tables 2–10 preserve historical analyses. Tables 2–4 and 8 document the representation and fusion estimates and protocols in main Figures 1–2; Tables 5 and 6 document the topology and transition analyses in main Figures 3 and 4. Current matched results are in Tables 11–13 and the corresponding main-text results, with the restored runtime and corrected common propagation operator documented in Methods 5. External-source and BioGRID validation are documented in Methods 6, Tables 14–17 and main Figure 5. Historical comparisons must not be substituted for the current estimates.",
+    "after": "Figure guide: Main Figure 1B–D/F uses matched representation results from Tables 11–12; Table 4A supplies both resampling intervals for Figure 1C. Figure 1E uses the separate partial-ablation sensitivity protocol in Table 8. Figures 2–4 retain their fit-specific representation, fusion, topology and transition analyses in Tables 2–10; Table 4B–C retains the corresponding fusion uncertainty. Tables 11–13 contain the matched results, with the restored runtime and common propagation operator in Methods 5. External-source and BioGRID validation are documented in Methods 6, Tables 14–17 and main Figure 5. Different protocols and fitted prediction sets should not be interchanged.",
+    "reason": "仅同步Figure1所涉及的数据和引用；不覆盖或重标旧记录。"
+  },
+  {
+    "file": "source/Supplementary_Information_revised.md",
+    "location": "Table 4 heading",
+    "before": "### Supplementary Table 4. Historical uncertainty and repeated-run summary",
+    "after": "### Supplementary Table 4. Uncertainty and repeated-run summary",
+    "reason": "仅同步Figure1所涉及的数据和引用；不覆盖或重标旧记录。"
+  },
+  {
+    "file": "source/Supplementary_Information_revised.md",
+    "location": "Table 4A matched point and interval definitions",
+    "before": "#### Supplementary Table 4A. Raw ESM versus FPP uncertainty\n\n| Bootstrap | Metric | Delta | CI low | CI high | n |\n|---|---|---:|---:|---:|---:|\n| Variant | AUC | +0.0208 | +0.0174 | +0.0240 | 1,000 |\n| Variant | AUPRC | +0.0420 | +0.0353 | +0.0484 | 1,000 |\n| Protein-clustered | AUC | +0.0207 | -0.0080 | +0.0527 | 1,000 |\n| Protein-clustered | AUPRC | +0.0421 | -0.0021 | +0.0798 | 1,000 |\n\nIn Table 4A, Delta denotes FPP minus raw ESM. The Variant rows report the mean of the 1,000 paired variant-bootstrap differences; the Protein-clustered rows report the observed difference on the original test set. Both 95% intervals are the 2.5th and 97.5th percentiles of the corresponding bootstrap differences.",
+    "after": "#### Supplementary Table 4A. Matched raw ESM versus FPP uncertainty\n\n| Bootstrap | Metric | Delta | CI low | CI high | n |\n|---|---|---:|---:|---:|---:|\n| Variant | AUC | +0.0107 | +0.0076 | +0.0139 | 2,000 |\n| Variant | AUPRC | +0.0412 | +0.0347 | +0.0475 | 2,000 |\n| Protein-clustered | AUC | +0.0107 | -0.0218 | +0.0426 | 2,000 |\n| Protein-clustered | AUPRC | +0.0412 | -0.0106 | +0.0767 | 2,000 |\n\nIn Table 4A, Delta denotes the observed full-FPP-minus-raw-ESM difference on the same three-seed float64 ensemble predictions. Both resampling schemes use 2,000 paired replicates; the 95% intervals are the 2.5th and 97.5th percentiles of the corresponding bootstrap differences. These rows are the source for main Figure 1C and the protein rows agree with Table 12. The variant-resampling intervals do not account for within-protein dependence. The previous reference-pair bootstrap files remain unchanged in the dated archive and are not relabelled as matched results.",
+    "reason": "仅同步Figure1所涉及的数据和引用；不覆盖或重标旧记录。"
+  },
+  {
+    "file": "source/Supplementary_Information_revised.md",
+    "location": "Table 8 Figure 1E vs matched B-D/F clarification",
+    "before": "The negative controls were not all single-run analyses, but their protocols are asymmetric relative to the main positive comparison. Their existing standard deviations quantify dispersion under their respective protocols, not a paired causal graph effect. The reused partial-ablation endpoints in main Figure 1E and the reference bootstrap are not independent confirmations. This table documents the historical runs retained in main Figures 1–2. Current matched-seed/budget/operator results are summarized in the main text and reported in Tables 11 and 12; these current comparisons supersede the historical estimates for current inference. Historical rows and plotted estimates remain unchanged for traceability.",
+    "after": "Table 8 records the separate sensitivity and reference protocols; matched representation comparisons in Figure 1B–D/F use the common operator and three classifier seeds (42–44), with at most 50 epochs (Methods 5; Tables 11–12). The partial-ablation interior fractions in Figure 1E use 30 epochs, different classifier seeds and a control convention that adds one self-loop after symmetrization. Matched graph controls use the full-graph convention, which adds loops before symmetrization. The 0% endpoint reuses one full-graph reference estimate and the 100% endpoint reuses the same five direct-ablation fits across the three strategies. Thus Figure 1E is a separate sensitivity series, not a completely matched dose-response comparison, and its endpoints are not independent confirmations. The other reference-fit and fusion rows retain their original settings and are not substituted for the matched Figure 1 results.",
+    "reason": "仅同步Figure1所涉及的数据和引用；不覆盖或重标旧记录。"
+  },
+  {
+    "file": "source/Supplementary_Information_revised.md",
+    "location": "Table 2 Figure 1 source mapping",
+    "before": "Table 2 preserves the raw-ESM and FPP reference estimates shown in main Figures 1B and 2D, together with historical repeated-run summaries and operator controls. Main Figure 1 also retains the historical connectivity and permutation analyses, whose differing run counts and protocols are documented in Table 8. Current matched fitted-run estimates and paired ensemble intervals are reported separately in Tables 11 and 12 and summarized in the main text.",
+    "after": "Table 2 preserves separate raw-ESM and FPP reference estimates, including main Figure 2D, together with historical repeated-run summaries and operator controls. The matched representation estimates in main Figure 1B/D/F are supplied by Table 11, and their ensemble intervals by Table 12 and Table 4A. The separate partial-ablation sensitivity series in Figure 1E uses the conditions in Table 8. The reference rows in Table 2 should not be substituted for the matched Figure 1 values.",
+    "reason": "修正图1已更新后的直接引用关系；不改其他图或旧数值表。"
+  },
+  {
+    "file": "source/Supplementary_Information_revised.md",
+    "location": "Table 4 summary / matched 4A",
+    "before": "Historical Table 4A shows that variant-level bootstrap supports positive retained-reference FPP gains, whereas protein-clustered bootstrap widens uncertainty.",
+    "after": "Table 4A shows that variant-level resampling supports positive matched ensemble FPP gains, whereas protein-clustered resampling widens uncertainty.",
+    "reason": "修正图1已更新后的直接引用关系；不改其他图或旧数值表。"
+  },
+  {
+    "file": "source/Supplementary_Information_revised.md",
+    "location": "Table 4 Figure 1C source mapping",
+    "before": "Table 4A supplies the historical reference-pair intervals in main Figure 1C, and Table 4B supplies the historical fusion intervals in main Figure 2C.",
+    "after": "Table 4A supplies the matched ensemble intervals in main Figure 1C, and Table 4B supplies the historical fusion intervals in main Figure 2C.",
+    "reason": "修正图1已更新后的直接引用关系；不改其他图或旧数值表。"
+  },
+  {
+    "file": "source/Supplementary_Information_revised.md",
+    "location": "Source-data archive / Figure 1 inputs",
+    "before": "The compact source-data archive contains the historical source data for main Figures 1–4 and the current external-source and network-comparison data for main Figure 5, together with topology-stratified metrics, joint topology maps, corrected-sample statistics, fusion-control summaries, bootstrap outputs and checksums.",
+    "after": "The compact source-data archive contains the matched source data for main Figure 1B–D/F, the separate sensitivity data for Figure 1E, the historical source data for Figures 2–4 and the external-source and network-comparison data for Figure 5, together with topology-stratified metrics, joint topology maps, corrected-sample statistics, fusion-control summaries, bootstrap outputs and checksums.",
+    "reason": "修正图1已更新后的直接引用关系；不改其他图或旧数值表。"
+  },
+  {
+    "file": "source/Supplementary_Information_revised.md",
+    "location": "Source-data archive / Figure 1 panel applicability",
+    "before": "Unified current summaries support Tables 11–17, the current matched results in the main text and main Figure 5; historical figure estimates retain their archived inputs and conventions.",
+    "after": "Unified current summaries support Tables 11–17, the matched Figure 1B–D/F results in the main text and main Figure 5; separate sensitivity and historical figure estimates retain their archived inputs and conventions.",
+    "reason": "修正图1已更新后的直接引用关系；不改其他图或旧数值表。"
+  },
+  {
+    "file": "source/Supplementary_Information_revised.md",
+    "location": "Methods 5 Figure 1 applicability",
+    "before": "Main Figures 1–4 retain historical estimates and protocols; their values should not be read as current matched results.",
+    "after": "Main Figure 1B–D/F uses this convention; Figure 1E and Figures 2–4 retain their separate sensitivity or reference-fit estimates and protocols.",
+    "reason": "修正图1已更新后的直接引用关系；不改其他图或旧数值表。"
+  }
+]

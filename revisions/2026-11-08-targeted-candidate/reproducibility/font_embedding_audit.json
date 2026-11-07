@@ -1,0 +1,77 @@
+{
+  "all_font_resources_embedded": true,
+  "fonts": [
+    {
+      "figure": "Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+      "resource": "/F1",
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "figure": "Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+      "resource": "/F2",
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "figure": "Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+      "resource": "/F2",
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "figure": "Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+      "resource": "/F1",
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "figure": "Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+      "resource": "/F1",
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "figure": "Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+      "resource": "/F2",
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "figure": "Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+      "resource": "/F2",
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "figure": "Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+      "resource": "/F1",
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "figure": "Figure2_fusion_homology_v1_accepted.pdf",
+      "resource": "/F1",
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "figure": "Figure2_fusion_homology_v1_accepted.pdf",
+      "resource": "/F2",
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "figure": "Figure2_fusion_homology_v1_accepted.pdf",
+      "resource": "/F2",
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "figure": "Figure2_fusion_homology_v1_accepted.pdf",
+      "resource": "/F1",
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    }
+  ]
+}

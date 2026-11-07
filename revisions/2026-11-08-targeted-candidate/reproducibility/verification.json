@@ -1,0 +1,557 @@
+{
+  "new_training": false,
+  "new_inference": false,
+  "new_statistical_recomputation": false,
+  "engineering_checks_only": true,
+  "abstract_unchanged": true,
+  "title_unchanged": true,
+  "author_unchanged": true,
+  "equations_unchanged": true,
+  "bibliography_unchanged": true,
+  "results_III_B_onward_and_discussion_unchanged": true,
+  "figures_2_through_5_unchanged": true,
+  "figure1_A_E_changed_pixels_300dpi": {
+    "A": 0,
+    "E": 0
+  },
+  "protected_files_checked": 365,
+  "protected_files_changed": [],
+  "blocking_log_lines": [],
+  "nonblocking_underfull_log_lines": [
+    "Underfull \\hbox (badness 2035) in paragraph at lines 48--49",
+    "Underfull \\hbox (badness 1533) in paragraph at lines 52--53",
+    "Underfull \\hbox (badness 1803) in paragraph at lines 88--89",
+    "Underfull \\hbox (badness 2277) in paragraph at lines 118--119",
+    "Underfull \\hbox (badness 1783) in paragraph at lines 122--123",
+    "Underfull \\hbox (badness 1354) in paragraph at lines 133--134",
+    "Underfull \\hbox (badness 4291) in paragraph at lines 230--231"
+  ],
+  "unresolved_refs": [],
+  "documents": [
+    {
+      "document": "main",
+      "filename": "BIBM2026_workshop_targeted_candidate.pdf",
+      "pages": 8,
+      "sha256": "4504be8e00853404c2d59409d8eb21ade484b8625f22613c6eff04cae3ba5bf1",
+      "bytes": 322206,
+      "font_resources": [
+        {
+          "resource": "/F0",
+          "font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/BZIVMZ+NimbusRomNo9L-MediItal",
+          "embedded": true
+        },
+        {
+          "resource": "/F2",
+          "font": "/IXFAWU+NimbusRomNo9L-Medi",
+          "embedded": true
+        },
+        {
+          "resource": "/F3",
+          "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "embedded": true
+        },
+        {
+          "resource": "/F0",
+          "font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "embedded": true
+        },
+        {
+          "resource": "/F3",
+          "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "embedded": true
+        },
+        {
+          "resource": "/F4",
+          "font": "/YEUUOC+CMMI10",
+          "embedded": true
+        },
+        {
+          "resource": "/F5",
+          "font": "/AKHCZK+CMR10",
+          "embedded": true
+        },
+        {
+          "resource": "/F6",
+          "font": "/VDVGTR+CMR7",
+          "embedded": true
+        },
+        {
+          "resource": "/F7",
+          "font": "/CAFSZL+CMSY7",
+          "embedded": true
+        },
+        {
+          "resource": "/F8",
+          "font": "/DDIEWW+CMR5",
+          "embedded": true
+        },
+        {
+          "resource": "/F9",
+          "font": "/FKPJSN+CMEX10",
+          "embedded": true
+        },
+        {
+          "resource": "/F0",
+          "font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "embedded": true
+        },
+        {
+          "resource": "/F10",
+          "font": "/PVTTLK+CMSY8",
+          "embedded": true
+        },
+        {
+          "resource": "/F3",
+          "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "embedded": true
+        },
+        {
+          "resource": "/F5",
+          "font": "/AKHCZK+CMR10",
+          "embedded": true
+        },
+        {
+          "resource": "/F0",
+          "font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "embedded": true
+        },
+        {
+          "resource": "/F5",
+          "font": "/AKHCZK+CMR10",
+          "embedded": true
+        },
+        {
+          "resource": "/F3",
+          "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F2",
+          "font": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        },
+        {
+          "resource": "/F2",
+          "font": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F2",
+          "font": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        },
+        {
+          "resource": "/F2",
+          "font": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        },
+        {
+          "resource": "/F0",
+          "font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "embedded": true
+        },
+        {
+          "resource": "/F10",
+          "font": "/PVTTLK+CMSY8",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F2",
+          "font": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        },
+        {
+          "resource": "/F2",
+          "font": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F0",
+          "font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "embedded": true
+        },
+        {
+          "resource": "/F3",
+          "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "embedded": true
+        },
+        {
+          "resource": "/F5",
+          "font": "/AKHCZK+CMR10",
+          "embedded": true
+        },
+        {
+          "resource": "/F0",
+          "font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "embedded": true
+        },
+        {
+          "resource": "/F3",
+          "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F2",
+          "font": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F2",
+          "font": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "font": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        },
+        {
+          "resource": "/F0",
+          "font": "/IHAIZV+NimbusRomNo9L-Regu",
+          "embedded": true
+        },
+        {
+          "resource": "/F3",
+          "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+          "embedded": true
+        }
+      ],
+      "all_fonts_embedded": true,
+      "visual_review": "passed"
+    },
+    {
+      "document": "supplement",
+      "filename": "BIBM2026_supplementary_targeted_candidate.pdf",
+      "pages": 18,
+      "sha256": "df10d72daa277f801b37beed8448c2cabcd11b21da3ff320317976d1ab2af452",
+      "bytes": 122663,
+      "font_resources": [
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        },
+        {
+          "resource": "/F1+0",
+          "font": "/AAAAAA+DejaVuSerif",
+          "embedded": true
+        },
+        {
+          "resource": "/F2+0",
+          "font": "/AAAAAA+DejaVuSerif-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F3+0",
+          "font": "/AAAAAA+DejaVuSansMono",
+          "embedded": true
+        }
+      ],
+      "all_fonts_embedded": true,
+      "visual_review": "passed"
+    }
+  ],
+  "candidate_certified_or_submitted": false,
+  "status": "passed",
+  "visual_review": "All8main+18supplementpages reviewed; no overlap, clipping, broken tables or missing characters. Floating positions follow normal IEEE layout after requested text changes."
+}

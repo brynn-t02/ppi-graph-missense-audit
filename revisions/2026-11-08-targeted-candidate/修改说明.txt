@@ -1,0 +1,29 @@
+BIBM 2026 Workshop 定向候选稿修改说明（2026年11月8日）
+
+基线：与已认证终稿对应的2026-10-25 font-clean LaTeX及原图。
+本候选从基线另建，没有采用上一轮广泛统一候选中的图2—4/错误转移重算改动。
+原已提交PDF、认证文件、旧源包、实验记录和上一轮候选均保留不动。
+
+本轮指定正文修改已完成：
+- Abstract逐字保持。
+- Introduction最后一段完整替换为给定三个贡献点。
+- Methods II.C指定连续片段、II.D两句、II.E标题及首段按指定文字替换。
+- Table I采用指定标题、三列、八行和表注；保留IEEE表环境及原字号，按单栏调整列宽。
+- Section III.A标题和三个自然段、Figure1图注按附件替换。
+
+附件要求的六项完成状态：
+1. Section III.A：替换成功，使用匹配均值和ensemble区间，百分号及交叉引用已按LaTeX格式处理。
+2. Figure1B/C/D/F：均已完成。使用已有真实逐运行汇总及保存的矢量图件，本轮没有重跑统计、推理或训练。标准差为sample SD；置换SD来自保存的九次运行合并统计，不是平均三张图的SD。
+3. Figure1C完整bootstrap：已找到。来源canonical_analysis_20261025/cluster_bootstrap.json中的comparisons.original.full_FPP_vs_raw_ESM与variant_bootstrap_original_full_vs_raw；两类均2000次。
+   observed ensemble ΔAUC +0.0106732843，ΔAUPRC +0.0412176300；两类重采样共用该点估计。
+   Variant AUC CI [+0.0075543084,+0.0138997623]；AUPRC CI [+0.0346735930,+0.0474639861]。
+   Protein AUC CI [-0.0218147243,+0.0425786310]；AUPRC CI [-0.0106385847,+0.0766788998]。
+4. Figure1A/E：300dpi比较，两个面板变化像素均0；其他替换范围外变化0。E仍为原来的独立30-epoch、不同种子/自环约定及复用端点曲线，没有拼接新端点。
+5. 编译：正文8页、补充18页；全部字体嵌入，无缺图、缺字、未定义引用或Overfull。保留少量非阻断Underfull行距/对齐提示；页面无重叠或裁切。
+6. 新图文不一致：没有发现本轮图1范围内未解决的数值/协议冲突。补充4A已同步匹配数据，另修正图1来源、4A/11/12关系及Table8适用说明。其余补充数值表、图2—5、其他Results和Discussion保留终稿内容，不声称已在本轮统一更新。
+
+逐处前后文字见reproducibility/changes.json；精确差异见main.diff与supplement.diff。
+本轮仅有9个主文替换块和10个图1直接相关补充替换块。后者含6处旧引用关系的必要同步；没有删除或重标旧实验源数据。
+标题、作者、公式、参考文献、IEEE类文件保持原样。Dataset/ClinVar日期段未纳入这次指定范围，按终稿保留；没有带入上一轮的日期或图3/4修改。
+
+本文件夹是未提交候选副本。它没有PDF eXpress的新认证，也没有重新上传会议系统。

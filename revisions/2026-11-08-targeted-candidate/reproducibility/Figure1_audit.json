@@ -1,0 +1,25 @@
+{
+  "source": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/figure_drafts/Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+  "source_sha256": "6fab8facd7e5af9bd701ea7475f733c6eaf03751a29ec86fc3fcacacf5fd4cf0",
+  "output": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/unified_revision_20261108/fig12/Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+  "output_sha256": "8d1a903c100023e01a9514f067dfa9d57e9bb8b754f9c6697fc68bfca9ee339a",
+  "method": "Remove numeric axes vector operations only; retain all remaining raw vector bytes and exact original independent panels. Add new numeric axes at original PDF coordinates.",
+  "canvas_pt": [
+    922.6925,
+    571.06875
+  ],
+  "pixel_comparison_dpi": 300,
+  "pixel_shape": [
+    2380,
+    3845
+  ],
+  "preserved_panel_changed_pixels": {
+    "A": 0,
+    "E": 0
+  },
+  "outside_replaced_panel_regions_changed_pixels": 0,
+  "changed_pixels": 114249,
+  "source_unchanged": true,
+  "new_training": false,
+  "new_inference": false
+}

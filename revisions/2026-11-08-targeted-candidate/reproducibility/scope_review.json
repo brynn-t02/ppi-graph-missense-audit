@@ -1,0 +1,199 @@
+{
+  "status": "passed",
+  "baseline": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source",
+  "candidate": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_20261108/source",
+  "checks": [
+    {
+      "check": "source/main.tex changes match declared replacement manifest",
+      "passed": true,
+      "details": {
+        "blocks": 9,
+        "locations": [
+          "Introduction last paragraph",
+          "Methods II.C classifier/training subsection",
+          "Methods II.D topology statistics",
+          "Methods II.E heading",
+          "Methods II.E first paragraph",
+          "Table I caption, eight rows, and note",
+          "Results III.A heading",
+          "Results III.A three paragraphs",
+          "Figure 1 caption"
+        ]
+      }
+    },
+    {
+      "check": "source/Supplementary_Information_revised.md changes match declared replacement manifest",
+      "passed": true,
+      "details": {
+        "blocks": 10,
+        "locations": [
+          "Notes on scope / Figure 1 table mapping",
+          "Table 4 heading",
+          "Table 4A matched point and interval definitions",
+          "Table 8 Figure 1E vs matched B-D/F clarification",
+          "Table 2 Figure 1 source mapping",
+          "Table 4 summary / matched 4A",
+          "Table 4 Figure 1C source mapping",
+          "Source-data archive / Figure 1 inputs",
+          "Source-data archive / Figure 1 panel applicability",
+          "Methods 5 Figure 1 applicability"
+        ]
+      }
+    },
+    {
+      "check": "Abstract byte unchanged",
+      "passed": true,
+      "details": "No previous broad-unification abstract was carried over."
+    },
+    {
+      "check": "MethodsII.A andII.B byte unchanged",
+      "passed": true,
+      "details": "Data provenance and propagation formulas preserved exactly from final baseline."
+    },
+    {
+      "check": "OtherResults,Discussion,Acknowledgment,andbibliography byte unchanged",
+      "passed": true,
+      "details": "ResultsIII.B–E, Figures2–5 captions, Discussion, AI disclosure and reference list are exactly baseline bytes."
+    },
+    {
+      "check": "No broad-unified960/993transitioncarryover",
+      "passed": true,
+      "details": "Old Figure3/4 data remain the submitted-final baseline. No new transition counts imported."
+    },
+    {
+      "check": "AllotherSI numerical table rows unchanged",
+      "passed": true,
+      "details": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "5": true,
+        "6": true,
+        "7": true,
+        "8": true,
+        "9": true,
+        "10": true,
+        "11": true,
+        "12": true,
+        "13": true,
+        "14": true,
+        "15": true,
+        "16": true,
+        "17": true
+      }
+    },
+    {
+      "check": "SI4B/C numerical rows unchanged",
+      "passed": true,
+      "details": "Oldfusionbootstrap rows are preserved and not relabelled as matched Figure1 data."
+    },
+    {
+      "check": "Figure2–5PDFs byte unchanged",
+      "passed": true,
+      "details": {
+        "2": {
+          "identical": true,
+          "sha256": "bb2429ea938a2a852dafbb67b296d96e30f20ada46cdc0a2ac83526f9649865d"
+        },
+        "3": {
+          "identical": true,
+          "sha256": "1012fa80e12572fb33fded6ed54d4e40ba992f0915ba4c79e32d7e3ff598932c"
+        },
+        "4": {
+          "identical": true,
+          "sha256": "28ce5087235d2ecf07be057f0771aa1616072ad85a7051a5c8b293aa68b8620d"
+        },
+        "5": {
+          "identical": true,
+          "sha256": "12c910b00d9b8123226f324f6701bec8be017f430048552d6e29a340d5eba8a5"
+        }
+      }
+    },
+    {
+      "check": "Figure1uses saved verifiedasset preservingA/E",
+      "passed": true,
+      "details": {
+        "figure1_sha256": "8d1a903c100023e01a9514f067dfa9d57e9bb8b754f9c6697fc68bfca9ee339a",
+        "prior_saved_asset_audit": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/unified_revision_20261108/fig12/Figure1_audit.json",
+        "saved_audit_preserved_panel_changed_pixels": {
+          "A": 0,
+          "E": 0
+        },
+        "new_image_or_statistical_analysis_run": false
+      }
+    },
+    {
+      "check": "Protected final and priorcandidate files intact",
+      "passed": true,
+      "details": {
+        "checked_files": 365,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "All six direct Figure1 source/reference clauses synchronized",
+      "passed": true,
+      "details": "SI Table2 source mapping, Table4A narrative and Figure1C mapping, source archive mapping, and Methods5 applicability now distinguish matched Figure1B–D/F from the retained sensitivity/other-figure analyses. No numerical table rows outside4A changed."
+    }
+  ],
+  "failures": [],
+  "no_manuscript_edits_by_reviewer": true,
+  "new_statistics_or_experiments_run": false,
+  "no_previous_SI_unification_reapplied": true,
+  "scope_note": "This pass applies only the latest targeted instructions. Unchanged historical/current wording in other figures and results is intentionally preserved.",
+  "pdf_visual_review": "Root reports successful eight-page main compilation; supplementary rendering and visual QA remain the root task, not inferred from this source audit.",
+  "main_tex_sha256": "8c512a4f3791a498bdbefd9325b33023b049a91ae7668408308b95c09f12b5fd",
+  "si_md_sha256": "16cec76173ebfaf066cb5b505064ba13fdb7524a2cd321cb5e318e333379e7f0",
+  "resolved_direct_reference_findings": [
+    {
+      "severity": "direct_Figure1_cross_reference_inconsistency",
+      "file": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_20261108/source/Supplementary_Information_revised.md",
+      "line": 105,
+      "location": "Table2 introduction",
+      "phrase": "reference estimates shown in main Figures 1B and 2D",
+      "recommended_action": "Update only the Figure1 source/scope clause. Preserve unrelated figure descriptions and all other numerical table rows."
+    },
+    {
+      "severity": "direct_Figure1_cross_reference_inconsistency",
+      "file": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_20261108/source/Supplementary_Information_revised.md",
+      "line": 105,
+      "location": "Table2 Figure1source mapping",
+      "phrase": "Main Figure 1 also retains the historical connectivity and permutation analyses",
+      "recommended_action": "Update only the Figure1 source/scope clause. Preserve unrelated figure descriptions and all other numerical table rows."
+    },
+    {
+      "severity": "direct_Figure1_cross_reference_inconsistency",
+      "file": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_20261108/source/Supplementary_Information_revised.md",
+      "line": 189,
+      "location": "Table4A narrative",
+      "phrase": "Historical Table 4A shows",
+      "recommended_action": "Update only the Figure1 source/scope clause. Preserve unrelated figure descriptions and all other numerical table rows."
+    },
+    {
+      "severity": "direct_Figure1_cross_reference_inconsistency",
+      "file": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_20261108/source/Supplementary_Information_revised.md",
+      "line": 191,
+      "location": "Table4A Figure1C mapping",
+      "phrase": "Table 4A supplies the historical reference-pair intervals in main Figure 1C",
+      "recommended_action": "Update only the Figure1 source/scope clause. Preserve unrelated figure descriptions and all other numerical table rows."
+    },
+    {
+      "severity": "direct_Figure1_cross_reference_inconsistency",
+      "file": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_20261108/source/Supplementary_Information_revised.md",
+      "line": 373,
+      "location": "Source-data mapping",
+      "phrase": "historical source data for main Figures 1–4",
+      "recommended_action": "Update only the Figure1 source/scope clause. Preserve unrelated figure descriptions and all other numerical table rows."
+    },
+    {
+      "severity": "direct_Figure1_cross_reference_inconsistency",
+      "file": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_20261108/source/Supplementary_Information_revised.md",
+      "line": 386,
+      "location": "Methods5 Figure1mapping",
+      "phrase": "Main Figures 1–4 retain historical estimates and protocols",
+      "recommended_action": "Update only the Figure1 source/scope clause. Preserve unrelated figure descriptions and all other numerical table rows."
+    }
+  ],
+  "direct_reference_findings": [],
+  "verified_no_new_statistics_or_experiments_run": true
+}
