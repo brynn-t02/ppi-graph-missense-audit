@@ -1,0 +1,229 @@
+{
+  "status": "passed",
+  "review_type": "Read-only final v4 source scope review",
+  "baseline_v3": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_v3_spacing_20261108",
+  "candidate_v4": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_v4_figure4_20261108",
+  "previous_cumulative_edits_retained": true,
+  "authorized_main_blocks": 4,
+  "authorized_SI_blocks": 9,
+  "scientific_table_changes": [
+    6,
+    10
+  ],
+  "checks": [
+    {
+      "check": "Four authorized main replacements reverse exactly to completed v3",
+      "passed": true,
+      "evidence": [
+        "Table I split Figure3 and Figure4 configurations",
+        "Results III.D all three paragraphs",
+        "Figure4 LaTeX input",
+        "Figure4 caption"
+      ]
+    },
+    {
+      "check": "Abstract and all non-Figure4 prose remain cumulative v3 content",
+      "passed": true,
+      "evidence": "No Abstract, Introduction, Methods, III.A/B/C/E, Discussion, Acknowledgment or bibliography rewrite; only the declared TableI/III.D/Figure4 blocks change."
+    },
+    {
+      "check": "TableI accurately separates Figure3 reference and Figure4 matched ensembles",
+      "passed": true,
+      "evidence": "No new classifier fitting is assigned to prediction post-processing."
+    },
+    {
+      "check": "Preamble, fonts, margins, raggedbottom and reference balancing unchanged",
+      "passed": true,
+      "evidence": "Existing v3 formatting improvements retained; no shrinkage or balancing-command changes in v4."
+    },
+    {
+      "check": "III.D counts and threshold-specific net changes match fresh v4 CSV",
+      "passed": true,
+      "evidence": {
+        "source": "analysis/table6_all_transition_counts.csv and table10_all_threshold_transition_counts.csv",
+        "counts": {
+          "esm_vs_gcn": {
+            "both_correct": 12520,
+            "both_wrong": 3747,
+            "improved": 960,
+            "degraded": 993,
+            "FN_rescued": 366,
+            "FP_suppressed": 594,
+            "TN_to_FP": 958,
+            "TP_to_FN": 35,
+            "persistent_FN": 1089,
+            "persistent_FP": 2658
+          },
+          "cadd_am_vs_full": {
+            "both_correct": 16055,
+            "both_wrong": 1262,
+            "improved": 679,
+            "degraded": 224,
+            "FN_rescued": 170,
+            "FP_suppressed": 509,
+            "TN_to_FP": 99,
+            "TP_to_FN": 125,
+            "persistent_FN": 522,
+            "persistent_FP": 740
+          }
+        },
+        "raw_net": -33,
+        "fusion_net": 455,
+        "threshold": 0.5
+      }
+    },
+    {
+      "check": "III.D feature directions and displayed Hedges g match fresh v4 CSV",
+      "passed": true,
+      "evidence": [
+        {
+          "pair": "esm_vs_gcn",
+          "feature": "degree_bucket",
+          "FN_mean": 1.8442622950819672,
+          "FP_mean": 0.7845117845117845,
+          "FN_higher": true
+        },
+        {
+          "pair": "esm_vs_gcn",
+          "feature": "neighbor_risk_bucket",
+          "FN_mean": 1.0601092896174864,
+          "FP_mean": 0.6430976430976431,
+          "FN_higher": true
+        },
+        {
+          "pair": "esm_vs_gcn",
+          "feature": "clustering_coefficient",
+          "FN_mean": 0.17109663232043362,
+          "FP_mean": 0.2594595268686004,
+          "FN_higher": false
+        },
+        {
+          "pair": "cadd_am_vs_full",
+          "feature": "degree_bucket",
+          "FN_mean": 1.8058823529411765,
+          "FP_mean": 1.5736738703339883,
+          "FN_higher": true
+        },
+        {
+          "pair": "cadd_am_vs_full",
+          "feature": "neighbor_risk_bucket",
+          "FN_mean": 1.776470588235294,
+          "FP_mean": 0.8035363457760314,
+          "FN_higher": true
+        },
+        {
+          "pair": "cadd_am_vs_full",
+          "feature": "clustering_coefficient",
+          "FN_mean": 0.22746556283144495,
+          "FP_mean": 0.18184446463437437,
+          "FN_higher": true
+        }
+      ]
+    },
+    {
+      "check": "Protein-dependence and descriptive limits retained",
+      "passed": true,
+      "evidence": "Italic text g avoids the unavailable cached cmmi8 while retaining italic typography. No p/FDR or continuous-difficulty-matching claim is introduced."
+    },
+    {
+      "check": "Nine directly related SI replacements reverse exactly to v3",
+      "passed": true,
+      "evidence": [
+        "Notes on scope / Figure 4 model source",
+        "Methods 3 / corrected-sample interpretation",
+        "### Supplementary Table 6.",
+        "Table 8 / Figure 4 applicability note",
+        "### Supplementary Table 10.",
+        "Source-data archive / Figure 4 inputs",
+        "Source-data archive / Figure 4 prediction applicability",
+        "Methods 5 / Figure 4 aggregation convention",
+        "Table 11 / Table 10 source classification"
+      ]
+    },
+    {
+      "check": "Scientific SI table changes restricted to Tables6 and10",
+      "passed": true,
+      "evidence": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true,
+        "7": true,
+        "8": true,
+        "9": true,
+        "11": true,
+        "12": true,
+        "13": true,
+        "14": true,
+        "15": true,
+        "16": true,
+        "17": true
+      }
+    },
+    {
+      "check": "Figure3/Table5 entire reference analysis unchanged",
+      "passed": true,
+      "evidence": "Original53cells, selected values, intervals and fixed-reference explanation preserved byte-for-byte."
+    },
+    {
+      "check": "No stale directly dependent Figure4 source or old-count statements remain",
+      "passed": true,
+      "evidence": {
+        "stale_matches": [],
+        "unrelated_archived_Table3_4_and_Figure3_reference_labels": "Intentionally preserved."
+      }
+    },
+    {
+      "check": "Supplement renderer only adds keepWithNext for two Table6 group labels",
+      "passed": true,
+      "evidence": "Pure pagination rule; numerical and document content unchanged."
+    },
+    {
+      "check": "Figures1,2,3,5 PDFs byte-identical to completed v3",
+      "passed": true,
+      "evidence": {
+        "1": {
+          "identical": true,
+          "sha256": "304feefa0e4fabff825462f2bcb4c54c1f02d7219bdcababf63306f4c48a3303"
+        },
+        "2": {
+          "identical": true,
+          "sha256": "2eb2b750e1963cbb745c1d5fd9647d3845318ff3ab9a1b639182387a12c370e7"
+        },
+        "3": {
+          "identical": true,
+          "sha256": "1012fa80e12572fb33fded6ed54d4e40ba992f0915ba4c79e32d7e3ff598932c"
+        },
+        "5": {
+          "identical": true,
+          "sha256": "12c910b00d9b8123226f324f6701bec8be017f430048552d6e29a340d5eba8a5"
+        }
+      }
+    },
+    {
+      "check": "All protected v3 files retain their hashes",
+      "passed": true,
+      "evidence": {
+        "checked": 40,
+        "mismatches": []
+      }
+    }
+  ],
+  "findings": [],
+  "main_tex_sha256": "76953394cde3e0d03185e8ae5638c8e1f903b7e34aff688ae44bcd10f685c1d6",
+  "SI_MD_sha256": "c9b1925eab25948f045b5195b3d7d98fd214731f36acbce21f1df47441a939b2",
+  "renderer_sha256": "e39dc9917df46bf5ea5c93637dbb992df63a3f05661824af8fbd3a940c19f7af",
+  "fresh_v4_sources": "Counts/means/effects/thresholds from this round analysis CSVs; no previous broad-candidate figures or tables used.",
+  "reviewer_operations": {
+    "source_edits": false,
+    "figure_edits": false,
+    "training": false,
+    "inference": false,
+    "bootstrap": false,
+    "scientific_metric_recomputation": false,
+    "compilation": false,
+    "rendering": false
+  },
+  "PDF_visual_review": "Root handles the8-page main/19-page supplement render and visual checks separately; this report does not infer visual certification."
+}

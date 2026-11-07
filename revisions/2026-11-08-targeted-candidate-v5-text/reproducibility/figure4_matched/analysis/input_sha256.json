@@ -1,0 +1,181 @@
+{
+  "inputs": {
+    "/Users/teyian/Documents/paper1/server_snapshot_full/root/data/processed/topology_profile_joint_map_exp33/merged_topology_profile_features.csv": {
+      "sha256": "68c0dedf5a6d15e8b23e3dfd9f6cd067dccd00d8d18c23c602c2b69fef6ac65d",
+      "bytes": 3955514
+    },
+    "/Users/teyian/Documents/paper1/server_snapshot_full/root/data/processed/clinvar_test_main.csv": {
+      "sha256": "c89d6507c8b8b45c4177f2434c7ecfa8435f60d03b327a9c4493e0b51a6c45e6",
+      "bytes": 4422463
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/canonical_analysis_20261025/public/frozen_samples_177213.csv.gz": {
+      "sha256": "a265ce6d010aeeb89cbabee55d7a5107ddd561034eb37d75b4ad2121951b3edf",
+      "bytes": 1411593
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/original_test_rows.csv": {
+      "sha256": "5478fe6233be4397630edee2927af61132ae86d04b4efda2ede7a91c85738204",
+      "bytes": 556178
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/canonical_analysis_20261025/public_manifest.json": {
+      "sha256": "468ec074776a51ccc324224102357cfe9e097277b60e35307105f52da1ca08b9",
+      "bytes": 9257
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/canonical_analysis_20261025/source_manifest.json": {
+      "sha256": "5b4308f3749ff49457de7f11a03a38476ee6b28bc34dc6c2d1f294c0157aff37",
+      "bytes": 39063
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/canonical_analysis_20261025/code/protocol.json": {
+      "sha256": "9e437091d97af949da341fd20726f889e3358f1354658e19f701451d79e40133",
+      "bytes": 1838
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/experiment_20261024/code/protocol.json": {
+      "sha256": "cf610e58f51c3f1540e33a2cd303e84b9fffa94bef4b8eeb3c8e61ba9aa009e2",
+      "bytes": 2931
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/completed_run_verification.json": {
+      "sha256": "16cddce0d6410704d1e47b18bbe082d6556c7b27ff6b9f11b26c8ff2e19e6988",
+      "bytes": 14371
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/canonical_analysis_20261025/canonical_inference_audit.json": {
+      "sha256": "5fcaa92823a82b60cc66538c8a4514a6e85180d26d3782d2b92334f0b1af7a95",
+      "bytes": 34537
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/canonical_analysis_20261025/ensemble_metrics.csv": {
+      "sha256": "1a4718873bf09fc8276a69b1ec61fa381a4b458f1e5aca6f52fd841af23f9fe1",
+      "bytes": 3258
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/canonical_analysis_20261025/evaluation_per_seed.csv": {
+      "sha256": "b48f814a900e5e1c9e2398a7c86ce442b73c0d293f37b1f95f44509c2370806f",
+      "bytes": 8105
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/canonical_analysis_20261025/public/test_predictions__original__raw_ESM.csv.gz": {
+      "sha256": "36ddfbff60328081bb87635033708d60cdacc9be8e5e8a341640d6d6047133e4",
+      "bytes": 392811
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original/raw_ESM/seed_42/metrics.json": {
+      "sha256": "af6668a66d17ebff49c16402947d8dcda766a68101e71276903abbba6897efe8",
+      "bytes": 283
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original/raw_ESM/seed_42/history.json": {
+      "sha256": "f7a7659b5a40b8f17685f780729ab2feaca4a50c031fcd774c29410e1668d4c4",
+      "bytes": 770
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original/raw_ESM/seed_43/metrics.json": {
+      "sha256": "d22a822244b0223d5b3effdab1ad345d9a2163be4579bd3a9d777b43659f73bd",
+      "bytes": 283
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original/raw_ESM/seed_43/history.json": {
+      "sha256": "f686c0ed8a3a3a4858c83f585d376d95942bdf961b017d2ced308e8076664bf6",
+      "bytes": 769
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original/raw_ESM/seed_44/metrics.json": {
+      "sha256": "e51b8d01b5c35b720676e5cb1ed03a1d00dc9e610fabc0f918ba95b9ecce497f",
+      "bytes": 282
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original/raw_ESM/seed_44/history.json": {
+      "sha256": "af730bebbd70746d290ae797dc8f9167733ffdaae3623ac972e45b16067b2a15",
+      "bytes": 767
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/canonical_analysis_20261025/public/test_predictions__original__full_FPP.csv.gz": {
+      "sha256": "845ca384e6b59ac61efc5799c5360894559d99b311398e00da6cf86d771da245",
+      "bytes": 394949
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original/full_FPP/seed_42/metrics.json": {
+      "sha256": "a4a5a61449c385375f4ca39f66f88b29582539279a7fd7b64db7c733c3d0cbdd",
+      "bytes": 285
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original/full_FPP/seed_42/history.json": {
+      "sha256": "3a180545bff44af1c653b5e64713e8c9c11f4e38d917dcf7702dda32fc4aacc7",
+      "bytes": 1281
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original/full_FPP/seed_43/metrics.json": {
+      "sha256": "53f6a061f97e4d4bc3ec29d20a4d97aa338ce68d732b9e2e9cec8da1f631ea57",
+      "bytes": 285
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original/full_FPP/seed_43/history.json": {
+      "sha256": "396255507059a4a13c119b8e2e1130b5f41caa9a2a7468a75f060766971c4f8d",
+      "bytes": 1152
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original/full_FPP/seed_44/metrics.json": {
+      "sha256": "b5f1c718b2721b80503bc7cb06b9c2f2a94c252c1d3f1fda93ed4d4168995b15",
+      "bytes": 286
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original/full_FPP/seed_44/history.json": {
+      "sha256": "bdb3e82994f3c121ba1f9661aa1b0b968c70abef028708a31bd6589d176217f6",
+      "bytes": 1791
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/canonical_analysis_20261025/public/test_predictions__original_fusion__scores_capacity_matched.csv.gz": {
+      "sha256": "c84d82140d9c4ddfd91fa5ef9342f1dcc3d842d7270ffabd3500f0bdc9a4ad7a",
+      "bytes": 803775
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original_fusion/scores_capacity_matched/seed_42/metrics.json": {
+      "sha256": "2eea030004d0a78e70355c136aeede2fa6a3a3541484b3ffbd0b02f9cab0a522",
+      "bytes": 306
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original_fusion/scores_capacity_matched/seed_42/history.json": {
+      "sha256": "82d8c64c3ac5be3e042ebb7bfaa6bacb991255effc7804bcfb10ae1bbc762620",
+      "bytes": 4000
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original_fusion/scores_capacity_matched/seed_43/metrics.json": {
+      "sha256": "e01339df65526b35837741cf9de537b766ffd5347826027dd6055d4812c4b7c0",
+      "bytes": 305
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original_fusion/scores_capacity_matched/seed_43/history.json": {
+      "sha256": "48c5187bb23e858e96bcf02a519ab091fcb488ac85c56b1602822e0d3b3fc2a9",
+      "bytes": 5030
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original_fusion/scores_capacity_matched/seed_44/metrics.json": {
+      "sha256": "b6a22dab64c709338728f5506f007072eda3ffdb1c188bae36ae303d807ad05b",
+      "bytes": 306
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original_fusion/scores_capacity_matched/seed_44/history.json": {
+      "sha256": "38554ee7af5b318d07488656250a9aaa8cdea1249c7e2ff1a1dd1befec2191e7",
+      "bytes": 5942
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/canonical_analysis_20261025/public/test_predictions__original_fusion__scores_plus_full_FPP.csv.gz": {
+      "sha256": "b60333c3b7e199084a4ac0538cdc8d8ba9b7d6aab60c28019bcd0f0248ed9921",
+      "bytes": 811472
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original_fusion/scores_plus_full_FPP/seed_42/metrics.json": {
+      "sha256": "1707a350c603c2b61dcaa6c04bc960d290d589f14f6368e088eb85a98b1db19d",
+      "bytes": 303
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original_fusion/scores_plus_full_FPP/seed_42/history.json": {
+      "sha256": "53ab73afe1dcc390fa2be2a8fd6137d6dd0ff53953ef8d5f3f2ff9b4cd8afc95",
+      "bytes": 3097
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original_fusion/scores_plus_full_FPP/seed_43/metrics.json": {
+      "sha256": "003bd4ee9e578d3b631080fefcc22df1ec6a86bf6b7dbd0dc6dcc1173a85079b",
+      "bytes": 306
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original_fusion/scores_plus_full_FPP/seed_43/history.json": {
+      "sha256": "0fd98c8cdec980e6d5480fec926aa0695091c8e1910bee027ab3562f2a7ca495",
+      "bytes": 2835
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original_fusion/scores_plus_full_FPP/seed_44/metrics.json": {
+      "sha256": "8e4b68cf1bcc0cc37f42a1085bcfc8842b181e4c7e74c631e51f457d4d14642a",
+      "bytes": 305
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/matched_validation_20261024/runs/original_fusion/scores_plus_full_FPP/seed_44/history.json": {
+      "sha256": "f8b17a1a0c2c4ad4fb409d5562b9c8795399d10741c617f835bb101dff287be3",
+      "bytes": 2188
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/figure_inputs/data/processed/corrected_sample_identification_exp34/summary.json": {
+      "sha256": "4223fe20f0cf9cdc7538b97dd894f2f2aa76ea754a1f02e8d2eb3646474c8e72",
+      "bytes": 2802
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/figure_inputs/data/processed/fp_vs_fn_stats_exp36B/esm_to_gcn_fp_vs_fn_stats.csv": {
+      "sha256": "419a1f0ab69d74003a2346dc59c349ce21e5c6a8b136faca97c88dd0483432ae",
+      "bytes": 1878
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/figure_inputs/data/processed/fp_vs_fn_stats_exp36B/cadd_am_to_full_fp_vs_fn_stats.csv": {
+      "sha256": "68db53e0392dd22bd49e00cb69984da5a688a0fbf1951cac62e655daa9ccb0e0",
+      "bytes": 1909
+    },
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/figure_inputs/data/processed/difficulty_matched_correction_contrast_exp40/difficulty_matched_correction_contrast_results.csv": {
+      "sha256": "405063af1b940741fe7b3ee0454afefc7ea41c3fb6e577c95725ce9552056ce0",
+      "bytes": 4227
+    }
+  },
+  "script_sha256": "34e8312a65b78608540e812f434ade4504db9dc5f04aecf5a88d0d80a2c95108"
+}

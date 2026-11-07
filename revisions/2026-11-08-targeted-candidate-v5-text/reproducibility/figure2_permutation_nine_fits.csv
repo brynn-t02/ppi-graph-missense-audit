@@ -1,0 +1,10 @@
+split,arm,seed,best_epoch,test_auc,test_auprc
+original_fusion,scores_plus_permuted_FPP_g0,42,2,0.96971238587533837,0.93344799071373719
+original_fusion,scores_plus_permuted_FPP_g0,43,6,0.96997232213903595,0.93607831507467598
+original_fusion,scores_plus_permuted_FPP_g0,44,4,0.97009245737211525,0.93566277565309264
+original_fusion,scores_plus_permuted_FPP_g1,42,3,0.96871678669152939,0.934693189910626
+original_fusion,scores_plus_permuted_FPP_g1,43,5,0.9695906574286508,0.9363924978535344
+original_fusion,scores_plus_permuted_FPP_g1,44,6,0.96861457164803499,0.93526033901289385
+original_fusion,scores_plus_permuted_FPP_g2,42,4,0.96839569180632157,0.93518309850403125
+original_fusion,scores_plus_permuted_FPP_g2,43,6,0.96878026586329535,0.93567076295786122
+original_fusion,scores_plus_permuted_FPP_g2,44,4,0.96907765650081878,0.93614730394939916
