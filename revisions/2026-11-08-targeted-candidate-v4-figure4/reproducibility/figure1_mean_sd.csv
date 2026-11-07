@@ -1,0 +1,5 @@
+split,arm,n_fits,auc_mean,auc_sd,auprc_mean,auprc_sd,seed_ids,sd_definition
+original,raw_ESM,3,0.78351740215040799,0.0062664889155283916,0.61173373910776052,0.0066166470833268938,"[42, 43, 44]","sample SD across 3 classifier seeds, ddof=1"
+original,full_FPP,3,0.79498767194399955,0.0016161326817645135,0.64850955056909321,0.011676231252294604,"[42, 43, 44]","sample SD across 3 classifier seeds, ddof=1"
+original,edge_ablated_FPP,3,0.77016095216504077,0.0077261926808063807,0.60765790003916897,0.014010524797749531,"[42, 43, 44]","sample SD across 3 classifier seeds, ddof=1"
+original,permuted_FPP,9,0.78028183776324611,0.009213280443186778,0.61028558704845581,0.0084384741251207433,"[42, 43, 44]","sample SD, ddof=1; permutation pooled over 3 graphs x 3 classifier seeds"

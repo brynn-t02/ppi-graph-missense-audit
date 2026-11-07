@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "independent_feature_means": 220,
+  "independent_error_stratified_Hedges_g": 44,
+  "independent_threshold_count_values": 198,
+  "method": "Source topology aligned by Name/label/protein then VariationID; independent 8-state truth table; math.fsum mean/variance",
+  "Figure3_unmodified": true
+}

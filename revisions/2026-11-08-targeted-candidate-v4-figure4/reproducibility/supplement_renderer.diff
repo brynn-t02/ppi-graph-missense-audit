@@ -1,0 +1,13 @@
+--- v3/render_supplement.py
++++ v4/render_supplement.py
+@@ -107,7 +107,9 @@
+     else:
+         style='BodyRevision';para=[line];i+=1
+         while i<len(lines) and lines[i].strip() and not lines[i].startswith(('#','|','```','$$')):para.append(lines[i].strip());i+=1
+-        story.append(Paragraph(fmt(' '.join(para)),styles[style]));continue
++        paragraph=Paragraph(fmt(' '.join(para)),styles[style])
++        if line.startswith('Corrected-sample group counts for '): paragraph.keepWithNext=True
++        story.append(paragraph);continue
+     story.append(Paragraph(fmt(text),styles[style]));i+=1
+ 
+ path=B/('BIBM2026_supplementary_anonymous_revised.pdf' if args.anonymous else 'BIBM2026_supplementary_named_revised.pdf')

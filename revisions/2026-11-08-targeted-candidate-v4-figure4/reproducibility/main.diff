@@ -1,0 +1,36 @@
+--- v3/source/main.tex
++++ v4/source/main.tex
+@@ -103,7 +103,8 @@
+ Original-split fusion & 3 per arm; 3 graphs $\times$ 3 seeds for permutation & Architecture-matched fusion controls \\
+ Homology-aware representations & 1 per arm & Fixed reference comparison \\
+ Homology-aware fusion & 3 per arm & Matched training settings \\
+-Topology and error profiles & Fixed reference prediction pairs & Descriptive post-hoc analyses \\
++Topology-context profiles (Fig. 3) & Fixed reference model pair & Descriptive post-hoc analyses \\
++Error-transition profiles (Fig. 4) & 3 frozen models per arm & Matched ensembles; threshold 0.5 \\
+ BioGRID validation & 9 total & Three settings, three fits each \\
+ External-source evaluation & 3 frozen models per arm & Inference without refitting \\
+ \hline
+@@ -159,16 +160,16 @@
+ 
+ \subsection{Graph augmentation reshapes false-negative and false-positive predictions differently}
+ 
+-At a fixed decision-score threshold of 0.5, raw ESM and PPI-GCN were jointly correct for 11,875 test variants and jointly wrong for 3,965. Graph propagation corrected 1,436 and degraded 944 variants: 837 false negatives were rescued and 599 false positives suppressed, while 904 true negatives and 40 true positives were degraded (Fig. 4A).
+-
+-The retained-reference \CADDAM{} and graph-fusion pair corrected 666 variants and degraded 275, with more suppressed false positives than rescued false negatives (444 versus 222; Fig. 4B). This pair differs from the repeated-run fusion comparison in Fig. 2. Counts are conditional on the selected fits and threshold.
+-
+-For the raw-ESM-to-PPI-GCN pair, rescued false negatives had higher degree, neighbour-risk and betweenness, whereas suppressed false positives had higher clustering and within-community neighbour fraction (Fig. 4C). Profiles for the retained fusion pair are shown in Fig. 4D. Directional mean profiles and error-stratified effect sizes are retained descriptively (Fig. 4E/F). The latter groups were stratified by baseline error, not matched on continuous prediction difficulty. Significance encodings are omitted because the old feature-wise tests ignored within-protein dependence. These profiles do not establish a mechanism for the prediction changes.
++At a threshold of 0.5, the three-seed raw-ESM and full-FPP ensembles were jointly correct for 12,520 test variants and jointly wrong for 3,747. Full FPP corrected 960 predictions and degraded 993: 366 false negatives were rescued and 594 false positives suppressed, while 958 true negatives became false positives and 35 true positives became false negatives (Fig. 4A). The net change was 33 additional classification errors at this threshold.
++
++The architecture-matched \CADDAM{} and full-FPP fusion ensembles were jointly correct for 16,055 variants and jointly wrong for 1,262. Fusion corrected 679 predictions (170 rescued false negatives and 509 suppressed false positives) and degraded 224 (99 new false positives and 125 new false negatives), reducing the total errors by 455 (Fig. 4B).
++
++Rescued false negatives had higher degree- and neighbour-risk-bucket means than suppressed false positives in both comparisons; their clustering coefficient was lower for the representation comparison and higher for fusion (Fig. 4C--E). Within raw-ESM baseline false negatives, rescued variants had higher degree-bucket means and within-community neighbour fractions than persistent false negatives (Hedges' \textit{g} +0.538 and +0.360; Fig. 4F). Repeated variants within proteins limit statistical inference, and these descriptive associations do not establish a mechanism.
+ 
+ \begin{figure*}[!p]
+ \centering
+-\includegraphics[width=0.98\textwidth]{figure_drafts/Figure4_prediction_transitions_v2_accepted_minimal_clarified.pdf}
+-\caption{Historical prediction transitions and descriptive topology profiles. A/B, Retained raw/graph and score/graph-fusion comparisons at threshold 0.5. C/D, Row-centered, range-scaled group means; warm/blue colors denote above/below the within-row mean, not comparable effect magnitudes across rows. E, Uniform blue/orange dots denote higher means among rescued false negatives/suppressed false positives, respectively. F, Baseline-error-stratified Hedges' \textit{g}; blue/orange denote positive/negative effects. Repeated variants within proteins limit inferential interpretation.}
++\includegraphics[width=0.98\textwidth]{figure_drafts/Figure4_prediction_transitions_matched_ensembles.pdf}
++\caption{Prediction transitions and descriptive topology profiles from matched model ensembles. A--B, Prediction transitions for raw ESM versus full FPP and CADD+AlphaMissense versus full-FPP fusion at a decision threshold of 0.5. C--D, Row-centered and range-scaled topology-feature means for rescued false negatives and suppressed false positives. E, Directional differences in feature means between the corrected groups. F, Descriptive Hedges' \textit{g} comparing rescued and persistent false negatives within baseline false-negative cases. The topology-feature analyses are descriptive; repeated variants within proteins limit statistical inference. In C--D, warm/blue colors denote means above/below the within-row mean; color magnitudes are not comparable across features. In E, blue/orange denotes higher means among rescued false negatives/suppressed false positives; in F, blue/orange denotes positive/negative effects.}
+ \label{fig:prediction_transitions}
+ \end{figure*}
+ 
