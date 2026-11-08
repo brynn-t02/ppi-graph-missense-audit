@@ -1,0 +1,145 @@
+{
+  "bootstrap_repeats": 2000,
+  "seed": 20261024,
+  "resampling_unit": "STRINGprotein(allvariants,multiplicity)",
+  "rng_policy": "Restartseedperpopulation;validationrngseparate;identicaldrawsforallcomparisons",
+  "precision": "allseedprobabilitiescastfloat64beforeensemble",
+  "metric": "ROC AUC and noninterpolatedsklearnaverageprecision",
+  "scope": "Conditionalonfrozenfits/networks;exploratorywithoutmultiplicityadjustment",
+  "comparisons": {
+    "original": {
+      "BioGRID_FPP_vs_raw_ESM": {
+        "delta_auc": -0.02011876894850506,
+        "auc_ci95": [
+          -0.048032302464519075,
+          0.010054862977271152
+        ],
+        "delta_auprc": -0.0024932691731428536,
+        "auprc_ci95": [
+          -0.05395621429437386,
+          0.03630426151071134
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 1413,
+        "variants": 18220
+      },
+      "BioGRID_FPP_vs_full_FPP": {
+        "delta_auc": -0.030792053261103236,
+        "auc_ci95": [
+          -0.06916339779230504,
+          0.004072936968922402
+        ],
+        "delta_auprc": -0.04371089916528459,
+        "auprc_ci95": [
+          -0.08937759038726638,
+          -0.0010820782113221646
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 1413,
+        "variants": 18220
+      }
+    },
+    "original_fusion": {
+      "scores_plus_BioGRID_FPP_vs_scores_capacity_matched": {
+        "delta_auc": 0.012417777016483389,
+        "auc_ci95": [
+          0.0034107769424803675,
+          0.020995380214760023
+        ],
+        "delta_auprc": 0.02787646466367133,
+        "auprc_ci95": [
+          0.007006907579165442,
+          0.05018976084333819
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 1413,
+        "variants": 18220
+      },
+      "scores_plus_BioGRID_FPP_vs_scores_plus_raw_ESM": {
+        "delta_auc": 0.0009198938293534242,
+        "auc_ci95": [
+          -0.0011478498602952969,
+          0.003640390762074094
+        ],
+        "delta_auprc": 0.0010524968923849576,
+        "auprc_ci95": [
+          -0.0037139600034287457,
+          0.006905749259537048
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 1413,
+        "variants": 18220
+      },
+      "scores_plus_BioGRID_FPP_vs_scores_plus_full_FPP": {
+        "delta_auc": -0.0022815788652650326,
+        "auc_ci95": [
+          -0.004202164430362693,
+          -0.0005769834970310953
+        ],
+        "delta_auprc": -0.006499636028662437,
+        "auprc_ci95": [
+          -0.01164192820961508,
+          -0.002332462034348089
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 1413,
+        "variants": 18220
+      }
+    },
+    "homology": {
+      "scores_plus_BioGRID_FPP_vs_scores_capacity_matched": {
+        "delta_auc": -0.0020365347362769626,
+        "auc_ci95": [
+          -0.004212330217551757,
+          -4.427608878427994e-05
+        ],
+        "delta_auprc": -0.011757884931125284,
+        "auprc_ci95": [
+          -0.031471698689362684,
+          0.005960705497392388
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 3438,
+        "variants": 18220
+      },
+      "scores_plus_BioGRID_FPP_vs_scores_plus_raw_ESM": {
+        "delta_auc": 0.0005090659085504878,
+        "auc_ci95": [
+          -0.0007739598003509457,
+          0.0016914186392674442
+        ],
+        "delta_auprc": 0.0017720706461789026,
+        "auprc_ci95": [
+          -0.006286116311203555,
+          0.01049342102798515
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 3438,
+        "variants": 18220
+      },
+      "scores_plus_BioGRID_FPP_vs_scores_plus_full_FPP": {
+        "delta_auc": -0.0021573027371996067,
+        "auc_ci95": [
+          -0.0035728822789769465,
+          -0.0009007752128874677
+        ],
+        "delta_auprc": -0.010522726499251012,
+        "auprc_ci95": [
+          -0.018844106645211516,
+          -0.0018222979744372675
+        ],
+        "finite_replicates": 2000,
+        "discarded_one_class_replicates": 0,
+        "proteins": 3438,
+        "variants": 18220
+      }
+    }
+  }
+}

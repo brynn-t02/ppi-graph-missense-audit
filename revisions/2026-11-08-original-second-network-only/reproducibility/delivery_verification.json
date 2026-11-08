@@ -1,0 +1,13 @@
+{
+  "main_pages": 8,
+  "supplement_pages": 12,
+  "main_sha256": "73e0a20cb245621c2c5424ccaecb174142e89ea7977243b103195a928261831d",
+  "supplement_sha256": "c140f896955aa6f1495de43f9c97c96ba79fdccb0460aaa48730a16c4a51804a",
+  "original_figures_unchanged": 4,
+  "main_original_results_preserved": true,
+  "original_table_numeric_values_preserved_except_invalid_FDR": true,
+  "only_BioGRID_added": true,
+  "no_experiments_or_server_access": true,
+  "all_prior_versions_preserved": true,
+  "candidate_not_newly_PDFeXpress_certified": true
+}

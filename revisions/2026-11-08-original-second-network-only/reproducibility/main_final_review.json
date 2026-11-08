@@ -1,0 +1,97 @@
+{
+  "status": "PASS: scientific clarifications, eight-page visual review, embedded fonts and final-page reference-column balance complete",
+  "reviewed_at": "2026-11-08T06:38:47.970811+00:00",
+  "source": {
+    "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_original_second_network_only_20261108/source/main.tex",
+    "sha256": "b48f72d8c2a3b0d96675df768af650d03435d14f35183c863d7b52c4a498c97e"
+  },
+  "pdf": {
+    "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_original_second_network_only_20261108/source/main.pdf",
+    "sha256": "73e0a20cb245621c2c5424ccaecb174142e89ea7977243b103195a928261831d",
+    "pages": 8
+  },
+  "checks": {
+    "F1E_repeats_explicit": true,
+    "SD_where_repeated_fits_exist": true,
+    "propagation_convention_only_BioGRID_STRING": true,
+    "eight_pages": true,
+    "all_fonts_embedded": true,
+    "no_overfull": true,
+    "no_undefined_references": true,
+    "no_missing_glyph": true,
+    "preserved_Figure1_connectivity_topology_controls_v2_accepted.pdf": true,
+    "preserved_Figure2_fusion_homology_v1_accepted.pdf": true,
+    "preserved_Figure3_topology_context_v1_accepted.pdf": true,
+    "preserved_Figure4_prediction_transitions_v2_accepted.pdf": true,
+    "final_page_reference_columns_balanced": true,
+    "only_balancing_line_changed_since_previous_review": true
+  },
+  "visual_all_eight_pages_reviewed": true,
+  "pages": [
+    {
+      "page": 1,
+      "visual": "Title, named authors, real bold abstract and two-column text intact; no clipping or overlap.",
+      "render": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_second_network_only_20261108/qa_main/page-1.png",
+      "sha256": "b7624a308e863376091c2ba462a8a48a28742e975a193144538b422abb2ce352"
+    },
+    {
+      "page": 2,
+      "visual": "Equations and Methods paragraphs properly contained; no stretched large gaps.",
+      "render": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_second_network_only_20261108/qa_main/page-2.png",
+      "sha256": "1720413cfa6ab75a3f81b0f88fbb3b51338750a6472b604602db4f26c24e54a1"
+    },
+    {
+      "page": 3,
+      "visual": "Table I, table notes, BioGRID Methods and Results columns fit; no overlap/cutoff.",
+      "render": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_second_network_only_20261108/qa_main/page-3.png",
+      "sha256": "3ab74a2ab3214956cf2a1a196beb84bd3a1b5de6fcc527bb092cad4ac3db5fa1"
+    },
+    {
+      "page": 4,
+      "visual": "Original Figure1 all A–F complete; revised caption fits; following text no clipping.",
+      "render": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_second_network_only_20261108/qa_main/page-4.png",
+      "sha256": "85dcdcfce9e1987cf4c8f224ce9a0141be3ee2a5fc6d08dcaedbe3c07c2d9096"
+    },
+    {
+      "page": 5,
+      "visual": "Original Figure2 all A–F complete; TableII within column and legible; no caption/table collision.",
+      "render": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_second_network_only_20261108/qa_main/page-5.png",
+      "sha256": "814f36f829af1cc8480bec493ffcf989b98f564c0c2e5a469f3a3f64856cd62d"
+    },
+    {
+      "page": 6,
+      "visual": "Original Figures3/4 both complete and captions fit. Some original labels remain very small at whole-page scale; unchanged assets, no new clipping.",
+      "render": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_second_network_only_20261108/qa_main/page-6.png",
+      "sha256": "bcb7812fdfebe992c917fc679f39e59270989960028710512fb4c1a4c63e56a7"
+    },
+    {
+      "page": 7,
+      "visual": "Discussion, italic inline Practical recommendations, Availability, Acknowledgment and references flow correctly; no isolated paragraph numbering or large paragraph gap.",
+      "render": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_second_network_only_20261108/qa_main/page-7.png",
+      "sha256": "12e84953541bd6c10eba9454a6648635ec1927e6e3750863ecbb16e66829cf67"
+    },
+    {
+      "page": 8,
+      "visual": "References19–24 left and25–29 right, both sharp and uncut; balanced columns and no overlap. Remaining lower-page whitespace is normal end-of-paper remainder.",
+      "render": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_second_network_only_20261108/qa_main/page-8.png",
+      "sha256": "ded0522776aad04dd10f5a83a726ac99615c7aa3f5aa13cf3cece4a52b7dd810"
+    }
+  ],
+  "font_report": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_second_network_only_20261108/qa_main/font_and_page_check.json",
+  "font_resource_count": 17,
+  "new_issues": [],
+  "unchanged_known_limits": [
+    "Original figures retain small labels; this review did not redesign/enlarge them.",
+    "Original Figure4 inference size/opacity/star encodings and difficulty-matched wording remain inside fixed image; caption/text withdraw their inferential interpretation and describe baseline-FN stratification."
+  ],
+  "not_certified": "Local rendering/font/page checks are not a new PDF eXpress certification.",
+  "scope": "Read-only manuscript/PDF review; rendered local PNG proofs and review receipts only; no manuscript/figures/data modifications, no experiments or server access.",
+  "resolved_layout_issues": [
+    {
+      "page": 8,
+      "issue": "Previously empty right reference column",
+      "resolution": "IEEEtriggeratref{25}; references19–24 left,25–29 right, both within page; visually rechecked at120dpi."
+    }
+  ],
+  "final_followup_scope": "Only page8 re-rendered and visually reviewed after balancing; source delta checked to contain only IEEEtriggeratref25, page/font checks refreshed."
+}

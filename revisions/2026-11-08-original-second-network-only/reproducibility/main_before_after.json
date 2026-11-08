@@ -1,0 +1,222 @@
+[
+  {
+    "reason": "Actual embedded bold/italic fonts",
+    "before": "\\documentclass[conference]{IEEEtran}",
+    "after": "\\RequirePackage[T1]{fontenc}\n\\documentclass[conference]{IEEEtran}"
+  },
+  {
+    "reason": "Compact tables and breakable repository URL",
+    "before": "\\usepackage{url}",
+    "after": "\\usepackage[hyphens]{url}\n\\usepackage{array}"
+  },
+  {
+    "reason": "Previously confirmed authors",
+    "before": "\\author{}",
+    "after": "\\author{\\IEEEauthorblockN{Yuxin Tian, Xianguo Zhang\\textsuperscript{*}, Weibo Meng, Jieqi Yin, and Yongqin Jin}\n\\IEEEauthorblockA{College of Computer Science (College of Software), College of Artificial Intelligence\\\\\nInner Mongolia University, Hohhot 010021, China\\\\\nEmail: yuxin\\_t02@163.com; 2595083628@qq.com\\\\\n\\textsuperscript{*}Corresponding author: Xianguo Zhang}}\n\\hypersetup{pdfauthor={Yuxin Tian, Xianguo Zhang, Weibo Meng, Jieqi Yin, Yongqin Jin}}"
+  },
+  {
+    "reason": "Avoid stretched paragraph gaps",
+    "before": "\\maketitle",
+    "after": "\\maketitle\n\\raggedbottom"
+  },
+  {
+    "reason": "Short abstract and scope; only BioGRID added",
+    "before": "Protein-protein interaction (PPI) graphs provide a natural source of molecular context for missense variant pathogenicity prediction. Clarifying when PPI context adds information helps distinguish biological network signal from representation smoothing, split-dependent connectivity and complementarity to existing variant-effect scores. Interpreting performance gains from propagating protein embeddings over a shared graph requires separating protein-topology alignment, train-test connectivity, homology-related split structure and complementarity to existing variant-effect predictors. We audit these possibilities using a reconstructed ClinVar-STRING dataset of 177,213 filtered, non-conflicting ClinVar missense variants mapped to 14,123 labelled STRING proteins within a 19,622-node STRING protein-association graph used as PPI context. ESM protein language model embeddings are compared with fixed two-hop PPI-GCN propagation, CADD, AlphaMissense and fusion models using validation-selected downstream MLP classifiers. Across three classifier seeds, PPI-GCN increased mean AUC from 0.7835 to 0.7950 and mean AUPRC from 0.6116 to 0.6484. In a retained reference run used for paired graph-ablation analyses, removing direct train-test PPI edges nearly eliminated the AUC gain, protein-clustered bootstrap widened uncertainty across zero, and topology permutation returned performance close to the raw ESM range. Graph fusion also improved \\CADDAM{} under the original split. Raw-ESM, edge-ablated and topology-permuted protein representations retained much of this gain, leaving limited topology-specific added value in the strong-predictor fusion setting. In the homology-aware stress test, the retained graph-fusion estimate was lower than the repeated-run architecture-matched \\CADDAM{} baseline. Topology-stratified and sample-level transition analyses suggested that graph-associated gains and prediction changes were concentrated in specific network roles and error types. PPI graph augmentation acted as a context-dependent source of network information, with added value shaped by graph connectivity, split design and baseline predictor strength.",
+    "after": "Protein-protein interaction (PPI) graphs can add molecular context to missense variant prediction, but their contribution depends on evaluation design and baseline strength. We audit fixed two-hop propagation of ESM protein embeddings using 177,213 ClinVar variants and a STRING association graph. Only downstream classifiers are trained. Across three seeds, propagation increased mean AUC from 0.7835 to 0.7950; protein-clustered intervals for the reference-model gains included zero. Connectivity and topology controls showed performance sensitivity, although their propagation and training settings were not fully matched. With CADD and AlphaMissense included, protein-representation controls retained much of the fusion gain. Under homology-aware splitting, the single graph-fusion estimate was below the repeated strong-predictor baseline. Topology groups and error transitions showed exploratory associations rather than established correction mechanisms. BioGRID second-network validation did not establish a consistent added benefit over raw-embedding controls. These findings support context-dependent protein-representation complementarity and careful evaluation of network-specific increments. They concern fixed propagation and should not be generalized to trained graph neural networks."
+  },
+  {
+    "reason": "Introduction avoid isolated causal effects",
+    "before": "a controlled evaluation framework that separates graph-topology effects from representation complementarity, train-test graph connectivity and downstream classifier capacity",
+    "after": "an evaluation framework that examines graph topology, representation complementarity, train-test graph connectivity and downstream classifier configuration"
+  },
+  {
+    "reason": "Introduction exploratory scope and second network",
+    "before": "Third, it links graph-associated gains and prediction changes to topology contexts and error transitions, offering practical guidance on when PPI context adds useful information in missense variant prediction.",
+    "after": "Third, it relates graph-associated gains and prediction changes to exploratory topology contexts and error transitions. A second-network evaluation using BioGRID tests the dependence of the findings on network choice."
+  },
+  {
+    "reason": "Do not restore unverified content-release date",
+    "before": "We used the ClinVar variant-summary release dated 31 March 2024 and retained checksums for the exact input file used in the reconstruction.",
+    "after": "Checksums and sample identifiers freeze the processed benchmark; its exact ClinVar content-release date could not be verified."
+  },
+  {
+    "reason": "Correct actual full propagation operator",
+    "before": "The implementation symmetrized the retained edge list, added self-loops and coalesced duplicate edges. After self-loop addition, let $\\tilde{A}$ denote the binary adjacency matrix and $\\tilde{D}$ its degree matrix.",
+    "after": "The full-graph implementation added self-loops before symmetrization and summed duplicate entries, giving two self-loop contributions. Let $\\tilde{A}$ denote this weighted adjacency matrix and $\\tilde{D}$ its degree matrix."
+  },
+  {
+    "reason": "Clarify protein-level prediction boundary",
+    "before": "The full graph contained train, validation and test nodes with their ESM features, making the evaluation transductive.",
+    "after": "The full graph contained train, validation and test nodes with their ESM features, making the evaluation transductive. Protein-only inputs cannot distinguish variants within the same protein."
+  },
+  {
+    "reason": "Architecture matching is not total parameter matching",
+    "before": "used the 512/128 classifier to keep downstream capacity matched.",
+    "after": "used the same 512/128 hidden-layer architecture and preprocessing, with different input-layer parameter counts."
+  },
+  {
+    "reason": "Disclose actual training budgets",
+    "before": "a maximum of 50 epochs and early stopping",
+    "after": "a maximum of 50 epochs (30 for the representation ablation/permutation controls) and early stopping"
+  },
+  {
+    "reason": "Do not imply same seeds everywhere",
+    "before": "Repeated classifier comparisons used seeds 42, 43 and 44.",
+    "after": "Seeds and repeat counts varied by analysis (Table~\\ref{tab:runs}; Supplementary Table 8)."
+  },
+  {
+    "reason": "Disclose operator mismatch without rerunning original figures",
+    "before": "Fusion controls concatenated \\CADDAM{} features with raw ESM, edge-ablated PPI-GCN and topology-permuted PPI-GCN representations, separating protein-representation complementarity from topology-specific effects.",
+    "after": "Fusion controls concatenated \\CADDAM{} features with raw ESM, edge-ablated PPI-GCN and topology-permuted PPI-GCN representations. The ablated/permuted encoders added one self-loop after symmetrization, unlike the full encoder. These comparisons do not isolate topology from normalization and training differences."
+  },
+  {
+    "reason": "Withdraw invalid feature-wise inference",
+    "before": "Multiple topology-feature comparisons used Benjamini-Hochberg false-discovery-rate correction \\cite{Benjamini1995FDR}.",
+    "after": "Topology-feature profiles are descriptive: multiple variants share each protein's features, and false-discovery-rate correction \\cite{Benjamini1995FDR} does not address this dependence. No inferential significance is claimed for these profiles."
+  },
+  {
+    "reason": "Short run table and self-contained BioGRID protocol",
+    "before": "\\section{Results}",
+    "after": "\\begin{table}[t]\n\\caption{Summary of fitted models and repeated runs.}\n\\label{tab:runs}\n\\centering\n\\footnotesize\n\\begin{tabular}{@{}p{0.43\\columnwidth}p{0.51\\columnwidth}@{}}\n\\hline\nAnalysis & Fits and configuration \\\\\n\\hline\nFig. 1B,C; Fig. 2D & One reference fit per model \\\\\nFig. 1D: edge ablation & Five ablated fits; 30 epochs \\\\\nFig. 1E: partial ablation & Three per interior setting; 30 epochs; endpoints reused \\\\\nFig. 1F: permutation & Three graphs $\\times$ three seeds; 30 epochs \\\\\nFig. 2B,C: original fusion & Three per arm; nine for permutation \\\\\nFig. 2E: homology fusion & Scores/raw fusion: three; graph fusion: one \\\\\nFigs. 3B--F and 4 & Fixed reference prediction pairs \\\\\nBioGRID comparison & Three per setting; 50 epochs \\\\\n\\hline\n\\end{tabular}\n\\par\\smallskip\\raggedright\\footnotesize\nThe text also reports three-seed raw/full representation means. Fig. 1D--F reuse single-fit raw/full references. Bootstrap resamples are not classifier fits. Complete seeds, budgets and SD definitions are in Supplementary Table 8.\n\\end{table}\n\n\\subsection{Second-network validation}\n\nBioGRID 5.0.262 human physical interactions \\cite{Stark2006BioGRID} were mapped to the same 19,622 nodes, yielding 931,458 undirected edges after excluding RNA-related methods and ambiguous mappings. Nine classifiers covered representations under the original split and score fusion under both splits. Within this comparison, BioGRID and STRING used the same full-graph propagation convention; all models shared seeds 42--44, validation selection and a 50-epoch budget with patience five. Predictions were aligned by variant and protein identifiers and averaged in float64. Paired protein-bootstrap 95\\% intervals used 2,000 resamples conditional on fitted models, without retraining or multiplicity adjustment (Supplementary Methods 5 and Table 9).\n\n\\section{Results}"
+  },
+  {
+    "reason": "Avoid causal title for unmatched original controls",
+    "before": "Full-graph PPI-GCN gains depend on graph connectivity",
+    "after": "Full-graph PPI-GCN and connectivity sensitivity"
+  },
+  {
+    "reason": "Label original ddof=0 statistics accurately",
+    "before": "Across three repeated classifier seeds, the comparison remained positive with a smaller mean AUC difference:",
+    "after": "Across three classifier seeds, mean metrics (population SD) showed a smaller positive AUC difference:"
+  },
+  {
+    "reason": "Keep original numbers without effect-elimination claim",
+    "before": "Relative to raw ESM, the AUC gain was nearly eliminated ($\\Delta$ AUC +0.0001); a smaller AUPRC gain remained ($\\Delta$ AUPRC +0.0181).",
+    "after": "Relative to the raw-ESM reference, these point differences were $\\Delta$ AUC +0.0001 and $\\Delta$ AUPRC +0.0181; they do not establish equivalence."
+  },
+  {
+    "reason": "Keep controls with clear limitations",
+    "before": "The retained full-graph gain depended on protein-specific topology alignment, and its AUC component remained sensitive to cross-split connectivity.",
+    "after": "These sensitivity comparisons are descriptive because operator, seed and training-budget differences prevent attribution solely to topology or direct connectivity."
+  },
+  {
+    "reason": "Caption fig:connectivity",
+    "before": "Workflow and primary audit of PPI graph propagation. A, Audit design: ClinVar variants are mapped to STRING proteins, ESM protein representations are propagated over a shared PPI graph, downstream MLP classifiers are trained on variant labels, and graph-specific effects are tested by connectivity ablation, protein-clustered uncertainty analysis and topology permutation. B, Retained reference run in which full-graph PPI-GCN improves over raw ESM; repeated classifier seeds show the same direction with a smaller mean AUC difference, as reported in the text and Supplementary Table 2. C, Variant-level bootstrap supports positive gain, whereas protein-clustered bootstrap widens uncertainty across zero. D, Removing direct train-test PPI edges nearly eliminates the reference-run AUC gain. E, Partial train-test edge ablation shows connectivity-sensitive degradation. F, Topology permutation returns performance close to raw ESM.",
+    "after": "Workflow and primary audit of fixed PPI propagation. A, Audit design. B, Single-fit raw/full reference comparison; three-seed means are reported in the text. C, Paired differences with variant-level and protein-clustered bootstrap 95\\% intervals; definitions are in Supplementary Table 4A. D, Direct train-test edge ablation. E, Partial ablation with three fits per interior setting, a single-fit full endpoint and a five-fit ablated endpoint. F, Topology permutation. D and F compare five ablated and nine permuted fits with single-fit raw/full references. Error bars show sample SD where repeated fits exist; permutation SD pools graph and classifier variation. Operator and training differences limit causal interpretation of these controls."
+  },
+  {
+    "reason": "Avoid isolating topology in fusion claim",
+    "before": "with a small topology-specific margin for real PPI-GCN (Fig. 2B,C).",
+    "after": "with a small additional margin for real PPI-GCN (Fig. 2B,C)."
+  },
+  {
+    "reason": "Explicit one fit",
+    "before": "Under the homology-aware split, PPI-GCN remained higher than raw ESM,",
+    "after": "In the single-fit homology-aware representation comparison, PPI-GCN was higher than raw ESM,"
+  },
+  {
+    "reason": "Remove confusing comparison to different protocol",
+    "before": "A retained-reference bootstrap based on a different comparison protocol yielded the same direction. ",
+    "after": ""
+  },
+  {
+    "reason": "Caption fig:fusion_homology",
+    "before": "PPI graph context is bounded by protein-representation controls and homology-aware evaluation. A, CADD and AlphaMissense matching and fusion-control setup. B, Original-split repeated-run performance of architecture-matched \\CADDAM{}, \\CADDAM{}+raw ESM, \\CADDAM{}+edge-ablated PPI-GCN, \\CADDAM{}+topology-permuted PPI-GCN and \\CADDAM{}+real PPI-GCN. Bars show mean test performance across three matched classifier seeds except topology-permuted fusion, which uses three topology permutations by three classifier seeds (n=9); error bars indicate one standard deviation. C, Marginal test-set gain of real PPI-GCN fusion over architecture-matched \\CADDAM{} and protein-representation controls; error bars show protein-clustered paired-bootstrap 95\\% confidence intervals computed from ensemble-averaged test predictions. Because panel C computes metrics from ensemble-averaged probabilities, its point deltas need not equal differences between the across-seed mean metrics shown in panel B. The topology-permuted interval conditions on the sampled topology permutations and does not include permutation-generation uncertainty. D, Homology-aware split comparison of raw ESM and PPI-GCN. E, Homology-aware architecture-matched \\CADDAM{}, \\CADDAM{}+raw ESM and graph fusion; \\CADDAM{} and \\CADDAM{}+raw ESM are repeated-run means, whereas graph fusion is the retained homology-aware point estimate. F, Test-set prevalence differs between original and homology-aware splits.",
+    "after": "Strong-predictor fusion and homology-aware evaluation. A, Score matching and fusion-control setup; architecture matching refers to hidden layers, not equal input-parameter counts. B, Original-split fusion means and sample SD across three fits per arm, except permutation (three graphs $\\times$ three seeds). C, Full-graph fusion differences from ensemble-averaged probabilities with paired protein-bootstrap 95\\% intervals; these need not equal differences between B\\textquotesingle s mean metrics and condition on fitted models and sampled graphs. D, Single-fit homology-aware representation comparison. E, Homology-aware fusion: scores/raw fusion use three fits with sample SD; graph fusion is a single estimate. F, Test-set positive prevalence. The ablated/permuted and full encoders differ in self-loop convention."
+  },
+  {
+    "reason": "Cautious topology heading",
+    "before": "Graph gains concentrate in specific topology contexts",
+    "after": "Exploratory graph gains across topology contexts"
+  },
+  {
+    "reason": "Remove implicit significance",
+    "before": "ESM representation space showed weak but detectable correspondence with PPI topology.",
+    "after": "ESM representation space showed modest correspondence with PPI topology."
+  },
+  {
+    "reason": "Association rather than mechanism",
+    "before": "Betweenness and clustering also shaped gain profiles:",
+    "after": "Performance differences also varied across betweenness and clustering strata:"
+  },
+  {
+    "reason": "Exploratory wording",
+    "before": "Neighbour-risk stratification and joint topology maps localized the graph signal to specific contexts.",
+    "after": "Neighbour-risk stratification and joint topology maps showed heterogeneous performance differences."
+  },
+  {
+    "reason": "Explicit exploratory selection and uncertainty",
+    "before": "The bootstrap intervals characterize within-cell sampling uncertainty for these dataset-selected profiles.",
+    "after": "These profiles were selected after examining 53 joint cells on the same test set. Their variant-level intervals do not account for within-protein dependence, subgroup selection or multiple comparisons, and the findings require independent validation."
+  },
+  {
+    "reason": "Caption fig:topology_context",
+    "before": "PPI-GCN gains concentrate in specific network topology contexts. A, ESM representations show weak alignment with PPI topology. B, Degree and k-core gains are non-monotonic. C, Betweenness and clustering strata shape graph-derived gain. D, Neighbour-risk strata show local-context dependence. E, Joint topology cells contain both positive and negative gains. F, Selected exploratory joint-cell profiles illustrate heterogeneous gains.",
+    "after": "Exploratory topology-context analysis. A, ESM similarity across network relationships. B--D, Performance differences across network strata. E, AUC differences across 53 joint cells. F, Selected profiles with variant-level bootstrap intervals. B--F use a fixed reference pair; these descriptive intervals exclude protein dependence, subgroup selection and multiplicity. Panel titles describe associations, not established mechanisms."
+  },
+  {
+    "reason": "Correct original Figure4 inference and matching claims without changing picture",
+    "before": "Multiple topology features remained significant after FDR correction (Fig. 4E), and difficulty-matched contrasts retained differences across degree, k-core, neighbour-risk, neighbour pathogenic rate, betweenness and boundary role (Fig. 4F). These descriptive associations connect graph-related prediction changes with network context.",
+    "after": "Figure 4E shows directions of group-mean differences. Figure 4F compares rescued and persistent false negatives within baseline false-negative cases, without continuous prediction-difficulty matching. These are descriptive associations; repeated variants within proteins preclude interpreting the feature-wise significance encodings as valid evidence."
+  },
+  {
+    "reason": "Caption fig:prediction_transitions",
+    "before": "Graph augmentation changes false-negative and false-positive predictions in different network contexts. A, Prediction transitions from raw ESM to PPI-GCN at a fixed decision-score threshold of 0.5. B, Transitions for the retained-reference \\CADDAM{} and graph-fusion model pair. C-D, Row-normalized heatmaps compare topology profiles of suppressed false positives and rescued false negatives. E, Corrected groups differ across multiple topology features after FDR correction. F, Difficulty-matched contrasts retain topology differences.",
+    "after": "Prediction transitions and descriptive topology profiles. A--B, Raw ESM to PPI-GCN and score-only to graph-fusion transitions at threshold 0.5, using fixed reference pairs. C--D, Row-centered, range-scaled feature means: warm/blue indicates above/below the row mean. E, Blue/orange indicates higher means in rescued false negatives/suppressed false positives. F, Hedges\\textquotesingle{} $g$ comparing rescued and persistent false negatives within baseline false-negative cases, not difficulty matching; blue/orange denotes positive/negative effects. Significance encodings in E--F do not account for protein dependence and are not used for inference."
+  },
+  {
+    "reason": "Only added empirical validation: BioGRID network",
+    "before": "\\section{Discussion}",
+    "after": "\\subsection{Second-network validation with BioGRID}\n\nBioGRID did not show a consistent additional benefit over raw-embedding controls (Table~\\ref{tab:biogrid}). Under the original split, its fusion improved on scores alone (ensemble $\\Delta$AUC +0.0124, protein-bootstrap 95\\% CI [+0.0034, +0.0210]), but not clearly on raw-ESM fusion (+0.0009, [-0.0011, +0.0036]). The homology-aware BioGRID fusion estimate was below the score baseline ($\\Delta$AUC -0.00204, [-0.00421, -0.00004]). These results limit claims of network-independent gains; complete paired controls and AUPRC intervals are in Supplementary Table 9.\n\n\\begin{table}[t]\n\\caption{BioGRID results under shared training settings.}\n\\label{tab:biogrid}\n\\centering\\footnotesize\\setlength{\\tabcolsep}{3pt}\n\\begin{tabular}{@{}>{\\raggedright\\arraybackslash}p{0.26\\columnwidth}>{\\raggedright\\arraybackslash}p{0.24\\columnwidth}>{\\raggedright\\arraybackslash}p{0.42\\columnwidth}@{}}\n\\hline\nSetting & Mean AUC / AUPRC & Ensemble $\\Delta$AUC vs raw [95\\% CI] \\\\\n\\hline\nOriginal representations & 0.7592 / 0.6043 & -0.0201 [-0.0480, +0.0101] \\\\\nOriginal fusion & 0.9693 / 0.9344 & +0.0009 [-0.0011, +0.0036] \\\\\nHomology fusion & 0.9730 / 0.8265 & +0.0005 [-0.0008, +0.0017] \\\\\n\\hline\n\\end{tabular}\n\\par\\smallskip\\raggedright\\footnotesize\nEach setting uses three fits per model. Raw denotes raw ESM for representations and raw-ESM fusion for fusion rows. Differences use mean probabilities and paired protein bootstrap within this comparison; SD and all comparator metrics are in Supplementary Table 9.\n\\end{table}\n\n\\section{Discussion}"
+  },
+  {
+    "reason": "Discussion preserve confounding boundary",
+    "before": "and the gain was sensitive to protein-topology correspondence and cross-split connectivity.",
+    "after": "while the graph controls suggested sensitivity to connectivity and topology under differing operator and training settings."
+  },
+  {
+    "reason": "Avoid isolated topology mechanism",
+    "before": "with a smaller real-topology margin.",
+    "after": "with a smaller full-graph margin."
+  },
+  {
+    "reason": "Reviewer homology explanation with uncertainty",
+    "before": "The prevalence shift defines this analysis as a stress test. Graph complementarity depends on the baseline predictor, split design and graph-control baseline.",
+    "after": "Redundant high-dimensional features, extra input-layer parameters, overfitting and feature scaling may explain the limited increment, but were not tested individually. The single graph-fusion fit also limits conclusions about a stable disadvantage. The prevalence shift limits cross-split AUPRC comparison."
+  },
+  {
+    "reason": "Exploratory discussion and limits of second network",
+    "before": "Graph propagation changed predictions in structured topology contexts. The observed patterns may reflect differences between proteins embedded in densely connected functional neighbourhoods and those occupying more boundary-like network positions. Independent cohorts, temporal ClinVar splits, disease-specific networks and alternative PPI sources can test these candidate explanations.",
+    "after": "Graph propagation changed predictions in heterogeneous topology contexts. These post-hoc associations do not establish correction mechanisms. BioGRID validation further shows that fusion complementarity need not imply a reliable graph-specific increment. STRING and BioGRID differ in density, coverage and evidence types and overlap in interactions, so their comparison does not isolate biological evidence quality. Independent cohorts would be needed to assess transfer beyond the ClinVar benchmark."
+  },
+  {
+    "reason": "Fixed GNN scope and concise practical recommendations",
+    "before": "Within these constraints, PPI graph augmentation provides context-dependent network information alongside strong sequence and variant-effect predictors.",
+    "after": "The conclusions concern fixed propagation, with only downstream classifiers trained, and should not be generalized to trained graph neural networks.\n\n\\noindent\\textit{Practical recommendations.} Compare graph features with raw embeddings and strong score baselines; report run configurations and protein-level uncertainty. Treat selected topology groups as hypotheses and check decision thresholds and calibration before clinical use."
+  },
+  {
+    "reason": "Verified public materials including SI",
+    "before": "A compact anonymized source-data archive containing figure source data, summary metrics, bootstrap outputs and checksums has been prepared. The archive and analysis scripts will be released according to venue policy. Large third-party resources, including CADD, AlphaMissense, ClinVar and STRING source files, should be obtained from their original providers.",
+    "after": "Supplementary Information, code, compact source data, predictions, protocols and checksums are publicly available at \\url{https://github.com/brynn-t02/ppi-graph-missense-audit}. Large third-party resources should be obtained from their original providers."
+  },
+  {
+    "reason": "IEEE conventional heading",
+    "before": "\\section*{AI-Tool Disclosure}",
+    "after": "\\section*{Acknowledgment}"
+  },
+  {
+    "reason": "Accurate concise tool disclosure and author responsibility",
+    "before": "OpenAI ChatGPT, OpenAI Codex and Anthropic Claude were used to support literature organization, analysis-code drafting and language editing. Study design, experimental execution, result interpretation, numerical verification, citation checking and final manuscript decisions were conducted by the authors. The tools were not used as authors, did not determine scientific conclusions and did not generate experimental data.",
+    "after": "OpenAI ChatGPT, OpenAI Codex and Anthropic Claude assisted with literature organization, code development and language editing. The authors take responsibility for study design, experimental execution and verification, code review, interpretation, references and the final manuscript."
+  },
+  {
+    "reason": "Only new reference: BioGRID",
+    "before": "\\end{thebibliography}",
+    "after": "\\bibitem{Stark2006BioGRID} C. Stark, B.-J. Breitkreutz, T. Reguly, L. Boucher, A. Breitkreutz, and M. Tyers, ``BioGRID: a general repository for interaction datasets,'' \\emph{Nucleic Acids Research}, vol. 34, pp. D535--D539, 2006, doi: 10.1093/nar/gkj109.\n\\end{thebibliography}"
+  },
+  {
+    "reason": "Balance final reference columns using IEEEtran hook",
+    "before": "\\begin{thebibliography}{99}",
+    "after": "\\IEEEtriggeratref{25}\n\\begin{thebibliography}{99}"
+  }
+]

@@ -1,0 +1,183 @@
+{
+  "source": "/Users/teyian/Documents/paper1/release_candidate_20260605/manuscript_notes/Supplementary_Information_v1.md",
+  "source_sha256": "27fb21d4b42f98d1eed39cd5e49ba30b20db0e13210eed3838714664081be631",
+  "output": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_second_network_only_20261108/supplement/Supplementary_Information_original_plus_BioGRID.md",
+  "output_sha256": "9342c28cbadbdc6583281355e314b23a1d83fc5138a162b0b56c8bc38bd4d7d8",
+  "source_file_unchanged": true,
+  "original_tables_preserved": 15,
+  "original_table_numeric_checks": [
+    {
+      "table_index": 1,
+      "original_rows": 13,
+      "all_non_FDR_numerical_cells_unchanged": true
+    },
+    {
+      "table_index": 2,
+      "original_rows": 10,
+      "all_non_FDR_numerical_cells_unchanged": true
+    },
+    {
+      "table_index": 3,
+      "original_rows": 7,
+      "all_non_FDR_numerical_cells_unchanged": true
+    },
+    {
+      "table_index": 4,
+      "original_rows": 5,
+      "all_non_FDR_numerical_cells_unchanged": true
+    },
+    {
+      "table_index": 5,
+      "original_rows": 4,
+      "all_non_FDR_numerical_cells_unchanged": true
+    },
+    {
+      "table_index": 6,
+      "original_rows": 8,
+      "all_non_FDR_numerical_cells_unchanged": true
+    },
+    {
+      "table_index": 7,
+      "original_rows": 2,
+      "all_non_FDR_numerical_cells_unchanged": true
+    },
+    {
+      "table_index": 8,
+      "original_rows": 18,
+      "all_non_FDR_numerical_cells_unchanged": true
+    },
+    {
+      "table_index": 9,
+      "original_rows": 4,
+      "all_non_FDR_numerical_cells_unchanged": true
+    },
+    {
+      "table_index": 10,
+      "original_rows": 6,
+      "all_non_FDR_numerical_cells_unchanged": true
+    },
+    {
+      "table_index": 11,
+      "original_rows": 6,
+      "all_non_FDR_numerical_cells_unchanged": true
+    },
+    {
+      "table_index": 12,
+      "original_rows": 7,
+      "all_non_FDR_numerical_cells_unchanged": true
+    },
+    {
+      "table_index": 13,
+      "original_rows": 7,
+      "all_non_FDR_numerical_cells_unchanged": true
+    },
+    {
+      "table_index": 14,
+      "original_rows": 8,
+      "all_non_FDR_numerical_cells_unchanged": true
+    },
+    {
+      "table_index": 15,
+      "original_rows": 1,
+      "all_non_FDR_numerical_cells_unchanged": true
+    }
+  ],
+  "invalid_FDR_cells_removed": 22,
+  "new_configuration_tables": 1,
+  "BioGRID_summary_rows_verified": 11,
+  "BioGRID_paired_contrasts_verified": 8,
+  "BioGRID_inputs": [
+    {
+      "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_second_network_only_20261108/biogrid/source_index.json",
+      "sha256": "57ea8ecf67c2a1214f1b9cee72fef452629a0f474f4c059f4ba355d3a7523f4e"
+    },
+    {
+      "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_second_network_only_20261108/biogrid/network_specification.json",
+      "sha256": "841b991fd8a348efc27ab8d1678a7bcf2acc52109e7466161af98a64a5548dbe"
+    },
+    {
+      "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_second_network_only_20261108/biogrid/supplement_ready_text.md",
+      "sha256": "36b14bd099f703831d8ab226284427905828f858ff559ee2ba0800307f6f9306"
+    },
+    {
+      "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_second_network_only_20261108/biogrid/all_11_network_comparison_mean_sample_sd.csv",
+      "sha256": "ac348278151aa0b6168ff53bece52a85af7c90f790f312dcf65ffec1675af8c8"
+    },
+    {
+      "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_second_network_only_20261108/biogrid/all_8_BioGRID_paired_protein_contrasts.json",
+      "sha256": "c94519f4a5b3db57f2e63918f47c7e336f338eece2a6d4d60bcc7a3be15033c6"
+    }
+  ],
+  "new_training_or_statistics": false,
+  "figures_modified": false,
+  "pending_BioGRID_placeholders": [],
+  "status": "markdown_complete; parent owns PDF compilation and final publication verification",
+  "BioGRID_all_upstream_source_hashes_verified": [
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/canonical_analysis_20261025/summary_metrics.csv",
+      "sha256_matches": true
+    },
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/canonical_analysis_20261025/per_run_metrics.csv",
+      "sha256_matches": true
+    },
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/canonical_analysis_20261025/ensemble_metrics.csv",
+      "sha256_matches": true
+    },
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/canonical_analysis_20261025/cluster_bootstrap.json",
+      "sha256_matches": true
+    },
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/canonical_analysis_20261025/code/protocol.json",
+      "sha256_matches": true
+    },
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/canonical_analysis_20261025/source_manifest.json",
+      "sha256_matches": true
+    },
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/canonical_analysis_20261025/recomputation_summary.json",
+      "sha256_matches": true
+    },
+    {
+      "path": "work/external_validation_20261024/network_recon/network_build_audit.json",
+      "sha256_matches": true
+    },
+    {
+      "path": "work/external_validation_20261024/network_recon/string_network_overlap.json",
+      "sha256_matches": true
+    },
+    {
+      "path": "work/external_validation_20261024/small_results/verified/network_execution_audit.json",
+      "sha256_matches": true
+    },
+    {
+      "path": "work/external_validation_20261024/small_results/verified/pre_inference_manifest.json",
+      "sha256_matches": true
+    },
+    {
+      "path": "work/external_validation_20261024/small_results/verified/completed_run_verification.json",
+      "sha256_matches": true
+    },
+    {
+      "path": "work/external_validation_20261024/small_results/verified/old_checkpoint_reproduction.json",
+      "sha256_matches": true
+    },
+    {
+      "path": "work/external_validation_20261024/code/protocol.json",
+      "sha256_matches": true
+    },
+    {
+      "path": "work/external_validation_20261024/code/run_external_validation.py",
+      "sha256_matches": true
+    },
+    {
+      "path": "work/experiment_20261024/code/run_matched_experiments.py",
+      "sha256_matches": true
+    }
+  ],
+  "BioGRID_summary_model_row_mapping_verified": true,
+  "final_source_sha256": "9342c28cbadbdc6583281355e314b23a1d83fc5138a162b0b56c8bc38bd4d7d8"
+}

@@ -1,0 +1,324 @@
+[
+  {
+    "id": 1,
+    "reason_zh": "提供原图/原表、配置表与独立BioGRID验证的简短导航，不引入其他新增实验。",
+    "before": "This Supplementary Information provides reconstruction details, split statistics, model comparisons, uncertainty estimates, topology-stratified summaries and negative-control results. Full figure source data, topology-stratified metrics, corrected-sample statistics and fusion-control summaries are included in the prepared compact source-data archive.",
+    "after": "This Supplementary Information provides reconstruction details, split statistics, model comparisons, uncertainty estimates, topology-stratified summaries and negative-control results. Tables 1–7 document the analyses shown in Figures 1–4, and Table 8 identifies their run counts and settings. BioGRID second-network validation and its matched baselines are described separately in Methods 5 and Table 9. Figure source data, topology-stratified metrics, corrected-sample statistics and fusion-control summaries are available in the public code and data archive."
+  },
+  {
+    "id": 2,
+    "reason_zh": "删除无法核实的精确ClinVar内容发布日期；不换成另一个未经核实的日期。",
+    "before": "We used the ClinVar variant-summary release dated 31 March 2024 and retained checksums for the exact input file used in the reconstruction.",
+    "after": "The precise ClinVar content-release date could not be verified from the saved records. Checksums and sample memberships identify the frozen processed benchmark; these records do not establish temporal independence."
+  },
+  {
+    "id": 3,
+    "reason_zh": "按实际代码纠正二值邻接和自环顺序；明确原删边/置换算子与完整图算子差异，不重算结果。",
+    "before": "This design intentionally isolated topology-induced smoothing from capacity gains due to trainable graph layers, so the propagated features were treated as a controlled representation rather than an optimized end-to-end GNN predictor. Propagation used a binary adjacency derived from the retained edge list; STRING combined scores were not used as propagation weights. The retained edge list was symmetrized, self-loops were added and duplicate edges were coalesced. Let $A$ denote this binary adjacency after symmetrization and self-loop addition, $D$ its degree matrix and $X$ the raw ESM feature matrix.",
+    "after": "This design evaluates fixed graph-based smoothing while training only the downstream classifier. The full-graph operator adds self-loops before symmetrization and sums duplicate contributions: $A=(E+I)+(E+I)^T$, where $E$ is the edge-index count matrix. STRING combined scores are not propagation weights. Direct-edge-ablation and topology-permutation controls instead add one self-loop after symmetrization, using $A=E+E^T+I$. Thus these controls differ in self-loop weighting as well as graph connectivity. Let $D$ denote the weighted degree matrix of the applicable adjacency and $X$ the raw ESM feature matrix."
+  },
+  {
+    "id": 4,
+    "reason_zh": "明确固定传播、transductive和同蛋白相同输入的解释边界。",
+    "before": "This operation produced one propagated representation per STRING node and did not use variant labels during propagation.",
+    "after": "This operation produced one propagated representation per STRING node and did not use variant labels during propagation. Held-out nodes and features remained in the graph, giving transductive feature access. Each embedding-only model uses identical inputs for variants mapped to the same protein and therefore does not distinguish substitutions within that protein. These fixed-propagation results do not establish the performance of trained graph neural networks."
+  },
+  {
+    "id": 5,
+    "reason_zh": "澄清两个辅助算子不训练聚合/注意力参数，避免误称训练式GraphSAGE/GAT。",
+    "before": "GraphSAGE-style and GAT-style propagated representations were generated as supplementary architecture controls. These controls were included to test whether the representation-level comparison was specific to the fixed PPI-GCN propagation variant. They are treated as architecture controls rather than as an architecture search, because the main contribution of the study is an audit of graph-augmentation gains rather than an optimized predictor design.",
+    "after": "Two supplementary fixed operators were used. Fixed mean propagation applies row-normalized two-hop mean aggregation with residual averaging. Fixed cosine-weighted propagation applies two rounds of cosine-softmax-weighted neighbour aggregation with residual averaging, including self-neighbours. Both operate without learned aggregation or attention parameters; they are fixed operator controls, not trained GraphSAGE or GAT models."
+  },
+  {
+    "id": 6,
+    "reason_zh": "用相同隐藏层架构替代相同总容量，明确输入层参数不同。",
+    "before": "while architecture-matched CADD+AlphaMissense and fusion-control comparisons used the 512/128 classifier to keep downstream capacity matched.",
+    "after": "while architecture-matched CADD+AlphaMissense and fusion-control comparisons used the same 512/128 hidden-layer architecture. Their input-layer parameter counts differed because their input dimensions differed."
+  },
+  {
+    "id": 7,
+    "reason_zh": "保留主协议参数，同时补原表征负对照30轮与种子例外。",
+    "before": "Models were trained with BCEWithLogitsLoss and positive-class weighting, using Adam with learning rate 1e-3, weight decay 1e-5, batch size 1024, a maximum of 50 epochs and early stopping after five consecutive validation checks without validation AUC improvement.",
+    "after": "The main-model protocol used BCEWithLogitsLoss and positive-class weighting, Adam with learning rate 1e-3, weight decay 1e-5, batch size 1024, a maximum of 50 epochs and early stopping after five consecutive validation checks without validation AUC improvement. Representation-only direct-edge-ablation, partial-ablation and permutation controls used a 30-epoch maximum and different classifier seeds, as detailed in Table 8."
+  },
+  {
+    "id": 8,
+    "reason_zh": "避免把全部重复实验笼统说成同样种子/容量/传播设置。",
+    "before": "Repeated classifier comparisons used seeds 42, 43 and 44; topology-permuted fusion combined three sampled graph permutations with these classifier seeds. The relative fusion-control comparisons share downstream classifier capacity and preprocessing, whereas absolute fusion performance may depend on feature-scaling choices that were not separately optimized.",
+    "after": "The repeated positive and fusion comparisons used seeds 42, 43 and 44; Table 8 lists the representation-control seed exceptions. Topology-permuted fusion combined three sampled graph permutations with these classifier seeds. Fusion comparisons used the same hidden-layer architecture and preprocessing, not identical input-layer parameter counts or a common graph-control self-loop convention. Absolute fusion performance may depend on feature-scaling choices that were not separately optimized."
+  },
+  {
+    "id": 9,
+    "reason_zh": "撤销不满足蛋白内独立性的特征显著性推断；保留描述性统计并说明bootstrap及删边解释范围。",
+    "before": "Confidence intervals were reported as empirical 95% bootstrap intervals. Feature-level corrected-sample comparisons used Benjamini-Hochberg false-discovery-rate correction when multiple topology features were tested.",
+    "after": "Confidence intervals were reported as empirical 95% bootstrap intervals conditional on the fitted predictions and sampled graphs; they do not include retraining or new graph-sampling uncertainty. AUPRC denotes non-interpolated average precision. The corrected-sample feature tests treated variants as independent observations despite repeated variants sharing protein-level features. Their p values, false-discovery-rate values and significance encodings do not support valid inferential claims. Group means and Hedges' g are reported descriptively in Table 6. Edge removal also changes normalized propagation weights and retains indirect cross-partition paths, so control differences do not isolate a causal effect of direct train-test edges."
+  },
+  {
+    "id": 10,
+    "reason_zh": "明确原Table2单次参考、三种子population SD和同源单次来源。",
+    "before": "The original-split raw ESM and PPI-GCN rows report the retained reference run used for paired graph-ablation and bootstrap analyses in Figure 1. Repeated classifier seeds showed the same direction with a smaller mean AUC difference and are reported in the main text.",
+    "after": "The original-split raw ESM and PPI-GCN point estimates are from one fixed reference fit per model, as shown in Figure 1B–C. The separate three-seed rows summarize seeds 42, 43 and 44 using population SD (ddof=0). Homology-aware representation rows are one fit per model, without an empirical SD (Figure 2D). Table 8 summarizes these sources."
+  },
+  {
+    "id": 11,
+    "reason_zh": "仅改辅助算子标签，数值不动。",
+    "before": "| Orig. | GraphSAGE-style | 0.8008 | 0.6136 | 0.7950 | 0.6044 | Arch. control |",
+    "after": "| Orig. | Fixed mean propagation | 0.8008 | 0.6136 | 0.7950 | 0.6044 | Fixed operator |"
+  },
+  {
+    "id": 12,
+    "reason_zh": "仅改辅助算子标签，数值不动。",
+    "before": "| Orig. | GAT-style | 0.8005 | 0.5876 | 0.7949 | 0.6157 | Arch. control |",
+    "after": "| Orig. | Fixed cosine-weighted propagation | 0.8005 | 0.5876 | 0.7949 | 0.6157 | Fixed operator |"
+  },
+  {
+    "id": 13,
+    "reason_zh": "移除本表已不使用的Arch缩写说明。",
+    "before": "Orig. denotes the original split. Homol. denotes the homology-aware split. Arch. denotes architecture.",
+    "after": "Orig. denotes the original split. Homol. denotes the homology-aware split."
+  },
+  {
+    "id": 14,
+    "reason_zh": "明确Figure2融合重复数与sample SD，去掉过程式“较旧”说明。",
+    "before": "The main fusion-control comparison uses repeated classifier runs where available. Older single-tool rows are retained only as reference context and are not mixed into the matched Figure 2 control panel.",
+    "after": "Figure 2B–C uses repeated fusion-control fits. Single-score CADD and AlphaMissense rows provide separate baseline context. For rows with repeated fits, the displayed SD is sample SD (ddof=1). The nine-fit permutation row pools three graphs and three classifier seeds per graph; its SD reflects both graph and classifier variation."
+  },
+  {
+    "id": 15,
+    "reason_zh": "同步Table3A的容量措辞。",
+    "before": "using the same 512/128 MLP capacity as the fusion controls.",
+    "after": "using the same 512/128 hidden-layer architecture and preprocessing as the fusion controls, with fewer input-layer parameters."
+  },
+  {
+    "id": 16,
+    "reason_zh": "保留同源旧结果与差值，说明单次/三次不对称并给出未经单独验证的可能解释。",
+    "before": "Notes for Table 3B: the homology-aware graph-fusion row is a single retained point estimate. It is reported as a stress-test result, not as a fully symmetric repeated-ensemble comparison. Relative to the repeated-run architecture-matched CADD+AlphaMissense mean, the retained graph-fusion point estimate was -0.0013 AUC and -0.0068 AUPRC.",
+    "after": "Notes for Table 3B: the homology-aware graph-fusion row is one fitted model, whereas the score and raw-ESM fusion rows use three seeds. Relative to the architecture-matched CADD+AlphaMissense mean, the graph-fusion point estimate was -0.0013 AUC and -0.0068 AUPRC. This asymmetric comparison does not establish a reproducible loss from graph features. High-dimensional feature redundancy, additional input-layer parameters, overfitting and feature scaling are possible explanations for limited incremental performance; they were not tested individually."
+  },
+  {
+    "id": 17,
+    "reason_zh": "补清Table4A两种Delta汇总定义；不改四行数值或区间。",
+    "before": "#### Supplementary Table 4B. Original-split strong-predictor fusion-control uncertainty",
+    "after": "For Table 4A, Delta is PPI-GCN minus raw ESM. Variant-resampling rows report the mean difference across 1,000 paired bootstrap resamples; protein-resampling rows report the observed test-set metric difference. Both 95% intervals use the 2.5th and 97.5th percentiles of their respective bootstrap distributions.\n\n#### Supplementary Table 4B. Original-split strong-predictor fusion-control uncertainty"
+  },
+  {
+    "id": 18,
+    "reason_zh": "清理Table4C过程性标题。",
+    "before": "#### Supplementary Table 4C. Earlier retained-reference fusion bootstrap retained as context",
+    "after": "#### Supplementary Table 4C. Fixed-reference fusion bootstrap"
+  },
+  {
+    "id": 19,
+    "reason_zh": "只保留R0实际比较来源。",
+    "before": "Comparison code: R0, earlier retained-reference graph fusion versus earlier retained-reference CADD+AlphaMissense; not architecture-matched.",
+    "after": "Comparison code: R0, fixed-reference graph fusion versus fixed-reference CADD+AlphaMissense; not architecture-matched."
+  },
+  {
+    "id": 20,
+    "reason_zh": "客观说明区间与均值/集成统计对象，去掉修订过程叙述。",
+    "before": "Table 4A shows that variant-level bootstrap supports positive retained-reference PPI-GCN gains, whereas protein-clustered bootstrap widens uncertainty. Table 4B shows that the real PPI-GCN fusion margin over raw ESM fusion remained positive under protein-clustered paired bootstrap, but the smaller margins over edge-ablated and topology-permuted graph controls crossed zero. Table 4C is retained as an earlier retained-reference context analysis and is not architecture-matched.",
+    "after": "In Table 4A, the protein-clustered intervals include zero, whereas variant resampling ignores repeated variants within proteins and gives narrower positive intervals. Table 4B uses metrics of averaged predictions from the fitted ensembles, rather than differences between the per-run metric means in Table 3A. Its PPI-GCN-versus-raw-fusion interval is positive, while the margins over edge-ablated and topology-permuted controls include zero. Table 4C uses a separate fixed reference pair without architecture matching."
+  },
+  {
+    "id": 21,
+    "reason_zh": "原文提到本表未列出的同源bootstrap行，改为明确实际表格范围。",
+    "before": "The homology-aware strong-predictor bootstrap row comes from an earlier retained reference-run comparison rather than the architecture-matched repeated ensemble. The main manuscript reports this result as a stress-test pattern with a retained graph-fusion point estimate.",
+    "after": "The homology-aware graph-fusion comparison in Table 3B remains a single-fit stress-test estimate; Table 4B concerns the original split."
+  },
+  {
+    "id": 22,
+    "reason_zh": "明确Figure3固定模型对和拓扑描述图来源。",
+    "before": "### Supplementary Table 5. Topology-stratified PPI-GCN gain over raw ESM",
+    "after": "### Supplementary Table 5. Topology-stratified PPI-GCN gain over raw ESM\n\nThese results correspond to the fixed reference model pair used in Figure 3B–F. Delta denotes PPI-GCN minus raw ESM. The topology-description graph uses the score-400 threshold and differs from the propagation graph (Methods 2)."
+  },
+  {
+    "id": 23,
+    "reason_zh": "补分组覆盖范围和缺失原因；不改变已有分组、人数或指标。",
+    "before": "Selected exploratory joint topology cells:",
+    "after": "The risk strata contain 18,171 variants: 49 variants from 10 proteins had fewer than five labelled training-neighbour variants and were assigned code -1. The boundary strata contain 18,193 variants: 27 variants from five proteins had community ID -1 after communities smaller than 50 nodes were excluded, leaving their within-community neighbour fraction undefined. These omitted groups fell below the minimum reporting size of 50 variants. Other strata cover all 18,220 test variants.\n\nSelected exploratory joint topology cells:"
+  },
+  {
+    "id": 24,
+    "reason_zh": "保留旧联合分组/区间，准确限定53格事后筛选和逐变异bootstrap。",
+    "before": "These joint cells were selected from the same test-set topology map used for estimation. Their bootstrap intervals describe within-cell sampling uncertainty without correcting for the selection step. The cells are exploratory gain profiles, not independently validated topology-defined subgroups.",
+    "after": "The four highlighted cells were selected from 53 joint cells examined on the same test set. Their intervals resampled variants within each cell, without accounting for within-protein dependence, subgroup selection or multiple comparisons. They describe exploratory associations and require independent validation; the stronger wording of Figure 3 panel titles should not be interpreted as an established mechanism."
+  },
+  {
+    "id": 25,
+    "reason_zh": "删除不存在的连续难度匹配定义。",
+    "before": "### Supplementary Table 6. Corrected-sample and difficulty-matched statistics",
+    "after": "### Supplementary Table 6. Descriptive prediction transitions and baseline-error-stratified profiles"
+  },
+  {
+    "id": 26,
+    "reason_zh": "明确Figure4固定模型对、阈值与Figure2区别。",
+    "before": "All strong-predictor transition counts in this table correspond to the exploratory retained-reference model pair used in Figure 4, not to the architecture-matched repeated ensembles used in Figure 2.",
+    "after": "Both comparisons use the fixed prediction pairs shown in Figure 4 at threshold 0.5. The score/fusion pair differs from the architecture-matched repeated ensembles in Figure 2. Counts, group means and effect sizes are descriptive."
+  },
+  {
+    "id": 27,
+    "reason_zh": "保持实际来源而清理过程式标签。",
+    "before": "Corrected-sample group counts for retained-reference CADD+AlphaMissense to retained-reference graph fusion:",
+    "after": "Corrected-sample group counts for fixed-reference CADD+AlphaMissense to fixed-reference graph fusion:"
+  },
+  {
+    "id": 28,
+    "reason_zh": "同步对照名称，数值不变。",
+    "before": "Selected false-positive-suppressed versus false-negative-rescued topology contrasts for retained-reference CADD+AlphaMissense to retained-reference graph fusion:",
+    "after": "Selected false-positive-suppressed versus false-negative-rescued topology contrasts for fixed-reference CADD+AlphaMissense to fixed-reference graph fusion:"
+  },
+  {
+    "id": 29,
+    "reason_zh": "将Table6第三组比较准确命名为基线FN分层。",
+    "before": "Difficulty-matched rescued false-negative contrasts:",
+    "after": "Rescued versus persistent false negatives within the raw-ESM baseline false-negative group:"
+  },
+  {
+    "id": 30,
+    "reason_zh": "按范围核查的明确要求删除三个无效FDR列；22个FDR数值不再作为论文推断证据，原文件不动；所有人数、均值、差值和g原样保留。",
+    "removed_invalid_FDR_cells": [
+      {
+        "feature": "degree bucket",
+        "invalid_FDR": "4.48e-188"
+      },
+      {
+        "feature": "k-core bucket",
+        "invalid_FDR": "3.12e-22"
+      },
+      {
+        "feature": "neighbour risk bucket",
+        "invalid_FDR": "2.74e-129"
+      },
+      {
+        "feature": "neighbour pathogenic rate",
+        "invalid_FDR": "5.95e-90"
+      },
+      {
+        "feature": "betweenness bucket",
+        "invalid_FDR": "1.82e-120"
+      },
+      {
+        "feature": "clustering coefficient",
+        "invalid_FDR": "1.16e-07"
+      },
+      {
+        "feature": "boundary role bucket",
+        "invalid_FDR": "2.12e-87"
+      },
+      {
+        "feature": "degree bucket",
+        "invalid_FDR": "2.60e-06"
+      },
+      {
+        "feature": "k-core bucket",
+        "invalid_FDR": "0.8373"
+      },
+      {
+        "feature": "neighbour risk bucket",
+        "invalid_FDR": "4.34e-55"
+      },
+      {
+        "feature": "neighbour pathogenic rate",
+        "invalid_FDR": "1.57e-56"
+      },
+      {
+        "feature": "betweenness bucket",
+        "invalid_FDR": "2.96e-04"
+      },
+      {
+        "feature": "clustering coefficient",
+        "invalid_FDR": "1.64e-14"
+      },
+      {
+        "feature": "boundary role bucket",
+        "invalid_FDR": "3.81e-05"
+      },
+      {
+        "feature": "Degree bucket",
+        "invalid_FDR": "0.0011"
+      },
+      {
+        "feature": "K-core bucket",
+        "invalid_FDR": "0.0011"
+      },
+      {
+        "feature": "Neighbour risk bucket",
+        "invalid_FDR": "0.0011"
+      },
+      {
+        "feature": "Neighbour pathogenic rate",
+        "invalid_FDR": "0.0011"
+      },
+      {
+        "feature": "Betweenness bucket",
+        "invalid_FDR": "0.0011"
+      },
+      {
+        "feature": "Clustering coefficient",
+        "invalid_FDR": "0.0011"
+      },
+      {
+        "feature": "Boundary role bucket",
+        "invalid_FDR": "0.0011"
+      },
+      {
+        "feature": "Within-community neighbour fraction",
+        "invalid_FDR": "0.0011"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "reason_zh": "补可用样本数与加权口径；明确原Figure4显著性编码不具有效推断意义，保留颜色方向描述，不声称已改图。",
+    "before": "These association and stratification results do not establish a causal mechanism.",
+    "after": "The raw-ESM baseline false-negative contrast contains 837 rescued and 1,062 persistent false negatives. Within-community neighbour fraction has two missing values in the persistent group, giving 1,060 available observations for that feature; missingness does not change the transition counts. Hedges' g uses the pooled within-group standard deviation with a small-sample correction. These are variant-weighted summaries, with missing values handled per feature. Bucket codes, including -1 for insufficient or unassigned context, retain their numerical encoding; bucket means are not biological effect magnitudes.\n\nThe comparison stratifies by the baseline binary error type; it does not match continuous prediction scores or eliminate residual prediction-difficulty differences. The associated feature tests treated variants as independent despite shared protein-level features, so their FDR/significance claims are not used. Figure 4E/F retains dot-size, opacity and significance labels from those tests, but these encodings must not be interpreted as valid inferential evidence. In Figure 4C–D, warm and blue colors indicate means above and below the within-row mean after range scaling, not comparable effect magnitudes across features. In E, blue denotes a higher mean among rescued false negatives and warm colors a higher mean among suppressed false positives; in F, blue and orange denote positive and negative Hedges' g. Directions and descriptive effect sizes do not establish correction mechanisms."
+  },
+  {
+    "id": 32,
+    "reason_zh": "清理负对照段修订日志口吻，不添加其他控制结果。",
+    "before": "The formal supplementary table reports only the negative-control result that was rerun and re-materialized with complete final-audit provenance. Older random-feature and label-shuffling summaries are not used as formal evidence in this submission.",
+    "after": "Feature-shuffled propagation supplies one verified supplementary negative control. Other exploratory random-feature and label-shuffling summaries are not part of the reported evidence."
+  },
+  {
+    "id": 33,
+    "reason_zh": "清理Methods4的补跑日志语气，负对照数值不变。",
+    "before": "Only the re-materialized feature-shuffled PPI-GCN control is formally reported here because it was retained with complete final-audit provenance. It was rerun using the same downstream evaluation protocol and achieved",
+    "after": "The feature-shuffled PPI-GCN control has complete run provenance and is reported here. Under the downstream evaluation protocol, it achieved"
+  },
+  {
+    "id": 34,
+    "reason_zh": "只改负对照状态文字，数值不变。",
+    "before": "| Orig. | Feature-shuffled GCN | 0.7080 | 0.4241 | 0.5868 | 0.3707 | Rerun verified |",
+    "after": "| Orig. | Feature-shuffled GCN | 0.7080 | 0.4241 | 0.5868 | 0.3707 | Verified control |"
+  },
+  {
+    "id": 35,
+    "reason_zh": "预留仅BioGRID方法专节，等待已验证数据；不加入HUMSAVAR。",
+    "before": "## Supplementary Tables",
+    "after": "### Supplementary Methods 5. BioGRID second-network validation\n\n{{BIOGRID_METHODS_VERIFIED_TEXT}}\n\n## Supplementary Tables"
+  },
+  {
+    "id": 36,
+    "reason_zh": "新增详细运行配置表和仅BioGRID结果表占位；不导入统一实验Table11以后内容。",
+    "before": "## Source-data archive status",
+    "after": "### Supplementary Table 8. Experimental configurations and run sources\n\n| Analysis or figure | Fitted models | Seeds, budget and displayed uncertainty |\n|---|---|---|\n| Original raw/full reference pair; Figure 1B–C | 1 per arm | Maximum 50 epochs; point estimates; 1,000 paired resamples in C |\n| Original raw/full repeated summary; Table 2 | 3 per arm | Classifier seeds 42–44; maximum 50 epochs; population SD, ddof=0 |\n| Direct-edge ablation; Figure 1D | 5 ablated fits; raw/full reference points | Seeds 3042–3046; maximum 30 epochs; sample SD for ablated arm |\n| Partial edge ablation; Figure 1E interior fractions | 3 per strategy and fraction | Maximum 30 epochs; strategy/fraction-specific seeds; sample SD |\n| Partial edge ablation; Figure 1E endpoints | Shared full reference and five ablated fits | 0% and 100% endpoints reused across strategies, not independent repeats |\n| Topology permutation; Figure 1F | 3 graphs × 3 classifiers | Graph seeds 6042–6044; classifier seeds 7042–7044, 7142–7144, 7242–7244; maximum 30 epochs; pooled sample SD |\n| Original-split fusion; Figure 2B–C | 3 per arm; permutation 9 total | Seeds 42–44; maximum 50 epochs; sample SD in B; 1,000 protein-bootstrap resamples of averaged predictions in C |\n| Homology-aware representations; Figure 2D | 1 per arm | Maximum 50 epochs; point estimates without an empirical SD |\n| Homology-aware fusion; Figure 2E | Scores 3; raw fusion 3; graph fusion 1 | Maximum 50 epochs; seeds 42–44 and sample SD for repeated arms; graph fusion is one point |\n| Topology profiles; Figure 3B–F | 1 fixed raw/full pair | Test-set subgroup analyses; selected-cell intervals resample variants |\n| Prediction transitions; Figure 4 | 2 fixed prediction pairs | Threshold 0.5; descriptive profiles; no valid feature-test significance inference |\n\nFor partial-ablation interior fractions $f=0.25,0.50,0.75$, classifier seeds are $5042+1000f+r$, with repeat index $r=0,1,2$; high-confidence-first and low-confidence-first add offsets 100000 and 200000, respectively. Sample SD uses ddof=1. The pooled permutation SD combines graph and classifier variation. The full-graph operator adds loops before symmetrization; the ablation/permutation controls add one loop after symmetrization (Methods 2). Thus Figure 1D–F comparisons differ in operator convention, seeds and training budget; their dispersion and point estimates do not isolate a causal topology effect. Matching hidden layers in Figure 2 does not equalize input-layer parameter counts or the propagation conventions of its graph controls. BioGRID and its own matched comparator settings are given in Methods 5 and Table 9.\n\n### Supplementary Table 9. BioGRID and its matched comparison models\n\n{{BIOGRID_RESULTS_VERIFIED_TABLES}}\n\n## Data and code availability"
+  },
+  {
+    "id": 37,
+    "reason_zh": "改为可核实公开仓库，并说明原记录保留、BioGRID自己的匹配基线；最终发布由root核验。",
+    "before": "The prepared compact source-data archive contains figure source data for Figures 1-4, topology-stratified metrics, joint topology maps, corrected-sample statistics, fusion-control summaries, bootstrap outputs and checksum files. Large third-party resources, including provider-controlled CADD and AlphaMissense score files, are not redistributed and should be obtained from their original providers.",
+    "after": "Supplementary Information, code and compact source data are publicly available at https://github.com/brynn-t02/ppi-graph-missense-audit. The archive includes source data for Figures 1–4, topology-stratified metrics, joint topology maps, descriptive corrected-sample statistics, fusion-control summaries, bootstrap outputs, sample memberships and checksums. BioGRID validation includes its own matched comparator predictions and configurations. The original inputs and run records remain archived separately. Large third-party resources, including provider-controlled CADD and AlphaMissense score files, should be obtained from their original providers."
+  },
+  {
+    "id": 38,
+    "reason_zh": "填入已完成BioGRID的真实构图、覆盖、共同算子、三种子训练与蛋白bootstrap协议；未新增训练或外部队列。",
+    "before": "{{BIOGRID_METHODS_VERIFIED_TEXT}}",
+    "after": "We constructed an alternative graph from BioGRID release 5.0.262 (compiled 25 September 2026; October 2026 release). Interactions were retained when both organisms were human and the experimental-system type was physical; Affinity Capture-RNA and Protein-RNA records were excluded. Entrez identifiers were mapped through unique aliases to the frozen STRING node universe. Mapped self-interactions were removed and duplicate unordered pairs collapsed. The resulting graph contained 931,458 undirected pairs on the same 19,622 nodes, including 1,402 isolates. It covered 18,006 of 18,220 original test variants and 17,748 of 18,220 homology-split test variants by at least one edge; all test variants were retained in evaluation. Of the BioGRID pairs, 526,635 (56.54%) occurred in STRING; pair-set Jaccard similarity was 0.07251.\n\nEach unordered pair was represented in both directions. STRING and BioGRID graph features used the same self-loop convention and propagation: $A=(E+I)+(E+I)^T$, $S=D^{-1/2}AD^{-1/2}$, and $(X+SX+S^2X)/3$. Edges were not weighted by publication count or clinical labels. BioGRID node identities were checked against the actual frozen model-input mapping. Isolated nodes retained their raw-feature values within numerical tolerance. STRING contains evidence also represented in BioGRID, and the networks differ in density, coverage, release and evidence composition; this comparison is not evidence-independent replication. The physical category can include co-complex and proximity evidence rather than direct binding alone.\n\nNine BioGRID classifiers were fitted: original-split protein representations, original-split score fusion and homology-split score fusion, each with classifier seeds 42, 43 and 44. Comparator raw-ESM, STRING and score-only models used the same seeds and training configuration. The MLP used 512/128 hidden units, ReLU, dropout 0.3, class-weighted binary cross-entropy, Adam with learning rate 0.001 and weight decay 0.00001, batch size 1,024, a maximum of 50 epochs and patience five. Checkpoints were selected only by validation AUC. Representation input dimension was 1,280; fusion concatenated CADD, AlphaMissense and the AlphaMissense missingness indicator before the 1,280-dimensional protein representation. Score-only and fusion classifiers used the same hidden-layer architecture, while input-layer parameter counts differed. Missing scores were imputed using training medians, with no added z-score scaling. Dataset memberships, ESM features and homology assignments were unchanged, and graph-source selection did not use test outcomes.\n\nProtein-only prediction was computed once per node in fixed-order CPU batches and mapped to its variant rows; fusion predictions remained variant-specific. Per-seed probabilities were converted to float64 before averaging. AUPRC denotes non-interpolated average precision. Means and sample standard deviations (ddof=1) describe individual classifiers; paired differences describe metrics after averaging the probabilities. Confidence intervals use 2,000 paired protein-cluster bootstrap resamples, retaining all variants and multiplicities of sampled proteins. They condition on the fitted models and fixed networks, exclude retraining and graph-sampling uncertainty, and are not adjusted for multiple comparisons."
+  },
+  {
+    "id": 39,
+    "reason_zh": "填入BioGRID专属11行匹配均值/sample SD及8行全部配对区间；保留近零端点五位小数。",
+    "before": "{{BIOGRID_RESULTS_VERIFIED_TABLES}}",
+    "after": "#### Supplementary Table 9A. Full three-seed network-comparison summaries\n\n| Setting | Model | Fits | AUC (mean ± sample SD) | AUPRC (mean ± sample SD) |\n|---|---|---:|---:|---:|\n| Original representation | BioGRID FPP | 3 | 0.7592 ± 0.0133 | 0.6043 ± 0.0083 |\n| Original representation | STRING FPP | 3 | 0.7950 ± 0.0016 | 0.6485 ± 0.0117 |\n| Original representation | Raw ESM | 3 | 0.7835 ± 0.0063 | 0.6117 ± 0.0066 |\n| Original fusion | CADD+AM | 3 | 0.9572 ± 0.0001 | 0.9072 ± 0.0002 |\n| Original fusion | CADD+AM + BioGRID FPP | 3 | 0.9693 ± 0.0013 | 0.9344 ± 0.0038 |\n| Original fusion | CADD+AM + STRING FPP | 3 | 0.9716 ± 0.0007 | 0.9409 ± 0.0017 |\n| Original fusion | CADD+AM + raw ESM | 3 | 0.9682 ± 0.0011 | 0.9326 ± 0.0037 |\n| Homology fusion | CADD+AM | 3 | 0.9755 ± 0.0001 | 0.8403 ± 0.0006 |\n| Homology fusion | CADD+AM + BioGRID FPP | 3 | 0.9730 ± 0.0002 | 0.8265 ± 0.0013 |\n| Homology fusion | CADD+AM + STRING FPP | 3 | 0.9752 ± 0.0007 | 0.8369 ± 0.0060 |\n| Homology fusion | CADD+AM + raw ESM | 3 | 0.9727 ± 0.0003 | 0.8253 ± 0.0016 |\n\nThese rows describe the three-seed network comparison. They should not be substituted for separate single-fit results or treated as the metrics of ensemble-averaged predictions. CADD+AM denotes the architecture-matched score baseline; every fusion model includes CADD, AlphaMissense and its missingness indicator. These comparisons use their own matched fits and canonical protein-level prediction mapping. Consequently, their means, SDs and ensemble differences should not be combined with the fixed reference points or separately fitted controls in Tables 2–4.\n\n#### Supplementary Table 9B. BioGRID ensemble differences\n\n| Setting | Comparison | ΔAUC (95% CI) | ΔAUPRC (95% CI) |\n|---|---|---:|---:|\n| Original representation | BioGRID FPP − Raw ESM | -0.02012 [-0.04803, +0.01005] | -0.00249 [-0.05396, +0.03630] |\n| Original representation | BioGRID FPP − STRING FPP | -0.03079 [-0.06916, +0.00407] | -0.04371 [-0.08938, -0.00108] |\n| Original fusion | BioGRID fusion − score baseline | +0.01242 [+0.00341, +0.02100] | +0.02788 [+0.00701, +0.05019] |\n| Original fusion | BioGRID fusion − raw-ESM fusion | +0.00092 [-0.00115, +0.00364] | +0.00105 [-0.00371, +0.00691] |\n| Original fusion | BioGRID fusion − STRING fusion | -0.00228 [-0.00420, -0.00058] | -0.00650 [-0.01164, -0.00233] |\n| Homology fusion | BioGRID fusion − score baseline | -0.00204 [-0.00421, -0.00004] | -0.01176 [-0.03147, +0.00596] |\n| Homology fusion | BioGRID fusion − raw-ESM fusion | +0.00051 [-0.00077, +0.00169] | +0.00177 [-0.00629, +0.01049] |\n| Homology fusion | BioGRID fusion − STRING fusion | -0.00216 [-0.00357, -0.00090] | -0.01052 [-0.01884, -0.00182] |\n\nAll intervals are percentile 95% intervals from 2,000 finite paired protein resamples. The original test split contains 18,220 variants on 1,413 proteins (5,822 positives); the homology test split contains 18,220 variants on 3,438 proteins (1,924 positives). Positive prevalence therefore differs, limiting direct cross-split AUPRC comparison. Near-zero intervals do not establish equivalence."
+  }
+]

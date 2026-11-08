@@ -1,0 +1,17 @@
+{
+  "original_figures": {
+    "Figure2_fusion_homology_v1_accepted.pdf": "bb2429ea938a2a852dafbb67b296d96e30f20ada46cdc0a2ac83526f9649865d",
+    "Figure3_topology_context_v1_accepted.pdf": "71a3aab296cc4bc6f09f4f39421915cad84892b2cf73c82f22083a61abe6f8fe",
+    "Figure4_prediction_transitions_v2_accepted.pdf": "835c6840ba23c8f95c0275e4df110c5ee6af8b369c48f19c996e5d93ff17ed64",
+    "Figure1_connectivity_topology_controls_v2_accepted.pdf": "a156c40ca2d0cab500121cb1e96d44758c63ab02f037b9423f4cf4fdf780bcb4"
+  },
+  "original_28_bibliography_entries_text_unchanged": true,
+  "only_added_reference": "Stark2006BioGRID",
+  "main_pages": 8,
+  "original_source_sha256": "aeea104debe2cdc6d9ce430ce5f1f4c4fba4acb0c0246a0e49fe6d116040d811",
+  "main_source_sha256": "b48f72d8c2a3b0d96675df768af650d03435d14f35183c863d7b52c4a498c97e",
+  "no_HUMSAVAR_or_November_unified_results": true,
+  "only_existing_BioGRID_validation_added": true,
+  "no_experiments_run": true,
+  "only_text_and_tables_modified": true
+}

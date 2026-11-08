@@ -1,0 +1,64 @@
+{
+  "status": "PASS; frozen and ready for publication",
+  "pdf": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_original_second_network_only_20261108/BIBM2026_supplementary_original_plus_BioGRID.pdf",
+  "sha256": "c140f896955aa6f1495de43f9c97c96ba79fdccb0460aaa48730a16c4a51804a",
+  "pages_before": 13,
+  "pages_final": 12,
+  "all_pages_visually_checked": true,
+  "visual_evidence": {
+    "pages1_to7": [
+      {
+        "page": 1,
+        "identical_to_visually_reviewed_render": true
+      },
+      {
+        "page": 2,
+        "identical_to_visually_reviewed_render": true
+      },
+      {
+        "page": 3,
+        "identical_to_visually_reviewed_render": true
+      },
+      {
+        "page": 4,
+        "identical_to_visually_reviewed_render": true
+      },
+      {
+        "page": 5,
+        "identical_to_visually_reviewed_render": true
+      },
+      {
+        "page": 6,
+        "identical_to_visually_reviewed_render": true
+      },
+      {
+        "page": 7,
+        "identical_to_visually_reviewed_render": true
+      }
+    ],
+    "pages8_to12": "Final images directly inspected; no clipping, collisions, raw LaTeX, isolated headings or malformed fonts."
+  },
+  "all_fonts_embedded": true,
+  "fonts": [
+    "AAAAAA+DejaVuSerif",
+    "AAAAAA+DejaVuSerif-Bold",
+    "AAAAAA+DejaVuSansMono"
+  ],
+  "source_files_unchanged": 15,
+  "parent_removed_build_log": [
+    "source/main.log"
+  ],
+  "all_table_numeric_tokens_unchanged": true,
+  "all_document_decimal_values_unchanged": true,
+  "source_markdown_unchanged": true,
+  "research_changes": false,
+  "renderer_changes": [
+    "Proper inline superscript/subscript rendering, source equations unchanged.",
+    "Display +/- as ±.",
+    "Keep table introductions with tables; disallow paragraph widows/orphans.",
+    "Adjust Table5/Table9 cell padding and Table9 column widths; availability fits final page12."
+  ],
+  "raw_inline_latex_absent": true,
+  "final_render_directory": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_second_network_only_20261108/qa_si/final",
+  "renderer_sha256": "63e2b8309819c22f0b302f98adbb4468c30c69aa5e45d8597ade2b9a6d548e5c"
+}
