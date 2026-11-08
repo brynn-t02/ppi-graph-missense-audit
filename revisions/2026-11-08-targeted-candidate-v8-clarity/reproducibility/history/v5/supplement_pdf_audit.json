@@ -1,0 +1,304 @@
+{
+  "status": "passed",
+  "scope": "Read-only comparison of compiled supplement PDF with existing statistical CSVs; no model or threshold recomputation",
+  "date": "2026-11-08",
+  "baseline_pdf": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_v4_figure4_20261108/BIBM2026_supplementary_targeted_candidate_v4_figure4.pdf",
+  "baseline_pdf_sha256": "1803c257ca172b65a9506b20e2bb3c460a92ab9fc1523e10b401d1abe14b53f7",
+  "pages": 19,
+  "checks": [
+    {
+      "name": "Table6 esm_vs_gcn both_correct",
+      "pass": true,
+      "page": 8,
+      "n": 12520,
+      "pos_rate_display": "0.3460"
+    },
+    {
+      "name": "Table6 esm_vs_gcn both_wrong",
+      "pass": true,
+      "page": 8,
+      "n": 3747,
+      "pos_rate_display": "0.2906"
+    },
+    {
+      "name": "Table6 esm_vs_gcn improved",
+      "pass": true,
+      "page": 8,
+      "n": 960,
+      "pos_rate_display": "0.3812"
+    },
+    {
+      "name": "Table6 esm_vs_gcn degraded",
+      "pass": true,
+      "page": 8,
+      "n": 993,
+      "pos_rate_display": "0.0352"
+    },
+    {
+      "name": "Table6 esm_vs_gcn FN_rescued",
+      "pass": true,
+      "page": 8,
+      "n": 366,
+      "pos_rate_display": "1.0000"
+    },
+    {
+      "name": "Table6 esm_vs_gcn FP_suppressed",
+      "pass": true,
+      "page": 8,
+      "n": 594,
+      "pos_rate_display": "0.0000"
+    },
+    {
+      "name": "Table6 esm_vs_gcn TN_to_FP",
+      "pass": true,
+      "page": 8,
+      "n": 958,
+      "pos_rate_display": "0.0000"
+    },
+    {
+      "name": "Table6 esm_vs_gcn TP_to_FN",
+      "pass": true,
+      "page": 8,
+      "n": 35,
+      "pos_rate_display": "1.0000"
+    },
+    {
+      "name": "Table6 esm_vs_gcn persistent_FN",
+      "pass": true,
+      "page": 8,
+      "n": 1089,
+      "pos_rate_display": "1.0000"
+    },
+    {
+      "name": "Table6 esm_vs_gcn persistent_FP",
+      "pass": true,
+      "page": 8,
+      "n": 2658,
+      "pos_rate_display": "0.0000"
+    },
+    {
+      "name": "Table6 cadd_am_vs_full both_correct",
+      "pass": true,
+      "page": 9,
+      "n": 16055,
+      "pos_rate_display": "0.3117"
+    },
+    {
+      "name": "Table6 cadd_am_vs_full both_wrong",
+      "pass": true,
+      "page": 9,
+      "n": 1262,
+      "pos_rate_display": "0.4136"
+    },
+    {
+      "name": "Table6 cadd_am_vs_full improved",
+      "pass": true,
+      "page": 9,
+      "n": 679,
+      "pos_rate_display": "0.2504"
+    },
+    {
+      "name": "Table6 cadd_am_vs_full degraded",
+      "pass": true,
+      "page": 9,
+      "n": 224,
+      "pos_rate_display": "0.5580"
+    },
+    {
+      "name": "Table6 cadd_am_vs_full FN_rescued",
+      "pass": true,
+      "page": 9,
+      "n": 170,
+      "pos_rate_display": "1.0000"
+    },
+    {
+      "name": "Table6 cadd_am_vs_full FP_suppressed",
+      "pass": true,
+      "page": 9,
+      "n": 509,
+      "pos_rate_display": "0.0000"
+    },
+    {
+      "name": "Table6 cadd_am_vs_full TN_to_FP",
+      "pass": true,
+      "page": 9,
+      "n": 99,
+      "pos_rate_display": "0.0000"
+    },
+    {
+      "name": "Table6 cadd_am_vs_full TP_to_FN",
+      "pass": true,
+      "page": 9,
+      "n": 125,
+      "pos_rate_display": "1.0000"
+    },
+    {
+      "name": "Table6 cadd_am_vs_full persistent_FN",
+      "pass": true,
+      "page": 9,
+      "n": 522,
+      "pos_rate_display": "1.0000"
+    },
+    {
+      "name": "Table6 cadd_am_vs_full persistent_FP",
+      "pass": true,
+      "page": 9,
+      "n": 740,
+      "pos_rate_display": "0.0000"
+    },
+    {
+      "name": "Table10 threshold 0.1",
+      "pass": true,
+      "page": 12,
+      "displayed_values": [
+        "61",
+        "864",
+        "-701",
+        "27",
+        "1307",
+        "950"
+      ]
+    },
+    {
+      "name": "Table10 threshold 0.2",
+      "pass": true,
+      "page": 12,
+      "displayed_values": [
+        "179",
+        "835",
+        "-555",
+        "73",
+        "981",
+        "747"
+      ]
+    },
+    {
+      "name": "Table10 threshold 0.3",
+      "pass": true,
+      "page": 12,
+      "displayed_values": [
+        "245",
+        "562",
+        "68",
+        "84",
+        "799",
+        "610"
+      ]
+    },
+    {
+      "name": "Table10 threshold 0.4",
+      "pass": true,
+      "page": 12,
+      "displayed_values": [
+        "166",
+        "476",
+        "122",
+        "114",
+        "648",
+        "491"
+      ]
+    },
+    {
+      "name": "Table10 threshold 0.5",
+      "pass": true,
+      "page": 12,
+      "displayed_values": [
+        "366",
+        "594",
+        "-33",
+        "170",
+        "509",
+        "455"
+      ]
+    },
+    {
+      "name": "Table10 threshold 0.6",
+      "pass": true,
+      "page": 12,
+      "displayed_values": [
+        "1201",
+        "414",
+        "264",
+        "273",
+        "435",
+        "501"
+      ]
+    },
+    {
+      "name": "Table10 threshold 0.7",
+      "pass": true,
+      "page": 12,
+      "displayed_values": [
+        "598",
+        "207",
+        "-446",
+        "395",
+        "353",
+        "463"
+      ]
+    },
+    {
+      "name": "Table10 threshold 0.8",
+      "pass": true,
+      "page": 12,
+      "displayed_values": [
+        "450",
+        "121",
+        "173",
+        "615",
+        "223",
+        "516"
+      ]
+    },
+    {
+      "name": "Table10 threshold 0.9",
+      "pass": true,
+      "page": 12,
+      "displayed_values": [
+        "1178",
+        "3",
+        "950",
+        "912",
+        "125",
+        "654"
+      ]
+    },
+    {
+      "name": "F group and feature-specific valid counts",
+      "pass": true,
+      "page": 10
+    },
+    {
+      "name": "F group and missing text present in PDF",
+      "pass": true,
+      "page": 10
+    },
+    {
+      "name": "All 18220 rows and seeds43-44 explicitly documented",
+      "pass": true,
+      "page": 8
+    },
+    {
+      "name": "Table10 no threshold selection or refitting text",
+      "pass": true,
+      "page": 12
+    }
+  ],
+  "visual_review": {
+    "rendering": "pypdfium2 at 1.3x, complete relevant pages",
+    "pages": [
+      8,
+      9,
+      10,
+      12
+    ],
+    "passed": true,
+    "issues": []
+  },
+  "summary": {
+    "Table6_groups": "20 rows and positive rates agree with saved CSVs",
+    "Table10": "All 54 displayed count values at nine thresholds agree with saved CSVs",
+    "Figure4F": "366 rescued,1089 persistent; within-community fraction 2 missing,1087 finite",
+    "supplement_edit_needed": false
+  }
+}

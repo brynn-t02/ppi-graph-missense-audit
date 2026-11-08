@@ -1,0 +1,484 @@
+{"phase": "input_verification", "time_utc": "2026-11-08T00:55:10Z"}
+{"phase": "training", "time_utc": "2026-11-08T00:55:24Z", "completed": 1, "planned": 39, "last": {"split": "original", "arm": "full_FPP", "seed": 42}}
+{"phase": "training", "time_utc": "2026-11-08T00:55:25Z", "completed": 2, "planned": 39, "last": {"split": "original", "arm": "full_FPP", "seed": 43}}
+{"phase": "training", "time_utc": "2026-11-08T00:55:25Z", "completed": 3, "planned": 39, "last": {"split": "original", "arm": "full_FPP", "seed": 44}}
+{"phase": "training", "time_utc": "2026-11-08T00:55:25Z", "completed": 4, "planned": 39, "last": {"split": "original", "arm": "edge_ablated_FPP", "seed": 42}}
+{"phase": "training", "time_utc": "2026-11-08T00:55:25Z", "completed": 5, "planned": 39, "last": {"split": "original", "arm": "edge_ablated_FPP", "seed": 43}}
+{"phase": "training", "time_utc": "2026-11-08T00:55:25Z", "completed": 6, "planned": 39, "last": {"split": "original", "arm": "edge_ablated_FPP", "seed": 44}}
+homology raw_ESM seed=42 epoch=1 loss=0.70108 val_auc=0.731477
+homology raw_ESM seed=42 epoch=2 loss=0.59510 val_auc=0.731172
+homology raw_ESM seed=42 epoch=3 loss=0.55690 val_auc=0.725080
+homology raw_ESM seed=42 epoch=4 loss=0.53673 val_auc=0.721369
+homology raw_ESM seed=42 epoch=5 loss=0.52261 val_auc=0.726834
+homology raw_ESM seed=42 epoch=6 loss=0.51236 val_auc=0.716290
+FINAL {"split": "homology", "arm": "raw_ESM", "seed": 42, "best_epoch": 1, "epochs_run": 6, "val_auc": 0.7314769517766283, "val_auprc": 0.21711857442556587, "test_auc": 0.7247726123370454, "test_auprc": 0.24180435223323704, "seconds": 5.725294589996338, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:55:32Z", "completed": 7, "planned": 39, "last": {"split": "homology", "arm": "raw_ESM", "seed": 42}}
+homology raw_ESM seed=43 epoch=1 loss=0.69848 val_auc=0.739899
+homology raw_ESM seed=43 epoch=2 loss=0.59670 val_auc=0.719906
+homology raw_ESM seed=43 epoch=3 loss=0.55909 val_auc=0.719664
+homology raw_ESM seed=43 epoch=4 loss=0.53375 val_auc=0.715548
+homology raw_ESM seed=43 epoch=5 loss=0.52010 val_auc=0.719969
+homology raw_ESM seed=43 epoch=6 loss=0.50978 val_auc=0.711345
+FINAL {"split": "homology", "arm": "raw_ESM", "seed": 43, "best_epoch": 1, "epochs_run": 6, "val_auc": 0.7398986827060083, "val_auprc": 0.21790042938328621, "test_auc": 0.7324810490081108, "test_auprc": 0.24924909725596656, "seconds": 5.554280519485474, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:55:37Z", "completed": 8, "planned": 39, "last": {"split": "homology", "arm": "raw_ESM", "seed": 43}}
+homology raw_ESM seed=44 epoch=1 loss=0.70501 val_auc=0.732201
+homology raw_ESM seed=44 epoch=2 loss=0.59974 val_auc=0.724869
+homology raw_ESM seed=44 epoch=3 loss=0.55921 val_auc=0.721752
+homology raw_ESM seed=44 epoch=4 loss=0.53494 val_auc=0.722057
+homology raw_ESM seed=44 epoch=5 loss=0.52101 val_auc=0.715068
+homology raw_ESM seed=44 epoch=6 loss=0.51280 val_auc=0.709476
+FINAL {"split": "homology", "arm": "raw_ESM", "seed": 44, "best_epoch": 1, "epochs_run": 6, "val_auc": 0.7322006137785676, "val_auprc": 0.21546658310214528, "test_auc": 0.7290346877975743, "test_auprc": 0.24810261601728847, "seconds": 5.431212663650513, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:55:43Z", "completed": 9, "planned": 39, "last": {"split": "homology", "arm": "raw_ESM", "seed": 44}}
+homology full_FPP seed=42 epoch=1 loss=0.75330 val_auc=0.764733
+homology full_FPP seed=42 epoch=2 loss=0.68093 val_auc=0.763000
+homology full_FPP seed=42 epoch=3 loss=0.64498 val_auc=0.760215
+homology full_FPP seed=42 epoch=4 loss=0.62595 val_auc=0.763652
+homology full_FPP seed=42 epoch=5 loss=0.60561 val_auc=0.756332
+homology full_FPP seed=42 epoch=6 loss=0.59670 val_auc=0.755067
+FINAL {"split": "homology", "arm": "full_FPP", "seed": 42, "best_epoch": 1, "epochs_run": 6, "val_auc": 0.7647330886011123, "val_auprc": 0.25554647601965413, "test_auc": 0.754886726536211, "test_auprc": 0.2731233137013683, "seconds": 5.67544960975647, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:55:49Z", "completed": 10, "planned": 39, "last": {"split": "homology", "arm": "full_FPP", "seed": 42}}
+homology full_FPP seed=43 epoch=1 loss=0.74087 val_auc=0.763308
+homology full_FPP seed=43 epoch=2 loss=0.67162 val_auc=0.763950
+homology full_FPP seed=43 epoch=3 loss=0.64342 val_auc=0.763005
+homology full_FPP seed=43 epoch=4 loss=0.62238 val_auc=0.758283
+homology full_FPP seed=43 epoch=5 loss=0.60201 val_auc=0.762329
+homology full_FPP seed=43 epoch=6 loss=0.58792 val_auc=0.750434
+homology full_FPP seed=43 epoch=7 loss=0.57998 val_auc=0.756137
+FINAL {"split": "homology", "arm": "full_FPP", "seed": 43, "best_epoch": 2, "epochs_run": 7, "val_auc": 0.7639496020281913, "val_auprc": 0.24762298447850514, "test_auc": 0.7569871297319751, "test_auprc": 0.2775385112567643, "seconds": 6.429258823394775, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:55:55Z", "completed": 11, "planned": 39, "last": {"split": "homology", "arm": "full_FPP", "seed": 43}}
+homology full_FPP seed=44 epoch=1 loss=0.75083 val_auc=0.764321
+homology full_FPP seed=44 epoch=2 loss=0.67719 val_auc=0.764655
+homology full_FPP seed=44 epoch=3 loss=0.64785 val_auc=0.761587
+homology full_FPP seed=44 epoch=4 loss=0.62486 val_auc=0.761766
+homology full_FPP seed=44 epoch=5 loss=0.60510 val_auc=0.757627
+homology full_FPP seed=44 epoch=6 loss=0.59822 val_auc=0.757934
+homology full_FPP seed=44 epoch=7 loss=0.58382 val_auc=0.756026
+FINAL {"split": "homology", "arm": "full_FPP", "seed": 44, "best_epoch": 2, "epochs_run": 7, "val_auc": 0.7646545400159481, "val_auprc": 0.24720725538670288, "test_auc": 0.7593705156527322, "test_auprc": 0.2747776707784383, "seconds": 6.763912916183472, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:56:02Z", "completed": 12, "planned": 39, "last": {"split": "homology", "arm": "full_FPP", "seed": 44}}
+{"phase": "STRING_score_mapping", "time_utc": "2026-11-08T00:56:02Z"}
+[STRING] Loading scores from /root/autodl-tmp/ppi_unification_20261108/data/raw/9606.protein.links.v12.0.txt.gz
+[STRING] Score coverage:
+{
+  "num_pairs": 621211,
+  "num_pairs_with_string_score": 621211,
+  "num_pairs_missing_string_score": 0,
+  "score_min": 150.0,
+  "score_median": 208.0,
+  "score_max": 999.0
+}
+{"phase": "propagation", "time_utc": "2026-11-08T00:56:20Z", "arm": "random_pair_removal_fraction_0.25"}
+original random_pair_removal_fraction_0.25 seed=42 epoch=1 loss=0.80353 val_auc=0.810789
+original random_pair_removal_fraction_0.25 seed=42 epoch=2 loss=0.72143 val_auc=0.806145
+original random_pair_removal_fraction_0.25 seed=42 epoch=3 loss=0.69662 val_auc=0.822523
+original random_pair_removal_fraction_0.25 seed=42 epoch=4 loss=0.67167 val_auc=0.817915
+original random_pair_removal_fraction_0.25 seed=42 epoch=5 loss=0.65641 val_auc=0.826904
+original random_pair_removal_fraction_0.25 seed=42 epoch=6 loss=0.64580 val_auc=0.816498
+original random_pair_removal_fraction_0.25 seed=42 epoch=7 loss=0.63830 val_auc=0.806536
+original random_pair_removal_fraction_0.25 seed=42 epoch=8 loss=0.62599 val_auc=0.811565
+original random_pair_removal_fraction_0.25 seed=42 epoch=9 loss=0.61959 val_auc=0.814414
+original random_pair_removal_fraction_0.25 seed=42 epoch=10 loss=0.61384 val_auc=0.812670
+FINAL {"split": "original", "arm": "random_pair_removal_fraction_0.25", "seed": 42, "best_epoch": 5, "epochs_run": 10, "val_auc": 0.8269043256791131, "val_auprc": 0.5864079242400846, "test_auc": 0.780833081975024, "test_auprc": 0.637415121218999, "seconds": 9.554477214813232, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:56:34Z", "completed": 13, "planned": 39, "last": {"split": "original", "arm": "random_pair_removal_fraction_0.25", "seed": 42}}
+original random_pair_removal_fraction_0.25 seed=43 epoch=1 loss=0.79903 val_auc=0.811323
+original random_pair_removal_fraction_0.25 seed=43 epoch=2 loss=0.71960 val_auc=0.817677
+original random_pair_removal_fraction_0.25 seed=43 epoch=3 loss=0.68991 val_auc=0.811892
+original random_pair_removal_fraction_0.25 seed=43 epoch=4 loss=0.67201 val_auc=0.827041
+original random_pair_removal_fraction_0.25 seed=43 epoch=5 loss=0.65919 val_auc=0.823945
+original random_pair_removal_fraction_0.25 seed=43 epoch=6 loss=0.63911 val_auc=0.818374
+original random_pair_removal_fraction_0.25 seed=43 epoch=7 loss=0.63142 val_auc=0.811388
+original random_pair_removal_fraction_0.25 seed=43 epoch=8 loss=0.62623 val_auc=0.814497
+original random_pair_removal_fraction_0.25 seed=43 epoch=9 loss=0.61953 val_auc=0.803840
+FINAL {"split": "original", "arm": "random_pair_removal_fraction_0.25", "seed": 43, "best_epoch": 4, "epochs_run": 9, "val_auc": 0.8270407017376766, "val_auprc": 0.5683651544018248, "test_auc": 0.7961317147650006, "test_auprc": 0.6377044142136064, "seconds": 9.508320331573486, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:56:44Z", "completed": 14, "planned": 39, "last": {"split": "original", "arm": "random_pair_removal_fraction_0.25", "seed": 43}}
+original random_pair_removal_fraction_0.25 seed=44 epoch=1 loss=0.80605 val_auc=0.806992
+original random_pair_removal_fraction_0.25 seed=44 epoch=2 loss=0.72684 val_auc=0.812348
+original random_pair_removal_fraction_0.25 seed=44 epoch=3 loss=0.69182 val_auc=0.815345
+original random_pair_removal_fraction_0.25 seed=44 epoch=4 loss=0.67311 val_auc=0.817767
+original random_pair_removal_fraction_0.25 seed=44 epoch=5 loss=0.65415 val_auc=0.820158
+original random_pair_removal_fraction_0.25 seed=44 epoch=6 loss=0.64736 val_auc=0.812931
+original random_pair_removal_fraction_0.25 seed=44 epoch=7 loss=0.63322 val_auc=0.820856
+original random_pair_removal_fraction_0.25 seed=44 epoch=8 loss=0.62333 val_auc=0.808466
+original random_pair_removal_fraction_0.25 seed=44 epoch=9 loss=0.61194 val_auc=0.816072
+original random_pair_removal_fraction_0.25 seed=44 epoch=10 loss=0.60744 val_auc=0.809016
+original random_pair_removal_fraction_0.25 seed=44 epoch=11 loss=0.60563 val_auc=0.814760
+original random_pair_removal_fraction_0.25 seed=44 epoch=12 loss=0.60097 val_auc=0.810568
+FINAL {"split": "original", "arm": "random_pair_removal_fraction_0.25", "seed": 44, "best_epoch": 7, "epochs_run": 12, "val_auc": 0.8208562199852902, "val_auprc": 0.5736069406317356, "test_auc": 0.8016525393414314, "test_auprc": 0.6587232278864494, "seconds": 11.758238077163696, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:56:55Z", "completed": 15, "planned": 39, "last": {"split": "original", "arm": "random_pair_removal_fraction_0.25", "seed": 44}}
+{"phase": "propagation", "time_utc": "2026-11-08T00:56:58Z", "arm": "random_pair_removal_fraction_0.50"}
+original random_pair_removal_fraction_0.50 seed=42 epoch=1 loss=0.80357 val_auc=0.809709
+original random_pair_removal_fraction_0.50 seed=42 epoch=2 loss=0.72298 val_auc=0.806819
+original random_pair_removal_fraction_0.50 seed=42 epoch=3 loss=0.69919 val_auc=0.822295
+original random_pair_removal_fraction_0.50 seed=42 epoch=4 loss=0.67277 val_auc=0.819618
+original random_pair_removal_fraction_0.50 seed=42 epoch=5 loss=0.65905 val_auc=0.830983
+original random_pair_removal_fraction_0.50 seed=42 epoch=6 loss=0.64967 val_auc=0.819700
+original random_pair_removal_fraction_0.50 seed=42 epoch=7 loss=0.63721 val_auc=0.820721
+original random_pair_removal_fraction_0.50 seed=42 epoch=8 loss=0.62585 val_auc=0.817409
+original random_pair_removal_fraction_0.50 seed=42 epoch=9 loss=0.61997 val_auc=0.816251
+original random_pair_removal_fraction_0.50 seed=42 epoch=10 loss=0.61358 val_auc=0.822338
+FINAL {"split": "original", "arm": "random_pair_removal_fraction_0.50", "seed": 42, "best_epoch": 5, "epochs_run": 10, "val_auc": 0.8309828975949334, "val_auprc": 0.5904904272895449, "test_auc": 0.7813734792499029, "test_auprc": 0.6270368131733106, "seconds": 11.522222995758057, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:57:14Z", "completed": 16, "planned": 39, "last": {"split": "original", "arm": "random_pair_removal_fraction_0.50", "seed": 42}}
+original random_pair_removal_fraction_0.50 seed=43 epoch=1 loss=0.79965 val_auc=0.811875
+original random_pair_removal_fraction_0.50 seed=43 epoch=2 loss=0.72070 val_auc=0.818635
+original random_pair_removal_fraction_0.50 seed=43 epoch=3 loss=0.69182 val_auc=0.817957
+original random_pair_removal_fraction_0.50 seed=43 epoch=4 loss=0.67533 val_auc=0.825554
+original random_pair_removal_fraction_0.50 seed=43 epoch=5 loss=0.66080 val_auc=0.826038
+original random_pair_removal_fraction_0.50 seed=43 epoch=6 loss=0.64570 val_auc=0.816060
+original random_pair_removal_fraction_0.50 seed=43 epoch=7 loss=0.63117 val_auc=0.814535
+original random_pair_removal_fraction_0.50 seed=43 epoch=8 loss=0.62301 val_auc=0.810877
+original random_pair_removal_fraction_0.50 seed=43 epoch=9 loss=0.61901 val_auc=0.808715
+original random_pair_removal_fraction_0.50 seed=43 epoch=10 loss=0.60938 val_auc=0.815190
+FINAL {"split": "original", "arm": "random_pair_removal_fraction_0.50", "seed": 43, "best_epoch": 5, "epochs_run": 10, "val_auc": 0.8260381884425751, "val_auprc": 0.5674876954896593, "test_auc": 0.7959459391312602, "test_auprc": 0.6513889868987186, "seconds": 9.329061031341553, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:57:23Z", "completed": 17, "planned": 39, "last": {"split": "original", "arm": "random_pair_removal_fraction_0.50", "seed": 43}}
+original random_pair_removal_fraction_0.50 seed=44 epoch=1 loss=0.80588 val_auc=0.807559
+original random_pair_removal_fraction_0.50 seed=44 epoch=2 loss=0.72626 val_auc=0.815643
+original random_pair_removal_fraction_0.50 seed=44 epoch=3 loss=0.69263 val_auc=0.815007
+original random_pair_removal_fraction_0.50 seed=44 epoch=4 loss=0.67623 val_auc=0.819500
+original random_pair_removal_fraction_0.50 seed=44 epoch=5 loss=0.65590 val_auc=0.822330
+original random_pair_removal_fraction_0.50 seed=44 epoch=6 loss=0.65217 val_auc=0.822442
+original random_pair_removal_fraction_0.50 seed=44 epoch=7 loss=0.63643 val_auc=0.818222
+original random_pair_removal_fraction_0.50 seed=44 epoch=8 loss=0.62691 val_auc=0.809627
+original random_pair_removal_fraction_0.50 seed=44 epoch=9 loss=0.61803 val_auc=0.819553
+original random_pair_removal_fraction_0.50 seed=44 epoch=10 loss=0.61263 val_auc=0.820530
+original random_pair_removal_fraction_0.50 seed=44 epoch=11 loss=0.60901 val_auc=0.812647
+FINAL {"split": "original", "arm": "random_pair_removal_fraction_0.50", "seed": 44, "best_epoch": 6, "epochs_run": 11, "val_auc": 0.8224415000515544, "val_auprc": 0.5791736625400132, "test_auc": 0.7796702646325033, "test_auprc": 0.6296906072497815, "seconds": 10.632539510726929, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:57:34Z", "completed": 18, "planned": 39, "last": {"split": "original", "arm": "random_pair_removal_fraction_0.50", "seed": 44}}
+{"phase": "propagation", "time_utc": "2026-11-08T00:57:37Z", "arm": "random_pair_removal_fraction_0.75"}
+original random_pair_removal_fraction_0.75 seed=42 epoch=1 loss=0.80358 val_auc=0.810523
+original random_pair_removal_fraction_0.75 seed=42 epoch=2 loss=0.72200 val_auc=0.808245
+original random_pair_removal_fraction_0.75 seed=42 epoch=3 loss=0.69685 val_auc=0.820070
+original random_pair_removal_fraction_0.75 seed=42 epoch=4 loss=0.67076 val_auc=0.820240
+original random_pair_removal_fraction_0.75 seed=42 epoch=5 loss=0.65636 val_auc=0.828222
+original random_pair_removal_fraction_0.75 seed=42 epoch=6 loss=0.64491 val_auc=0.810218
+original random_pair_removal_fraction_0.75 seed=42 epoch=7 loss=0.63915 val_auc=0.813615
+original random_pair_removal_fraction_0.75 seed=42 epoch=8 loss=0.62235 val_auc=0.810701
+original random_pair_removal_fraction_0.75 seed=42 epoch=9 loss=0.62234 val_auc=0.818783
+original random_pair_removal_fraction_0.75 seed=42 epoch=10 loss=0.61527 val_auc=0.815740
+FINAL {"split": "original", "arm": "random_pair_removal_fraction_0.75", "seed": 42, "best_epoch": 5, "epochs_run": 10, "val_auc": 0.8282223862524639, "val_auprc": 0.5830772326914258, "test_auc": 0.7781047105978741, "test_auprc": 0.6329970502231088, "seconds": 9.329343318939209, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:57:51Z", "completed": 19, "planned": 39, "last": {"split": "original", "arm": "random_pair_removal_fraction_0.75", "seed": 42}}
+original random_pair_removal_fraction_0.75 seed=43 epoch=1 loss=0.79963 val_auc=0.813324
+original random_pair_removal_fraction_0.75 seed=43 epoch=2 loss=0.72029 val_auc=0.819163
+original random_pair_removal_fraction_0.75 seed=43 epoch=3 loss=0.69079 val_auc=0.815145
+original random_pair_removal_fraction_0.75 seed=43 epoch=4 loss=0.67300 val_auc=0.827156
+original random_pair_removal_fraction_0.75 seed=43 epoch=5 loss=0.66134 val_auc=0.825070
+original random_pair_removal_fraction_0.75 seed=43 epoch=6 loss=0.64775 val_auc=0.817834
+original random_pair_removal_fraction_0.75 seed=43 epoch=7 loss=0.63475 val_auc=0.814415
+original random_pair_removal_fraction_0.75 seed=43 epoch=8 loss=0.62306 val_auc=0.815005
+original random_pair_removal_fraction_0.75 seed=43 epoch=9 loss=0.61613 val_auc=0.810489
+FINAL {"split": "original", "arm": "random_pair_removal_fraction_0.75", "seed": 43, "best_epoch": 4, "epochs_run": 9, "val_auc": 0.8271555818976397, "val_auprc": 0.5660341550748313, "test_auc": 0.7877911791825557, "test_auprc": 0.632023975393867, "seconds": 8.378860473632812, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:57:59Z", "completed": 20, "planned": 39, "last": {"split": "original", "arm": "random_pair_removal_fraction_0.75", "seed": 43}}
+original random_pair_removal_fraction_0.75 seed=44 epoch=1 loss=0.80620 val_auc=0.809020
+original random_pair_removal_fraction_0.75 seed=44 epoch=2 loss=0.72645 val_auc=0.815310
+original random_pair_removal_fraction_0.75 seed=44 epoch=3 loss=0.69229 val_auc=0.813975
+original random_pair_removal_fraction_0.75 seed=44 epoch=4 loss=0.67502 val_auc=0.821363
+original random_pair_removal_fraction_0.75 seed=44 epoch=5 loss=0.65450 val_auc=0.824177
+original random_pair_removal_fraction_0.75 seed=44 epoch=6 loss=0.65078 val_auc=0.815851
+original random_pair_removal_fraction_0.75 seed=44 epoch=7 loss=0.63235 val_auc=0.820049
+original random_pair_removal_fraction_0.75 seed=44 epoch=8 loss=0.62528 val_auc=0.811513
+original random_pair_removal_fraction_0.75 seed=44 epoch=9 loss=0.61574 val_auc=0.825330
+original random_pair_removal_fraction_0.75 seed=44 epoch=10 loss=0.61143 val_auc=0.810270
+original random_pair_removal_fraction_0.75 seed=44 epoch=11 loss=0.60248 val_auc=0.816783
+original random_pair_removal_fraction_0.75 seed=44 epoch=12 loss=0.59732 val_auc=0.820975
+original random_pair_removal_fraction_0.75 seed=44 epoch=13 loss=0.59914 val_auc=0.823343
+original random_pair_removal_fraction_0.75 seed=44 epoch=14 loss=0.59437 val_auc=0.811713
+FINAL {"split": "original", "arm": "random_pair_removal_fraction_0.75", "seed": 44, "best_epoch": 9, "epochs_run": 14, "val_auc": 0.8253300661712581, "val_auprc": 0.5855055075181023, "test_auc": 0.7916506698784376, "test_auprc": 0.6394215413231169, "seconds": 13.397608757019043, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:58:13Z", "completed": 21, "planned": 39, "last": {"split": "original", "arm": "random_pair_removal_fraction_0.75", "seed": 44}}
+{"phase": "propagation", "time_utc": "2026-11-08T00:58:14Z", "arm": "high_confidence_first_fraction_0.25"}
+original high_confidence_first_fraction_0.25 seed=42 epoch=1 loss=0.80342 val_auc=0.810885
+original high_confidence_first_fraction_0.25 seed=42 epoch=2 loss=0.72257 val_auc=0.808828
+original high_confidence_first_fraction_0.25 seed=42 epoch=3 loss=0.69652 val_auc=0.818523
+original high_confidence_first_fraction_0.25 seed=42 epoch=4 loss=0.67143 val_auc=0.814387
+original high_confidence_first_fraction_0.25 seed=42 epoch=5 loss=0.65813 val_auc=0.822548
+original high_confidence_first_fraction_0.25 seed=42 epoch=6 loss=0.65006 val_auc=0.818162
+original high_confidence_first_fraction_0.25 seed=42 epoch=7 loss=0.63728 val_auc=0.813053
+original high_confidence_first_fraction_0.25 seed=42 epoch=8 loss=0.62904 val_auc=0.813958
+original high_confidence_first_fraction_0.25 seed=42 epoch=9 loss=0.62251 val_auc=0.813952
+original high_confidence_first_fraction_0.25 seed=42 epoch=10 loss=0.61792 val_auc=0.821243
+FINAL {"split": "original", "arm": "high_confidence_first_fraction_0.25", "seed": 42, "best_epoch": 5, "epochs_run": 10, "val_auc": 0.8225481304342168, "val_auprc": 0.5826425826488604, "test_auc": 0.7889169439181605, "test_auprc": 0.6445184002681958, "seconds": 9.66918396949768, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:58:29Z", "completed": 22, "planned": 39, "last": {"split": "original", "arm": "high_confidence_first_fraction_0.25", "seed": 42}}
+original high_confidence_first_fraction_0.25 seed=43 epoch=1 loss=0.79964 val_auc=0.811176
+original high_confidence_first_fraction_0.25 seed=43 epoch=2 loss=0.72105 val_auc=0.817811
+original high_confidence_first_fraction_0.25 seed=43 epoch=3 loss=0.69182 val_auc=0.818111
+original high_confidence_first_fraction_0.25 seed=43 epoch=4 loss=0.67355 val_auc=0.826508
+original high_confidence_first_fraction_0.25 seed=43 epoch=5 loss=0.66060 val_auc=0.826354
+original high_confidence_first_fraction_0.25 seed=43 epoch=6 loss=0.64453 val_auc=0.818103
+original high_confidence_first_fraction_0.25 seed=43 epoch=7 loss=0.63314 val_auc=0.812414
+original high_confidence_first_fraction_0.25 seed=43 epoch=8 loss=0.62493 val_auc=0.810079
+original high_confidence_first_fraction_0.25 seed=43 epoch=9 loss=0.61792 val_auc=0.805875
+FINAL {"split": "original", "arm": "high_confidence_first_fraction_0.25", "seed": 43, "best_epoch": 4, "epochs_run": 9, "val_auc": 0.8265083631826902, "val_auprc": 0.5768410307251853, "test_auc": 0.7883297754333555, "test_auprc": 0.6296956131436865, "seconds": 8.649205684661865, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:58:37Z", "completed": 23, "planned": 39, "last": {"split": "original", "arm": "high_confidence_first_fraction_0.25", "seed": 43}}
+original high_confidence_first_fraction_0.25 seed=44 epoch=1 loss=0.80647 val_auc=0.807466
+original high_confidence_first_fraction_0.25 seed=44 epoch=2 loss=0.72783 val_auc=0.814697
+original high_confidence_first_fraction_0.25 seed=44 epoch=3 loss=0.69512 val_auc=0.815804
+original high_confidence_first_fraction_0.25 seed=44 epoch=4 loss=0.67645 val_auc=0.816871
+original high_confidence_first_fraction_0.25 seed=44 epoch=5 loss=0.65696 val_auc=0.814646
+original high_confidence_first_fraction_0.25 seed=44 epoch=6 loss=0.65297 val_auc=0.819257
+original high_confidence_first_fraction_0.25 seed=44 epoch=7 loss=0.63624 val_auc=0.819844
+original high_confidence_first_fraction_0.25 seed=44 epoch=8 loss=0.62532 val_auc=0.807252
+original high_confidence_first_fraction_0.25 seed=44 epoch=9 loss=0.61855 val_auc=0.810836
+original high_confidence_first_fraction_0.25 seed=44 epoch=10 loss=0.61429 val_auc=0.810255
+original high_confidence_first_fraction_0.25 seed=44 epoch=11 loss=0.60983 val_auc=0.809381
+original high_confidence_first_fraction_0.25 seed=44 epoch=12 loss=0.60568 val_auc=0.817048
+FINAL {"split": "original", "arm": "high_confidence_first_fraction_0.25", "seed": 44, "best_epoch": 7, "epochs_run": 12, "val_auc": 0.8198442770964158, "val_auprc": 0.5714351190528969, "test_auc": 0.7903645655106992, "test_auprc": 0.6444813372444136, "seconds": 13.170008420944214, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:58:51Z", "completed": 24, "planned": 39, "last": {"split": "original", "arm": "high_confidence_first_fraction_0.25", "seed": 44}}
+{"phase": "propagation", "time_utc": "2026-11-08T00:58:53Z", "arm": "high_confidence_first_fraction_0.50"}
+original high_confidence_first_fraction_0.50 seed=42 epoch=1 loss=0.80352 val_auc=0.810137
+original high_confidence_first_fraction_0.50 seed=42 epoch=2 loss=0.72291 val_auc=0.805979
+original high_confidence_first_fraction_0.50 seed=42 epoch=3 loss=0.69788 val_auc=0.822628
+original high_confidence_first_fraction_0.50 seed=42 epoch=4 loss=0.67352 val_auc=0.817480
+original high_confidence_first_fraction_0.50 seed=42 epoch=5 loss=0.65823 val_auc=0.826466
+original high_confidence_first_fraction_0.50 seed=42 epoch=6 loss=0.65120 val_auc=0.818156
+original high_confidence_first_fraction_0.50 seed=42 epoch=7 loss=0.63935 val_auc=0.815294
+original high_confidence_first_fraction_0.50 seed=42 epoch=8 loss=0.62974 val_auc=0.811583
+original high_confidence_first_fraction_0.50 seed=42 epoch=9 loss=0.61962 val_auc=0.821482
+original high_confidence_first_fraction_0.50 seed=42 epoch=10 loss=0.61647 val_auc=0.817034
+FINAL {"split": "original", "arm": "high_confidence_first_fraction_0.50", "seed": 42, "best_epoch": 5, "epochs_run": 10, "val_auc": 0.8264657914716573, "val_auprc": 0.5650170905040955, "test_auc": 0.7851608735665027, "test_auprc": 0.634656462639195, "seconds": 10.587249279022217, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:59:08Z", "completed": 25, "planned": 39, "last": {"split": "original", "arm": "high_confidence_first_fraction_0.50", "seed": 42}}
+original high_confidence_first_fraction_0.50 seed=43 epoch=1 loss=0.79927 val_auc=0.811579
+original high_confidence_first_fraction_0.50 seed=43 epoch=2 loss=0.71966 val_auc=0.819076
+original high_confidence_first_fraction_0.50 seed=43 epoch=3 loss=0.68994 val_auc=0.816742
+original high_confidence_first_fraction_0.50 seed=43 epoch=4 loss=0.67234 val_auc=0.827243
+original high_confidence_first_fraction_0.50 seed=43 epoch=5 loss=0.65987 val_auc=0.826472
+original high_confidence_first_fraction_0.50 seed=43 epoch=6 loss=0.64461 val_auc=0.822698
+original high_confidence_first_fraction_0.50 seed=43 epoch=7 loss=0.63083 val_auc=0.814913
+original high_confidence_first_fraction_0.50 seed=43 epoch=8 loss=0.62230 val_auc=0.808545
+original high_confidence_first_fraction_0.50 seed=43 epoch=9 loss=0.61716 val_auc=0.814369
+FINAL {"split": "original", "arm": "high_confidence_first_fraction_0.50", "seed": 43, "best_epoch": 4, "epochs_run": 9, "val_auc": 0.8272432994647352, "val_auprc": 0.5702030099120912, "test_auc": 0.7840666960224355, "test_auprc": 0.6263542569280365, "seconds": 8.837128162384033, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:59:17Z", "completed": 26, "planned": 39, "last": {"split": "original", "arm": "high_confidence_first_fraction_0.50", "seed": 43}}
+original high_confidence_first_fraction_0.50 seed=44 epoch=1 loss=0.80647 val_auc=0.806072
+original high_confidence_first_fraction_0.50 seed=44 epoch=2 loss=0.72746 val_auc=0.815386
+original high_confidence_first_fraction_0.50 seed=44 epoch=3 loss=0.69443 val_auc=0.816878
+original high_confidence_first_fraction_0.50 seed=44 epoch=4 loss=0.67664 val_auc=0.820807
+original high_confidence_first_fraction_0.50 seed=44 epoch=5 loss=0.65665 val_auc=0.818889
+original high_confidence_first_fraction_0.50 seed=44 epoch=6 loss=0.65351 val_auc=0.822131
+original high_confidence_first_fraction_0.50 seed=44 epoch=7 loss=0.63551 val_auc=0.822200
+original high_confidence_first_fraction_0.50 seed=44 epoch=8 loss=0.62632 val_auc=0.814989
+original high_confidence_first_fraction_0.50 seed=44 epoch=9 loss=0.61734 val_auc=0.820004
+original high_confidence_first_fraction_0.50 seed=44 epoch=10 loss=0.61090 val_auc=0.811636
+original high_confidence_first_fraction_0.50 seed=44 epoch=11 loss=0.60712 val_auc=0.813080
+original high_confidence_first_fraction_0.50 seed=44 epoch=12 loss=0.60498 val_auc=0.818093
+FINAL {"split": "original", "arm": "high_confidence_first_fraction_0.50", "seed": 44, "best_epoch": 7, "epochs_run": 12, "val_auc": 0.8222001203269793, "val_auprc": 0.5741066771346378, "test_auc": 0.7839014382091636, "test_auprc": 0.6344786217702615, "seconds": 12.259039402008057, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:59:30Z", "completed": 27, "planned": 39, "last": {"split": "original", "arm": "high_confidence_first_fraction_0.50", "seed": 44}}
+{"phase": "propagation", "time_utc": "2026-11-08T00:59:33Z", "arm": "high_confidence_first_fraction_0.75"}
+original high_confidence_first_fraction_0.75 seed=42 epoch=1 loss=0.80426 val_auc=0.808981
+original high_confidence_first_fraction_0.75 seed=42 epoch=2 loss=0.72362 val_auc=0.806940
+original high_confidence_first_fraction_0.75 seed=42 epoch=3 loss=0.69954 val_auc=0.821451
+original high_confidence_first_fraction_0.75 seed=42 epoch=4 loss=0.67370 val_auc=0.813142
+original high_confidence_first_fraction_0.75 seed=42 epoch=5 loss=0.66035 val_auc=0.829868
+original high_confidence_first_fraction_0.75 seed=42 epoch=6 loss=0.64680 val_auc=0.811057
+original high_confidence_first_fraction_0.75 seed=42 epoch=7 loss=0.64238 val_auc=0.816802
+original high_confidence_first_fraction_0.75 seed=42 epoch=8 loss=0.62884 val_auc=0.813894
+original high_confidence_first_fraction_0.75 seed=42 epoch=9 loss=0.61713 val_auc=0.814294
+original high_confidence_first_fraction_0.75 seed=42 epoch=10 loss=0.61754 val_auc=0.821321
+FINAL {"split": "original", "arm": "high_confidence_first_fraction_0.75", "seed": 42, "best_epoch": 5, "epochs_run": 10, "val_auc": 0.8298682659829738, "val_auprc": 0.5877588792933535, "test_auc": 0.7708474148017248, "test_auprc": 0.6065197369072142, "seconds": 9.629339456558228, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:59:47Z", "completed": 28, "planned": 39, "last": {"split": "original", "arm": "high_confidence_first_fraction_0.75", "seed": 42}}
+original high_confidence_first_fraction_0.75 seed=43 epoch=1 loss=0.79990 val_auc=0.811475
+original high_confidence_first_fraction_0.75 seed=43 epoch=2 loss=0.72234 val_auc=0.816651
+original high_confidence_first_fraction_0.75 seed=43 epoch=3 loss=0.69255 val_auc=0.817564
+original high_confidence_first_fraction_0.75 seed=43 epoch=4 loss=0.67380 val_auc=0.826803
+original high_confidence_first_fraction_0.75 seed=43 epoch=5 loss=0.66154 val_auc=0.826732
+original high_confidence_first_fraction_0.75 seed=43 epoch=6 loss=0.64688 val_auc=0.818407
+original high_confidence_first_fraction_0.75 seed=43 epoch=7 loss=0.63307 val_auc=0.816215
+original high_confidence_first_fraction_0.75 seed=43 epoch=8 loss=0.62144 val_auc=0.815802
+original high_confidence_first_fraction_0.75 seed=43 epoch=9 loss=0.61846 val_auc=0.806351
+FINAL {"split": "original", "arm": "high_confidence_first_fraction_0.75", "seed": 43, "best_epoch": 4, "epochs_run": 9, "val_auc": 0.8268026916404497, "val_auprc": 0.5682012412162435, "test_auc": 0.7801584737711877, "test_auprc": 0.6165936767866559, "seconds": 8.614997148513794, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:59:56Z", "completed": 29, "planned": 39, "last": {"split": "original", "arm": "high_confidence_first_fraction_0.75", "seed": 43}}
+original high_confidence_first_fraction_0.75 seed=44 epoch=1 loss=0.80677 val_auc=0.807771
+original high_confidence_first_fraction_0.75 seed=44 epoch=2 loss=0.72720 val_auc=0.814814
+original high_confidence_first_fraction_0.75 seed=44 epoch=3 loss=0.69362 val_auc=0.817422
+original high_confidence_first_fraction_0.75 seed=44 epoch=4 loss=0.67624 val_auc=0.820135
+original high_confidence_first_fraction_0.75 seed=44 epoch=5 loss=0.65805 val_auc=0.819914
+original high_confidence_first_fraction_0.75 seed=44 epoch=6 loss=0.65318 val_auc=0.817373
+original high_confidence_first_fraction_0.75 seed=44 epoch=7 loss=0.63548 val_auc=0.822751
+original high_confidence_first_fraction_0.75 seed=44 epoch=8 loss=0.62597 val_auc=0.811300
+original high_confidence_first_fraction_0.75 seed=44 epoch=9 loss=0.62026 val_auc=0.818858
+original high_confidence_first_fraction_0.75 seed=44 epoch=10 loss=0.61077 val_auc=0.811901
+original high_confidence_first_fraction_0.75 seed=44 epoch=11 loss=0.60531 val_auc=0.816113
+original high_confidence_first_fraction_0.75 seed=44 epoch=12 loss=0.59911 val_auc=0.805342
+FINAL {"split": "original", "arm": "high_confidence_first_fraction_0.75", "seed": 44, "best_epoch": 7, "epochs_run": 12, "val_auc": 0.8227506834712575, "val_auprc": 0.5747266832017227, "test_auc": 0.7812227335344976, "test_auprc": 0.6233174268749535, "seconds": 11.454952955245972, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T01:00:08Z", "completed": 30, "planned": 39, "last": {"split": "original", "arm": "high_confidence_first_fraction_0.75", "seed": 44}}
+{"phase": "propagation", "time_utc": "2026-11-08T01:00:10Z", "arm": "low_confidence_first_fraction_0.25"}
+original low_confidence_first_fraction_0.25 seed=42 epoch=1 loss=0.80274 val_auc=0.808861
+original low_confidence_first_fraction_0.25 seed=42 epoch=2 loss=0.72208 val_auc=0.806491
+original low_confidence_first_fraction_0.25 seed=42 epoch=3 loss=0.69707 val_auc=0.822166
+original low_confidence_first_fraction_0.25 seed=42 epoch=4 loss=0.67185 val_auc=0.817934
+original low_confidence_first_fraction_0.25 seed=42 epoch=5 loss=0.65722 val_auc=0.831246
+original low_confidence_first_fraction_0.25 seed=42 epoch=6 loss=0.64322 val_auc=0.811356
+original low_confidence_first_fraction_0.25 seed=42 epoch=7 loss=0.63596 val_auc=0.813105
+original low_confidence_first_fraction_0.25 seed=42 epoch=8 loss=0.62432 val_auc=0.803860
+original low_confidence_first_fraction_0.25 seed=42 epoch=9 loss=0.61675 val_auc=0.812842
+original low_confidence_first_fraction_0.25 seed=42 epoch=10 loss=0.61544 val_auc=0.812089
+FINAL {"split": "original", "arm": "low_confidence_first_fraction_0.25", "seed": 42, "best_epoch": 5, "epochs_run": 10, "val_auc": 0.8312463541883413, "val_auprc": 0.5803005179405375, "test_auc": 0.7848874642572917, "test_auprc": 0.6397311580655785, "seconds": 9.426790475845337, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T01:00:23Z", "completed": 31, "planned": 39, "last": {"split": "original", "arm": "low_confidence_first_fraction_0.25", "seed": 42}}
+original low_confidence_first_fraction_0.25 seed=43 epoch=1 loss=0.79938 val_auc=0.811457
+original low_confidence_first_fraction_0.25 seed=43 epoch=2 loss=0.72047 val_auc=0.817569
+original low_confidence_first_fraction_0.25 seed=43 epoch=3 loss=0.69094 val_auc=0.816971
+original low_confidence_first_fraction_0.25 seed=43 epoch=4 loss=0.67378 val_auc=0.827880
+original low_confidence_first_fraction_0.25 seed=43 epoch=5 loss=0.66111 val_auc=0.825695
+original low_confidence_first_fraction_0.25 seed=43 epoch=6 loss=0.64380 val_auc=0.815793
+original low_confidence_first_fraction_0.25 seed=43 epoch=7 loss=0.63201 val_auc=0.816302
+original low_confidence_first_fraction_0.25 seed=43 epoch=8 loss=0.62439 val_auc=0.813532
+original low_confidence_first_fraction_0.25 seed=43 epoch=9 loss=0.61733 val_auc=0.807352
+FINAL {"split": "original", "arm": "low_confidence_first_fraction_0.25", "seed": 43, "best_epoch": 4, "epochs_run": 9, "val_auc": 0.827880203723558, "val_auprc": 0.5666850009229736, "test_auc": 0.7912894467913482, "test_auprc": 0.6344428480134126, "seconds": 8.915282011032104, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T01:00:32Z", "completed": 32, "planned": 39, "last": {"split": "original", "arm": "low_confidence_first_fraction_0.25", "seed": 43}}
+original low_confidence_first_fraction_0.25 seed=44 epoch=1 loss=0.80626 val_auc=0.805889
+original low_confidence_first_fraction_0.25 seed=44 epoch=2 loss=0.72777 val_auc=0.814053
+original low_confidence_first_fraction_0.25 seed=44 epoch=3 loss=0.69483 val_auc=0.812874
+original low_confidence_first_fraction_0.25 seed=44 epoch=4 loss=0.67379 val_auc=0.820453
+original low_confidence_first_fraction_0.25 seed=44 epoch=5 loss=0.65576 val_auc=0.825250
+original low_confidence_first_fraction_0.25 seed=44 epoch=6 loss=0.65173 val_auc=0.814809
+original low_confidence_first_fraction_0.25 seed=44 epoch=7 loss=0.63344 val_auc=0.813944
+original low_confidence_first_fraction_0.25 seed=44 epoch=8 loss=0.62548 val_auc=0.808475
+original low_confidence_first_fraction_0.25 seed=44 epoch=9 loss=0.61495 val_auc=0.814662
+original low_confidence_first_fraction_0.25 seed=44 epoch=10 loss=0.61128 val_auc=0.809579
+FINAL {"split": "original", "arm": "low_confidence_first_fraction_0.25", "seed": 44, "best_epoch": 5, "epochs_run": 10, "val_auc": 0.8252501157292703, "val_auprc": 0.5988212236569959, "test_auc": 0.7927587707240377, "test_auprc": 0.6423136819808706, "seconds": 9.58301067352295, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T01:00:42Z", "completed": 33, "planned": 39, "last": {"split": "original", "arm": "low_confidence_first_fraction_0.25", "seed": 44}}
+{"phase": "propagation", "time_utc": "2026-11-08T01:00:44Z", "arm": "low_confidence_first_fraction_0.50"}
+original low_confidence_first_fraction_0.50 seed=42 epoch=1 loss=0.80306 val_auc=0.809358
+original low_confidence_first_fraction_0.50 seed=42 epoch=2 loss=0.72125 val_auc=0.809632
+original low_confidence_first_fraction_0.50 seed=42 epoch=3 loss=0.69668 val_auc=0.820936
+original low_confidence_first_fraction_0.50 seed=42 epoch=4 loss=0.67107 val_auc=0.817613
+original low_confidence_first_fraction_0.50 seed=42 epoch=5 loss=0.65827 val_auc=0.830135
+original low_confidence_first_fraction_0.50 seed=42 epoch=6 loss=0.64513 val_auc=0.812391
+original low_confidence_first_fraction_0.50 seed=42 epoch=7 loss=0.63916 val_auc=0.810347
+original low_confidence_first_fraction_0.50 seed=42 epoch=8 loss=0.62602 val_auc=0.816766
+original low_confidence_first_fraction_0.50 seed=42 epoch=9 loss=0.61934 val_auc=0.815546
+original low_confidence_first_fraction_0.50 seed=42 epoch=10 loss=0.61057 val_auc=0.824190
+FINAL {"split": "original", "arm": "low_confidence_first_fraction_0.50", "seed": 42, "best_epoch": 5, "epochs_run": 10, "val_auc": 0.8301345291095046, "val_auprc": 0.5902946797039674, "test_auc": 0.7792805922919828, "test_auprc": 0.6312847348887565, "seconds": 10.277543067932129, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T01:00:59Z", "completed": 34, "planned": 39, "last": {"split": "original", "arm": "low_confidence_first_fraction_0.50", "seed": 42}}
+original low_confidence_first_fraction_0.50 seed=43 epoch=1 loss=0.79940 val_auc=0.812814
+original low_confidence_first_fraction_0.50 seed=43 epoch=2 loss=0.72048 val_auc=0.818826
+original low_confidence_first_fraction_0.50 seed=43 epoch=3 loss=0.69096 val_auc=0.820756
+original low_confidence_first_fraction_0.50 seed=43 epoch=4 loss=0.67548 val_auc=0.826723
+original low_confidence_first_fraction_0.50 seed=43 epoch=5 loss=0.66024 val_auc=0.823552
+original low_confidence_first_fraction_0.50 seed=43 epoch=6 loss=0.64645 val_auc=0.817175
+original low_confidence_first_fraction_0.50 seed=43 epoch=7 loss=0.63305 val_auc=0.807783
+original low_confidence_first_fraction_0.50 seed=43 epoch=8 loss=0.62257 val_auc=0.815754
+original low_confidence_first_fraction_0.50 seed=43 epoch=9 loss=0.61846 val_auc=0.803176
+FINAL {"split": "original", "arm": "low_confidence_first_fraction_0.50", "seed": 43, "best_epoch": 4, "epochs_run": 9, "val_auc": 0.8267230004005656, "val_auprc": 0.5680804965473852, "test_auc": 0.7958933284471088, "test_auprc": 0.6371456075286761, "seconds": 8.576108455657959, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T01:01:08Z", "completed": 35, "planned": 39, "last": {"split": "original", "arm": "low_confidence_first_fraction_0.50", "seed": 43}}
+original low_confidence_first_fraction_0.50 seed=44 epoch=1 loss=0.80645 val_auc=0.806644
+original low_confidence_first_fraction_0.50 seed=44 epoch=2 loss=0.72714 val_auc=0.814357
+original low_confidence_first_fraction_0.50 seed=44 epoch=3 loss=0.69409 val_auc=0.817260
+original low_confidence_first_fraction_0.50 seed=44 epoch=4 loss=0.67567 val_auc=0.822027
+original low_confidence_first_fraction_0.50 seed=44 epoch=5 loss=0.65534 val_auc=0.818951
+original low_confidence_first_fraction_0.50 seed=44 epoch=6 loss=0.64689 val_auc=0.815847
+original low_confidence_first_fraction_0.50 seed=44 epoch=7 loss=0.63350 val_auc=0.812677
+original low_confidence_first_fraction_0.50 seed=44 epoch=8 loss=0.62363 val_auc=0.813797
+original low_confidence_first_fraction_0.50 seed=44 epoch=9 loss=0.61410 val_auc=0.815886
+FINAL {"split": "original", "arm": "low_confidence_first_fraction_0.50", "seed": 44, "best_epoch": 4, "epochs_run": 9, "val_auc": 0.8220266783675858, "val_auprc": 0.5620925698738795, "test_auc": 0.7897848435677589, "test_auprc": 0.6359277105217354, "seconds": 9.43979787826538, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T01:01:17Z", "completed": 36, "planned": 39, "last": {"split": "original", "arm": "low_confidence_first_fraction_0.50", "seed": 44}}
+{"phase": "propagation", "time_utc": "2026-11-08T01:01:21Z", "arm": "low_confidence_first_fraction_0.75"}
+original low_confidence_first_fraction_0.75 seed=42 epoch=1 loss=0.80287 val_auc=0.809841
+original low_confidence_first_fraction_0.75 seed=42 epoch=2 loss=0.72091 val_auc=0.806524
+original low_confidence_first_fraction_0.75 seed=42 epoch=3 loss=0.69611 val_auc=0.819184
+original low_confidence_first_fraction_0.75 seed=42 epoch=4 loss=0.67105 val_auc=0.817998
+original low_confidence_first_fraction_0.75 seed=42 epoch=5 loss=0.65649 val_auc=0.827629
+original low_confidence_first_fraction_0.75 seed=42 epoch=6 loss=0.64488 val_auc=0.817032
+original low_confidence_first_fraction_0.75 seed=42 epoch=7 loss=0.63812 val_auc=0.817515
+original low_confidence_first_fraction_0.75 seed=42 epoch=8 loss=0.62624 val_auc=0.816945
+original low_confidence_first_fraction_0.75 seed=42 epoch=9 loss=0.61745 val_auc=0.808722
+original low_confidence_first_fraction_0.75 seed=42 epoch=10 loss=0.61475 val_auc=0.820978
+FINAL {"split": "original", "arm": "low_confidence_first_fraction_0.75", "seed": 42, "best_epoch": 5, "epochs_run": 10, "val_auc": 0.8276292782111636, "val_auprc": 0.5783922443058932, "test_auc": 0.7773018902606659, "test_auprc": 0.6266058835046299, "seconds": 9.418988943099976, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T01:01:34Z", "completed": 37, "planned": 39, "last": {"split": "original", "arm": "low_confidence_first_fraction_0.75", "seed": 42}}
+original low_confidence_first_fraction_0.75 seed=43 epoch=1 loss=0.79912 val_auc=0.812290
+original low_confidence_first_fraction_0.75 seed=43 epoch=2 loss=0.72054 val_auc=0.818039
+original low_confidence_first_fraction_0.75 seed=43 epoch=3 loss=0.69109 val_auc=0.820972
+original low_confidence_first_fraction_0.75 seed=43 epoch=4 loss=0.67319 val_auc=0.825784
+original low_confidence_first_fraction_0.75 seed=43 epoch=5 loss=0.65738 val_auc=0.832136
+original low_confidence_first_fraction_0.75 seed=43 epoch=6 loss=0.64428 val_auc=0.820325
+original low_confidence_first_fraction_0.75 seed=43 epoch=7 loss=0.63043 val_auc=0.822292
+original low_confidence_first_fraction_0.75 seed=43 epoch=8 loss=0.62191 val_auc=0.823581
+original low_confidence_first_fraction_0.75 seed=43 epoch=9 loss=0.61914 val_auc=0.815498
+original low_confidence_first_fraction_0.75 seed=43 epoch=10 loss=0.60837 val_auc=0.826663
+FINAL {"split": "original", "arm": "low_confidence_first_fraction_0.75", "seed": 43, "best_epoch": 5, "epochs_run": 10, "val_auc": 0.8321364542124668, "val_auprc": 0.5803275086552816, "test_auc": 0.8069269630428196, "test_auprc": 0.6670583511669073, "seconds": 9.843408346176147, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T01:01:44Z", "completed": 38, "planned": 39, "last": {"split": "original", "arm": "low_confidence_first_fraction_0.75", "seed": 43}}
+original low_confidence_first_fraction_0.75 seed=44 epoch=1 loss=0.80601 val_auc=0.807195
+original low_confidence_first_fraction_0.75 seed=44 epoch=2 loss=0.72541 val_auc=0.814671
+original low_confidence_first_fraction_0.75 seed=44 epoch=3 loss=0.69318 val_auc=0.816574
+original low_confidence_first_fraction_0.75 seed=44 epoch=4 loss=0.67369 val_auc=0.822479
+original low_confidence_first_fraction_0.75 seed=44 epoch=5 loss=0.65523 val_auc=0.822775
+original low_confidence_first_fraction_0.75 seed=44 epoch=6 loss=0.65140 val_auc=0.823622
+original low_confidence_first_fraction_0.75 seed=44 epoch=7 loss=0.63304 val_auc=0.820290
+original low_confidence_first_fraction_0.75 seed=44 epoch=8 loss=0.62590 val_auc=0.812713
+original low_confidence_first_fraction_0.75 seed=44 epoch=9 loss=0.61398 val_auc=0.820010
+original low_confidence_first_fraction_0.75 seed=44 epoch=10 loss=0.60822 val_auc=0.809303
+original low_confidence_first_fraction_0.75 seed=44 epoch=11 loss=0.60443 val_auc=0.813007
+FINAL {"split": "original", "arm": "low_confidence_first_fraction_0.75", "seed": 44, "best_epoch": 6, "epochs_run": 11, "val_auc": 0.8236223801460199, "val_auprc": 0.5949577225421843, "test_auc": 0.7856793814718068, "test_auprc": 0.6373289535837684, "seconds": 10.339298248291016, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T01:01:55Z", "completed": 39, "planned": 39, "last": {"split": "original", "arm": "low_confidence_first_fraction_0.75", "seed": 44}}
+{"phase": "training_complete", "time_utc": "2026-11-08T01:01:55Z", "completed": 39, "planned": 39}
+homology paired protein bootstrap 500
+homology paired protein bootstrap 1000
+homology paired protein bootstrap 1500
+homology paired protein bootstrap 2000
+original ablation paired protein bootstrap 500
+original ablation paired protein bootstrap 1000
+original ablation paired protein bootstrap 1500
+original ablation paired protein bootstrap 2000
+   split                                 arm  n  auc_mean   auc_sd  auprc_mean  auprc_sd
+homology                            full_FPP  3  0.757082 0.002244    0.275148  0.002230
+homology                             raw_ESM  3  0.728763 0.003862    0.246395  0.004016
+original                    edge_ablated_FPP  3  0.769441 0.003067    0.603474  0.005570
+original                            full_FPP  3  0.794988 0.001616    0.648510  0.011676
+original high_confidence_first_fraction_0.25  3  0.789202 0.001048    0.639728  0.008664
+original high_confidence_first_fraction_0.50  3  0.784383 0.000692    0.632309  0.004622
+original high_confidence_first_fraction_0.75  3  0.777409 0.005705    0.615603  0.008455
+original  low_confidence_first_fraction_0.25  3  0.789652 0.004184    0.638909  0.004057
+original  low_confidence_first_fraction_0.50  3  0.788318 0.008396    0.634980  0.002984
+original  low_confidence_first_fraction_0.75  3  0.789964 0.015268    0.643817  0.020925
+original   random_pair_removal_fraction_0.25  3  0.792875 0.010778    0.644811  0.012120
+original   random_pair_removal_fraction_0.50  3  0.785669 0.008946    0.636168  0.013371
+original   random_pair_removal_fraction_0.75  3  0.785847 0.006982    0.634974  0.003883
+{
+  "comparison": "full_FPP minus edge_ablated_FPP",
+  "point_estimates_from": "float64 means of three canonical node-mapped probability arrays",
+  "delta_auc": 0.02640565911690307,
+  "delta_auprc": 0.05647264283361164,
+  "auc_ci95": [
+    0.007845942714300553,
+    0.052051251184287745
+  ],
+  "auprc_ci95": [
+    0.019647152964572485,
+    0.07779023446434315
+  ],
+  "resamples": 2000,
+  "valid_resamples": 2000,
+  "seed": 20261024,
+  "resampling_unit": "STRING protein: all variants with sampled multiplicity, identical weights for both models",
+  "proteins": 1413,
+  "variants": 18220,
+  "positive_variants": 5822,
+  "interval": "2.5/97.5 percentile of paired bootstrap differences",
+  "scope": "Conditional on fitted models and frozen graph; no retraining or graph-sampling uncertainty; no multiplicity adjustment",
+  "weights_sha256": "740ded7fb0a6222d4b92014567e8aae02d976a01367241feb1f298adac970a23",
+  "independent_sklearn_weighted_checks": [
+    {
+      "replicate": 0,
+      "max_abs_error": 2.220446049250313e-16
+    },
+    {
+      "replicate": 1,
+      "max_abs_error": 2.220446049250313e-16
+    },
+    {
+      "replicate": 2,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "replicate": 499,
+      "max_abs_error": 0.0
+    },
+    {
+      "replicate": 999,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "replicate": 1499,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "replicate": 1999,
+      "max_abs_error": 1.1102230246251565e-16
+    }
+  ]
+}

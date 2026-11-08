@@ -1,0 +1,13 @@
+{
+  "split": "original",
+  "arm": "low_confidence_first_fraction_0.75",
+  "seed": 44,
+  "best_epoch": 6,
+  "epochs_run": 11,
+  "val_auc": 0.8236223801460199,
+  "val_auprc": 0.5949577225421843,
+  "test_auc": 0.7856793814718068,
+  "test_auprc": 0.6373289535837684,
+  "seconds": 10.339298248291016,
+  "dim": 1280
+}

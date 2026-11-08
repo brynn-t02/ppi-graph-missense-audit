@@ -1,0 +1,11 @@
+BIBM 2026 Workshop 累计候选稿v8：均值、集成差值和误差线说明
+日期：2026年11月8日；在刚完成的v7上继续，旧版保留。
+
+1. Figure1D第二行标注由“ΔAUC +0.0264”改为“Ensemble ΔAUC +0.0264”。第一行Full − edge-ablated不动；数值仍为实际集成预测AUC差+0.0264，没有改成两根均值柱相减。沿用已嵌入字体7.4pt，仅按新增文字长度保持居中。300dpi检查文字框外0像素变化；柱高、误差线、数据、颜色、其他面板均不动。
+2. Figure1C图注改为“C, Paired ensemble differences with 95% intervals from variant-level and protein-clustered bootstrap resampling.”，明确区间为95%。
+3. Figure1图注统一说明“Bars in B, D and F show mean metrics with sample standard deviations; for the permutation control, the pooled standard deviation reflects variation across graph permutations and classifier seeds.”。删去B中重复的误差线定义。实际F置换臂为3张图×3种子共9次指标的合并sample SD（ddof=1）；不是图均值的SD，也不是标准误或置信区间。E关于每个条件固定图、三种子模型AUC样本SD和共享端点的现有说明原样保留。
+4. Figure2E图注按指定文本增加“bars show mean metrics and error bars denote sample standard deviations”。图形及数据不改。
+5. 可选Discussion句已试排：加入会形成9页，省略后为8页。因此按本轮条件不添加；Results中的完整同源纯表征报告保留，Discussion原有融合比较与限制全部不动。
+
+核查：主文只4个精确图注文本替换，加Figure1D一个文字块。全部实验数值与预测/统计文件保持原样；正文数字序列只新增图注的95%区间水平。Figure2–5图件、补充Markdown及21页补充PDF均与v7字节一致。没有新训练、推理、bootstrap、服务器访问或大文件下载。主文8页含参考文献，全部8页已渲染检查，无新增遮挡/裁切，字体全部嵌入。未调整字号、边距或图尺寸。
+新稿仍需在选定终稿后重新做PDF eXpress检查，本轮未进行会议提交。修改源文件、精确前后差异和核查记录随版本归档；旧版与全部实验原始记录保留。

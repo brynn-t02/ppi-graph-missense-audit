@@ -1,0 +1,28 @@
+{
+  "status": "source_review_passed",
+  "files_sha256": {
+    "README_EXECUTION.md": "aac8d545d576e76e64a7d8c04ebca54d97bf76c9a69697216af5437bbb8a1f36",
+    "amendment_manifest.json": "544eb8a1a361026d04504cecc0326d714aa07665785c3c0c7faadbed4cf5447a",
+    "analyze_unified.py": "7c65fab3abd2fccf10e0e63788b4fa783a458bdf35b42bfb12d23e58db963ed4",
+    "execute_pipeline.py": "71eb57a565bab1bc35cc430e6167fbf13301a15eae42e42a633be6fb484bd0d3",
+    "input_manifest.json": "8ad91484c485f56b17ecfabb574ab94a1d875d1be673bf167a0f166927959907",
+    "matched_training_core.py": "ce23510c8160446d9abb81e7812717e431a51f87ea52ddf95865906cb9bb7377",
+    "pair_selection_original.py": "14557f52c4535e054b5e4e7c5f90a429abf14634525cfa3418f5cd8bc4b952df",
+    "protocol.json": "061ad9405f8a81f906c64e8965edfb8f48a6bf3b4d70124d2616e5815436f705",
+    "run_unified.py": "02fda7447cf682c6e5f022fd98ab72a6e132c931205e675273c6ae1a668909cc",
+    "source_provenance.json": "e00525048060346b9fcbae2cce24af0ab61b209076728394f69f6c1c88c43cb0"
+  },
+  "unchanged_training_propagation_selection_core": true,
+  "v1_preserved": true,
+  "first_tensor_and_six_runs_hard_hash_locked": true,
+  "full_exact_metric_reproduction_gate_preserved": true,
+  "ablated_numerical_input_gate_replaces_unattained_exact_reproduction": true,
+  "all_six_exact_reproduction_explicitly_false": true,
+  "bootstrap_comparisons": [
+    "homology/full_FPP minus raw_ESM",
+    "original/full_FPP minus edge_ablated_FPP"
+  ],
+  "bootstrap_draws_per_comparison": 2000,
+  "pipeline_can_resume_existing_first_six_without_refitting": true,
+  "pending": "Server direct mathgate for FIRSTtensor and execution results"
+}

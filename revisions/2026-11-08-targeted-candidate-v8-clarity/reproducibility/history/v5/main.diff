@@ -1,0 +1,49 @@
+--- v4/source/main.tex
++++ v5/source/main.tex
+@@ -160,7 +160,7 @@
+ 
+ \subsection{Graph augmentation reshapes false-negative and false-positive predictions differently}
+ 
+-At a threshold of 0.5, the three-seed raw-ESM and full-FPP ensembles were jointly correct for 12,520 test variants and jointly wrong for 3,747. Full FPP corrected 960 predictions and degraded 993: 366 false negatives were rescued and 594 false positives suppressed, while 958 true negatives became false positives and 35 true positives became false negatives (Fig. 4A). The net change was 33 additional classification errors at this threshold.
++At a threshold of 0.5, the three-seed raw-ESM and full-FPP ensembles were jointly correct for 12,520 test variants and jointly wrong for 3,747. Full FPP corrected 960 predictions and degraded 993: 366 false negatives were rescued and 594 false positives suppressed, while 958 true negatives became false positives and 35 true positives became false negatives (Fig. 4A). The net change was 33 additional classification errors at this threshold. Thus, the higher AUC and AUPRC point estimates did not translate into fewer classification errors at the fixed threshold of 0.5.
+ 
+ The architecture-matched \CADDAM{} and full-FPP fusion ensembles were jointly correct for 16,055 variants and jointly wrong for 1,262. Fusion corrected 679 predictions (170 rescued false negatives and 509 suppressed false positives) and degraded 224 (99 new false positives and 125 new false negatives), reducing the total errors by 455 (Fig. 4B).
+ 
+@@ -169,7 +169,7 @@
+ \begin{figure*}[!p]
+ \centering
+ \includegraphics[width=0.98\textwidth]{figure_drafts/Figure4_prediction_transitions_matched_ensembles.pdf}
+-\caption{Prediction transitions and descriptive topology profiles from matched model ensembles. A--B, Prediction transitions for raw ESM versus full FPP and CADD+AlphaMissense versus full-FPP fusion at a decision threshold of 0.5. C--D, Row-centered and range-scaled topology-feature means for rescued false negatives and suppressed false positives. E, Directional differences in feature means between the corrected groups. F, Descriptive Hedges' \textit{g} comparing rescued and persistent false negatives within baseline false-negative cases. The topology-feature analyses are descriptive; repeated variants within proteins limit statistical inference. In C--D, warm/blue colors denote means above/below the within-row mean; color magnitudes are not comparable across features. In E, blue/orange denotes higher means among rescued false negatives/suppressed false positives; in F, blue/orange denotes positive/negative effects.}
++\caption{Prediction transitions and descriptive topology profiles from matched model ensembles. A--B, Prediction transitions at a threshold of 0.5 using mean probabilities across three classifier seeds per model: raw ESM versus full FPP (A), and CADD+AlphaMissense versus full-FPP fusion (B). C--D, Row-centered and range-scaled topology-feature means for rescued false negatives and suppressed false positives. E, Directional differences in feature means between the corrected groups. F, Descriptive Hedges' \textit{g} comparing false negatives rescued by full FPP with persistent false negatives within the raw-ESM baseline false-negative group. The topology-feature analyses are descriptive; repeated variants within proteins limit statistical inference. In C--D, warm/blue colors denote means above/below the within-row mean; color magnitudes are not comparable across features. In E, blue/orange denotes higher means among rescued false negatives/suppressed false positives; in F, blue/orange denotes positive/negative effects.}
+ \label{fig:prediction_transitions}
+ \end{figure*}
+ 
+@@ -189,11 +189,11 @@
+ 
+ \section{Discussion}
+ 
+-PPI graph augmentation improved benchmark performance in the shared-graph evaluation, with effects that varied by evaluation design and baseline choice. The historical and matched audits show sensitivity to graph connectivity, but protein-level uncertainty limits the full-versus-raw claim. With \CADDAM{} included, protein-representation controls retained much of the gain, while the current real-minus-raw fusion margin was small and positive. These results support representation complementarity with a limited additional STRING margin under the original split.
+-
+-Under the homology-aware split, the historical graph-fusion point was below the repeated score baseline, but the current matched graph-versus-score interval spanned zero. Additional input weights, redundant high-dimensional features, overfitting, feature scaling and changed protein composition are possible explanations for weaker fusion; these mechanisms were not experimentally separated. The prevalence shift limits cross-split AUPRC comparisons.
+-
+-Graph propagation changed predictions in heterogeneous topology contexts. The observed profiles may reflect densely connected functional neighbourhoods or boundary-like network roles, but their post-hoc selection requires independent confirmation. External HUMSAVAR validation supports STRING transfer under the stated exclusions; BioGRID's uncertain incremental gains limit generalization across networks. Both databases may share underlying evidence, and the networks overlap. This is not independent-patient or prospective validation.
++Under the original protein-level split, full FPP achieved higher mean AUC and AUPRC than raw ESM, although the protein-clustered confidence interval for the ensemble AUC gain included zero. Removing direct train-test connections reduced performance under matched training settings, indicating connectivity sensitivity without isolating the effect of direct edges from changes in graph normalization. With CADD+AlphaMissense included, much of the fusion improvement was also observed after adding raw ESM, while full FPP provided a smaller additional increment over raw-ESM fusion (ensemble $\Delta$AUC +0.0032, 95\% CI [+0.0008, +0.0062]). These findings support protein-representation complementarity, with a limited additional contribution from STRING graph context under the original split.
++
++Under the homology-aware split, full-FPP fusion improved over raw-ESM fusion (ensemble $\Delta$AUC +0.0027, protein-clustered 95\% CI [+0.0015, +0.0040]) but did not establish a clear advantage over the architecture-matched CADD+AlphaMissense baseline ($\Delta$AUC +0.0001, 95\% CI [$-$0.0019, +0.0020]). Redundant high-dimensional features, additional input-layer parameters, overfitting, feature scaling and differences in protein composition may contribute to the limited incremental benefit; these explanations were not tested individually. The difference in test-set positive prevalence also limits direct AUPRC comparisons between the original and homology-aware splits.
++
++The matched ensembles showed different error trade-offs at the same decision threshold. At 0.5, full FPP produced 33 more classification errors than raw ESM despite higher AUC and AUPRC point estimates, whereas full-FPP fusion produced 455 fewer errors than the score-only baseline (Fig. 4A,B). Ranking improvements therefore did not uniformly translate into fewer threshold-specific errors. The topology profiles describe differences between error-transition groups rather than established correction mechanisms. External HUMSAVAR evaluation supports transfer of STRING-based representations under the specified exclusions, while BioGRID's external gains over raw ESM and incremental fusion gains over raw-embedding fusion remained uncertain. HUMSAVAR and ClinVar may share annotation evidence, and STRING and BioGRID overlap; these comparisons do not constitute independent-patient or prospective validation.
+ 
+ The evaluation has several constraints. ClinVar labels may reflect submission bias and future updates \cite{Landrum2020ClinVar}. Unknown development-data overlap for CADD and AlphaMissense limits prospective interpretation. Protein-level mapping omits isoform and residue-specific effects. STRING associations extend beyond direct physical interactions \cite{Szklarczyk2023STRING}; transductive propagation and direct-edge ablation retain indirect cross-partition paths. Outputs from class-weighted training are not calibrated clinical probabilities, and transition counts depend on the chosen threshold. The external set excludes specified variants/proteins but not all homologues or shared annotation evidence; external clinical-score fusion was not evaluated. These findings concern fixed propagation and should not be generalized to trained graph neural networks.
+ 
+@@ -206,9 +206,8 @@
+ 
+ \section*{Acknowledgment}
+ 
+-OpenAI ChatGPT, OpenAI Codex and Anthropic Claude assisted with literature organization, code development for the Methods and Results analyses, and manuscript language editing. AI-assisted scripts supported environment restoration, model fitting, data checks and statistical analysis. The authors take responsibility for reviewing the code, outputs, interpretation, references and final manuscript.
+-
+-\IEEEtriggeratref{16}
++OpenAI ChatGPT, OpenAI Codex and Anthropic Claude assisted with literature organization, code development, manuscript language editing, and scripts for environment restoration, model fitting. We take responsibility for study design, experimental execution and verification, code review, result interpretation, reference checking and the final manuscript.
++
+ \begin{thebibliography}{99}
+ \bibitem{Kircher2014CADD} M. Kircher et al., ``A general framework for estimating the relative pathogenicity of human genetic variants,'' \emph{Nature Genetics}, vol. 46, pp. 310--315, 2014, doi: 10.1038/ng.2892.
+ \bibitem{Ioannidis2016REVEL} N. M. Ioannidis et al., ``REVEL: an ensemble method for predicting the pathogenicity of rare missense variants,'' \emph{American Journal of Human Genetics}, vol. 99, pp. 877--885, 2016, doi: 10.1016/j.ajhg.2016.08.016.

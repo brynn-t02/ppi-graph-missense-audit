@@ -1,0 +1,451 @@
+{
+  "status": "passed",
+  "result_directory": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/remaining_unification_20261108/results/outputs",
+  "classifier_runs": 39,
+  "canonical_arms": 13,
+  "curve_display_conditions": 15,
+  "curve_unique_conditions": 11,
+  "seed_metric_checks": 39,
+  "ensemble_checks": 13,
+  "all_prediction_ID_label_protein_and_split_checks": true,
+  "same_protein_scores_constant": true,
+  "float64_ensemble_exact": true,
+  "sample_SD_ddof": 1,
+  "history_checks": [
+    {
+      "split": "original",
+      "arm": "full_FPP",
+      "seed": 42,
+      "best_epoch": 5,
+      "epochs_run": 10
+    },
+    {
+      "split": "original",
+      "arm": "full_FPP",
+      "seed": 43,
+      "best_epoch": 4,
+      "epochs_run": 9
+    },
+    {
+      "split": "original",
+      "arm": "full_FPP",
+      "seed": 44,
+      "best_epoch": 9,
+      "epochs_run": 14
+    },
+    {
+      "split": "original",
+      "arm": "edge_ablated_FPP",
+      "seed": 42,
+      "best_epoch": 5,
+      "epochs_run": 10
+    },
+    {
+      "split": "original",
+      "arm": "edge_ablated_FPP",
+      "seed": 43,
+      "best_epoch": 4,
+      "epochs_run": 9
+    },
+    {
+      "split": "original",
+      "arm": "edge_ablated_FPP",
+      "seed": 44,
+      "best_epoch": 5,
+      "epochs_run": 10
+    },
+    {
+      "split": "homology",
+      "arm": "raw_ESM",
+      "seed": 42,
+      "best_epoch": 1,
+      "epochs_run": 6
+    },
+    {
+      "split": "homology",
+      "arm": "raw_ESM",
+      "seed": 43,
+      "best_epoch": 1,
+      "epochs_run": 6
+    },
+    {
+      "split": "homology",
+      "arm": "raw_ESM",
+      "seed": 44,
+      "best_epoch": 1,
+      "epochs_run": 6
+    },
+    {
+      "split": "homology",
+      "arm": "full_FPP",
+      "seed": 42,
+      "best_epoch": 1,
+      "epochs_run": 6
+    },
+    {
+      "split": "homology",
+      "arm": "full_FPP",
+      "seed": 43,
+      "best_epoch": 2,
+      "epochs_run": 7
+    },
+    {
+      "split": "homology",
+      "arm": "full_FPP",
+      "seed": 44,
+      "best_epoch": 2,
+      "epochs_run": 7
+    },
+    {
+      "split": "original",
+      "arm": "random_pair_removal_fraction_0.25",
+      "seed": 42,
+      "best_epoch": 5,
+      "epochs_run": 10
+    },
+    {
+      "split": "original",
+      "arm": "random_pair_removal_fraction_0.25",
+      "seed": 43,
+      "best_epoch": 4,
+      "epochs_run": 9
+    },
+    {
+      "split": "original",
+      "arm": "random_pair_removal_fraction_0.25",
+      "seed": 44,
+      "best_epoch": 7,
+      "epochs_run": 12
+    },
+    {
+      "split": "original",
+      "arm": "random_pair_removal_fraction_0.50",
+      "seed": 42,
+      "best_epoch": 5,
+      "epochs_run": 10
+    },
+    {
+      "split": "original",
+      "arm": "random_pair_removal_fraction_0.50",
+      "seed": 43,
+      "best_epoch": 5,
+      "epochs_run": 10
+    },
+    {
+      "split": "original",
+      "arm": "random_pair_removal_fraction_0.50",
+      "seed": 44,
+      "best_epoch": 6,
+      "epochs_run": 11
+    },
+    {
+      "split": "original",
+      "arm": "random_pair_removal_fraction_0.75",
+      "seed": 42,
+      "best_epoch": 5,
+      "epochs_run": 10
+    },
+    {
+      "split": "original",
+      "arm": "random_pair_removal_fraction_0.75",
+      "seed": 43,
+      "best_epoch": 4,
+      "epochs_run": 9
+    },
+    {
+      "split": "original",
+      "arm": "random_pair_removal_fraction_0.75",
+      "seed": 44,
+      "best_epoch": 9,
+      "epochs_run": 14
+    },
+    {
+      "split": "original",
+      "arm": "high_confidence_first_fraction_0.25",
+      "seed": 42,
+      "best_epoch": 5,
+      "epochs_run": 10
+    },
+    {
+      "split": "original",
+      "arm": "high_confidence_first_fraction_0.25",
+      "seed": 43,
+      "best_epoch": 4,
+      "epochs_run": 9
+    },
+    {
+      "split": "original",
+      "arm": "high_confidence_first_fraction_0.25",
+      "seed": 44,
+      "best_epoch": 7,
+      "epochs_run": 12
+    },
+    {
+      "split": "original",
+      "arm": "high_confidence_first_fraction_0.50",
+      "seed": 42,
+      "best_epoch": 5,
+      "epochs_run": 10
+    },
+    {
+      "split": "original",
+      "arm": "high_confidence_first_fraction_0.50",
+      "seed": 43,
+      "best_epoch": 4,
+      "epochs_run": 9
+    },
+    {
+      "split": "original",
+      "arm": "high_confidence_first_fraction_0.50",
+      "seed": 44,
+      "best_epoch": 7,
+      "epochs_run": 12
+    },
+    {
+      "split": "original",
+      "arm": "high_confidence_first_fraction_0.75",
+      "seed": 42,
+      "best_epoch": 5,
+      "epochs_run": 10
+    },
+    {
+      "split": "original",
+      "arm": "high_confidence_first_fraction_0.75",
+      "seed": 43,
+      "best_epoch": 4,
+      "epochs_run": 9
+    },
+    {
+      "split": "original",
+      "arm": "high_confidence_first_fraction_0.75",
+      "seed": 44,
+      "best_epoch": 7,
+      "epochs_run": 12
+    },
+    {
+      "split": "original",
+      "arm": "low_confidence_first_fraction_0.25",
+      "seed": 42,
+      "best_epoch": 5,
+      "epochs_run": 10
+    },
+    {
+      "split": "original",
+      "arm": "low_confidence_first_fraction_0.25",
+      "seed": 43,
+      "best_epoch": 4,
+      "epochs_run": 9
+    },
+    {
+      "split": "original",
+      "arm": "low_confidence_first_fraction_0.25",
+      "seed": 44,
+      "best_epoch": 5,
+      "epochs_run": 10
+    },
+    {
+      "split": "original",
+      "arm": "low_confidence_first_fraction_0.50",
+      "seed": 42,
+      "best_epoch": 5,
+      "epochs_run": 10
+    },
+    {
+      "split": "original",
+      "arm": "low_confidence_first_fraction_0.50",
+      "seed": 43,
+      "best_epoch": 4,
+      "epochs_run": 9
+    },
+    {
+      "split": "original",
+      "arm": "low_confidence_first_fraction_0.50",
+      "seed": 44,
+      "best_epoch": 4,
+      "epochs_run": 9
+    },
+    {
+      "split": "original",
+      "arm": "low_confidence_first_fraction_0.75",
+      "seed": 42,
+      "best_epoch": 5,
+      "epochs_run": 10
+    },
+    {
+      "split": "original",
+      "arm": "low_confidence_first_fraction_0.75",
+      "seed": 43,
+      "best_epoch": 5,
+      "epochs_run": 10
+    },
+    {
+      "split": "original",
+      "arm": "low_confidence_first_fraction_0.75",
+      "seed": 44,
+      "best_epoch": 6,
+      "epochs_run": 11
+    }
+  ],
+  "bootstrap_replays": 4000,
+  "original_ablation_delta": [
+    0.02640565911690307,
+    0.05647264283361164
+  ],
+  "original_ablation_ci": [
+    [
+      0.007845942714300549,
+      0.01964715296457238
+    ],
+    [
+      0.052051251184287856,
+      0.07779023446434304
+    ]
+  ],
+  "original_bootstrap_weights_sha256": "740ded7fb0a6222d4b92014567e8aae02d976a01367241feb1f298adac970a23",
+  "explicit_expanded_row_checks": [
+    0,
+    1,
+    2,
+    499,
+    999,
+    1499,
+    1999
+  ],
+  "bootstrap_weights_sha256": "5cbec064ae74ff5d7f95a9f75541a035213b9a33fc99d5311ca8c94eab9b261f",
+  "bootstrap_valid": 2000,
+  "homology_delta": [
+    0.02883282200292514,
+    0.03035733282811981
+  ],
+  "homology_ci": [
+    [
+      0.01847447125509307,
+      0.013067451828878718
+    ],
+    [
+      0.0403448842898075,
+      0.05540343410076322
+    ]
+  ],
+  "max_absolute_metric_difference": 4.440892098500626e-16,
+  "arms": [
+    {
+      "split": "homology",
+      "arm": "full_FPP",
+      "seeds": 3,
+      "variants": 18220,
+      "proteins": 3438,
+      "auc_mean": 0.7570816167787817,
+      "auprc_mean": 0.2751480744329832
+    },
+    {
+      "split": "homology",
+      "arm": "raw_ESM",
+      "seeds": 3,
+      "variants": 18220,
+      "proteins": 3438,
+      "auc_mean": 0.7287633571460891,
+      "auprc_mean": 0.24639472691238498
+    },
+    {
+      "split": "original",
+      "arm": "edge_ablated_FPP",
+      "seeds": 3,
+      "variants": 18220,
+      "proteins": 1413,
+      "auc_mean": 0.7694409165923212,
+      "auprc_mean": 0.6034741864711016
+    },
+    {
+      "split": "original",
+      "arm": "full_FPP",
+      "seeds": 3,
+      "variants": 18220,
+      "proteins": 1413,
+      "auc_mean": 0.7949876719439998,
+      "auprc_mean": 0.6485095505690933
+    },
+    {
+      "split": "original",
+      "arm": "high_confidence_first_fraction_0.25",
+      "seeds": 3,
+      "variants": 18220,
+      "proteins": 1413,
+      "auc_mean": 0.7892020621928896,
+      "auprc_mean": 0.6397278196886269
+    },
+    {
+      "split": "original",
+      "arm": "high_confidence_first_fraction_0.50",
+      "seeds": 3,
+      "variants": 18220,
+      "proteins": 1413,
+      "auc_mean": 0.7843827388042016,
+      "auprc_mean": 0.6323092845691772
+    },
+    {
+      "split": "original",
+      "arm": "high_confidence_first_fraction_0.75",
+      "seeds": 3,
+      "variants": 18220,
+      "proteins": 1413,
+      "auc_mean": 0.7774094968313706,
+      "auprc_mean": 0.6156025823718937
+    },
+    {
+      "split": "original",
+      "arm": "low_confidence_first_fraction_0.25",
+      "seeds": 3,
+      "variants": 18220,
+      "proteins": 1413,
+      "auc_mean": 0.7896517363433008,
+      "auprc_mean": 0.6389091930979147
+    },
+    {
+      "split": "original",
+      "arm": "low_confidence_first_fraction_0.50",
+      "seeds": 3,
+      "variants": 18220,
+      "proteins": 1413,
+      "auc_mean": 0.7883177085720267,
+      "auprc_mean": 0.6349798304279001
+    },
+    {
+      "split": "original",
+      "arm": "low_confidence_first_fraction_0.75",
+      "seeds": 3,
+      "variants": 18220,
+      "proteins": 1413,
+      "auc_mean": 0.7899638261081142,
+      "auprc_mean": 0.6438172583537684
+    },
+    {
+      "split": "original",
+      "arm": "random_pair_removal_fraction_0.25",
+      "seeds": 3,
+      "variants": 18220,
+      "proteins": 1413,
+      "auc_mean": 0.7928747843827827,
+      "auprc_mean": 0.6448114158973953
+    },
+    {
+      "split": "original",
+      "arm": "random_pair_removal_fraction_0.50",
+      "seeds": 3,
+      "variants": 18220,
+      "proteins": 1413,
+      "auc_mean": 0.7856688731890079,
+      "auprc_mean": 0.6361682055099723
+    },
+    {
+      "split": "original",
+      "arm": "random_pair_removal_fraction_0.75",
+      "seeds": 3,
+      "variants": 18220,
+      "proteins": 1413,
+      "auc_mean": 0.7858474747435005,
+      "auprc_mean": 0.6349743463333429
+    }
+  ],
+  "actual_graph_summary_same_as_original": true
+}

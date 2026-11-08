@@ -1,0 +1,11 @@
+{
+  "panel_A_title_once": true,
+  "panel_F_label_protein_bootstrap": true,
+  "no_original_stronger_C_title": true,
+  "six_current_panel_titles": true,
+  "final300dpi_visual_QA": "All six panels inspected; no clipped title, tick labels, bars or intervals; original four selected groups retained.",
+  "canvas_dimensions_px": [
+    3980,
+    2181
+  ]
+}

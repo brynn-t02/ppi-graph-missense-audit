@@ -1,0 +1,11 @@
+{
+  "source": {
+    "edge_array_sha256": "8a311f1962c0b385906ee047b4fd12be1b2c62917bf5e22668bc7888cbfe51e6",
+    "operator": "A=(edge+I)+(edge+I)^T; weighted row degree; (X+SX+S^2X)/3"
+  },
+  "sha256": "e795c109b5249e7644d42e027390d595ee1ec6c3ca0d94f29c1214d59d2174ca",
+  "shape": [
+    19622,
+    1280
+  ]
+}

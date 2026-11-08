@@ -1,0 +1,60 @@
+{
+  "amendment_id": "remaining_unification_v2_first_tensor_frozen",
+  "reason": "Strict cross-server numerical replication gate failed for regenerated edge-ablated features, while all three frozen-full fits reproduced exact complete histories. Independently checked common operator and pair mask remain unchanged. Repeated same-server propagation generated non-bitwise-identical floating-point features. Preserve the FIRST generated tensor and FIRST three fits, without choosing by test or validation outcomes. All current pure-representation ablation summaries use these fixed runs, includingFigure1Dand1E. Fusion comparisons retain their earlier frozen tensors/predictions.",
+  "first_tensor_sha256": "3915bffdcf3940bd4ade55f8a9c28edd872f3b47701f0c0e0cfa636ec4c81242",
+  "old_tensor_sha256": "52aaf62c2549e10b301b919644f51d614c888cd4e13a7ddeab2b6aee3040004c",
+  "first_six_runs": [
+    {
+      "arm": "full_FPP",
+      "seed": 42,
+      "checkpoint_sha256": "b208b66ed92c9ec609f1b3ebb5550218aadd720b089745fcafd1761ec2dcfcdd",
+      "canonical_node_prediction_sha256": "3b30ec6d42931d8f533edb3e40bcef3ca9601f027e1d678f8dfa6f7280ef2b4b",
+      "metrics_sha256": "8a3ee7a7a623ee150e1741bfb6d9092522f59604e3d93de7f9e6845c97b99141",
+      "history_sha256": "3a180545bff44af1c653b5e64713e8c9c11f4e38d917dcf7702dda32fc4aacc7"
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 43,
+      "checkpoint_sha256": "a4472bcfac34fab4354a1930ed12cae524eb37572c1579da29075147c114293f",
+      "canonical_node_prediction_sha256": "2685fd91a90d81a1de07d7366d63cb49daa1f0b4143c6d135a551ee56c7a9624",
+      "metrics_sha256": "10699830eb396eb8941990343c7588c6715315de026d7c277c735acc8562c5e9",
+      "history_sha256": "396255507059a4a13c119b8e2e1130b5f41caa9a2a7468a75f060766971c4f8d"
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 44,
+      "checkpoint_sha256": "ec440fd5490a88aa96e964c3503f24c77413f79019b723de3d6ba5c3a461a0e0",
+      "canonical_node_prediction_sha256": "485919a0f5feb4c8a0adca7d7457b6637ab763d8fbbf2ba548589d3cd92991d2",
+      "metrics_sha256": "dfe421a7c548967218971c7f1c39ee51a765b25ba33186558f7cf96e7f1bbc4b",
+      "history_sha256": "bdb3e82994f3c121ba1f9661aa1b0b968c70abef028708a31bd6589d176217f6"
+    },
+    {
+      "arm": "edge_ablated_FPP",
+      "seed": 42,
+      "checkpoint_sha256": "04e1b0efb95e631b53b1ed3edf9d9cf67337724affa2bd87116b6b355e1aa653",
+      "canonical_node_prediction_sha256": "bd0c7d780a6026b5701acc2407dc203c96bf97df7d14a128d36c2bcded0d5f26",
+      "metrics_sha256": "863ebb3c6bad5cbbdf72490d6c93d0a893bc16792af572cac6f4a3cf0c9e22c9",
+      "history_sha256": "7f8e4120f7b179a43526d275428532d1a7bb7626226b5b20bec64454d9c50d9b"
+    },
+    {
+      "arm": "edge_ablated_FPP",
+      "seed": 43,
+      "checkpoint_sha256": "81912d66b7229800cf790e63f6ac636afe0e962522d6ab4c86cfd9fded127264",
+      "canonical_node_prediction_sha256": "aaf23f75c07b67fcd796e535f04bd3e4a79cbd94f109667a74f11b54add8633f",
+      "metrics_sha256": "c6a8269294109b18daee651f1f2f54f2477e4e9dfe145183b1908f7483b963f8",
+      "history_sha256": "dcf606010285a5bc235676cc39acbf7eba64cbec140b7035ba4d380b1cc73c45"
+    },
+    {
+      "arm": "edge_ablated_FPP",
+      "seed": 44,
+      "checkpoint_sha256": "bc24aad23c97d2dc5a071f51984b66c12110a1cb1448b462103593c495969c43",
+      "canonical_node_prediction_sha256": "9789590b427a63300748d058425d3e3a3d4f20376fe97f55b7c0ab852ffedd00",
+      "metrics_sha256": "411af3b3228cc5b16c02b45e75e5d3eca82fb999a5c60d3ae27cdab038061f4c",
+      "history_sha256": "07e42582623696ee3696443db682b0dcdade1d163689c74edcbfddb94a56ef80"
+    }
+  ],
+  "prohibited": "Do not choose any diagnostic regeneration or restart any completed seed; retain v1 failed gate, histories, original protocol and diagnostic comparisons.",
+  "required_math_gate": "diagnostics/propagation/first_saved_tensor_gate.json",
+  "remaining_fits": 33,
+  "original_total_execution_plan": 39
+}

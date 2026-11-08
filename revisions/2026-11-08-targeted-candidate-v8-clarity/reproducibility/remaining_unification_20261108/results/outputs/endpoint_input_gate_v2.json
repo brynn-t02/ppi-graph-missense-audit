@@ -1,0 +1,119 @@
+{
+  "passed": true,
+  "amendment_id": "remaining_unification_v2_first_tensor_frozen",
+  "first_tensor_sha256": "3915bffdcf3940bd4ade55f8a9c28edd872f3b47701f0c0e0cfa636ec4c81242",
+  "math_gate": {
+    "passed": true,
+    "saved_tensor_sha256": "3915bffdcf3940bd4ade55f8a9c28edd872f3b47701f0c0e0cfa636ec4c81242",
+    "max_abs_vs_cpu64": 1.2439582919299141e-07,
+    "mean_abs_vs_cpu64": 2.2409350226389486e-09,
+    "comparison": "FIRSTsavedablated16columns_vs_independentfloat64doubleloopoperator",
+    "first_generated_tensor_selected_before_diagnostic_regenerations": true
+  },
+  "first_runs_locked": true,
+  "all_six_historical_metrics_reproduced": false,
+  "runs": [
+    {
+      "arm": "full_FPP",
+      "seed": 42,
+      "first_run_hashes_match": true,
+      "selected_epochs_match_old": true,
+      "new_minus_old_gpu_metrics": {
+        "val_auc": 0.0,
+        "val_auprc": 0.0,
+        "test_auc": 0.0,
+        "test_auprc": 0.0
+      },
+      "new_minus_old_canonical_metrics": {
+        "auc": 0.0,
+        "auprc": 0.0
+      },
+      "historical_exact_replication_passed": true
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 43,
+      "first_run_hashes_match": true,
+      "selected_epochs_match_old": true,
+      "new_minus_old_gpu_metrics": {
+        "val_auc": 0.0,
+        "val_auprc": 0.0,
+        "test_auc": 0.0,
+        "test_auprc": 0.0
+      },
+      "new_minus_old_canonical_metrics": {
+        "auc": 0.0,
+        "auprc": 0.0
+      },
+      "historical_exact_replication_passed": true
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 44,
+      "first_run_hashes_match": true,
+      "selected_epochs_match_old": true,
+      "new_minus_old_gpu_metrics": {
+        "val_auc": 0.0,
+        "val_auprc": 0.0,
+        "test_auc": 0.0,
+        "test_auprc": 0.0
+      },
+      "new_minus_old_canonical_metrics": {
+        "auc": 0.0,
+        "auprc": 0.0
+      },
+      "historical_exact_replication_passed": true
+    },
+    {
+      "arm": "edge_ablated_FPP",
+      "seed": 42,
+      "first_run_hashes_match": true,
+      "selected_epochs_match_old": true,
+      "new_minus_old_gpu_metrics": {
+        "val_auc": 0.0008532665113886173,
+        "val_auprc": -0.00819151402695717,
+        "test_auc": 0.005165073831735367,
+        "test_auprc": 0.013611236623332745
+      },
+      "new_minus_old_canonical_metrics": {
+        "auc": 0.005159421386933594,
+        "auprc": 0.013485127434459732
+      },
+      "historical_exact_replication_passed": false
+    },
+    {
+      "arm": "edge_ablated_FPP",
+      "seed": 43,
+      "first_run_hashes_match": true,
+      "selected_epochs_match_old": true,
+      "new_minus_old_gpu_metrics": {
+        "val_auc": -0.0001828447391555299,
+        "val_auprc": -7.259415979932182e-05,
+        "test_auc": -0.0018668653630318222,
+        "test_auprc": -0.0011584009178357002
+      },
+      "new_minus_old_canonical_metrics": {
+        "auc": -0.001873702327516269,
+        "auprc": -0.0012486683436376822
+      },
+      "historical_exact_replication_passed": false
+    },
+    {
+      "arm": "edge_ablated_FPP",
+      "seed": 44,
+      "first_run_hashes_match": true,
+      "selected_epochs_match_old": false,
+      "new_minus_old_gpu_metrics": {
+        "val_auc": 0.0021020664950283097,
+        "val_auprc": 0.02496594942444641,
+        "test_auc": -0.005437139299902638,
+        "test_auprc": -0.024732618300921994
+      },
+      "new_minus_old_canonical_metrics": {
+        "auc": -0.005445825777575575,
+        "auprc": -0.024787599795024096
+      },
+      "historical_exact_replication_passed": false
+    }
+  ]
+}

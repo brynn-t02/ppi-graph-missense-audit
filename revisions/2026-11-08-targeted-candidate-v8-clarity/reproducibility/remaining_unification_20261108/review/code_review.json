@@ -1,0 +1,76 @@
+{
+  "status": "source_review_passed",
+  "files_sha256": {
+    "run_unified.py": "d4bddd2974ce77000b08446845769bd013e01a02a5ade8db44ad4f95fb30857a",
+    "analyze_unified.py": "42850ee4680ec0b1d6f7b7d879b34bd3cd508275e8743ecf68be91a3461e6e58",
+    "execute_pipeline.py": "e31a710df5dd7946147a391ac915e5acd5f0a7729a28003339676e8ca662ce53",
+    "protocol.json": "18ed1f6c46031d4a60cec018524243b256ca86b7992363df8159a90369225688",
+    "source_provenance.json": "e00525048060346b9fcbae2cce24af0ab61b209076728394f69f6c1c88c43cb0"
+  },
+  "metadata_sourcepath_correct": true,
+  "run_checks": [
+    "Manifest alignment and frozen node order",
+    "Homology cluster/disjointness",
+    "Commonpropagation and fullnumericgate",
+    "Allpair vs Boolean edgeablation identical",
+    "39fit boundedplan",
+    "Endpoint gate before newtargetfits",
+    "Canonical CPU nodeprobabilitymapping",
+    "No testselection"
+  ],
+  "analysis_checks": [
+    "39runs/13arms, each seeds42\u201344",
+    "Perseed canonical metrics",
+    "Three individual metric mean/sampleSD via pandas std ddof1",
+    "Curve15displaypoints map11independentconditions",
+    "Endpointsharedvalues read currentoutputs only",
+    "Protein mean probabilities float64",
+    "Paired2000bootstrap sortedproteinidentity, default_rng20261024",
+    "ConditionalpercentileCI and noninterpolatedAP",
+    "Zero classreplicates undefined no redraw",
+    "Separate bootstrapvalidation RNG"
+  ],
+  "weighted_function_independent_synthetic_checks": [
+    {
+      "rows": 5,
+      "tied": false,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "rows": 5,
+      "tied": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "rows": 30,
+      "tied": false,
+      "max_abs_error": 0.0
+    },
+    {
+      "rows": 30,
+      "tied": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "rows": 100,
+      "tied": false,
+      "max_abs_error": 5.551115123125783e-17
+    },
+    {
+      "rows": 100,
+      "tied": true,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "rows": 1000,
+      "tied": false,
+      "max_abs_error": 0.0
+    },
+    {
+      "rows": 1000,
+      "tied": true,
+      "max_abs_error": 5.551115123125783e-17
+    }
+  ],
+  "actual_result_validation": "pending server execution"
+}

@@ -1,0 +1,10 @@
+{
+  "changed_blocks": 6,
+  "reverse_diff_restores_v5": true,
+  "Table6_exact_unchanged": true,
+  "Table10_exact_unchanged": true,
+  "all_numerical_table_rows_outside_Table5_unchanged": true,
+  "all_Methods6_and_external_tables_exact_unchanged": true,
+  "before_sha256": "c9b1925eab25948f045b5195b3d7d98fd214731f36acbce21f1df47441a939b2",
+  "after_sha256": "7bfe02260c4a5a22ffb357b0b741613bb03fd8c3bdec1df976d24a7389598b28"
+}

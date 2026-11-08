@@ -1,0 +1,35 @@
+{
+  "source": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_v7_unified_20261108/source/figure_drafts/Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+  "source_sha256": "061e78981c9cb77fc9c429c2c2196b9012b47016e476c1670be71d7f5c2c1cd8",
+  "output": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_v8_clarity_20261108/source/figure_drafts/Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+  "output_sha256": "a57a92460ad9e5fbb3be25f89bab4b862222a928ad28ebd61c78679b5de98024",
+  "png_sha256": "c9a9a373aa5e8b9c0c56ed795ea7681fa63ec833da1fb4e7a0a2d0ff994f064c",
+  "change": {
+    "before": "ΔAUC +0.0264",
+    "after": "Ensemble ΔAUC +0.0264"
+  },
+  "existing_embedded_font_reused": "/BMQQDV+DejaVuSans",
+  "font_size_pt": 7.4,
+  "font_resources_added": false,
+  "old_left_pt": 194.1858719054,
+  "new_left_pt": 174.8644719054,
+  "rendered_center_x_preserved": 221.75827190540002,
+  "baseline_y_preserved": 145.2056446667,
+  "annotation_value_unchanged": "+0.0264",
+  "only_one_text_block_changed": true,
+  "page_commands_and_other_forms_byte_identical": true,
+  "all_other_extracted_text_identical": true,
+  "all_fonts_embedded": true,
+  "pixel_comparison_dpi": 300,
+  "changed_pixels": 4533,
+  "allowed_annotation_box_pt": [
+    173,
+    143,
+    270,
+    152
+  ],
+  "outside_annotation_changed_pixels": 0,
+  "scientific_data_and_all_bars_error_lines_colors_unchanged": true,
+  "source_unchanged": true,
+  "visual_review": "Passed: full Figure1 and enlarged annotation inspected at 300dpi. Both lines are complete, centered, separated, and clear of bars, error lines, legend, axes and neighboring panels."
+}

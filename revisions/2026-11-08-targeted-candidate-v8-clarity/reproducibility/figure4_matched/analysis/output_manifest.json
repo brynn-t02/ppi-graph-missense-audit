@@ -1,0 +1,129 @@
+{
+  "files": [
+    {
+      "path": "all_ten_transition_masks_by_variant.csv.gz",
+      "bytes": 119379,
+      "sha256": "627c74c33874df69aa5c4643e08b006759870413ba8ff97670a8a37cc7cb6c16"
+    },
+    {
+      "path": "all_transition_group_members.csv.gz",
+      "bytes": 263374,
+      "sha256": "2962d7e08a25d53735a658eca4cda65058b442235a355556d2c1bf57f8f0bc6b"
+    },
+    {
+      "path": "before_after_FP_FN_direction.csv",
+      "bytes": 3675,
+      "sha256": "6e8cbe23afb094694ee24a840ad19caa718df979569b0c233662b9d837d764e4"
+    },
+    {
+      "path": "before_after_error_stratified_hedges_g.csv",
+      "bytes": 2196,
+      "sha256": "ea78856e0ecb51167abe7a834f79012dda8660ecb9714f263b4c208ddb8e2de8"
+    },
+    {
+      "path": "before_after_transition_counts.csv",
+      "bytes": 720,
+      "sha256": "5d499439801ebb03fcbf819c423be33244a4d0ab5d86cd884283e1e3ce24eba7"
+    },
+    {
+      "path": "data/processed/corrected_sample_identification_exp34/summary.json",
+      "bytes": 1075,
+      "sha256": "4c9f2733f2ffcc475bff55b54c4a10d02ede01324d2c3d3765833d312471de89"
+    },
+    {
+      "path": "data/processed/corrected_sample_profile_exp35/cadd_am_to_full_corrected_profile_summary.csv",
+      "bytes": 3158,
+      "sha256": "837920c781ade09b680186c610ebfe7d1eddabb307358f7c63987f54e7aa6994"
+    },
+    {
+      "path": "data/processed/corrected_sample_profile_exp35/esm_to_gcn_corrected_profile_summary.csv",
+      "bytes": 3134,
+      "sha256": "7705a859a257376b9095a5d345b6c0cfc373308b54c1b3e7e47491e24012c02e"
+    },
+    {
+      "path": "data/processed/error_stratified_correction_contrast_exp40/error_stratified_correction_contrast_results.csv",
+      "bytes": 12613,
+      "sha256": "7a97cb717afbf64cff807cd63e806248c234b4bf6222f5c23dffdc3b540232d4"
+    },
+    {
+      "path": "data/processed/fp_vs_fn_stats_exp36B/cadd_am_to_full_fp_vs_fn_stats.csv",
+      "bytes": 3285,
+      "sha256": "5209db3b74d6f32359cafb803d7dffcdfa74352a495519238b9e2f2643d5174e"
+    },
+    {
+      "path": "data/processed/fp_vs_fn_stats_exp36B/esm_to_gcn_fp_vs_fn_stats.csv",
+      "bytes": 3245,
+      "sha256": "cd257746b277bc20dd51e9154acb00a3080a6d1706fccefcf31dd46c6efe1435"
+    },
+    {
+      "path": "ensemble_metrics_alignment.csv",
+      "bytes": 563,
+      "sha256": "aa52b54e38c7731063df2cd73c876ca843330cb93e7caf2b0a8495936e91106c"
+    },
+    {
+      "path": "feature_specific_missing_and_encoding_counts.csv",
+      "bytes": 12808,
+      "sha256": "730be2d657bfcacfb01f36f2e98f7179fc044abe12251a4a2ec0431f08dd18fa"
+    },
+    {
+      "path": "figure4_direction_and_interpretation.json",
+      "bytes": 11379,
+      "sha256": "93cd5541d14d22012aa1ecb2854657537a49b16110b32af4c0c608be325a9c2f"
+    },
+    {
+      "path": "frozen_18220_predictions_topology.csv.gz",
+      "bytes": 2950366,
+      "sha256": "da2376a73ee8616a84d7cc0ebba9b33fca11c7618c5569e233ae223ff761c387"
+    },
+    {
+      "path": "input_sha256.json",
+      "bytes": 12834,
+      "sha256": "9835e116b9f47b6e0fccb237e1dd8df0db9465d8934c881a03b3fd2066364ee4"
+    },
+    {
+      "path": "metrics_alignment_audit.json",
+      "bytes": 2072,
+      "sha256": "4372faea687b6bd6fbb24317bfbddccf6d63762fd3edf545651c0182beb95979"
+    },
+    {
+      "path": "recompute_figure4.py",
+      "bytes": 27102,
+      "sha256": "34e8312a65b78608540e812f434ade4504db9dc5f04aecf5a88d0d80a2c95108"
+    },
+    {
+      "path": "table10_all_threshold_transition_counts.csv",
+      "bytes": 1886,
+      "sha256": "0773941f6697c98b8ab477e0277ec2259dc4f5b75bc80aff7a39878f23507e44"
+    },
+    {
+      "path": "table6_all_22_FP_FN_contrasts.csv",
+      "bytes": 6210,
+      "sha256": "d40a4086c0a06d56f71812f771ef84b216d455dfc9fd1647418b536c4625e821"
+    },
+    {
+      "path": "table6_all_44_error_stratified_contrasts.csv",
+      "bytes": 12613,
+      "sha256": "7a97cb717afbf64cff807cd63e806248c234b4bf6222f5c23dffdc3b540232d4"
+    },
+    {
+      "path": "table6_all_transition_counts.csv",
+      "bytes": 1352,
+      "sha256": "f27d6e525dc5ae89fd2ed1b7db385ec62f7af07f4618e9f054757ed36666a6e2"
+    },
+    {
+      "path": "table6_all_transition_feature_means.csv",
+      "bytes": 5941,
+      "sha256": "0fda407bb1937bd3ac3ee7f3d2f78131a2e4c6b11e37300e0b4e732fd35bfdfa"
+    },
+    {
+      "path": "transition_summary.json",
+      "bytes": 1075,
+      "sha256": "4c9f2733f2ffcc475bff55b54c4a10d02ede01324d2c3d3765833d312471de89"
+    },
+    {
+      "path": "twelve_seed_provenance.csv",
+      "bytes": 3979,
+      "sha256": "d1a58a9b292898718524e5bbd0ef3a7e58ccf457b16eafa6b412bf0b0a9a4a52"
+    }
+  ]
+}

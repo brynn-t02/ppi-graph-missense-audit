@@ -1,0 +1,8 @@
+{
+  "num_pairs": 621211,
+  "num_pairs_with_string_score": 621211,
+  "num_pairs_missing_string_score": 0,
+  "score_min": 150.0,
+  "score_median": 208.0,
+  "score_max": 999.0
+}

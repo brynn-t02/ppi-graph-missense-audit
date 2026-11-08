@@ -1,0 +1,27 @@
+{
+  "original_verifier_sha256": "abe96f88fdabd7ad70f6d4c5149d13ac5a13846b0bf43e6c36465be6d1748340",
+  "portable_verifier_sha256": "287a6742803a9adc81b0acca3aa7f961c67e5eef2e66e4d4aecf706320e27c6e",
+  "references": [
+    {
+      "file": "frozen_samples_177213.csv.gz",
+      "bytes": 1411593,
+      "sha256": "a265ce6d010aeeb89cbabee55d7a5107ddd561034eb37d75b4ad2121951b3edf"
+    },
+    {
+      "file": "edge_stats_all_partial_runs.csv",
+      "bytes": 1627,
+      "sha256": "df1be206394097e9a006137118d8d91016eae7c1517aa8d3c0091d4468f58b12"
+    }
+  ],
+  "changes": [
+    "Two reference reads resolved relative to package references/",
+    "Output redirected to portable_verification.json by default or --output argument"
+  ],
+  "verification_logic_unchanged": true,
+  "portable_execution_status": "passed",
+  "execution_working_directory": "/private/tmp",
+  "entire_result_equal_original_receipt": true,
+  "original_receipt_unchanged": true,
+  "portable_receipt_sha256": "d309448c5e52775e7c43d46f8866a14cb193752e61f3f693e5fb7a61566cd909",
+  "independent_metric_module_sha256": "0a3a0e77e148c743e2ff9c3a9917dcb6508eb5fb734a93ab45a13ba99104eda9"
+}

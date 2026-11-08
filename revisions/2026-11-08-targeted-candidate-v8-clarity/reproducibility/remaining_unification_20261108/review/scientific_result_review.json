@@ -1,0 +1,182 @@
+{
+  "status": "passed",
+  "first_six_hashlock_checks": [
+    {
+      "arm": "full_FPP",
+      "seed": 42,
+      "metrics_history_local_hashes_match": true,
+      "checkpoint_node_hashes_server_receipts_match": true
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 43,
+      "metrics_history_local_hashes_match": true,
+      "checkpoint_node_hashes_server_receipts_match": true
+    },
+    {
+      "arm": "full_FPP",
+      "seed": 44,
+      "metrics_history_local_hashes_match": true,
+      "checkpoint_node_hashes_server_receipts_match": true
+    },
+    {
+      "arm": "edge_ablated_FPP",
+      "seed": 42,
+      "metrics_history_local_hashes_match": true,
+      "checkpoint_node_hashes_server_receipts_match": true
+    },
+    {
+      "arm": "edge_ablated_FPP",
+      "seed": 43,
+      "metrics_history_local_hashes_match": true,
+      "checkpoint_node_hashes_server_receipts_match": true
+    },
+    {
+      "arm": "edge_ablated_FPP",
+      "seed": 44,
+      "metrics_history_local_hashes_match": true,
+      "checkpoint_node_hashes_server_receipts_match": true
+    }
+  ],
+  "frozen_code_files_verified": [
+    "v1/README_EXECUTION.md",
+    "v1/analyze_unified.py",
+    "v1/execute_pipeline.py",
+    "v1/finish_new_environment.py",
+    "v1/input_manifest.json",
+    "v1/matched_training_core.py",
+    "v1/pair_selection_original.py",
+    "v1/protocol.json",
+    "v1/requirements-new-server.txt",
+    "v1/restore_new_server.py",
+    "v1/run_unified.py",
+    "v1/source_provenance.json",
+    "v2/README_EXECUTION.md",
+    "v2/amendment_manifest.json",
+    "v2/analyze_unified.py",
+    "v2/execute_pipeline.py",
+    "v2/input_manifest.json",
+    "v2/matched_training_core.py",
+    "v2/pair_selection_original.py",
+    "v2/protocol.json",
+    "v2/run_unified.py",
+    "v2/source_provenance.json"
+  ],
+  "v1failure_preserved_identically": true,
+  "first_saved_tensor_direct_mathgate": {
+    "passed": true,
+    "saved_tensor_sha256": "3915bffdcf3940bd4ade55f8a9c28edd872f3b47701f0c0e0cfa636ec4c81242",
+    "max_abs_vs_cpu64": 1.2439582919299141e-07,
+    "mean_abs_vs_cpu64": 2.2409350226389486e-09,
+    "comparison": "FIRSTsavedablated16columns_vs_independentfloat64doubleloopoperator",
+    "first_generated_tensor_selected_before_diagnostic_regenerations": true
+  },
+  "statistical_verification": "results_verification.json;39metrics/13ensembles/15curvepoints/39histories/4000bootstrapdraws independentlyreplayed, maxerror4.440892098500626e-16",
+  "curve": {
+    "high_confidence_first": {
+      "mean_AUC": [
+        0.7949876719439996,
+        0.7892020621928895,
+        0.7843827388042017,
+        0.7774094968313706,
+        0.7694409165923211
+      ],
+      "mean_AUPRC": [
+        0.6485095505690933,
+        0.639727819688627,
+        0.6323092845691772,
+        0.6156025823718936,
+        0.6034741864711016
+      ],
+      "AUC_steps": [
+        -0.005785609751110088,
+        -0.004819323388687735,
+        -0.006973241972831112,
+        -0.00796858023904956
+      ],
+      "AUPRC_steps": [
+        -0.008781730880466299,
+        -0.007418535119449787,
+        -0.01670670219728365,
+        -0.012128395900791955
+      ],
+      "auc_monotonic_nonincreasing": true,
+      "auprc_monotonic_nonincreasing": true
+    },
+    "low_confidence_first": {
+      "mean_AUC": [
+        0.7949876719439996,
+        0.7896517363433007,
+        0.7883177085720267,
+        0.7899638261081142,
+        0.7694409165923211
+      ],
+      "mean_AUPRC": [
+        0.6485095505690933,
+        0.6389091930979147,
+        0.6349798304279,
+        0.6438172583537684,
+        0.6034741864711016
+      ],
+      "AUC_steps": [
+        -0.005335935600698893,
+        -0.0013340277712740045,
+        0.0016461175360875657,
+        -0.020522909515793164
+      ],
+      "AUPRC_steps": [
+        -0.0096003574711786,
+        -0.003929362670014758,
+        0.00883742792586839,
+        -0.040343071882666726
+      ],
+      "auc_monotonic_nonincreasing": false,
+      "auprc_monotonic_nonincreasing": false
+    },
+    "random_pair_removal": {
+      "mean_AUC": [
+        0.7949876719439996,
+        0.7928747843827825,
+        0.7856688731890079,
+        0.7858474747435004,
+        0.7694409165923211
+      ],
+      "mean_AUPRC": [
+        0.6485095505690933,
+        0.6448114158973951,
+        0.6361682055099723,
+        0.634974346333343,
+        0.6034741864711016
+      ],
+      "AUC_steps": [
+        -0.0021128875612170805,
+        -0.007205911193774561,
+        0.0001786015544924524,
+        -0.016406558151179307
+      ],
+      "AUPRC_steps": [
+        -0.0036981346716982166,
+        -0.008643210387422773,
+        -0.001193859176629286,
+        -0.03150015986224142
+      ],
+      "auc_monotonic_nonincreasing": false,
+      "auprc_monotonic_nonincreasing": true
+    }
+  },
+  "interpretation": {
+    "connectivity": "Full-versus-fully-ablated ensemble AUC/AP differences have positive conditional protein-bootstrap95%intervals. Supports sensitivity to removing directtrain-test edges, with graphnormalization changing simultaneously.",
+    "partial_curve": "Meanperformance generally declines toward completeablation, but random and lowscore-first AUCcurves are notmonotonic; do not claim strictly monotonic dose-response.",
+    "strategies": "No independently replicated graph realizations or inferentialbetweenstrategy test; sampleSD measuresclassifierseedvariation. Do not claimconfidence-based strategy superiority or biologicalcausal importance.",
+    "homology": "Three-seed fullFPP outperforms rawESM inbothmeanmetrics, withpositive conditionalproteinbootstrap ensembleAUC/APdifferences. This pure-representationcomparison doesnot establish benefitover CADD+AlphaMissense.",
+    "numerical_recovery": "Three frozenfullhistoriesexactlyreproduced; regeneratedablatedhistoricalmetricsdidnot. Firsttensor+fitswerefrozenandkept, and mathematicalcommonoperatorvalidated independently; preserveexplicitamendment."
+  },
+  "counts": {
+    "final_protocol_runs": 39,
+    "partial_curve_unique_fits_including_endpoints": 33,
+    "homology_fits": 6,
+    "original_endpoint_reproduction_attempts_included_in39": 6,
+    "partial_curve_display_fit_entries_due_to_shared_endpoints": 45,
+    "new_target_fits_excluding_repeated_endpoints": 33
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-08",
+  "status": "amendment_scientifically_acceptable_subject_to_gates",
+  "diagnostic_sha256": "cc81cd8460974ee5ae2b072d7f23dabbf2658148a1530cbc4e18ac9a56138450",
+  "observed_numerical_nondeterminism": {
+    "same_host_same_code_same_input_regeneration_not_bitwise_equal": true,
+    "saved_first_vs_regen1_max_abs": 5.7220458984375e-06,
+    "regen1_vs_regen2_max_abs": 3.814697265625e-06,
+    "regen1_vs_independent_CPU64_16cols_max_abs": 1.1870894486842865e-07
+  },
+  "scientific_judgment": "Common graph definitions, propagation formula, classifier architecture/seeds/optimization/selection and split protocol are unaffected. Exact historical metric reproduction is a stronger and unsupported guarantee for regenerated float32 sparse features. Failure must remain visible; replace only the inappropriate exact-regeneration gate with a documented numeric-operator gate and frozen-input training positive controls, without selecting input tensors or fitted models based on performance.",
+  "acceptance_conditions": [
+    "Freeze the FIRST new ablated tensor sha2563915bffdcf3940bd4ade55f8a9c28edd872f3b47701f0c0e0cfa636ec4c81242 and FIRST three associated fits",
+    "Check FIRSTtensor directly against independentCPU64 reference16columns; existingtestregenerated1referencealone indirect",
+    "Preserve all v1frozen code, failedgate, models and diagnostics; append versionedamendment with changedgate rationale",
+    "Keep originaltrainingparameters, graphmasks, featuregenerationfunction,seeds andvalidationselection unchanged",
+    "Do not claim exactsixendpointmetricreproduction passed; only allthreefrozenfull trainingcontrols passed",
+    "Carry same three frozennew endpointfits throughFigure1Eallstrategies andFigure1D; recompute directlydependent representationbootstrap/statistics/tableentries",
+    "No old/new dataoverwrite; fusioncontrols remain separatefrozenfamilies",
+    "No selecting among numericalregenerations or extra fittingruns bytestorvalidation performance to match priorresults"
+  ],
+  "optional_diagnostic_fit": "One same-seed fit on a second numerically regenerated featuretensor can establish downstream sensitivity to regeneration. It is diagnostic-only, excludedfromfinal39reportedfits and never chosen as replacement based onmetrics. Record actualtotalfitcount separately if performed.",
+  "limits": [
+    "Cannot directlymeasure old-versus-new ablated featuredifference without oldtensor",
+    "Observed repeatedfloat32sparsepropagationvariation neednot be attributed specifically toCUDAatomics without kernel-level evidence",
+    "Do not claim bitwise reproduction is universally impossible; it was not attained by this frozenpipeline",
+    "Bootstrap remains conditional on frozenfits/features/graphs; itdoesnot cover regenerationuncertainty"
+  ]
+}

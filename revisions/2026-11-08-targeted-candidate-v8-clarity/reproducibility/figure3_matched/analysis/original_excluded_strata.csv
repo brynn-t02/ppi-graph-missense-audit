@@ -1,0 +1,3 @@
+group_col,code,n,proteins,reason
+neighbor_risk_bucket,-1,49,10,Original insufficient-signal/unassigned category below original 50-variant threshold; no category reassignment
+boundary_role_bucket,-1,27,5,Original insufficient-signal/unassigned category below original 50-variant threshold; no category reassignment

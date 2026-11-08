@@ -1,0 +1,264 @@
+{
+  "date": "2026-11-08",
+  "passed": true,
+  "baseline": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_v5_text_20261108",
+  "candidate": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_v6_figure3_20261108",
+  "checks": [
+    {
+      "check": "source/main.tex exact reverse scope",
+      "passed": true,
+      "detail": {
+        "blocks": 5
+      }
+    },
+    {
+      "check": "source/Supplementary_Information_revised.md exact reverse scope",
+      "passed": true,
+      "detail": {
+        "blocks": 6
+      }
+    },
+    {
+      "check": "preserved figure Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "preserved figure Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "preserved figure Figure2_fusion_homology_v1_accepted.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "preserved figure Figure2_fusion_homology_v1_accepted.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "preserved figure Figure3_topology_context_v1_accepted_clarified.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "preserved figure Figure4_prediction_transitions_matched_ensembles.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "preserved figure Figure4_prediction_transitions_matched_ensembles.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "preserved figure Figure4_prediction_transitions_v2_accepted_minimal_clarified.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "preserved figure Figure5_external_validation.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEEEtran.cls unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "figure3 full canvas dimensions unchanged",
+      "passed": true,
+      "detail": [
+        2181,
+        3980,
+        3
+      ]
+    },
+    {
+      "check": "figure3 A independent300dpi equality",
+      "passed": true,
+      "detail": {
+        "changed_pixels": 0,
+        "bounds_xy": [
+          2,
+          190,
+          1414,
+          1081
+        ]
+      }
+    },
+    {
+      "check": "newfigure equals actualplot output",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "main8pages",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement19pages",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actualmainPDF contains 0.0603",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actualmainPDF contains 0.0216",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actualmainPDF contains 0.1115",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actualmainPDF contains 0.0486",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actualmainPDF contains three of these four",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actualmainPDF contains post-hoc subgroup selection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actualmainPDF contains protein-clustered",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actualSI PDF Table5value 0.1115",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actualSI PDF Table5value 0.1782",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actualSI PDF Table5value 0.0861",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actualSI PDF Table5value 0.0065",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actualSI PDF Table5value 0.1445",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actualSI PDF Table5value 0.0832",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actualSI PDF Table5value 0.1514",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actualSI PDF Table5value 0.2020",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actualSI PDF Table5value 0.0312",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actualSI PDF Table5value 1,950",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actualSI PDF Table5value 2,089",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actualSI PDF Table5value 1,904",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actualSI PDF Table5value 4,791",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "independent statistical review passed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "III.C same-test original selection explicit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "III.C requires independent validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "III.C conditions and selection limits explicit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "figure3 axis expansion disclosed",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "main_exact_replacement_blocks": 5,
+  "supplement_exact_replacement_blocks": 6,
+  "outside_blocks_byte_unchanged": true,
+  "all_existing_figure_assets_sha256_unchanged": [
+    "Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+    "Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.png",
+    "Figure2_fusion_homology_v1_accepted.pdf",
+    "Figure2_fusion_homology_v1_accepted.png",
+    "Figure3_topology_context_v1_accepted_clarified.pdf",
+    "Figure4_prediction_transitions_matched_ensembles.pdf",
+    "Figure4_prediction_transitions_matched_ensembles.png",
+    "Figure4_prediction_transitions_v2_accepted_minimal_clarified.pdf",
+    "Figure5_external_validation.pdf"
+  ],
+  "Figure3A_changed_pixels_independent300dpi": 0,
+  "source_and_actual_PDF_Table5_III_C_values_verified": true,
+  "statistical_scope": "Original frozen53cells and4displayobjects. No new classifierfitting; current matchedensemble postprocessing and pairedproteinbootstrap. Does not imply independentconfirmation.",
+  "main_visual_review": {
+    "all8pages_reviewed_on_contact_sheets": true,
+    "figure3page6_individual_inspected": true,
+    "clipping_or_overlay_found": false,
+    "complete_F_intervals_visible": true,
+    "caption_and_discussion_clear": true,
+    "existing_smallfigurelabels": "Retained original scale; no new collision or cropping."
+  },
+  "main_pdf_sha256": "6497cc62b0b0af6e099496489d604a8b24b70bbe4c712a3669780866e5df0446",
+  "supplement_pdf_sha256": "15be0ee739f842d71ef61fdcbce1a05d8d5c39345c53909496144f80aca08ec8",
+  "main_pages": 8,
+  "supplement_pages": 19,
+  "source_files_edited_by_review": false
+}

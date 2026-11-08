@@ -1,0 +1,197 @@
+{
+  "passed": true,
+  "files": 38,
+  "bytes": 603434094,
+  "checks": [
+    {
+      "path": "data/processed/model_inputs_main.pt",
+      "bytes": 323552985,
+      "sha256": "0f9b61664620e5c94d2ceca84b4b605a5dcce9e02677d6b641f8f64d3e4c397d"
+    },
+    {
+      "path": "data/processed/gcn_embeddings/gcn_node_embeddings.pt",
+      "bytes": 101268696,
+      "sha256": "5a9fbe0787878c821665e22227af30a40c7ad9400a891b807f515ad2a556bd6e"
+    },
+    {
+      "path": "data/processed/clinvar_train_main.csv",
+      "bytes": 34567345,
+      "sha256": "14340ecc0335d2ff2489013422a738852cf4856257d4c2a8195c1a975b6bff69"
+    },
+    {
+      "path": "data/processed/clinvar_val_main.csv",
+      "bytes": 4142804,
+      "sha256": "072e0f596313bc4c46c92ad3b974fe3643d47ff342dae5e5e103a614e99af62d"
+    },
+    {
+      "path": "data/processed/clinvar_test_main.csv",
+      "bytes": 4422463,
+      "sha256": "c89d6507c8b8b45c4177f2434c7ecfa8435f60d03b327a9c4493e0b51a6c45e6"
+    },
+    {
+      "path": "data/processed/homology_aware_split/clinvar_train_homology.csv",
+      "bytes": 39207636,
+      "sha256": "6e82fa449aa47688dc2a8f1b78fdc52ceb04f3d261e3ba3c4720069f48e2c085"
+    },
+    {
+      "path": "data/processed/homology_aware_split/clinvar_val_homology.csv",
+      "bytes": 4674537,
+      "sha256": "b02600cde8a2c1dda0867a9f58f4a069af534dbad2d7f6a35a83314229e68451"
+    },
+    {
+      "path": "data/processed/homology_aware_split/clinvar_test_homology.csv",
+      "bytes": 4993632,
+      "sha256": "898a1140985769f543321afbc58caa823fb461b9f82e63e4652a7ee27cff2d17"
+    },
+    {
+      "path": "data/processed/homology_aware_split/homology_cluster_assignments.csv",
+      "bytes": 274065,
+      "sha256": "a30824a32b919466007395bac7c6eddb255c0ad40478b599574230240ddfb9d6"
+    },
+    {
+      "path": "data/raw/9606.protein.links.v12.0.txt.gz",
+      "bytes": 83164437,
+      "sha256": "3e22f32572211aa341d5b4bd08d30c32e693e294603202120936872f87719d4f"
+    },
+    {
+      "path": "reference/canonical/frozen_node_order.csv.gz",
+      "bytes": 103632,
+      "sha256": "1a6f47ab2cd884f847eec14b880849b2eb9a40ab7029abce9c609d69ce60b67f"
+    },
+    {
+      "path": "reference/canonical/frozen_samples_177213.csv.gz",
+      "bytes": 1411593,
+      "sha256": "a265ce6d010aeeb89cbabee55d7a5107ddd561034eb37d75b4ad2121951b3edf"
+    },
+    {
+      "path": "reference/canonical/test_predictions__original__full_FPP.csv.gz",
+      "bytes": 394949,
+      "sha256": "845ca384e6b59ac61efc5799c5360894559d99b311398e00da6cf86d771da245"
+    },
+    {
+      "path": "reference/canonical/test_predictions__original__edge_ablated_FPP.csv.gz",
+      "bytes": 395482,
+      "sha256": "c43190a7e7c2c0c244de9bc4742b7a12f752eea0e678221a45b0e78ba9dfd5fc"
+    },
+    {
+      "path": "reference/endpoint_runs/full_FPP/seed_42/history.json",
+      "bytes": 1281,
+      "sha256": "3a180545bff44af1c653b5e64713e8c9c11f4e38d917dcf7702dda32fc4aacc7"
+    },
+    {
+      "path": "reference/endpoint_runs/full_FPP/seed_42/metrics.json",
+      "bytes": 285,
+      "sha256": "a4a5a61449c385375f4ca39f66f88b29582539279a7fd7b64db7c733c3d0cbdd"
+    },
+    {
+      "path": "reference/endpoint_runs/full_FPP/seed_42/test_probs.npy",
+      "bytes": 73008,
+      "sha256": "b150c286b265043f6ab409e7dc477aae5a105dfd1941d256899e45903c44d7b9"
+    },
+    {
+      "path": "reference/endpoint_runs/full_FPP/seed_42/val_probs.npy",
+      "bytes": 68644,
+      "sha256": "0a326aab67b029f83db50c209dfcd0567c2604079a9f160174f0c03cd853bd24"
+    },
+    {
+      "path": "reference/endpoint_runs/full_FPP/seed_43/history.json",
+      "bytes": 1152,
+      "sha256": "396255507059a4a13c119b8e2e1130b5f41caa9a2a7468a75f060766971c4f8d"
+    },
+    {
+      "path": "reference/endpoint_runs/full_FPP/seed_43/metrics.json",
+      "bytes": 285,
+      "sha256": "53f6a061f97e4d4bc3ec29d20a4d97aa338ce68d732b9e2e9cec8da1f631ea57"
+    },
+    {
+      "path": "reference/endpoint_runs/full_FPP/seed_43/test_probs.npy",
+      "bytes": 73008,
+      "sha256": "20e1173fa03624bee12bee69f4938851fc7c738764093d7d1899324af7b857be"
+    },
+    {
+      "path": "reference/endpoint_runs/full_FPP/seed_43/val_probs.npy",
+      "bytes": 68644,
+      "sha256": "c8e998bddf0d1896376d94a94693d38a14b3e8eeb3cae7bc7bbdc98f5ae2e92b"
+    },
+    {
+      "path": "reference/endpoint_runs/full_FPP/seed_44/history.json",
+      "bytes": 1791,
+      "sha256": "bdb3e82994f3c121ba1f9661aa1b0b968c70abef028708a31bd6589d176217f6"
+    },
+    {
+      "path": "reference/endpoint_runs/full_FPP/seed_44/metrics.json",
+      "bytes": 286,
+      "sha256": "b5f1c718b2721b80503bc7cb06b9c2f2a94c252c1d3f1fda93ed4d4168995b15"
+    },
+    {
+      "path": "reference/endpoint_runs/full_FPP/seed_44/test_probs.npy",
+      "bytes": 73008,
+      "sha256": "ee0e2be8e17d434f54740da6ba9430d2c803b7dfc38d182b4f50c60c8b7d4cb8"
+    },
+    {
+      "path": "reference/endpoint_runs/full_FPP/seed_44/val_probs.npy",
+      "bytes": 68644,
+      "sha256": "5ed60da0a7d76828baaa73c23cb5a8761dff338c41063faf1ad73594a0b3005a"
+    },
+    {
+      "path": "reference/endpoint_runs/edge_ablated_FPP/seed_42/history.json",
+      "bytes": 1280,
+      "sha256": "1934b03494883186e07939471cb6a4240dc8fbbf453a9793e601bccedbfacb50"
+    },
+    {
+      "path": "reference/endpoint_runs/edge_ablated_FPP/seed_42/metrics.json",
+      "bytes": 294,
+      "sha256": "b630072d1693f6559d65130c625b09d08f23922c7f1eca28520130f541e0dbea"
+    },
+    {
+      "path": "reference/endpoint_runs/edge_ablated_FPP/seed_42/test_probs.npy",
+      "bytes": 73008,
+      "sha256": "55e949bdc6a6ca8b5996ec3d9233e06c0bbbb562274b4becf50fbf070e913cd4"
+    },
+    {
+      "path": "reference/endpoint_runs/edge_ablated_FPP/seed_42/val_probs.npy",
+      "bytes": 68644,
+      "sha256": "1f72e720dbfdfa53c05c9a792b4cdc28bea9b7e9f35d7e37b91bb356f9b18709"
+    },
+    {
+      "path": "reference/endpoint_runs/edge_ablated_FPP/seed_43/history.json",
+      "bytes": 1150,
+      "sha256": "d5393fa37841dc3f37054cc7ac8dae5d1c4a3e2af7218aab95c7cf40c49f68c7"
+    },
+    {
+      "path": "reference/endpoint_runs/edge_ablated_FPP/seed_43/metrics.json",
+      "bytes": 292,
+      "sha256": "eda23d93b9d469f9fd77234a344697f67a7336191825a2d44132ecd77e06de08"
+    },
+    {
+      "path": "reference/endpoint_runs/edge_ablated_FPP/seed_43/test_probs.npy",
+      "bytes": 73008,
+      "sha256": "2af302f7ae8481ea5cb3ccf84a0f5848524cb3b6a4f0b71188af894d61c4d502"
+    },
+    {
+      "path": "reference/endpoint_runs/edge_ablated_FPP/seed_43/val_probs.npy",
+      "bytes": 68644,
+      "sha256": "80f03c6025340abe418bfa8d1f2f2e427af7cc8d4eb05010bbe0262de0ce4e1e"
+    },
+    {
+      "path": "reference/endpoint_runs/edge_ablated_FPP/seed_44/history.json",
+      "bytes": 1537,
+      "sha256": "a97bfc0abc0433d968a3ecbb96c520dc2e1935d4cc3c32cc2f2e248f65aebe69"
+    },
+    {
+      "path": "reference/endpoint_runs/edge_ablated_FPP/seed_44/metrics.json",
+      "bytes": 293,
+      "sha256": "a35502741a974dde9f25ebb7efaf0f28d11da1b407e99b3e83dffd86cb558d7c"
+    },
+    {
+      "path": "reference/endpoint_runs/edge_ablated_FPP/seed_44/test_probs.npy",
+      "bytes": 73008,
+      "sha256": "8a57fad24f178f6b23c55c1fc84b5b86472ce05fd08379a8647ce72b8297aa7a"
+    },
+    {
+      "path": "reference/endpoint_runs/edge_ablated_FPP/seed_44/val_probs.npy",
+      "bytes": 68644,
+      "sha256": "afde6fd317475cd197bd54ea88f8cac14311bf320887ea6ed9f63378b6359bf0"
+    }
+  ]
+}

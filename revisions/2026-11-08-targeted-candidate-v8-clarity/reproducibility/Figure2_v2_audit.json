@@ -1,0 +1,300 @@
+{
+  "passed": true,
+  "authorized_scope": "Figure2 B/C/E only; PDF candidate v2 only",
+  "method": "Reuse of previously generated vector numeric-panel content after confirming identical baseline and all requested source values; page-content bytes exact. Restore exact original MediaBox width (the earlier pypdf container rounded it by 0.000005 pt). No old plotting/statistical script executed.",
+  "baseline": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_20261108/source/figure_drafts/Figure2_fusion_homology_v1_accepted.pdf",
+  "baseline_sha256": "bb2429ea938a2a852dafbb67b296d96e30f20ada46cdc0a2ac83526f9649865d",
+  "output": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_v2_20261108/source/figure_drafts/Figure2_fusion_homology_v1_accepted.pdf",
+  "output_sha256": "2eb2b750e1963cbb745c1d5fd9647d3845318ff3ab9a1b639182387a12c370e7",
+  "reused_candidate": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/unified_revision_20261108/fig12/Figure2_fusion_homology_v1_accepted.pdf",
+  "reused_candidate_sha256": "150e5832b32aba59fd75ee47259d336c3e8d2da5a863acfe653f7f8a26cfe4d5",
+  "mean_SD_source": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/canonical_analysis_20261025/per_run_metrics.csv",
+  "CI_source": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/canonical_analysis_20261025/cluster_bootstrap.json",
+  "numeric_data_rows": [
+    {
+      "panel": "B",
+      "split": "original_fusion",
+      "arm": "scores_capacity_matched",
+      "n_fits": 3,
+      "auc_mean": 0.9572418088362747,
+      "auc_sample_SD": 5.7597133804577455e-05,
+      "auprc_mean": 0.9071955958233566,
+      "auprc_sample_SD": 0.0002256487782253078,
+      "display_auc": "0.9572 +/- 0.0001",
+      "display_auprc": "0.9072 +/- 0.0002",
+      "SD_definition": "ddof=1 across seeds42/43/44"
+    },
+    {
+      "panel": "B",
+      "split": "original_fusion",
+      "arm": "scores_plus_raw_ESM",
+      "n_fits": 3,
+      "auc_mean": 0.9681929057310562,
+      "auc_sample_SD": 0.0010853375827493013,
+      "auprc_mean": 0.9326279932970664,
+      "auprc_sample_SD": 0.003673639642526683,
+      "display_auc": "0.9682 +/- 0.0011",
+      "display_auprc": "0.9326 +/- 0.0037",
+      "SD_definition": "ddof=1 across seeds42/43/44"
+    },
+    {
+      "panel": "B",
+      "split": "original_fusion",
+      "arm": "scores_plus_edge_ablated_FPP",
+      "n_fits": 3,
+      "auc_mean": 0.9703837522358331,
+      "auc_sample_SD": 0.00040752769105530025,
+      "auprc_mean": 0.9393608023582748,
+      "auprc_sample_SD": 0.0008823169930226019,
+      "display_auc": "0.9704 +/- 0.0004",
+      "display_auprc": "0.9394 +/- 0.0009",
+      "SD_definition": "ddof=1 across seeds42/43/44"
+    },
+    {
+      "panel": "B",
+      "split": "original_fusion",
+      "arm": "scores_plus_permuted_FPP",
+      "n_fits": 9,
+      "auc_mean": 0.9692169772583489,
+      "auc_sample_SD": 0.000634408968851891,
+      "auprc_mean": 0.9353929192922058,
+      "auprc_sample_SD": 0.0009029127258740843,
+      "display_auc": "0.9692 +/- 0.0006",
+      "display_auprc": "0.9354 +/- 0.0009",
+      "SD_definition": "ddof=1; pooled 3 graphs x 3 classifier seeds"
+    },
+    {
+      "panel": "B",
+      "split": "original_fusion",
+      "arm": "scores_plus_full_FPP",
+      "n_fits": 3,
+      "auc_mean": 0.9715596385479519,
+      "auc_sample_SD": 0.0007429663708588232,
+      "auprc_mean": 0.9409115614128524,
+      "auprc_sample_SD": 0.0017254546434244786,
+      "display_auc": "0.9716 +/- 0.0007",
+      "display_auprc": "0.9409 +/- 0.0017",
+      "SD_definition": "ddof=1 across seeds42/43/44"
+    },
+    {
+      "panel": "E",
+      "split": "homology",
+      "arm": "scores_capacity_matched",
+      "n_fits": 3,
+      "auc_mean": 0.9754786737711996,
+      "auc_sample_SD": 6.639971814309367e-05,
+      "auprc_mean": 0.8403043171838798,
+      "auprc_sample_SD": 0.0005916689213931387,
+      "display_auc": "0.9755 +/- 0.0001",
+      "display_auprc": "0.8403 +/- 0.0006",
+      "SD_definition": "ddof=1 across seeds42/43/44"
+    },
+    {
+      "panel": "E",
+      "split": "homology",
+      "arm": "scores_plus_raw_ESM",
+      "n_fits": 3,
+      "auc_mean": 0.9727258395106334,
+      "auc_sample_SD": 0.0003204854873690711,
+      "auprc_mean": 0.8252803683457399,
+      "auprc_sample_SD": 0.0016352940025928632,
+      "display_auc": "0.9727 +/- 0.0003",
+      "display_auprc": "0.8253 +/- 0.0016",
+      "SD_definition": "ddof=1 across seeds42/43/44"
+    },
+    {
+      "panel": "E",
+      "split": "homology",
+      "arm": "scores_plus_full_FPP",
+      "n_fits": 3,
+      "auc_mean": 0.9751776973104292,
+      "auc_sample_SD": 0.0007337462828409526,
+      "auprc_mean": 0.8368842517697068,
+      "auprc_sample_SD": 0.005980771958213662,
+      "display_auc": "0.9752 +/- 0.0007",
+      "display_auprc": "0.8369 +/- 0.0060",
+      "SD_definition": "ddof=1 across seeds42/43/44"
+    }
+  ],
+  "panel_C_intervals": [
+    {
+      "panel": "C",
+      "comparison": "scores_plus_full_FPP_vs_scores_capacity_matched",
+      "metric": "auc",
+      "observed_ensemble_delta": 0.014699355881748422,
+      "ci95_low": 0.0064812061483609075,
+      "ci95_high": 0.022623429554099326,
+      "finite_replicates_preserved": 2000,
+      "recomputed_this_turn": false
+    },
+    {
+      "panel": "C",
+      "comparison": "scores_plus_full_FPP_vs_scores_capacity_matched",
+      "metric": "auprc",
+      "observed_ensemble_delta": 0.034376100692333766,
+      "ci95_low": 0.015561604718946862,
+      "ci95_high": 0.05581222521977588,
+      "finite_replicates_preserved": 2000,
+      "recomputed_this_turn": false
+    },
+    {
+      "panel": "C",
+      "comparison": "scores_plus_full_FPP_vs_scores_plus_raw_ESM",
+      "metric": "auc",
+      "observed_ensemble_delta": 0.003201472694618457,
+      "ci95_low": 0.0008408923260150331,
+      "ci95_high": 0.00616761363568303,
+      "finite_replicates_preserved": 2000,
+      "recomputed_this_turn": false
+    },
+    {
+      "panel": "C",
+      "comparison": "scores_plus_full_FPP_vs_scores_plus_raw_ESM",
+      "metric": "auprc",
+      "observed_ensemble_delta": 0.007552132921047394,
+      "ci95_low": 0.003049387558497113,
+      "ci95_high": 0.01405493743580648,
+      "finite_replicates_preserved": 2000,
+      "recomputed_this_turn": false
+    },
+    {
+      "panel": "C",
+      "comparison": "scores_plus_full_FPP_vs_scores_plus_edge_ablated_FPP",
+      "metric": "auc",
+      "observed_ensemble_delta": 0.0012581400054052505,
+      "ci95_low": -0.00040544785544509575,
+      "ci95_high": 0.003191374773356209,
+      "finite_replicates_preserved": 2000,
+      "recomputed_this_turn": false
+    },
+    {
+      "panel": "C",
+      "comparison": "scores_plus_full_FPP_vs_scores_plus_edge_ablated_FPP",
+      "metric": "auprc",
+      "observed_ensemble_delta": 0.0013909410221149,
+      "ci95_low": -0.001460289301124043,
+      "ci95_high": 0.004696285824854822,
+      "finite_replicates_preserved": 2000,
+      "recomputed_this_turn": false
+    },
+    {
+      "panel": "C",
+      "comparison": "scores_plus_full_FPP_vs_scores_plus_permuted_FPP_graphmean",
+      "metric": "auc",
+      "observed_ensemble_delta": 0.002008820695528879,
+      "ci95_low": 7.941944446866468e-05,
+      "ci95_high": 0.004538626032698917,
+      "finite_replicates_preserved": 2000,
+      "recomputed_this_turn": false
+    },
+    {
+      "panel": "C",
+      "comparison": "scores_plus_full_FPP_vs_scores_plus_permuted_FPP_graphmean",
+      "metric": "auprc",
+      "observed_ensemble_delta": 0.005010108196023322,
+      "ci95_low": 0.00018184559286438807,
+      "ci95_high": 0.010964354386060493,
+      "finite_replicates_preserved": 2000,
+      "recomputed_this_turn": false
+    }
+  ],
+  "pixel_QA": {
+    "dpi": 300,
+    "canvas_pt": [
+      1037.433125,
+      557.38875
+    ],
+    "pixel_dimensions": [
+      4323,
+      2323
+    ],
+    "total_changed_pixels": 99204,
+    "preserved_A_D_F_changed_pixels": {
+      "A": 0,
+      "D": 0,
+      "F": 0
+    },
+    "outside_B_C_E_regions_changed_pixels": 0,
+    "preserved_region_pdf_pt": {
+      "A": [
+        0,
+        300,
+        335,
+        557.38875
+      ],
+      "D": [
+        0,
+        0,
+        335,
+        230
+      ],
+      "F": [
+        780,
+        0,
+        1037.433125,
+        230
+      ]
+    },
+    "allowed_B_C_E_region_pdf_pt": [
+      [
+        340,
+        280,
+        740,
+        525
+      ],
+      [
+        715,
+        280,
+        1037.433125,
+        525
+      ],
+      [
+        340,
+        0,
+        740,
+        230
+      ]
+    ]
+  },
+  "fonts": [
+    {
+      "resource": "/F1",
+      "name": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "resource": "/F2",
+      "name": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "resource": "/F2",
+      "name": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "resource": "/F1",
+      "name": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    }
+  ],
+  "all_fonts_embedded": true,
+  "D_preserved": "Raw AUC .7248/AP .2418 and Full AUC .7606/AP .2768; independent single-fit bars, no invented SD.",
+  "F_preserved": "Original 31.95%; homology10.56%.",
+  "input_sha256": {
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_20261108/source/figure_drafts/Figure2_fusion_homology_v1_accepted.pdf": "bb2429ea938a2a852dafbb67b296d96e30f20ada46cdc0a2ac83526f9649865d",
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/unified_revision_20261108/fig12/Figure2_fusion_homology_v1_accepted.pdf": "150e5832b32aba59fd75ee47259d336c3e8d2da5a863acfe653f7f8a26cfe4d5",
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/canonical_analysis_20261025/per_run_metrics.csv": "d4531ca1585919e96934d693c34052714a1c0d9956da2c262a7e236a41add70d",
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/canonical_analysis_20261025/cluster_bootstrap.json": "e76951eed1106aefd532c5288227b35e6f9175221ea03ce674b72d7ed8893b57"
+  },
+  "all_read_only_inputs_unchanged": true,
+  "Fig1_untouched": true,
+  "main_tex_untouched": true,
+  "supplement_untouched": true,
+  "new_training": false,
+  "new_inference": false,
+  "new_bootstrap": false,
+  "server_accessed": false,
+  "page_content_bytes_identical_to_verified_reused_candidate": true,
+  "mediabox_exactly_matches_baseline_as_float": true
+}

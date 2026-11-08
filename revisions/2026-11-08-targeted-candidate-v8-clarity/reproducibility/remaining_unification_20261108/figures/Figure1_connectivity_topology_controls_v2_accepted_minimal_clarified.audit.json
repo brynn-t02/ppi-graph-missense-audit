@@ -1,0 +1,350 @@
+{
+  "source": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_v6_figure3_20261108/source/figure_drafts/Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+  "source_sha256": "304feefa0e4fabff825462f2bcb4c54c1f02d7219bdcababf63306f4c48a3303",
+  "output": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/remaining_unification_20261108/figures/Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+  "output_sha256": "061e78981c9cb77fc9c429c2c2196b9012b47016e476c1670be71d7f5c2c1cd8",
+  "input": "work/remaining_unification_20261108/results/outputs/figure1E_summary.csv",
+  "input_sha256": "bebdffeb0c9b129351176a070708ccb53624bd91b2f31f19e73a07acc9277f37",
+  "canvas_pt": [
+    922.6925,
+    571.06875
+  ],
+  "pixel_comparison_dpi": 300,
+  "changed_pixels": 78862,
+  "allowed_panel_region_pt": [
+    0,
+    0,
+    625,
+    237
+  ],
+  "outside_changed_pixels": 0,
+  "preserved_region_changed_pixels": {
+    "D raw AUC bar": 0,
+    "D full AUC bar": 0,
+    "D raw AP bar": 0,
+    "D full AP bar": 0
+  },
+  "all_other_panels_pixel_identical": true,
+  "all_fonts_embedded": true,
+  "panels": [
+    "D",
+    "E"
+  ],
+  "axes_E_pt": [
+    374.490922,
+    34.66875,
+    211.523156,
+    180.502326
+  ],
+  "axes_D_pt": [
+    45.0125,
+    34.66875,
+    223.965695,
+    180.502326
+  ],
+  "raw_reference_file": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/canonical_analysis_20261025/per_run_metrics.csv",
+  "raw_reference_sha256": "d4531ca1585919e96934d693c34052714a1c0d9956da2c262a7e236a41add70d",
+  "raw_reference_mean_auc": 0.783517402150408,
+  "mean_and_SD_source": "three classifiers per configuration; sample SD ddof=1",
+  "delta_definition": "mean model AUC minus common mean raw-ESM AUC",
+  "errorbar_definition": "sample SD of model AUC; reference mean treated as a constant shift",
+  "y_limits_previous": [
+    -0.015,
+    0.03
+  ],
+  "y_limits_new": [
+    -0.02,
+    0.035
+  ],
+  "y_limit_change_reason": "Show all new sample SD bars and retain clear space below the original upper-right legend.",
+  "points_E": [
+    {
+      "split": "original",
+      "arm": "full_FPP",
+      "n_fits": 3,
+      "test_auc_mean": 0.7949876719439996,
+      "test_auc_sd": 0.0016161326817645135,
+      "auprc_mean": 0.6485095505690933,
+      "auprc_sd": 0.01167623125229462,
+      "strategy": "random_pair_removal",
+      "fraction_removed": 0.0,
+      "source": "newly verified endpoint fit shared by strategies",
+      "raw_auc_mean": 0.783517402150408,
+      "delta_auc": 0.011470269793591559
+    },
+    {
+      "split": "original",
+      "arm": "random_pair_removal_fraction_0.25",
+      "n_fits": 3,
+      "test_auc_mean": 0.7928747843827826,
+      "test_auc_sd": 0.010778139093529822,
+      "auprc_mean": 0.6448114158973951,
+      "auprc_sd": 0.01212036739326357,
+      "strategy": "random_pair_removal",
+      "fraction_removed": 0.25,
+      "source": "new matched interior fit",
+      "raw_auc_mean": 0.783517402150408,
+      "delta_auc": 0.00935738223237459
+    },
+    {
+      "split": "original",
+      "arm": "random_pair_removal_fraction_0.50",
+      "n_fits": 3,
+      "test_auc_mean": 0.7856688731890079,
+      "test_auc_sd": 0.008946324614972658,
+      "auprc_mean": 0.6361682055099723,
+      "auprc_sd": 0.013371336334039684,
+      "strategy": "random_pair_removal",
+      "fraction_removed": 0.5,
+      "source": "new matched interior fit",
+      "raw_auc_mean": 0.783517402150408,
+      "delta_auc": 0.002151471038599917
+    },
+    {
+      "split": "original",
+      "arm": "random_pair_removal_fraction_0.75",
+      "n_fits": 3,
+      "test_auc_mean": 0.7858474747435005,
+      "test_auc_sd": 0.006982348188097855,
+      "auprc_mean": 0.634974346333343,
+      "auprc_sd": 0.0038827433981496813,
+      "strategy": "random_pair_removal",
+      "fraction_removed": 0.75,
+      "source": "new matched interior fit",
+      "raw_auc_mean": 0.783517402150408,
+      "delta_auc": 0.0023300725930924804
+    },
+    {
+      "split": "original",
+      "arm": "edge_ablated_FPP",
+      "n_fits": 3,
+      "test_auc_mean": 0.7694409165923212,
+      "test_auc_sd": 0.003067077996325388,
+      "auprc_mean": 0.6034741864711016,
+      "auprc_sd": 0.005570440189237197,
+      "strategy": "random_pair_removal",
+      "fraction_removed": 1.0,
+      "source": "newly verified endpoint fit shared by strategies",
+      "raw_auc_mean": 0.783517402150408,
+      "delta_auc": -0.014076485558086826
+    },
+    {
+      "split": "original",
+      "arm": "full_FPP",
+      "n_fits": 3,
+      "test_auc_mean": 0.7949876719439996,
+      "test_auc_sd": 0.0016161326817645135,
+      "auprc_mean": 0.6485095505690933,
+      "auprc_sd": 0.01167623125229462,
+      "strategy": "high_confidence_first",
+      "fraction_removed": 0.0,
+      "source": "newly verified endpoint fit shared by strategies",
+      "raw_auc_mean": 0.783517402150408,
+      "delta_auc": 0.011470269793591559
+    },
+    {
+      "split": "original",
+      "arm": "high_confidence_first_fraction_0.25",
+      "n_fits": 3,
+      "test_auc_mean": 0.7892020621928896,
+      "test_auc_sd": 0.0010480610718421575,
+      "auprc_mean": 0.639727819688627,
+      "auprc_sd": 0.008664235729450303,
+      "strategy": "high_confidence_first",
+      "fraction_removed": 0.25,
+      "source": "new matched interior fit",
+      "raw_auc_mean": 0.783517402150408,
+      "delta_auc": 0.005684660042481582
+    },
+    {
+      "split": "original",
+      "arm": "high_confidence_first_fraction_0.50",
+      "n_fits": 3,
+      "test_auc_mean": 0.7843827388042017,
+      "test_auc_sd": 0.0006919082074507372,
+      "auprc_mean": 0.6323092845691772,
+      "auprc_sd": 0.00462175831786075,
+      "strategy": "high_confidence_first",
+      "fraction_removed": 0.5,
+      "source": "new matched interior fit",
+      "raw_auc_mean": 0.783517402150408,
+      "delta_auc": 0.0008653366537937357
+    },
+    {
+      "split": "original",
+      "arm": "high_confidence_first_fraction_0.75",
+      "n_fits": 3,
+      "test_auc_mean": 0.7774094968313706,
+      "test_auc_sd": 0.005704996142113046,
+      "auprc_mean": 0.6156025823718937,
+      "auprc_sd": 0.008455103328693783,
+      "strategy": "high_confidence_first",
+      "fraction_removed": 0.75,
+      "source": "new matched interior fit",
+      "raw_auc_mean": 0.783517402150408,
+      "delta_auc": -0.006107905319037377
+    },
+    {
+      "split": "original",
+      "arm": "edge_ablated_FPP",
+      "n_fits": 3,
+      "test_auc_mean": 0.7694409165923212,
+      "test_auc_sd": 0.003067077996325388,
+      "auprc_mean": 0.6034741864711016,
+      "auprc_sd": 0.005570440189237197,
+      "strategy": "high_confidence_first",
+      "fraction_removed": 1.0,
+      "source": "newly verified endpoint fit shared by strategies",
+      "raw_auc_mean": 0.783517402150408,
+      "delta_auc": -0.014076485558086826
+    },
+    {
+      "split": "original",
+      "arm": "full_FPP",
+      "n_fits": 3,
+      "test_auc_mean": 0.7949876719439996,
+      "test_auc_sd": 0.0016161326817645135,
+      "auprc_mean": 0.6485095505690933,
+      "auprc_sd": 0.01167623125229462,
+      "strategy": "low_confidence_first",
+      "fraction_removed": 0.0,
+      "source": "newly verified endpoint fit shared by strategies",
+      "raw_auc_mean": 0.783517402150408,
+      "delta_auc": 0.011470269793591559
+    },
+    {
+      "split": "original",
+      "arm": "low_confidence_first_fraction_0.25",
+      "n_fits": 3,
+      "test_auc_mean": 0.7896517363433008,
+      "test_auc_sd": 0.004184493125269953,
+      "auprc_mean": 0.6389091930979147,
+      "auprc_sd": 0.004056709225820498,
+      "strategy": "low_confidence_first",
+      "fraction_removed": 0.25,
+      "source": "new matched interior fit",
+      "raw_auc_mean": 0.783517402150408,
+      "delta_auc": 0.006134334192892776
+    },
+    {
+      "split": "original",
+      "arm": "low_confidence_first_fraction_0.50",
+      "n_fits": 3,
+      "test_auc_mean": 0.7883177085720267,
+      "test_auc_sd": 0.008395622782734657,
+      "auprc_mean": 0.6349798304279001,
+      "auprc_sd": 0.0029843594422211987,
+      "strategy": "low_confidence_first",
+      "fraction_removed": 0.5,
+      "source": "new matched interior fit",
+      "raw_auc_mean": 0.783517402150408,
+      "delta_auc": 0.004800306421618661
+    },
+    {
+      "split": "original",
+      "arm": "low_confidence_first_fraction_0.75",
+      "n_fits": 3,
+      "test_auc_mean": 0.7899638261081142,
+      "test_auc_sd": 0.015268256633498425,
+      "auprc_mean": 0.6438172583537684,
+      "auprc_sd": 0.020925354461884222,
+      "strategy": "low_confidence_first",
+      "fraction_removed": 0.75,
+      "source": "new matched interior fit",
+      "raw_auc_mean": 0.783517402150408,
+      "delta_auc": 0.0064464239577062266
+    },
+    {
+      "split": "original",
+      "arm": "edge_ablated_FPP",
+      "n_fits": 3,
+      "test_auc_mean": 0.7694409165923212,
+      "test_auc_sd": 0.003067077996325388,
+      "auprc_mean": 0.6034741864711016,
+      "auprc_sd": 0.005570440189237197,
+      "strategy": "low_confidence_first",
+      "fraction_removed": 1.0,
+      "source": "newly verified endpoint fit shared by strategies",
+      "raw_auc_mean": 0.783517402150408,
+      "delta_auc": -0.014076485558086826
+    }
+  ],
+  "points_D": {
+    "raw_ESM": {
+      "auc_mean": 0.783517402150408,
+      "auc_sd": 0.0062664889155283916,
+      "auprc_mean": 0.6117337391077605,
+      "auprc_sd": 0.006616647083326894
+    },
+    "full_FPP": {
+      "auc_mean": 0.7949876719439996,
+      "auc_sd": 0.0016161326817645135,
+      "auprc_mean": 0.6485095505690932,
+      "auprc_sd": 0.011676231252294604
+    },
+    "edge_ablated_FPP": {
+      "auc_mean": 0.7694409165923212,
+      "auc_sd": 0.003067077996325388,
+      "auprc_mean": 0.6034741864711016,
+      "auprc_sd": 0.005570440189237197
+    }
+  },
+  "D_ensemble_annotation": "\u0394AUC +0.0264",
+  "D_bootstrap_source": "work/remaining_unification_20261108/results/outputs/figure1D_protein_bootstrap.json",
+  "D_bootstrap_sha256": "30883617f98fdce9f8fed65c7a3f2d19def5a9e7906b1596b6f7a9884df56533",
+  "D_full_minus_edge_bootstrap": {
+    "comparison": "full_FPP minus edge_ablated_FPP",
+    "point_estimates_from": "float64 means of three canonical node-mapped probability arrays",
+    "delta_auc": 0.02640565911690307,
+    "delta_auprc": 0.05647264283361164,
+    "auc_ci95": [
+      0.007845942714300553,
+      0.052051251184287745
+    ],
+    "auprc_ci95": [
+      0.019647152964572485,
+      0.07779023446434315
+    ],
+    "resamples": 2000,
+    "valid_resamples": 2000,
+    "seed": 20261024,
+    "resampling_unit": "STRING protein: all variants with sampled multiplicity, identical weights for both models",
+    "proteins": 1413,
+    "variants": 18220,
+    "positive_variants": 5822,
+    "interval": "2.5/97.5 percentile of paired bootstrap differences",
+    "scope": "Conditional on fitted models and frozen graph; no retraining or graph-sampling uncertainty; no multiplicity adjustment",
+    "weights_sha256": "740ded7fb0a6222d4b92014567e8aae02d976a01367241feb1f298adac970a23",
+    "independent_sklearn_weighted_checks": [
+      {
+        "replicate": 0,
+        "max_abs_error": 2.220446049250313e-16
+      },
+      {
+        "replicate": 1,
+        "max_abs_error": 2.220446049250313e-16
+      },
+      {
+        "replicate": 2,
+        "max_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "replicate": 499,
+        "max_abs_error": 0.0
+      },
+      {
+        "replicate": 999,
+        "max_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "replicate": 1499,
+        "max_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "replicate": 1999,
+        "max_abs_error": 1.1102230246251565e-16
+      }
+    ]
+  },
+  "D_raw_full_metrics_unchanged": true
+}

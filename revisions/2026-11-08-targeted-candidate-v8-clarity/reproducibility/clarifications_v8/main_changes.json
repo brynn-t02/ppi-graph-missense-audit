@@ -1,0 +1,22 @@
+[
+  {
+    "before": "B, Mean AUC and AUPRC for raw ESM and full FPP under matched classifier seeds; error bars denote sample standard deviation.",
+    "after": "B, AUC and AUPRC for raw ESM and full FPP under matched classifier seeds.",
+    "reason": "Avoid duplicate B error-bar explanation; unified B/D/F explanation below."
+  },
+  {
+    "before": "C, Paired ensemble differences under variant-level and protein-clustered bootstrap resampling.",
+    "after": "C, Paired ensemble differences with 95\\% intervals from variant-level and protein-clustered bootstrap resampling.",
+    "reason": "User exact Figure1C interval clarification."
+  },
+  {
+    "before": "F, Topology-permutation control using three graph permutations and three classifier seeds per graph. Bootstrap intervals are conditional on fitted models and the evaluated graphs.",
+    "after": "F, Topology-permutation control using three graph permutations and three classifier seeds per graph. Bars in B, D and F show mean metrics with sample standard deviations; for the permutation control, the pooled standard deviation reflects variation across graph permutations and classifier seeds. Bootstrap intervals are conditional on fitted models and the evaluated graphs.",
+    "reason": "User exact B/D/F and pooled permutation-SD explanation; Figure1E unchanged."
+  },
+  {
+    "before": "E, Three-seed matched fusion comparisons under the homology-aware split.",
+    "after": "E, Three-seed matched fusion comparisons under the homology-aware split; bars show mean metrics and error bars denote sample standard deviations.",
+    "reason": "User exact Figure2E mean/SD clarification."
+  }
+]

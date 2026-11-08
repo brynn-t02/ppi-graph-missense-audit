@@ -1,0 +1,5 @@
+{
+  "phase": "failed",
+  "time_utc": "2026-11-08T00:39:02Z",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/ppi_unification_20261108/code/execute_pipeline.py\", line 11, in <module>\n    subprocess.run([sys.executable,'-u',str(B/'code'/script)],check=True,cwd=B)\n  File \"/root/autodl-tmp/ppi_unification_20261108/environment/runtime/lib/python3.10/subprocess.py\", line 526, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['/root/autodl-tmp/ppi_unification_20261108/environment/runtime/bin/python', '-u', '/root/autodl-tmp/ppi_unification_20261108/code/run_unified.py']' returned non-zero exit status 1.\n"
+}

@@ -1,0 +1,60 @@
+{
+  "status": "independent_counts_metrics_passed",
+  "rows": 18220,
+  "unique_proteins": 1413,
+  "positive": 5822,
+  "alignment": "ID sorted independently, label/protein matched frozen manifest",
+  "means": "float64;exact canonical equality",
+  "metrics_method": "rank-U AUC; unique-probability grouped noninterpolated AP",
+  "metrics": {
+    "raw_ESM": {
+      "auc": 0.784524848840049,
+      "auprc": 0.6156610123303153
+    },
+    "full_FPP": {
+      "auc": 0.7951981331526472,
+      "auprc": 0.6568786423224571
+    },
+    "scores": {
+      "auc": 0.9572711886188134,
+      "auprc": 0.907302921984416
+    },
+    "fusion": {
+      "auc": 0.9719705445005619,
+      "auprc": 0.94167902267675
+    }
+  },
+  "counts": {
+    "esm_vs_gcn": {
+      "both_correct": 12520,
+      "both_wrong": 3747,
+      "improved": 960,
+      "degraded": 993,
+      "FN_rescued": 366,
+      "FP_suppressed": 594,
+      "TN_to_FP": 958,
+      "TP_to_FN": 35,
+      "persistent_FN": 1089,
+      "persistent_FP": 2658
+    },
+    "cadd_am_vs_full": {
+      "both_correct": 16055,
+      "both_wrong": 1262,
+      "improved": 679,
+      "degraded": 224,
+      "FN_rescued": 170,
+      "FP_suppressed": 509,
+      "TN_to_FP": 99,
+      "TP_to_FN": 125,
+      "persistent_FN": 522,
+      "persistent_FP": 740
+    }
+  },
+  "all_18_threshold_partitions_verified": true,
+  "source_hashes": {
+    "outputs/BIBM_workshop_font_clean_20261025/source/canonical_analysis_20261025/public/test_predictions__original__raw_ESM.csv.gz": "36ddfbff60328081bb87635033708d60cdacc9be8e5e8a341640d6d6047133e4",
+    "outputs/BIBM_workshop_font_clean_20261025/source/canonical_analysis_20261025/public/test_predictions__original__full_FPP.csv.gz": "845ca384e6b59ac61efc5799c5360894559d99b311398e00da6cf86d771da245",
+    "outputs/BIBM_workshop_font_clean_20261025/source/canonical_analysis_20261025/public/test_predictions__original_fusion__scores_capacity_matched.csv.gz": "c84d82140d9c4ddfd91fa5ef9342f1dcc3d842d7270ffabd3500f0bdc9a4ad7a",
+    "outputs/BIBM_workshop_font_clean_20261025/source/canonical_analysis_20261025/public/test_predictions__original_fusion__scores_plus_full_FPP.csv.gz": "b60333c3b7e199084a4ac0538cdc8d8ba9b7d6aab60c28019bcd0f0248ed9921"
+  }
+}

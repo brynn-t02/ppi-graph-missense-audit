@@ -1,0 +1,26 @@
+{
+  "matched_functions_source": "work/experiment_20261024/code/run_matched_experiments.py",
+  "matched_original_sha256": "020c71b5d97b1fe00a23a4d3e074615cb5798884a4130fdaa7925d8f1eff7edd",
+  "matched_functions": [
+    "dump",
+    "load",
+    "emb",
+    "sha",
+    "metrics",
+    "MLP",
+    "seed",
+    "propagate",
+    "features",
+    "evaluate",
+    "fit"
+  ],
+  "pair_functions_source": "/Users/teyian/Documents/paper1/server_snapshot_full/root/44_esm_gcn_partial_edge_ablation_curve.py",
+  "pair_original_sha256": "9bea21614add2e870f47be9d91d6b07610e7a17392f515e7a4685f66c479cc4b",
+  "pair_functions": [
+    "identify_train_test_pairs_and_entries",
+    "load_string_scores_for_pairs",
+    "select_pairs_for_removal",
+    "make_pair_level_ablated_edge_index"
+  ],
+  "method": "AST exact source segments; no runtime imported locally; roots parameterized only"
+}

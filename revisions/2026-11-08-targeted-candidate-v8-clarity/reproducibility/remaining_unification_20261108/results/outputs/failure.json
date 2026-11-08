@@ -1,0 +1,4 @@
+{
+  "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/ppi_unification_20261108/code/run_unified.py\", line 215, in <module>\n    try:main()\n  File \"/root/autodl-tmp/ppi_unification_20261108/code/run_unified.py\", line 186, in main\n    verify_endpoints(splits['original'])\n  File \"/root/autodl-tmp/ppi_unification_20261108/code/run_unified.py\", line 140, in verify_endpoints\n    assert max(errors.values())<1e-10,(arm,seed,errors)\nAssertionError: ('edge_ablated_FPP', 42, {'val_auc': 0.0008532665113886173, 'val_auprc': 0.00819151402695717, 'test_auc': 0.005165073831735367, 'test_auprc': 0.013611236623332745})\n",
+  "time": 1794098341.6614134
+}

@@ -1,0 +1,54 @@
+{
+  "comparison": "full_FPP minus edge_ablated_FPP",
+  "point_estimates_from": "float64 means of three canonical node-mapped probability arrays",
+  "delta_auc": 0.02640565911690307,
+  "delta_auprc": 0.05647264283361164,
+  "auc_ci95": [
+    0.007845942714300553,
+    0.052051251184287745
+  ],
+  "auprc_ci95": [
+    0.019647152964572485,
+    0.07779023446434315
+  ],
+  "resamples": 2000,
+  "valid_resamples": 2000,
+  "seed": 20261024,
+  "resampling_unit": "STRING protein: all variants with sampled multiplicity, identical weights for both models",
+  "proteins": 1413,
+  "variants": 18220,
+  "positive_variants": 5822,
+  "interval": "2.5/97.5 percentile of paired bootstrap differences",
+  "scope": "Conditional on fitted models and frozen graph; no retraining or graph-sampling uncertainty; no multiplicity adjustment",
+  "weights_sha256": "740ded7fb0a6222d4b92014567e8aae02d976a01367241feb1f298adac970a23",
+  "independent_sklearn_weighted_checks": [
+    {
+      "replicate": 0,
+      "max_abs_error": 2.220446049250313e-16
+    },
+    {
+      "replicate": 1,
+      "max_abs_error": 2.220446049250313e-16
+    },
+    {
+      "replicate": 2,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "replicate": 499,
+      "max_abs_error": 0.0
+    },
+    {
+      "replicate": 999,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "replicate": 1499,
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "replicate": 1999,
+      "max_abs_error": 1.1102230246251565e-16
+    }
+  ]
+}

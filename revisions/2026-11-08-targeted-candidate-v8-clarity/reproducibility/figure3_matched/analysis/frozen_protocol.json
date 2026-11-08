@@ -1,0 +1,917 @@
+{
+  "version": "Figure3 matched ensembles, frozen original groups, protein-clustered bootstrap v6",
+  "created_client_date": "2026-11-08",
+  "classifier_seeds": [
+    42,
+    43,
+    44
+  ],
+  "prediction_aggregation": "float64 arithmetic mean of canonical per-protein probabilities mapped to original variants",
+  "point_estimand": "Variant-level ROC AUC and non-interpolated average precision; full FPP minus raw ESM",
+  "bootstrap": {
+    "unit": "STRING_protein_id",
+    "repeats": 2000,
+    "within_each_frozen_group": true,
+    "sampling": "Draw K of K distinct group proteins with replacement; include all variants of each sampled protein with its multiplicity, identically for both models",
+    "interval": "2.5 and 97.5 percentiles of finite paired differences",
+    "joint_seed": "20261108 + original zero-based cell_index",
+    "stratum_seed": "20261108 + 1000 + zero-based stratum_index",
+    "rng": "numpy.random.default_rng / PCG64",
+    "undefined": "Draws with fewer than two classes are recorded as NaN for both metrics, excluded from percentile intervals, and counted; no redraw until success",
+    "conditioning": "Fitted models, frozen graph and memberships; no retraining or graph sampling",
+    "selection_and_multiplicity": "No subgroup-selection or multiple-comparison adjustment; descriptive exploratory intervals"
+  },
+  "minimum_group_variants": 50,
+  "original_bucket_cutpoints": {
+    "degree_cuts": [
+      29.0,
+      89.0
+    ],
+    "kcore_cuts": [
+      24.0,
+      60.0
+    ],
+    "risk_rate_cuts": [
+      0.31935954995402177,
+      0.4479481641468683
+    ],
+    "betweenness_cuts": [
+      1.3041272073590153e-05,
+      5.449299338300802e-05
+    ],
+    "clustering_cuts": [
+      0.17647058823529413,
+      0.2947599176970559
+    ],
+    "within_comm_fraction_cuts": [
+      0.6549707602339181,
+      0.85
+    ]
+  },
+  "joint_maps": [
+    [
+      "kcore_bucket",
+      "betweenness_bucket"
+    ],
+    [
+      "kcore_bucket",
+      "clustering_bucket"
+    ],
+    [
+      "neighbor_risk_bucket",
+      "kcore_bucket"
+    ],
+    [
+      "neighbor_risk_bucket",
+      "clustering_bucket"
+    ],
+    [
+      "betweenness_bucket",
+      "boundary_role_bucket"
+    ],
+    [
+      "clustering_bucket",
+      "boundary_role_bucket"
+    ]
+  ],
+  "joint_cells": [
+    {
+      "row_col": "kcore_bucket",
+      "row_group": 0,
+      "col_col": "betweenness_bucket",
+      "col_group": 0,
+      "map_name": "kcore_bucket__x__betweenness_bucket",
+      "n": 1863,
+      "positive": 78,
+      "proteins": 284,
+      "membership_sha256": "a630ad771b940cc69562cfd16ed677fba55c3c2b27dcec9185d309845fc56e85",
+      "cell_index": 0
+    },
+    {
+      "row_col": "kcore_bucket",
+      "row_group": 0,
+      "col_col": "betweenness_bucket",
+      "col_group": 1,
+      "map_name": "kcore_bucket__x__betweenness_bucket",
+      "n": 887,
+      "positive": 37,
+      "proteins": 127,
+      "membership_sha256": "0645cd0b1e1104d30a3c7092cc1a5ad54542113d69bba50e21178ea8d7078e2d",
+      "cell_index": 1
+    },
+    {
+      "row_col": "kcore_bucket",
+      "row_group": 0,
+      "col_col": "betweenness_bucket",
+      "col_group": 2,
+      "map_name": "kcore_bucket__x__betweenness_bucket",
+      "n": 97,
+      "positive": 6,
+      "proteins": 16,
+      "membership_sha256": "3b1dea29dcfd6557157e1167d2d3423c01645d1c320aa448f158a481cdc2640c",
+      "cell_index": 2
+    },
+    {
+      "row_col": "kcore_bucket",
+      "row_group": 1,
+      "col_col": "betweenness_bucket",
+      "col_group": 0,
+      "map_name": "kcore_bucket__x__betweenness_bucket",
+      "n": 1164,
+      "positive": 347,
+      "proteins": 115,
+      "membership_sha256": "15b20b222690d2c0889dd354dfa3f2926495f42a407343ab9c193aabeb62a2a7",
+      "cell_index": 3
+    },
+    {
+      "row_col": "kcore_bucket",
+      "row_group": 1,
+      "col_col": "betweenness_bucket",
+      "col_group": 1,
+      "map_name": "kcore_bucket__x__betweenness_bucket",
+      "n": 2571,
+      "positive": 565,
+      "proteins": 253,
+      "membership_sha256": "9a2cbedfb46cc2a7d44e03eeba777db689d8f105b74dee3e2fac48a72b33a547",
+      "cell_index": 4
+    },
+    {
+      "row_col": "kcore_bucket",
+      "row_group": 1,
+      "col_col": "betweenness_bucket",
+      "col_group": 2,
+      "map_name": "kcore_bucket__x__betweenness_bucket",
+      "n": 1950,
+      "positive": 838,
+      "proteins": 126,
+      "membership_sha256": "1a74243eee27ff5634f198a6cb5c39b3f38b3ef2f031be191c640f0eaebce6a5",
+      "cell_index": 5
+    },
+    {
+      "row_col": "kcore_bucket",
+      "row_group": 2,
+      "col_col": "betweenness_bucket",
+      "col_group": 1,
+      "map_name": "kcore_bucket__x__betweenness_bucket",
+      "n": 1028,
+      "positive": 250,
+      "proteins": 120,
+      "membership_sha256": "03fa58a74e1dae0b528f606419d5538bc2c32f5951947e99899d59c9a9953aee",
+      "cell_index": 6
+    },
+    {
+      "row_col": "kcore_bucket",
+      "row_group": 2,
+      "col_col": "betweenness_bucket",
+      "col_group": 2,
+      "map_name": "kcore_bucket__x__betweenness_bucket",
+      "n": 8637,
+      "positive": 3701,
+      "proteins": 365,
+      "membership_sha256": "e1473c7f2df27f91944c6687d9ce223a72d48666750782a59ddf01808f49a8f1",
+      "cell_index": 7
+    },
+    {
+      "row_col": "kcore_bucket",
+      "row_group": 0,
+      "col_col": "clustering_bucket",
+      "col_group": 0,
+      "map_name": "kcore_bucket__x__clustering_bucket",
+      "n": 1537,
+      "positive": 40,
+      "proteins": 257,
+      "membership_sha256": "b07420cdd19420423f912de9f2eb99c523e3ff186308fae523d2b0bdc81c01cb",
+      "cell_index": 8
+    },
+    {
+      "row_col": "kcore_bucket",
+      "row_group": 0,
+      "col_col": "clustering_bucket",
+      "col_group": 1,
+      "map_name": "kcore_bucket__x__clustering_bucket",
+      "n": 721,
+      "positive": 29,
+      "proteins": 80,
+      "membership_sha256": "38ef475c6a7c20708cb773e2efc8c3843b589256961cee3635acbd9d7b81f5bc",
+      "cell_index": 9
+    },
+    {
+      "row_col": "kcore_bucket",
+      "row_group": 0,
+      "col_col": "clustering_bucket",
+      "col_group": 2,
+      "map_name": "kcore_bucket__x__clustering_bucket",
+      "n": 589,
+      "positive": 52,
+      "proteins": 90,
+      "membership_sha256": "ece481dadc2b9cdb5976074974461e4efedd5663340517e20669933cd3a8cc7f",
+      "cell_index": 10
+    },
+    {
+      "row_col": "kcore_bucket",
+      "row_group": 1,
+      "col_col": "clustering_bucket",
+      "col_group": 0,
+      "map_name": "kcore_bucket__x__clustering_bucket",
+      "n": 1906,
+      "positive": 484,
+      "proteins": 147,
+      "membership_sha256": "2b4189030e96734dd0c20ecf25fc49c5d1c15251597e498a4366388f1c47993c",
+      "cell_index": 11
+    },
+    {
+      "row_col": "kcore_bucket",
+      "row_group": 1,
+      "col_col": "clustering_bucket",
+      "col_group": 1,
+      "map_name": "kcore_bucket__x__clustering_bucket",
+      "n": 2089,
+      "positive": 845,
+      "proteins": 163,
+      "membership_sha256": "8d4d3433ea790c69151598fb82ed40142abbbdf8ff95bca6c4ec619595ae5422",
+      "cell_index": 12
+    },
+    {
+      "row_col": "kcore_bucket",
+      "row_group": 1,
+      "col_col": "clustering_bucket",
+      "col_group": 2,
+      "map_name": "kcore_bucket__x__clustering_bucket",
+      "n": 1690,
+      "positive": 421,
+      "proteins": 184,
+      "membership_sha256": "2287a4665accedef0ed42c5628a12ef1e27d7a46addb8fe506fe60bdbd13f633",
+      "cell_index": 13
+    },
+    {
+      "row_col": "kcore_bucket",
+      "row_group": 2,
+      "col_col": "clustering_bucket",
+      "col_group": 0,
+      "map_name": "kcore_bucket__x__clustering_bucket",
+      "n": 4791,
+      "positive": 1854,
+      "proteins": 95,
+      "membership_sha256": "1a86014b0ee359183a5880c57a8a36b6be5465d2336f8232e1900d29f37fe589",
+      "cell_index": 14
+    },
+    {
+      "row_col": "kcore_bucket",
+      "row_group": 2,
+      "col_col": "clustering_bucket",
+      "col_group": 1,
+      "map_name": "kcore_bucket__x__clustering_bucket",
+      "n": 3140,
+      "positive": 1624,
+      "proteins": 198,
+      "membership_sha256": "deb99bbae07d3987ea6196fff625aacccbd445ea01ac94e6767a8d4123a84912",
+      "cell_index": 15
+    },
+    {
+      "row_col": "kcore_bucket",
+      "row_group": 2,
+      "col_col": "clustering_bucket",
+      "col_group": 2,
+      "map_name": "kcore_bucket__x__clustering_bucket",
+      "n": 1757,
+      "positive": 473,
+      "proteins": 199,
+      "membership_sha256": "250889ab5352ccfa1aae006290c4e22616a95cb5a3e71e9416838d50e0bfdacf",
+      "cell_index": 16
+    },
+    {
+      "row_col": "neighbor_risk_bucket",
+      "row_group": 0,
+      "col_col": "kcore_bucket",
+      "col_group": 0,
+      "map_name": "neighbor_risk_bucket__x__kcore_bucket",
+      "n": 2097,
+      "positive": 38,
+      "proteins": 305,
+      "membership_sha256": "b8bdb620a16a01ab0bef4c7648b8cbc40ca3379adac19c6ba566271a2793cd5d",
+      "cell_index": 17
+    },
+    {
+      "row_col": "neighbor_risk_bucket",
+      "row_group": 0,
+      "col_col": "kcore_bucket",
+      "col_group": 1,
+      "map_name": "neighbor_risk_bucket__x__kcore_bucket",
+      "n": 2159,
+      "positive": 304,
+      "proteins": 232,
+      "membership_sha256": "a10be52d753a356678a0a330d685486b5fe3e52f9fe37621f3dd028ad62b16fd",
+      "cell_index": 18
+    },
+    {
+      "row_col": "neighbor_risk_bucket",
+      "row_group": 0,
+      "col_col": "kcore_bucket",
+      "col_group": 2,
+      "map_name": "neighbor_risk_bucket__x__kcore_bucket",
+      "n": 2067,
+      "positive": 326,
+      "proteins": 187,
+      "membership_sha256": "5ac557ab239d7b5134aa0355ed89092701cdd554f2faa06f366f09b7237f0a35",
+      "cell_index": 19
+    },
+    {
+      "row_col": "neighbor_risk_bucket",
+      "row_group": 1,
+      "col_col": "kcore_bucket",
+      "col_group": 0,
+      "map_name": "neighbor_risk_bucket__x__kcore_bucket",
+      "n": 264,
+      "positive": 1,
+      "proteins": 46,
+      "membership_sha256": "0e61837608ed18da91924bbe88d70ec140b87b065fc9f3672c47a1ca936ae332",
+      "cell_index": 20
+    },
+    {
+      "row_col": "neighbor_risk_bucket",
+      "row_group": 1,
+      "col_col": "kcore_bucket",
+      "col_group": 1,
+      "map_name": "neighbor_risk_bucket__x__kcore_bucket",
+      "n": 1622,
+      "positive": 348,
+      "proteins": 128,
+      "membership_sha256": "0bb6367cd5cae3b4833bb970277a6a920859889dc604f3a3377b4c76cb279cc9",
+      "cell_index": 21
+    },
+    {
+      "row_col": "neighbor_risk_bucket",
+      "row_group": 1,
+      "col_col": "kcore_bucket",
+      "col_group": 2,
+      "map_name": "neighbor_risk_bucket__x__kcore_bucket",
+      "n": 3943,
+      "positive": 1331,
+      "proteins": 162,
+      "membership_sha256": "94780eaf355b8c366a31e57d3914dd5d6378a0c0033e546504f9c44856042c3c",
+      "cell_index": 22
+    },
+    {
+      "row_col": "neighbor_risk_bucket",
+      "row_group": 2,
+      "col_col": "kcore_bucket",
+      "col_group": 0,
+      "map_name": "neighbor_risk_bucket__x__kcore_bucket",
+      "n": 437,
+      "positive": 82,
+      "proteins": 66,
+      "membership_sha256": "2efa2100a085c1378b081f9f67c20a7ecf74d9707e75f46d940da7bed1474f86",
+      "cell_index": 23
+    },
+    {
+      "row_col": "neighbor_risk_bucket",
+      "row_group": 2,
+      "col_col": "kcore_bucket",
+      "col_group": 1,
+      "map_name": "neighbor_risk_bucket__x__kcore_bucket",
+      "n": 1904,
+      "positive": 1098,
+      "proteins": 134,
+      "membership_sha256": "4614a3fbe0be37758f633664cd5e557524d7fc660dee4dafe67ddb18fd49381f",
+      "cell_index": 24
+    },
+    {
+      "row_col": "neighbor_risk_bucket",
+      "row_group": 2,
+      "col_col": "kcore_bucket",
+      "col_group": 2,
+      "map_name": "neighbor_risk_bucket__x__kcore_bucket",
+      "n": 3678,
+      "positive": 2294,
+      "proteins": 143,
+      "membership_sha256": "85929efebbf5a9658c58eb1cce3f4b0f97a5f8ebc4c55d07a6d886e548e48b4c",
+      "cell_index": 25
+    },
+    {
+      "row_col": "neighbor_risk_bucket",
+      "row_group": 0,
+      "col_col": "clustering_bucket",
+      "col_group": 0,
+      "map_name": "neighbor_risk_bucket__x__clustering_bucket",
+      "n": 3141,
+      "positive": 338,
+      "proteins": 297,
+      "membership_sha256": "93dac7a9ceda8aece3d7aa82366e837bbb7ab3a47e2636755c4f6c9a5cb7ac73",
+      "cell_index": 26
+    },
+    {
+      "row_col": "neighbor_risk_bucket",
+      "row_group": 0,
+      "col_col": "clustering_bucket",
+      "col_group": 1,
+      "map_name": "neighbor_risk_bucket__x__clustering_bucket",
+      "n": 1629,
+      "positive": 213,
+      "proteins": 177,
+      "membership_sha256": "235532ff9c378d5651da0cec46ae84ca21bb5c09794b4b92c758e74b79d3edc1",
+      "cell_index": 27
+    },
+    {
+      "row_col": "neighbor_risk_bucket",
+      "row_group": 0,
+      "col_col": "clustering_bucket",
+      "col_group": 2,
+      "map_name": "neighbor_risk_bucket__x__clustering_bucket",
+      "n": 1553,
+      "positive": 117,
+      "proteins": 250,
+      "membership_sha256": "83f3d158fb9ee1cbbab21e39e4a7381f20ced5e4540ac2a0b7abbda2414062cc",
+      "cell_index": 28
+    },
+    {
+      "row_col": "neighbor_risk_bucket",
+      "row_group": 1,
+      "col_col": "clustering_bucket",
+      "col_group": 0,
+      "map_name": "neighbor_risk_bucket__x__clustering_bucket",
+      "n": 3684,
+      "positive": 1215,
+      "proteins": 102,
+      "membership_sha256": "e6427ae4cafacb63f2d4c8037e7f866d625dc9c3651b992937cb3bad451ac52a",
+      "cell_index": 29
+    },
+    {
+      "row_col": "neighbor_risk_bucket",
+      "row_group": 1,
+      "col_col": "clustering_bucket",
+      "col_group": 1,
+      "map_name": "neighbor_risk_bucket__x__clustering_bucket",
+      "n": 1303,
+      "positive": 340,
+      "proteins": 122,
+      "membership_sha256": "a583ed8c250a226c2009543f45c8a8ae4f090b11ee3ebe70411a7939d2dd0f6f",
+      "cell_index": 30
+    },
+    {
+      "row_col": "neighbor_risk_bucket",
+      "row_group": 1,
+      "col_col": "clustering_bucket",
+      "col_group": 2,
+      "map_name": "neighbor_risk_bucket__x__clustering_bucket",
+      "n": 842,
+      "positive": 125,
+      "proteins": 112,
+      "membership_sha256": "a32f1e7bb220fc57655742358927e82d7901a41ef0f342118f147dc586c4d30c",
+      "cell_index": 31
+    },
+    {
+      "row_col": "neighbor_risk_bucket",
+      "row_group": 2,
+      "col_col": "clustering_bucket",
+      "col_group": 0,
+      "map_name": "neighbor_risk_bucket__x__clustering_bucket",
+      "n": 1394,
+      "positive": 825,
+      "proteins": 94,
+      "membership_sha256": "d5888ff351a112d4e840099b7b8bb22bee648285474ef3dfbb80e6bd9e0f81c8",
+      "cell_index": 32
+    },
+    {
+      "row_col": "neighbor_risk_bucket",
+      "row_group": 2,
+      "col_col": "clustering_bucket",
+      "col_group": 1,
+      "map_name": "neighbor_risk_bucket__x__clustering_bucket",
+      "n": 3004,
+      "positive": 1945,
+      "proteins": 141,
+      "membership_sha256": "be1454662ea3bbc4af4a3f46ee37c2516d4f232fbe37a24c3f319ee168f08c4d",
+      "cell_index": 33
+    },
+    {
+      "row_col": "neighbor_risk_bucket",
+      "row_group": 2,
+      "col_col": "clustering_bucket",
+      "col_group": 2,
+      "map_name": "neighbor_risk_bucket__x__clustering_bucket",
+      "n": 1621,
+      "positive": 704,
+      "proteins": 108,
+      "membership_sha256": "089630e63822304d18b3265d84899e807677f8637e69b7ed4c18aa4867061dbe",
+      "cell_index": 34
+    },
+    {
+      "row_col": "betweenness_bucket",
+      "row_group": 0,
+      "col_col": "boundary_role_bucket",
+      "col_group": 0,
+      "map_name": "betweenness_bucket__x__boundary_role_bucket",
+      "n": 1393,
+      "positive": 297,
+      "proteins": 150,
+      "membership_sha256": "4bcc4931a9ad9edc9f048e439e9203cc187cfe910b41b7eec84c173f53080069",
+      "cell_index": 35
+    },
+    {
+      "row_col": "betweenness_bucket",
+      "row_group": 0,
+      "col_col": "boundary_role_bucket",
+      "col_group": 1,
+      "map_name": "betweenness_bucket__x__boundary_role_bucket",
+      "n": 925,
+      "positive": 80,
+      "proteins": 118,
+      "membership_sha256": "a57b3203cc36f802a2a06708a8cf197315a989b783daae80579f7ef7a88ad3f3",
+      "cell_index": 36
+    },
+    {
+      "row_col": "betweenness_bucket",
+      "row_group": 0,
+      "col_col": "boundary_role_bucket",
+      "col_group": 2,
+      "map_name": "betweenness_bucket__x__boundary_role_bucket",
+      "n": 723,
+      "positive": 48,
+      "proteins": 134,
+      "membership_sha256": "81eee6dd8cece7b661df9289d8a350985a6e7df924b29f26d79fa548c7d9cebe",
+      "cell_index": 37
+    },
+    {
+      "row_col": "betweenness_bucket",
+      "row_group": 1,
+      "col_col": "boundary_role_bucket",
+      "col_group": 0,
+      "map_name": "betweenness_bucket__x__boundary_role_bucket",
+      "n": 1624,
+      "positive": 449,
+      "proteins": 182,
+      "membership_sha256": "5c05555a8101b2ad11c78b3b33f600682d90c90698045f041f8f5bd8ac647f74",
+      "cell_index": 38
+    },
+    {
+      "row_col": "betweenness_bucket",
+      "row_group": 1,
+      "col_col": "boundary_role_bucket",
+      "col_group": 1,
+      "map_name": "betweenness_bucket__x__boundary_role_bucket",
+      "n": 1611,
+      "positive": 245,
+      "proteins": 172,
+      "membership_sha256": "102a6c5bd67293da86c91b12305de314fd9709b7ff76461482b150d0514ffe32",
+      "cell_index": 39
+    },
+    {
+      "row_col": "betweenness_bucket",
+      "row_group": 1,
+      "col_col": "boundary_role_bucket",
+      "col_group": 2,
+      "map_name": "betweenness_bucket__x__boundary_role_bucket",
+      "n": 1233,
+      "positive": 156,
+      "proteins": 145,
+      "membership_sha256": "edf7128ca255cf7d4049db13586d6b8a6cbfac700f2478eb77813eed8c2eb945",
+      "cell_index": 40
+    },
+    {
+      "row_col": "betweenness_bucket",
+      "row_group": 2,
+      "col_col": "boundary_role_bucket",
+      "col_group": 0,
+      "map_name": "betweenness_bucket__x__boundary_role_bucket",
+      "n": 3181,
+      "positive": 1440,
+      "proteins": 137,
+      "membership_sha256": "d8acdae009106ed528d94462bb97a8f8767654d249d9648ba21c7b0423fd7dd6",
+      "cell_index": 41
+    },
+    {
+      "row_col": "betweenness_bucket",
+      "row_group": 2,
+      "col_col": "boundary_role_bucket",
+      "col_group": 1,
+      "map_name": "betweenness_bucket__x__boundary_role_bucket",
+      "n": 4062,
+      "positive": 1630,
+      "proteins": 164,
+      "membership_sha256": "f585b751dd37dca552287d25a303aa8c448312f46cb2c0318c5dc972cded397f",
+      "cell_index": 42
+    },
+    {
+      "row_col": "betweenness_bucket",
+      "row_group": 2,
+      "col_col": "boundary_role_bucket",
+      "col_group": 2,
+      "map_name": "betweenness_bucket__x__boundary_role_bucket",
+      "n": 3441,
+      "positive": 1475,
+      "proteins": 206,
+      "membership_sha256": "efb5af4088b6a2365e16e3a0488d288acbec609fb26d2f690865242c344f0b84",
+      "cell_index": 43
+    },
+    {
+      "row_col": "clustering_bucket",
+      "row_group": 0,
+      "col_col": "boundary_role_bucket",
+      "col_group": 0,
+      "map_name": "clustering_bucket__x__boundary_role_bucket",
+      "n": 3559,
+      "positive": 745,
+      "proteins": 278,
+      "membership_sha256": "82ca73f1aedad5b17928d550e95f7a11f26acfbd04c5fa4814a77bb2a91db93b",
+      "cell_index": 44
+    },
+    {
+      "row_col": "clustering_bucket",
+      "row_group": 0,
+      "col_col": "boundary_role_bucket",
+      "col_group": 1,
+      "map_name": "clustering_bucket__x__boundary_role_bucket",
+      "n": 3398,
+      "positive": 1165,
+      "proteins": 152,
+      "membership_sha256": "ecb7f21f3b20d371f991596b3bbd976ebe778b440d0916772d3ff5d2c8e9ba97",
+      "cell_index": 45
+    },
+    {
+      "row_col": "clustering_bucket",
+      "row_group": 0,
+      "col_col": "boundary_role_bucket",
+      "col_group": 2,
+      "map_name": "clustering_bucket__x__boundary_role_bucket",
+      "n": 1250,
+      "positive": 466,
+      "proteins": 64,
+      "membership_sha256": "fe2e73c79e651b86ae5ecc9d74fc7f31def6dbd1dc6ec99721b9e3fc83b383be",
+      "cell_index": 46
+    },
+    {
+      "row_col": "clustering_bucket",
+      "row_group": 1,
+      "col_col": "boundary_role_bucket",
+      "col_group": 0,
+      "map_name": "clustering_bucket__x__boundary_role_bucket",
+      "n": 1855,
+      "positive": 1155,
+      "proteins": 118,
+      "membership_sha256": "13a8c7fda7fdc06f3919152b1818709bb40e89788f5438000bc5498af66c48e6",
+      "cell_index": 47
+    },
+    {
+      "row_col": "clustering_bucket",
+      "row_group": 1,
+      "col_col": "boundary_role_bucket",
+      "col_group": 1,
+      "map_name": "clustering_bucket__x__boundary_role_bucket",
+      "n": 2116,
+      "positive": 568,
+      "proteins": 173,
+      "membership_sha256": "70c332e35c60fd6752f41b34fd76635c53916d15ba56497ae18eff0be27fbe45",
+      "cell_index": 48
+    },
+    {
+      "row_col": "clustering_bucket",
+      "row_group": 1,
+      "col_col": "boundary_role_bucket",
+      "col_group": 2,
+      "map_name": "clustering_bucket__x__boundary_role_bucket",
+      "n": 1979,
+      "positive": 775,
+      "proteins": 150,
+      "membership_sha256": "4781e7a6849767a0cff61d1117174499888757954e804680f20ea308aba90499",
+      "cell_index": 49
+    },
+    {
+      "row_col": "clustering_bucket",
+      "row_group": 2,
+      "col_col": "boundary_role_bucket",
+      "col_group": 0,
+      "map_name": "clustering_bucket__x__boundary_role_bucket",
+      "n": 784,
+      "positive": 286,
+      "proteins": 73,
+      "membership_sha256": "3752461be292cc7d59c15eaaeb08896c90cb375720880edac5f8f8b7af4b4b1c",
+      "cell_index": 50
+    },
+    {
+      "row_col": "clustering_bucket",
+      "row_group": 2,
+      "col_col": "boundary_role_bucket",
+      "col_group": 1,
+      "map_name": "clustering_bucket__x__boundary_role_bucket",
+      "n": 1084,
+      "positive": 222,
+      "proteins": 129,
+      "membership_sha256": "8f26387c7703731dbc33669f6e3f7bcdd5ca439b62f24d5cdc4b3de3be9ecb0c",
+      "cell_index": 51
+    },
+    {
+      "row_col": "clustering_bucket",
+      "row_group": 2,
+      "col_col": "boundary_role_bucket",
+      "col_group": 2,
+      "map_name": "clustering_bucket__x__boundary_role_bucket",
+      "n": 2168,
+      "positive": 438,
+      "proteins": 271,
+      "membership_sha256": "4a636b7c2afe85b1abee536c7ba5732101f78cf64646ee0efa9d5a0fcfde72b0",
+      "cell_index": 52
+    }
+  ],
+  "one_dimensional_strata": [
+    {
+      "group_col": "degree_bucket",
+      "group": 0,
+      "n": 2795,
+      "positive": 119,
+      "proteins": 418,
+      "membership_sha256": "0834898b931223beeab932ff4f124aeda64a121352133868c9b82c9bcddb27d1"
+    },
+    {
+      "group_col": "degree_bucket",
+      "group": 1,
+      "n": 4762,
+      "positive": 995,
+      "proteins": 500,
+      "membership_sha256": "e0f8fe1804e7d99247033a4853124c8d49649a2427e195242466507b78341880"
+    },
+    {
+      "group_col": "degree_bucket",
+      "group": 2,
+      "n": 10663,
+      "positive": 4708,
+      "proteins": 495,
+      "membership_sha256": "048cbef640fef597aff26e800bdaed02f5052e0ff8ac7d253b22deb424fb72bb"
+    },
+    {
+      "group_col": "kcore_bucket",
+      "group": 0,
+      "n": 2847,
+      "positive": 121,
+      "proteins": 427,
+      "membership_sha256": "a3617923d01f15602fa9c9f97e23ccccc04434a2309147c1d9db262ecff554e3"
+    },
+    {
+      "group_col": "kcore_bucket",
+      "group": 1,
+      "n": 5685,
+      "positive": 1750,
+      "proteins": 494,
+      "membership_sha256": "70324a0926b45b2ed4605d802a6fe3239fcf14d1a9a791c476cb47dee5f456cd"
+    },
+    {
+      "group_col": "kcore_bucket",
+      "group": 2,
+      "n": 9688,
+      "positive": 3951,
+      "proteins": 492,
+      "membership_sha256": "f65db6435c16f91ac5384f893fb5a933a984566c502889aed876a63e93e46e6f"
+    },
+    {
+      "group_col": "neighbor_risk_bucket",
+      "group": 0,
+      "n": 6323,
+      "positive": 668,
+      "proteins": 724,
+      "membership_sha256": "dc2d47600c6dae73475f223348801af127a38440b3d3f77722e41a081b2502ee"
+    },
+    {
+      "group_col": "neighbor_risk_bucket",
+      "group": 1,
+      "n": 5829,
+      "positive": 1680,
+      "proteins": 336,
+      "membership_sha256": "b35c49f2aa1d35ab6141a98c1024e31d792ffb89ba0150f872a0e7f45dac519c"
+    },
+    {
+      "group_col": "neighbor_risk_bucket",
+      "group": 2,
+      "n": 6019,
+      "positive": 3474,
+      "proteins": 343,
+      "membership_sha256": "a34560bbeea07b575d7effc3c67d3e456d0e162fd8ffa2044fbf8d0fa56e8e6c"
+    },
+    {
+      "group_col": "betweenness_bucket",
+      "group": 0,
+      "n": 3050,
+      "positive": 425,
+      "proteins": 406,
+      "membership_sha256": "93542826cdee42ccac12ff9609bca6a272fcc5962c9facc303b4b56fafa795c5"
+    },
+    {
+      "group_col": "betweenness_bucket",
+      "group": 1,
+      "n": 4486,
+      "positive": 852,
+      "proteins": 500,
+      "membership_sha256": "f2e0d6b118cb1693d1f2570ad6491972d9247b2a40af1e4d20277acdbe912a5a"
+    },
+    {
+      "group_col": "betweenness_bucket",
+      "group": 2,
+      "n": 10684,
+      "positive": 4545,
+      "proteins": 507,
+      "membership_sha256": "f98d6233c45c81bfc7eb01899a048a93c67a9f65a2f0c088478a059c5864925a"
+    },
+    {
+      "group_col": "clustering_bucket",
+      "group": 0,
+      "n": 8234,
+      "positive": 2378,
+      "proteins": 499,
+      "membership_sha256": "c0b8f23cf4c6b798c312dd4c7650b4133bea3d969c6831979103692fee2829ac"
+    },
+    {
+      "group_col": "clustering_bucket",
+      "group": 1,
+      "n": 5950,
+      "positive": 2498,
+      "proteins": 441,
+      "membership_sha256": "a582a6f38ca692ae93d13c9b4f96a2b95ec14c7a9bfaea180c69fac60bdfc26c"
+    },
+    {
+      "group_col": "clustering_bucket",
+      "group": 2,
+      "n": 4036,
+      "positive": 946,
+      "proteins": 473,
+      "membership_sha256": "311eb0f1e32d7bb0b94877eebbf9a9ad939cd690d405d344b63114a0a40d206a"
+    },
+    {
+      "group_col": "boundary_role_bucket",
+      "group": 0,
+      "n": 6198,
+      "positive": 2186,
+      "proteins": 469,
+      "membership_sha256": "9e9d2309747c1b5127fe613c174d68aa1f59773e689abeb8b17032b0eb95b9d2"
+    },
+    {
+      "group_col": "boundary_role_bucket",
+      "group": 1,
+      "n": 6598,
+      "positive": 1955,
+      "proteins": 454,
+      "membership_sha256": "0f90f2c710787b2d26b9f78ce0b5a5990bda0d1d1874d50d5d254e9d82ffc67d"
+    },
+    {
+      "group_col": "boundary_role_bucket",
+      "group": 2,
+      "n": 5397,
+      "positive": 1679,
+      "proteins": 485,
+      "membership_sha256": "746cb0c3b951953cc6c901a9cacc917dbed3dcb2773601625f086ccf7a8de370"
+    }
+  ],
+  "fixed_original_displayed_cells": [
+    {
+      "cell_name": "mid_kcore__high_betweenness",
+      "row_col": "kcore_bucket",
+      "row_val": 1,
+      "col_col": "betweenness_bucket",
+      "col_val": 2,
+      "cell_index": 5,
+      "display_id": "J0"
+    },
+    {
+      "cell_name": "mid_kcore__mid_clustering",
+      "row_col": "kcore_bucket",
+      "row_val": 1,
+      "col_col": "clustering_bucket",
+      "col_val": 1,
+      "cell_index": 12,
+      "display_id": "J1"
+    },
+    {
+      "cell_name": "high_neighbor_risk__mid_kcore",
+      "row_col": "neighbor_risk_bucket",
+      "row_val": 2,
+      "col_col": "kcore_bucket",
+      "col_val": 1,
+      "cell_index": 24,
+      "display_id": "J2"
+    },
+    {
+      "cell_name": "high_kcore__low_clustering",
+      "row_col": "kcore_bucket",
+      "row_val": 2,
+      "col_col": "clustering_bucket",
+      "col_val": 0,
+      "cell_index": 14,
+      "display_id": "J3"
+    }
+  ],
+  "freeze_scope": "Original cell definitions, membership and four display objects are fixed before loading matched predictions; no replacement by a better-performing group.",
+  "source_input_sha256": {
+    "/Users/teyian/Documents/paper1/server_snapshot_full/root/data/processed/clinvar_test_main.csv": "c89d6507c8b8b45c4177f2434c7ecfa8435f60d03b327a9c4493e0b51a6c45e6",
+    "/Users/teyian/Documents/paper1/server_snapshot_full/root/data/processed/topology_profile_joint_map_exp33/merged_topology_profile_features.csv": "68c0dedf5a6d15e8b23e3dfd9f6cd067dccd00d8d18c23c602c2b69fef6ac65d",
+    "/Users/teyian/Documents/paper1/server_snapshot_full/root/33_topology_profile_joint_map.py": "3b5f984ff303934044676f52945dacb16b99948193d2adac06d7a77a7854950f",
+    "/Users/teyian/Documents/paper1/server_snapshot_full/root/33b_joint_topology_map_bootstrap.py": "810155999e5f51fa37d4485c841ce8b13e44a1888bf859bdea6c865d14e85a52",
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_font_clean_20261025/source/figure_inputs/data/processed/topology_profile_joint_map_exp33/joint_gain_maps.csv": "d192e22a5a32d90060328e91a2b85d3c9af4f9b1719461a87fe6108f59f162ff",
+    "/Users/teyian/Documents/paper1/server_snapshot_full/root/data/processed/topology_gain_analysis_exp26B/summary.json": "757654a29bbd41a2c8a0a624382c3c674fda35798279ca3c1a9885915d9f3fcf",
+    "/Users/teyian/Documents/paper1/server_snapshot_full/root/data/processed/neighborhood_risk_enrichment_exp27/summary.json": "e9b9fad1fe3d6c7809a7c76eed5b6842c521a1787edc2767a329a587a0dca375",
+    "/Users/teyian/Documents/paper1/server_snapshot_full/root/data/processed/betweenness_gain_analysis_exp30/summary.json": "bc10df7e97a9d27e11181ac016ac72ee11ac75fb44c88d935df7de7ce256528a",
+    "/Users/teyian/Documents/paper1/server_snapshot_full/root/data/processed/clustering_gain_analysis_exp31/summary.json": "e27e32d3174e4823027ce8ab339af5dc68034e2618534d6811d0c8ac0cb830ff",
+    "/Users/teyian/Documents/paper1/server_snapshot_full/root/data/processed/community_boundary_gain_analysis_exp32/summary.json": "a7da55ab92f6f5d2360be4e3ead8ca4ec6b0849463b4efa65703742f6192d8d8",
+    "/Users/teyian/Documents/paper1/server_snapshot_full/root/26b_topology_stratified_gain_analysis.py": "600cbc9971eaffbe4861512d1d3c16ad1eecf89462caa48d4559875dc8748673",
+    "/Users/teyian/Documents/paper1/server_snapshot_full/root/27_neighborhood_risk_enrichment_analysis.py": "be93aa6e6dc4e4a612e83ed710e8c979f992b6433d695f5acea24f46b5522b7f",
+    "/Users/teyian/Documents/paper1/server_snapshot_full/root/30_betweenness_bridge_role_gain_analysis.py": "c99c9923d025a20f3cd69d136cb38ad5632594a70da6df30eb4df452f6785226",
+    "/Users/teyian/Documents/paper1/server_snapshot_full/root/31_clustering_local_density_gain_analysis.py": "97052e7884cdd1d9e91ae21f6913415df8e92133b927cc5aba5a775a765dd55e"
+  },
+  "stopped_draft_reuse": "No stopped-draft results or bootstrap values reused; its bootstrap resampled variants and is unsuitable here. General metric-kernel implementation reviewed and adapted."
+}

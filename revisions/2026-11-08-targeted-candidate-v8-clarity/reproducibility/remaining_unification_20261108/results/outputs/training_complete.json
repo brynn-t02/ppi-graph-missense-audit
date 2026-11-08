@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "classifier_fits": 39,
+  "endpoint_fits": 6,
+  "full_positive_control_fits": 3,
+  "first_edge_ablated_fits": 3,
+  "homology_fits": 6,
+  "partial_interior_fits": 27,
+  "test_labels_used_for_model_selection": false,
+  "selected_by": "validation AUC only",
+  "original_source_files_unchanged": true
+}
