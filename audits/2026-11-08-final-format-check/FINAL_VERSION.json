@@ -1,0 +1,62 @@
+{
+  "selected_date": "2026-11-08",
+  "selection": "Author-selected final content version, pending current-file PDF eXpress validation and any separately approved figure-label formatting correction.",
+  "source_commit": "a33df8ee4705b5eb69d589f25dd86a7918eefe32",
+  "files": [
+    {
+      "kind": "main",
+      "path": "revisions/2026-11-08-original-biogrid-date-restored/BIBM2026_workshop_original_plus_BioGRID_date_restored.pdf",
+      "pages": 8,
+      "sha256": "aa2454e77984c13c1708dec40caca8f54e41df6db61c0253b075e22d752330ef"
+    },
+    {
+      "kind": "supplement",
+      "path": "revisions/2026-11-08-original-biogrid-date-restored/BIBM2026_supplementary_original_plus_BioGRID_date_restored.pdf",
+      "pages": 12,
+      "sha256": "311ac48aeb4dd368c98bd100d9216f35c931e22d7aaa5795679def32725f068d"
+    }
+  ],
+  "manuscript_bytes_changed_in_this_audit": false,
+  "format_check": {
+    "main_pages": 8,
+    "paper_size": "US Letter 612 x 792 PDF points",
+    "official_IEEEtran_class_identical": true,
+    "fonts_all_embedded": true,
+    "font_names_all_subset_prefixed": true,
+    "main_pages_visually_checked": 8,
+    "observed_overlap_or_clipping": false,
+    "raster_heatmaps_effective_dpi": 651.99,
+    "figure_label_deviation": {
+      "Figure 1": {
+        "minimum_axis_aligned_text_pt": 3.822,
+        "maximum_axis_aligned_text_pt": 7.371,
+        "character_weighted_median_pt": 4.423,
+        "note": "Effective rendered PDF points. Rotated glyph bbox heights are excluded because they do not equal font size."
+      },
+      "Figure 2": {
+        "minimum_axis_aligned_text_pt": 3.399,
+        "maximum_axis_aligned_text_pt": 6.41,
+        "character_weighted_median_pt": 3.885,
+        "note": "Effective rendered PDF points. Rotated glyph bbox heights are excluded because they do not equal font size."
+      },
+      "Figure 3": {
+        "minimum_axis_aligned_text_pt": 3.587,
+        "maximum_axis_aligned_text_pt": 7.384,
+        "character_weighted_median_pt": 4.114,
+        "note": "Effective rendered PDF points. Rotated glyph bbox heights are excluded because they do not equal font size."
+      },
+      "Figure 4": {
+        "minimum_axis_aligned_text_pt": 3.221,
+        "maximum_axis_aligned_text_pt": 6.212,
+        "character_weighted_median_pt": 3.451,
+        "note": "Effective rendered PDF points. Rotated glyph bbox heights are excluded because they do not equal font size."
+      }
+    },
+    "pdf_header": "%PDF-1.5",
+    "official_distiller_compatibility_setting": "Acrobat 5.0 (PDF 1.4)",
+    "bookmarks_prohibited_by_retrieved_bibm_page": false
+  },
+  "pdf_express_certified_for_this_file": false,
+  "conference_final_submission_performed": false,
+  "report": "最终版格式核查说明.md"
+}
