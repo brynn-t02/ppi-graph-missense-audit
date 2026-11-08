@@ -1,0 +1,51 @@
+{
+  "files": [
+    {
+      "relative_path": "original_plot_functions_figure3.py",
+      "sha256": "c90817343f1dafce8d1281a81ec88dfa8263481aaa98fdf9bd266fe4713cf65b",
+      "bytes": 8339
+    },
+    {
+      "relative_path": "inputs/data/processed/esm_ppi_alignment_analysis/summary.json",
+      "sha256": "7e83e3ea17bfcf6fff420fc081a6fb18c1b658355115977976b47491d7a4f83e",
+      "bytes": 662
+    },
+    {
+      "relative_path": "inputs/data/processed/esm_ppi_community_alignment_analysis/summary.json",
+      "sha256": "2ecbdf5f63bebd947766a346570e90adb6f576a2a873aa6940cd314adc0e7afb",
+      "bytes": 653
+    },
+    {
+      "relative_path": "inputs/data/processed/topology_gain_analysis_exp26B/topology_stratified_metrics.csv",
+      "sha256": "339e05d85c6c882714d3d2fc0831dd5941095cf334475a6630a529ddc029bd72",
+      "bytes": 4175
+    },
+    {
+      "relative_path": "inputs/data/processed/betweenness_gain_analysis_exp30/betweenness_stratified_metrics.csv",
+      "sha256": "6b6db377942dcb073c9f5a4bf62485337f2f4f5d84f61fc3306bc9555991283a",
+      "bytes": 1740
+    },
+    {
+      "relative_path": "inputs/data/processed/clustering_gain_analysis_exp31/clustering_stratified_metrics.csv",
+      "sha256": "70e51e8294a24004fa5ac1f4fb69ad4159c27b4ed99a846fdcf77dd03216c43e",
+      "bytes": 1731
+    },
+    {
+      "relative_path": "inputs/data/processed/neighborhood_risk_enrichment_exp27/neighbor_risk_stratified_metrics.csv",
+      "sha256": "9f5d9be31a4013dae42220daae570c978154acb323d8f4058c881b37c15fa4a5",
+      "bytes": 1939
+    },
+    {
+      "relative_path": "inputs/data/processed/topology_profile_joint_map_exp33/joint_gain_maps.csv",
+      "sha256": "d192e22a5a32d90060328e91a2b85d3c9af4f9b1719461a87fe6108f59f162ff",
+      "bytes": 10051
+    },
+    {
+      "relative_path": "inputs/data/processed/topology_profile_joint_map_bootstrap_exp33B/key_joint_cells_bootstrap_summary.csv",
+      "sha256": "98a21b284453ba810e28be84b0456212c308b5afd5088ab03acaed873b03b4e2",
+      "bytes": 1663
+    }
+  ],
+  "total_bytes": 30953,
+  "font_files_included": false
+}

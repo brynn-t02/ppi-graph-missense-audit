@@ -1,0 +1,58 @@
+{
+  "visual_review": "Both final figures rendered with Poppler and reviewed; no title/legend/axis-label overlap, no missing text or new graphic clipping. Figure 1E retains its original y-axis limits and original error-bar clipping at those limits.",
+  "layout_changes": [
+    "Times New Roman regular/bold; all actual PDF text font sizes >=8 pt at fixed paper width 503.79 pt.",
+    "Canvas fixed 503.79 x 345 pt, without tight cropping.",
+    "Long titles/labels wrapped without changing wording; legends moved into clear header bands.",
+    "Figure 1A same 10 vertices, 12 edges, colors, split semantics and three-step flow, with readable label placement.",
+    "Figure 2A same five boxes, coverage numbers and directed relationships, reflowed vertically to fit 8 pt text.",
+    "Figure 1C x ticks rotated; Figure 2B model labels rotated for separation.",
+    "Figure 2C x ticks sparsified from 0.01 to 0.02 step; Figure 2E x ticks sparsified from 0.025 to 0.05 step. Axis quantities and ranges unchanged."
+  ],
+  "no_model_display_names_shortened": true,
+  "no_font_files_copied": true,
+  "figures": {
+    "1": {
+      "pdf": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_IEEE_figure_labels_20261108/source/figure_drafts/Figure1_connectivity_topology_controls_v2_accepted.pdf",
+      "sha256": "38a4adada46670d254b653ab582ed3c3afb324dd52c4176a0e15773da8ee7e71",
+      "page_points": [
+        503.79,
+        345.0
+      ],
+      "pdf_Tf_sizes": [
+        8.0,
+        10.0
+      ],
+      "all_text_CTM_unit_scale": true,
+      "text_outside_page": [],
+      "font_names": [
+        "CNAJXZ+TimesNewRomanPS-BoldMT",
+        "CNAJXZ+TimesNewRomanPSMT"
+      ],
+      "all_fonts_embedded": true,
+      "visual_png": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/ieee_figure_labels_20261108/figure12/Figure1_after.png",
+      "plotted_data_audit": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/ieee_figure_labels_20261108/figure12/figure1_plotted_data.json"
+    },
+    "2": {
+      "pdf": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_IEEE_figure_labels_20261108/source/figure_drafts/Figure2_fusion_homology_v1_accepted.pdf",
+      "sha256": "ca0741806b7c7d89975f027ec85d84a51272f4ff0152f088d3f51288beba465b",
+      "page_points": [
+        503.79,
+        345.0
+      ],
+      "pdf_Tf_sizes": [
+        8.0,
+        10.0
+      ],
+      "all_text_CTM_unit_scale": true,
+      "text_outside_page": [],
+      "font_names": [
+        "CNAJXZ+TimesNewRomanPS-BoldMT",
+        "CNAJXZ+TimesNewRomanPSMT"
+      ],
+      "all_fonts_embedded": true,
+      "visual_png": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/ieee_figure_labels_20261108/figure12/Figure2_after.png",
+      "plotted_data_audit": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/ieee_figure_labels_20261108/figure12/figure2_plotted_data.json"
+    }
+  }
+}

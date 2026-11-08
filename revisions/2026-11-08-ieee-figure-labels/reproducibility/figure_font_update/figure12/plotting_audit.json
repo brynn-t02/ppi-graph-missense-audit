@@ -1,0 +1,44 @@
+{
+  "canvas_pt": [
+    503.79,
+    345.0
+  ],
+  "font": "Times New Roman",
+  "minimum_font_pt": 8,
+  "no_training_or_statistical_recalculation": true,
+  "layout_only": true,
+  "font_files_not_distributed": true,
+  "sources": {
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/ieee_figure_labels_20261108/figure12/original_plot_functions_figure1.py": "41f17710b01acd8852d7a4aab21bd25781e11ddfdee470f30011147e12938e9c",
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/ieee_figure_labels_20261108/figure12/original_plot_functions_figure2.py": "f5975b0b04364d8b4a4d38526262d2047eccbcb3ec62fd0ffc1507ec74fc596b",
+    "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/ieee_figure_labels_20261108/figure12/compact_plot_inputs.json": "5bada5e6f63203266968aefea67fa00a98041fa12697eb262f1adb76aab11833"
+  },
+  "figures": {
+    "1": {
+      "data_signature_equal": true,
+      "panels_compared": [
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "pdf_sha256": "38a4adada46670d254b653ab582ed3c3afb324dd52c4176a0e15773da8ee7e71",
+      "png_sha256": "b0080851152d98c11c8449bdb7702e1216e061d1541edb4e05822baaddc1e3f3",
+      "min_artist_font_size": 8.0
+    },
+    "2": {
+      "data_signature_equal": true,
+      "panels_compared": [
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "pdf_sha256": "ca0741806b7c7d89975f027ec85d84a51272f4ff0152f088d3f51288beba465b",
+      "png_sha256": "d370f101586011537cc501f76790339f0cc306b1c2558f443e33a303854afc36",
+      "min_artist_font_size": 8.0
+    }
+  }
+}

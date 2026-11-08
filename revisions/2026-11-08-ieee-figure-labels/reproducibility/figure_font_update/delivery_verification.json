@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "main_sha256": "baf39be676460541d1a1022d2237e1a62203ea8d3a13872860fd0ce90ccb3052",
+  "supplement_sha256": "311ac48aeb4dd368c98bd100d9216f35c931e22d7aaa5795679def32725f068d",
+  "main_pages": 8,
+  "supplement_pages": 12,
+  "paper_size_pt": [
+    612,
+    792
+  ],
+  "all_manuscript_content_unchanged": true,
+  "only_main_tex_change": "IEEEtriggeratref 25 -> 16; reference-column balancing only",
+  "supplement_byte_identical": true,
+  "figure_count": 4,
+  "figures": {
+    "Figure2_fusion_homology_v1_accepted.pdf": {
+      "sha256": "ca0741806b7c7d89975f027ec85d84a51272f4ff0152f088d3f51288beba465b",
+      "width_pt": 503.79,
+      "height_pt": 345.0
+    },
+    "Figure3_topology_context_v1_accepted.pdf": {
+      "sha256": "6e326dc1f1377b32f5c5db2948cd7e0ef5b2c0566c3570e6a4c8510563a58874",
+      "width_pt": 503.79,
+      "height_pt": 345.0
+    },
+    "Figure4_prediction_transitions_v2_accepted.pdf": {
+      "sha256": "9973f9802f7bbe6d903b7de1da05159e5536af91b3e4a1e60bc0d44746c03fd8",
+      "width_pt": 503.79,
+      "height_pt": 345.0
+    },
+    "Figure1_connectivity_topology_controls_v2_accepted.pdf": {
+      "sha256": "38a4adada46670d254b653ab582ed3c3afb324dd52c4176a0e15773da8ee7e71",
+      "width_pt": 503.79,
+      "height_pt": 345.0
+    }
+  },
+  "effective_placed_figure_text_min_pt": 8.00024,
+  "figure_text_font": "Embedded Times New Roman regular/bold",
+  "all_fonts_embedded_and_subset": true,
+  "links_preserved": 29,
+  "bookmarks_preserved": 15,
+  "pdf_version_preserved": "1.5",
+  "latest_user_instruction": "Retain links/bookmarks and original PDF settings; only figure typography and necessary pagination changes.",
+  "new_pdf_express_certification_completed": false,
+  "prior_pdf_pass_reported_by_user": true,
+  "no_training_or_data_reanalysis": true
+}

@@ -1,0 +1,85 @@
+{
+  "scope": "Read-only extraction from existing compact assets. No training, inference or new bootstrap. No HUMSAVAR result rows included. No November remaining-unification results used.",
+  "sources": [
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/canonical_analysis_20261025/summary_metrics.csv",
+      "bytes": 2298,
+      "sha256": "4780b1c50059f8c0dbd10a036f10d6f44d64401fec1a773d620bdaf44b35d176"
+    },
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/canonical_analysis_20261025/per_run_metrics.csv",
+      "bytes": 10643,
+      "sha256": "d4531ca1585919e96934d693c34052714a1c0d9956da2c262a7e236a41add70d"
+    },
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/canonical_analysis_20261025/ensemble_metrics.csv",
+      "bytes": 3258,
+      "sha256": "1a4718873bf09fc8276a69b1ec61fa381a4b458f1e5aca6f52fd841af23f9fe1"
+    },
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/canonical_analysis_20261025/cluster_bootstrap.json",
+      "bytes": 13690,
+      "sha256": "e76951eed1106aefd532c5288227b35e6f9175221ea03ce674b72d7ed8893b57"
+    },
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/canonical_analysis_20261025/code/protocol.json",
+      "bytes": 1838,
+      "sha256": "9e437091d97af949da341fd20726f889e3358f1354658e19f701451d79e40133"
+    },
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/canonical_analysis_20261025/source_manifest.json",
+      "bytes": 39063,
+      "sha256": "5b4308f3749ff49457de7f11a03a38476ee6b28bc34dc6c2d1f294c0157aff37"
+    },
+    {
+      "path": "outputs/BIBM_workshop_original_minimal_20261025/source/canonical_analysis_20261025/recomputation_summary.json",
+      "bytes": 1706,
+      "sha256": "55ca41a8e7877721eb36649ddadd8793541b3f70486211c43a2d17d1fedbf34c"
+    },
+    {
+      "path": "work/external_validation_20261024/network_recon/network_build_audit.json",
+      "bytes": 8578,
+      "sha256": "4e46e3c2930fd0cc58f26d3224c0e0ad2cde25a84d662c66a27509197d6ce550"
+    },
+    {
+      "path": "work/external_validation_20261024/network_recon/string_network_overlap.json",
+      "bytes": 1008,
+      "sha256": "30b2a322877856bf46a2c43fcb31e2ab6cd0d76ed1c1213dcfa164c3a0ae53ac"
+    },
+    {
+      "path": "work/external_validation_20261024/small_results/verified/network_execution_audit.json",
+      "bytes": 1253,
+      "sha256": "39c6fa97ceb307faeb9746f89529e6ef785935178905fec16e89c2a78a3af335"
+    },
+    {
+      "path": "work/external_validation_20261024/small_results/verified/pre_inference_manifest.json",
+      "bytes": 4191,
+      "sha256": "36dc2be6133e9f380c8873bbaa103c0e2eaaaeab6db597400c22585bc7383e77"
+    },
+    {
+      "path": "work/external_validation_20261024/small_results/verified/completed_run_verification.json",
+      "bytes": 10775,
+      "sha256": "da19339d38e383da606cd70a4506f97e95ed710f3cc35d05eb44098e22701422"
+    },
+    {
+      "path": "work/external_validation_20261024/small_results/verified/old_checkpoint_reproduction.json",
+      "bytes": 4944,
+      "sha256": "e887539c4b884b4f43f2c871ec304447b1a84280bea483e303a5acbb414e38be"
+    },
+    {
+      "path": "work/external_validation_20261024/code/protocol.json",
+      "bytes": 5227,
+      "sha256": "dc20f27363b9e6fb2df732d558f25a45237f7cb8d1113f33bbf2b29278b82352"
+    },
+    {
+      "path": "work/external_validation_20261024/code/run_external_validation.py",
+      "bytes": 24709,
+      "sha256": "296857741514346d3e61f170e7eb7e468004734dc12c20474a652755a69765bd"
+    },
+    {
+      "path": "work/experiment_20261024/code/run_matched_experiments.py",
+      "bytes": 12609,
+      "sha256": "020c71b5d97b1fe00a23a4d3e074615cb5798884a4130fdaa7925d8f1eff7edd"
+    }
+  ]
+}

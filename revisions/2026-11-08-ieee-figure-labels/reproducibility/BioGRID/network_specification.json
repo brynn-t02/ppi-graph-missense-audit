@@ -1,0 +1,167 @@
+{
+  "source": {
+    "release": "5.0.262",
+    "compiled_date": "2026-09-25",
+    "release_date": "2026-10-01",
+    "url": "https://downloads.thebiogrid.org/Download/BioGRID/Release-Archive/BIOGRID-5.0.262/BIOGRID-ALL-5.0.262.tab3.zip",
+    "download_http_status": 200,
+    "bytes": 182882024,
+    "sha256": "7221dad43bd90ec24d1fca5e9e5989e021cb6dfb002a205d92cae5ca4219c86b",
+    "zip_member": "BIOGRID-ALL-5.0.262.tab3.txt",
+    "zip_member_bytes": 1563413736,
+    "zip_member_crc32": "1a667099",
+    "zip_member_crc_verified_by_full_read": true,
+    "license": "MIT"
+  },
+  "filter_counts": {
+    "input_rows": 2950299,
+    "human_human_rows": 1319164,
+    "human_human_physical_rows": 1298722,
+    "eligible_protein_physical_rows": 1262564,
+    "both_endpoints_uniquely_mapped_rows": 1241565,
+    "retained_nonself_evidence_rows": 1232462,
+    "excluded_mapped_selfinteraction_rows": 9103,
+    "excluded_unmapped_endpoint_rows": 20285,
+    "duplicate_pair_evidence_rows": 301004,
+    "excluded_ambiguous_endpoint_rows": 714,
+    "excluded_non_human_human": 1631135,
+    "excluded_rna_method_rows": 36158,
+    "excluded_nonphysical_human_human": 20442
+  },
+  "graph": {
+    "total_nodes_including_isolates": 19622,
+    "nonisolated_nodes": 18220,
+    "isolates": 1402,
+    "undirected_nonself_edges": 931458,
+    "directed_nonself_edges": 1862916,
+    "connected_components_including_isolates": 1404,
+    "largest_component_nodes": 18218,
+    "density_undirected": 0.004838701860141642,
+    "degree_mean": 94.94016919783915,
+    "degree_quantiles": {
+      "0": 0,
+      "0.25": 10.0,
+      "0.5": 38.0,
+      "0.75": 109.0,
+      "0.9": 234.0,
+      "0.95": 364.9500000000007,
+      "0.99": 776.7400000000052,
+      "1": 4775
+    }
+  },
+  "split_edge_coverage": {
+    "original": {
+      "train": {
+        "variants": 141864,
+        "variants_with_edge": 139850,
+        "proteins": 11298,
+        "proteins_with_edge": 10834
+      },
+      "val": {
+        "variants": 17129,
+        "variants_with_edge": 16913,
+        "proteins": 1412,
+        "proteins_with_edge": 1360
+      },
+      "test": {
+        "variants": 18220,
+        "variants_with_edge": 18006,
+        "proteins": 1413,
+        "proteins_with_edge": 1364
+      },
+      "direct_train_test_undirected_edges": 78942
+    },
+    "homology": {
+      "train": {
+        "variants": 141864,
+        "variants_with_edge": 140267,
+        "proteins": 7370,
+        "proteins_with_edge": 7018
+      },
+      "val": {
+        "variants": 17129,
+        "variants_with_edge": 16754,
+        "proteins": 3315,
+        "proteins_with_edge": 3213
+      },
+      "test": {
+        "variants": 18220,
+        "variants_with_edge": 17748,
+        "proteins": 3438,
+        "proteins_with_edge": 3327
+      },
+      "direct_train_test_undirected_edges": 127026
+    }
+  },
+  "overlap": {
+    "string_source_bytes": 83164437,
+    "string_source_sha256": "3e22f32572211aa341d5b4bd08d30c32e693e294603202120936872f87719d4f",
+    "string_directed_rows": 13715404,
+    "string_self_rows": 0,
+    "string_duplicate_directed_rows": 0,
+    "string_undirected_nonself_pairs": 6857702,
+    "string_pairs_observed_both_directions": 6857702,
+    "biogrid_undirected_nonself_pairs": 931458,
+    "intersection_pairs": 526635,
+    "union_pairs": 7262525,
+    "biogrid_only_pairs": 404823,
+    "string_only_pairs": 6331067,
+    "jaccard": 0.07251403609626128,
+    "fraction_biogrid_pairs_in_string": 0.5653878113666961,
+    "fraction_string_pairs_in_biogrid": 0.07679467553416582,
+    "node_order_requires_tensor_check": true,
+    "interpretation": "Alternative network robustness: graph source, coverage, density and release dates differ. Shared primary interaction evidence prevents evidence-independent interpretation."
+  },
+  "execution_mapping_and_operator": {
+    "actual_mapping_validated": true,
+    "declared_node_order_equals_actual_model": true,
+    "nodes_remapped_by_STRING_id": 0,
+    "original_source_edge_check": {
+      "nodes": 19622,
+      "directed_edges": 13715404,
+      "undirected_edges": 6857702,
+      "bidirectional": true,
+      "unique_directed_edges": true,
+      "self_edges": 0,
+      "indices_in_bounds": true
+    },
+    "biogrid_source_edge_check": {
+      "nodes": 19622,
+      "directed_edges": 1862916,
+      "undirected_edges": 931458,
+      "bidirectional": true,
+      "unique_directed_edges": true,
+      "self_edges": 0,
+      "indices_in_bounds": true
+    },
+    "biogrid_actual_index_edge_check": {
+      "nodes": 19622,
+      "directed_edges": 1862916,
+      "undirected_edges": 931458,
+      "bidirectional": true,
+      "unique_directed_edges": true,
+      "self_edges": 0,
+      "indices_in_bounds": true
+    },
+    "isolates": 1402,
+    "isolates_vs_raw_max_abs_error": 9.5367431640625e-07,
+    "recomputed_16_columns_max_abs_error": 1.1920928955078125e-07,
+    "common_operator": "A=(E+I)+(E+I)^T; bidirectional E; coalesced sums; S=D^-1/2 A D^-1/2; (X+SX+S^2X)/3",
+    "embedding_sha256": "297016e36374d11bd2a1586da43c14368ffb7b300b0442fa02135833814e668a",
+    "embedding_shape": [
+      19622,
+      1280
+    ],
+    "graph_labels_used": false
+  },
+  "filters": [
+    "both taxa 9606",
+    "Experimental System Type physical",
+    "exclude Affinity Capture-RNA and Protein-RNA",
+    "unique Entrez-to-frozen-STRING alias mapping",
+    "remove mapped self interactions",
+    "collapse duplicate unordered pairs",
+    "retain all 19622 nodes and all test rows"
+  ],
+  "interpretation": "Alternative-network sensitivity on the existing benchmark, not independent cohort or independent underlying biological evidence."
+}

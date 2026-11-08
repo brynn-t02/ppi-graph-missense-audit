@@ -1,0 +1,26 @@
+{
+  "source_data/corrected_sample_identification_exp34/summary.json": {
+    "sha256": "4223fe20f0cf9cdc7538b97dd894f2f2aa76ea754a1f02e8d2eb3646474c8e72",
+    "bytes": 2802
+  },
+  "source_data/corrected_sample_profile_exp35/esm_to_gcn_corrected_profile_summary.csv": {
+    "sha256": "d84cb348b01dda9342eff3df46dfa06237b23b9bf900c6b5627dd4a8eef85db5",
+    "bytes": 2472
+  },
+  "source_data/corrected_sample_profile_exp35/cadd_am_to_full_corrected_profile_summary.csv": {
+    "sha256": "4a28fed10e6b737a54d4b412a0bce1d70639acd06c327f1ea38387c3472875e8",
+    "bytes": 2632
+  },
+  "source_data/fp_vs_fn_stats_exp36B/esm_to_gcn_fp_vs_fn_stats.csv": {
+    "sha256": "419a1f0ab69d74003a2346dc59c349ce21e5c6a8b136faca97c88dd0483432ae",
+    "bytes": 1878
+  },
+  "source_data/fp_vs_fn_stats_exp36B/cadd_am_to_full_fp_vs_fn_stats.csv": {
+    "sha256": "68db53e0392dd22bd49e00cb69984da5a688a0fbf1951cac62e655daa9ccb0e0",
+    "bytes": 1909
+  },
+  "source_data/difficulty_matched_correction_contrast_exp40/difficulty_matched_correction_contrast_results.csv": {
+    "sha256": "405063af1b940741fe7b3ee0454afefc7ea41c3fb6e577c95725ce9552056ce0",
+    "bytes": 4227
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "n_neighbor_pairs": 200000,
+  "n_random_pairs": 200000,
+  "neighbor_mean": 0.8788520097732544,
+  "neighbor_median": 0.9078783392906189,
+  "neighbor_std": 0.10098327696323395,
+  "random_mean": 0.8639249205589294,
+  "random_median": 0.8942008018493652,
+  "random_std": 0.10167282074689865,
+  "mannwhitney_u": 22478039030.5,
+  "p_value": 0.0,
+  "cliffs_delta": 0.123901951525,
+  "high_conf_threshold": 700,
+  "n_high_conf_neighbor_pairs": 6995,
+  "high_conf_neighbor_mean": 0.8796837329864502,
+  "high_conf_neighbor_median": 0.9158511161804199,
+  "high_conf_p_value_vs_random": 1.4032019085145507e-157,
+  "high_conf_cliffs_delta_vs_random": 0.1878268906361687
+}

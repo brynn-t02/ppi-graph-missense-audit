@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "portable_script_executed": true,
+  "source_files_included": 9,
+  "source_breakdown": "One original plotting script and eight compact input summaries",
+  "total_copied_source_bytes": 30953,
+  "scientific_arrays_identical": true,
+  "200dpi_pdf_renders_pixel_identical": true,
+  "difference_bbox": null,
+  "delivered_figure_sha256": "6e326dc1f1377b32f5c5db2948cd7e0ef5b2c0566c3570e6a4c8510563a58874",
+  "delivered_main_sha256": "baf39be676460541d1a1022d2237e1a62203ea8d3a13872860fd0ce90ccb3052",
+  "font_files_copied": false,
+  "default_outputs_separate": "reproduced/",
+  "manuscript_or_delivery_pdf_modified": false
+}

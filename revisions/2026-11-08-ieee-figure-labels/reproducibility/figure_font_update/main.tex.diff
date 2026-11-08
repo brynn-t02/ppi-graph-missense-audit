@@ -1,0 +1,11 @@
+--- date-restored/source/main.tex
++++ IEEE-figure-labels/source/main.tex
+@@ -208,7 +208,7 @@
+ 
+ OpenAI ChatGPT, OpenAI Codex and Anthropic Claude assisted with literature organization, code development and language editing. The authors take responsibility for study design, experimental execution and verification, code review, interpretation, references and the final manuscript.
+ 
+-\IEEEtriggeratref{25}
++\IEEEtriggeratref{16}
+ \begin{thebibliography}{99}
+ \bibitem{Kircher2014CADD} M. Kircher et al., ``A general framework for estimating the relative pathogenicity of human genetic variants,'' \emph{Nature Genetics}, vol. 46, pp. 310--315, 2014, doi: 10.1038/ng.2892.
+ \bibitem{Ioannidis2016REVEL} N. M. Ioannidis et al., ``REVEL: an ensemble method for predicting the pathogenicity of rare missense variants,'' \emph{American Journal of Human Genetics}, vol. 99, pp. 877--885, 2016, doi: 10.1016/j.ajhg.2016.08.016.

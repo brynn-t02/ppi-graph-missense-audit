@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "canvas_pt": [
+    503.79,
+    345
+  ],
+  "actual_pdf_font_sizes_pt": [
+    8.0,
+    9.0
+  ],
+  "actual_fonts": [
+    "CNAJXZ+TimesNewRomanPS-BoldMT",
+    "CNAJXZ+TimesNewRomanPSMT"
+  ],
+  "font_embedding": [
+    {
+      "resource": "/F2",
+      "font": "/CNAJXZ+TimesNewRomanPS-BoldMT",
+      "embedded": true
+    },
+    {
+      "resource": "/F1",
+      "font": "/CNAJXZ+TimesNewRomanPSMT",
+      "embedded": true
+    }
+  ],
+  "all_original_displayed_counts_preserved": true,
+  "all_feature_label_occurrences_preserved": true,
+  "hedges_g_geometry_comparison": [
+    {
+      "original_geometry": 0.9674882858567121,
+      "new_geometry": 0.9674882913888893,
+      "source_value": 0.9674883042279072
+    },
+    {
+      "original_geometry": -0.8440637828558833,
+      "new_geometry": -0.8440638150000003,
+      "source_value": -0.844063801786602
+    },
+    {
+      "original_geometry": 0.8162533399890541,
+      "new_geometry": 0.8162533662499996,
+      "source_value": 0.8162533609983064
+    },
+    {
+      "original_geometry": 0.5259343242127111,
+      "new_geometry": 0.5259343104166667,
+      "source_value": 0.5259343328934855
+    },
+    {
+      "original_geometry": 0.592275365462723,
+      "new_geometry": 0.5922753695833342,
+      "source_value": 0.5922753754153085
+    },
+    {
+      "original_geometry": -0.799950862445879,
+      "new_geometry": -0.7999508795833331,
+      "source_value": -0.7999508822198764
+    },
+    {
+      "original_geometry": -0.7949877679043518,
+      "new_geometry": -0.7949877881944445,
+      "source_value": -0.7949877842066349
+    }
+  ],
+  "transition_bar_fractions_colors_unchanged": [
+    true,
+    true
+  ],
+  "heatmap_checks": [
+    {
+      "cell_RGB_colors_unchanged": true,
+      "cells": 18
+    },
+    {
+      "cell_RGB_colors_unchanged": true,
+      "cells": 18
+    }
+  ],
+  "E_18_dot_color_directions_unchanged": true,
+  "E_uniform_size_alpha": true,
+  "F_no_significance_stars": true,
+  "new_statistical_computation": false,
+  "text_clipping_detected": [],
+  "format_only_changes": [
+    "Fixed canvas 503.79 x 345 pt",
+    "All text Times New Roman 8 pt; figure header 9 pt",
+    "Titles and annotations line-wrapped",
+    "Feature names preserved without abbreviation",
+    "F axis tick density reduced to five ticks; limits and all seven effect sizes unchanged"
+  ],
+  "output_sha256": "9973f9802f7bbe6d903b7de1da05159e5536af91b3e4a1e60bc0d44746c03fd8"
+}

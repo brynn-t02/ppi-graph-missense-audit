@@ -1,0 +1,25 @@
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+IHAIZV+NimbusRomNo9L-Regu            Type 1C           Custom           yes yes yes      4  0
+BZIVMZ+NimbusRomNo9L-MediItal        Type 1C           Custom           yes yes yes      5  0
+IXFAWU+NimbusRomNo9L-Medi            Type 1C           Custom           yes yes yes      6  0
+TQTHRL+NimbusRomNo9L-ReguItal        Type 1C           Custom           yes yes yes     19  0
+YEUUOC+CMMI10                        Type 1C           Builtin          yes yes yes     27  0
+AKHCZK+CMR10                         Type 1C           Builtin          yes yes yes     28  0
+VDVGTR+CMSY7                         Type 1C           Builtin          yes yes yes     29  0
+CAFSZL+CMR5                          Type 1C           Builtin          yes yes yes     30  0
+DDIEWW+CMEX10                        Type 1C           Builtin          yes yes yes     31  0
+FKPJSN+CMR7                          Type 1C           Builtin          yes yes yes     32  0
+PVTTLK+NimbusMonL-Regu               Type 1C           Custom           yes yes yes     35  0
+JAGKKY+CMSY8                         Type 1C           Builtin          yes yes yes     46  0
+NOMARO+CMSY10                        Type 1C           Builtin          yes yes yes     48  0
+CNAJXZ+TimesNewRomanPS-BoldMT        CID TrueType      Identity-H       yes yes yes     53  0
+CNAJXZ+TimesNewRomanPSMT             CID TrueType      Identity-H       yes yes yes     60  0
+CNAJXZ+TimesNewRomanPS-BoldMT        CID TrueType      Identity-H       yes yes yes     82  0
+CNAJXZ+TimesNewRomanPSMT             CID TrueType      Identity-H       yes yes yes     89  0
+KPXLOM+CMR8                          Type 1C           Builtin          yes yes yes    125  0
+CNAJXZ+TimesNewRomanPS-BoldMT        CID TrueType      Identity-H       yes yes yes    106  0
+CNAJXZ+TimesNewRomanPSMT             CID TrueType      Identity-H       yes yes yes    113  0
+UTACNV+CMMI8                         Type 1C           Builtin          yes yes yes    154  0
+CNAJXZ+TimesNewRomanPS-BoldMT        CID TrueType      Identity-H       yes yes yes    131  0
+CNAJXZ+TimesNewRomanPSMT             CID TrueType      Identity-H       yes yes yes    138  0

@@ -1,0 +1,1122 @@
+{
+  "canvas_pt": [
+    503.79,
+    345.0
+  ],
+  "min_requested_font_pt": 8,
+  "aggregate_sources": {
+    "summary": {
+      "path": "source_data/corrected_sample_identification_exp34/summary.json",
+      "sha256": "4223fe20f0cf9cdc7538b97dd894f2f2aa76ea754a1f02e8d2eb3646474c8e72"
+    },
+    "esm_profile": {
+      "path": "source_data/corrected_sample_profile_exp35/esm_to_gcn_corrected_profile_summary.csv",
+      "sha256": "d84cb348b01dda9342eff3df46dfa06237b23b9bf900c6b5627dd4a8eef85db5"
+    },
+    "full_profile": {
+      "path": "source_data/corrected_sample_profile_exp35/cadd_am_to_full_corrected_profile_summary.csv",
+      "sha256": "4a28fed10e6b737a54d4b412a0bce1d70639acd06c327f1ea38387c3472875e8"
+    },
+    "esm_stats": {
+      "path": "source_data/fp_vs_fn_stats_exp36B/esm_to_gcn_fp_vs_fn_stats.csv",
+      "sha256": "419a1f0ab69d74003a2346dc59c349ce21e5c6a8b136faca97c88dd0483432ae"
+    },
+    "full_stats": {
+      "path": "source_data/fp_vs_fn_stats_exp36B/cadd_am_to_full_fp_vs_fn_stats.csv",
+      "sha256": "68db53e0392dd22bd49e00cb69984da5a688a0fbf1951cac62e655daa9ccb0e0"
+    },
+    "contrasts": {
+      "path": "source_data/difficulty_matched_correction_contrast_exp40/difficulty_matched_correction_contrast_results.csv",
+      "sha256": "405063af1b940741fe7b3ee0454afefc7ea41c3fb6e577c95725ce9552056ce0"
+    }
+  },
+  "summary": {
+    "experiment": "34_corrected_sample_identification",
+    "real_data_policy": {
+      "uses_real_test_table": "/root/data/processed/clinvar_test_main.csv",
+      "uses_real_esm_predictions": "/root/data/processed/variant_mlp_comparison/esm_raw/test_probs.npy",
+      "uses_real_gcn_predictions": "/root/data/processed/variant_mlp_comparison/gcn_enhanced/test_probs.npy",
+      "uses_real_cadd_am_predictions": "/root/data/processed/triple_fusion/cadd_plus_am/test_probs.npy",
+      "uses_real_full_predictions": "/root/data/processed/triple_fusion/gcn_plus_cadd_plus_am/test_probs.npy",
+      "no_fake_data": true,
+      "no_simulated_labels": true,
+      "no_placeholder_predictions": true,
+      "hard_fail_on_length_mismatch": true
+    },
+    "prediction_threshold": 0.5,
+    "n_test": 18220,
+    "positive_rate": 0.3195389681668496,
+    "esm_vs_gcn": {
+      "pair_name": "esm_vs_gcn",
+      "n": 18220,
+      "count_improved": 1436,
+      "rate_improved": 0.07881448957189902,
+      "count_degraded": 944,
+      "rate_degraded": 0.05181119648737651,
+      "count_both_correct": 11875,
+      "rate_both_correct": 0.6517563117453348,
+      "count_both_wrong": 3965,
+      "rate_both_wrong": 0.21761800219538968,
+      "count_FP_suppressed": 599,
+      "rate_FP_suppressed": 0.03287596048298573,
+      "count_FN_rescued": 837,
+      "rate_FN_rescued": 0.045938529088913285,
+      "count_TN_to_FP": 904,
+      "rate_TN_to_FP": 0.04961580680570801,
+      "count_TP_to_FN": 40,
+      "rate_TP_to_FN": 0.0021953896816684962
+    },
+    "cadd_am_vs_full": {
+      "pair_name": "cadd_am_vs_full",
+      "n": 18220,
+      "count_improved": 666,
+      "rate_improved": 0.03655323819978046,
+      "count_degraded": 275,
+      "rate_degraded": 0.015093304061470912,
+      "count_both_correct": 15981,
+      "rate_both_correct": 0.8771130625686059,
+      "count_both_wrong": 1298,
+      "rate_both_wrong": 0.0712403951701427,
+      "count_FP_suppressed": 444,
+      "rate_FP_suppressed": 0.02436882546652031,
+      "count_FN_rescued": 222,
+      "rate_FN_rescued": 0.012184412733260154,
+      "count_TN_to_FP": 170,
+      "rate_TN_to_FP": 0.009330406147091108,
+      "count_TP_to_FN": 105,
+      "rate_TP_to_FN": 0.005762897914379802
+    },
+    "outputs": {
+      "all_test_variants_csv": "/root/data/processed/corrected_sample_identification_exp34/test_variants_with_corrected_sample_labels.csv",
+      "esm_to_gcn_improved_csv": "/root/data/processed/corrected_sample_identification_exp34/esm_to_gcn_improved_samples.csv",
+      "esm_to_gcn_degraded_csv": "/root/data/processed/corrected_sample_identification_exp34/esm_to_gcn_degraded_samples.csv",
+      "cadd_am_to_full_improved_csv": "/root/data/processed/corrected_sample_identification_exp34/cadd_am_to_full_improved_samples.csv",
+      "cadd_am_to_full_degraded_csv": "/root/data/processed/corrected_sample_identification_exp34/cadd_am_to_full_degraded_samples.csv"
+    }
+  },
+  "heatmap_matrices": {
+    "esm_profile": {
+      "means": [
+        [
+          0.8697829716193656,
+          1.983273596176822
+        ],
+        [
+          0.8380634390651085,
+          1.125448028673835
+        ],
+        [
+          0.5726210350584308,
+          1.6941457586618878
+        ],
+        [
+          0.2716960519823648,
+          0.4329423986310397
+        ],
+        [
+          724.9766277128548,
+          4043.3548387096776
+        ],
+        [
+          0.9482470784641068,
+          1.853046594982079
+        ],
+        [
+          0.2534412261683994,
+          0.2022229344410357
+        ],
+        [
+          1.1519198664440735,
+          0.3321385902031063
+        ],
+        [
+          0.770237200457445,
+          0.5654832747217126
+        ]
+      ],
+      "display_matrix": [
+        [
+          -0.4999999999999999,
+          0.5
+        ],
+        [
+          -0.5,
+          0.5
+        ],
+        [
+          -0.4999999999999999,
+          0.5
+        ],
+        [
+          -0.49999999999999983,
+          0.5000000000000002
+        ],
+        [
+          -0.5000000000000001,
+          0.49999999999999994
+        ],
+        [
+          -0.5,
+          0.5
+        ],
+        [
+          0.4999999999999997,
+          -0.5000000000000002
+        ],
+        [
+          0.5000000000000001,
+          -0.49999999999999994
+        ],
+        [
+          0.5,
+          -0.5
+        ]
+      ]
+    },
+    "full_profile": {
+      "means": [
+        [
+          1.554054054054054,
+          1.81981981981982
+        ],
+        [
+          1.5518018018018018,
+          1.6036036036036037
+        ],
+        [
+          0.7792792792792793,
+          1.7522522522522523
+        ],
+        [
+          0.3275912405975564,
+          0.4955346631457924
+        ],
+        [
+          5913.824324324324,
+          3554.6801801801803
+        ],
+        [
+          1.554054054054054,
+          1.7252252252252251
+        ],
+        [
+          0.1807487611616015,
+          0.2175982428846533
+        ],
+        [
+          0.9684684684684683,
+          0.7207207207207207
+        ],
+        [
+          0.7651127311495094,
+          0.6769208663778774
+        ]
+      ],
+      "display_matrix": [
+        [
+          -0.5000000000000004,
+          0.49999999999999956
+        ],
+        [
+          -0.49999999999999784,
+          0.5000000000000021
+        ],
+        [
+          -0.5000000000000001,
+          0.4999999999999999
+        ],
+        [
+          -0.5,
+          0.5
+        ],
+        [
+          0.5,
+          -0.5
+        ],
+        [
+          -0.5,
+          0.5
+        ],
+        [
+          -0.5,
+          0.5
+        ],
+        [
+          0.5,
+          -0.5
+        ],
+        [
+          0.5,
+          -0.5
+        ]
+      ]
+    }
+  },
+  "dot_directions": [
+    {
+      "comparison": "esm_stats",
+      "feature": "degree_bucket",
+      "FN_higher": true,
+      "color": "#2171B5"
+    },
+    {
+      "comparison": "esm_stats",
+      "feature": "kcore_bucket",
+      "FN_higher": true,
+      "color": "#2171B5"
+    },
+    {
+      "comparison": "esm_stats",
+      "feature": "neighbor_risk_bucket",
+      "FN_higher": true,
+      "color": "#2171B5"
+    },
+    {
+      "comparison": "esm_stats",
+      "feature": "neighbor_pathogenic_rate",
+      "FN_higher": true,
+      "color": "#2171B5"
+    },
+    {
+      "comparison": "esm_stats",
+      "feature": "neighbor_train_variant_count",
+      "FN_higher": true,
+      "color": "#2171B5"
+    },
+    {
+      "comparison": "esm_stats",
+      "feature": "betweenness_bucket",
+      "FN_higher": true,
+      "color": "#2171B5"
+    },
+    {
+      "comparison": "esm_stats",
+      "feature": "clustering_coefficient",
+      "FN_higher": false,
+      "color": "#F16913"
+    },
+    {
+      "comparison": "esm_stats",
+      "feature": "boundary_role_bucket",
+      "FN_higher": false,
+      "color": "#F16913"
+    },
+    {
+      "comparison": "esm_stats",
+      "feature": "within_comm_neighbor_fraction",
+      "FN_higher": false,
+      "color": "#F16913"
+    },
+    {
+      "comparison": "full_stats",
+      "feature": "degree_bucket",
+      "FN_higher": true,
+      "color": "#2171B5"
+    },
+    {
+      "comparison": "full_stats",
+      "feature": "kcore_bucket",
+      "FN_higher": true,
+      "color": "#2171B5"
+    },
+    {
+      "comparison": "full_stats",
+      "feature": "neighbor_risk_bucket",
+      "FN_higher": true,
+      "color": "#2171B5"
+    },
+    {
+      "comparison": "full_stats",
+      "feature": "neighbor_pathogenic_rate",
+      "FN_higher": true,
+      "color": "#2171B5"
+    },
+    {
+      "comparison": "full_stats",
+      "feature": "neighbor_train_variant_count",
+      "FN_higher": false,
+      "color": "#F16913"
+    },
+    {
+      "comparison": "full_stats",
+      "feature": "betweenness_bucket",
+      "FN_higher": true,
+      "color": "#2171B5"
+    },
+    {
+      "comparison": "full_stats",
+      "feature": "clustering_coefficient",
+      "FN_higher": true,
+      "color": "#2171B5"
+    },
+    {
+      "comparison": "full_stats",
+      "feature": "boundary_role_bucket",
+      "FN_higher": false,
+      "color": "#F16913"
+    },
+    {
+      "comparison": "full_stats",
+      "feature": "within_comm_neighbor_fraction",
+      "FN_higher": false,
+      "color": "#F16913"
+    }
+  ],
+  "hedges_g": {
+    "degree_bucket": 0.9674883042279072,
+    "kcore_bucket": -0.844063801786602,
+    "neighbor_risk_bucket": 0.8162533609983064,
+    "neighbor_pathogenic_rate": 0.5259343328934855,
+    "betweenness_bucket": 0.5922753754153085,
+    "boundary_role_bucket": -0.7999508822198764,
+    "within_comm_neighbor_fraction": -0.7949877842066349
+  },
+  "all_dots_same_size": 25,
+  "all_dots_same_alpha": 0.85,
+  "significance_stars": 0,
+  "new_statistical_analysis": false,
+  "text_boxes": [
+    {
+      "text": "11,875",
+      "font_size": 8.0,
+      "box_pt": [
+        47.059357848518104,
+        256.3742857142857,
+        68.6593578485181,
+        264.0542857142857
+      ]
+    },
+    {
+      "text": "3,965",
+      "font_size": 8.0,
+      "box_pt": [
+        115.42649286498352,
+        256.3742857142857,
+        133.3064928649835,
+        264.0542857142857
+      ]
+    },
+    {
+      "text": "Corrected: FN rescued 837;\nFP suppressed 599",
+      "font_size": 8.0,
+      "box_pt": [
+        10.295,
+        221.29614285714288,
+        98.975,
+        237.23214285714286
+      ]
+    },
+    {
+      "text": "Degraded: TN to FP 904;\nTP to FN 40",
+      "font_size": 8.0,
+      "box_pt": [
+        10.295,
+        196.22471428571433,
+        91.175,
+        212.1607142857143
+      ]
+    },
+    {
+      "text": "Fraction of test variants",
+      "font_size": 8.0,
+      "box_pt": [
+        46.48999999999998,
+        162.14,
+        122.50999999999998,
+        169.82
+      ]
+    },
+    {
+      "text": "0.0",
+      "font_size": 8.0,
+      "box_pt": [
+        3.020000000000001,
+        171.82000000000002,
+        12.98,
+        179.50000000000003
+      ]
+    },
+    {
+      "text": "0.2",
+      "font_size": 8.0,
+      "box_pt": [
+        33.64999999999999,
+        171.82000000000002,
+        43.55,
+        179.50000000000003
+      ]
+    },
+    {
+      "text": "0.4",
+      "font_size": 8.0,
+      "box_pt": [
+        64.22,
+        171.82000000000002,
+        74.18,
+        179.50000000000003
+      ]
+    },
+    {
+      "text": "0.6",
+      "font_size": 8.0,
+      "box_pt": [
+        94.81999999999998,
+        171.82000000000002,
+        104.77999999999997,
+        179.50000000000003
+      ]
+    },
+    {
+      "text": "0.8",
+      "font_size": 8.0,
+      "box_pt": [
+        125.41999999999997,
+        171.82000000000002,
+        135.37999999999997,
+        179.50000000000003
+      ]
+    },
+    {
+      "text": "1.0",
+      "font_size": 8.0,
+      "box_pt": [
+        156.04999999999998,
+        171.82000000000002,
+        165.95,
+        179.50000000000003
+      ]
+    },
+    {
+      "text": "15,981",
+      "font_size": 8.0,
+      "box_pt": [
+        232.17914928649833,
+        256.3742857142857,
+        254.01914928649833,
+        264.0542857142857
+      ]
+    },
+    {
+      "text": "Corrected: FN rescued 222;\nFP suppressed 444",
+      "font_size": 8.0,
+      "box_pt": [
+        178.295,
+        221.29614285714288,
+        266.8550000000001,
+        237.23214285714286
+      ]
+    },
+    {
+      "text": "Degraded: TN to FP 170;\nTP to FN 105",
+      "font_size": 8.0,
+      "box_pt": [
+        178.295,
+        196.22471428571433,
+        259.17500000000007,
+        212.1607142857143
+      ]
+    },
+    {
+      "text": "Fraction of test variants",
+      "font_size": 8.0,
+      "box_pt": [
+        214.49000000000004,
+        162.14,
+        290.51000000000005,
+        169.82
+      ]
+    },
+    {
+      "text": "0.0",
+      "font_size": 8.0,
+      "box_pt": [
+        171.02,
+        171.82000000000002,
+        180.98,
+        179.50000000000003
+      ]
+    },
+    {
+      "text": "0.2",
+      "font_size": 8.0,
+      "box_pt": [
+        201.65,
+        171.82000000000002,
+        211.55,
+        179.50000000000003
+      ]
+    },
+    {
+      "text": "0.4",
+      "font_size": 8.0,
+      "box_pt": [
+        232.22000000000006,
+        171.82000000000002,
+        242.18000000000004,
+        179.50000000000003
+      ]
+    },
+    {
+      "text": "0.6",
+      "font_size": 8.0,
+      "box_pt": [
+        262.82000000000005,
+        171.82000000000002,
+        272.78000000000003,
+        179.50000000000003
+      ]
+    },
+    {
+      "text": "0.8",
+      "font_size": 8.0,
+      "box_pt": [
+        293.4200000000001,
+        171.82000000000002,
+        303.38000000000005,
+        179.50000000000003
+      ]
+    },
+    {
+      "text": "1.0",
+      "font_size": 8.0,
+      "box_pt": [
+        324.05000000000007,
+        171.82000000000002,
+        333.95000000000005,
+        179.50000000000003
+      ]
+    },
+    {
+      "text": "FP\nsuppressed",
+      "font_size": 8.0,
+      "box_pt": [
+        430.41999999999996,
+        166.488,
+        465.58,
+        183.0
+      ]
+    },
+    {
+      "text": "FN\nrescued",
+      "font_size": 8.0,
+      "box_pt": [
+        471.76,
+        166.488,
+        496.24,
+        183.0
+      ]
+    },
+    {
+      "text": "degree",
+      "font_size": 8.0,
+      "box_pt": [
+        406.64,
+        290.7,
+        428.0,
+        298.38
+      ]
+    },
+    {
+      "text": "k-core",
+      "font_size": 8.0,
+      "box_pt": [
+        407.54,
+        277.7,
+        428.0,
+        285.38
+      ]
+    },
+    {
+      "text": "neighbour risk",
+      "font_size": 8.0,
+      "box_pt": [
+        381.5,
+        264.7,
+        428.0,
+        272.38
+      ]
+    },
+    {
+      "text": "neighbour pathogenic rate",
+      "font_size": 8.0,
+      "box_pt": [
+        344.3,
+        251.7,
+        428.0,
+        259.38
+      ]
+    },
+    {
+      "text": "neighbour train variants",
+      "font_size": 8.0,
+      "box_pt": [
+        351.38,
+        238.7,
+        428.0,
+        246.38000000000005
+      ]
+    },
+    {
+      "text": "betweenness",
+      "font_size": 8.0,
+      "box_pt": [
+        387.5,
+        225.7,
+        428.0,
+        233.38
+      ]
+    },
+    {
+      "text": "clustering coefficient",
+      "font_size": 8.0,
+      "box_pt": [
+        360.08,
+        212.70000000000002,
+        428.0,
+        220.38000000000005
+      ]
+    },
+    {
+      "text": "boundary role",
+      "font_size": 8.0,
+      "box_pt": [
+        383.36,
+        199.70000000000005,
+        428.0,
+        207.38000000000005
+      ]
+    },
+    {
+      "text": "within-community fraction",
+      "font_size": 8.0,
+      "box_pt": [
+        341.3,
+        186.70000000000002,
+        428.0,
+        194.38000000000002
+      ]
+    },
+    {
+      "text": "FP\nsuppressed",
+      "font_size": 8.0,
+      "box_pt": [
+        91.42,
+        24.488000000000003,
+        126.58000000000003,
+        41.0
+      ]
+    },
+    {
+      "text": "FN\nrescued",
+      "font_size": 8.0,
+      "box_pt": [
+        132.76,
+        24.488000000000003,
+        157.24,
+        41.0
+      ]
+    },
+    {
+      "text": "degree",
+      "font_size": 8.0,
+      "box_pt": [
+        67.64000000000001,
+        119.42222222222223,
+        89.00000000000001,
+        127.10222222222224
+      ]
+    },
+    {
+      "text": "k-core",
+      "font_size": 8.0,
+      "box_pt": [
+        68.54,
+        109.86666666666666,
+        89.00000000000001,
+        117.54666666666667
+      ]
+    },
+    {
+      "text": "neighbour risk",
+      "font_size": 8.0,
+      "box_pt": [
+        42.500000000000014,
+        100.31111111111112,
+        89.00000000000001,
+        107.99111111111112
+      ]
+    },
+    {
+      "text": "neighbour pathogenic rate",
+      "font_size": 8.0,
+      "box_pt": [
+        5.300000000000009,
+        90.75555555555556,
+        89.00000000000001,
+        98.43555555555555
+      ]
+    },
+    {
+      "text": "neighbour train variants",
+      "font_size": 8.0,
+      "box_pt": [
+        12.38000000000001,
+        81.20000000000002,
+        89.00000000000001,
+        88.88000000000001
+      ]
+    },
+    {
+      "text": "betweenness",
+      "font_size": 8.0,
+      "box_pt": [
+        48.500000000000014,
+        71.64444444444446,
+        89.00000000000001,
+        79.32444444444447
+      ]
+    },
+    {
+      "text": "clustering coefficient",
+      "font_size": 8.0,
+      "box_pt": [
+        21.08000000000001,
+        62.0888888888889,
+        89.00000000000001,
+        69.76888888888891
+      ]
+    },
+    {
+      "text": "boundary role",
+      "font_size": 8.0,
+      "box_pt": [
+        44.360000000000014,
+        52.53333333333334,
+        89.00000000000001,
+        60.21333333333333
+      ]
+    },
+    {
+      "text": "within-community fraction",
+      "font_size": 8.0,
+      "box_pt": [
+        2.300000000000009,
+        42.97777777777779,
+        89.00000000000001,
+        50.657777777777795
+      ]
+    },
+    {
+      "text": "ESM to\nPPI-GCN",
+      "font_size": 8.0,
+      "box_pt": [
+        259.24578947368417,
+        20.988000000000007,
+        290.38578947368416,
+        37.50000000000001
+      ]
+    },
+    {
+      "text": "CADD+AM\nto graph\nfusion",
+      "font_size": 8.0,
+      "box_pt": [
+        292.20421052631576,
+        12.156000000000008,
+        332.1642105263158,
+        37.50000000000001
+      ]
+    },
+    {
+      "text": "within-community fraction",
+      "font_size": 8.0,
+      "box_pt": [
+        167.29999999999998,
+        42.97777777777778,
+        254.0,
+        50.65777777777778
+      ]
+    },
+    {
+      "text": "boundary role",
+      "font_size": 8.0,
+      "box_pt": [
+        209.35999999999999,
+        52.53333333333333,
+        254.0,
+        60.21333333333333
+      ]
+    },
+    {
+      "text": "clustering coefficient",
+      "font_size": 8.0,
+      "box_pt": [
+        186.07999999999998,
+        62.08888888888888,
+        254.0,
+        69.76888888888888
+      ]
+    },
+    {
+      "text": "betweenness",
+      "font_size": 8.0,
+      "box_pt": [
+        213.49999999999997,
+        71.64444444444443,
+        254.0,
+        79.32444444444442
+      ]
+    },
+    {
+      "text": "neighbour train variants",
+      "font_size": 8.0,
+      "box_pt": [
+        177.37999999999997,
+        81.2,
+        254.0,
+        88.88
+      ]
+    },
+    {
+      "text": "neighbour pathogenic rate",
+      "font_size": 8.0,
+      "box_pt": [
+        170.29999999999998,
+        90.75555555555556,
+        254.0,
+        98.43555555555555
+      ]
+    },
+    {
+      "text": "neighbour risk",
+      "font_size": 8.0,
+      "box_pt": [
+        207.49999999999997,
+        100.3111111111111,
+        254.0,
+        107.99111111111111
+      ]
+    },
+    {
+      "text": "k-core",
+      "font_size": 8.0,
+      "box_pt": [
+        233.54,
+        109.86666666666666,
+        254.0,
+        117.54666666666667
+      ]
+    },
+    {
+      "text": "degree",
+      "font_size": 8.0,
+      "box_pt": [
+        232.64,
+        119.42222222222223,
+        254.0,
+        127.10222222222224
+      ]
+    },
+    {
+      "text": "Hedges' g\nrescued FN vs\npersistent FN",
+      "font_size": 8.0,
+      "box_pt": [
+        443.11,
+        2.4760000000000093,
+        488.89,
+        27.820000000000007
+      ]
+    },
+    {
+      "text": "\u22121",
+      "font_size": 8.0,
+      "box_pt": [
+        427.4289861751152,
+        29.820000000000007,
+        435.8889861751152,
+        37.50000000000001
+      ]
+    },
+    {
+      "text": "\u22120.5",
+      "font_size": 8.0,
+      "box_pt": [
+        441.0488479262673,
+        29.820000000000007,
+        455.44884792626726,
+        37.50000000000001
+      ]
+    },
+    {
+      "text": "0",
+      "font_size": 8.0,
+      "box_pt": [
+        462.8287096774193,
+        29.820000000000007,
+        466.8487096774193,
+        37.50000000000001
+      ]
+    },
+    {
+      "text": "0.5",
+      "font_size": 8.0,
+      "box_pt": [
+        476.4785714285714,
+        29.820000000000007,
+        486.3785714285714,
+        37.50000000000001
+      ]
+    },
+    {
+      "text": "1",
+      "font_size": 8.0,
+      "box_pt": [
+        496.0384331797235,
+        29.820000000000007,
+        499.9984331797235,
+        37.50000000000001
+      ]
+    },
+    {
+      "text": "degree",
+      "font_size": 8.0,
+      "box_pt": [
+        404.63999999999993,
+        115.69197860962568,
+        425.99999999999994,
+        123.37197860962566
+      ]
+    },
+    {
+      "text": "k-core",
+      "font_size": 8.0,
+      "box_pt": [
+        405.53999999999996,
+        104.1946524064171,
+        425.99999999999994,
+        111.8746524064171
+      ]
+    },
+    {
+      "text": "neighbour risk",
+      "font_size": 8.0,
+      "box_pt": [
+        379.49999999999994,
+        92.69732620320855,
+        425.99999999999994,
+        100.37732620320855
+      ]
+    },
+    {
+      "text": "neighbour pathogenic rate",
+      "font_size": 8.0,
+      "box_pt": [
+        342.29999999999995,
+        81.20000000000002,
+        425.99999999999994,
+        88.88000000000001
+      ]
+    },
+    {
+      "text": "betweenness",
+      "font_size": 8.0,
+      "box_pt": [
+        385.49999999999994,
+        69.70267379679144,
+        425.99999999999994,
+        77.38267379679145
+      ]
+    },
+    {
+      "text": "boundary role",
+      "font_size": 8.0,
+      "box_pt": [
+        381.35999999999996,
+        58.205347593582886,
+        425.99999999999994,
+        65.88534759358288
+      ]
+    },
+    {
+      "text": "within-community fraction",
+      "font_size": 8.0,
+      "box_pt": [
+        339.29999999999995,
+        46.70802139037433,
+        425.99999999999994,
+        54.38802139037433
+      ]
+    },
+    {
+      "text": "Graph augmentation changes false-negative and false-positive predictions\nin different network contexts",
+      "font_size": 9.0,
+      "box_pt": [
+        110.055,
+        323.68,
+        393.735,
+        340.0
+      ]
+    },
+    {
+      "text": "A  Raw ESM to PPI-GCN transitions",
+      "font_size": 8.0,
+      "box_pt": [
+        7.0,
+        308.8,
+        133.42,
+        316.0
+      ]
+    },
+    {
+      "text": "B  CADD+AM to graph-fusion transitions",
+      "font_size": 8.0,
+      "box_pt": [
+        175.00000000000003,
+        308.575,
+        317.92,
+        316.0
+      ]
+    },
+    {
+      "text": "C  Raw ESM correction profiles",
+      "font_size": 8.0,
+      "box_pt": [
+        338.99999999999994,
+        308.8,
+        448.1999999999999,
+        316.0
+      ]
+    },
+    {
+      "text": "D  Graph-fusion correction profiles",
+      "font_size": 8.0,
+      "box_pt": [
+        3.0,
+        143.8,
+        123.36,
+        151.0
+      ]
+    },
+    {
+      "text": "E  Directions of mean differences\nbetween corrected groups",
+      "font_size": 8.0,
+      "box_pt": [
+        171.0,
+        136.33599999999998,
+        283.38,
+        151.0
+      ]
+    },
+    {
+      "text": "F  Rescued versus persistent\nfalse-negative profiles",
+      "font_size": 8.0,
+      "box_pt": [
+        338.99999999999994,
+        136.33599999999998,
+        434.93999999999994,
+        151.0
+      ]
+    }
+  ],
+  "out_of_canvas_text": [],
+  "output_sha256": "9973f9802f7bbe6d903b7de1da05159e5536af91b3e4a1e60bc0d44746c03fd8"
+}

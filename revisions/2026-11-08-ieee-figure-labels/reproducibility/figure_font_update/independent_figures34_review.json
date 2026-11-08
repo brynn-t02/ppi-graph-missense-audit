@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "scope": "Independent read-only Figure 3/4 review against date_restored original + BioGRID baseline; no figure, source manuscript or experiment modifications.",
+  "figures": {
+    "3": {
+      "pdf": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_IEEE_figure_labels_20261108/source/figure_drafts/Figure3_topology_context_v1_accepted.pdf",
+      "sha256": "6e326dc1f1377b32f5c5db2948cd7e0ef5b2c0566c3570e6a4c8510563a58874",
+      "baseline_sha256": "c309c36446d8b98b9de64b97b963ad5897656c91a0d0169ef210ff0d3c320e4f",
+      "canvas_pt": [
+        503.79,
+        345.0
+      ],
+      "actual_PDF_font_sizes_pt": [
+        8.0,
+        11.0
+      ],
+      "text_transforms_have_unit_scale": true,
+      "Times_New_Roman_fonts_embedded": [
+        "/CNAJXZ+TimesNewRomanPS-BoldMT",
+        "/CNAJXZ+TimesNewRomanPSMT"
+      ],
+      "out_of_page_text": [],
+      "removed_display_numbers": {},
+      "added_display_numbers": {},
+      "numeric_changes_explained": "None",
+      "fresh_Poppler_render_reviewed": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/ieee_figure_labels_20261108/review/Figure3_independent_render.png",
+      "visual_findings": "A–F titles, labels, numbers and plots inspected. No collision, clipped text, hidden point or changed scientific direction found.",
+      "data_audit": {
+        "before_after_data_arrays_identical": true,
+        "all_recorded_source_hashes_verified": 9,
+        "reference_source": "Original exp26B/30/31/27/33/33B summaries; fixed reference model pair, not matched ensemble.",
+        "scope_confirmed": "Original 53 cells and four displayed joint groups; original variant-level intervals."
+      }
+    },
+    "4": {
+      "pdf": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_IEEE_figure_labels_20261108/source/figure_drafts/Figure4_prediction_transitions_v2_accepted.pdf",
+      "sha256": "9973f9802f7bbe6d903b7de1da05159e5536af91b3e4a1e60bc0d44746c03fd8",
+      "baseline_sha256": "5a000bfb4a7ab34a3cf00d4136c36ad237c9e096011797caa21737f5838d70ea",
+      "canvas_pt": [
+        503.79,
+        345.0
+      ],
+      "actual_PDF_font_sizes_pt": [
+        8.0,
+        9.0
+      ],
+      "text_transforms_have_unit_scale": true,
+      "Times_New_Roman_fonts_embedded": [
+        "/CNAJXZ+TimesNewRomanPS-BoldMT",
+        "/CNAJXZ+TimesNewRomanPSMT"
+      ],
+      "out_of_page_text": [],
+      "removed_display_numbers": {
+        "−1.00": 1,
+        "−0.75": 1,
+        "−0.50": 1,
+        "−0.25": 1,
+        "0.00": 1,
+        "0.25": 1,
+        "0.50": 1,
+        "0.75": 1,
+        "1.00": 1
+      },
+      "added_display_numbers": {
+        "−1": 1,
+        "−0.5": 1,
+        "0": 1,
+        "0.5": 1,
+        "1": 1
+      },
+      "numeric_changes_explained": "Only Figure 4F decorative axis ticks: reduced density and decimal formatting; no scientific number changed.",
+      "fresh_Poppler_render_reviewed": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/ieee_figure_labels_20261108/review/Figure4_independent_render.png",
+      "visual_findings": "A–F titles, labels, numbers and plots inspected. No collision, clipped text, hidden point or changed scientific direction found.",
+      "data_audit": {
+        "independent_geometry_recheck_passed": true,
+        "transition_counts": [
+          11875,
+          3965,
+          1436,
+          944,
+          15981,
+          1298,
+          666,
+          275
+        ],
+        "all_eight_transition_segment_fractions_and_colors_identical": true,
+        "all_36_heatmap_cell_colors_identical": true,
+        "all_18_direction_dot_colors_identical": true,
+        "seven_Hedges_g_values_match_original_geometry_tolerance": 5e-08,
+        "aggregate_source_hashes_verified": 6,
+        "not_matched_ensemble_data": true,
+        "significance_stars_absent": true
+      }
+    }
+  },
+  "self_check_records_consistent_with_actual_final_files": true,
+  "no_figure_files_modified": true
+}

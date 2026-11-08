@@ -1,0 +1,296 @@
+{
+  "status": "PASS",
+  "main_sha256": "baf39be676460541d1a1022d2237e1a62203ea8d3a13872860fd0ce90ccb3052",
+  "main_pdf": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_IEEE_figure_labels_20261108/BIBM2026_workshop_final_IEEE_figures.pdf",
+  "reviewed_at": "2026-11-08T22:05:55.204698+08:00",
+  "page_count": 8,
+  "page_sizes_pt": [
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ]
+  ],
+  "pdf_header": "%PDF-1.5",
+  "visual_reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "render_dpi": 110,
+  "render_directory": "work/ieee_figure_labels_20261108/review",
+  "visual_result": "All eight final pages inspected. Titles, authors, bold abstract, tables, figure panels/captions and references are complete and legible, with no observed new collision, cropping or large interparagraph gap. Figures now occupy one figure block each on pages 4–7.",
+  "main_source_only_edit": "IEEEtriggeratref 25 -> 16; every other main.tex character including scientific prose, figure captions, table values, citations and bibliography unchanged.",
+  "figures": [
+    {
+      "page": 4,
+      "minimum_directly_measured_horizontal_text_pt": 8.000239999999962,
+      "minimum_text_transform_scale": 1.00003,
+      "minimum_Tf_in_embedded_figure_pt": 8,
+      "minimum_effective_font_pt": 8.00024,
+      "rotation_method": "Use 8-pt minimum PDF Tf from embedded figure plus Euclidean norm of text matrix basis; rotated character bbox height is not treated as font size."
+    },
+    {
+      "page": 5,
+      "minimum_directly_measured_horizontal_text_pt": 8.000239999999962,
+      "minimum_text_transform_scale": 1.00003,
+      "minimum_Tf_in_embedded_figure_pt": 8,
+      "minimum_effective_font_pt": 8.00024,
+      "rotation_method": "Use 8-pt minimum PDF Tf from embedded figure plus Euclidean norm of text matrix basis; rotated character bbox height is not treated as font size."
+    },
+    {
+      "page": 6,
+      "minimum_directly_measured_horizontal_text_pt": 8.000239999999962,
+      "minimum_text_transform_scale": 1.00003,
+      "minimum_Tf_in_embedded_figure_pt": 8,
+      "minimum_effective_font_pt": 8.00024,
+      "rotation_method": "Use 8-pt minimum PDF Tf from embedded figure plus Euclidean norm of text matrix basis; rotated character bbox height is not treated as font size."
+    },
+    {
+      "page": 7,
+      "minimum_directly_measured_horizontal_text_pt": 8.000239999999962,
+      "minimum_text_transform_scale": 1.00003,
+      "minimum_Tf_in_embedded_figure_pt": 8,
+      "minimum_effective_font_pt": 8.00024,
+      "rotation_method": "Use 8-pt minimum PDF Tf from embedded figure plus Euclidean norm of text matrix basis; rotated character bbox height is not treated as font size."
+    }
+  ],
+  "minimum_placed_figure_text_pt": 8.00024,
+  "font_resources": [
+    {
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "font": "/BZIVMZ+NimbusRomNo9L-MediItal",
+      "embedded": true
+    },
+    {
+      "font": "/IXFAWU+NimbusRomNo9L-Medi",
+      "embedded": true
+    },
+    {
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "font": "/YEUUOC+CMMI10",
+      "embedded": true
+    },
+    {
+      "font": "/AKHCZK+CMR10",
+      "embedded": true
+    },
+    {
+      "font": "/VDVGTR+CMSY7",
+      "embedded": true
+    },
+    {
+      "font": "/CAFSZL+CMR5",
+      "embedded": true
+    },
+    {
+      "font": "/DDIEWW+CMEX10",
+      "embedded": true
+    },
+    {
+      "font": "/FKPJSN+CMR7",
+      "embedded": true
+    },
+    {
+      "font": "/PVTTLK+NimbusMonL-Regu",
+      "embedded": true
+    },
+    {
+      "font": "/JAGKKY+CMSY8",
+      "embedded": true
+    },
+    {
+      "font": "/NOMARO+CMSY10",
+      "embedded": true
+    },
+    {
+      "font": "/CNAJXZ+TimesNewRomanPS-BoldMT",
+      "embedded": true
+    },
+    {
+      "font": "/CNAJXZ+TimesNewRomanPSMT",
+      "embedded": true
+    },
+    {
+      "font": "/CNAJXZ+TimesNewRomanPS-BoldMT",
+      "embedded": true
+    },
+    {
+      "font": "/CNAJXZ+TimesNewRomanPSMT",
+      "embedded": true
+    },
+    {
+      "font": "/KPXLOM+CMR8",
+      "embedded": true
+    },
+    {
+      "font": "/CNAJXZ+TimesNewRomanPS-BoldMT",
+      "embedded": true
+    },
+    {
+      "font": "/CNAJXZ+TimesNewRomanPSMT",
+      "embedded": true
+    },
+    {
+      "font": "/UTACNV+CMMI8",
+      "embedded": true
+    },
+    {
+      "font": "/CNAJXZ+TimesNewRomanPS-BoldMT",
+      "embedded": true
+    },
+    {
+      "font": "/CNAJXZ+TimesNewRomanPSMT",
+      "embedded": true
+    }
+  ],
+  "all_fonts_embedded": true,
+  "all_font_names_subset_prefixed": true,
+  "links": {
+    "/Link": 29
+  },
+  "bookmark_count": 15,
+  "bookmarks_and_links_preserved": true,
+  "encryption": false,
+  "form_fields": 0,
+  "last_reference_page_balance": {
+    "left_column_bottom_pt": 454.990934304,
+    "right_column_bottom_pt": 481.890064304,
+    "difference_pt": 26.899130000000014,
+    "note": "Natural complete-reference column endings; no reference split forced merely to equalize bottoms."
+  },
+  "text_bounds": [
+    {
+      "page": 1,
+      "text_bbox_pt": [
+        48.964,
+        52.245,
+        563.046,
+        718.437
+      ]
+    },
+    {
+      "page": 2,
+      "text_bbox_pt": [
+        48.964,
+        50.94,
+        563.046,
+        716.345
+      ]
+    },
+    {
+      "page": 3,
+      "text_bbox_pt": [
+        48.964,
+        50.94,
+        563.046,
+        714.253
+      ]
+    },
+    {
+      "page": 4,
+      "text_bbox_pt": [
+        48.964,
+        52.854,
+        563.046,
+        718.437
+      ]
+    },
+    {
+      "page": 5,
+      "text_bbox_pt": [
+        48.964,
+        52.854,
+        563.046,
+        718.437
+      ]
+    },
+    {
+      "page": 6,
+      "text_bbox_pt": [
+        48.964,
+        57.212,
+        563.046,
+        716.679
+      ]
+    },
+    {
+      "page": 7,
+      "text_bbox_pt": [
+        48.964,
+        54.418,
+        563.046,
+        713.69
+      ]
+    },
+    {
+      "page": 8,
+      "text_bbox_pt": [
+        48.964,
+        52.5,
+        563.044,
+        481.89
+      ]
+    }
+  ],
+  "notes": [
+    "PDF 1.5, links and bookmarks are intentionally retained under latest user instruction.",
+    "This local rendering/font audit is not online IEEE PDF eXpress certification.",
+    "Figure data and interval invariance are separately documented in figure12/plotting_audit.json, figure3/figure3_verification.json and figure4/figure4_verification.json."
+  ],
+  "issues": []
+}

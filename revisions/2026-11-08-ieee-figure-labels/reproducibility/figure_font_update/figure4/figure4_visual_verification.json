@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "output_sha256": "9973f9802f7bbe6d903b7de1da05159e5536af91b3e4a1e60bc0d44746c03fd8",
+  "actual_pdf_render": "Figure4_PDF_render.png",
+  "render_dpi": 200,
+  "panels_A_through_F_visually_reviewed": true,
+  "no_missing_or_clipped_text": true,
+  "no_title_or_label_collision": true,
+  "font_sizes_verified_in_pdf": [
+    8,
+    9
+  ],
+  "same_original_feature_names_without_abbreviation": true,
+  "changes_confined_to_typography_and_spacing": true,
+  "no_system_font_files_redistributed": true,
+  "numeric_geometry_and_colors_audit": "figure4_verification.json"
+}

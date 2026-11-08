@@ -1,0 +1,21 @@
+{
+  "n_graph_nodes": 19140,
+  "n_graph_edges": 275810,
+  "n_communities": 31,
+  "community_size_mean": 611.258064516129,
+  "community_size_median": 8.0,
+  "n_within_pairs": 15757,
+  "n_between_pairs": 15757,
+  "within_mean": 0.8742990493774414,
+  "within_median": 0.9045817255973816,
+  "within_std": 0.09824887663125992,
+  "between_mean": 0.8641735911369324,
+  "between_median": 0.8944661617279053,
+  "between_std": 0.10053830593824387,
+  "mean_difference": 0.010125458240509033,
+  "median_difference": 0.010115563869476318,
+  "mannwhitney_u": 134581394.5,
+  "p_value": 3.101791867635363e-38,
+  "string_score_threshold": 400,
+  "min_community_size": 5
+}

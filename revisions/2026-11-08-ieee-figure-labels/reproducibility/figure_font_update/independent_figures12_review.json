@@ -1,0 +1,94 @@
+{
+  "passed": true,
+  "blocking_findings": [],
+  "reviewer": "independent figure4 agent",
+  "no_figure_or_manuscript_mutation": true,
+  "figures": {
+    "1": {
+      "before_sha256": "2a3027f243932505c58e26024eea40695591ba903a6d42f4d28707ab6b3c045d",
+      "after_sha256": "38a4adada46670d254b653ab582ed3c3afb324dd52c4176a0e15773da8ee7e71",
+      "before_copy_matches_author_selected_baseline": true,
+      "canvas_pt": [
+        503.79,
+        345
+      ],
+      "actual_pdf_font_sizes": [
+        8.0,
+        10.0
+      ],
+      "actual_pdf_font_names": [
+        "CNAJXZ+TimesNewRomanPS-BoldMT",
+        "CNAJXZ+TimesNewRomanPSMT"
+      ],
+      "all_fonts_embedded": true,
+      "scientific_geometry_matches_both_original_and_new_pdfs": true,
+      "checked_counts": {
+        "bar_rectangles": 16,
+        "interval_segments": 31,
+        "partial_curve_series": 3
+      },
+      "max_pdf_path_error_points": 1.8598616975395998e-06,
+      "displayed_numeric_annotations_preserved": [
+        "+0.0207",
+        "+0.0421"
+      ],
+      "errors_bars_or_CIs_not_replaced": true,
+      "data_signature_consistent_with_original": true
+    },
+    "2": {
+      "before_sha256": "bb2429ea938a2a852dafbb67b296d96e30f20ada46cdc0a2ac83526f9649865d",
+      "after_sha256": "ca0741806b7c7d89975f027ec85d84a51272f4ff0152f088d3f51288beba465b",
+      "before_copy_matches_author_selected_baseline": true,
+      "canvas_pt": [
+        503.79,
+        345
+      ],
+      "actual_pdf_font_sizes": [
+        8.0,
+        10.0
+      ],
+      "actual_pdf_font_names": [
+        "CNAJXZ+TimesNewRomanPS-BoldMT",
+        "CNAJXZ+TimesNewRomanPSMT"
+      ],
+      "all_fonts_embedded": true,
+      "scientific_geometry_matches_both_original_and_new_pdfs": true,
+      "checked_counts": {
+        "bar_rectangles": 30,
+        "interval_segments": 18,
+        "partial_curve_series": 0
+      },
+      "max_pdf_path_error_points": 2.607039505164721e-06,
+      "displayed_numeric_annotations_preserved": [
+        "177,213",
+        "177,205",
+        "99.995%",
+        "171,753",
+        "96.92%",
+        "31.95%",
+        "10.56%"
+      ],
+      "errors_bars_or_CIs_not_replaced": true,
+      "data_signature_consistent_with_original": true
+    }
+  },
+  "visual_review": {
+    "both_poppler_pngs_inspected": true,
+    "actual_new_collision_or_clipping_found": false,
+    "figure1E_existing_clipping": "The original [-0.010, 0.026] y limits still clip the same existing low-confidence-first upper interval at 25% and high-confidence-first lower interval at 75%; interval endpoints and limits are unchanged.",
+    "figure2A_reflow": "All five boxes, coverage values and directed relationships remain visible.",
+    "figure2C_E_tick_changes": "Reduced tick density only; axis ranges and scientific endpoints preserved."
+  },
+  "scientific_fingerprints": {
+    "Figure1B_original_raw_full_AUC": [
+      0.7790050633159713,
+      0.7997246816052654
+    ],
+    "Figure2D_original_single_fit_raw_full_AUC": [
+      0.7247726123370454,
+      0.7606031051585176
+    ],
+    "Figure2E_original_graph_fusion_AUC": 0.9740638558293198,
+    "new_unified_experiment_results_introduced": false
+  }
+}

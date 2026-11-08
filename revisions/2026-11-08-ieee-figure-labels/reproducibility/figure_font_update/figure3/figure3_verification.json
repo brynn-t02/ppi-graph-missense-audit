@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "width_pt": 503.79,
+  "height_pt": 345.0,
+  "main_placement_width_pt": 503.79,
+  "placement_scale": 1,
+  "minimum_actual_axis_aligned_font_pt": 7.999999999999993,
+  "font_names": [
+    "CNAJXZ+TimesNewRomanPSMT",
+    "CNAJXZ+TimesNewRomanPS-BoldMT"
+  ],
+  "embedded_fonts": [
+    {
+      "name": "/CNAJXZ+TimesNewRomanPS-BoldMT",
+      "embedded": true
+    },
+    {
+      "name": "/CNAJXZ+TimesNewRomanPSMT",
+      "embedded": true
+    }
+  ],
+  "all_text_uses_Times_New_Roman": true,
+  "visible_text_bbox_pt": [
+    3.0016249999999998,
+    6.8401250000000005,
+    493.0,
+    340.4735
+  ],
+  "no_text_outside_canvas": true,
+  "numeric_token_multiset_unchanged": true,
+  "removed_numbers": {},
+  "added_numbers": {},
+  "scientific_artists_unchanged": true,
+  "source_type": "Original fixed-reference model-pair Figure 3, using original script and original processed plotting summaries. No matched-ensemble data.",
+  "visual_check": "200-dpi rendered PDF inspected. All A–F titles, tick labels, legends and CI labels clear, no collision or clipping. A statistics were wrapped into two lines to maintain separation; A shared community label avoids label overlap; F axis widened to maintain all original ticks.",
+  "text_only_layout_changes": [
+    "Panel titles preserve accepted wording with line breaks.",
+    "Within/Between use a shared community label.",
+    "Degree/k-core and between/cluster categorical names are shared below low/mid/high ticks.",
+    "A statistical annotations and F x-axis label use line breaks.",
+    "E plot is slightly narrower and F slightly wider; limits and all scientific artists unchanged."
+  ],
+  "old_sha256": "c309c36446d8b98b9de64b97b963ad5897656c91a0d0169ef210ff0d3c320e4f",
+  "pdf_sha256": "6e326dc1f1377b32f5c5db2948cd7e0ef5b2c0566c3570e6a4c8510563a58874",
+  "png_sha256": "566bd869ab23307d9d1d63d24d544eda10cba7773e111718d65d8c6f143ec3ef",
+  "system_font_files_copied": false,
+  "other_figures_or_manuscript_edited": false,
+  "font_sizes_in_PDF_text_operators_pt": [
+    8.0,
+    11.0
+  ],
+  "minimum_PDF_text_operator_size_pt": 8.0,
+  "no_global_pdf_scale_before_main_placement": true,
+  "independent_visual_review": {
+    "reviewer": "/root/unified_training_code",
+    "status": "PASS",
+    "render": "pdf_render.png",
+    "finding": "A statistics clear and do not cover bars; shared community label unambiguous. All five F ticks separately legible, group labels and CI marks complete. No overlap or clipping observed in other panels."
+  }
+}

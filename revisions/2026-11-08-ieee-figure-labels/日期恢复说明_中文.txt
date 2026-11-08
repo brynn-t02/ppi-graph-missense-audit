@@ -1,0 +1,15 @@
+ClinVar日期恢复说明（2026年11月8日）
+
+本版在“原稿＋BioGRID局部修正版”基础上另存，依据作者本次明确确认，将ClinVar版本日期恢复为31 March 2024。
+
+1. 主文Methods II.A：将“Checksums and sample identifiers freeze the processed benchmark; its exact ClinVar content-release date could not be verified.”替换回原稿完整原句：
+We used the ClinVar variant-summary release dated 31 March 2024 and retained checksums for the exact input file used in the reconstruction.
+其前后的句子以及引用不变。
+
+2. 补充Methods 1：将对应“发布日期无法核实”的一句同步改为：
+We used the ClinVar variant-summary release dated 31 March 2024.
+后面的校验值、样本成员记录及其不能单独证明时间独立性的说明保留。
+
+其他正文、图注、四张图、全部实验数据及参考文献均保持上一版。没有重新计算或训练。
+日期来源为作者本次确认，未将其记录为本轮独立核实了原始下载日志。原稿、上一版和既有数据核对记录均保留。
+本轮新PDF主文8页、补充12页；尚未重新进行PDF eXpress认证或会议提交。
