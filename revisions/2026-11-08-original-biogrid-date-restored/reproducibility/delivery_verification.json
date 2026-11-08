@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "baseline_commit": "903a11fe5c89af43b1eb40cc3d8ced8f937d3adc",
+  "main_pages": 8,
+  "supplement_pages": 12,
+  "main_sha256": "aa2454e77984c13c1708dec40caca8f54e41df6db61c0253b075e22d752330ef",
+  "supplement_sha256": "311ac48aeb4dd368c98bd100d9216f35c931e22d7aaa5795679def32725f068d",
+  "targeted_sentence_replacements": 2,
+  "date": "31 March 2024",
+  "date_basis": "Explicit author confirmation on 8 November 2026; not independently verified download records.",
+  "all_other_manuscript_text_unchanged": true,
+  "all_figures_and_scientific_results_unchanged": true,
+  "protected_file_counts": {
+    "source/figure_drafts": 6,
+    "source/resources": 7,
+    "original_submission": 5,
+    "reproducibility/BioGRID": 11
+  },
+  "all_fonts_embedded": true,
+  "changed_pages_visually_checked": true,
+  "no_experiments_reanalysis_or_server": true,
+  "not_newly_certified_or_submitted": true
+}

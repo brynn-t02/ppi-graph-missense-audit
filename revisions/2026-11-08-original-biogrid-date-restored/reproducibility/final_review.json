@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "reviewed_at": "2026-11-08T19:20:24.337480+08:00",
+  "main_sha256": "aa2454e77984c13c1708dec40caca8f54e41df6db61c0253b075e22d752330ef",
+  "supplement_sha256": "311ac48aeb4dd368c98bd100d9216f35c931e22d7aaa5795679def32725f068d",
+  "page_counts": {
+    "main": 8,
+    "supplement": 12
+  },
+  "changed_pages": {
+    "main": [
+      1,
+      2
+    ],
+    "supplement": [
+      1
+    ]
+  },
+  "visual_checked_pages": {
+    "main": [
+      1,
+      2
+    ],
+    "supplement": [
+      1
+    ]
+  },
+  "unchanged_pages_pixel_identical": {
+    "main": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "supplement": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "render_dpi": 110,
+  "source_scope": "Exactly one sentence replaced in main.tex and one sentence in Supplementary_Information_revised.md; all other source text unchanged.",
+  "figure_files_byte_identical_to_previous_revision": true,
+  "font_resources_all_embedded": true,
+  "visual_result": "Changed pages checked at full-page rendering. Restored date is readable, paragraph flow remains intact, and no new clipping, overlap, abnormal blank gap or page-limit issue was observed. Main page 2 has only a short reflow of the preceding paragraph. Other 17 pages are pixel-identical to the previously reviewed baseline.",
+  "date_provenance": "The date is restored on the basis of the author's explicit confirmation. This review does not independently verify historical source-download logs.",
+  "preserved_SI_boundary": "Checksums and sample memberships identify the frozen processed benchmark; these records do not establish temporal independence.",
+  "scientific_scope": "No experiment, metric, result table, figure or interpretation changed in this revision.",
+  "evidence": [
+    "review/date_scope_review.json",
+    "review/technical_checks.json",
+    "review/pixel_comparison.json"
+  ],
+  "issues": []
+}

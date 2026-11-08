@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-08",
+  "date_basis": "Author explicitly confirmed the 31 March 2024 ClinVar version in this conversation. No independent download-record verification was performed in this edit.",
+  "baseline_commit": "903a11fe5c89af43b1eb40cc3d8ced8f937d3adc",
+  "changes": [
+    {
+      "document": "main.tex",
+      "before": "Checksums and sample identifiers freeze the processed benchmark; its exact ClinVar content-release date could not be verified.",
+      "after": "We used the ClinVar variant-summary release dated 31 March 2024 and retained checksums for the exact input file used in the reconstruction."
+    },
+    {
+      "document": "Supplementary_Information_revised.md",
+      "before": "The precise ClinVar content-release date could not be verified from the saved records.",
+      "after": "We used the ClinVar variant-summary release dated 31 March 2024."
+    }
+  ],
+  "all_other_manuscript_text_unchanged": true,
+  "no_experiments_or_reanalysis": true
+}
