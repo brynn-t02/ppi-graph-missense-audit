@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "baseline_commit": "81b2d92f978cca1590d006bfc334e422b5150e64",
+  "main_pages": 8,
+  "supplement_pages": 12,
+  "main_sha256": "7bfb997b6b0bd21f9a354b6259d1c6020713cf0dc84e8c30c384678b69bd8069",
+  "supplement_sha256": "ae3f9987504e6e12ad778a3834a6a2f2c08b64b8ef185c0b8f5eb53702885272",
+  "targeted_text_edits": 11,
+  "Figure1_text_edits": 3,
+  "Figure3_text_edits": 3,
+  "Figure4_title_edits": 2,
+  "Figure4_uniform_direction_dots": 18,
+  "Figure4_removed_stars": 7,
+  "Figure2_byte_identical": true,
+  "all_three_modified_figures_outside_allowed_regions_changed_pixels": 0,
+  "scientific_decimals_and_all_table_rows_unchanged": true,
+  "bibliography_unchanged": true,
+  "unchanged_archive_file_counts": {
+    "original_submission": 5,
+    "reproducibility/BioGRID": 11
+  },
+  "all_fonts_embedded": true,
+  "all_main_and_supplement_pages_visually_reviewed": true,
+  "only_BioGRID_network_validation_in_scope": true,
+  "no_training_inference_recalculation_or_server": true,
+  "not_newly_certified_or_submitted": true
+}

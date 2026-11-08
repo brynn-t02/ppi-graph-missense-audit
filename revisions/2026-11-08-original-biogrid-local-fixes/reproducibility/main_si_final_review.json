@@ -1,0 +1,545 @@
+{
+  "status": "PASS",
+  "reviewed_at": "2026-11-08T09:24:32.665484+00:00",
+  "main_sha256": "7bfb997b6b0bd21f9a354b6259d1c6020713cf0dc84e8c30c384678b69bd8069",
+  "supplement_sha256": "ae3f9987504e6e12ad778a3834a6a2f2c08b64b8ef185c0b8f5eb53702885272",
+  "page_counts": {
+    "main": 8,
+    "supplement": 12
+  },
+  "visual_reviewed_pages": {
+    "main": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "supplement": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "all_fonts_embedded": true,
+  "compile_checks": {
+    "no_overfull": true,
+    "no_undefined_references": true,
+    "no_missing_glyph": true
+  },
+  "text_data_review": "text_and_supplement_review.json",
+  "checks": {
+    "eleven_authorized_text_edits_exact": true,
+    "all_SI_table_rows_unchanged": true,
+    "Results_prose_numbers_unchanged": true,
+    "Discussion_bibliography_unchanged": true,
+    "Figure2_bytes_unchanged": true,
+    "Figure1_3_titles_match_requested_changes": true,
+    "Figure4_uniform_dots_no_stars_correct_F_title": true,
+    "Figure4_clustering_direction_prose_matches_preserved_colors": true,
+    "new_captions_and_SI_match_rendered_figures": true,
+    "no_visual_clipping_overlap_or_large_paragraph_gaps": true,
+    "final_reference_columns_balanced": true
+  },
+  "visual_notes": [
+    "All8main pages and all12SI pages individually viewed as PNGs. Tables, titles, captions, equations and author fields render intact.",
+    "Figure1D/F retain original numbers with neutral new annotations. Figure3C wraps its new title without collision. Figure4E dot size/opacity uniform and F stars absent; effect bars and directions preserved.",
+    "Original small figure labels remain a known readability limitation; no new clipping or missing glyphs observed."
+  ],
+  "font_resource_checks": [
+    {
+      "document": "main",
+      "page": 1,
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 1,
+      "font": "/BZIVMZ+NimbusRomNo9L-MediItal",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 1,
+      "font": "/IXFAWU+NimbusRomNo9L-Medi",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 1,
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 2,
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 2,
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 2,
+      "font": "/YEUUOC+CMMI10",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 2,
+      "font": "/AKHCZK+CMR10",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 2,
+      "font": "/VDVGTR+CMSY7",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 2,
+      "font": "/CAFSZL+CMR5",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 2,
+      "font": "/DDIEWW+CMEX10",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 2,
+      "font": "/FKPJSN+CMR7",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 2,
+      "font": "/PVTTLK+NimbusMonL-Regu",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 3,
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 3,
+      "font": "/JAGKKY+CMSY8",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 3,
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 3,
+      "font": "/AKHCZK+CMR10",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 3,
+      "font": "/NOMARO+CMSY10",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 4,
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 4,
+      "font": "/AKHCZK+CMR10",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 4,
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 4,
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 4,
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 4,
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 4,
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 5,
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 5,
+      "font": "/JAGKKY+CMSY8",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 5,
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 5,
+      "font": "/AKHCZK+CMR10",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 5,
+      "font": "/KPXLOM+CMR8",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 5,
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 5,
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 6,
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 6,
+      "font": "/UTACNV+CMMI8",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 6,
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 6,
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 6,
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 6,
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 6,
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 6,
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 7,
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 7,
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 8,
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "document": "main",
+      "page": 8,
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 1,
+      "font": "/AAAAAA+DejaVuSerif",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 1,
+      "font": "/AAAAAA+DejaVuSerif-Bold",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 1,
+      "font": "/AAAAAA+DejaVuSansMono",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 2,
+      "font": "/AAAAAA+DejaVuSerif",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 2,
+      "font": "/AAAAAA+DejaVuSerif-Bold",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 2,
+      "font": "/AAAAAA+DejaVuSansMono",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 3,
+      "font": "/AAAAAA+DejaVuSerif",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 3,
+      "font": "/AAAAAA+DejaVuSerif-Bold",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 3,
+      "font": "/AAAAAA+DejaVuSansMono",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 4,
+      "font": "/AAAAAA+DejaVuSerif",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 4,
+      "font": "/AAAAAA+DejaVuSerif-Bold",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 4,
+      "font": "/AAAAAA+DejaVuSansMono",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 5,
+      "font": "/AAAAAA+DejaVuSerif",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 5,
+      "font": "/AAAAAA+DejaVuSerif-Bold",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 5,
+      "font": "/AAAAAA+DejaVuSansMono",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 6,
+      "font": "/AAAAAA+DejaVuSerif",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 6,
+      "font": "/AAAAAA+DejaVuSerif-Bold",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 6,
+      "font": "/AAAAAA+DejaVuSansMono",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 7,
+      "font": "/AAAAAA+DejaVuSerif",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 7,
+      "font": "/AAAAAA+DejaVuSerif-Bold",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 7,
+      "font": "/AAAAAA+DejaVuSansMono",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 8,
+      "font": "/AAAAAA+DejaVuSerif",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 8,
+      "font": "/AAAAAA+DejaVuSerif-Bold",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 8,
+      "font": "/AAAAAA+DejaVuSansMono",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 9,
+      "font": "/AAAAAA+DejaVuSerif",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 9,
+      "font": "/AAAAAA+DejaVuSerif-Bold",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 9,
+      "font": "/AAAAAA+DejaVuSansMono",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 10,
+      "font": "/AAAAAA+DejaVuSerif",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 10,
+      "font": "/AAAAAA+DejaVuSerif-Bold",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 10,
+      "font": "/AAAAAA+DejaVuSansMono",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 11,
+      "font": "/AAAAAA+DejaVuSerif",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 11,
+      "font": "/AAAAAA+DejaVuSerif-Bold",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 11,
+      "font": "/AAAAAA+DejaVuSansMono",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 12,
+      "font": "/AAAAAA+DejaVuSerif",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 12,
+      "font": "/AAAAAA+DejaVuSerif-Bold",
+      "embedded": true
+    },
+    {
+      "document": "supplement",
+      "page": 12,
+      "font": "/AAAAAA+DejaVuSansMono",
+      "embedded": true
+    }
+  ],
+  "scope": "No training or recomputation; independent read-only comparison/render QA. Does not replace PDF eXpress certification.",
+  "private_checklist_fulltext_included": false
+}

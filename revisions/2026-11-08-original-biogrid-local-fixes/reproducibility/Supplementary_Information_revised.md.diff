@@ -1,0 +1,29 @@
+--- previous/source/Supplementary_Information_revised.md
++++ source/Supplementary_Information_revised.md
+@@ -222,7 +222,7 @@
+ 
+ Full topology maps are provided in the prepared source-data archive rather than printed in full in the PDF supplement.
+ 
+-The four highlighted cells were selected from 53 joint cells examined on the same test set. Their intervals resampled variants within each cell, without accounting for within-protein dependence, subgroup selection or multiple comparisons. They describe exploratory associations and require independent validation; the stronger wording of Figure 3 panel titles should not be interpreted as an established mechanism.
++The four highlighted cells were selected from 53 joint cells examined on the same test set. Their intervals resampled variants within each cell, without accounting for within-protein dependence, subgroup selection or multiple comparisons. They describe exploratory associations and require independent validation.
+ 
+ ### Supplementary Table 6. Descriptive prediction transitions and baseline-error-stratified profiles
+ 
+@@ -289,7 +289,7 @@
+ 
+ The raw-ESM baseline false-negative contrast contains 837 rescued and 1,062 persistent false negatives. Within-community neighbour fraction has two missing values in the persistent group, giving 1,060 available observations for that feature; missingness does not change the transition counts. Hedges' g uses the pooled within-group standard deviation with a small-sample correction. These are variant-weighted summaries, with missing values handled per feature. Bucket codes, including -1 for insufficient or unassigned context, retain their numerical encoding; bucket means are not biological effect magnitudes.
+ 
+-The comparison stratifies by the baseline binary error type; it does not match continuous prediction scores or eliminate residual prediction-difficulty differences. The associated feature tests treated variants as independent despite shared protein-level features, so their FDR/significance claims are not used. Figure 4E/F retains dot-size, opacity and significance labels from those tests, but these encodings must not be interpreted as valid inferential evidence. In Figure 4C–D, warm and blue colors indicate means above and below the within-row mean after range scaling, not comparable effect magnitudes across features. In E, blue denotes a higher mean among rescued false negatives and warm colors a higher mean among suppressed false positives; in F, blue and orange denote positive and negative Hedges' g. Directions and descriptive effect sizes do not establish correction mechanisms.
++The comparison stratifies by the baseline binary error type; it does not match continuous prediction scores or eliminate residual prediction-difficulty differences. The associated feature tests treated variants as independent despite shared protein-level features, so their FDR/significance claims are not used. Figure 4E uses uniform dots to indicate the direction of group-mean differences, and Figure 4F displays descriptive effect sizes without significance markers. In Figure 4C–D, warm and blue colors indicate means above and below the within-row mean after range scaling, not comparable effect magnitudes across features. In E, blue denotes a higher mean among rescued false negatives and warm colors a higher mean among suppressed false positives; in F, blue and orange denote positive and negative Hedges' g. Directions and descriptive effect sizes do not establish correction mechanisms.
+ 
+ ### Supplementary Table 7. Negative-control audit
+ 
+@@ -337,7 +337,7 @@
+ | Homology fusion | CADD+AM + STRING FPP | 3 | 0.9752 ± 0.0007 | 0.8369 ± 0.0060 |
+ | Homology fusion | CADD+AM + raw ESM | 3 | 0.9727 ± 0.0003 | 0.8253 ± 0.0016 |
+ 
+-These rows describe the three-seed network comparison. They should not be substituted for separate single-fit results or treated as the metrics of ensemble-averaged predictions. CADD+AM denotes the architecture-matched score baseline; every fusion model includes CADD, AlphaMissense and its missingness indicator. These comparisons use their own matched fits and canonical protein-level prediction mapping. Consequently, their means, SDs and ensemble differences should not be combined with the fixed reference points or separately fitted controls in Tables 2–4.
++Table 9 reports the BioGRID network comparison together with its matched comparator models. Entries in Table 9A are means and sample standard deviations across three fits; Table 9B reports paired differences computed from averaged prediction probabilities. All within-table contrasts use the models and evaluation protocol described in Supplementary Methods 5.
+ 
+ #### Supplementary Table 9B. BioGRID ensemble differences
+ 

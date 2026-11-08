@@ -1,0 +1,68 @@
+[
+  {
+    "document": "main",
+    "reason": "F1: neutral abstract sentence; no wholesale rewrite",
+    "before": "Topology groups and error transitions showed exploratory associations rather than established correction mechanisms.",
+    "after": "Exploratory analyses described variation across topology groups and prediction-error transitions."
+  },
+  {
+    "document": "main",
+    "reason": "F2: exploratory modifies analyses",
+    "before": "Third, it relates graph-associated gains and prediction changes to exploratory topology contexts and error transitions.",
+    "after": "Third, it relates graph-associated gains and prediction changes to topology contexts and error transitions through exploratory analyses."
+  },
+  {
+    "document": "main",
+    "reason": "F5: accurately describe clustering direction reversal",
+    "before": "Similar profile shifts appeared in the retained \\CADDAM{} to graph-fusion comparison (Fig. 4D).",
+    "after": "For graph fusion, the degree and neighbour-risk contrasts had the same direction, whereas the clustering-coefficient contrast reversed (Fig. 4D)."
+  },
+  {
+    "document": "main",
+    "reason": "A3: body synchronized with significance-encoding removal",
+    "before": "These are descriptive associations; repeated variants within proteins preclude interpreting the feature-wise significance encodings as valid evidence.",
+    "after": "We interpret these feature contrasts descriptively because variants mapped to the same protein share network features."
+  },
+  {
+    "document": "main",
+    "reason": "A3: caption describes actual F contrast and no significance markers",
+    "before": "F, Hedges\\textquotesingle{} $g$ comparing rescued and persistent false negatives within baseline false-negative cases, not difficulty matching; blue/orange denotes positive/negative effects. Significance encodings in E--F do not account for protein dependence and are not used for inference.",
+    "after": "F, Descriptive Hedges\\textquotesingle{} $g$ comparing rescued and persistent false negatives within the raw-ESM baseline false-negative group; blue and orange denote positive and negative effects. Feature comparisons are descriptive and make no inferential significance claims."
+  },
+  {
+    "document": "main",
+    "reason": "C: precise uncertainty description; remove commentary about titles",
+    "before": "B--F use a fixed reference pair; these descriptive intervals exclude protein dependence, subgroup selection and multiplicity. Panel titles describe associations, not established mechanisms.",
+    "after": "B--F use a fixed reference pair. The within-cell variant-bootstrap intervals do not account for within-protein dependence or post-hoc subgroup selection and are not adjusted for multiple comparisons."
+  },
+  {
+    "document": "main",
+    "reason": "D1: Figure2E has no displayed error bars; SD remains in SI",
+    "before": "E, Homology-aware fusion: scores/raw fusion use three fits with sample SD; graph fusion is a single estimate.",
+    "after": "E, Homology-aware fusion: the score-only and raw-ESM fusion bars show means across three fits, whereas graph fusion shows one fitted-model estimate. Standard deviations for the repeated fits are reported in Supplementary Table 3B."
+  },
+  {
+    "document": "main",
+    "reason": "D2: distinguish ensemble differences and mean metrics clearly",
+    "before": "C, Full-graph fusion differences from ensemble-averaged probabilities with paired protein-bootstrap 95\\% intervals; these need not equal differences between B\\textquotesingle s mean metrics and condition on fitted models and sampled graphs.",
+    "after": "C, Full-graph fusion differences computed from ensemble-averaged probabilities, with paired protein-bootstrap 95\\% intervals conditional on the fitted models and sampled graphs. The point estimates need not equal differences between the mean metrics in B."
+  },
+  {
+    "document": "si",
+    "reason": "A3: SI synchronized with actual E/F encoding changes",
+    "before": "Figure 4E/F retains dot-size, opacity and significance labels from those tests, but these encodings must not be interpreted as valid inferential evidence.",
+    "after": "Figure 4E uses uniform dots to indicate the direction of group-mean differences, and Figure 4F displays descriptive effect sizes without significance markers."
+  },
+  {
+    "document": "si",
+    "reason": "C: remove commentary about superseded figure titles",
+    "before": "They describe exploratory associations and require independent validation; the stronger wording of Figure 3 panel titles should not be interpreted as an established mechanism.",
+    "after": "They describe exploratory associations and require independent validation."
+  },
+  {
+    "document": "si",
+    "reason": "E: direct explanation of within-table comparison protocol",
+    "before": "These rows describe the three-seed network comparison. They should not be substituted for separate single-fit results or treated as the metrics of ensemble-averaged predictions. CADD+AM denotes the architecture-matched score baseline; every fusion model includes CADD, AlphaMissense and its missingness indicator. These comparisons use their own matched fits and canonical protein-level prediction mapping. Consequently, their means, SDs and ensemble differences should not be combined with the fixed reference points or separately fitted controls in Tables 2–4.",
+    "after": "Table 9 reports the BioGRID network comparison together with its matched comparator models. Entries in Table 9A are means and sample standard deviations across three fits; Table 9B reports paired differences computed from averaged prediction probabilities. All within-table contrasts use the models and evaluation protocol described in Supplementary Methods 5."
+  }
+]

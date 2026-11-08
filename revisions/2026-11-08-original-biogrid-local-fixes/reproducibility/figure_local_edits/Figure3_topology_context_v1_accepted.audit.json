@@ -1,0 +1,171 @@
+{
+  "source": "Figure3_topology_context_v1_accepted.pdf",
+  "source_sha256": "71a3aab296cc4bc6f09f4f39421915cad84892b2cf73c82f22083a61abe6f8fe",
+  "output": "Figure3_topology_context_v1_accepted.pdf",
+  "output_sha256": "c309c36446d8b98b9de64b97b963ad5897656c91a0d0169ef210ff0d3c320e4f",
+  "output_png_sha256": "5b527d242162c005d06c0576cf8e70a059ea369ebf93cf5a4496d42c3cafc3c6",
+  "method": "Remove original text operators and insert new transparent vector text Form; retain all other original content bytes.",
+  "removed_text_blocks": [
+    {
+      "start": 16603,
+      "end": 16755,
+      "text": "C  Bridge role and local density shape gain"
+    },
+    {
+      "start": 21290,
+      "end": 21466,
+      "text": "D  Neighbour-risk strata show local-context dependence"
+    },
+    {
+      "start": 35884,
+      "end": 36081,
+      "text": "PPI-GCN gains concentrate in specific network topology contexts"
+    }
+  ],
+  "inserted_text": [
+    {
+      "text": "Exploratory PPI-GCN performance across topology contexts",
+      "x": "center",
+      "y": 505.564125,
+      "size": 14,
+      "weight": "bold",
+      "ha": "center",
+      "color": "black"
+    },
+    {
+      "text": "C  Performance differences across",
+      "x": 723.648,
+      "y": 475.74875,
+      "size": 9,
+      "weight": "bold",
+      "ha": "left",
+      "color": "black"
+    },
+    {
+      "text": "betweenness and clustering strata",
+      "x": 737.0,
+      "y": 464.74875,
+      "size": 9,
+      "weight": "bold",
+      "ha": "left",
+      "color": "black"
+    },
+    {
+      "text": "D  Performance differences across neighbour-risk strata",
+      "x": 50.7,
+      "y": 202.531345,
+      "size": 9,
+      "weight": "bold",
+      "ha": "left",
+      "color": "black"
+    }
+  ],
+  "old_text_physically_removed_and_not_extractable": true,
+  "new_text_extractable": true,
+  "new_glyphs_embedded": true,
+  "portable_font_files": {
+    "normal": {
+      "path": "resources/fonts/DejaVuSans.ttf",
+      "sha256": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22"
+    },
+    "bold": {
+      "path": "resources/fonts/DejaVuSans-Bold.ttf",
+      "sha256": "b184b89e3c1075f22f6b71575b6fc20d4972b3cfd3b23322ca6fd596dcaef167"
+    }
+  },
+  "all_font_point_sizes_preserved": true,
+  "same_canvas": true,
+  "canvas_pt": [
+    955.164,
+    523.40475
+  ],
+  "data_axes_colors_and_non_text_geometry_unchanged": true,
+  "pixel_audit": {
+    "dpi": 300,
+    "dimensions": [
+      3980,
+      2181
+    ],
+    "changed_pixels": 89617,
+    "outside_allowed_text_regions_changed_pixels": 0,
+    "allowed_text_regions_pdf_points": {
+      "overall_title": [
+        219,
+        499,
+        741,
+        521
+      ],
+      "panel_C_title": [
+        720,
+        461,
+        950,
+        486
+      ],
+      "panel_D_title": [
+        48,
+        199,
+        345,
+        214
+      ]
+    }
+  },
+  "source_unchanged": true,
+  "abbreviations_needed": false,
+  "position_changes": "Overall title recentered. C wraps into two lines in the existing title band; original 9pt font preserved, original final baseline retained, no axes or panels moved. D retains original baseline and anchor.",
+  "actual_changed_ink_bounds": {
+    "overall_title": {
+      "changed_pixels": 47956,
+      "changed_pixel_bbox_xyxy": [
+        934,
+        29,
+        3068,
+        87
+      ],
+      "changed_ink_bbox_pdf_points": [
+        224.16,
+        502.52475000000004,
+        736.32,
+        516.44475
+      ]
+    },
+    "panel_C_title": {
+      "changed_pixels": 23115,
+      "changed_pixel_bbox_xyxy": [
+        3016,
+        169,
+        3918,
+        253
+      ],
+      "changed_ink_bbox_pdf_points": [
+        723.84,
+        462.68475,
+        940.32,
+        482.84475000000003
+      ]
+    },
+    "panel_D_title": {
+      "changed_pixels": 18546,
+      "changed_pixel_bbox_xyxy": [
+        278,
+        1307,
+        1403,
+        1345
+      ],
+      "changed_ink_bbox_pdf_points": [
+        66.72,
+        200.60475000000002,
+        336.72,
+        209.72475000000003
+      ]
+    }
+  },
+  "font_embedding_verified_with_pdffonts": true,
+  "all_fonts_embedded": true,
+  "visual_review": {
+    "original_and_final_reviewed": true,
+    "render_long_edge": 1800,
+    "no_title_or_annotation_collision": true,
+    "same_font_sizes_and_colors": true
+  },
+  "source_is_original_plus_BioGRID_original_figure_not_v8": true
+}

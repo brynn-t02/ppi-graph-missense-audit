@@ -1,0 +1,79 @@
+{
+  "read_only_audit": true,
+  "new_training": false,
+  "new_inference": false,
+  "new_bootstrap": false,
+  "server_access": false,
+  "web_access": false,
+  "existing_verified_BioGRID_fits": 9,
+  "canonical_BioGRID_rows": 9,
+  "total_comparator_metric_rows": 33,
+  "source_matched_training_module_sha_matches_frozen_execution": true,
+  "frozen_execution_module_sha256": "020c71b5d97b1fe00a23a4d3e074615cb5798884a4130fdaa7925d8f1eff7edd",
+  "BioGRID_training_and_comparator_protocol_identical": true,
+  "same_hidden_architecture_not_equal_input_parameters": true,
+  "all_canonical_seed_sets": {
+    "original/BioGRID_FPP": [
+      42,
+      43,
+      44
+    ],
+    "original/full_FPP": [
+      42,
+      43,
+      44
+    ],
+    "original/raw_ESM": [
+      42,
+      43,
+      44
+    ],
+    "original_fusion/scores_capacity_matched": [
+      42,
+      43,
+      44
+    ],
+    "original_fusion/scores_plus_BioGRID_FPP": [
+      42,
+      43,
+      44
+    ],
+    "original_fusion/scores_plus_full_FPP": [
+      42,
+      43,
+      44
+    ],
+    "original_fusion/scores_plus_raw_ESM": [
+      42,
+      43,
+      44
+    ],
+    "homology/scores_capacity_matched": [
+      42,
+      43,
+      44
+    ],
+    "homology/scores_plus_BioGRID_FPP": [
+      42,
+      43,
+      44
+    ],
+    "homology/scores_plus_full_FPP": [
+      42,
+      43,
+      44
+    ],
+    "homology/scores_plus_raw_ESM": [
+      42,
+      43,
+      44
+    ]
+  },
+  "parent_verification_status": true,
+  "original_checkpoint_reproduction_count": 6,
+  "no_homology_BioGRID_representation_only_fit_claim": true,
+  "no_November_unification_results_used": true,
+  "all_result_rows_are_original_benchmark_only": true,
+  "mean_sd_ensemble_difference_kept_separate": true,
+  "source_number_extraction_only": true
+}

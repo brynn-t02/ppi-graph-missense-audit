@@ -1,0 +1,94 @@
+原稿＋BioGRID候选稿：本轮局部图文修正说明
+2026年11月8日
+
+一、本版的基础与范围
+
+本轮从“原稿＋BioGRID”8页候选稿继续修改，未回到v8或其他统一实验候选稿。上一版完整保留，本版另存独立目录。
+按照本轮确认的清单，仅修正图内措辞、Figure 4无效显著性编码，以及对应正文、图注和补充说明。原始实验数据、计数、指标、标准差、置信区间、拓扑分组及Hedges' g均未重新计算或替换。
+研究范围仍为原稿证据加已有BioGRID第二网络验证；没有加入HUMSAVAR，也没有纳入后来统一补训练的数据。没有训练、推理、bootstrap、服务器访问或网盘下载。
+
+二、Figure 1：三处图内文字
+
+1. 总标题
+修改前：PPI graph augmentation depends on topology alignment and train-test connectivity
+修改后：Fixed PPI propagation under connectivity and topology controls
+作用：直接交代控制分析的内容，不把不同算子和训练设置下的结果写成确定的因果依赖。
+
+2. D面板内部
+修改前：AUC gain removed
+修改后：AUC point estimate near raw ESM
+作用：说明观察到的点估计接近，不宣称效应已经消失或模型等效。为了容纳文字，在原标注区域内分为两行；字号保持原值。
+
+3. F面板内部
+修改前：returns to ESM level
+修改后：Point estimates near raw ESM
+作用：同样限定为点估计描述。在原标注区域内分为两行，未改柱高、坐标、误差线或数据。
+
+三、Figure 3：三处标题和相关说明
+
+1. 总标题
+修改前：PPI-GCN gains concentrate in specific network topology contexts
+修改后：Exploratory PPI-GCN performance across topology contexts
+
+2. C面板标题
+修改前：Bridge role and local density shape gain
+修改后：Performance differences across betweenness and clustering strata
+保持原9pt字号，只在原标题空白带内排成两行；面板、坐标轴和数据没有移动。
+
+3. D面板标题
+修改前：Neighbour-risk strata show local-context dependence
+修改后：Performance differences across neighbour-risk strata
+
+4. 图注
+删除“Panel titles describe associations, not established mechanisms.”，不再要求读者忽略图内标题。
+将含糊的“exclude protein dependence, subgroup selection and multiplicity”改为：
+The within-cell variant-bootstrap intervals do not account for within-protein dependence or post-hoc subgroup selection and are not adjusted for multiple comparisons.
+明确这些区间没有考虑蛋白内依赖、事后选组，也没有进行多重比较调整。固定参考模型对、53个联合单元、原置信区间均保留。
+
+5. 补充Table 5说明
+删除关于“图内较强措辞不能理解成已确认机制”的过程性提醒，保留探索性关联和需要独立验证的实质限制。
+
+四、Figure 4：修正含义，不替换实验
+
+1. E面板标题改为：Directions of mean differences between corrected groups。
+2. E面板18个圆点采用统一大小和统一不透明度，不再用大小或透明程度表示显著性。各点位置和蓝/橙颜色方向保持不变，表示哪一组特征均值更高。
+3. F面板标题由“Difficulty-matched contrasts retain topology differences”改为“Rescued versus persistent false-negative profiles”。这里是在raw-ESM基线假阴性内比较被纠正和持续错误的样本，没有进行连续预测难度匹配。
+4. 删除F面板7个显著性星号。全部Hedges' g柱长、方向、颜色和坐标保留。
+5. A–D面板没有改动；纠正、退化和各类转移人数仍为本版采用的原稿实验结果，未换成其他候选版人数。
+
+同步文字：
+（1）III.D末句改为：We interpret these feature contrasts descriptively because variants mapped to the same protein share network features.
+（2）Figure 4图注准确写明F比较的是raw-ESM基线假阴性内的rescued与persistent两组，保留蓝/橙效应量方向解释，并明确不作推断性显著性声明。
+（3）补充材料改为直接说明E使用统一圆点、F不显示显著性标记，删除“图中仍有这些编码但不能使用”的旧说明。
+（4）III.D把笼统的“Similar profile shifts appeared...”改得更具体：融合比较中的degree和neighbour-risk方向相同，但clustering-coefficient方向反转。补充表原值为Raw比较FP 0.2534 > FN 0.2022，融合比较FP 0.1807 < FN 0.2176；本轮只修正解读，没有改这些值或图中颜色。
+
+五、Figure 2：只改图注，图文件完全不变
+
+1. E面板说明：score-only和raw-ESM融合柱是三次拟合的均值，graph fusion柱是一次拟合的估计；重复拟合的标准差在Supplementary Table 3B报告。
+核对后确认原E面板没有绘出误差线，因此不再让图注暗示图中显示了SD。
+
+2. C面板说明：差值由集成平均概率计算，配对蛋白bootstrap的95%区间以已拟合模型和所采样图为条件；这些点估计不必等于B面板均值指标相减。
+没有变动Figure 2任何图形、数值或区间。
+
+六、BioGRID及两处可选小调整
+
+1. Supplementary Table 9说明改为直接陈述其自身匹配对照、三次拟合均值/sample SD和集成概率差值。特别写明“Entries in Table 9A”，避免将9A的统计定义误套到9B。
+保留Methods 5对配置的说明，全部Table 9A/9B数据和主文Table II不变。原稿Tables 2–4与网络验证Table 9仍是不同统计对象，不跨表相减或混用。
+
+2. 摘要只替换一处句子：
+修改前：Topology groups and error transitions showed exploratory associations rather than established correction mechanisms.
+修改后：Exploratory analyses described variation across topology groups and prediction-error transitions.
+
+3. Introduction贡献中的“exploratory”改为修饰分析：
+修改前：Third, it relates graph-associated gains and prediction changes to exploratory topology contexts and error transitions.
+修改后：Third, it relates graph-associated gains and prediction changes to topology contexts and error transitions through exploratory analyses.
+没有整体改写摘要、引言、讨论或论文结构。
+
+七、保持不变和验证方式
+
+主文与补充源文件共11处定点文字替换；完整前后句子见reproducibility/text_before_after.json和两个diff文件。图内另有Figure 1三处、Figure 3三处、Figure 4两处标题/标注修改，以及E圆点统一、F星号删除。
+所有主文和补充材料表格行、科学小数值、参考文献条目和实验记录保持不变。正文两组错误转移人数仍分别为纠正1,436/退化944、纠正666/退化275。
+Figure 2图文件校验值完全一致。Figure 1、3、4均采用矢量局部修改；在300dpi渲染下，允许修改的文字、圆点、星号区域之外无像素变化。Figure 4 A–D及F柱体/坐标未变化。
+主文仍为8页（含参考文献），补充材料12页。已检查字体嵌入和页面显示；图中文字原本偏小的问题未借本轮进行整体重设计。
+本版和上一版均独立保留，GitHub按新的日期目录归档，不覆盖原稿和其他实验版本。
+本版仍是候选稿，尚未重新通过PDF eXpress认证，也没有提交到会议系统。

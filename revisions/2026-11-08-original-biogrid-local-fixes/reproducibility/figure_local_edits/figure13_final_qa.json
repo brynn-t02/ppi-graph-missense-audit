@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "figures": [
+    {
+      "figure": "Figure1_connectivity_topology_controls_v2_accepted",
+      "output": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_original_BioGRID_local_fixes_20261108/source/figure_drafts/Figure1_connectivity_topology_controls_v2_accepted.pdf",
+      "sha256": "2a3027f243932505c58e26024eea40695591ba903a6d42f4d28707ab6b3c045d",
+      "outside_allowed_regions_changed_pixels": 0,
+      "audit": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_BioGRID_local_fixes_20261108/figure13/Figure1_connectivity_topology_controls_v2_accepted.audit.json"
+    },
+    {
+      "figure": "Figure3_topology_context_v1_accepted",
+      "output": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_original_BioGRID_local_fixes_20261108/source/figure_drafts/Figure3_topology_context_v1_accepted.pdf",
+      "sha256": "c309c36446d8b98b9de64b97b963ad5897656c91a0d0169ef210ff0d3c320e4f",
+      "outside_allowed_regions_changed_pixels": 0,
+      "audit": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/original_BioGRID_local_fixes_20261108/figure13/Figure3_topology_context_v1_accepted.audit.json"
+    }
+  ],
+  "figure3C_wrapped_at_original_9pt": true,
+  "research_data_changed": false,
+  "only_six_requested_text_edits": true
+}

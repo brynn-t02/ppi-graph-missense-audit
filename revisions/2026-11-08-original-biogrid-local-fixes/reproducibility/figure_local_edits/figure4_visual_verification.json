@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "output_sha256": "5a000bfb4a7ab34a3cf00d4136c36ad237c9e096011797caa21737f5838d70ea",
+  "render": "after_300.png",
+  "dpi": 300,
+  "all_six_panels_visually_inspected": true,
+  "new_titles_complete_no_missing_glyphs": true,
+  "title_positions_preserved": true,
+  "no_title_collision_or_cutoff": true,
+  "E_dots_uniform_and_original_direction_colors_preserved": true,
+  "F_significance_stars_absent": true,
+  "A_D_and_F_bars_pixel_identical": true,
+  "all_fonts_embedded": true,
+  "no_data_or_statistics_changed": true,
+  "only_target_output_figure_modified": true
+}
