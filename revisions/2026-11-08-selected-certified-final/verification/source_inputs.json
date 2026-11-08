@@ -1,0 +1,14 @@
+{
+  "baseline": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_original_BioGRID_date_restored_20261108/source",
+  "copied_inputs": [
+    "main.tex",
+    "IEEEtran.cls",
+    "figure_drafts/Figure1_connectivity_topology_controls_v2_accepted.pdf",
+    "figure_drafts/Figure2_fusion_homology_v1_accepted.pdf",
+    "figure_drafts/Figure3_topology_context_v1_accepted.pdf",
+    "figure_drafts/Figure4_prediction_transitions_v2_accepted.pdf"
+  ],
+  "missing_inputs": [],
+  "bib_is_inline": true,
+  "source_files_unchanged": true
+}

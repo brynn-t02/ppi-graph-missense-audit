@@ -1,0 +1,222 @@
+{
+  "selected_certified": {
+    "path": "/Users/teyian/Downloads/2026424437.pdf",
+    "sha256": "4bb4c6d409a3c9ffa04610fd0cd7b1d68d0434f812fdf1557caaeff6a24b2831",
+    "pages": 8,
+    "page_sizes": [
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ]
+    ],
+    "metadata": {
+      "/Creator": "Certified by IEEE PDFExpress at November 8, 2026 13:16:32",
+      "/ModDate": "D:20261108131632Z",
+      "/Producer": "xdvipdfmx (0.1)",
+      "/CreationDate": "D:20261108105719Z",
+      "/Author": "Yuxin Tian, Xianguo Zhang, Weibo Meng, Jieqi Yin, Yongqin Jin"
+    }
+  },
+  "clean_build": {
+    "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/camera_ready_selected_20261108/clean_build/main.pdf",
+    "sha256": "2f408190b66dbaff18d0a8cba0cd705723ee9cdca95b4015346d9830796079c9",
+    "pages": 8,
+    "page_sizes": [
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ]
+    ],
+    "metadata": {
+      "/Creator": "LaTeX with hyperref",
+      "/Author": "Yuxin Tian, Xianguo Zhang, Weibo Meng, Jieqi Yin, Yongqin Jin",
+      "/Producer": "xdvipdfmx (0.1)",
+      "/CreationDate": "D:20261108143841-00'00'"
+    }
+  },
+  "text_exact_per_page": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "text_whitespace_normalized_per_page": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "render_resolution_dpi": 300,
+  "render_comparison": [
+    {
+      "page": 1,
+      "dimensions": [
+        2550,
+        3300
+      ],
+      "equal_pixel_for_pixel": true,
+      "difference_bounding_box": null
+    },
+    {
+      "page": 2,
+      "dimensions": [
+        2550,
+        3300
+      ],
+      "equal_pixel_for_pixel": true,
+      "difference_bounding_box": null
+    },
+    {
+      "page": 3,
+      "dimensions": [
+        2550,
+        3300
+      ],
+      "equal_pixel_for_pixel": true,
+      "difference_bounding_box": null
+    },
+    {
+      "page": 4,
+      "dimensions": [
+        2550,
+        3300
+      ],
+      "equal_pixel_for_pixel": true,
+      "difference_bounding_box": null
+    },
+    {
+      "page": 5,
+      "dimensions": [
+        2550,
+        3300
+      ],
+      "equal_pixel_for_pixel": true,
+      "difference_bounding_box": null
+    },
+    {
+      "page": 6,
+      "dimensions": [
+        2550,
+        3300
+      ],
+      "equal_pixel_for_pixel": true,
+      "difference_bounding_box": null
+    },
+    {
+      "page": 7,
+      "dimensions": [
+        2550,
+        3300
+      ],
+      "equal_pixel_for_pixel": true,
+      "difference_bounding_box": null
+    },
+    {
+      "page": 8,
+      "dimensions": [
+        2550,
+        3300
+      ],
+      "equal_pixel_for_pixel": true,
+      "difference_bounding_box": null
+    }
+  ],
+  "status": "PASS",
+  "conclusion": "Clean source-package build exactly reproduces selected certified paper text and all8page raster appearances at300dpi. The clean build itself is not PDF eXpress certified; submit the unchanged user-supplied certified PDF."
+}

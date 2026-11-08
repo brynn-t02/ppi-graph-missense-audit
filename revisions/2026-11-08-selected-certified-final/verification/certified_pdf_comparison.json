@@ -1,0 +1,223 @@
+{
+  "selected": {
+    "path": "/Users/teyian/Downloads/2026424437.pdf",
+    "sha256": "4bb4c6d409a3c9ffa04610fd0cd7b1d68d0434f812fdf1557caaeff6a24b2831",
+    "pages": 8,
+    "metadata": {
+      "/Creator": "Certified by IEEE PDFExpress at November 8, 2026 13:16:32",
+      "/ModDate": "D:20261108131632Z",
+      "/Producer": "xdvipdfmx (0.1)",
+      "/CreationDate": "D:20261108105719Z",
+      "/Author": "Yuxin Tian, Xianguo Zhang, Weibo Meng, Jieqi Yin, Yongqin Jin"
+    },
+    "page_sizes": [
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ]
+    ]
+  },
+  "baseline": {
+    "path": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_original_BioGRID_date_restored_20261108/BIBM2026_workshop_original_plus_BioGRID_date_restored.pdf",
+    "sha256": "aa2454e77984c13c1708dec40caca8f54e41df6db61c0253b075e22d752330ef",
+    "pages": 8,
+    "metadata": {
+      "/Creator": "LaTeX with hyperref",
+      "/Author": "Yuxin Tian, Xianguo Zhang, Weibo Meng, Jieqi Yin, Yongqin Jin",
+      "/Producer": "xdvipdfmx (0.1)",
+      "/CreationDate": "D:20261108105719-00'00'"
+    },
+    "page_sizes": [
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ]
+    ]
+  },
+  "text_exact_per_page": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "text_whitespace_normalized_per_page": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "certification_source": "PDF metadata and user report; no independent PDF eXpress server query",
+  "render_resolution_dpi": 110,
+  "render_comparison": [
+    {
+      "page": 1,
+      "dimensions": [
+        935,
+        1210
+      ],
+      "equal_pixel_for_pixel": true,
+      "difference_bounding_box": null
+    },
+    {
+      "page": 2,
+      "dimensions": [
+        935,
+        1210
+      ],
+      "equal_pixel_for_pixel": true,
+      "difference_bounding_box": null
+    },
+    {
+      "page": 3,
+      "dimensions": [
+        935,
+        1210
+      ],
+      "equal_pixel_for_pixel": true,
+      "difference_bounding_box": null
+    },
+    {
+      "page": 4,
+      "dimensions": [
+        935,
+        1210
+      ],
+      "equal_pixel_for_pixel": true,
+      "difference_bounding_box": null
+    },
+    {
+      "page": 5,
+      "dimensions": [
+        935,
+        1210
+      ],
+      "equal_pixel_for_pixel": true,
+      "difference_bounding_box": null
+    },
+    {
+      "page": 6,
+      "dimensions": [
+        935,
+        1210
+      ],
+      "equal_pixel_for_pixel": true,
+      "difference_bounding_box": null
+    },
+    {
+      "page": 7,
+      "dimensions": [
+        935,
+        1210
+      ],
+      "equal_pixel_for_pixel": true,
+      "difference_bounding_box": null
+    },
+    {
+      "page": 8,
+      "dimensions": [
+        935,
+        1210
+      ],
+      "equal_pixel_for_pixel": true,
+      "difference_bounding_box": null
+    }
+  ],
+  "status": "PASS",
+  "conclusion": "Selected certified PDF matches the selected pre-typography date-restored baseline on all text and all 8 page renderings. Certification string is observed in PDF Info and XMP; PDF eXpress server was not queried."
+}

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "selected_main_sha256": "4bb4c6d409a3c9ffa04610fd0cd7b1d68d0434f812fdf1557caaeff6a24b2831",
+  "main_pages": 8,
+  "required_inputs": 6,
+  "source_archive_files": 9,
+  "source_tar_gz_sha256": "8bbbb6b8b66ec5bb08a4c62bc33b7c80f950f3805f84fec2568878af7eb48234",
+  "source_zip_sha256": "694e6e0a3b971b643255353c571abc83f98c94c47bafc9920971595503d2afb3",
+  "tar_gz_bytes": 238770,
+  "zip_bytes": 239478,
+  "archive_contents_identical": true,
+  "clean_build_pixel_identical_300dpi": true,
+  "original_scientific_content_unchanged": true,
+  "font_revision_excluded": true,
+  "certified_pdf_unchanged": true,
+  "conference_submission_performed": false
+}
