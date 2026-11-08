@@ -1,0 +1,15 @@
+{
+  "num_nodes": 19622,
+  "num_original_edges": 13715404,
+  "num_train_test_edge_entries": 1242422,
+  "num_unique_train_test_pairs": 621211,
+  "fraction_train_test_edge_entries": 0.09058588430935027,
+  "num_unique_train_nodes": 11298,
+  "num_unique_test_nodes": 1413,
+  "pair_entry_count_min": 2,
+  "pair_entry_count_median": 2.0,
+  "pair_entry_count_max": 2,
+  "ordered_pairs_sha256": "5f486a9e6adacd7077a1f24be321dfe9bbfb2508618b021f066744a8e426b4bf",
+  "full_ablation_matches_matched_boolean_definition": true,
+  "removed_entry_index_sha256": "d92967893bc4002d804a769e0c9d672cffd88b9eea93340b3f5ab1a1f9329779"
+}

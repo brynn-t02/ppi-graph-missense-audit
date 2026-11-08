@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "pdf": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_v6_figure3_20261108/BIBM2026_supplementary_targeted_candidate_v6_figure3.pdf",
+  "pdf_sha256": "15be0ee739f842d71ef61fdcbce1a05d8d5c39345c53909496144f80aca08ec8",
+  "pages": 19,
+  "visual_review": {
+    "all19_pages_contact_sheets_reviewed": true,
+    "full_resolution_focus_pages": [
+      7,
+      8,
+      9,
+      10,
+      12
+    ],
+    "no_clipping_or_overlaps_seen": true,
+    "no_orphan_Table5_Table6_Table10_headings_seen": true,
+    "Table6_feature_table_continuation_page9_to10": "One last row continues under a repeated header; content complete and legible",
+    "Tables16_17_general_introductions": "Overview title and explanatory paragraph stay together before detailed subsection tables; no empty orphan heading"
+  },
+  "rendered_Table5_strata_rows_verified": 18,
+  "rendered_Table5_selected_rows_and_intervals_verified": 4,
+  "rendered_protein_bootstrap_and_sparse_cell_notes_present": true,
+  "rendered_Table6_full_normalized_text_identical_to_v5": true,
+  "rendered_Table10_full_normalized_text_identical_to_v5": true,
+  "rendered_366_1089_and_feature_specific_1087_confirmed": true,
+  "analysis30files_manifest_unchanged": true,
+  "no_source_or_analysis_edits": true
+}

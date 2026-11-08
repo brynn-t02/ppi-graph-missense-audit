@@ -1,0 +1,119 @@
+{
+  "protocol_id": "remaining_unification_20261108_v1",
+  "authorization": "User authorizes new rental server Figure1E/Figure2D completion regardless of results. No ESM reextraction or homology reclustering.",
+  "root_environment_variable": "PPI_UNIFICATION_ROOT",
+  "default_root": "/root/autodl-tmp/ppi_unification_20261108",
+  "environment": {
+    "python": "3.10.8",
+    "torch": "2.1.2+cu118",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "torch_threads": 4,
+    "cuda_matmul_tf32": false,
+    "cudnn_tf32": true
+  },
+  "classifier": {
+    "hidden_units": [
+      512,
+      128
+    ],
+    "dropout": 0.3,
+    "classifier_seeds": [
+      42,
+      43,
+      44
+    ],
+    "max_epochs": 50,
+    "early_stopping_patience": 5,
+    "selection": "maximum validation AUC with strictly greater update; test never selects",
+    "batch_size": 1024,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "weight_decay": 1e-05,
+    "loss": "BCEWithLogitsLoss; pos_weight=train_negatives/train_positives",
+    "shuffle": "CPU row-index DataLoader, zero workers; seed reset separately for every fit"
+  },
+  "propagation": {
+    "operator": "A=(E+I)+(E+I)^T; coalesced duplicate edge weights; S=D^-1/2 A D^-1/2; FPP=(X+SX+S^2X)/3",
+    "full_features": "Frozen full FPP retained; recomputed16column numerical gate against common operator",
+    "all_graph_controls": "Same full operator including two self-loop contributions; normalize every intervention graph separately"
+  },
+  "partial_ablation": {
+    "strategies": [
+      "random_pair_removal",
+      "high_confidence_first",
+      "low_confidence_first"
+    ],
+    "fractions": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ],
+    "unit": "unique undirected train-test protein pair; all corresponding edge entries removed",
+    "pairs_total": 621211,
+    "edge_entries_total": 1242422,
+    "interior_selected_pairs": [
+      155303,
+      310606,
+      465908
+    ],
+    "pair_order": "first encounter in original edge_index, exactly the original script",
+    "random_graph_seed": "42 + int(fraction*1000):292,542,792",
+    "random_selection": "numpy default_rng.choice without replacement, independently specified mask per fraction (not nested)",
+    "score_order": "Original np.argsort default quicksort; descending reversal high confidence, ascending low confidence, original pair order defines ties; NumPy1.26.4 frozen",
+    "graphs_per_strategy_fraction": 1,
+    "labels_used_for_edge_selection": false,
+    "endpoint_definition": "0fraction full graph and1fraction all direct original train-test pairs; shared across strategies"
+  },
+  "training_count": {
+    "original_endpoint_reproduction": 6,
+    "homology_pure_representation": 6,
+    "original_partial_interiors": 27,
+    "total": 39,
+    "distinct_curve_configurations": 11,
+    "displayed_curve_points": 15,
+    "note": "Six endpoint fits both reproduce existing matched runs and serve common endpoints. They are not additional graph realizations. Three-seed sample SD does not estimate graph-mask variability."
+  },
+  "gates": [
+    "SHA256 every existing input before loading",
+    "actual19622node order matches canonical",
+    "177213 stable IDs labels original/homology assignments and homology cluster membership equal frozen manifest",
+    "protein disjoint split and cluster disjoint homology split",
+    "original test18220variants1413proteins5822positives",
+    "full16column tolerance rtol2e-4 atol2e-5",
+    "all-pair ablation exactly equals matchedBooleanedge mask",
+    "all621211 pair scores present from real STRING file",
+    "six endpoints reproduce selectedepochs and oldGPUmetrics tolerance1e-10, savedprobabilities tolerance2e-6 and canonicalmetrics tolerance1e-10",
+    "halt on failed gate; no post hoc relaxations"
+  ],
+  "canonical_reporting": {
+    "inference": "CPUfloat32;4threads; fixedactualnodeindex order;1024nodesperbatch; evalmode; oneprobability perprotein percheckpoint",
+    "max_abs_difference_from_saved_GPU_variant_batches": 2e-06,
+    "ensemble": "Cast each seed probability to float64 before taking three-seed mean",
+    "AUPRC": "noninterpolated averageprecision",
+    "mean_SD": "mean of three individual canonical metrics; sample SD ddof1; not metrics of ensemble",
+    "homology_bootstrap": {
+      "repeats": 2000,
+      "seed": 20261024,
+      "unit": "paired STRINGprotein cluster sample with replacement, allwithinprotein variants and multiplicities retained",
+      "point": "observed ensemble metricdifference fullFPPminusrawESM",
+      "interval": "percentile2.5,97.5",
+      "conditional_on": [
+        "fittedmodels",
+        "frozengraph"
+      ],
+      "excludes": [
+        "retraininguncertainty",
+        "graphsamplinguncertainty",
+        "multiplicitycorrection"
+      ],
+      "singleclass_draws": "retain asundefined,exclude only for interval; never redraw"
+    }
+  },
+  "storage": "Only pre-existing local input uploads; all new checkpoint/tensor/graph-mask files remain newserver. Download compact code/results/predictions only per root policy. Original assets preserved.",
+  "manuscript_scope": "Update Fig1E/Fig2D and directly dependent text/captions/tables only; Figure3 exact requested title/caption changes separately. No new scientific scope."
+}

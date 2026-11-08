@@ -1,0 +1,111 @@
+{
+  "date": "2026-11-08",
+  "scope": "Independent read-only source and asset review; no remote access and no training",
+  "matched_training_source": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/experiment_20261024/code/run_matched_experiments.py",
+  "matched_source_sha256": "020c71b5d97b1fe00a23a4d3e074615cb5798884a4130fdaa7925d8f1eff7edd",
+  "pair_selection_source": "/Users/teyian/Documents/paper1/server_snapshot_full/root/44_esm_gcn_partial_edge_ablation_curve.py",
+  "pair_source_sha256": "9bea21614add2e870f47be9d91d6b07610e7a17392f515e7a4685f66c479cc4b",
+  "matched_function_AST_identity": {
+    "dump": true,
+    "load": true,
+    "emb": true,
+    "sha": true,
+    "metrics": true,
+    "MLP": true,
+    "seed": true,
+    "propagate": true,
+    "features": true,
+    "evaluate": true,
+    "fit": true
+  },
+  "pair_function_AST_identity": {
+    "identify_train_test_pairs_and_entries": true,
+    "load_string_scores_for_pairs": true,
+    "select_pairs_for_removal": true,
+    "make_pair_level_ablated_edge_index": true
+  },
+  "old_pair_rules": {
+    "pair_identity": "unique unordered node-index pair",
+    "pair_order": "first appearance while iterating original edge entries, insertion order retained",
+    "all_directions_removed": true,
+    "random_graph_seeds": {
+      "0.25": 292,
+      "0.50": 542,
+      "0.75": 792
+    },
+    "n_removed": "int(round(fraction * 621211))",
+    "selected_pair_counts": {
+      "0.25": 155303,
+      "0.5": 310606,
+      "0.75": 465908
+    },
+    "score_ties": "np.argsort default quicksort; descending reverses full ascending order; preserve NumPy1.26.4 and pair ordering",
+    "graphs_per_strategy_fraction": 1,
+    "random_graph_masks_are_nested": false,
+    "score_coverage_expected": {
+      "pairs": 621211,
+      "present": 621211,
+      "missing": 0,
+      "min": 150,
+      "median": 208,
+      "max": 999
+    }
+  },
+  "matched_protocol": {
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "max_epochs": 50,
+    "patience": 5,
+    "selection": "strict validation AUC improvement, no test-guided selection",
+    "hidden": [
+      512,
+      128
+    ],
+    "dropout": 0.3,
+    "batch": 1024,
+    "Adam_lr": 0.001,
+    "weight_decay": 1e-05,
+    "loss": "training-negative/positive weighted BCE",
+    "feature_scaling": "none",
+    "operator": "(edge+I)+(edge+I)^T, duplicate weights summed, symmetric normalized S, (X+SX+S^2X)/3",
+    "loops_contribution": 2,
+    "feature_precision": "float32, same frozen raw ESM",
+    "canonical_predictions": "each saved model scored once per node on CPU,1024node batches; map by canonical node IDs; seed probabilities promoted to float64 before mean",
+    "AUPRC": "non-interpolated average precision",
+    "errorbars": "sample SD(ddof=1) across classifier fits; not graph-sampling uncertainty"
+  },
+  "bounded_plan": {
+    "original_full_endpoint": 3,
+    "original_fully_ablated_endpoint": 3,
+    "homology_raw": 3,
+    "homology_full": 3,
+    "interior_partial": 27,
+    "total_new_fits": 39,
+    "judgment": "Conservative protocol completion. Six endpoint reproductions both validate restoration and avoid mixing unidentified reused endpoints. Does not change the scientific question, masks or train/test assignment."
+  },
+  "required_gates": [
+    "SHA256 all10coreinputs and compact identity/prediction references before/aftertransfer",
+    "x[19622,1280],edge[2,13715404],finite x; protein_to_idx/inverse equals frozen_node_order",
+    "stable VariationID,label,protein identity and split membership exact vs frozen177213manifest; original CSV order equal tensor arrays",
+    "protein split disjointness,homology cluster disjointness; rejectduplicate or missing IDs",
+    "original18220test/1413proteins/5822positive; homology identity and sample count from frozenmanifest",
+    "full propagation all1280columns or recorded16columns agree frozen FPP within recorded tolerance; derived masks count621211pairs/1242422entries and bothdirections gone",
+    "pair scores coverall621211; mask integrity and perstrategy perfrac hash stored beforetraining",
+    "runtime Python3.10.8 torch2.1.2+cu118 NumPy1.26.4 and remaining scientificpins; record TF32 andGPU",
+    "originalfull/ablated rerun endpoints compare selectedepoch,validation,test GPU metrics/predictions to six priorrecords; investigate mismatchbeforeinteriors",
+    "nodewise CPU inference consistency and ensemblefloat64; do not mix oldGPU variantprobswithnewcanonical nodeprobs",
+    "reported perseedmetrics mean/sampleSD independentlychecked from canonicalpredicts; sameprotein exactlysamep",
+    "fit39count,allseedsets,finitecheckpointshape,historyselectedepoch,independentAUC/APchecks,noresults-dependent reruns"
+  ],
+  "limitations_to_preserve": [
+    "different fractions have independently frozen random masks and are not a nested removal trajectory",
+    "one graph realization per partial strategy/fraction; three repetitions measure classifier seed variation, not random-graph sampling uncertainty",
+    "edge deletion changes both direct connections and normalization; not an isolated biological causal effect",
+    "homology experiment still frozen allnode graph transductive; no retraining of propagation or ESM",
+    "protocol unification does not require equal selectedepochs: maxbudget and earlystopping rule equal; bestepoch naturally differs"
+  ],
+  "metadata_issue": "At initial review source_provenance.json matched_functions_source incorrectly names a val_probs.npy path; author notified to correct before freezing."
+}

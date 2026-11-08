@@ -1,0 +1,64 @@
+{
+  "source": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_v6_figure3_20261108/source/figure_drafts/Figure2_fusion_homology_v1_accepted.pdf",
+  "source_sha256": "2eb2b750e1963cbb745c1d5fd9647d3845318ff3ab9a1b639182387a12c370e7",
+  "output": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/remaining_unification_20261108/figures/Figure2_fusion_homology_v1_accepted.pdf",
+  "output_sha256": "7eb2d9fc1e1105a81c6d30fb97c360fd4c55b1e902f2a5e84bf6335e2f3f45d3",
+  "input": "work/remaining_unification_20261108/results/outputs/figure2D_summary.csv",
+  "input_sha256": "74c63ed0d2bb5a7c962b262fc54af8565e760a211b6a93b9c2c5939c3df75106",
+  "canvas_pt": [
+    1037.43313,
+    557.38875
+  ],
+  "pixel_comparison_dpi": 300,
+  "changed_pixels": 15679,
+  "allowed_panel_region_pt": [
+    0,
+    0,
+    345,
+    237
+  ],
+  "outside_changed_pixels": 0,
+  "preserved_region_changed_pixels": {},
+  "all_other_panels_pixel_identical": true,
+  "all_fonts_embedded": true,
+  "panel": "D",
+  "axes_pt": [
+    39.653125,
+    34.66875,
+    288.2500206697,
+    174.0895522388
+  ],
+  "original_D_byte_range_removed": [
+    6427,
+    9882
+  ],
+  "mean_and_SD_source": "three classifiers per arm; sample SD ddof=1",
+  "y_limits_previous": [
+    0.18,
+    0.8
+  ],
+  "y_limits_new": [
+    0.18,
+    0.8
+  ],
+  "points": [
+    {
+      "arm": "raw_ESM",
+      "split": "homology",
+      "n_fits": 3,
+      "auc_mean": 0.7287633571460891,
+      "auc_sd": 0.003862428929252323,
+      "auprc_mean": 0.24639472691238495,
+      "auprc_sd": 0.004016374573546338
+    },
+    {
+      "arm": "full_FPP",
+      "split": "homology",
+      "n_fits": 3,
+      "auc_mean": 0.7570816167787817,
+      "auc_sd": 0.002244445706647599,
+      "auprc_mean": 0.2751480744329832,
+      "auprc_sd": 0.002230421724794534
+    }
+  ]
+}

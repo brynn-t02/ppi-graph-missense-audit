@@ -1,0 +1,69 @@
+stratum 1/18
+stratum 2/18
+stratum 3/18
+stratum 4/18
+stratum 5/18
+stratum 6/18
+stratum 7/18
+stratum 8/18
+stratum 9/18
+stratum 10/18
+stratum 11/18
+stratum 12/18
+stratum 13/18
+stratum 14/18
+stratum 15/18
+stratum 16/18
+stratum 17/18
+stratum 18/18
+joint 1/53
+joint 6/53
+joint 11/53
+joint 16/53
+joint 21/53
+joint 26/53
+joint 31/53
+joint 36/53
+joint 41/53
+joint 46/53
+joint 51/53
+{
+  "rows": 18220,
+  "proteins": 1413,
+  "positives": 5822,
+  "stable_ID_label_protein_alignment": true,
+  "canonical_three_seed_float64_mean_exact": true,
+  "per_protein_scores_constant": true,
+  "six_seed_metric_and_history_checks": 6,
+  "two_ensemble_metrics_match": true,
+  "canonical_metric_tolerance": 1e-12,
+  "original_53_cells_18_strata_and_four_selected_frozen": true,
+  "topology_features_reused_without_recomputation": true,
+  "new_bootstrap_runs": 71,
+  "bootstrap_repeats_each": 2000,
+  "bootstrap_unit": "protein",
+  "paired_model_weights": true,
+  "explicit_row_expansion_checks": 142,
+  "stopped_draft_bootstrap_reused": false,
+  "all_joint_point_estimates_finite": true,
+  "joint_auc_direction_flips": 8,
+  "joint_auprc_direction_flips": 6,
+  "strata_auc_direction_flips": 0,
+  "strata_auprc_direction_flips": 1,
+  "joint_one_class_replicates_total": 1048,
+  "strata_one_class_replicates_total": 0,
+  "joint_min_proteins": 16,
+  "joint_min_positive_carrying_proteins": 1,
+  "min_joint_finite_replicates": 1276,
+  "no_training_inference_features_graph_or_server": true,
+  "provenance_limit": "Actual stored predictions, run histories and prior checkpoint hashes checked; weights were not reaccessed and inference was not repeated.",
+  "python": "3.9.6",
+  "numpy": "2.0.2",
+  "pandas": "2.3.3",
+  "seconds": 16.789942026138306
+}
+display_id    n  proteins  delta_auc  delta_auprc  boot_delta_auc_ci_lower  boot_delta_auc_ci_upper
+        J0 1950       126   0.111522     0.120190                -0.001209                 0.178247
+        J1 2089       163   0.086104     0.083647                 0.006500                 0.144524
+        J2 1904       134   0.083224     0.068585                -0.017679                 0.151405
+        J3 4791        95  -0.048619    -0.042369                -0.202050                 0.031164

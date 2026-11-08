@@ -1,0 +1,33 @@
+--- v5/source/main.tex
++++ v6/source/main.tex
+@@ -103,7 +103,7 @@
+ Original-split fusion & 3 per arm; 3 graphs $\times$ 3 seeds for permutation & Architecture-matched fusion controls \\
+ Homology-aware representations & 1 per arm & Fixed reference comparison \\
+ Homology-aware fusion & 3 per arm & Matched training settings \\
+-Topology-context profiles (Fig. 3) & Fixed reference model pair & Descriptive post-hoc analyses \\
++Topology-context profiles (Fig. 3) & 3 frozen models per arm & Matched ensembles; protein bootstrap \\
+ Error-transition profiles (Fig. 4) & 3 frozen models per arm & Matched ensembles; threshold 0.5 \\
+ BioGRID validation & 9 total & Three settings, three fits each \\
+ External-source evaluation & 3 frozen models per arm & Inference without refitting \\
+@@ -145,16 +145,16 @@
+ 
+ \subsection{Exploratory graph gains across topology contexts}
+ 
+-ESM protein representations showed modest correspondence with PPI topology. Directly connected protein pairs had a mean cosine similarity of 0.8789, compared with 0.8639 for randomly paired proteins; within-community similarity also exceeded between-community similarity (Fig. 3A). Performance differences between fixed PPI-GCN propagation and raw ESM varied non-monotonically across network strata. For example, mid-k-core variants showed a $\Delta$AUC of +0.0775, whereas high-degree variants showed $-$0.0178 (Fig. 3B). Betweenness, clustering and neighbour-risk strata also exhibited heterogeneous performance differences (Fig. 3C,D).
+-
+-Among 53 joint topology cells examined on the same test set, we observed both positive and negative performance differences, including mid-k-core/high-betweenness ($\Delta$AUC +0.1429) and high-k-core/low-clustering ($\Delta$AUC $-$0.0532; Fig. 3E,F). Because the highlighted cells were selected after examining the test-set results and their intervals were computed using variant-level resampling, these estimates do not account for within-protein dependence or subgroup-selection uncertainty. We therefore interpret these patterns as exploratory findings that require independent validation.
++ESM protein representations showed modest correspondence with PPI topology. Directly connected protein pairs had a mean cosine similarity of 0.8789, compared with 0.8639 for randomly paired proteins; within-community similarity also exceeded between-community similarity (Fig. 3A). Performance differences between full FPP and raw ESM varied non-monotonically across network strata using three-seed ensemble probabilities. For example, mid-k-core variants showed a $\Delta$AUC of +0.0603, whereas high-degree variants showed $-$0.0216 (Fig. 3B). Betweenness, clustering and neighbour-risk strata also exhibited heterogeneous performance differences (Fig. 3C,D).
++
++Among 53 joint topology cells examined on the same test set, we observed both positive and negative performance differences, including mid-k-core/high-betweenness ($\Delta$AUC +0.1115) and high-k-core/low-clustering ($\Delta$AUC $-$0.0486; Fig. 3E,F). The four highlighted cells were selected using reference-model predictions on the same test set and fixed before the ensemble analysis. Paired protein-clustered 95\% intervals included zero in three of these four cells. The intervals account for repeated variants within proteins but condition on fitted models and the graph; they do not account for post-hoc subgroup selection or multiple comparisons. We therefore interpret these patterns as exploratory findings that require independent validation.
+ 
+ 
+ 
+ \begin{figure*}[!t]
+ \centering
+-\includegraphics[width=0.98\textwidth]{figure_drafts/Figure3_topology_context_v1_accepted_clarified.pdf}
+-\caption{Exploratory topology-context analysis of fixed protein-feature propagation. A, ESM similarity across protein-network relationships. B--D, Performance differences between fixed PPI-GCN propagation and raw ESM across degree, k-core, betweenness, clustering and neighbour-risk strata. E, Distribution of AUC differences across 53 joint topology cells. F, Selected positive and negative joint-cell profiles with variant-level bootstrap intervals. Panels B--F use a fixed reference model pair. The selected profiles are descriptive, and their intervals do not account for within-protein dependence or post-hoc subgroup selection.}
++\includegraphics[width=0.98\textwidth]{figure_drafts/Figure3_topology_context_matched_ensembles.pdf}
++\caption{Exploratory topology-context analysis of fixed protein-feature propagation. A, ESM similarity across protein-network relationships. B--D, Performance differences between full FPP and raw ESM across degree, k-core, betweenness, clustering and neighbour-risk strata. E, Distribution of AUC differences across 53 joint topology cells. F, Four preselected joint-cell profiles with paired protein-clustered 95\% bootstrap intervals (2,000 resamples). Panels B--F use mean probabilities across classifier seeds 42--44. The selected profiles are exploratory; intervals condition on fitted ensembles and the graph and do not account for post-hoc subgroup selection or multiple comparisons.}
+ \label{fig:topology_context}
+ \end{figure*}
+ 

@@ -1,0 +1,7 @@
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+BMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes      4  0
+BMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     11  0
+EVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes     18  0
+EVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes     25  0
+EVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes     34  0

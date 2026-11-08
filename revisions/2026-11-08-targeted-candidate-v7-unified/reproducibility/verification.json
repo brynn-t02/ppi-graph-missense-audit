@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "documents": [
+    {
+      "document": "BIBM2026_workshop_targeted_candidate_v7_unified.pdf",
+      "pages": 8,
+      "sha256": "e9cc92da9cd2ba888cf879a6b6de22d84f176c228acb7d914290482c9302c3a3",
+      "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nIHAIZV+NimbusRomNo9L-Regu            Type 1C           Custom           yes yes yes      4  0\nBZIVMZ+NimbusRomNo9L-MediItal        Type 1C           Custom           yes yes yes      5  0\nIXFAWU+NimbusRomNo9L-Medi            Type 1C           Custom           yes yes yes      6  0\nTQTHRL+NimbusRomNo9L-ReguItal        Type 1C           Custom           yes yes yes     19  0\nYEUUOC+CMMI10                        Type 1C           Builtin          yes yes yes     27  0\nAKHCZK+CMR10                         Type 1C           Builtin          yes yes yes     28  0\nVDVGTR+CMR7                          Type 1C           Builtin          yes yes yes     29  0\nCAFSZL+CMSY7                         Type 1C           Builtin          yes yes yes     30  0\nDDIEWW+CMR5                          Type 1C           Builtin          yes yes yes     31  0\nFKPJSN+CMEX10                        Type 1C           Builtin          yes yes yes     32  0\nPVTTLK+CMSY8                         Type 1C           Builtin          yes yes yes     44  0\nJAGKKY+CMSY10                        Type 1C           Builtin          yes yes yes     52  0\nEVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes     57  0\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     64  0\nEVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes     80  0\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     87  0\nEVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes    103  0\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    110  0\nEVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes    123  0\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    130  0\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    143  0\nEVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes    156  0\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    163  0\nEVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes    182  0\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    189  0\nEVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes    199  0\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    206  0\nEVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes    219  0\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    226  0\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    246  0\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    253  0\nEVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes    260  0\nEVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes    267  0\nEVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes    276  0\nEVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes    294  0\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    301  0\nEVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes    314  0\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    321  0\n",
+      "visual_review": "passed; all pages rendered and reviewed"
+    },
+    {
+      "document": "BIBM2026_supplementary_targeted_candidate_v7_unified.pdf",
+      "pages": 21,
+      "sha256": "e6aa722e664bfba057762c374d5de0c5da0d28d9250399de7c6b8ea68a9495b1",
+      "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nAAAAAA+DejaVuSerif                   TrueType          WinAnsi          yes yes yes     26  0\nAAAAAA+DejaVuSerif-Bold              TrueType          WinAnsi          yes yes yes     30  0\nAAAAAA+DejaVuSansMono                TrueType          WinAnsi          yes yes yes     34  0\n",
+      "visual_review": "passed; all pages rendered and reviewed"
+    }
+  ],
+  "main_blocks_changed": 11,
+  "supplement_blocks_changed": 21,
+  "all_29_pages_visually_reviewed": true,
+  "all_fonts_embedded": true,
+  "classifier_fits": 39,
+  "bootstrap_replicates": 4000,
+  "no_overfull_or_missing_glyphs": true,
+  "old_versions_preserved": true,
+  "new_eXpress_certification": false,
+  "conference_submitted": false
+}

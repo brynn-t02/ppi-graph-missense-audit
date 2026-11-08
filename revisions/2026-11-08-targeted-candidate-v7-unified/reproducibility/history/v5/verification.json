@@ -1,0 +1,256 @@
+{
+  "status": "passed",
+  "baseline": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_v4_figure4_20261108",
+  "text_edits": 7,
+  "layout_edits": 1,
+  "layout_reason": "Remove obsolete IEEEtriggeratref16 forced break; no content removed.",
+  "exact_reversal_reconstructs_v4": true,
+  "main_pages": 8,
+  "supplement_pages": 19,
+  "all_figure_assets_byte_identical": true,
+  "all_figure4_numeric_assets_byte_identical": true,
+  "protected_source_files": [
+    "source/Supplementary_Information_revised.md",
+    "source/IEEEtran.cls",
+    "source/figure_drafts/Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf",
+    "source/figure_drafts/Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.png",
+    "source/figure_drafts/Figure2_fusion_homology_v1_accepted.pdf",
+    "source/figure_drafts/Figure2_fusion_homology_v1_accepted.png",
+    "source/figure_drafts/Figure4_prediction_transitions_v2_accepted_minimal_clarified.pdf",
+    "source/figure_drafts/Figure4_prediction_transitions_matched_ensembles.pdf",
+    "source/figure_drafts/Figure4_prediction_transitions_matched_ensembles.png",
+    "source/figure_drafts/Figure3_topology_context_v1_accepted_clarified.pdf",
+    "source/figure_drafts/Figure5_external_validation.pdf",
+    "source/resources/fonts/DejaVuSans.ttf",
+    "source/resources/fonts/DejaVuSerif.ttf",
+    "source/resources/fonts/DejaVuSansMono.ttf",
+    "source/resources/fonts/DejaVuSans-Bold.ttf",
+    "source/resources/fonts/LICENSE_DEJAVU",
+    "source/resources/fonts/DejaVuSerif-Bold.ttf",
+    "source/resources/fonts/DejaVuSerif-Italic.ttf"
+  ],
+  "supplement_pdf_and_md_byte_identical": true,
+  "supplement_pdf_sha256": "1803c257ca172b65a9506b20e2bb3c460a92ab9fc1523e10b401d1abe14b53f7",
+  "main_pdf_sha256": "1a5732a38bf10ceb6f1042796a8a42a3c9ca3b95144bacb3cb55389387646662",
+  "all_fonts_embedded": true,
+  "fonts": [
+    {
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "font": "/BZIVMZ+NimbusRomNo9L-MediItal",
+      "embedded": true
+    },
+    {
+      "font": "/IXFAWU+NimbusRomNo9L-Medi",
+      "embedded": true
+    },
+    {
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "font": "/YEUUOC+CMMI10",
+      "embedded": true
+    },
+    {
+      "font": "/AKHCZK+CMR10",
+      "embedded": true
+    },
+    {
+      "font": "/VDVGTR+CMR7",
+      "embedded": true
+    },
+    {
+      "font": "/CAFSZL+CMSY7",
+      "embedded": true
+    },
+    {
+      "font": "/DDIEWW+CMR5",
+      "embedded": true
+    },
+    {
+      "font": "/FKPJSN+CMEX10",
+      "embedded": true
+    },
+    {
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "font": "/PVTTLK+CMSY8",
+      "embedded": true
+    },
+    {
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "font": "/AKHCZK+CMR10",
+      "embedded": true
+    },
+    {
+      "font": "/JAGKKY+CMSY10",
+      "embedded": true
+    },
+    {
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "font": "/AKHCZK+CMR10",
+      "embedded": true
+    },
+    {
+      "font": "/JAGKKY+CMSY10",
+      "embedded": true
+    },
+    {
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "font": "/AKHCZK+CMR10",
+      "embedded": true
+    },
+    {
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "font": "/AKHCZK+CMR10",
+      "embedded": true
+    },
+    {
+      "font": "/JAGKKY+CMSY10",
+      "embedded": true
+    },
+    {
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    },
+    {
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "font": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "font": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    },
+    {
+      "font": "/IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true
+    },
+    {
+      "font": "/TQTHRL+NimbusRomNo9L-ReguItal",
+      "embedded": true
+    }
+  ],
+  "new_training_statistics_threshold_selection": false,
+  "not_newly_certified_or_submitted": true,
+  "all_8_main_pages_visually_checked": true,
+  "supplement_relevant_full_pages_reviewed": [
+    8,
+    9,
+    10,
+    12
+  ],
+  "no_clipping_overlap_missing_glyphs": true
+}

@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "pdf": "outputs/BIBM_workshop_targeted_candidate_v7_unified_20261108/BIBM2026_supplementary_targeted_candidate_v7_unified.pdf",
+  "sha256": "e6aa722e664bfba057762c374d5de0c5da0d28d9250399de7c6b8ea68a9495b1",
+  "pages": 21,
+  "all_21_pages_visually_reviewed": true,
+  "visual_review_method": "Final PDF rendered by Poppler; all pages inspected in three contact sheets, with higher-resolution inspection of pages 11, 12, 15, 16 and 17.",
+  "focus_pages": [
+    11,
+    12,
+    15,
+    16,
+    17
+  ],
+  "all_font_resources_embedded": true,
+  "fonts": [
+    {
+      "name": "/AAAAAA+DejaVuSerif",
+      "embedded_files": {
+        "/FontFile2": 30796
+      }
+    },
+    {
+      "name": "/AAAAAA+DejaVuSerif-Bold",
+      "embedded_files": {
+        "/FontFile2": 28832
+      }
+    },
+    {
+      "name": "/AAAAAA+DejaVuSansMono",
+      "embedded_files": {
+        "/FontFile2": 25896
+      }
+    }
+  ],
+  "font_sizes_pt": {
+    "body": 9.0,
+    "table": 7.3,
+    "code": 7.4,
+    "footer": 7.2,
+    "headings": [
+      10.0,
+      12.0,
+      18.0
+    ]
+  },
+  "off_page_text": [],
+  "clipping_or_overlap_detected": false,
+  "table_8A_8B_layout_passed": true,
+  "table_11A_11B_layout_passed": true,
+  "table_12_split_header_repeated": true,
+  "table_11_and_12_numeric_rows_checked": 44,
+  "all_numeric_rows_match_source": true,
+  "updated_endpoint_provenance_visible_page16": true,
+  "all_footers_dated_8_November_2026": true,
+  "poppler_warning_output_empty": true,
+  "layout_edits_required": false,
+  "notes": [
+    "Table 8A and 8B remain on separate pages to keep the configuration tables readable.",
+    "Table 12 continues to page 17 with its header repeated; all numerical rows are present.",
+    "No source or PDF edits made during visual QA."
+  ]
+}

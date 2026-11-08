@@ -1,0 +1,46 @@
+[
+  {
+    "before": "Training settings for additional sensitivity analyses are specified in Table~\\ref{tab:run_sources} and Supplementary Table 8.",
+    "after": "Detailed experimental configurations are specified in Table~\\ref{tab:run_sources} and Supplementary Table 8."
+  },
+  {
+    "before": "We fitted 48 models under matched STRING protocols across representation-only comparisons, original-split fusion and homology-aware fusion.",
+    "after": "Matched STRING protocols covered representation-only comparisons, partial edge ablation, original-split fusion and homology-aware representations and fusion."
+  },
+  {
+    "before": "Partial edge-ablation sensitivity & 3 per strategy and interior fraction & Separate sensitivity protocol; endpoints reused",
+    "after": "Partial edge-ablation sensitivity & 3 per graph condition & Matched settings; shared endpoint fits"
+  },
+  {
+    "before": "Homology-aware representations & 1 per arm & Fixed reference comparison",
+    "after": "Homology-aware representations & 3 per arm & Matched training settings"
+  },
+  {
+    "before": "Matched STRING comparisons used three classifier seeds, a common propagation operator and a maximum of 50 training epochs. Partial edge-ablation sensitivity analyses used a separate 30-epoch protocol, with reused endpoints. Homology-aware representation profiles used single reference fits. Detailed configurations are provided in Supplementary Table 8.",
+    "after": "Matched STRING comparisons used classifier seeds 42--44, a common propagation operator and a maximum of 50 training epochs. Partial-ablation strategies share the full-graph and fully ablated endpoint fits. Detailed configurations are provided in Supplementary Table 8."
+  },
+  {
+    "before": "The STRING graph contained 1,242,422 direct train-test edge-index entries (9.06\\% of all entries), corresponding to 621,211 unique undirected protein pairs. To assess connectivity sensitivity, we removed these direct edges and evaluated the resulting representations using the matched training protocol. Full FPP achieved mean AUC 0.7950 and AUPRC 0.6485, compared with 0.7702 and 0.6077 for edge-ablated FPP (Fig.~\\ref{fig:connectivity}D; Supplementary Table 11). The paired ensemble AUC difference was +0.0248 (protein-clustered 95\\% CI [+0.0066, +0.0494]; Supplementary Table 12). A separate partial edge-ablation sensitivity analysis examined different removal fractions and strategies (Fig.~\\ref{fig:connectivity}E). This analysis used a separate training protocol and reused endpoint estimates, as detailed in Table~\\ref{tab:run_sources} and Supplementary Table 8. Edge removal also changes graph normalization and retains indirect cross-partition paths, so the observed differences cannot be attributed exclusively to direct connections.",
+    "after": "The STRING graph contained 1,242,422 direct train-test edge-index entries (9.06\\% of all entries), corresponding to 621,211 unique undirected protein pairs. To assess connectivity sensitivity, we removed these direct edges and evaluated the resulting representations using the matched training protocol. Full FPP achieved mean AUC 0.7950 and AUPRC 0.6485, compared with 0.7694 and 0.6035 for edge-ablated FPP (Fig.~\\ref{fig:connectivity}D; Supplementary Table 11). The paired ensemble AUC difference was +0.0264 (protein-clustered 95\\% CI [+0.0078, +0.0521]; Supplementary Table 12). Partial edge-ablation comparisons used the same propagation operator and classifier settings at each removal fraction, with common endpoint fits across strategies (Fig.~\\ref{fig:connectivity}E; Supplementary Tables 8 and 11B). Intermediate estimates varied across strategies and were not uniformly monotonic. Edge removal also changes graph normalization and retains indirect cross-partition paths, so the observed differences cannot be attributed exclusively to direct connections."
+  },
+  {
+    "before": "E, Partial train-test edge-ablation sensitivity analysis using a separate training protocol with reused endpoint estimates; implementation details are provided in Supplementary Table 8.",
+    "after": "E, Partial train-test edge ablation under matched settings. Curves show mean AUC differences from raw ESM; error bars denote sample standard deviation of model AUC across three classifier seeds, with one fixed graph per strategy/fraction and shared endpoint fits."
+  },
+  {
+    "before": "Under the homology-aware split, a separate single-fit representation comparison yielded AUC 0.7248 for raw ESM and 0.7606 for full FPP (Fig. 2D).",
+    "after": "Under the homology-aware split, three-seed mean AUC/AUPRC was 0.7288/0.2464 for raw ESM and 0.7571/0.2751 for full FPP (Fig. 2D; Supplementary Table 11). The ensemble AUC difference was +0.0288 (protein-clustered 95\\% CI [+0.0185, +0.0403]; Supplementary Table 12)."
+  },
+  {
+    "before": "D, Single-fit comparison of raw ESM and full FPP representations under the homology-aware split.",
+    "after": "D, Three-seed matched raw-ESM and full-FPP representation comparisons under the homology-aware split, with sample standard deviation."
+  },
+  {
+    "before": "B--D, Performance differences between full FPP and raw ESM across degree, k-core, betweenness, clustering and neighbour-risk strata.",
+    "after": "B--D, Ensemble performance differences (full FPP minus raw ESM) across degree, k-core, betweenness, clustering and neighbour-risk strata."
+  },
+  {
+    "before": "F, Four preselected joint-cell profiles with paired protein-clustered 95\\% bootstrap intervals (2,000 resamples).",
+    "after": "F, Four highlighted joint-cell profiles selected on the same test set, with paired protein-clustered 95\\% bootstrap intervals (2,000 resamples)."
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "figure1E_points_verified": 15,
+  "figure2D_points_verified": 2,
+  "figure1D_bootstrap_exact_match": true,
+  "rendered_figure1_and_2_inspected": true,
+  "visible_new_panel_issues": "none; sample-SD bars fit inside expanded Figure1E limits, legend clear, annotation +0.0264 and homology new means visible",
+  "audit_claim_outside_requested_panels_changed_pixels": 0,
+  "copied_figure_sha256_verified": {
+    "Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.pdf": "061e78981c9cb77fc9c429c2c2196b9012b47016e476c1670be71d7f5c2c1cd8",
+    "Figure1_connectivity_topology_controls_v2_accepted_minimal_clarified.png": "f40eb94b11e62ee3b2d8d6bb3fef6c6504d5227453ae935ec7d102d367a4371f",
+    "Figure2_fusion_homology_v1_accepted.pdf": "7eb2d9fc1e1105a81c6d30fb97c360fd4c55b1e902f2a5e84bf6335e2f3f45d3",
+    "Figure2_fusion_homology_v1_accepted.png": "25be8805e05433c3a8907be2c7ebfd570e452adbf885a9150cd77908d778f0d4",
+    "Figure3_topology_context_matched_ensembles.pdf": "9abc3fe66192bc46fe5533a345e5bfd84d3ab348388aea3082b505b9ccdb3b43",
+    "Figure3_topology_context_matched_ensembles.png": "c57fdf825ae64a5c63e3d36e383d074a9ed3aa8732666c660a09006204079ac4"
+  },
+  "note": "Pixel-comparison counts independently checked for consistency in figure-agent audit; rendered PNGs visually inspected by this reviewer. Existing untouched tiny labels retained."
+}

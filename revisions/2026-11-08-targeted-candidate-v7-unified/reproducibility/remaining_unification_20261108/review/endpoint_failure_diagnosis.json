@@ -1,0 +1,27 @@
+{
+  "status": "gate_failed_investigation_open",
+  "do_not_proceed": "Do not launch target homology or interior fits or silently relax prediction/metric reproduction gate",
+  "established": {
+    "all_three_frozen_full_training_histories_equal": true,
+    "all_three_regenerated_ablation_histories_differ_in_first_epoch": true,
+    "allpair_ablation_equal_Boolean_mask_gate_passed": true,
+    "source_AST_training_propagation_equal": true,
+    "full_operator_check_old_max_error": 1.4901161193847656e-07,
+    "full_operator_check_new_max_error": 1.1920928955078125e-07,
+    "old_new_file_hashes_differ_but_not_alone_numeric_proof": true
+  },
+  "interpretation": "Mismatch is confined to pipeline branch regenerating the edge-ablated input representation. Exact full frozen-input reproduction argues against a general seed/training/library mismatch. Different float32 propagation arithmetic is plausible but unproven without numeric feature checks. The two full-propagation max errors differ, demonstrating that recomputation has not been established bitwise identical across hosts.",
+  "remaining_hypotheses": [
+    "CUDA sparse-mm reduction/order or driver effects",
+    "CPU float32 inverse-square-root/normalization implementation across CPUs",
+    "Unrecorded actual execution code/input discrepancy (need compare archivedexecuted code/hash and exact graph/tensor identities)"
+  ],
+  "required_diagnostics": [
+    "Compare multiple fresh ablated regenerations numerically and bitwise in same newserver process",
+    "Compare full1280 recomputation with frozenfull, including max/RMSE/mismatchcount",
+    "Independent float64 CPU sparse-reference propagation on fixedcolumns for bothfull andablated graphs",
+    "Check actualcodefreeze and original executedcode digests; verify pairmaskhash and edge identity",
+    "Retrieve oldmatched ablated tensor directlyserver-to-server if possible, without localdownload; if unavailable state cannot directlymeasureold-newablation feature difference"
+  ],
+  "results_integrity": "Keep all six failed-attempt endpoint models/logs, no reseed or select runs by desiredtestperformance."
+}

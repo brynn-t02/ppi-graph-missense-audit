@@ -1,0 +1,90 @@
+{"phase": "input_verification", "time_utc": "2026-11-08T00:37:41Z"}
+{"phase": "propagation", "time_utc": "2026-11-08T00:37:54Z", "arm": "edge_ablated_FPP"}
+original full_FPP seed=42 epoch=1 loss=0.80337 val_auc=0.810502
+original full_FPP seed=42 epoch=2 loss=0.72155 val_auc=0.807516
+original full_FPP seed=42 epoch=3 loss=0.69674 val_auc=0.820199
+original full_FPP seed=42 epoch=4 loss=0.67072 val_auc=0.821050
+original full_FPP seed=42 epoch=5 loss=0.65651 val_auc=0.830156
+original full_FPP seed=42 epoch=6 loss=0.64654 val_auc=0.811818
+original full_FPP seed=42 epoch=7 loss=0.64104 val_auc=0.821280
+original full_FPP seed=42 epoch=8 loss=0.62905 val_auc=0.813819
+original full_FPP seed=42 epoch=9 loss=0.61670 val_auc=0.815939
+original full_FPP seed=42 epoch=10 loss=0.61496 val_auc=0.818070
+FINAL {"split": "original", "arm": "full_FPP", "seed": 42, "best_epoch": 5, "epochs_run": 10, "val_auc": 0.8301557747440048, "val_auprc": 0.5746283380916462, "test_auc": 0.7932066715584327, "test_auprc": 0.6514041513035155, "seconds": 10.515174388885498, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:38:10Z", "completed": 1, "planned": 39, "last": {"split": "original", "arm": "full_FPP", "seed": 42}}
+original full_FPP seed=43 epoch=1 loss=0.79944 val_auc=0.812058
+original full_FPP seed=43 epoch=2 loss=0.71985 val_auc=0.819098
+original full_FPP seed=43 epoch=3 loss=0.69105 val_auc=0.816418
+original full_FPP seed=43 epoch=4 loss=0.67373 val_auc=0.826084
+original full_FPP seed=43 epoch=5 loss=0.65914 val_auc=0.824910
+original full_FPP seed=43 epoch=6 loss=0.63941 val_auc=0.816272
+original full_FPP seed=43 epoch=7 loss=0.63183 val_auc=0.815140
+original full_FPP seed=43 epoch=8 loss=0.62107 val_auc=0.812633
+original full_FPP seed=43 epoch=9 loss=0.61746 val_auc=0.811253
+FINAL {"split": "original", "arm": "full_FPP", "seed": 43, "best_epoch": 4, "epochs_run": 9, "val_auc": 0.8260842012849845, "val_auprc": 0.5734267007104924, "test_auc": 0.7954117553894537, "test_auprc": 0.6354172520533771, "seconds": 8.677735567092896, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:38:19Z", "completed": 2, "planned": 39, "last": {"split": "original", "arm": "full_FPP", "seed": 43}}
+original full_FPP seed=44 epoch=1 loss=0.80620 val_auc=0.807664
+original full_FPP seed=44 epoch=2 loss=0.72665 val_auc=0.814734
+original full_FPP seed=44 epoch=3 loss=0.69236 val_auc=0.816714
+original full_FPP seed=44 epoch=4 loss=0.67444 val_auc=0.818607
+original full_FPP seed=44 epoch=5 loss=0.65301 val_auc=0.818861
+original full_FPP seed=44 epoch=6 loss=0.64955 val_auc=0.822626
+original full_FPP seed=44 epoch=7 loss=0.63218 val_auc=0.814632
+original full_FPP seed=44 epoch=8 loss=0.62088 val_auc=0.812288
+original full_FPP seed=44 epoch=9 loss=0.61565 val_auc=0.822846
+original full_FPP seed=44 epoch=10 loss=0.61031 val_auc=0.815168
+original full_FPP seed=44 epoch=11 loss=0.60120 val_auc=0.816313
+original full_FPP seed=44 epoch=12 loss=0.59869 val_auc=0.817389
+original full_FPP seed=44 epoch=13 loss=0.59991 val_auc=0.822551
+original full_FPP seed=44 epoch=14 loss=0.58959 val_auc=0.801652
+FINAL {"split": "original", "arm": "full_FPP", "seed": 44, "best_epoch": 9, "epochs_run": 14, "val_auc": 0.8228460072793962, "val_auprc": 0.5926908917886521, "test_auc": 0.7963421782826532, "test_auprc": 0.6583585863276157, "seconds": 14.205637693405151, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:38:33Z", "completed": 3, "planned": 39, "last": {"split": "original", "arm": "full_FPP", "seed": 44}}
+original edge_ablated_FPP seed=42 epoch=1 loss=0.80304 val_auc=0.810160
+original edge_ablated_FPP seed=42 epoch=2 loss=0.72254 val_auc=0.808131
+original edge_ablated_FPP seed=42 epoch=3 loss=0.69762 val_auc=0.819599
+original edge_ablated_FPP seed=42 epoch=4 loss=0.67299 val_auc=0.817728
+original edge_ablated_FPP seed=42 epoch=5 loss=0.65825 val_auc=0.826499
+original edge_ablated_FPP seed=42 epoch=6 loss=0.64590 val_auc=0.811489
+original edge_ablated_FPP seed=42 epoch=7 loss=0.63957 val_auc=0.809816
+original edge_ablated_FPP seed=42 epoch=8 loss=0.62856 val_auc=0.810895
+original edge_ablated_FPP seed=42 epoch=9 loss=0.62005 val_auc=0.811074
+original edge_ablated_FPP seed=42 epoch=10 loss=0.61441 val_auc=0.817690
+FINAL {"split": "original", "arm": "edge_ablated_FPP", "seed": 42, "best_epoch": 5, "epochs_run": 10, "val_auc": 0.8264989514649245, "val_auprc": 0.5813221205441774, "test_auc": 0.766406837540812, "test_auprc": 0.6073405804575702, "seconds": 9.291760206222534, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:38:43Z", "completed": 4, "planned": 39, "last": {"split": "original", "arm": "edge_ablated_FPP", "seed": 42}}
+original edge_ablated_FPP seed=43 epoch=1 loss=0.80002 val_auc=0.811862
+original edge_ablated_FPP seed=43 epoch=2 loss=0.72138 val_auc=0.817804
+original edge_ablated_FPP seed=43 epoch=3 loss=0.69151 val_auc=0.816495
+original edge_ablated_FPP seed=43 epoch=4 loss=0.67438 val_auc=0.826893
+original edge_ablated_FPP seed=43 epoch=5 loss=0.66214 val_auc=0.822177
+original edge_ablated_FPP seed=43 epoch=6 loss=0.64159 val_auc=0.825355
+original edge_ablated_FPP seed=43 epoch=7 loss=0.63482 val_auc=0.814082
+original edge_ablated_FPP seed=43 epoch=8 loss=0.62572 val_auc=0.815039
+original edge_ablated_FPP seed=43 epoch=9 loss=0.62051 val_auc=0.810973
+FINAL {"split": "original", "arm": "edge_ablated_FPP", "seed": 43, "best_epoch": 4, "epochs_run": 9, "val_auc": 0.826893340872718, "val_auprc": 0.5642558128733177, "test_auc": 0.7725432244393537, "test_auprc": 0.6059508268288049, "seconds": 8.664761066436768, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:38:52Z", "completed": 5, "planned": 39, "last": {"split": "original", "arm": "edge_ablated_FPP", "seed": 43}}
+original edge_ablated_FPP seed=44 epoch=1 loss=0.80592 val_auc=0.806920
+original edge_ablated_FPP seed=44 epoch=2 loss=0.72700 val_auc=0.815443
+original edge_ablated_FPP seed=44 epoch=3 loss=0.69466 val_auc=0.816079
+original edge_ablated_FPP seed=44 epoch=4 loss=0.67526 val_auc=0.822318
+original edge_ablated_FPP seed=44 epoch=5 loss=0.65607 val_auc=0.824685
+original edge_ablated_FPP seed=44 epoch=6 loss=0.64959 val_auc=0.821297
+original edge_ablated_FPP seed=44 epoch=7 loss=0.63518 val_auc=0.821914
+original edge_ablated_FPP seed=44 epoch=8 loss=0.62578 val_auc=0.815790
+original edge_ablated_FPP seed=44 epoch=9 loss=0.61677 val_auc=0.822217
+original edge_ablated_FPP seed=44 epoch=10 loss=0.61003 val_auc=0.811153
+FINAL {"split": "original", "arm": "edge_ablated_FPP", "seed": 44, "best_epoch": 5, "epochs_run": 10, "val_auc": 0.824685198151249, "val_auprc": 0.6052229646993335, "test_auc": 0.7693813465664086, "test_auprc": 0.5968392357009558, "seconds": 9.376732110977173, "dim": 1280}
+{"phase": "training", "time_utc": "2026-11-08T00:39:01Z", "completed": 6, "planned": 39, "last": {"split": "original", "arm": "edge_ablated_FPP", "seed": 44}}
+Traceback (most recent call last):
+  File "/root/autodl-tmp/ppi_unification_20261108/code/run_unified.py", line 215, in <module>
+    try:main()
+  File "/root/autodl-tmp/ppi_unification_20261108/code/run_unified.py", line 186, in main
+    verify_endpoints(splits['original'])
+  File "/root/autodl-tmp/ppi_unification_20261108/code/run_unified.py", line 140, in verify_endpoints
+    assert max(errors.values())<1e-10,(arm,seed,errors)
+AssertionError: ('edge_ablated_FPP', 42, {'val_auc': 0.0008532665113886173, 'val_auprc': 0.00819151402695717, 'test_auc': 0.005165073831735367, 'test_auprc': 0.013611236623332745})
+Traceback (most recent call last):
+  File "/root/autodl-tmp/ppi_unification_20261108/code/execute_pipeline.py", line 11, in <module>
+    subprocess.run([sys.executable,'-u',str(B/'code'/script)],check=True,cwd=B)
+  File "/root/autodl-tmp/ppi_unification_20261108/environment/runtime/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/root/autodl-tmp/ppi_unification_20261108/environment/runtime/bin/python', '-u', '/root/autodl-tmp/ppi_unification_20261108/code/run_unified.py']' returned non-zero exit status 1.

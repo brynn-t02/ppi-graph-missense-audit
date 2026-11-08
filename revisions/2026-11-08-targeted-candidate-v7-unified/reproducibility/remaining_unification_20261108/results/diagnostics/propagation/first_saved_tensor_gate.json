@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "saved_tensor_sha256": "3915bffdcf3940bd4ade55f8a9c28edd872f3b47701f0c0e0cfa636ec4c81242",
+  "max_abs_vs_cpu64": 1.2439582919299141e-07,
+  "mean_abs_vs_cpu64": 2.2409350226389486e-09,
+  "comparison": "FIRSTsavedablated16columns_vs_independentfloat64doubleloopoperator",
+  "first_generated_tensor_selected_before_diagnostic_regenerations": true
+}

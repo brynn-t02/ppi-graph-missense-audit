@@ -1,0 +1,11 @@
+{
+  "phase": "training",
+  "time_utc": "2026-11-08T00:39:01Z",
+  "completed": 6,
+  "planned": 39,
+  "last": {
+    "split": "original",
+    "arm": "edge_ablated_FPP",
+    "seed": 44
+  }
+}

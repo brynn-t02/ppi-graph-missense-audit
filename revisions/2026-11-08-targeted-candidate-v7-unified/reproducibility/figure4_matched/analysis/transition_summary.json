@@ -1,0 +1,40 @@
+{
+  "esm_vs_gcn": {
+    "pair_name": "esm_vs_gcn",
+    "baseline_arm": "raw_ESM",
+    "proposed_arm": "full_FPP",
+    "n": 18220,
+    "prediction_threshold": 0.5,
+    "count_both_correct": 12520,
+    "count_both_wrong": 3747,
+    "count_improved": 960,
+    "count_degraded": 993,
+    "count_FN_rescued": 366,
+    "count_FP_suppressed": 594,
+    "count_TN_to_FP": 958,
+    "count_TP_to_FN": 35,
+    "count_persistent_FN": 1089,
+    "count_persistent_FP": 2658,
+    "count_corrected": 960,
+    "net_corrections": -33
+  },
+  "cadd_am_vs_full": {
+    "pair_name": "cadd_am_vs_full",
+    "baseline_arm": "scores_capacity_matched",
+    "proposed_arm": "scores_plus_full_FPP",
+    "n": 18220,
+    "prediction_threshold": 0.5,
+    "count_both_correct": 16055,
+    "count_both_wrong": 1262,
+    "count_improved": 679,
+    "count_degraded": 224,
+    "count_FN_rescued": 170,
+    "count_FP_suppressed": 509,
+    "count_TN_to_FP": 99,
+    "count_TP_to_FN": 125,
+    "count_persistent_FN": 522,
+    "count_persistent_FP": 740,
+    "count_corrected": 679,
+    "net_corrections": 455
+  }
+}

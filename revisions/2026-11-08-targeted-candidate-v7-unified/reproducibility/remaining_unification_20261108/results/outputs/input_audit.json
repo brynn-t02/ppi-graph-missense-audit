@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "verified_hashes": [
+    "data/processed/model_inputs_main.pt",
+    "data/processed/gcn_embeddings/gcn_node_embeddings.pt",
+    "data/processed/clinvar_train_main.csv",
+    "data/processed/clinvar_val_main.csv",
+    "data/processed/clinvar_test_main.csv",
+    "data/processed/homology_aware_split/clinvar_train_homology.csv",
+    "data/processed/homology_aware_split/clinvar_val_homology.csv",
+    "data/processed/homology_aware_split/clinvar_test_homology.csv",
+    "data/processed/homology_aware_split/homology_cluster_assignments.csv",
+    "data/raw/9606.protein.links.v12.0.txt.gz",
+    "reference/canonical/frozen_node_order.csv.gz",
+    "reference/canonical/frozen_samples_177213.csv.gz",
+    "reference/canonical/test_predictions__original__full_FPP.csv.gz",
+    "reference/canonical/test_predictions__original__edge_ablated_FPP.csv.gz",
+    "reference/endpoint_runs/full_FPP/seed_42/history.json",
+    "reference/endpoint_runs/full_FPP/seed_42/metrics.json",
+    "reference/endpoint_runs/full_FPP/seed_42/test_probs.npy",
+    "reference/endpoint_runs/full_FPP/seed_42/val_probs.npy",
+    "reference/endpoint_runs/full_FPP/seed_43/history.json",
+    "reference/endpoint_runs/full_FPP/seed_43/metrics.json",
+    "reference/endpoint_runs/full_FPP/seed_43/test_probs.npy",
+    "reference/endpoint_runs/full_FPP/seed_43/val_probs.npy",
+    "reference/endpoint_runs/full_FPP/seed_44/history.json",
+    "reference/endpoint_runs/full_FPP/seed_44/metrics.json",
+    "reference/endpoint_runs/full_FPP/seed_44/test_probs.npy",
+    "reference/endpoint_runs/full_FPP/seed_44/val_probs.npy",
+    "reference/endpoint_runs/edge_ablated_FPP/seed_42/history.json",
+    "reference/endpoint_runs/edge_ablated_FPP/seed_42/metrics.json",
+    "reference/endpoint_runs/edge_ablated_FPP/seed_42/test_probs.npy",
+    "reference/endpoint_runs/edge_ablated_FPP/seed_42/val_probs.npy",
+    "reference/endpoint_runs/edge_ablated_FPP/seed_43/history.json",
+    "reference/endpoint_runs/edge_ablated_FPP/seed_43/metrics.json",
+    "reference/endpoint_runs/edge_ablated_FPP/seed_43/test_probs.npy",
+    "reference/endpoint_runs/edge_ablated_FPP/seed_43/val_probs.npy",
+    "reference/endpoint_runs/edge_ablated_FPP/seed_44/history.json",
+    "reference/endpoint_runs/edge_ablated_FPP/seed_44/metrics.json",
+    "reference/endpoint_runs/edge_ablated_FPP/seed_44/test_probs.npy",
+    "reference/endpoint_runs/edge_ablated_FPP/seed_44/val_probs.npy"
+  ],
+  "frozen_manifest_equal": true,
+  "node_order_equal": true,
+  "splits": {
+    "original": {
+      "rows": {
+        "train": 141864,
+        "val": 17129,
+        "test": 18220
+      },
+      "positives": {
+        "train": 39046,
+        "val": 4392,
+        "test": 5822
+      },
+      "test_proteins": 1413,
+      "protein_disjoint": true,
+      "homology_cluster_disjoint": false
+    },
+    "homology": {
+      "rows": {
+        "train": 141864,
+        "val": 17129,
+        "test": 18220
+      },
+      "positives": {
+        "train": 45652,
+        "val": 1684,
+        "test": 1924
+      },
+      "test_proteins": 3438,
+      "protein_disjoint": true,
+      "homology_cluster_disjoint": true
+    }
+  }
+}

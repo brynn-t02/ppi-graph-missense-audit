@@ -1,0 +1,43 @@
+BIBM 2026 Workshop Figure4统一匹配集成版（v4，2026年11月8日）
+
+本版直接接着当前v3累计候选稿修改，前面已经完成的Intro/Methods/III.A–C、图1/2/3/5和段间距修复全部保留。原稿、历史预测、历史图表和各候选版本不覆盖。
+
+一、使用的真实数据与对齐
+读取既有canonical_analysis_20261025/public四组original测试预测：raw_ESM、full_FPP、scores_capacity_matched、scores_plus_full_FPP；使用42/43/44三个既定种子。读取matched_validation_20261024真实run metrics/history及既有checkpoint hash记录，保留原选择epoch；未重新访问模型权重或服务器。
+统一18220变异、1413蛋白、5822正类。冻结manifest的test子集原顺序不同，经唯一VariationID重排，再核对Name、label、STRING protein。每组先将三个种子概率转float64再平均，与保存的canonical ensemble逐元素相等；表征模型每个蛋白的各seed及ensemble分数完全相同。
+12个seed与4个ensemble的AUC/AUPRC对照原规范化记录通过(误差<=1e-12)。模型、种子、阈值未按test标签挑选。
+
+二、Figure4A/B全新统计（阈值>=0.5）
+Raw ESM→Full FPP：both correct12520，both wrong3747，corrected960，degraded993，四项之和18220。
+960=366 FN rescued+594 FP suppressed；993=958 TN→FP+35 TP→FN。净纠正-33，即该阈值多33个错误。
+CADD+AlphaMissense架构匹配基线→Full FPP fusion：both correct16055，both wrong1262，corrected679，degraded224，四项之和18220。
+679=170 FN rescued+509 FP suppressed；224=99 TN→FP+125 TP→FN。净纠正+455。
+没有直接复用旧1436/944/666/275。
+
+三、Figure4C–F全部按新成员重算
+C/D保持原9个显示特征、原顺序、行中心化/极差缩放及蓝/暖配色。E保持两比较列、等大等透明圆点；颜色仅代表组均值方向。
+Raw/FPP的boundary-role bucket和within-community neighbour fraction两项方向翻转：此前FP-suppressed更高，现在FN-rescued更高。
+新boundary mean FN1.316940 / FP1.085859；within-community fraction FN0.782330 / FP0.755278。融合组11项完整特征的FP/FN均值方向均未翻转；特征原定义/编码保留，bucket均值不等同于生物学效应。
+F仍在raw-ESM基线FN内比较rescued366与persistent1089，非连续预测难度匹配；within-community fraction的persistent组排除2个缺失，实际1087。
+原7个F特征新Hedges'g：degree+.537937，k-core+.032852，neighbour risk-.023391，neighbour pathogenic rate+.073503，betweenness+.026944，boundary+.341520，within-community+.360008。
+其中k-core(-→+)、neighbour risk(+→-)、boundary(-→+)、within-community(-→+)四项变号；部分新效应接近零。不是把C/D的FP/FN差异与F的rescued/persistent FN效应混为一谈。
+F正蓝负橙；不恢复p/FDR/星号，也不称difficulty-matched。原六面板、原尺寸1094.88609×541.265625pt、原axes坐标和字号保留；新图为全矢量、字体全嵌入。
+
+四、正文与补充材料同步
+Results III.D三个自然段全部替换为实际新人数与方向，明确raw/FPP在0.5阈值净增33错误，fusion净减少455错误；保留蛋白内变异非独立和描述性关联限制，没有写成作用机制。
+Figure4图注采用指定matched model ensembles主体，补清C/D、E和F不同的颜色含义。
+Table I拆分Figure3固定reference pair与Figure4三seed matched ensemble配置。
+Supplementary Table6更新两组所有10类转移人数/正率、两套FP/FN均值表、原8项FN效应显示行，并归档完整11特征、44个baseline-error-stratified效应。
+Table10用同一ensemble重新计算0.1至0.9九个阈值，没有挑选最佳阈值；0.5行与主图闭合。Notes/Methods3、5/来源句/Table8适用说明等直接引用已同步；其他补充表数值(含Table5、11、12)未改。
+补充Table6的模型对说明与后表保持同页，避免说明单独落页尾；仅排版控制，不改字号/边距。
+
+五、九项快速核查
+18220 ID/label/protein对齐、12seed来源、4ensemble AUC/AP吻合、两pair人数闭合、C–F全新分组重算、Table6与图一致、III.D与图一致、TableI来源拆分、PDF八页/无裁切均通过。
+另由独立算法重算4ensemble指标、198个阈值人数、220个组特征均值、44个Hedges'g均通过。可移植verify_compact.py在真实完整紧凑数据上运行通过。
+正文8页、补充19页，全部27页已渲染检查，字体全嵌入，无缺图/缺字/未定义引用/Overfull。编译时以既有斜体字体排印g，避免新增字体依赖，不改变效应量含义。
+无新训练、推理、ESM提取、图传播、bootstrap、服务器访问或百度网盘下载。本轮只做授权的既有预测后处理和图文同步，所需资产齐全。
+
+文件与归档
+主文和补充PDF、当前LaTeX、逐处diff均在本目录。
+reproducibility/figure4_matched/analysis包含这轮真实新计算、输入SHA、12seed来源、18阈值完整分区、逐成员/特征数据与新旧对比；figure目录为实际绘图脚本/每panel数据/字号与字体审计。
+为保持单个文件小于5MB，论文/源码包和重算数据核验包分开；共同解压可得到完整目录。当前候选尚未重新进行PDF eXpress认证或会议系统上传。

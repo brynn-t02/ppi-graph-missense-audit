@@ -1,0 +1,13 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting requests==2.32.3
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/f9/9b/335f9764261e915ed497fcdeb11df5dfd6f7bf257d4a6a2a686d80da4d54/requests-2.32.3-py3-none-any.whl (64 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.9/64.9 kB 2.7 MB/s eta 0:00:00
+Installing collected packages: requests
+  Attempting uninstall: requests
+    Found existing installation: requests 2.32.3
+    Uninstalling requests-2.32.3:
+      Successfully uninstalled requests-2.32.3
+Successfully installed requests-2.32.3
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+No broken requirements found.
+{"environment": "verified", "pins": 141, "inputs": 38, "bytes": 603434094}

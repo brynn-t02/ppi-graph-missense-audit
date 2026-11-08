@@ -1,0 +1,61 @@
+{
+  "status": "passed_pending_root_PDF_rendering",
+  "baseline": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_v3_spacing_20261108/source/Supplementary_Information_revised.md",
+  "candidate": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_v4_figure4_20261108/source/Supplementary_Information_revised.md",
+  "replacement_blocks": 9,
+  "numerical_tables_changed_only": [
+    6,
+    10
+  ],
+  "all_other_table_rows_unchanged": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true,
+    "7": true,
+    "8": true,
+    "9": true,
+    "11": true,
+    "12": true,
+    "13": true,
+    "14": true,
+    "15": true,
+    "16": true,
+    "17": true
+  },
+  "Table5_Figure3_entire_block_byte_unchanged": true,
+  "Methods4_negative_control_block_byte_unchanged": true,
+  "Methods6_and_all_external_results_byte_unchanged": true,
+  "displayed_feature_rows": "Original two seven-feature FP/FN tables and eight raw-FN effect rows retained; full11-feature/44contrast data in new CSVs.",
+  "displayed_transition_rows": "All ten groups and positive rates for each of the two model pairs.",
+  "threshold_rows": 9,
+  "fresh_source_files": {
+    "table6_all_transition_counts.csv": "f27d6e525dc5ae89fd2ed1b7db385ec62f7af07f4618e9f054757ed36666a6e2",
+    "table6_all_22_FP_FN_contrasts.csv": "d40a4086c0a06d56f71812f771ef84b216d455dfc9fd1647418b536c4625e821",
+    "table6_all_44_error_stratified_contrasts.csv": "7a97cb717afbf64cff807cd63e806248c234b4bf6222f5c23dffdc3b540232d4",
+    "table10_all_threshold_transition_counts.csv": "0773941f6697c98b8ab477e0277ec2259dc4f5b75bc80aff7a39878f23507e44",
+    "metrics_alignment_audit.json": "4372faea687b6bd6fbb24317bfbddccf6d63762fd3edf545651c0182beb95979",
+    "input_sha256.json": "9835e116b9f47b6e0fccb237e1dd8df0db9465d8934c881a03b3fd2066364ee4"
+  },
+  "input_audit_passed": true,
+  "no_old_broad_candidate_values_read": true,
+  "new_training": false,
+  "new_inference": false,
+  "bootstrap_executed": false,
+  "statistical_recomputation_by_this_agent": false,
+  "source": "Fresh v4 computation CSVs supplied by figure4_compute_v4; only formatting and source synchronization performed here.",
+  "main_or_figures_edited": false,
+  "rendering_performed": false,
+  "baseline_sha256": "c35a895264889756e7cef06e9426e0ba53efe1f0be34529c760b5a8ecc3d0106",
+  "candidate_sha256": "c9b1925eab25948f045b5195b3d7d98fd214731f36acbce21f1df47441a939b2",
+  "independent_printed_table_to_fresh_CSV_check": {
+    "passed": true,
+    "Table6_count_rows": 20,
+    "Table6_selected_FP_FN_feature_rows": 14,
+    "Table6_selected_Hedges_g_rows": 8,
+    "Table10_displayed_counts": 54,
+    "rounding_tolerance": 5e-05,
+    "scientific_statistics_recomputed": false
+  }
+}

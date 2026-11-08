@@ -1,0 +1,13 @@
+{
+  "split": "original",
+  "arm": "edge_ablated_FPP",
+  "seed": 43,
+  "best_epoch": 4,
+  "epochs_run": 9,
+  "val_auc": 0.826893340872718,
+  "val_auprc": 0.5642558128733177,
+  "test_auc": 0.7725432244393537,
+  "test_auprc": 0.6059508268288049,
+  "seconds": 8.664761066436768,
+  "dim": 1280
+}

@@ -1,0 +1,25 @@
+{
+  "source": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/outputs/BIBM_workshop_targeted_candidate_v6_figure3_20261108/source/figure_drafts/Figure3_topology_context_matched_ensembles.pdf",
+  "source_sha256": "03d5e58c6c2997798cc66cb2d012e289337d1f0987ac14d89991761e6eb3e132",
+  "output": "/Users/teyian/Documents/Codex/2026-10-23/zhe-g/work/remaining_unification_20261108/figures/Figure3_topology_context_matched_ensembles.pdf",
+  "output_sha256": "9abc3fe66192bc46fe5533a345e5bfd84d3ab348388aea3082b505b9ccdb3b43",
+  "old_title": "B  Degree and k-core gains are non-monotonic",
+  "new_title": "B  Performance differences across degree and k-core strata",
+  "font_family_size_unchanged": true,
+  "font_size_pt": 9,
+  "title_x_before": 387.174,
+  "title_x_after": 375.0,
+  "reason_for_title_shift": "The new 303.74pt title would overlap C at its original anchor. Only this title moves 12.174pt left, leaving a 9.26pt gap.",
+  "title_only_box_pt": [
+    373,
+    462,
+    681,
+    475
+  ],
+  "pixel_comparison_dpi": 300,
+  "changed_pixels": 19737,
+  "outside_title_box_changed_pixels": 0,
+  "all_fonts_embedded": true,
+  "all_data_axes_colors_other_panels_unchanged": true,
+  "source_unchanged": true
+}

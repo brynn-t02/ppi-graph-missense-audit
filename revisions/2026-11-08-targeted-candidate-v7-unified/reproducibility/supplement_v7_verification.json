@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "blocks": 21,
+  "homology_rows_added": 2,
+  "partial_curve_rows_added": 15,
+  "homology_interval_rows_added": 1,
+  "archived_table8_rows_unchanged": true,
+  "tables1_to7_9_10_numeric_rows_unchanged": true,
+  "table11_original15rows_unchanged": true,
+  "table12_original9numericrows_unchanged": true,
+  "ablation_summary_and_interval_updated_consistently": true,
+  "table13_and_external_numbers_unchanged": true,
+  "methods6_only_audit_scope_phrase_changed": true,
+  "actual_result_files_used": [
+    "analysis_complete.json",
+    "endpoint_input_gate_v2.json",
+    "figure2D_summary.csv",
+    "figure1E_summary.csv",
+    "figure2D_protein_bootstrap.json",
+    "figure1D_protein_bootstrap.json"
+  ],
+  "runtime_gpu": "NVIDIA GeForce RTX 4090",
+  "updated_fully_ablated_metrics_explicitly_routed_to_new_addendum": true
+}

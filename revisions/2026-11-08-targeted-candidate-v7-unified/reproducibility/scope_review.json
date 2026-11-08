@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "main_changes": 11,
+  "only_listed_main_changes": true,
+  "main_protected_sections_unchanged": [
+    "Abstract",
+    "Introduction",
+    "III.C prose",
+    "III.D",
+    "III.E",
+    "Discussion",
+    "Acknowledgment",
+    "Bibliography"
+  ],
+  "main_stale_replaced_values_absent": true,
+  "SI_protected": {
+    "SupplementaryTable5": true,
+    "SupplementaryTable6": true,
+    "SupplementaryTable10": true
+  },
+  "SI_external_numerical_results_unchanged": true,
+  "SI_Methods6_only_audit_scope_label_clarified": true,
+  "unchanged_figures": {
+    "Figure4_prediction_transitions_v2_accepted_minimal_clarified.pdf": true,
+    "Figure4_prediction_transitions_matched_ensembles.pdf": true,
+    "Figure5_external_validation.pdf": true
+  },
+  "Table11B_rows_numeric_verified": 15,
+  "Table11A_homology_rows_verified": 2,
+  "Table12_new_CI_rows_verified": 2,
+  "counts_81distinct_87executions_correct": true,
+  "claims": "Means versus ensemble differences separated; no monotonic or score-strategy-superiority claim; graph normalization limitation retained.",
+  "clarity_suggestions_resolved": [
+    "Figure 1E caption explicitly identifies sample SD of model AUC across three classifier seeds.",
+    "Table 11A provenance explicitly routes the updated fully ablated representation endpoint to remaining_unification_20261108."
+  ],
+  "unresolved_findings": [],
+  "source_sha256": {
+    "main.tex": "a0685dfbab295c61e6d2735715505bf1b4a51c7740e31742d7fbc9fb23e146f6",
+    "Supplementary_Information_revised.md": "7c115140a01edf1b124df0df0a57c3514ade4c3524128cb60d997453b5842166"
+  }
+}
